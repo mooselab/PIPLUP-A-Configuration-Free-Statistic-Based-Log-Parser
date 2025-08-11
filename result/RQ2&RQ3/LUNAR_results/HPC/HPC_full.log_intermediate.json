@@ -1,0 +1,1792 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Linkerror event interval expired"
+  ],
+  "logs_to_query_regex": [
+   "Linkerror event interval expired"
+  ],
+  "llm_template": "Linkerror event interval expired",
+  "cluster_id": 45,
+  "update_success": true,
+  "template": "Linkerror event interval expired"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "warning"
+  ],
+  "logs_to_query_regex": [
+   "warning"
+  ],
+  "llm_template": "warning",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "warning"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "normal"
+  ],
+  "logs_to_query_regex": [
+   "normal"
+  ],
+  "llm_template": "normal",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "normal"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "running"
+  ],
+  "logs_to_query_regex": [
+   "running"
+  ],
+  "llm_template": "running",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "running"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "NIFF: node <*> has detected an available network connection on network 10.128.0.0 via interface ee0",
+   "NIFF: node <*> has detected an available network connection on network 5.5.224.0 via interface alt0",
+   "NIFF: node <*> has detected an available network connection on network 10.96.0.0 via interface scip0"
+  ],
+  "logs_to_query_regex": [
+   "NIFF: node <*> has detected an available network connection on network 10.128.0.0 via interface ee0",
+   "NIFF: node <*> has detected an available network connection on network 5.5.224.0 via interface alt0",
+   "NIFF: node <*> has detected an available network connection on network 10.96.0.0 via interface scip0"
+  ],
+  "llm_template": "NIFF: node <*> has detected an available network connection on network <*> via interface <*>",
+  "cluster_id": 71,
+  "update_success": true,
+  "template": "NIFF: node <*> has detected an available network connection on network <*> via interface <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "Fan speeds ( 3552 3534 3375 4787 3515 3479 )",
+   "Fan speeds ( 3552 3534 3391 4218 3515 3479 )",
+   "Fan speeds ( 3534 3534 3375 4066 3497 3479 )"
+  ],
+  "logs_to_query_regex": [
+   "Fan speeds ( 3552 3534 3375 4787 3515 3479 )",
+   "Fan speeds ( 3552 3534 3391 4218 3515 3479 )",
+   "Fan speeds ( 3534 3534 3375 4066 3497 3479 )"
+  ],
+  "llm_template": "Fan speeds ( <*> )",
+  "cluster_id": 60,
+  "update_success": true,
+  "template": "Fan speeds ( <*> )"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "configured out"
+  ],
+  "logs_to_query_regex": [
+   "configured out"
+  ],
+  "llm_template": "configured out",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "configured out"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "link errors remain current"
+  ],
+  "logs_to_query_regex": [
+   "link errors remain current"
+  ],
+  "llm_template": "link errors remain current",
+  "cluster_id": 46,
+  "update_success": true,
+  "template": "link errors remain current"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "boot (command 1894)",
+   "boot (command 3974)",
+   "boot (command 2491)"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 1894)",
+   "boot (command 3974)",
+   "boot (command 2491)"
+  ],
+  "llm_template": "boot (command <*>)",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "boot (command <*>)"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "wait (command 1894)",
+   "wait (command 3659)",
+   "wait (command 4218)"
+  ],
+  "logs_to_query_regex": [
+   "wait (command 1894)",
+   "wait (command 3659)",
+   "wait (command 4218)"
+  ],
+  "llm_template": "wait (command <*>)",
+  "cluster_id": 33,
+  "update_success": true,
+  "template": "wait (command <*>)"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "not responding"
+  ],
+  "logs_to_query_regex": [
+   "not responding"
+  ],
+  "llm_template": "not responding",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "not responding"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "ClusterFileSystem: ServerFileSystem domain cluster_var_backup is no longer served by node <*>",
+   "ClusterFileSystem: ServerFileSystem domain root19_domain is no longer served by node <*>",
+   "ClusterFileSystem: ServerFileSystem domain root10_domain is no longer served by node <*>"
+  ],
+  "logs_to_query_regex": [
+   "ClusterFileSystem: ServerFileSystem domain cluster_var_backup is no longer served by node <*>",
+   "ClusterFileSystem: ServerFileSystem domain root19_domain is no longer served by node <*>",
+   "ClusterFileSystem: ServerFileSystem domain root10_domain is no longer served by node <*>"
+  ],
+  "llm_template": "ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>",
+  "cluster_id": 62,
+  "update_success": true,
+  "template": "ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "ambient=28"
+  ],
+  "logs_to_query_regex": [
+   "ambient=28"
+  ],
+  "llm_template": "ambient=<*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "ambient=<*>"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage1034",
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage931",
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage611"
+  ],
+  "logs_to_query_regex": [
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage1034",
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage931",
+   "ClusterFileSystem: There is no server for ServerFileSystem domain storage611"
+  ],
+  "llm_template": "ClusterFileSystem: There is no server for ServerFileSystem domain <*>",
+  "cluster_id": 57,
+  "update_success": true,
+  "template": "ClusterFileSystem: There is no server for ServerFileSystem domain <*>"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "critical"
+  ],
+  "logs_to_query_regex": [
+   "critical"
+  ],
+  "llm_template": "critical",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "critical"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "Link error"
+  ],
+  "logs_to_query_regex": [
+   "Link error"
+  ],
+  "llm_template": "Link error",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "Link error"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "Component State Change: Component \\042alt0\\042 is in the available state (HWID=1328)",
+   "Component State Change: Component \\042SCSI-WWID:01000010:6005-08b4-0001-4199-0001-a000-0039-0000\\042 is in the available state (HWID=5983)",
+   "Component State Change: Component \\042SCSI-WWID:01000010:6005-08b4-0001-00f5-0001-4000-0042-0000\\042 is in the available state (HWID=5976)"
+  ],
+  "logs_to_query_regex": [
+   "Component State Change: Component \\042alt0\\042 is in the available state (HWID=1328)",
+   "Component State Change: Component \\042SCSI-WWID:01000010:6005-08b4-0001-4199-0001-a000-0039-0000\\042 is in the available state (HWID=5983)",
+   "Component State Change: Component \\042SCSI-WWID:01000010:6005-08b4-0001-00f5-0001-4000-0042-0000\\042 is in the available state (HWID=5976)"
+  ],
+  "llm_template": "Component State Change: Component <*> is in the available state (HWID=<*>)",
+  "cluster_id": 63,
+  "update_success": true,
+  "template": "Component State Change: Component <*> is in the available state (HWID=<*>)"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "ServerFileSystem: ServerFileSystem domain storage232 is full",
+   "ServerFileSystem: ServerFileSystem domain storage941 is full",
+   "ServerFileSystem: ServerFileSystem domain storage332 is full"
+  ],
+  "logs_to_query_regex": [
+   "ServerFileSystem: ServerFileSystem domain storage232 is full",
+   "ServerFileSystem: ServerFileSystem domain storage941 is full",
+   "ServerFileSystem: ServerFileSystem domain storage332 is full"
+  ],
+  "llm_template": "ServerFileSystem: ServerFileSystem domain <*> is full",
+  "cluster_id": 51,
+  "update_success": true,
+  "template": "ServerFileSystem: ServerFileSystem domain <*> is full"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "Link in reset"
+  ],
+  "logs_to_query_regex": [
+   "Link in reset"
+  ],
+  "llm_template": "Link in reset",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "Link in reset"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "blocked"
+  ],
+  "logs_to_query_regex": [
+   "blocked"
+  ],
+  "llm_template": "blocked",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "blocked"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "Link ok"
+  ],
+  "logs_to_query_regex": [
+   "Link ok"
+  ],
+  "llm_template": "Link ok",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "Link ok"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "Command has completed successfully"
+  ],
+  "logs_to_query_regex": [
+   "Command has completed successfully"
+  ],
+  "llm_template": "Command has completed successfully",
+  "cluster_id": 41,
+  "update_success": true,
+  "template": "Command has completed successfully"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "Targeting domains:<*> and nodes:<*> child of command 1885",
+   "Targeting domains:<*> and nodes:<*> child of command 2360",
+   "Targeting domains:<*> and nodes:<*> child of command 2996"
+  ],
+  "logs_to_query_regex": [
+   "Targeting domains:<*> and nodes:<*> child of command 1885",
+   "Targeting domains:<*> and nodes:<*> child of command 2360",
+   "Targeting domains:<*> and nodes:<*> child of command 2996"
+  ],
+  "llm_template": "Targeting domains:<*> and nodes:<*> child of command <*>",
+  "cluster_id": 54,
+  "update_success": true,
+  "template": "Targeting domains:<*> and nodes:<*>"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "active"
+  ],
+  "logs_to_query_regex": [
+   "active"
+  ],
+  "llm_template": "active",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "active"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Link error on broadcast tree Interconnect-0T00:00:2:1",
+   "Link error on broadcast tree Interconnect-0N01:00:2:5",
+   "Link error on broadcast tree Interconnect-0T00:00:2:2"
+  ],
+  "logs_to_query_regex": [
+   "Link error on broadcast tree Interconnect-0T00:00:2:1",
+   "Link error on broadcast tree Interconnect-0N01:00:2:5",
+   "Link error on broadcast tree Interconnect-0T00:00:2:2"
+  ],
+  "llm_template": "Link error on broadcast tree Interconnect-<*>",
+  "cluster_id": 50,
+  "update_success": true,
+  "template": "Link error on broadcast tree <*>"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "NIFF: node <*> detected a failed network connection on network 5.5.226.0 via interface alt0",
+   "NIFF: node <*> detected a failed network connection on network 10.96.0.0 via interface scip0",
+   "NIFF: node <*> detected a failed network connection on network 10.128.0.0 via interface ee0"
+  ],
+  "logs_to_query_regex": [
+   "NIFF: node <*> detected a failed network connection on network 5.5.226.0 via interface alt0",
+   "NIFF: node <*> detected a failed network connection on network 10.96.0.0 via interface scip0",
+   "NIFF: node <*> detected a failed network connection on network 10.128.0.0 via interface ee0"
+  ],
+  "llm_template": "NIFF: node <*> detected a failed network connection on network <*> via interface <*>",
+  "cluster_id": 68,
+  "update_success": true,
+  "template": "NIFF: node <*> detected a failed network connection on network <*> via interface <*>"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "Temperature (41C) exceeds warning threshold",
+   "Temperature (42C) exceeds warning threshold",
+   "Temperature (43C) exceeds warning threshold"
+  ],
+  "logs_to_query_regex": [
+   "Temperature (41C) exceeds warning threshold",
+   "Temperature (42C) exceeds warning threshold",
+   "Temperature (43C) exceeds warning threshold"
+  ],
+  "llm_template": "Temperature (<*>) exceeds warning threshold",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Temperature <*> exceeds warning threshold"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "Targeting domains:<*> and nodes:<*>"
+  ],
+  "logs_to_query_regex": [
+   "Targeting domains:<*> and nodes:<*>"
+  ],
+  "llm_template": "Targeting domains:<*> and nodes:<*>",
+  "cluster_id": 42,
+  "update_success": true,
+  "template": "Targeting domains:<*> and nodes:<*>"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "halt (command 1889)",
+   "halt (command 3359)",
+   "halt (command 2131)"
+  ],
+  "logs_to_query_regex": [
+   "halt (command 1889)",
+   "halt (command 3359)",
+   "halt (command 2131)"
+  ],
+  "llm_template": "halt (command <*>)",
+  "cluster_id": 35,
+  "update_success": true,
+  "template": "halt (command <*>)"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "psu failure\\ ambient=26",
+   "psu failure\\ ambient=33",
+   "psu failure\\ ambient=36"
+  ],
+  "logs_to_query_regex": [
+   "psu failure\\ ambient=26",
+   "psu failure\\ ambient=33",
+   "psu failure\\ ambient=36"
+  ],
+  "llm_template": "psu failure\\ ambient=<*>",
+  "cluster_id": 39,
+  "update_success": true,
+  "template": "psu failure\\ ambient=<*>"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "power/control problem"
+  ],
+  "logs_to_query_regex": [
+   "power/control problem"
+  ],
+  "llm_template": "power/control problem",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "power/control problem"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "risBoot (command 1899)",
+   "risBoot (command 1913)",
+   "risBoot (command 2849)"
+  ],
+  "logs_to_query_regex": [
+   "risBoot (command 1899)",
+   "risBoot (command 1913)",
+   "risBoot (command 2849)"
+  ],
+  "llm_template": "risBoot (command <*>)",
+  "cluster_id": 37,
+  "update_success": true,
+  "template": "risBoot (command <*>)"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "clusterAddMember (command 1899)",
+   "clusterAddMember (command 3915)",
+   "clusterAddMember (command 3913)"
+  ],
+  "logs_to_query_regex": [
+   "clusterAddMember (command 1899)",
+   "clusterAddMember (command 3915)",
+   "clusterAddMember (command 3913)"
+  ],
+  "llm_template": "clusterAddMember (command <*>)",
+  "cluster_id": 36,
+  "update_success": true,
+  "template": "clusterAddMember (command <*>)"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "bootGenvmunix (command 1899)",
+   "bootGenvmunix (command 1905)",
+   "bootGenvmunix (command 1906)"
+  ],
+  "logs_to_query_regex": [
+   "bootGenvmunix (command 1899)",
+   "bootGenvmunix (command 1905)",
+   "bootGenvmunix (command 1906)"
+  ],
+  "llm_template": "bootGenvmunix (command <*>)",
+  "cluster_id": 38,
+  "update_success": true,
+  "template": "bootGenvmunix (command <*>)"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Command has been aborted"
+  ],
+  "logs_to_query_regex": [
+   "Command has been aborted"
+  ],
+  "llm_template": "Command has been aborted",
+  "cluster_id": 43,
+  "update_success": true,
+  "template": "Command has been aborted"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "member_delete (command 1908)",
+   "member_delete (command 3912)",
+   "member_delete (command 3866)"
+  ],
+  "logs_to_query_regex": [
+   "member_delete (command 1908)",
+   "member_delete (command 3912)",
+   "member_delete (command 3866)"
+  ],
+  "llm_template": "member_delete (command <*>)",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "member_delete (command <*>)"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "haltcluster (command 1947)",
+   "haltcluster (command 2807)",
+   "haltcluster (command 2124)"
+  ],
+  "logs_to_query_regex": [
+   "haltcluster (command 1947)",
+   "haltcluster (command 2807)",
+   "haltcluster (command 2124)"
+  ],
+  "llm_template": "haltcluster (command <*>)",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "haltcluster (command <*>)"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1ffffff8e <ok> <*> 0x1ffffff8e <ok> <*> 0x1ffffff8e <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1ffffff8e <ok> <*> 0x1ffffff8e <ok> <*> 0x1ffffff8e <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "responding"
+  ],
+  "logs_to_query_regex": [
+   "responding"
+  ],
+  "llm_template": "responding",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "responding"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "boot (command 2095) Error: HALT asserted\\ cannot continue",
+   "boot (command 3019) Error: HALT asserted\\ cannot continue",
+   "boot (command 2917) Error: HALT asserted\\ cannot continue"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 2095) Error: HALT asserted\\ cannot continue",
+   "boot (command 3019) Error: HALT asserted\\ cannot continue",
+   "boot (command 2917) Error: HALT asserted\\ cannot continue"
+  ],
+  "llm_template": "boot (command <*>) Error: HALT asserted\\ cannot continue",
+  "cluster_id": 55,
+  "update_success": true,
+  "template": "boot (command <*>) Error: HALT asserted\\ cannot continue"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "1 failed to configure resourcemgmt subsystem err = 10"
+  ],
+  "logs_to_query_regex": [
+   "1 failed to configure resourcemgmt subsystem err = 10"
+  ],
+  "llm_template": "<*> failed to configure resourcemgmt subsystem err = <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "<*> failed to configure resourcemgmt subsystem err = <*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "starting"
+  ],
+  "logs_to_query_regex": [
+   "starting"
+  ],
+  "llm_template": "starting",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "starting"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000095fe <ok> <*> 0x00009dfe <ok> <*> 0x00009dfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x0001e1fe <ok> <*> 0x0001fdfe <ok> <*> 0x0001fdfe <ok> <*> 0x0001fdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok> <*> 0x2001fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000095fe <ok> <*> 0x00009dfe <ok> <*> 0x00009dfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x0001e1fe <ok> <*> 0x0001fdfe <ok> <*> 0x0001fdfe <ok> <*> 0x0001fdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 77,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "ambient=40 threshold exceeded",
+   "ambient=41 threshold exceeded",
+   "ambient=44 threshold exceeded"
+  ],
+  "logs_to_query_regex": [
+   "ambient=40 threshold exceeded",
+   "ambient=41 threshold exceeded",
+   "ambient=44 threshold exceeded"
+  ],
+  "llm_template": "ambient=<*> threshold exceeded",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "ambient=<*>"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "closing"
+  ],
+  "logs_to_query_regex": [
+   "closing"
+  ],
+  "llm_template": "closing",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "closing"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "Command Failed on: <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 44,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "power/control ok"
+  ],
+  "logs_to_query_regex": [
+   "power/control ok"
+  ],
+  "llm_template": "power/control ok",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "power/control ok"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "fan failure\\ ambient=26",
+   "fan failure\\ ambient=27"
+  ],
+  "logs_to_query_regex": [
+   "fan failure\\ ambient=26",
+   "fan failure\\ ambient=27"
+  ],
+  "llm_template": "fan failure\\ ambient=<*>",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "fan failure\\ ambient=<*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "Failed subcommands 3503",
+   "Failed subcommands 2882",
+   "Failed subcommands 2146"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 3503",
+   "Failed subcommands 2882",
+   "Failed subcommands 2146"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage1241",
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage542",
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage632"
+  ],
+  "logs_to_query_regex": [
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage1241",
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage542",
+   "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage632"
+  ],
+  "llm_template": "ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "boot (command 1890) Error: Unknown We failed to determine the state of this node",
+   "boot (command 3993) Error: Unknown We failed to determine the state of this node",
+   "wait (command 3845) Error: Unknown We failed to determine the state of this node"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 1890) Error: Unknown We failed to determine the state of this node",
+   "boot (command 3993) Error: Unknown We failed to determine the state of this node",
+   "wait (command 3845) Error: Unknown We failed to determine the state of this node"
+  ],
+  "llm_template": "boot (command <*>) Error: Unknown We failed to determine the state of this node",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "boot (command <*>) Error: Unknown We failed to determine the state of this node"
+ },
+ {
+  "iter": 52,
+  "logs_to_query": [
+   "risBoot (command 1900) Error: failed to RIS boot: <ABORT code completed>",
+   "risBoot (command 1913) Error: failed to RIS boot: <ABORT code completed>",
+   "risBoot (command 1912) Error: failed to RIS boot: <ABORT code completed>"
+  ],
+  "logs_to_query_regex": [
+   "risBoot (command 1900) Error: failed to RIS boot: <ABORT code completed>",
+   "risBoot (command 1913) Error: failed to RIS boot: <ABORT code completed>",
+   "risBoot (command 1912) Error: failed to RIS boot: <ABORT code completed>"
+  ],
+  "llm_template": "risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>",
+  "cluster_id": 64,
+  "update_success": true,
+  "template": "risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>"
+ },
+ {
+  "iter": 53,
+  "logs_to_query": [
+   "halt (command 2108) Error: Couldn\\047t Connect to console (state = REFUSED)",
+   "halt (command 2107) Error: Couldn\\047t Connect to console (state = REFUSED)",
+   "halt (command 3359) Error: Couldn\\047t Connect to console (state = REFUSED)"
+  ],
+  "logs_to_query_regex": [
+   "halt (command 2108) Error: Couldn\\047t Connect to console (state = REFUSED)",
+   "halt (command 2107) Error: Couldn\\047t Connect to console (state = REFUSED)",
+   "halt (command 3359) Error: Couldn\\047t Connect to console (state = REFUSED)"
+  ],
+  "llm_template": "halt (command <*>) Error: Couldn\\047t Connect to console (state = REFUSED)",
+  "cluster_id": 64,
+  "update_success": true,
+  "template": "halt (command <*>)"
+ },
+ {
+  "iter": 54,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 65,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 55,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok> <*> 0x0000003e <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 72,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 56,
+  "logs_to_query": [
+   "PSU status ( on off )"
+  ],
+  "logs_to_query_regex": [
+   "PSU status ( on off )"
+  ],
+  "llm_template": "PSU status ( <*> )",
+  "cluster_id": 52,
+  "update_success": true,
+  "template": "PSU status (<*> <*>)"
+ },
+ {
+  "iter": 57,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000001e <ok> <*> 0x0000001e <ok>",
+   "inconsistent nodesets <*> 0x1fffffffa <ok> <*> 0x1fffffffa <ok> <*> 0x0000000a <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0000fdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x00000002 <ok> <*> 0x0000001e <ok> <*> 0x0000001e <ok>",
+   "inconsistent nodesets <*> 0x1fffffffa <ok> <*> 0x1fffffffa <ok> <*> 0x0000000a <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0000fdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 65,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 58,
+  "logs_to_query": [
+   "Failed subcommands 3923\\ 3925\\ 3927\\ 3931\\ 3937\\ 3941"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 3923\\ 3925\\ 3927\\ 3931\\ 3937\\ 3941"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 59,
+  "logs_to_query": [
+   "no recent update"
+  ],
+  "logs_to_query_regex": [
+   "no recent update"
+  ],
+  "llm_template": "no recent update",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "no recent update"
+ },
+ {
+  "iter": 60,
+  "logs_to_query": [
+   "Failed subcommands 3825\\ 3845\\ 3846"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 3825\\ 3845\\ 3846"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 49,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 61,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x0001e1fe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffa <ok> <*> 0x00000000 <ok>",
+   "inconsistent nodesets <*> 0x00000006 <ok> <*> 0x0000000e <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x0001e1fe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffa <ok> <*> 0x00000000 <ok>",
+   "inconsistent nodesets <*> 0x00000006 <ok> <*> 0x0000000e <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 62,
+  "logs_to_query": [
+   "unknown"
+  ],
+  "logs_to_query_regex": [
+   "unknown"
+  ],
+  "llm_template": "unknown",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "unknown"
+ },
+ {
+  "iter": 63,
+  "logs_to_query": [
+   "ServerFileSystem domain root_domain is full",
+   "ServerFileSystem domain give_domain is full",
+   "ServerFileSystem domain lsf_domain is full"
+  ],
+  "logs_to_query_regex": [
+   "ServerFileSystem domain root_domain is full",
+   "ServerFileSystem domain give_domain is full",
+   "ServerFileSystem domain lsf_domain is full"
+  ],
+  "llm_template": "ServerFileSystem domain <*> is full",
+  "cluster_id": 49,
+  "update_success": true,
+  "template": "ServerFileSystem domain <*> is full"
+ },
+ {
+  "iter": 64,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x00000000 <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok>",
+   "inconsistent nodesets <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x1fffffffe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x1fffffffe <ok> <*> 0x05fffdfe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x00000000 <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok>",
+   "inconsistent nodesets <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x1fffffffe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x1fffffffe <ok> <*> 0x05fffdfe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x000001fe <ok> <*> 0x1fffffffe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 99,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 65,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 76,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 66,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x1c08003fe <ok> <*> 0x1c08003fe <ok> <*> 0x1c08003fe <ok>",
+   "inconsistent nodesets <*> 0x0801fdfe <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok>",
+   "inconsistent nodesets <*> 0x000001f6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x1c08003fe <ok> <*> 0x1c08003fe <ok> <*> 0x1c08003fe <ok>",
+   "inconsistent nodesets <*> 0x0801fdfe <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok> <*> 0x0801fdde <ok>",
+   "inconsistent nodesets <*> 0x000001f6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok> <*> 0x1001fdf6 <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 76,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 67,
+  "logs_to_query": [
+   "update received"
+  ],
+  "logs_to_query_regex": [
+   "update received"
+  ],
+  "llm_template": "update received",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "update received"
+ },
+ {
+  "iter": 68,
+  "logs_to_query": [
+   "halt (command 1887) Error: timeout waiting for SRM prompt",
+   "haltcluster (command 2129) Error: timeout waiting for SRM prompts",
+   "haltcluster (command 2377) Error: timeout waiting for SRM prompts"
+  ],
+  "logs_to_query_regex": [
+   "halt (command 1887) Error: timeout waiting for SRM prompt",
+   "haltcluster (command 2129) Error: timeout waiting for SRM prompts",
+   "haltcluster (command 2377) Error: timeout waiting for SRM prompts"
+  ],
+  "llm_template": "haltcluster (command <*>) Error: timeout waiting for SRM prompts",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "halt (command <*>) Error: timeout waiting for SRM prompt"
+ },
+ {
+  "iter": 69,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 70,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x041ffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x021ffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x041ffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok> <*> 0x04fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x021ffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok> <*> 0x06fffdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 88,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 71,
+  "logs_to_query": [
+   "boot (command 2092) Error: timeout waiting for Loading LMF licenses",
+   "boot (command 3941) Error: timeout waiting for Loading LMF licenses",
+   "boot (command 3937) Error: timeout waiting for Loading LMF licenses"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 2092) Error: timeout waiting for Loading LMF licenses",
+   "boot (command 3941) Error: timeout waiting for Loading LMF licenses",
+   "boot (command 3937) Error: timeout waiting for Loading LMF licenses"
+  ],
+  "llm_template": "boot (command <*>) Error: timeout waiting for Loading LMF licenses",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "boot (command <*>) Error: timeout waiting for Loading LMF licenses"
+ },
+ {
+  "iter": 72,
+  "logs_to_query": [
+   "member_delete (command 1908) Error: <*> is NOT a member of cluster <*>",
+   "member_delete (command 3914) Error: <*> is NOT a member of cluster <*>"
+  ],
+  "logs_to_query_regex": [
+   "member_delete (command 1908) Error: <*> is NOT a member of cluster <*>",
+   "member_delete (command 3914) Error: <*> is NOT a member of cluster <*>"
+  ],
+  "llm_template": "member_delete (command <*>) Error: <*> is NOT a member of cluster <*>",
+  "cluster_id": 66,
+  "update_success": true,
+  "template": "member_delete (command <*>) Error: <*> is NOT a member of cluster <*>"
+ },
+ {
+  "iter": 73,
+  "logs_to_query": [
+   "halt (command 1887) Error: timeout waiting for SRM prompt",
+   "halt (command 3163) Error: timeout waiting for SRM prompt",
+   "halt (command 2749) Error: timeout waiting for SRM prompt"
+  ],
+  "logs_to_query_regex": [
+   "halt (command 1887) Error: timeout waiting for SRM prompt",
+   "halt (command 3163) Error: timeout waiting for SRM prompt",
+   "halt (command 2749) Error: timeout waiting for SRM prompt"
+  ],
+  "llm_template": "halt (command <*>) Error: timeout waiting for SRM prompt",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "halt (command <*>) Error: timeout waiting for SRM prompt"
+ },
+ {
+  "iter": 74,
+  "logs_to_query": [
+   "boot (command 2142) Error: node went to SRM while trying to boot",
+   "boot (command 2353) Error: node went to SRM while trying to boot",
+   "boot (command 3846) Error: node went to SRM while trying to boot"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 2142) Error: node went to SRM while trying to boot",
+   "boot (command 2353) Error: node went to SRM while trying to boot",
+   "boot (command 3846) Error: node went to SRM while trying to boot"
+  ],
+  "llm_template": "boot (command <*>) Error: node went to SRM while trying to boot",
+  "cluster_id": 66,
+  "update_success": true,
+  "template": "boot (command <*>) Error: node went to SRM while trying to boot"
+ },
+ {
+  "iter": 75,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x04000fee <ok> <*> 0x04000fee <ok> <*> 0x04000fee <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok> <*> 0x01fffffe <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x04000fee <ok> <*> 0x04000fee <ok> <*> 0x04000fee <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 74,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 76,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x000087fe <ok> <*> 0x000087fe <ok> <*> 0x000087fe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x000087fe <ok> <*> 0x000087fe <ok> <*> 0x000087fe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok> <*> 0x00008ffe <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok> <*> 0x00020fee <ok>",
+   "inconsistent nodesets <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x0000000e <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok> <*> 0x00010fee <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 83,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 77,
+  "logs_to_query": [
+   "Failed subcommands 1990\\ 1993"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 1990\\ 1993"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 47,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 78,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x200ffdde <ok> <*> 0x200ffdde <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x4001fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0005fdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x2001fdde <ok> <*> 0x200ffdde <ok> <*> 0x200ffdde <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x4001fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0005fdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 80,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 79,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 52,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 80,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x0000000c <ok> <*> 0x0000000c <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x0000000c <ok> <*> 0x0000000c <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok> <*> 0x00040fec <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 81,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 81,
+  "logs_to_query": [
+   "boot (command 1880) Error: Console-Busy Port already in use",
+   "boot (command 2588) Error: Console-Busy Port already in use",
+   "wait (command 3964) Error: Console-Busy Port already in use"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 1880) Error: Console-Busy Port already in use",
+   "boot (command 2588) Error: Console-Busy Port already in use",
+   "wait (command 3964) Error: Console-Busy Port already in use"
+  ],
+  "llm_template": "boot (command <*>) Error: Console-Busy Port already in use",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "boot (command <*>) Error: Console-Busy Port already in use"
+ },
+ {
+  "iter": 82,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x11fffdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok> <*> 0x0801fdfe <ok>",
+   "inconsistent nodesets <*> 0x11fffdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok> <*> 0x0003fdfc <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 85,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 83,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x020ffdfe <ok> <*> 0x020ffdfe <ok> <*> 0x021ffdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x09fffdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0201fdfe <ok> <*> 0x020ffdfe <ok> <*> 0x020ffdfe <ok> <*> 0x021ffdfe <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x09fffdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 84,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 84,
+  "logs_to_query": [
+   "Command Failed on: <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 49,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 85,
+  "logs_to_query": [
+   "boot (command 2266) Error: node went to SRM while booting",
+   "boot (command 3580) Error: node went to SRM while booting",
+   "boot (command 2954) Error: node went to SRM while booting"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 2266) Error: node went to SRM while booting",
+   "boot (command 3580) Error: node went to SRM while booting",
+   "boot (command 2954) Error: node went to SRM while booting"
+  ],
+  "llm_template": "boot (command <*>) Error: node went to SRM while booting",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "boot (command <*>) Error: node went to SRM while booting"
+ },
+ {
+  "iter": 86,
+  "logs_to_query": [
+   "wait (command 3845) Error: Unknown We failed to determine the state of this node"
+  ],
+  "logs_to_query_regex": [
+   "wait (command 3845) Error: Unknown We failed to determine the state of this node"
+  ],
+  "llm_template": "wait (command <*>) Error: Unknown We failed to determine the state of this node",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "wait (command <*>) Error: Unknown We failed to determine the state of this node"
+ },
+ {
+  "iter": 87,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 83,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 88,
+  "logs_to_query": [
+   "risBoot (command 1903) Error: Timed out while waiting for SRM prompt: <ABORT code completed>",
+   "risBoot (command 1905) Error: Timed out while waiting for SRM prompt: <ABORT code completed>"
+  ],
+  "logs_to_query_regex": [
+   "risBoot (command 1903) Error: Timed out while waiting for SRM prompt: <ABORT code completed>",
+   "risBoot (command 1905) Error: Timed out while waiting for SRM prompt: <ABORT code completed>"
+  ],
+  "llm_template": "risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>"
+ },
+ {
+  "iter": 89,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok>",
+   "inconsistent nodesets <*> 0x05fffdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x000001fc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok> <*> 0x0801fdfc <ok>",
+   "inconsistent nodesets <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x000001fe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok> <*> 0x0081fdfe <ok>",
+   "inconsistent nodesets <*> 0x05fffdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x0401fdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok> <*> 0x05fffdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 90,
+  "logs_to_query": [
+   "haltcluster (command 2811) Error: haltcluster: bad spawn id",
+   "haltcluster (command 2808) Error: haltcluster: bad spawn id",
+   "haltcluster (command 2805) Error: haltcluster: bad spawn id"
+  ],
+  "logs_to_query_regex": [
+   "haltcluster (command 2811) Error: haltcluster: bad spawn id",
+   "haltcluster (command 2808) Error: haltcluster: bad spawn id",
+   "haltcluster (command 2805) Error: haltcluster: bad spawn id"
+  ],
+  "llm_template": "haltcluster (command <*>) Error: haltcluster: bad spawn id",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "haltcluster (command <*>) Error: haltcluster: bad spawn id"
+ },
+ {
+  "iter": 91,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x101ffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x1001fdfe <ok> <*> 0x101ffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok> <*> 0x11fffdfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 86,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 92,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 53,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 93,
+  "logs_to_query": [
+   "boot (command 3608) Error: System could not find kernel",
+   "boot (command 3607) Error: System could not find kernel"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 3608) Error: System could not find kernel",
+   "boot (command 3607) Error: System could not find kernel"
+  ],
+  "llm_template": "boot (command <*>) Error: System could not find kernel",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "boot (command <*>) Error: System could not find kernel"
+ },
+ {
+  "iter": 94,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 95,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffbfe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffbfe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffbfe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffbfe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 97,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 96,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1ffffbffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1ffffbffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1ffbffffc <ok> <*> 0x1fffffffe <ok>",
+   "inconsistent nodesets <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffc <ok> <*> 0x1ffffbffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 98,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 97,
+  "logs_to_query": [
+   "boot (command 2146) Error: timeout while booting.",
+   "boot (command 2614) Error: timeout while booting.",
+   "boot (command 3022) Error: timeout while booting."
+  ],
+  "logs_to_query_regex": [
+   "boot (command 2146) Error: timeout while booting.",
+   "boot (command 2614) Error: timeout while booting.",
+   "boot (command 3022) Error: timeout while booting."
+  ],
+  "llm_template": "boot (command <*>) Error: timeout while booting.",
+  "cluster_id": 53,
+  "update_success": true,
+  "template": "boot (command <*>) Error: timeout while booting."
+ },
+ {
+  "iter": 98,
+  "logs_to_query": [
+   "bootGenvmunix (command 1903) Error: Timeout waiting for system to come up: <ABORT code completed>",
+   "bootGenvmunix (command 1905) Error: Timeout waiting for system to come up: <ABORT code completed>",
+   "bootGenvmunix (command 3907) Error: Timeout waiting for system to come up: <ABORT code completed>"
+  ],
+  "logs_to_query_regex": [
+   "bootGenvmunix (command 1903) Error: Timeout waiting for system to come up: <ABORT code completed>",
+   "bootGenvmunix (command 1905) Error: Timeout waiting for system to come up: <ABORT code completed>",
+   "bootGenvmunix (command 3907) Error: Timeout waiting for system to come up: <ABORT code completed>"
+  ],
+  "llm_template": "bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>"
+ },
+ {
+  "iter": 99,
+  "logs_to_query": [
+   "clusterAddMember (command 2162) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM",
+   "clusterAddMember (command 2968) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM",
+   "clusterAddMember (command 3913) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM"
+  ],
+  "logs_to_query_regex": [
+   "clusterAddMember (command 2162) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM",
+   "clusterAddMember (command 2968) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM",
+   "clusterAddMember (command 3913) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM"
+  ],
+  "llm_template": "clusterAddMember (command <*>) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM",
+  "cluster_id": 73,
+  "update_success": true,
+  "template": "clusterAddMember (command <*>) Error: Cannot run clusterAddMember\\ because <*> connection state is REFUSED and needs to be SRM"
+ },
+ {
+  "iter": 100,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok> <*> 0x1ffffdffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 91,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 101,
+  "logs_to_query": [
+   "Failed subcommands 2333\\ 2336\\ 2339\\ 2355",
+   "Failed subcommands 2333\\ 2336\\ 2339\\ 2340"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 2333\\ 2336\\ 2339\\ 2355",
+   "Failed subcommands 2333\\ 2336\\ 2339\\ 2340"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 52,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 102,
+  "logs_to_query": [
+   "Failed subcommands 2988\\ 2989\\ 2990\\ 2991\\ 2992\\ 2994\\ 2995"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 2988\\ 2989\\ 2990\\ 2991\\ 2992\\ 2994\\ 2995"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 103,
+  "logs_to_query": [
+   "member_delete (command 2921) Error: node is up according to cluster_get_info"
+  ],
+  "logs_to_query_regex": [
+   "member_delete (command 2921) Error: node is up according to cluster_get_info"
+  ],
+  "llm_template": "member_delete (command <*>) Error: node is up according to cluster_get_info",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "member_delete (command <*>) Error: node is up according to cluster_get_info"
+ },
+ {
+  "iter": 104,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 82,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 105,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 89,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 106,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 90,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 107,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 95,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 108,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffbbc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffbbc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok> <*> 0x1fffffbbc <ok>",
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 96,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 109,
+  "logs_to_query": [
+   "Command Cancelled - cluster would lose quorum"
+  ],
+  "logs_to_query_regex": [
+   "Command Cancelled - cluster would lose quorum"
+  ],
+  "llm_template": "Command Cancelled - cluster would lose quorum",
+  "cluster_id": 53,
+  "update_success": true,
+  "template": "Command Cancelled - cluster would lose quorum"
+ },
+ {
+  "iter": 110,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 111,
+  "logs_to_query": [
+   "wait (command 3964) Error: Console-Busy Port already in use"
+  ],
+  "logs_to_query_regex": [
+   "wait (command 3964) Error: Console-Busy Port already in use"
+  ],
+  "llm_template": "wait (command <*>: Console-Busy Port already in use",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "wait (command <*>) Error: Console-Busy Port already in use"
+ },
+ {
+  "iter": 112,
+  "logs_to_query": [
+   "Failed subcommands 3549\\ 3550\\ 3551\\ 3552\\ 3553\\ 3554\\ 3555\\ 3556"
+  ],
+  "logs_to_query_regex": [
+   "Failed subcommands 3549\\ 3550\\ 3551\\ 3552\\ 3553\\ 3554\\ 3555\\ 3556"
+  ],
+  "llm_template": "Failed subcommands <*>",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "Failed subcommands <*>"
+ },
+ {
+  "iter": 113,
+  "logs_to_query": [
+   "boot (command 3833) Error: CMF-Port This node\\047s port is not connected"
+  ],
+  "logs_to_query_regex": [
+   "boot (command 3833) Error: CMF-Port This node\\047s port is not connected"
+  ],
+  "llm_template": "boot (command <*>) Error: CMF-Port This node\\047s port is not connected",
+  "cluster_id": 64,
+  "update_success": true,
+  "template": "boot (command <*>) Error: CMF-Port This node\\047s port is not connected"
+ },
+ {
+  "iter": 114,
+  "logs_to_query": [
+   "bootGenvmunix (command 1918) Error: node returned to srm while booting: <ABORT code completed>"
+  ],
+  "logs_to_query_regex": [
+   "bootGenvmunix (command 1918) Error: node returned to srm while booting: <ABORT code completed>"
+  ],
+  "llm_template": "bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>",
+  "cluster_id": 67,
+  "update_success": true,
+  "template": "bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>"
+ },
+ {
+  "iter": 115,
+  "logs_to_query": [
+   "clusterAddMember (command 1900) Error: cluster_add_member failed unexpectedly\\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: 601373: no such process>"
+  ],
+  "logs_to_query_regex": [
+   "clusterAddMember (command 1900) Error: cluster_add_member failed unexpectedly\\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: 601373: no such process>"
+  ],
+  "llm_template": "clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: <*>: no such process>",
+  "cluster_id": 72,
+  "update_success": true,
+  "template": "clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\\ check <*>: <ABORT code errored: kill: <*>: no such process>"
+ },
+ {
+  "iter": 116,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 75,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 117,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 79,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 118,
+  "logs_to_query": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "Command Failed on: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>"
+  ],
+  "llm_template": "Command Failed on: <*>",
+  "cluster_id": 81,
+  "update_success": true,
+  "template": "Command Failed on: <*>"
+ },
+ {
+  "iter": 119,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1ffe69dfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1ffe69dfe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok> <*> 0x1fffffffe <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>",
+  "cluster_id": 93,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ },
+ {
+  "iter": 120,
+  "logs_to_query": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "logs_to_query_regex": [
+   "inconsistent nodesets <*> 0x1fffffffe <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok> <*> 0x1fffffffc <ok>"
+  ],
+  "llm_template": "inconsistent nodesets <*> <ok> <*> <ok>",
+  "cluster_id": 94,
+  "update_success": true,
+  "template": "inconsistent nodesets <*> <*> <ok> <*> <*> <ok>"
+ }
+]

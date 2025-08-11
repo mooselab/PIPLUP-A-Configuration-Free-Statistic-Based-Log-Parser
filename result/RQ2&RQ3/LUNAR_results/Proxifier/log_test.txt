@@ -1,0 +1,395 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/Proxifier
+Output dir: ./saved_results/LUNAR-single/Proxifier
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/Proxifier/Proxifier_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 9
+Clustering by log length: [10227, 3884, 305, 3034, 3294, 14, 329, 230, 3]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 10227/10227/10227 Logs. Last cluster logs: 10227
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 3884/3884/3884 Logs. Last cluster logs: 3884
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 305/305/305 Logs. Last cluster logs: 305
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 3034/3034/3034 Logs. Last cluster logs: 3034
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 3294/9/3285 Logs. Last cluster logs: 9
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 14/14/14 Logs. Last cluster logs: 14
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 329/329/329 Logs. Last cluster logs: 329
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 230/230/230 Logs. Last cluster logs: 230
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 3/3/3 Logs. Last cluster logs: 3
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 10 clusters
+Clustering results: [10227, 3884, 305, 3034, 3285, 9, 14, 329, 230, 3]
+Iteration 0
+Sample 3 from current logs bucket: ID: 0, Len: 6, Bucket Size: 10227, Total Buckets: 10
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `<*> open through proxy <*> HTTPS`, MaxSim Log: `<*> open through proxy <*> SOCKS5`.
+	============  Query  ====================
+	Log[1]: `<*> open through proxy <*> HTTPS`
+	Log[2]: `<*> open through proxy <*> SOCKS5`
+	============ Response ====================
+LogTemplate[1]: `<{placeholder}> open through proxy <{placeholder}> HTTPS`  
+LogTemplate[2]: `<{placeholder}> open through proxy <{placeholder}> SOCKS5`  
+	============ PostProcess ====================
+	Post Template: `<*> open through proxy <*> HTTPS`
+	Post Template: `<*> open through proxy <*> SOCKS5`
+	============ Aggregate ====================
+	Aggregated Template:  <*> open through proxy <*> HTTPS
+[UpdateBucket] Logs: This iter found: 10219, total: 10219/21320, remain: 11101. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 10227 -> 8, remain buckets: 10
+Update Success: Time for one update logs: 0.19231796264648438, template `<*> open through proxy <*> HTTPS`
+========================================================================================
+
+
+Iteration 1
+Sample 3 from current logs bucket: ID: 1, Len: 10, Bucket Size: 3884, Total Buckets: 10
+Sampling from 958 logs, Sim Level: 5, MaxSim to anchor: 0.8750. Anchor: `<*> close, 0 bytes sent, 0 bytes received, lifetime <*>`, MaxSim Log: `<*> close, 0 bytes sent, 0 bytes received, lifetime 00:01`.
+	============  Query  ====================
+	Log[1]: `<*> close, 0 bytes sent, 0 bytes received, lifetime <*>`
+	Log[2]: `<*> close, 952 bytes sent, 782 bytes received, lifetime 00:18`
+	Log[3]: `<*> close, 731 bytes sent, 313 bytes received, lifetime 00:08`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes received, lifetime <*>`
+LogTemplate[2]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes received, lifetime {time}`
+LogTemplate[3]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes received, lifetime {time}`
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes sent, <*> bytes received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes received, lifetime <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes sent, <*> bytes received, lifetime <*>
+[UpdateBucket] Logs: This iter found: 3884, total: 14103/21320, remain: 7217. 
+[UpdateBucket] Buckets: Checked 1 ([1]), Parent Bucket size: 3884 -> 0, remain buckets: 9
+Update Success: Time for one update logs: 0.11041378974914551, template `<*> close, <*> bytes sent, <*> bytes received, lifetime <*>`
+========================================================================================
+
+
+Iteration 2
+Sample 3 from current logs bucket: ID: 4, Len: 14, Bucket Size: 3285, Total Buckets: 10
+Sampling from 3165 logs, Sim Level: 5, MaxSim to anchor: 0.8182. Anchor: `<*> close, 1036 bytes (<*> <*>) sent, 34151 bytes (<*> <*>) received, lifetime <*>`, MaxSim Log: `<*> close, 1036 bytes (<*> <*>) sent, 13347 bytes (<*> <*>) received, lifetime <*>`.
+	============  Query  ====================
+	Log[1]: `<*> close, 1036 bytes (<*> <*>) sent, 34151 bytes (<*> <*>) received, lifetime <*>`
+	Log[2]: `<*> close, 5851 bytes (<*> <*>) sent, 426560 bytes (416 <*>) received, lifetime 04:01`
+	Log[3]: `<*> close, 365607 bytes (357 <*>) sent, 30452 bytes (<*> <*>) received, lifetime 01:38:48`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes (<*> <*>) sent, {bytes_received} bytes (<*> <*>) received, lifetime {lifetime}`  
+LogTemplate[2]: `<*> close, {bytes_sent} bytes (<*> <*>) sent, {bytes_received} bytes (416 <*>) received, lifetime {lifetime}`  
+LogTemplate[3]: `<*> close, {bytes_sent} bytes (357 <*>) sent, {bytes_received} bytes (<*> <*>) received, lifetime {lifetime}`  
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>
+[UpdateBucket] Logs: This iter found: 3294, total: 17397/21320, remain: 3923. 
+[UpdateBucket] Buckets: Checked 2 ([4, 5]), Parent Bucket size: 3294 -> 0, remain buckets: 7
+Update Success: Time for one update logs: 0.095977783203125, template `<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>`
+========================================================================================
+
+
+Iteration 3
+Sample 3 from current logs bucket: ID: 3, Len: 12, Bucket Size: 3034, Total Buckets: 10
+Sampling from 2452 logs, Sim Level: 6, MaxSim to anchor: 0.8182. Anchor: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`, MaxSim Log: `<*> close, 1165 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`.
+	============  Query  ====================
+	Log[1]: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`
+	Log[2]: `<*> close, 156 bytes sent, 184933 bytes (180 <*>) received, lifetime 00:01`
+	Log[3]: `<*> close, 446 bytes sent, 195160 bytes (190 <*>) received, lifetime 00:59`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes ({bytes_received} bytes) sent, 0 bytes received, lifetime {lifetime}`
+LogTemplate[2]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes ({*} bytes) received, lifetime {lifetime}`
+LogTemplate[3]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes ({*} bytes) received, lifetime {lifetime}`
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes (<*> bytes) sent, <*> bytes received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes (<*> bytes) received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes (<*> bytes) received, lifetime <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes sent, <*> bytes (<*> bytes) received, lifetime <*>
+[UpdateBucket] Logs: This iter found: 0, total: 17397/21320, remain: 3923. 
+[UpdateBucket] Buckets: Checked 1 ([3]), Parent Bucket size: 3034 -> 3034, remain buckets: 7
+Update failed: Template can not match logs `<*> close, <*> bytes sent, <*> bytes (<*> bytes) received, lifetime <*>`. Retry query
+Update failed. Retry 0 times when updating is not successful
+Sample 3 from current logs bucket: ID: 3, Len: 12, Bucket Size: 3034, Total Buckets: 10
+Sampling from 2452 logs, Sim Level: 6, MaxSim to anchor: 0.8182. Anchor: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`, MaxSim Log: `<*> close, 1165 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`.
+	============  Query  ====================
+	Log[1]: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`
+	Log[2]: `<*> close, 326 bytes sent, 103039 bytes (100 <*>) received, lifetime 00:01`
+	Log[3]: `<*> close, 875 bytes sent, 273390 bytes (266 <*>) received, lifetime 01:02`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes ({bytes_received} bytes), lifetime {time}`
+LogTemplate[2]: `<*> close, {bytes_sent} bytes, {bytes_received} bytes ({percentage}%), lifetime {time}`
+LogTemplate[3]: `<*> close, {bytes_sent} bytes, {bytes_received} bytes ({percentage}%), lifetime {time}`
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes (<*> bytes), lifetime <*>`
+	Post Template: `<*> close, <*> bytes, <*> bytes (<*>%), lifetime <*>`
+	Post Template: `<*> close, <*> bytes, <*> bytes (<*>%), lifetime <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes, <*> bytes (<*>%), lifetime <*>
+[UpdateBucket] Logs: This iter found: 0, total: 17397/21320, remain: 3923. 
+[UpdateBucket] Buckets: Checked 1 ([3]), Parent Bucket size: 3034 -> 3034, remain buckets: 7
+Update failed: Template can not match logs `<*> close, <*> bytes, <*> bytes (<*>%), lifetime <*>`. Retry query
+Update failed. Retry 1 times when updating is not successful
+Sample 3 from current logs bucket: ID: 3, Len: 12, Bucket Size: 3034, Total Buckets: 10
+Sampling from 2452 logs, Sim Level: 6, MaxSim to anchor: 0.8182. Anchor: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`, MaxSim Log: `<*> close, 1165 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`.
+	============  Query  ====================
+	Log[1]: `<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>`
+	Log[2]: `<*> close, 983 bytes sent, 303510 bytes (296 <*>) received, lifetime 01:57`
+	Log[3]: `<*> close, 933 bytes sent, 141595 bytes (138 <*>) received, lifetime 00:04`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes ({bytes_received} bytes), lifetime {time}`
+LogTemplate[2]: `<*> close, {bytes_sent} bytes, {bytes_received} bytes ({<*> bytes) received, lifetime {time}`
+LogTemplate[3]: `<*> close, {bytes_sent} bytes, {bytes_received} bytes ({<*> bytes) received, lifetime {time}`
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes (<*> bytes), lifetime <*>`
+	Post Template: `<*> close, <*> bytes, <*> bytes (<*>`
+	Post Template: `<*> close, <*> bytes, <*> bytes (<*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes, <*> bytes (<*>
+[UpdateBucket] Logs: This iter found: 0, total: 17397/21320, remain: 3923. 
+[UpdateBucket] Buckets: Checked 1 ([3]), Parent Bucket size: 3034 -> 3034, remain buckets: 7
+Update failed: Template can not match logs `<*> close, <*> bytes, <*> bytes (<*>`. Retry query
+Update failed. Retry 2 times failed. Try to get a compromise response
+	Post Template: `<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>`
+[UpdateBucket] Logs: This iter found: 1147, total: 18544/21320, remain: 2776. 
+[UpdateBucket] Buckets: Checked 1 ([3]), Parent Bucket size: 3034 -> 1887, remain buckets: 7
+Update Success: Time for one update logs: 0.06634187698364258, template `<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 3, Len: 12, Bucket Size: 1887, Total Buckets: 10
+Sampling from 1483 logs, Sim Level: 5, MaxSim to anchor: 0.8182. Anchor: `<*> close, 451 bytes sent, 18846 bytes (<*> <*>) received, lifetime <*>`, MaxSim Log: `<*> close, 451 bytes sent, 2809 bytes (<*> <*>) received, lifetime <*>`.
+	============  Query  ====================
+	Log[1]: `<*> close, 451 bytes sent, 18846 bytes (<*> <*>) received, lifetime <*>`
+	Log[2]: `<*> close, 446 bytes sent, 195160 bytes (190 <*>) received, lifetime 00:59`
+	Log[3]: `<*> close, 983 bytes sent, 270299 bytes (263 <*>) received, lifetime 01:58`
+	============ Response ====================
+LogTemplate[1]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes ({*} <*>) received, lifetime {time}`
+LogTemplate[2]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes ({*} <*>) received, lifetime {duration}`
+LogTemplate[3]: `<*> close, {bytes_sent} bytes sent, {bytes_received} bytes ({*} <*>) received, lifetime {duration}`
+	============ PostProcess ====================
+	Post Template: `<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>`
+	Post Template: `<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>
+[UpdateBucket] Logs: This iter found: 1887, total: 20431/21320, remain: 889. 
+[UpdateBucket] Buckets: Checked 1 ([3]), Parent Bucket size: 1887 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.06488299369812012, template `<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 7, Len: 16, Bucket Size: 329, Total Buckets: 10
+Sampling from 5 logs, Sim Level: 2, MaxSim to anchor: 0.9167. Anchor: `<*> error : Could not connect to proxy <*> - Could not resolve <*> error 11001`, MaxSim Log: `dshytnh:80 error : Could not connect to proxy <*> - Could not resolve <*> error 11001`.
+	============  Query  ====================
+	Log[1]: `<*> error : Could not connect to proxy <*> - Could not resolve <*> error 11001`
+	Log[2]: `awqiizxequsixgr:80 error : Could not connect to proxy <*> - Could not resolve <*> error 11001`
+	Log[3]: `<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061`
+	============ Response ====================
+LogTemplate[1]: `<*> error : Could not connect to proxy <*> - Could not resolve <*> error 11001`
+LogTemplate[2]: `<server_port> error : Could not connect to proxy <*> - Could not resolve <*> error 11001`
+LogTemplate[3]: `<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061`
+	============ PostProcess ====================
+	Post Template: `<*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>`
+	Post Template: `<server_port> error : Could not connect to proxy <*> - Could not resolve <*> error <*>`
+	Post Template: `<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>
+[UpdateBucket] Logs: This iter found: 134, total: 20565/21320, remain: 755. 
+[UpdateBucket] Buckets: Checked 1 ([7]), Parent Bucket size: 329 -> 195, remain buckets: 6
+Update Success: Time for one update logs: 0.017609834671020508, template `<*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 2, Len: 11, Bucket Size: 305, Total Buckets: 10
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `<*> error : A connection request was canceled before the completion.`
+	============ Response ====================
+LogTemplate[1]: `<*> error : A connection request was canceled before the completion.`
+	============ PostProcess ====================
+	Post Template: `<*> error : A connection request was canceled before the completion.`
+	============ Aggregate ====================
+	Aggregated Template:  <*> error : A connection request was canceled before the completion.
+[UpdateBucket] Logs: This iter found: 305, total: 20870/21320, remain: 450. 
+[UpdateBucket] Buckets: Checked 1 ([2]), Parent Bucket size: 305 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.020907878875732422, template `<*> error : A connection request was canceled before the completion.`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 8, Len: 22, Bucket Size: 230, Total Buckets: 10
+Sampling from 5 logs, Sim Level: 2, MaxSim to anchor: 0.9091. Anchor: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403`, MaxSim Log: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`.
+	============  Query  ====================
+	Log[1]: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403`
+	Log[2]: `wpad:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	Log[3]: `qumccyndmsiwf:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	============ Response ====================
+LogTemplate[1]: `error : Could not connect through proxy {proxy} - Proxy server cannot establish a connection with the target, status code {status_code}`
+LogTemplate[2]: `wpad:80 error : Could not connect through proxy {proxy} - Proxy server cannot establish a connection with the target, status code {status_code}`
+LogTemplate[3]: `qumccyndmsiwf:80 error : Could not connect through proxy {proxy} - Proxy server cannot establish a connection with the target, status code {status_code}`
+	============ PostProcess ====================
+	Post Template: `error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	Post Template: `wpad:<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	Post Template: `qumccyndmsiwf:<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	============ Aggregate ====================
+	Aggregated Template:  error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>
+[UpdateBucket] Logs: This iter found: 0, total: 20870/21320, remain: 450. 
+[UpdateBucket] Buckets: Checked 1 ([8]), Parent Bucket size: 230 -> 230, remain buckets: 5
+Update failed: Template can not match logs `error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`. Retry query
+Update failed. Retry 0 times when updating is not successful
+Sample 3 from current logs bucket: ID: 8, Len: 22, Bucket Size: 230, Total Buckets: 10
+Sampling from 5 logs, Sim Level: 2, MaxSim to anchor: 0.9091. Anchor: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403`, MaxSim Log: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`.
+	============  Query  ====================
+	Log[1]: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403`
+	Log[2]: `qumccyndmsiwf:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	Log[3]: `srkodhptqlryvjp:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	============ Response ====================
+LogTemplate[1]: `error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+LogTemplate[2]: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+LogTemplate[3]: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	============ PostProcess ====================
+	Post Template: `error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	Post Template: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	Post Template: `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>
+[UpdateBucket] Logs: This iter found: 230, total: 21100/21320, remain: 220. 
+[UpdateBucket] Buckets: Checked 1 ([8]), Parent Bucket size: 230 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.015964984893798828, template `<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+========================================================================================
+
+
+Iteration 8
+Sample 3 from current logs bucket: ID: 7, Len: 16, Bucket Size: 195, Total Buckets: 10
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061`
+	============ Response ====================
+LogTemplate[1]: `<*> error : Could not connect to proxy <*> - connection attempt failed with error {error_code}`
+	============ PostProcess ====================
+	Post Template: `<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> error : Could not connect to proxy <*> - connection attempt failed with error <*>
+[UpdateBucket] Logs: This iter found: 195, total: 21295/21320, remain: 25. 
+[UpdateBucket] Buckets: Checked 1 ([7]), Parent Bucket size: 195 -> 0, remain buckets: 3
+Update Success: Time for one update logs: 0.016099214553833008, template `<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 6, Len: 15, Bucket Size: 14, Total Buckets: 10
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.`
+	============ Response ====================
+LogTemplate[1]: `<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.`
+	============ PostProcess ====================
+	Post Template: `<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.`
+	============ Aggregate ====================
+	Aggregated Template:  <*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.
+[UpdateBucket] Logs: This iter found: 14, total: 21309/21320, remain: 11. 
+[UpdateBucket] Buckets: Checked 1 ([6]), Parent Bucket size: 14 -> 0, remain buckets: 2
+Update Success: Time for one update logs: 0.005473136901855469, template `<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 0, Len: 6, Bucket Size: 8, Total Buckets: 10
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `<*> open through proxy <*> SOCKS5`
+	============ Response ====================
+LogTemplate[1]: `<*> open through proxy <*> SOCKS5`
+	============ PostProcess ====================
+	Post Template: `<*> open through proxy <*> SOCKS5`
+	============ Aggregate ====================
+	Aggregated Template:  <*> open through proxy <*> SOCKS5
+[UpdateBucket] Logs: This iter found: 8, total: 21317/21320, remain: 3. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 8 -> 0, remain buckets: 1
+[TemplateDB] Try Merge: `<*> open through proxy <*> SOCKS5` | `<*> open through proxy <*> HTTPS`
+[TemplateDB] Reject Merge, Remain Template: `<*> open through proxy <*> SOCKS5`
+Update Success: Time for one update logs: 0.004517078399658203, template `<*> open through proxy <*> SOCKS5`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 9, Len: 23, Bucket Size: 3, Total Buckets: 10
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	============ Response ====================
+LogTemplate[1]: `<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503`
+	============ PostProcess ====================
+	Post Template: `<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>
+[UpdateBucket] Logs: This iter found: 3, total: 21320/21320, remain: 0. 
+[UpdateBucket] Buckets: Checked 1 ([9]), Parent Bucket size: 3 -> 0, remain buckets: 0
+Update Success: Time for one update logs: 0.002385854721069336, template `<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>`
+========================================================================================
+
+
+Original df_logs: (21320, 4), Clustering df_logs: (21320, 6)
+Saved Proxifier_log_structured.csv to ./saved_results/LUNAR-single/Proxifier/Proxifier_full.log_structured.csv
+Saved Proxifier_log_templates.csv to ./saved_results/LUNAR-single/Proxifier/Proxifier_full.log_templates.csv
+Total parsingg time: 26.80390501022339 seconds
+Total query time: 23.89843225479126 seconds, 15 queries
+Avg. query time: 1.5932277548342475 seconds
+Total pure match time: 2.905472755432129 seconds
+
+=== Evaluation on Proxifier ===
+Evaluate parsing result: ./saved_results/LUNAR-single/Proxifier/Proxifier_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 1259.17it/s]
+Grouping_Accuracy (GA): 0.9891, FGA: 0.8696,
+Grouping Accuracy calculation done. [Time taken: 0.023]
+Parsing_Accuracy (PA): 0.9999
+Parsing Accuracy calculation done. [Time taken: 0.002]
+  0%|          | 0/12 [00:00<?, ?it/s]100%|██████████| 12/12 [00:00<00:00, 7808.20it/s]
+1-num-3, {'<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>'} | {'<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>'}
+PTA: 0.9167, RTA: 1.0000 FTA: 0.9565
+Identify : 12, Groundtruth : 11
+Template-level accuracy calculation done. [Time taken: 0.008]
+Finish parsing logs: Proxifier
+Output dir: ./saved_results/LUNAR-single

@@ -1,0 +1,1023 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/OpenSSH
+Output dir: ./saved_results/LUNAR-single/OpenSSH
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/OpenSSH/OpenSSH_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 12
+Clustering by log length: [1, 117980, 296, 898, 122073, 141045, 141833, 20455, 55967, 932, 36970, 497]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 1/1/1 Logs. Last cluster logs: 1
+--- Finished 2nd Level Clustering by top-3 tokens: 5 clusters, Total/Min/Max: 117980/10/68958 Logs. Last cluster logs: 10
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 296/6/182 Logs. Last cluster logs: 6
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 898/60/838 Logs. Last cluster logs: 60
+--- Finished 2nd Level Clustering by top-3 tokens: 5 clusters, Total/Min/Max: 122073/37/46593 Logs. Last cluster logs: 37
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 141045/81/140964 Logs. Last cluster logs: 81
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 141833/4/140701 Logs. Last cluster logs: 4
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 20455/15/19848 Logs. Last cluster logs: 15
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 55967/92/36966 Logs. Last cluster logs: 92
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 932/932/932 Logs. Last cluster logs: 932
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 36970/3/36967 Logs. Last cluster logs: 3
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 497/497/497 Logs. Last cluster logs: 497
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 32 clusters
+Clustering results: [1, 14580, 14580, 19852, 68958, 10, 182, 108, 6, 838, 60, 46593, 37298, 37963, 182, 37, 140964, 81, 140701, 176, 952, 4, 19848, 592, 15, 18909, 36966, 92, 932, 36967, 3, 497]
+Iteration 0
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 140964, Total Buckets: 32
+Sampling from 53828 logs, Sim Level: 4, MaxSim to anchor: 0.8000. Anchor: `Failed password for root from <*> port 42393 ssh2`, MaxSim Log: `Failed password for root from <*> port 45378 ssh2`.
+	============  Query  ====================
+	Log[1]: `Failed password for root from <*> port 42393 ssh2`
+	Log[2]: `Failed password for uucp from <*> port 59665 ssh2`
+	Log[3]: `Accepted password for suyuxin from <*> port 13537 ssh2`
+	============ Response ====================
+LogTemplate[1]: `Failed password for {user} from <*> port {port} ssh2`
+LogTemplate[2]: `Failed password for {user} from <*> port {port} ssh2`
+LogTemplate[3]: `Accepted password for {user} from <*> port {port} ssh2`
+	============ PostProcess ====================
+	Post Template: `Failed password for <*> from <*> port <*> ssh2`
+	Post Template: `Failed password for <*> from <*> port <*> ssh2`
+	Post Template: `Accepted password for <*> from <*> port <*> ssh2`
+	============ Aggregate ====================
+	Aggregated Template:  Failed password for <*> from <*> port <*> ssh2
+[UpdateBucket] Logs: This iter found: 140768, total: 140768/638947, remain: 498179. 
+[UpdateBucket] Buckets: Checked 2 ([16, 17]), Parent Bucket size: 141045 -> 277, remain buckets: 32
+Update Success: Time for one update logs: 2.5524139404296875, template `Failed password for <*> from <*> port <*> ssh2`
+========================================================================================
+
+
+Iteration 1
+Sample 3 from current logs bucket: ID: 18, Len: 10, Bucket Size: 140701, Total Buckets: 32
+Sampling from 27 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`, MaxSim Log: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=uucp`.
+	============  Query  ====================
+	Log[1]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`
+	Log[2]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=gnats`
+	Log[3]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data`
+	============ Response ====================
+LogTemplate[1]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=root`  
+LogTemplate[2]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=gnats`  
+LogTemplate[3]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=www-data`  
+	============ PostProcess ====================
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=gnats`
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=www-data`
+	============ Aggregate ====================
+	Aggregated Template:  pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root
+[UpdateBucket] Logs: This iter found: 139754, total: 280522/638947, remain: 358425. 
+[UpdateBucket] Buckets: Checked 4 ([18, 19, 20, 21]), Parent Bucket size: 141833 -> 2079, remain buckets: 32
+Update Success: Time for one update logs: 3.278646945953369, template `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+========================================================================================
+
+
+Iteration 2
+Sample 3 from current logs bucket: ID: 4, Len: 5, Bucket Size: 68958, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Connection closed by <*> [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Connection closed by {reason} [preauth]`
+	============ PostProcess ====================
+	Post Template: `Connection closed by <*> [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Connection closed by <*> [preauth]
+[UpdateBucket] Logs: This iter found: 68958, total: 349480/638947, remain: 289467. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 117980 -> 49022, remain buckets: 31
+Update Success: Time for one update logs: 1.1868081092834473, template `Connection closed by <*> [preauth]`
+========================================================================================
+
+
+Iteration 3
+Sample 3 from current logs bucket: ID: 11, Len: 8, Bucket Size: 46593, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: Bye Bye [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: Bye Bye [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: Bye Bye [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: Bye Bye [preauth]
+[UpdateBucket] Logs: This iter found: 46593, total: 396073/638947, remain: 242874. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 122073 -> 75480, remain buckets: 30
+Update Success: Time for one update logs: 1.039294958114624, template `Received disconnect from <*>: <*>: Bye Bye [preauth]`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 13, Len: 8, Bucket Size: 37963, Total Buckets: 32
+Sampling from 2 logs, Sim Level: 1, MaxSim to anchor: 0.7778. Anchor: `PAM service(sshd) ignoring max retries; 6 > 3`, MaxSim Log: `PAM service(sshd) ignoring max retries; 5 > 3`.
+	============  Query  ====================
+	Log[1]: `PAM service(sshd) ignoring max retries; 6 > 3`
+	Log[2]: `PAM service(sshd) ignoring max retries; 5 > 3`
+	Log[3]: `PAM service(sshd) ignoring max retries; 4 > 3`
+	============ Response ====================
+LogTemplate[1]: `PAM service(sshd) ignoring max retries; <*> > 3`
+LogTemplate[2]: `PAM service(sshd) ignoring max retries; <*> > 3`
+LogTemplate[3]: `PAM service(sshd) ignoring max retries; <*> > 3`
+	============ PostProcess ====================
+	Post Template: `PAM service(sshd) ignoring max retries; <*> > <*>`
+	Post Template: `PAM service(sshd) ignoring max retries; <*> > <*>`
+	Post Template: `PAM service(sshd) ignoring max retries; <*> > <*>`
+	============ Aggregate ====================
+	Aggregated Template:  PAM service(sshd) ignoring max retries; <*> > <*>
+[UpdateBucket] Logs: This iter found: 37963, total: 434036/638947, remain: 204911. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 75480 -> 37517, remain buckets: 29
+Update Success: Time for one update logs: 0.7495028972625732, template `PAM service(sshd) ignoring max retries; <*> > <*>`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 12, Len: 8, Bucket Size: 37298, Total Buckets: 32
+Sampling from 10 logs, Sim Level: 1, MaxSim to anchor: 0.7778. Anchor: `Disconnecting: Too many authentication failures for root [preauth]`, MaxSim Log: `Disconnecting: Too many authentication failures for admin [preauth]`.
+	============  Query  ====================
+	Log[1]: `Disconnecting: Too many authentication failures for root [preauth]`
+	Log[2]: `Disconnecting: Too many authentication failures for usuario [preauth]`
+	Log[3]: `Disconnecting: Too many authentication failures for service [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Disconnecting: Too many authentication failures for {username} [preauth]`
+LogTemplate[2]: `Disconnecting: Too many authentication failures for {username} [preauth]`
+LogTemplate[3]: `Disconnecting: Too many authentication failures for {username} [preauth]`
+	============ PostProcess ====================
+	Post Template: `Disconnecting: Too many authentication failures for <*> [preauth]`
+	Post Template: `Disconnecting: Too many authentication failures for <*> [preauth]`
+	Post Template: `Disconnecting: Too many authentication failures for <*> [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Disconnecting: Too many authentication failures for <*> [preauth]
+[UpdateBucket] Logs: This iter found: 37298, total: 471334/638947, remain: 167613. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 37517 -> 219, remain buckets: 28
+Update Success: Time for one update logs: 0.661168098449707, template `Disconnecting: Too many authentication failures for <*> [preauth]`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 29, Len: 14, Bucket Size: 36967, Total Buckets: 32
+Sampling from 27609 logs, Sim Level: 3, MaxSim to anchor: 0.8667. Anchor: `message repeated 5 times: [ Failed password for root from <*> port 42393 ssh2]`, MaxSim Log: `message repeated 5 times: [ Failed password for root from <*> port 50719 ssh2]`.
+	============  Query  ====================
+	Log[1]: `message repeated 5 times: [ Failed password for root from <*> port 42393 ssh2]`
+	Log[2]: `message repeated 4 times: [ Failed password for root from <*> port 53551 ssh2]`
+	Log[3]: `message repeated 2 times: [ Failed password for curi from <*> port 35777 ssh2]`
+	============ Response ====================
+LogTemplate[1]: `message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]`
+	============ PostProcess ====================
+	Post Template: `message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]`
+	Post Template: `message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]`
+	Post Template: `message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]`
+	============ Aggregate ====================
+	Aggregated Template:  message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]
+[UpdateBucket] Logs: This iter found: 36967, total: 508301/638947, remain: 130646. 
+[UpdateBucket] Buckets: Checked 2 ([29, 30]), Parent Bucket size: 36970 -> 3, remain buckets: 27
+Update Success: Time for one update logs: 0.8287699222564697, template `message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 26, Len: 12, Bucket Size: 36966, Total Buckets: 32
+Sampling from 4 logs, Sim Level: 2, MaxSim to anchor: 0.8462. Anchor: `PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`, MaxSim Log: `PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`.
+	============  Query  ====================
+	Log[1]: `PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`
+	Log[2]: `PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root`
+	Log[3]: `PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi`
+	============ Response ====================
+LogTemplate[1]: `PAM {count} more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=root`  
+LogTemplate[2]: `PAM {count} more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=root`  
+LogTemplate[3]: `PAM {count} more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=curi`  
+	============ PostProcess ====================
+	Post Template: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+	Post Template: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+	Post Template: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi`
+	============ Aggregate ====================
+	Aggregated Template:  PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root
+[UpdateBucket] Logs: This iter found: 36965, total: 545266/638947, remain: 93681. 
+[UpdateBucket] Buckets: Checked 3 ([25, 26, 27]), Parent Bucket size: 55967 -> 19002, remain buckets: 27
+Update Success: Time for one update logs: 0.9402549266815186, template `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+========================================================================================
+
+
+Iteration 8
+Sample 3 from current logs bucket: ID: 3, Len: 5, Bucket Size: 19852, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `pam_unix(sshd:auth): check pass; user unknown`
+	============ Response ====================
+LogTemplate[1]: `pam_unix(sshd:auth): check pass; user unknown`
+	============ PostProcess ====================
+	Post Template: `pam_unix(sshd:auth): check pass; user unknown`
+	============ Aggregate ====================
+	Aggregated Template:  pam_unix(sshd:auth): check pass; user unknown
+[UpdateBucket] Logs: This iter found: 19852, total: 565118/638947, remain: 73829. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 49022 -> 29170, remain buckets: 26
+Update Success: Time for one update logs: 0.14407110214233398, template `pam_unix(sshd:auth): check pass; user unknown`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 22, Len: 11, Bucket Size: 19848, Total Buckets: 32
+Sampling from 14177 logs, Sim Level: 3, MaxSim to anchor: 0.8333. Anchor: `Failed password for invalid user webmaster from <*> port 38926 ssh2`, MaxSim Log: `Failed password for invalid user webmaster from <*> port 39257 ssh2`.
+	============  Query  ====================
+	Log[1]: `Failed password for invalid user webmaster from <*> port 38926 ssh2`
+	Log[2]: `Failed password for invalid user ftpuser from <*> port 56428 ssh2`
+	Log[3]: `Failed password for invalid user admin from <*> port 50536 ssh2`
+	============ Response ====================
+LogTemplate[1]: `Failed password for invalid user {user} from <*> port {port} ssh2`
+LogTemplate[2]: `Failed password for invalid user {user} from <*> port {port} ssh2`
+LogTemplate[3]: `Failed password for invalid user {user} from <*> port {port} ssh2`
+	============ PostProcess ====================
+	Post Template: `Failed password for invalid user <*> from <*> port <*> ssh2`
+	Post Template: `Failed password for invalid user <*> from <*> port <*> ssh2`
+	Post Template: `Failed password for invalid user <*> from <*> port <*> ssh2`
+	============ Aggregate ====================
+	Aggregated Template:  Failed password for invalid user <*> from <*> port <*> ssh2
+[UpdateBucket] Logs: This iter found: 19848, total: 584966/638947, remain: 53981. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 20455 -> 607, remain buckets: 25
+Update Success: Time for one update logs: 0.4020111560821533, template `Failed password for invalid user <*> from <*> port <*> ssh2`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 25, Len: 12, Bucket Size: 18909, Total Buckets: 32
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.8462. Anchor: `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`, MaxSim Log: `reverse mapping checking getaddrinfo for . [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`.
+	============  Query  ====================
+	Log[1]: `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	Log[2]: `reverse mapping checking getaddrinfo for . [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	Log[3]: `reverse mapping checking getaddrinfo for no-data [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	============ Response ====================
+LogTemplate[1]: `reverse mapping checking getaddrinfo for {hostname} [{ip}] failed - POSSIBLE BREAK-IN ATTEMPT!`
+LogTemplate[2]: `reverse mapping checking getaddrinfo for {hostname} [{ip}] failed - POSSIBLE BREAK-IN ATTEMPT!`
+LogTemplate[3]: `reverse mapping checking getaddrinfo for {hostname} [{ip}] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	============ PostProcess ====================
+	Post Template: `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	Post Template: `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	Post Template: `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+	============ Aggregate ====================
+	Aggregated Template:  reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!
+[UpdateBucket] Logs: This iter found: 18909, total: 603875/638947, remain: 35072. 
+[UpdateBucket] Buckets: Checked 3 ([25, 26, 27]), Parent Bucket size: 19002 -> 93, remain buckets: 24
+Update Success: Time for one update logs: 0.37977004051208496, template `reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 1, Len: 5, Bucket Size: 14580, Total Buckets: 32
+	============  Query  ====================
+	Log[1]: `Invalid user webmaster from <*>`
+	============ Response ====================
+LogTemplate[1]: `Invalid user webmaster from {username}`
+	============ PostProcess ====================
+	Post Template: `Invalid user webmaster from <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Invalid user webmaster from <*>
+[UpdateBucket] Logs: This iter found: 12, total: 603887/638947, remain: 35060. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 29170 -> 29158, remain buckets: 24
+Update Success: Time for one update logs: 0.2701859474182129, template `Invalid user webmaster from <*>`
+========================================================================================
+
+
+Iteration 12
+Sample 1 from current logs bucket: ID: 2, Len: 5, Bucket Size: 14580, Total Buckets: 32
+Sampling from 1717 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `input_userauth_request: invalid user webmaster [preauth]`, MaxSim Log: `input_userauth_request: invalid user user [preauth]`.
+	============  Query  ====================
+	Log[1]: `input_userauth_request: invalid user webmaster [preauth]`
+	Log[2]: `input_userauth_request: invalid user fengw [preauth]`
+	Log[3]: `input_userauth_request: invalid user zinm10 [preauth]`
+	============ Response ====================
+LogTemplate[1]: `input_userauth_request: invalid user {username} [preauth]`
+LogTemplate[2]: `input_userauth_request: invalid user {username} [preauth]`
+LogTemplate[3]: `input_userauth_request: invalid user {username} [preauth]`
+	============ PostProcess ====================
+	Post Template: `input_userauth_request: invalid user <*> [preauth]`
+	Post Template: `input_userauth_request: invalid user <*> [preauth]`
+	Post Template: `input_userauth_request: invalid user <*> [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  input_userauth_request: invalid user <*> [preauth]
+[UpdateBucket] Logs: This iter found: 14581, total: 618468/638947, remain: 20479. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 29158 -> 14577, remain buckets: 23
+Update Success: Time for one update logs: 0.2961277961730957, template `input_userauth_request: invalid user <*> [preauth]`
+========================================================================================
+
+
+Iteration 13
+Sample 3 from current logs bucket: ID: 1, Len: 5, Bucket Size: 14568, Total Buckets: 32
+Sampling from 1716 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Invalid user test9 from <*>`, MaxSim Log: `Invalid user user from <*>`.
+	============  Query  ====================
+	Log[1]: `Invalid user test9 from <*>`
+	Log[2]: `Invalid user jboss from <*>`
+	Log[3]: `Invalid user python3 from <*>`
+	============ Response ====================
+LogTemplate[1]: `Invalid user {username} from <*>`
+LogTemplate[2]: `Invalid user {username} from <*>`
+LogTemplate[3]: `Invalid user {username} from <*>`
+	============ PostProcess ====================
+	Post Template: `Invalid user <*> from <*>`
+	Post Template: `Invalid user <*> from <*>`
+	Post Template: `Invalid user <*> from <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Invalid user <*> from <*>
+[UpdateBucket] Logs: This iter found: 14569, total: 633037/638947, remain: 5910. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 14577 -> 8, remain buckets: 22
+[TemplateDB] Try Merge: `Invalid user <*> from <*>` | `Invalid user webmaster from <*>`
+	Post Template: `Invalid user <*> from <*>`
+[TemplateDB] Merged: -> `Invalid user <*> from <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 14581/14581, in child Bucket [1, 2, 3, 4, 5]
+Update Success: Time for one update logs: 0.4796149730682373, template `Invalid user <*> from <*>`
+========================================================================================
+
+
+Iteration 14
+Sample 3 from current logs bucket: ID: 20, Len: 10, Bucket Size: 952, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `fatal: Read from socket failed: Connection reset by peer [preauth]`
+	============ Response ====================
+LogTemplate[1]: `fatal: Read from socket failed: Connection reset by peer [preauth]`
+	============ PostProcess ====================
+	Post Template: `fatal: Read from socket failed: Connection reset by peer [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  fatal: Read from socket failed: Connection reset by peer [preauth]
+[UpdateBucket] Logs: This iter found: 952, total: 633989/638947, remain: 4958. 
+[UpdateBucket] Buckets: Checked 4 ([18, 19, 20, 21]), Parent Bucket size: 2079 -> 1127, remain buckets: 21
+Update Success: Time for one update logs: 0.014876127243041992, template `fatal: Read from socket failed: Connection reset by peer [preauth]`
+========================================================================================
+
+
+Iteration 15
+Sample 3 from current logs bucket: ID: 18, Len: 10, Bucket Size: 947, Total Buckets: 32
+Sampling from 26 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=uucp`, MaxSim Log: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=ftp`.
+	============  Query  ====================
+	Log[1]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=uucp`
+	Log[2]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=sys`
+	Log[3]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data`
+	============ Response ====================
+LogTemplate[1]: `pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user={user}`
+	============ PostProcess ====================
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>
+[UpdateBucket] Logs: This iter found: 947, total: 634936/638947, remain: 4011. 
+[UpdateBucket] Buckets: Checked 4 ([18, 19, 20, 21]), Parent Bucket size: 1127 -> 180, remain buckets: 20
+[TemplateDB] Try Merge: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>` | `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+	Post Template: `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+[TemplateDB] Merged: -> `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 140701/140701, in child Bucket [18, 19, 20, 21]
+Update Success: Time for one update logs: 3.466002941131592, template `pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+========================================================================================
+
+
+Iteration 16
+Sample 3 from current logs bucket: ID: 28, Len: 13, Bucket Size: 932, Total Buckets: 32
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.4706. Anchor: `error: Received disconnect from <*>: 14: No more user authentication methods available. [preauth]`, MaxSim Log: `error: Received disconnect from <*>: 3: <*>: User authentication canceled by user [preauth]`.
+	============  Query  ====================
+	Log[1]: `error: Received disconnect from <*>: 14: No more user authentication methods available. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `error: Received disconnect from {ip_address}: 14: No more user authentication methods available. [preauth]`
+	============ PostProcess ====================
+	Post Template: `error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth]
+[UpdateBucket] Logs: This iter found: 930, total: 635866/638947, remain: 3081. 
+[UpdateBucket] Buckets: Checked 1 ([28]), Parent Bucket size: 932 -> 2, remain buckets: 20
+Update Success: Time for one update logs: 0.041578054428100586, template `error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth]`
+========================================================================================
+
+
+Iteration 17
+Sample 3 from current logs bucket: ID: 9, Len: 7, Bucket Size: 838, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Did not receive identification string from <*>`
+	============ Response ====================
+LogTemplate[1]: `Did not receive identification string from {placeholder}`
+	============ PostProcess ====================
+	Post Template: `Did not receive identification string from <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Did not receive identification string from <*>
+[UpdateBucket] Logs: This iter found: 838, total: 636704/638947, remain: 2243. 
+[UpdateBucket] Buckets: Checked 2 ([9, 10]), Parent Bucket size: 898 -> 60, remain buckets: 19
+Update Success: Time for one update logs: 0.033467769622802734, template `Did not receive identification string from <*>`
+========================================================================================
+
+
+Iteration 18
+Sample 3 from current logs bucket: ID: 23, Len: 11, Bucket Size: 592, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: Closed due to user request. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: Closed due to user request. [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: Closed due to user request. [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: Closed due to user request. [preauth]
+[UpdateBucket] Logs: This iter found: 592, total: 637296/638947, remain: 1651. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 607 -> 15, remain buckets: 18
+Update Success: Time for one update logs: 0.0357208251953125, template `Received disconnect from <*>: <*>: Closed due to user request. [preauth]`
+========================================================================================
+
+
+Iteration 19
+Sample 3 from current logs bucket: ID: 31, Len: 18, Bucket Size: 497, Total Buckets: 32
+Sampling from 2 logs, Sim Level: 1, MaxSim to anchor: 0.8889. Anchor: `Address <*> maps to <*>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`, MaxSim Log: `Address <*> maps to scanning.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`.
+	============  Query  ====================
+	Log[1]: `Address <*> maps to <*>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	Log[2]: `Address <*> maps to localhost, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	Log[3]: `Address <*> maps to scanning.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	============ Response ====================
+LogTemplate[1]: `Address {ip_or_url} maps to {hostname}, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+LogTemplate[2]: `Address {ip_or_url} maps to {hostname}, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+LogTemplate[3]: `Address {ip_or_url} maps to {hostname}, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	============ PostProcess ====================
+	Post Template: `Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	Post Template: `Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	Post Template: `Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+	============ Aggregate ====================
+	Aggregated Template:  Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+[UpdateBucket] Logs: This iter found: 497, total: 637793/638947, remain: 1154. 
+[UpdateBucket] Buckets: Checked 1 ([31]), Parent Bucket size: 497 -> 0, remain buckets: 17
+Update Success: Time for one update logs: 0.02317976951599121, template `Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!`
+========================================================================================
+
+
+Iteration 20
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 196, Total Buckets: 32
+Sampling from 194 logs, Sim Level: 3, MaxSim to anchor: 0.8000. Anchor: `Accepted password for fztu from <*> port 49116 ssh2`, MaxSim Log: `Accepted password for fztu from <*> port 31938 ssh2`.
+	============  Query  ====================
+	Log[1]: `Accepted password for fztu from <*> port 49116 ssh2`
+	Log[2]: `Accepted password for jmzhu from <*> port 48253 ssh2`
+	Log[3]: `Accepted password for curi from <*> port 27993 ssh2`
+	============ Response ====================
+LogTemplate[1]: `Accepted password for {username} from <*> port {port} ssh2`
+LogTemplate[2]: `Accepted password for {username} from <*> port {port} ssh2`
+LogTemplate[3]: `Accepted password for {username} from <*> port {port} ssh2`
+	============ PostProcess ====================
+	Post Template: `Accepted password for <*> from <*> port <*> ssh2`
+	Post Template: `Accepted password for <*> from <*> port <*> ssh2`
+	Post Template: `Accepted password for <*> from <*> port <*> ssh2`
+	============ Aggregate ====================
+	Aggregated Template:  Accepted password for <*> from <*> port <*> ssh2
+[UpdateBucket] Logs: This iter found: 182, total: 637975/638947, remain: 972. 
+[UpdateBucket] Buckets: Checked 2 ([16, 17]), Parent Bucket size: 277 -> 95, remain buckets: 17
+[TemplateDB] Try Merge: `Accepted password for <*> from <*> port <*> ssh2` | `Failed password for <*> from <*> port <*> ssh2`
+[TemplateDB] Reject Merge, Remain Template: `Accepted password for <*> from <*> port <*> ssh2`
+Update Success: Time for one update logs: 0.013628959655761719, template `Accepted password for <*> from <*> port <*> ssh2`
+========================================================================================
+
+
+Iteration 21
+Sample 3 from current logs bucket: ID: 6, Len: 6, Bucket Size: 182, Total Buckets: 32
+Sampling from 8 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `pam_unix(sshd:session): session closed for user fztu`, MaxSim Log: `pam_unix(sshd:session): session closed for user jmzhu`.
+	============  Query  ====================
+	Log[1]: `pam_unix(sshd:session): session closed for user fztu`
+	Log[2]: `pam_unix(sshd:session): session closed for user yuewang`
+	Log[3]: `pam_unix(sshd:session): session closed for user hxu`
+	============ Response ====================
+LogTemplate[1]: `pam_unix(sshd:session): session closed for user {username}`
+LogTemplate[2]: `pam_unix(sshd:session): session closed for user {username}`
+LogTemplate[3]: `pam_unix(sshd:session): session closed for user {username}`
+	============ PostProcess ====================
+	Post Template: `pam_unix(sshd:session): session closed for user <*>`
+	Post Template: `pam_unix(sshd:session): session closed for user <*>`
+	Post Template: `pam_unix(sshd:session): session closed for user <*>`
+	============ Aggregate ====================
+	Aggregated Template:  pam_unix(sshd:session): session closed for user <*>
+[UpdateBucket] Logs: This iter found: 182, total: 638157/638947, remain: 790. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 296 -> 114, remain buckets: 16
+Update Success: Time for one update logs: 0.018008947372436523, template `pam_unix(sshd:session): session closed for user <*>`
+========================================================================================
+
+
+Iteration 22
+Sample 3 from current logs bucket: ID: 14, Len: 8, Bucket Size: 182, Total Buckets: 32
+Sampling from 8 logs, Sim Level: 1, MaxSim to anchor: 0.7778. Anchor: `pam_unix(sshd:session): session opened for user fztu by (uid=0)`, MaxSim Log: `pam_unix(sshd:session): session opened for user jmzhu by (uid=0)`.
+	============  Query  ====================
+	Log[1]: `pam_unix(sshd:session): session opened for user fztu by (uid=0)`
+	Log[2]: `pam_unix(sshd:session): session opened for user tzhao by (uid=0)`
+	Log[3]: `pam_unix(sshd:session): session opened for user jmzhu by (uid=0)`
+	============ Response ====================
+LogTemplate[1]: `pam_unix(sshd:session): session opened for user {username} by (uid=0)`  
+LogTemplate[2]: `pam_unix(sshd:session): session opened for user {username} by (uid=0)`  
+LogTemplate[3]: `pam_unix(sshd:session): session opened for user {username} by (uid=0)`  
+	============ PostProcess ====================
+	Post Template: `pam_unix(sshd:session): session opened for user <*> by (uid=<*>)`
+	Post Template: `pam_unix(sshd:session): session opened for user <*> by (uid=<*>)`
+	Post Template: `pam_unix(sshd:session): session opened for user <*> by (uid=<*>)`
+	============ Aggregate ====================
+	Aggregated Template:  pam_unix(sshd:session): session opened for user <*> by (uid=<*>)
+[UpdateBucket] Logs: This iter found: 182, total: 638339/638947, remain: 608. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 219 -> 37, remain buckets: 15
+Update Success: Time for one update logs: 0.019484996795654297, template `pam_unix(sshd:session): session opened for user <*> by (uid=<*>)`
+========================================================================================
+
+
+Iteration 23
+Sample 3 from current logs bucket: ID: 19, Len: 10, Bucket Size: 176, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `error: Received disconnect from <*>: 3: <*>: Auth fail [preauth]`
+	============ Response ====================
+LogTemplate[1]: `error: Received disconnect from {ip}: 3: {reason}: Auth fail [preauth]`
+	============ PostProcess ====================
+	Post Template: `error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]
+[UpdateBucket] Logs: This iter found: 176, total: 638515/638947, remain: 432. 
+[UpdateBucket] Buckets: Checked 4 ([18, 19, 20, 21]), Parent Bucket size: 180 -> 4, remain buckets: 14
+Update Success: Time for one update logs: 0.020350217819213867, template `error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]`
+========================================================================================
+
+
+Iteration 24
+Sample 3 from current logs bucket: ID: 7, Len: 6, Bucket Size: 108, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: [preauth]
+[UpdateBucket] Logs: This iter found: 108, total: 638623/638947, remain: 324. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 114 -> 6, remain buckets: 13
+Update Success: Time for one update logs: 0.014737844467163086, template `Received disconnect from <*>: <*>: [preauth]`
+========================================================================================
+
+
+Iteration 25
+Sample 3 from current logs bucket: ID: 27, Len: 12, Bucket Size: 92, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: Normal Shutdown, Thank you for playing [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: Normal Shutdown, Thank you for playing [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]
+[UpdateBucket] Logs: This iter found: 92, total: 638715/638947, remain: 232. 
+[UpdateBucket] Buckets: Checked 3 ([25, 26, 27]), Parent Bucket size: 93 -> 1, remain buckets: 12
+Update Success: Time for one update logs: 0.01574993133544922, template `Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]`
+========================================================================================
+
+
+Iteration 26
+Sample 3 from current logs bucket: ID: 17, Len: 9, Bucket Size: 81, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: Client disconnecting normally [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: Client disconnecting normally [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: Client disconnecting normally [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: Client disconnecting normally [preauth]
+[UpdateBucket] Logs: This iter found: 81, total: 638796/638947, remain: 151. 
+[UpdateBucket] Buckets: Checked 2 ([16, 17]), Parent Bucket size: 95 -> 14, remain buckets: 11
+Update Success: Time for one update logs: 0.011811971664428711, template `Received disconnect from <*>: <*>: Client disconnecting normally [preauth]`
+========================================================================================
+
+
+Iteration 27
+Sample 3 from current logs bucket: ID: 10, Len: 7, Bucket Size: 60, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: disconnect [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: disconnect [preauth]`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: disconnect [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: disconnect [preauth]
+[UpdateBucket] Logs: This iter found: 60, total: 638856/638947, remain: 91. 
+[UpdateBucket] Buckets: Checked 2 ([9, 10]), Parent Bucket size: 60 -> 0, remain buckets: 10
+Update Success: Time for one update logs: 0.006500244140625, template `Received disconnect from <*>: <*>: disconnect [preauth]`
+========================================================================================
+
+
+Iteration 28
+Sample 3 from current logs bucket: ID: 15, Len: 8, Bucket Size: 37, Total Buckets: 32
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.0667. Anchor: `Received disconnect from <*>: 11: disconnected by user`, MaxSim Log: `fatal: Write failed: Connection reset by peer [preauth]`.
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: disconnected by user`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: 11: disconnected by user`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: disconnected by user`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: disconnected by user
+[UpdateBucket] Logs: This iter found: 34, total: 638890/638947, remain: 57. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 37 -> 3, remain buckets: 10
+Update Success: Time for one update logs: 0.010122060775756836, template `Received disconnect from <*>: <*>: disconnected by user`
+========================================================================================
+
+
+Iteration 29
+Sample 3 from current logs bucket: ID: 24, Len: 11, Bucket Size: 15, Total Buckets: 32
+Sampling from 9 logs, Sim Level: 4, MaxSim to anchor: 0.8333. Anchor: `Bad protocol version identification 'GET / <*>' from <*> port 30762`, MaxSim Log: `Bad protocol version identification 'GET / <*>' from <*> port 47195`.
+	============  Query  ====================
+	Log[1]: `Bad protocol version identification 'GET / <*>' from <*> port 30762`
+	Log[2]: `Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282`
+	Log[3]: `Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014`
+	============ Response ====================
+LogTemplate[1]: `Bad protocol version identification 'GET / {endpoint}' from {ip_or_url} port {port}`  
+LogTemplate[2]: `Bad protocol version identification 'GET /manager/html {endpoint}' from {ip_or_url} port {port}`  
+LogTemplate[3]: `Bad protocol version identification 'CONNECT {ip_or_url}:443 {endpoint}' from {ip_or_url} port {port}`  
+	============ PostProcess ====================
+	Post Template: `Bad protocol version identification 'GET / <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad protocol version identification 'GET / <*>' from <*> port <*>
+[UpdateBucket] Logs: This iter found: 4, total: 638894/638947, remain: 53. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 15 -> 11, remain buckets: 10
+Update Success: Time for one update logs: 0.006946086883544922, template `Bad protocol version identification 'GET / <*>' from <*> port <*>`
+========================================================================================
+
+
+Iteration 30
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 14, Total Buckets: 32
+Sampling from 13 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Bad protocol version identification '<*>' from <*> port 8864`, MaxSim Log: `Bad protocol version identification '<*>' from <*> port 58418`.
+	============  Query  ====================
+	Log[1]: `Bad protocol version identification '<*>' from <*> port 8864`
+	Log[2]: `Bad protocol version identification '\026\003\001\001"\001' from <*> port 37667`
+	Log[3]: `Bad protocol version identification '\026\003\001\001"\001' from <*> port 52764`
+	============ Response ====================
+LogTemplate[1]: `Bad protocol version identification '<*>' from {port} port <*>`
+LogTemplate[2]: `Bad protocol version identification '\026\003\001\001"\001' from <*> port {port}`
+LogTemplate[3]: `Bad protocol version identification '\026\003\001\001"\001' from <*> port {port}`
+	============ PostProcess ====================
+	Post Template: `Bad protocol version identification <*> from <*> port <*>`
+	Post Template: `Bad protocol version identification '\026\003\001\001"\001' from <*> port <*>`
+	Post Template: `Bad protocol version identification '\026\003\001\001"\001' from <*> port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad protocol version identification '\026\003\001\001"\001' from <*> port <*>
+[UpdateBucket] Logs: This iter found: 3, total: 638897/638947, remain: 50. 
+[UpdateBucket] Buckets: Checked 2 ([16, 17]), Parent Bucket size: 14 -> 11, remain buckets: 10
+Update Success: Time for one update logs: 0.008199214935302734, template `Bad protocol version identification '\026\003\001\001"\001' from <*> port <*>`
+========================================================================================
+
+
+Iteration 31
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 11, Total Buckets: 32
+Sampling from 10 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Bad protocol version identification '<*>' from <*> port 8864`, MaxSim Log: `Bad protocol version identification '<*>' from <*> port 58418`.
+	============  Query  ====================
+	Log[1]: `Bad protocol version identification '<*>' from <*> port 8864`
+	Log[2]: `Bad protocol version identification 'SSH-2.0' from <*> port 56716`
+	Log[3]: `Bad protocol version identification '\377\375\<*>' from <*> port 34170`
+	============ Response ====================
+LogTemplate[1]: `Bad protocol version identification '<*>' from {port} port <*>`  
+LogTemplate[2]: `Bad protocol version identification 'SSH-2.0' from {ip_or_url} port <*>`  
+LogTemplate[3]: `Bad protocol version identification '\377\375\<*>' from {ip_or_url} port <*>`  
+	============ PostProcess ====================
+	Post Template: `Bad protocol version identification <*> from <*> port <*>`
+	Post Template: `Bad protocol version identification 'SSH-<*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification <*> from <*> port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad protocol version identification <*> from <*> port <*>
+[UpdateBucket] Logs: This iter found: 11, total: 638908/638947, remain: 39. 
+[UpdateBucket] Buckets: Checked 2 ([16, 17]), Parent Bucket size: 11 -> 0, remain buckets: 9
+[TemplateDB] Try Merge: `Bad protocol version identification <*> from <*> port <*>` | `Bad protocol version identification '\026\003\001\001"\001' from <*> port <*>`
+	Post Template: `Bad protocol version identification <*> from <*> port <*>`
+[TemplateDB] Merged: -> `Bad protocol version identification <*> from <*> port <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 14/14, in child Bucket [16, 17]
+Update Success: Time for one update logs: 0.012495994567871094, template `Bad protocol version identification <*> from <*> port <*>`
+========================================================================================
+
+
+Iteration 32
+Sample 3 from current logs bucket: ID: 24, Len: 11, Bucket Size: 11, Total Buckets: 32
+Sampling from 5 logs, Sim Level: 3, MaxSim to anchor: 0.8333. Anchor: `Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282`, MaxSim Log: `Bad protocol version identification 'GET /manager/html <*>' from <*> port 59370`.
+	============  Query  ====================
+	Log[1]: `Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282`
+	Log[2]: `Bad protocol version identification 'GET /manager/html <*>' from <*> port 4710`
+	Log[3]: `Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014`
+	============ Response ====================
+LogTemplate[1]: `Bad protocol version identification 'GET /manager/html <*>' from <*> port {port}`
+LogTemplate[2]: `Bad protocol version identification 'GET /manager/html <*>' from <*> port {port}`
+LogTemplate[3]: `Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port {port}`
+	============ PostProcess ====================
+	Post Template: `Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>
+[UpdateBucket] Logs: This iter found: 3, total: 638911/638947, remain: 36. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 11 -> 8, remain buckets: 9
+[TemplateDB] Try Merge: `Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>` | `Bad protocol version identification 'GET / <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification 'GET <*> <*>' from <*> port <*>`
+[TemplateDB] Merged: -> `Bad protocol version identification 'GET <*> <*>' from <*> port <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 7/7, in child Bucket [22, 23, 24]
+[UpdateBucket] Logs: This iter found: 0, total: 638911/638947, remain: 36. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 8 -> 8, remain buckets: 9
+[TemplateDB] Update Indexes: 7 -> 7 for `Bad protocol version identification 'GET <*> <*>' from <*> port <*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `Bad protocol version identification 'GET <*> <*>' from <*> port <*>`
+Update Success: Time for one update logs: 0.01925182342529297, template `Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>`
+========================================================================================
+
+
+Iteration 33
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 8, Total Buckets: 32
+Sampling from 2 logs, Sim Level: 1, MaxSim to anchor: 0.1111. Anchor: `Bad packet length 1819045217. [preauth]`, MaxSim Log: `fatal: no hostkey alg [preauth]`.
+	============  Query  ====================
+	Log[1]: `Bad packet length 1819045217. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Bad packet length {packet_length}. [preauth]`
+	============ PostProcess ====================
+	Post Template: `Bad packet length <*> [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Bad packet length <*> [preauth]
+[UpdateBucket] Logs: This iter found: 1, total: 638912/638947, remain: 35. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 8 -> 7, remain buckets: 9
+Update Success: Time for one update logs: 0.008712053298950195, template `Bad packet length <*> [preauth]`
+========================================================================================
+
+
+Iteration 34
+Sample 3 from current logs bucket: ID: 24, Len: 11, Bucket Size: 8, Total Buckets: 32
+Sampling from 2 logs, Sim Level: 1, MaxSim to anchor: 0.0476. Anchor: `Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014`, MaxSim Log: `error: Received disconnect from <*>: 13: Authentication cancelled by user. [preauth]`.
+	============  Query  ====================
+	Log[1]: `Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014`
+	============ Response ====================
+LogTemplate[1]: `Bad protocol version identification 'CONNECT {protocol}:443 {hostname}' from {source_ip} port 45014`
+	============ PostProcess ====================
+	Post Template: `Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>
+[UpdateBucket] Logs: This iter found: 1, total: 638913/638947, remain: 34. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 8 -> 7, remain buckets: 9
+[TemplateDB] Try Merge: `Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>` | `Bad protocol version identification 'GET <*> <*>' from <*> port <*>`
+	Post Template: `Bad protocol version identification '<*> <*> <*>' from <*> port <*>`
+[TemplateDB] Merged: -> `Bad protocol version identification '<*> <*> <*>' from <*> port <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 8/8, in child Bucket [22, 23, 24]
+[UpdateBucket] Logs: This iter found: 0, total: 638913/638947, remain: 34. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 7 -> 7, remain buckets: 9
+[TemplateDB] Update Indexes: 8 -> 8 for `Bad protocol version identification '<*> <*> <*>' from <*> port <*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `Bad protocol version identification '<*> <*> <*>' from <*> port <*>`
+Update Success: Time for one update logs: 0.01714301109313965, template `Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>`
+========================================================================================
+
+
+Iteration 35
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 7, Total Buckets: 32
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.1111. Anchor: `fatal: no hostkey alg [preauth]`, MaxSim Log: `Corrupted MAC on input. [preauth]`.
+	============  Query  ====================
+	Log[1]: `fatal: no hostkey alg [preauth]`
+	============ Response ====================
+LogTemplate[1]: `fatal: no hostkey alg [preauth]`
+	============ PostProcess ====================
+	Post Template: `fatal: no hostkey alg [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  fatal: no hostkey alg [preauth]
+[UpdateBucket] Logs: This iter found: 6, total: 638919/638947, remain: 28. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 7 -> 1, remain buckets: 9
+Update Success: Time for one update logs: 0.008915185928344727, template `fatal: no hostkey alg [preauth]`
+========================================================================================
+
+
+Iteration 36
+Sample 3 from current logs bucket: ID: 24, Len: 11, Bucket Size: 7, Total Buckets: 32
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.2941. Anchor: `error: Received disconnect from <*>: 13: Authentication cancelled by user. [preauth]`, MaxSim Log: `Received disconnect from <*>: 11: Disconnect requested by Windows SSH Client.`.
+	============  Query  ====================
+	Log[1]: `error: Received disconnect from <*>: 13: Authentication cancelled by user. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `error: Received disconnect from {ip_address}: 13: Authentication cancelled by user. [preauth]`
+	============ PostProcess ====================
+	Post Template: `error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth]
+[UpdateBucket] Logs: This iter found: 4, total: 638923/638947, remain: 24. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 7 -> 3, remain buckets: 9
+Update Success: Time for one update logs: 0.006643056869506836, template `error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth]`
+========================================================================================
+
+
+Iteration 37
+Sample 3 from current logs bucket: ID: 8, Len: 6, Bucket Size: 6, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `error: connect_to <*> port 22: failed.`
+	============ Response ====================
+LogTemplate[1]: `error: connect_to {port} port 22: failed.`
+	============ PostProcess ====================
+	Post Template: `error: connect_to <*> port <*>: failed.`
+	============ Aggregate ====================
+	Aggregated Template:  error: connect_to <*> port <*>: failed.
+[UpdateBucket] Logs: This iter found: 6, total: 638929/638947, remain: 18. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 6 -> 0, remain buckets: 8
+Update Success: Time for one update logs: 0.006706953048706055, template `error: connect_to <*> port <*>: failed.`
+========================================================================================
+
+
+Iteration 38
+Sample 3 from current logs bucket: ID: 21, Len: 10, Bucket Size: 4, Total Buckets: 32
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `Failed password for invalid user from <*> port 2223 ssh2`, MaxSim Log: `Failed password for invalid user from <*> port 60796 ssh2`.
+	============  Query  ====================
+	Log[1]: `Failed password for invalid user from <*> port 2223 ssh2`
+	Log[2]: `Failed password for invalid user from <*> port 60796 ssh2`
+	Log[3]: `Failed password for invalid user from <*> port 37920 ssh2`
+	============ Response ====================
+LogTemplate[1]: `Failed password for invalid user from {ip} port <*> ssh2`
+LogTemplate[2]: `Failed password for invalid user from {ip} port <*> ssh2`
+LogTemplate[3]: `Failed password for invalid user from {ip} port <*> ssh2`
+	============ PostProcess ====================
+	Post Template: `Failed password for invalid user from <*> port <*> ssh2`
+	Post Template: `Failed password for invalid user from <*> port <*> ssh2`
+	Post Template: `Failed password for invalid user from <*> port <*> ssh2`
+	============ Aggregate ====================
+	Aggregated Template:  Failed password for invalid user from <*> port <*> ssh2
+[UpdateBucket] Logs: This iter found: 4, total: 638933/638947, remain: 14. 
+[UpdateBucket] Buckets: Checked 4 ([18, 19, 20, 21]), Parent Bucket size: 4 -> 0, remain buckets: 7
+Update Success: Time for one update logs: 0.0071849822998046875, template `Failed password for invalid user from <*> port <*> ssh2`
+========================================================================================
+
+
+Iteration 39
+Sample 3 from current logs bucket: ID: 15, Len: 8, Bucket Size: 3, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `fatal: Write failed: Connection reset by peer [preauth]`
+	============ Response ====================
+LogTemplate[1]: `fatal: Write failed: Connection reset by peer [preauth]`
+	============ PostProcess ====================
+	Post Template: `fatal: Write failed: Connection reset by peer [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  fatal: Write failed: Connection reset by peer [preauth]
+[UpdateBucket] Logs: This iter found: 3, total: 638936/638947, remain: 11. 
+[UpdateBucket] Buckets: Checked 5 ([11, 12, 13, 14, 15]), Parent Bucket size: 3 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.007656097412109375, template `fatal: Write failed: Connection reset by peer [preauth]`
+========================================================================================
+
+
+Iteration 40
+Sample 3 from current logs bucket: ID: 24, Len: 11, Bucket Size: 3, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Received disconnect from <*>: 11: Disconnect requested by Windows SSH Client.`
+	============ Response ====================
+LogTemplate[1]: `Received disconnect from {ip_address}: {number}: Disconnect requested by Windows SSH Client.`
+	============ PostProcess ====================
+	Post Template: `Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.`
+	============ Aggregate ====================
+	Aggregated Template:  Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.
+[UpdateBucket] Logs: This iter found: 3, total: 638939/638947, remain: 8. 
+[UpdateBucket] Buckets: Checked 3 ([22, 23, 24]), Parent Bucket size: 3 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.007395029067993164, template `Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.`
+========================================================================================
+
+
+Iteration 41
+Sample 3 from current logs bucket: ID: 30, Len: 14, Bucket Size: 3, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `error: Received disconnect from <*>: 3: <*>: timeout in waiting for rekeying process. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `error: Received disconnect from {ip_address}: 3: {reason}: timeout in waiting for rekeying process. [preauth]`
+	============ PostProcess ====================
+	Post Template: `error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth]
+[UpdateBucket] Logs: This iter found: 3, total: 638942/638947, remain: 5. 
+[UpdateBucket] Buckets: Checked 2 ([29, 30]), Parent Bucket size: 3 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.00681614875793457, template `error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth]`
+========================================================================================
+
+
+Iteration 42
+Sample 3 from current logs bucket: ID: 28, Len: 13, Bucket Size: 2, Total Buckets: 32
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `error: Received disconnect from <*>: 3: <*>: User authentication canceled by user [preauth]`
+	============ Response ====================
+LogTemplate[1]: `error: Received disconnect from {ip}: 3: {reason}: User authentication canceled by user [preauth]`
+	============ PostProcess ====================
+	Post Template: `error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth]
+[UpdateBucket] Logs: This iter found: 2, total: 638944/638947, remain: 3. 
+[UpdateBucket] Buckets: Checked 1 ([28]), Parent Bucket size: 2 -> 0, remain buckets: 3
+Update Success: Time for one update logs: 0.006453990936279297, template `error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth]`
+========================================================================================
+
+
+Iteration 43
+Sample 3 from current logs bucket: ID: 0, Len: 4, Bucket Size: 1, Total Buckets: 32
+	============  Query  ====================
+	Log[1]: `Disconnecting: Packet corrupt [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Disconnecting: Packet corrupt [preauth]`
+	============ PostProcess ====================
+	Post Template: `Disconnecting: Packet corrupt [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Disconnecting: Packet corrupt [preauth]
+[UpdateBucket] Logs: This iter found: 1, total: 638945/638947, remain: 2. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 1 -> 0, remain buckets: 2
+Update Success: Time for one update logs: 0.003609180450439453, template `Disconnecting: Packet corrupt [preauth]`
+========================================================================================
+
+
+Iteration 44
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 1, Total Buckets: 32
+	============  Query  ====================
+	Log[1]: `Corrupted MAC on input. [preauth]`
+	============ Response ====================
+LogTemplate[1]: `Corrupted MAC on input. [preauth]`
+	============ PostProcess ====================
+	Post Template: `Corrupted MAC on input. [preauth]`
+	============ Aggregate ====================
+	Aggregated Template:  Corrupted MAC on input. [preauth]
+[UpdateBucket] Logs: This iter found: 1, total: 638946/638947, remain: 1. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 1 -> 0, remain buckets: 1
+Update Success: Time for one update logs: 0.005402088165283203, template `Corrupted MAC on input. [preauth]`
+========================================================================================
+
+
+Iteration 45
+Sample 3 from current logs bucket: ID: 26, Len: 12, Bucket Size: 1, Total Buckets: 32
+	============  Query  ====================
+	Log[1]: `PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi`
+	============ Response ====================
+LogTemplate[1]: `PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost={host} user=curi`
+	============ PostProcess ====================
+	Post Template: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi`
+	============ Aggregate ====================
+	Aggregated Template:  PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi
+[UpdateBucket] Logs: This iter found: 1, total: 638947/638947, remain: 0. 
+[UpdateBucket] Buckets: Checked 3 ([25, 26, 27]), Parent Bucket size: 1 -> 0, remain buckets: 0
+[TemplateDB] Try Merge: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi` | `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root`
+	Post Template: `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+[TemplateDB] Merged: -> `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 36966/36966, in child Bucket [25, 26, 27]
+[UpdateBucket] Logs: This iter found: 0, total: 638947/638947, remain: 0. 
+[UpdateBucket] Buckets: Checked 3 ([25, 26, 27]), Parent Bucket size: 0 -> 0, remain buckets: 0
+[TemplateDB] Update Indexes: 36966 -> 36966 for `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>`
+Update Success: Time for one update logs: 0.9257478713989258, template `PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi`
+========================================================================================
+
+
+Original df_logs: (638947, 4), Clustering df_logs: (638947, 6)
+Saved OpenSSH_log_structured.csv to ./saved_results/LUNAR-single/OpenSSH/OpenSSH_full.log_structured.csv
+Saved OpenSSH_log_templates.csv to ./saved_results/LUNAR-single/OpenSSH/OpenSSH_full.log_templates.csv
+Total parsingg time: 129.84226989746094 seconds
+Total query time: 52.52118921279907 seconds, 46 queries
+Avg. query time: 1.1417647346772113 seconds
+Total pure match time: 77.32108068466187 seconds
+
+=== Evaluation on OpenSSH ===
+Evaluate parsing result: ./saved_results/LUNAR-single/OpenSSH/OpenSSH_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/38 [00:00<?, ?it/s] 18%|█▊        | 7/38 [00:00<00:00, 65.66it/s] 37%|███▋      | 14/38 [00:00<00:00, 65.74it/s] 58%|█████▊    | 22/38 [00:00<00:00, 70.66it/s] 79%|███████▉  | 30/38 [00:00<00:00, 73.68it/s]100%|██████████| 38/38 [00:00<00:00, 72.31it/s]100%|██████████| 38/38 [00:00<00:00, 71.21it/s]
+Grouping_Accuracy (GA): 0.7796, FGA: 0.9231,
+Grouping Accuracy calculation done. [Time taken: 0.773]
+Parsing_Accuracy (PA): 0.7219
+Parsing Accuracy calculation done. [Time taken: 0.038]
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 799.47it/s]
+1-num-8, {'Bad protocol version identification <*> from <*> port <*>'} | {"Bad protocol version identification '<*> <*> <*>' from <*> port <*>"}
+2-num-4, {'Failed password for <*> from <*> port <*> ssh2'} | {'Failed password for invalid user from <*> port <*> ssh2'}
+3-num-36966, {'PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>'} | {'PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>'}
+4-num-140701, {'pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>'} | {'pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>'}
+PTA: 0.9000, RTA: 0.9474 FTA: 0.9231
+Identify : 40, Groundtruth : 38
+Template-level accuracy calculation done. [Time taken: 0.224]
+Finish parsing logs: OpenSSH
+Output dir: ./saved_results/LUNAR-single

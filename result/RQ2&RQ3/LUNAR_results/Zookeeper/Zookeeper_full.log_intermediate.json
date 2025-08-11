@@ -1,0 +1,1148 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Received connection request <*>"
+  ],
+  "logs_to_query_regex": [
+   "Received connection request <*>"
+  ],
+  "llm_template": "Received connection request <*>",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "Received connection request <*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "Interrupting SendWorker"
+  ],
+  "logs_to_query_regex": [
+   "Interrupting SendWorker"
+  ],
+  "llm_template": "Interrupting SendWorker",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "Interrupting SendWorker"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "Send worker leaving thread"
+  ],
+  "logs_to_query_regex": [
+   "Send worker leaving thread"
+  ],
+  "llm_template": "Send worker leaving thread",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "Send worker leaving thread"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "Connection broken for id 188978561024, my id = 1, error =",
+   "Connection broken for id 188978561024, my id = 2, error =",
+   "Connection broken for id 1, my id = 3, error ="
+  ],
+  "logs_to_query_regex": [
+   "Connection broken for id 188978561024, my id = 1, error =",
+   "Connection broken for id 188978561024, my id = 2, error =",
+   "Connection broken for id 1, my id = 3, error ="
+  ],
+  "llm_template": "Connection broken for id <*> my id = <*> error =",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "Connection broken for id <*>, my id = <*>, error =<*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "Interrupted while waiting for message on queue"
+  ],
+  "logs_to_query_regex": [
+   "Interrupted while waiting for message on queue"
+  ],
+  "llm_template": "Interrupted while waiting for message on queue",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Interrupted while waiting for message on queue"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "Established session 0x14ed93111f20000 with negotiated timeout 10000 for client <*>",
+   "Established session 0x34ed9ac1c1e00aa with negotiated timeout 10000 for client <*>",
+   "Established session 0x14edfaa86f60030 with negotiated timeout 20000 for client <*>"
+  ],
+  "logs_to_query_regex": [
+   "Established session 0x14ed93111f20000 with negotiated timeout 10000 for client <*>",
+   "Established session 0x34ed9ac1c1e00aa with negotiated timeout 10000 for client <*>",
+   "Established session 0x14edfaa86f60030 with negotiated timeout 20000 for client <*>"
+  ],
+  "llm_template": "Established session <*> with negotiated timeout <*> for client <*>",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "Established session <*> with negotiated timeout <*> for client <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "Cannot open channel to 2 at election address <*>",
+   "Cannot open channel to 3 at election address <*>",
+   "Cannot open channel to 1 at election address <*>"
+  ],
+  "logs_to_query_regex": [
+   "Cannot open channel to 2 at election address <*>",
+   "Cannot open channel to 3 at election address <*>",
+   "Cannot open channel to 1 at election address <*>"
+  ],
+  "llm_template": "Cannot open channel to <*> at election address <*>",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "Cannot open channel to <*> at election address <*>"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "Accepted socket connection from <*>"
+  ],
+  "logs_to_query_regex": [
+   "Accepted socket connection from <*>"
+  ],
+  "llm_template": "Accepted socket connection from <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Accepted socket connection from <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "Connection request from old client <*>; will be dropped if server is in r-o mode"
+  ],
+  "logs_to_query_regex": [
+   "Connection request from old client <*>; will be dropped if server is in r-o mode"
+  ],
+  "llm_template": "Connection request from old client <*>; will be dropped if server is in r-o mode",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "Connection request from old client <*>; will be dropped if server is in r-o mode"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "Processed session termination for sessionid: 0x34ede65503f0003",
+   "Processed session termination for sessionid: 0x24ed93119420090",
+   "Processed session termination for sessionid: 0x24ed931194200d9"
+  ],
+  "logs_to_query_regex": [
+   "Processed session termination for sessionid: 0x34ede65503f0003",
+   "Processed session termination for sessionid: 0x24ed93119420090",
+   "Processed session termination for sessionid: 0x24ed931194200d9"
+  ],
+  "llm_template": "Processed session termination for sessionid: <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Processed session termination for sessionid: <*>"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "Client attempting to establish new session at <*>"
+  ],
+  "logs_to_query_regex": [
+   "Client attempting to establish new session at <*>"
+  ],
+  "llm_template": "Client attempting to establish new session at <*>",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "Client attempting to establish new session at <*>"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "Expiring session 0x34ede65503f0003, timeout of 10000ms exceeded",
+   "Expiring session 0x24ed931194200c8, timeout of 20000ms exceeded",
+   "Expiring session 0x34ede65503f0004, timeout of 20000ms exceeded"
+  ],
+  "logs_to_query_regex": [
+   "Expiring session 0x34ede65503f0003, timeout of 10000ms exceeded",
+   "Expiring session 0x24ed931194200c8, timeout of 20000ms exceeded",
+   "Expiring session 0x34ede65503f0004, timeout of 20000ms exceeded"
+  ],
+  "llm_template": "Expiring session <*> timeout of <*> exceeded",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Expiring session <*> timeout of <*> exceeded"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "Closed socket connection for client <*> which had sessionid 0x14ed93111f20004",
+   "Closed socket connection for client <*> which had sessionid 0x24f4a631df9000a",
+   "Closed socket connection for client <*> which had sessionid 0x34ede65503f0004"
+  ],
+  "logs_to_query_regex": [
+   "Closed socket connection for client <*> which had sessionid 0x14ed93111f20004",
+   "Closed socket connection for client <*> which had sessionid 0x24f4a631df9000a",
+   "Closed socket connection for client <*> which had sessionid 0x34ede65503f0004"
+  ],
+  "llm_template": "Closed socket connection for client <*> which had sessionid <*>",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "Closed socket connection for client <*> which had sessionid <*>"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "caught end of stream exception"
+  ],
+  "logs_to_query_regex": [
+   "caught end of stream exception"
+  ],
+  "llm_template": "caught end of stream exception",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "caught end of stream exception"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "Notification time out: 400",
+   "Notification time out: 3200",
+   "Notification time out: 12800"
+  ],
+  "logs_to_query_regex": [
+   "Notification time out: 400",
+   "Notification time out: 3200",
+   "Notification time out: 12800"
+  ],
+  "llm_template": "Notification time out: <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Notification time out: <*>"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "******* GOODBYE <*> ********"
+  ],
+  "logs_to_query_regex": [
+   "******* GOODBYE <*> ********"
+  ],
+  "llm_template": "******* GOODBYE <*> ********",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "******* GOODBYE <*> ********"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "Unexpected exception causing shutdown while sock still open"
+  ],
+  "logs_to_query_regex": [
+   "Unexpected exception causing shutdown while sock still open"
+  ],
+  "llm_template": "Unexpected exception causing shutdown while sock still open",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Unexpected exception causing shutdown while sock still open"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)",
+   "Notification: 3 (n.leader), 0x100001564 (n.zxid), 0x3 (n.round), LOOKING (n.state), 3 (n.sid), 0x2 (n.peerEPoch), FOLLOWING (my state)",
+   "Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), LOOKING (n.state), 2 (n.sid), 0x4 (n.peerEPoch), FOLLOWING (my state)"
+  ],
+  "logs_to_query_regex": [
+   "Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)",
+   "Notification: 3 (n.leader), 0x100001564 (n.zxid), 0x3 (n.round), LOOKING (n.state), 3 (n.sid), 0x2 (n.peerEPoch), FOLLOWING (my state)",
+   "Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), LOOKING (n.state), 2 (n.sid), 0x4 (n.peerEPoch), FOLLOWING (my state)"
+  ],
+  "llm_template": "Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "Server environment:host.name=node1"
+  ],
+  "logs_to_query_regex": [
+   "Server environment:host.name=node1"
+  ],
+  "llm_template": "Server environment:host.name=<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Server environment:host.name=<*>"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)",
+   "Notification: 2 (n.leader), 0xb00000084 (n.zxid), 0x2 (n.round), LEADING (n.state), 2 (n.sid), 0xb (n.peerEPoch), LOOKING (my state)",
+   "Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), FOLLOWING (n.state), 3 (n.sid), 0x4 (n.peerEPoch), LOOKING (my state)"
+  ],
+  "logs_to_query_regex": [
+   "Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)",
+   "Notification: 2 (n.leader), 0xb00000084 (n.zxid), 0x2 (n.round), LEADING (n.state), 2 (n.sid), 0xb (n.peerEPoch), LOOKING (my state)",
+   "Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), FOLLOWING (n.state), 3 (n.sid), 0x4 (n.peerEPoch), LOOKING (my state)"
+  ],
+  "llm_template": "Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "Server environment:java.version=1.7.0_79"
+  ],
+  "logs_to_query_regex": [
+   "Server environment:java.version=1.7.0_79"
+  ],
+  "llm_template": "Server environment:java.version=<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Server environment:java.version=<*>"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "Starting quorum peer"
+  ],
+  "logs_to_query_regex": [
+   "Starting quorum peer"
+  ],
+  "llm_template": "Starting quorum peer",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Starting quorum peer"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "autopurge.snapRetainCount set to 3"
+  ],
+  "logs_to_query_regex": [
+   "autopurge.snapRetainCount set to 3"
+  ],
+  "llm_template": "autopurge.snapRetainCount set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "autopurge.snapRetainCount set to <*>"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "Server environment:java.vendor=Oracle Corporation"
+  ],
+  "logs_to_query_regex": [
+   "Server environment:java.vendor=Oracle Corporation"
+  ],
+  "llm_template": "Server environment:java.vendor=<*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Server environment:java.vendor=<*>"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Purge task is not scheduled."
+  ],
+  "logs_to_query_regex": [
+   "Purge task is not scheduled."
+  ],
+  "llm_template": "Purge task is not scheduled.",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Purge task is not scheduled."
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "autopurge.purgeInterval set to 0"
+  ],
+  "logs_to_query_regex": [
+   "autopurge.purgeInterval set to 0"
+  ],
+  "llm_template": "autopurge.purgeInterval set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "autopurge.purgeInterval set to <*>"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "Reading configuration from: /etc/zookeeper/conf/zoo.cfg"
+  ],
+  "logs_to_query_regex": [
+   "Reading configuration from: /etc/zookeeper/conf/zoo.cfg"
+  ],
+  "llm_template": "Reading configuration from: <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Reading configuration from: <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "Server environment:zookeeper.version=3.4.5--1, built on 06/10/2013 17:26 GMT"
+  ],
+  "logs_to_query_regex": [
+   "Server environment:zookeeper.version=3.4.5--1, built on 06/10/2013 17:26 GMT"
+  ],
+  "llm_template": "Server environment:zookeeper.version=<*>, built on <*> GMT",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Server environment:zookeeper.version=<*>, built on <*> GMT"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "Closed socket connection for client <*> (no session established for client)"
+  ],
+  "logs_to_query_regex": [
+   "Closed socket connection for client <*> (no session established for client)"
+  ],
+  "llm_template": "Closed socket connection for client <*> (no session established for client)",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "Closed socket connection for client <*> (no session established for client)"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running"
+  ],
+  "logs_to_query_regex": [
+   "Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running"
+  ],
+  "llm_template": "Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "Unexpected Exception:"
+  ],
+  "logs_to_query_regex": [
+   "Unexpected Exception:"
+  ],
+  "llm_template": "Unexpected Exception:",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "Unexpected Exception:"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "Revalidating client: 0x34ed9348509000b",
+   "Revalidating client: 0x34f3fdb1f230008",
+   "Revalidating client: 0x14f05578bd80015"
+  ],
+  "logs_to_query_regex": [
+   "Revalidating client: 0x34ed9348509000b",
+   "Revalidating client: 0x34f3fdb1f230008",
+   "Revalidating client: 0x14f05578bd80015"
+  ],
+  "llm_template": "Revalidating client: <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Revalidating client: <*>"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "My election bind port: <*><*>"
+  ],
+  "logs_to_query_regex": [
+   "My election bind port: <*><*>"
+  ],
+  "llm_template": "My election bind port: <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "My election bind port: <*>"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "tickTime set to 2000"
+  ],
+  "logs_to_query_regex": [
+   "tickTime set to 2000"
+  ],
+  "llm_template": "tickTime set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "tickTime set to <*>"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Defaulting to majority quorums"
+  ],
+  "logs_to_query_regex": [
+   "Defaulting to majority quorums"
+  ],
+  "llm_template": "Defaulting to majority quorums",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Defaulting to majority quorums"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "shutdown called"
+  ],
+  "logs_to_query_regex": [
+   "shutdown called"
+  ],
+  "llm_template": "shutdown called",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "shutdown called"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "FOLLOWING - LEADER ELECTION TOOK - 46837",
+   "FOLLOWING - LEADER ELECTION TOOK - 53",
+   "LEADING - LEADER ELECTION TOOK - 260"
+  ],
+  "logs_to_query_regex": [
+   "FOLLOWING - LEADER ELECTION TOOK - 46837",
+   "FOLLOWING - LEADER ELECTION TOOK - 53",
+   "LEADING - LEADER ELECTION TOOK - 260"
+  ],
+  "llm_template": "FOLLOWING - LEADER ELECTION TOOK - <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "FOLLOWING - LEADER ELECTION TOOK - <*>"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "TCP NoDelay set to: true"
+  ],
+  "logs_to_query_regex": [
+   "TCP NoDelay set to: true"
+  ],
+  "llm_template": "TCP NoDelay set to: <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "TCP NoDelay set to: <*>"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "Shutting down"
+  ],
+  "logs_to_query_regex": [
+   "Shutting down"
+  ],
+  "llm_template": "Shutting down",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "Shutting down"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "minSessionTimeout set to -1",
+   "maxSessionTimeout set to -1"
+  ],
+  "logs_to_query_regex": [
+   "minSessionTimeout set to -1",
+   "maxSessionTimeout set to -1"
+  ],
+  "llm_template": "minSessionTimeout set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "minSessionTimeout set to <*>"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.0",
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.8000000bc",
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.700000000"
+  ],
+  "logs_to_query_regex": [
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.0",
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.8000000bc",
+   "Reading snapshot /var/lib/zookeeper/version-2/snapshot.700000000"
+  ],
+  "llm_template": "Reading snapshot <*>/snapshot.<*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Reading snapshot <*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "binding to port <*><*>"
+  ],
+  "logs_to_query_regex": [
+   "binding to port <*><*>"
+  ],
+  "llm_template": "binding to port <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "binding to port <*>"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "LOOKING"
+  ],
+  "logs_to_query_regex": [
+   "LOOKING"
+  ],
+  "llm_template": "LOOKING",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "LOOKING"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "LEADING - LEADER ELECTION TOOK - 67069",
+   "LEADING - LEADER ELECTION TOOK - 254",
+   "LEADING - LEADER ELECTION TOOK - 1824"
+  ],
+  "logs_to_query_regex": [
+   "LEADING - LEADER ELECTION TOOK - 67069",
+   "LEADING - LEADER ELECTION TOOK - 254",
+   "LEADING - LEADER ELECTION TOOK - 1824"
+  ],
+  "llm_template": "LEADING - LEADER ELECTION TOOK - <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "LEADING - LEADER ELECTION TOOK - <*>"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "New election. My id = 1, proposed zxid=0x0",
+   "New election. My id = 2, proposed zxid=0x300000dcd",
+   "New election. My id = 3, proposed zxid=0x100001564"
+  ],
+  "logs_to_query_regex": [
+   "New election. My id = 1, proposed zxid=0x0",
+   "New election. My id = 2, proposed zxid=0x300000dcd",
+   "New election. My id = 3, proposed zxid=0x100001564"
+  ],
+  "llm_template": "New election. My id = <*> proposed zxid=<*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "New election. My id = <*>, proposed <*>"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "Got zxid 0x100000001 expected 0x1",
+   "Got zxid 0xd00000001 expected 0x1",
+   "Got zxid 0x10000006c expected 0x1"
+  ],
+  "logs_to_query_regex": [
+   "Got zxid 0x100000001 expected 0x1",
+   "Got zxid 0xd00000001 expected 0x1",
+   "Got zxid 0x10000006c expected 0x1"
+  ],
+  "llm_template": "Got zxid <*> expected <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Got zxid <*> expected <*>"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "Getting a diff from the leader 0x0",
+   "Getting a diff from the leader 0x100001564",
+   "Getting a diff from the leader 0x300000dcd"
+  ],
+  "logs_to_query_regex": [
+   "Getting a diff from the leader 0x0",
+   "Getting a diff from the leader 0x100001564",
+   "Getting a diff from the leader 0x300000dcd"
+  ],
+  "llm_template": "Getting a diff from the leader <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Getting a diff from the leader <*>"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "maxSessionTimeout set to -1"
+  ],
+  "logs_to_query_regex": [
+   "maxSessionTimeout set to -1"
+  ],
+  "llm_template": "maxSessionTimeout set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "maxSessionTimeout set to <*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0"
+  ],
+  "logs_to_query_regex": [
+   "Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0"
+  ],
+  "llm_template": "Snapshotting: <*> to <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Snapshotting: <*> to <*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "shutting down"
+  ],
+  "logs_to_query_regex": [
+   "shutting down"
+  ],
+  "llm_template": "shutting down",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "shutting down"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2"
+  ],
+  "logs_to_query_regex": [
+   "Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2"
+  ],
+  "llm_template": "Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>"
+ },
+ {
+  "iter": 52,
+  "logs_to_query": [
+   "Creating new log file: log.100000001",
+   "Creating new log file: log.900000001",
+   "Creating new log file: log.800000001"
+  ],
+  "logs_to_query_regex": [
+   "Creating new log file: log.100000001",
+   "Creating new log file: log.900000001",
+   "Creating new log file: log.800000001"
+  ],
+  "llm_template": "Creating new log file: log.<*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Creating new log file: <*>"
+ },
+ {
+  "iter": 53,
+  "logs_to_query": [
+   "FOLLOWING"
+  ],
+  "logs_to_query_regex": [
+   "FOLLOWING"
+  ],
+  "llm_template": "FOLLOWING",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "FOLLOWING"
+ },
+ {
+  "iter": 54,
+  "logs_to_query": [
+   "SyncRequestProcessor exited!"
+  ],
+  "logs_to_query_regex": [
+   "SyncRequestProcessor exited!"
+  ],
+  "llm_template": "SyncRequestProcessor exited!",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "SyncRequestProcessor exited!"
+ },
+ {
+  "iter": 55,
+  "logs_to_query": [
+   "Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@9317ccb",
+   "Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@3104b646",
+   "Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@19b4ac28"
+  ],
+  "logs_to_query_regex": [
+   "Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@9317ccb",
+   "Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@3104b646",
+   "Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@19b4ac28"
+  ],
+  "llm_template": "Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Follower sid: <*> : info : <*>"
+ },
+ {
+  "iter": 56,
+  "logs_to_query": [
+   "FollowerRequestProcessor exited loop!"
+  ],
+  "logs_to_query_regex": [
+   "FollowerRequestProcessor exited loop!"
+  ],
+  "llm_template": "FollowerRequestProcessor exited loop!",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "FollowerRequestProcessor exited loop!"
+ },
+ {
+  "iter": 57,
+  "logs_to_query": [
+   "Sending DIFF"
+  ],
+  "logs_to_query_regex": [
+   "Sending DIFF"
+  ],
+  "llm_template": "Sending DIFF",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "Sending DIFF"
+ },
+ {
+  "iter": 58,
+  "logs_to_query": [
+   "initLimit set to 10"
+  ],
+  "logs_to_query_regex": [
+   "initLimit set to 10"
+  ],
+  "llm_template": "initLimit set to <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "initLimit set to <*>"
+ },
+ {
+  "iter": 59,
+  "logs_to_query": [
+   "Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x100001564",
+   "Synchronizing with Follower sid: 3 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x50000062e",
+   "Synchronizing with Follower sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0"
+  ],
+  "logs_to_query_regex": [
+   "Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x100001564",
+   "Synchronizing with Follower sid: 3 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x50000062e",
+   "Synchronizing with Follower sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0"
+  ],
+  "llm_template": "Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>"
+ },
+ {
+  "iter": 60,
+  "logs_to_query": [
+   "CommitProcessor exited loop!"
+  ],
+  "logs_to_query_regex": [
+   "CommitProcessor exited loop!"
+  ],
+  "llm_template": "CommitProcessor exited loop!",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "CommitProcessor exited loop!"
+ },
+ {
+  "iter": 61,
+  "logs_to_query": [
+   "Exception when following the leader"
+  ],
+  "logs_to_query_regex": [
+   "Exception when following the leader"
+  ],
+  "llm_template": "Exception when following the leader",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Exception when following the leader"
+ },
+ {
+  "iter": 62,
+  "logs_to_query": [
+   "Sending snapshot last zxid of peer is 0x100001564 zxid of leader is 0x300000000sent zxid of db as 0x300000000",
+   "Sending snapshot last zxid of peer is 0xd0000001b zxid of leader is 0xf00000000sent zxid of db as 0xf00000000",
+   "Sending snapshot last zxid of peer is 0x300000dcd zxid of leader is 0x500000000sent zxid of db as 0x500000000"
+  ],
+  "logs_to_query_regex": [
+   "Sending snapshot last zxid of peer is 0x100001564 zxid of leader is 0x300000000sent zxid of db as 0x300000000",
+   "Sending snapshot last zxid of peer is 0xd0000001b zxid of leader is 0xf00000000sent zxid of db as 0xf00000000",
+   "Sending snapshot last zxid of peer is 0x300000dcd zxid of leader is 0x500000000sent zxid of db as 0x500000000"
+  ],
+  "llm_template": "Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>",
+  "cluster_id": 33,
+  "update_success": true,
+  "template": "Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>"
+ },
+ {
+  "iter": 63,
+  "logs_to_query": [
+   "Have smaller server identifier, so dropping the connection: (2, 1)",
+   "Have smaller server identifier, so dropping the connection: (3, 1)",
+   "Have smaller server identifier, so dropping the connection: (3, 2)"
+  ],
+  "logs_to_query_regex": [
+   "Have smaller server identifier, so dropping the connection: (2, 1)",
+   "Have smaller server identifier, so dropping the connection: (3, 1)",
+   "Have smaller server identifier, so dropping the connection: (3, 2)"
+  ],
+  "llm_template": "Have smaller server identifier, so dropping the connection: (<*>, <*>)",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Have smaller server identifier, so dropping the connection: (<*>, <*>)"
+ },
+ {
+  "iter": 64,
+  "logs_to_query": [
+   "First is 0x0"
+  ],
+  "logs_to_query_regex": [
+   "First is 0x0"
+  ],
+  "llm_template": "First is <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "First is <*>"
+ },
+ {
+  "iter": 65,
+  "logs_to_query": [
+   "shutdown of request processor complete"
+  ],
+  "logs_to_query_regex": [
+   "shutdown of request processor complete"
+  ],
+  "llm_template": "shutdown of request processor complete",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "shutdown of request processor complete"
+ },
+ {
+  "iter": 66,
+  "logs_to_query": [
+   "Got user-level KeeperException when processing sessionid:0x24ed93119420001 type:create cxid:0x55b8baff zxid:0x100000006 txntype:-1 reqpath:n/a Error Path:/home Error:KeeperErrorCode = NodeExists for /home",
+   "Got user-level KeeperException when processing sessionid:0x34ee30a5c53002d type:create cxid:0x55bb791f zxid:0x70000010f txntype:-1 reqpath:n/a Error Path:/hdfs-mesos Error:KeeperErrorCode = NodeExists for /hdfs-mesos",
+   "Got user-level KeeperException when processing sessionid:0x34ed93485090000 type:create cxid:0x55b8bb0a zxid:0x10000000b txntype:-1 reqpath:n/a Error Path:/home/curi Error:KeeperErrorCode = NodeExists for /home/curi"
+  ],
+  "logs_to_query_regex": [
+   "Got user-level KeeperException when processing sessionid:0x24ed93119420001 type:create cxid:0x55b8baff zxid:0x100000006 txntype:-1 reqpath:n/a Error Path:/home Error:KeeperErrorCode = NodeExists for /home",
+   "Got user-level KeeperException when processing sessionid:0x34ee30a5c53002d type:create cxid:0x55bb791f zxid:0x70000010f txntype:-1 reqpath:n/a Error Path:/hdfs-mesos Error:KeeperErrorCode = NodeExists for /hdfs-mesos",
+   "Got user-level KeeperException when processing sessionid:0x34ed93485090000 type:create cxid:0x55b8bb0a zxid:0x10000000b txntype:-1 reqpath:n/a Error Path:/home/curi Error:KeeperErrorCode = NodeExists for /home/curi"
+  ],
+  "llm_template": "Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>",
+  "cluster_id": 33,
+  "update_success": true,
+  "template": "Got user-level KeeperException when processing sessionid:<*> type:<*> cxid:<*> zxid:<*> txntype:<*> reqpath:<*> Error Path:<*> Error:KeeperErrorCode = <*> for <*>"
+ },
+ {
+  "iter": 67,
+  "logs_to_query": [
+   "LEADING"
+  ],
+  "logs_to_query_regex": [
+   "LEADING"
+  ],
+  "llm_template": "LEADING",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "LEADING"
+ },
+ {
+  "iter": 68,
+  "logs_to_query": [
+   "Commiting zxid 0x300000000 from <*> not first!",
+   "Commiting zxid 0xf00000000 from <*> not first!",
+   "Commiting zxid 0x100000000 from <*> not first!"
+  ],
+  "logs_to_query_regex": [
+   "Commiting zxid 0x300000000 from <*> not first!",
+   "Commiting zxid 0xf00000000 from <*> not first!",
+   "Commiting zxid 0x100000000 from <*> not first!"
+  ],
+  "llm_template": "Commiting zxid <*> from <*> not first!",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Commiting zxid <*> from <*> not first!"
+ },
+ {
+  "iter": 69,
+  "logs_to_query": [
+   "Have quorum of supporters; starting up and setting last processed zxid: 0x300000000",
+   "Have quorum of supporters; starting up and setting last processed zxid: 0xb00000000",
+   "Have quorum of supporters; starting up and setting last processed zxid: 0x600000000"
+  ],
+  "logs_to_query_regex": [
+   "Have quorum of supporters; starting up and setting last processed zxid: 0x300000000",
+   "Have quorum of supporters; starting up and setting last processed zxid: 0xb00000000",
+   "Have quorum of supporters; starting up and setting last processed zxid: 0x600000000"
+  ],
+  "llm_template": "Have quorum of supporters; starting up and setting last processed zxid: <*>",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "Have quorum of supporters; starting up and setting last processed zxid: <*>"
+ },
+ {
+  "iter": 70,
+  "logs_to_query": [
+   "Sending SNAP"
+  ],
+  "logs_to_query_regex": [
+   "Sending SNAP"
+  ],
+  "llm_template": "Sending SNAP",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "Sending SNAP"
+ },
+ {
+  "iter": 71,
+  "logs_to_query": [
+   "Unexpected exception, tries=0, connecting to <*>"
+  ],
+  "logs_to_query_regex": [
+   "Unexpected exception, tries=0, connecting to <*>"
+  ],
+  "llm_template": "Unexpected exception, tries=<*> connecting to <*>",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "Unexpected exception, tries=<*>, connecting to <*>"
+ },
+ {
+  "iter": 72,
+  "logs_to_query": [
+   "Exception causing close of session 0x24ed93119420016 due to java.io.IOException: Connection reset by peer",
+   "Exception causing close of session 0x24ed9311942000e due to java.io.IOException: Connection reset by peer",
+   "Exception causing close of session 0x14ed93111f20012 due to java.io.IOException: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "Exception causing close of session 0x24ed93119420016 due to java.io.IOException: Connection reset by peer",
+   "Exception causing close of session 0x24ed9311942000e due to java.io.IOException: Connection reset by peer",
+   "Exception causing close of session 0x14ed93111f20012 due to java.io.IOException: Connection reset by peer"
+  ],
+  "llm_template": "Exception causing close of session <*> due to java.io.IOException: Connection reset by peer",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "Exception causing close of session <*> due to java.io.IOException: Connection reset by peer"
+ },
+ {
+  "iter": 73,
+  "logs_to_query": [
+   "Getting a snapshot from leader"
+  ],
+  "logs_to_query_regex": [
+   "Getting a snapshot from leader"
+  ],
+  "llm_template": "Getting a snapshot from leader",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Getting a snapshot from leader"
+ },
+ {
+  "iter": 74,
+  "logs_to_query": [
+   "currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation",
+   "acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation"
+  ],
+  "logs_to_query_regex": [
+   "currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation",
+   "acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation"
+  ],
+  "llm_template": "currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "currentEpoch not found! Creating with a reasonable default of <*>. This should only happen when you are upgrading your installation"
+ },
+ {
+  "iter": 75,
+  "logs_to_query": [
+   "PrepRequestProcessor exited loop!"
+  ],
+  "logs_to_query_regex": [
+   "PrepRequestProcessor exited loop!"
+  ],
+  "llm_template": "PrepRequestProcessor exited loop!",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "PrepRequestProcessor exited loop!"
+ },
+ {
+  "iter": 76,
+  "logs_to_query": [
+   "Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe",
+   "Exception when using channel: for id 3 my id = 2 error = java.net.SocketException: Broken pipe"
+  ],
+  "logs_to_query_regex": [
+   "Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe",
+   "Exception when using channel: for id 3 my id = 2 error = java.net.SocketException: Broken pipe"
+  ],
+  "llm_template": "Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe"
+ },
+ {
+  "iter": 77,
+  "logs_to_query": [
+   "acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation"
+  ],
+  "logs_to_query_regex": [
+   "acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation"
+  ],
+  "llm_template": "acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "acceptedEpoch not found! Creating with a reasonable default of <*>. This should only happen when you are upgrading your installation"
+ },
+ {
+  "iter": 78,
+  "logs_to_query": [
+   "Shutdown called"
+  ],
+  "logs_to_query_regex": [
+   "Shutdown called"
+  ],
+  "llm_template": "Shutdown called",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "Shutdown called"
+ },
+ {
+  "iter": 79,
+  "logs_to_query": [
+   "SessionTrackerImpl exited loop!"
+  ],
+  "logs_to_query_regex": [
+   "SessionTrackerImpl exited loop!"
+  ],
+  "llm_template": "SessionTrackerImpl exited loop!",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "SessionTrackerImpl exited loop!"
+ },
+ {
+  "iter": 80,
+  "logs_to_query": [
+   "exception while shutting down acceptor: java.net.SocketException: Socket closed"
+  ],
+  "logs_to_query_regex": [
+   "exception while shutting down acceptor: java.net.SocketException: Socket closed"
+  ],
+  "llm_template": "exception while shutting down acceptor: java.net.SocketException: Socket closed",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "exception while shutting down acceptor: java.net.SocketException: Socket closed"
+ }
+]

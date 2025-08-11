@@ -1,0 +1,666 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/Apache
+Output dir: ./saved_results/LUNAR-single/Apache
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/Apache/Apache_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 12
+Clustering by log length: [90, 7044, 233, 1304, 80, 26272, 13301, 92, 3508, 8, 45, 1]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 90/90/90 Logs. Last cluster logs: 90
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 7044/1336/5708 Logs. Last cluster logs: 1336
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 233/53/180 Logs. Last cluster logs: 53
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 1304/45/1259 Logs. Last cluster logs: 45
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 80/80/80 Logs. Last cluster logs: 80
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 26272/91/20861 Logs. Last cluster logs: 91
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 13301/41/6745 Logs. Last cluster logs: 41
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 92/92/92 Logs. Last cluster logs: 92
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 3508/39/3301 Logs. Last cluster logs: 39
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 8/8/8 Logs. Last cluster logs: 8
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 45/45/45 Logs. Last cluster logs: 45
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 1/1/1 Logs. Last cluster logs: 1
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 23 clusters
+Clustering results: [90, 5708, 1336, 180, 53, 1259, 45, 80, 20861, 971, 4349, 91, 180, 6335, 6745, 41, 92, 3301, 168, 39, 8, 45, 1]
+Iteration 0
+Sample 3 from current logs bucket: ID: 8, Len: 7, Bucket Size: 20861, Total Buckets: 23
+Sampling from 2317 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `[client 81.199.21.119] File does not exist: /var/www/html/sumthin`, MaxSim Log: `[client 194.116.250.2] File does not exist: /var/www/html/sumthin`.
+	============  Query  ====================
+	Log[1]: `[client 81.199.21.119] File does not exist: /var/www/html/sumthin`
+	Log[2]: `[client 65.110.43.170] File does not exist: /var/www/html/drupal`
+	Log[3]: `[client 65.69.87.247] File does not exist: /var/www/html/MSADC`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] File does not exist: {directory}`
+	============ PostProcess ====================
+	Post Template: `[client <*>] File does not exist: <*>`
+	Post Template: `[client <*>] File does not exist: <*>`
+	Post Template: `[client <*>] File does not exist: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] File does not exist: <*>
+[UpdateBucket] Logs: This iter found: 20861, total: 20861/51978, remain: 31117. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 26272 -> 5411, remain buckets: 22
+Update Success: Time for one update logs: 0.390239953994751, template `[client <*>] File does not exist: <*>`
+========================================================================================
+
+
+Iteration 1
+Sample 3 from current logs bucket: ID: 14, Len: 8, Bucket Size: 6745, Total Buckets: 23
+Sampling from 4200 logs, Sim Level: 1, MaxSim to anchor: 0.7778. Anchor: `[client 204.100.200.22] Directory index forbidden by rule: /var/www/html/`, MaxSim Log: `[client 207.203.80.15] Directory index forbidden by rule: /var/www/html/`.
+	============  Query  ====================
+	Log[1]: `[client 204.100.200.22] Directory index forbidden by rule: /var/www/html/`
+	Log[2]: `[client 220.174.104.157] Directory index forbidden by rule: /var/www/html/`
+	Log[3]: `[client 64.175.179.193] Directory index forbidden by rule: /var/www/html/`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] Directory index forbidden by rule: {directory}`
+LogTemplate[2]: `[client {ip}] Directory index forbidden by rule: {directory}`
+LogTemplate[3]: `[client {ip}] Directory index forbidden by rule: {directory}`
+	============ PostProcess ====================
+	Post Template: `[client <*>] Directory index forbidden by rule: <*>`
+	Post Template: `[client <*>] Directory index forbidden by rule: <*>`
+	Post Template: `[client <*>] Directory index forbidden by rule: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] Directory index forbidden by rule: <*>
+[UpdateBucket] Logs: This iter found: 6745, total: 27606/51978, remain: 24372. 
+[UpdateBucket] Buckets: Checked 4 ([12, 13, 14, 15]), Parent Bucket size: 13301 -> 6556, remain buckets: 21
+Update Success: Time for one update logs: 0.17026996612548828, template `[client <*>] Directory index forbidden by rule: <*>`
+========================================================================================
+
+
+Iteration 2
+Sample 3 from current logs bucket: ID: 13, Len: 8, Bucket Size: 6335, Total Buckets: 23
+Sampling from 6292 logs, Sim Level: 2, MaxSim to anchor: 0.7778. Anchor: `jk2_init() Found child 2330 in scoreboard slot 0`, MaxSim Log: `jk2_init() Found child 2336 in scoreboard slot 0`.
+	============  Query  ====================
+	Log[1]: `jk2_init() Found child 2330 in scoreboard slot 0`
+	Log[2]: `jk2_init() Found child 32605 in scoreboard slot 9`
+	Log[3]: `jk2_init() Found child 25738 in scoreboard slot 1`
+	============ Response ====================
+LogTemplate[1]: `jk2_init() Found child {pid} in scoreboard slot {slot}`
+	============ PostProcess ====================
+	Post Template: `jk2_init() Found child <*> in scoreboard slot <*>`
+	Post Template: `jk2_init() Found child <*> in scoreboard slot <*>`
+	Post Template: `jk2_init() Found child <*> in scoreboard slot <*>`
+	============ Aggregate ====================
+	Aggregated Template:  jk2_init() Found child <*> in scoreboard slot <*>
+[UpdateBucket] Logs: This iter found: 6335, total: 33941/51978, remain: 18037. 
+[UpdateBucket] Buckets: Checked 4 ([12, 13, 14, 15]), Parent Bucket size: 6556 -> 221, remain buckets: 20
+Update Success: Time for one update logs: 0.13869786262512207, template `jk2_init() Found child <*> in scoreboard slot <*>`
+========================================================================================
+
+
+Iteration 3
+Sample 3 from current logs bucket: ID: 1, Len: 3, Bucket Size: 5708, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `workerEnv.init() ok /etc/httpd/conf/workers2.properties`
+	============ Response ====================
+LogTemplate[1]: `workerEnv.init() ok {file}`
+	============ PostProcess ====================
+	Post Template: `workerEnv.init() ok <*>`
+	============ Aggregate ====================
+	Aggregated Template:  workerEnv.init() ok <*>
+[UpdateBucket] Logs: This iter found: 5708, total: 39649/51978, remain: 12329. 
+[UpdateBucket] Buckets: Checked 2 ([1, 2]), Parent Bucket size: 7044 -> 1336, remain buckets: 19
+Update Success: Time for one update logs: 0.12210488319396973, template `workerEnv.init() ok <*>`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 10, Len: 7, Bucket Size: 4349, Total Buckets: 23
+Sampling from 9 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `mod_jk child workerEnv in error state 1`, MaxSim Log: `mod_jk child workerEnv in error state 2`.
+	============  Query  ====================
+	Log[1]: `mod_jk child workerEnv in error state 1`
+	Log[2]: `mod_jk child workerEnv in error state 2`
+	Log[3]: `mod_jk child workerEnv in error state 10`
+	============ Response ====================
+LogTemplate[1]: `mod_jk child workerEnv in error state {state}`  
+LogTemplate[2]: `mod_jk child workerEnv in error state {state}`  
+LogTemplate[3]: `mod_jk child workerEnv in error state {state}`  
+	============ PostProcess ====================
+	Post Template: `mod_jk child workerEnv in error state <*>`
+	Post Template: `mod_jk child workerEnv in error state <*>`
+	Post Template: `mod_jk child workerEnv in error state <*>`
+	============ Aggregate ====================
+	Aggregated Template:  mod_jk child workerEnv in error state <*>
+[UpdateBucket] Logs: This iter found: 4349, total: 43998/51978, remain: 7980. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 5411 -> 1062, remain buckets: 18
+Update Success: Time for one update logs: 0.10638594627380371, template `mod_jk child workerEnv in error state <*>`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 17, Len: 10, Bucket Size: 3301, Total Buckets: 23
+Sampling from 234 logs, Sim Level: 2, MaxSim to anchor: 0.8182. Anchor: `[client 202.133.98.6] script not found or unable to stat: /var/www/cgi-bin/awstats`, MaxSim Log: `[client 202.133.98.6] script not found or unable to stat: /var/www/cgi-bin/awstats.pl`.
+	============  Query  ====================
+	Log[1]: `[client 202.133.98.6] script not found or unable to stat: /var/www/cgi-bin/awstats`
+	Log[2]: `[client 201.6.53.88] script not found or unable to stat: /var/www/cgi-bin/awstats.pl`
+	Log[3]: `[client 61.145.100.217] script not found or unable to stat: /var/www/cgi-bin/jud.cgi`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] script not found or unable to stat: {file}`
+LogTemplate[2]: `[client {ip}] script not found or unable to stat: {file}`
+LogTemplate[3]: `[client {ip}] script not found or unable to stat: {file}`
+	============ PostProcess ====================
+	Post Template: `[client <*>] script not found or unable to stat: <*>`
+	Post Template: `[client <*>] script not found or unable to stat: <*>`
+	Post Template: `[client <*>] script not found or unable to stat: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] script not found or unable to stat: <*>
+[UpdateBucket] Logs: This iter found: 3301, total: 47299/51978, remain: 4679. 
+[UpdateBucket] Buckets: Checked 3 ([17, 18, 19]), Parent Bucket size: 3508 -> 207, remain buckets: 17
+Update Success: Time for one update logs: 0.09824323654174805, template `[client <*>] script not found or unable to stat: <*>`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 2, Len: 3, Bucket Size: 1336, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `mod_jk2 Shutting down`
+	============ Response ====================
+LogTemplate[1]: `mod_jk2 Shutting down`
+	============ PostProcess ====================
+	Post Template: `mod_jk2 Shutting down`
+	============ Aggregate ====================
+	Aggregated Template:  mod_jk2 Shutting down
+[UpdateBucket] Logs: This iter found: 1336, total: 48635/51978, remain: 3343. 
+[UpdateBucket] Buckets: Checked 2 ([1, 2]), Parent Bucket size: 1336 -> 0, remain buckets: 16
+Update Success: Time for one update logs: 0.013731956481933594, template `mod_jk2 Shutting down`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 1259, Total Buckets: 23
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `mod_jk child init 1 0`, MaxSim Log: `mod_jk child init 1 -2`.
+	============  Query  ====================
+	Log[1]: `mod_jk child init 1 0`
+	Log[2]: `mod_jk child init 1 -2`
+	============ Response ====================
+LogTemplate[1]: `mod_jk child init 1 {var1}`  
+LogTemplate[2]: `mod_jk child init 1 {var2}`  
+	============ PostProcess ====================
+	Post Template: `mod_jk child init <*>`
+	Post Template: `mod_jk child init <*>`
+	============ Aggregate ====================
+	Aggregated Template:  mod_jk child init <*>
+[UpdateBucket] Logs: This iter found: 1259, total: 49894/51978, remain: 2084. 
+[UpdateBucket] Buckets: Checked 2 ([5, 6]), Parent Bucket size: 1304 -> 45, remain buckets: 15
+Update Success: Time for one update logs: 0.044838905334472656, template `mod_jk child init <*>`
+========================================================================================
+
+
+Iteration 8
+Sample 3 from current logs bucket: ID: 9, Len: 7, Bucket Size: 971, Total Buckets: 23
+Sampling from 954 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `jk2_init() Can't find child 4057 in scoreboard`, MaxSim Log: `jk2_init() Can't find child 4058 in scoreboard`.
+	============  Query  ====================
+	Log[1]: `jk2_init() Can't find child 4057 in scoreboard`
+	Log[2]: `jk2_init() Can't find child 27316 in scoreboard`
+	Log[3]: `jk2_init() Can't find child 17481 in scoreboard`
+	============ Response ====================
+LogTemplate[1]: `jk2_init() Can't find child {pid} in scoreboard`  
+LogTemplate[2]: `jk2_init() Can't find child {pid} in scoreboard`  
+LogTemplate[3]: `jk2_init() Can't find child {pid} in scoreboard`  
+	============ PostProcess ====================
+	Post Template: `jk2_init() Can't find child <*> in scoreboard`
+	Post Template: `jk2_init() Can't find child <*> in scoreboard`
+	Post Template: `jk2_init() Can't find child <*> in scoreboard`
+	============ Aggregate ====================
+	Aggregated Template:  jk2_init() Can't find child <*> in scoreboard
+[UpdateBucket] Logs: This iter found: 971, total: 50865/51978, remain: 1113. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 1062 -> 91, remain buckets: 14
+Update Success: Time for one update logs: 0.040116071701049805, template `jk2_init() Can't find child <*> in scoreboard`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 3, Len: 4, Bucket Size: 180, Total Buckets: 23
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `config.update(): Can't create channel.jni:jni`, MaxSim Log: `config.update(): Can't create vm:`.
+	============  Query  ====================
+	Log[1]: `config.update(): Can't create channel.jni:jni`
+	Log[2]: `config.update(): Can't create worker.jni:onShutdown`
+	Log[3]: `config.update(): Can't create vm:`
+	============ Response ====================
+LogTemplate[1]: `config.update(): Can't create {channel}.jni:{jni}`
+LogTemplate[2]: `config.update(): Can't create {worker}.jni:{onShutdown}`
+LogTemplate[3]: `config.update(): Can't create vm:`
+	============ PostProcess ====================
+	Post Template: `config.update(): Can't create <*>.jni:<*>`
+	Post Template: `config.update(): Can't create <*>.jni:<*>`
+	Post Template: `config.update(): Can't create vm:`
+	============ Aggregate ====================
+	Aggregated Template:  config.update(): Can't create <*>.jni:<*>
+[UpdateBucket] Logs: This iter found: 135, total: 51000/51978, remain: 978. 
+[UpdateBucket] Buckets: Checked 2 ([3, 4]), Parent Bucket size: 233 -> 98, remain buckets: 14
+Update Success: Time for one update logs: 0.01311492919921875, template `config.update(): Can't create <*>.jni:<*>`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 12, Len: 8, Bucket Size: 180, Total Buckets: 23
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.4545. Anchor: `env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)`, MaxSim Log: `env.createBean2(): Factory error creating vm: ( vm, )`.
+	============  Query  ====================
+	Log[1]: `env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)`
+	============ Response ====================
+LogTemplate[1]: `env.createBean2(): Factory error creating {channel_name}:{channel_type} ({channel_name}, {channel_type})`
+	============ PostProcess ====================
+	Post Template: `env.createBean2(): Factory error creating <*> (<*>, <*>)`
+	============ Aggregate ====================
+	Aggregated Template:  env.createBean2(): Factory error creating <*> (<*>, <*>)
+[UpdateBucket] Logs: This iter found: 180, total: 51180/51978, remain: 798. 
+[UpdateBucket] Buckets: Checked 4 ([12, 13, 14, 15]), Parent Bucket size: 221 -> 41, remain buckets: 13
+Update Success: Time for one update logs: 0.013969898223876953, template `env.createBean2(): Factory error creating <*> (<*>, <*>)`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 18, Len: 10, Bucket Size: 168, Total Buckets: 23
+Sampling from 55 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `child process 18801 still did not exit, sending a SIGTERM`, MaxSim Log: `child process 18802 still did not exit, sending a SIGTERM`.
+	============  Query  ====================
+	Log[1]: `child process 18801 still did not exit, sending a SIGTERM`
+	Log[2]: `child process 6448 still did not exit, sending a SIGTERM`
+	Log[3]: `child process 29765 still did not exit, sending a SIGTERM`
+	============ Response ====================
+LogTemplate[1]: `child process {pid} still did not exit, sending a SIGTERM`
+LogTemplate[2]: `child process {pid} still did not exit, sending a SIGTERM`
+LogTemplate[3]: `child process {pid} still did not exit, sending a SIGTERM`
+	============ PostProcess ====================
+	Post Template: `child process <*> still did not exit, sending a SIGTERM`
+	Post Template: `child process <*> still did not exit, sending a SIGTERM`
+	Post Template: `child process <*> still did not exit, sending a SIGTERM`
+	============ Aggregate ====================
+	Aggregated Template:  child process <*> still did not exit, sending a SIGTERM
+[UpdateBucket] Logs: This iter found: 168, total: 51348/51978, remain: 630. 
+[UpdateBucket] Buckets: Checked 3 ([17, 18, 19]), Parent Bucket size: 207 -> 39, remain buckets: 12
+Update Success: Time for one update logs: 0.015024185180664062, template `child process <*> still did not exit, sending a SIGTERM`
+========================================================================================
+
+
+Iteration 12
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 92, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/`
+	============ Response ====================
+LogTemplate[1]: `[client {ip_address}] attempt to invoke directory as script: {directory}`
+	============ PostProcess ====================
+	Post Template: `[client <*>] attempt to invoke directory as script: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] attempt to invoke directory as script: <*>
+[UpdateBucket] Logs: This iter found: 92, total: 51440/51978, remain: 538. 
+[UpdateBucket] Buckets: Checked 1 ([16]), Parent Bucket size: 92 -> 0, remain buckets: 11
+Update Success: Time for one update logs: 0.009629249572753906, template `[client <*>] attempt to invoke directory as script: <*>`
+========================================================================================
+
+
+Iteration 13
+Sample 3 from current logs bucket: ID: 11, Len: 7, Bucket Size: 91, Total Buckets: 23
+Sampling from 3 logs failed
+	============  Query  ====================
+	Log[1]: `Digest: generating secret for digest authentication ...`
+	============ Response ====================
+LogTemplate[1]: `Digest: generating secret for digest authentication ...`
+	============ PostProcess ====================
+	Post Template: `Digest: generating secret for digest authentication ...`
+	============ Aggregate ====================
+	Aggregated Template:  Digest: generating secret for digest authentication ...
+[UpdateBucket] Logs: This iter found: 45, total: 51485/51978, remain: 493. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 91 -> 46, remain buckets: 11
+Update Success: Time for one update logs: 0.004152059555053711, template `Digest: generating secret for digest authentication ...`
+========================================================================================
+
+
+Iteration 14
+Sample 3 from current logs bucket: ID: 0, Len: 2, Bucket Size: 90, Total Buckets: 23
+Sampling from 2 logs failed
+	============  Query  ====================
+	Log[1]: `Digest: done`
+	============ Response ====================
+LogTemplate[1]: `Digest: done`
+	============ PostProcess ====================
+	Post Template: `Digest: done`
+	============ Aggregate ====================
+	Aggregated Template:  Digest: done
+[UpdateBucket] Logs: This iter found: 45, total: 51530/51978, remain: 448. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 90 -> 45, remain buckets: 11
+Update Success: Time for one update logs: 0.004925966262817383, template `Digest: done`
+========================================================================================
+
+
+Iteration 15
+Sample 3 from current logs bucket: ID: 7, Len: 6, Bucket Size: 80, Total Buckets: 23
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.0909. Anchor: `LDAP: Built with OpenLDAP LDAP SDK`, MaxSim Log: `uriMap.mapUri() uri must start with /`.
+	============  Query  ====================
+	Log[1]: `LDAP: Built with OpenLDAP LDAP SDK`
+	============ Response ====================
+LogTemplate[1]: `LDAP: Built with {library} LDAP SDK`
+	============ PostProcess ====================
+	Post Template: `LDAP: Built with <*> LDAP SDK`
+	============ Aggregate ====================
+	Aggregated Template:  LDAP: Built with <*> LDAP SDK
+[UpdateBucket] Logs: This iter found: 53, total: 51583/51978, remain: 395. 
+[UpdateBucket] Buckets: Checked 1 ([7]), Parent Bucket size: 80 -> 27, remain buckets: 11
+Update Success: Time for one update logs: 0.006368875503540039, template `LDAP: Built with <*> LDAP SDK`
+========================================================================================
+
+
+Iteration 16
+Sample 3 from current logs bucket: ID: 4, Len: 4, Bucket Size: 53, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `LDAP: SSL support unavailable`
+	============ Response ====================
+LogTemplate[1]: `LDAP: SSL support unavailable`
+	============ PostProcess ====================
+	Post Template: `LDAP: SSL support unavailable`
+	============ Aggregate ====================
+	Aggregated Template:  LDAP: SSL support unavailable
+[UpdateBucket] Logs: This iter found: 53, total: 51636/51978, remain: 342. 
+[UpdateBucket] Buckets: Checked 2 ([3, 4]), Parent Bucket size: 98 -> 45, remain buckets: 10
+Update Success: Time for one update logs: 0.005369901657104492, template `LDAP: SSL support unavailable`
+========================================================================================
+
+
+Iteration 17
+Sample 3 from current logs bucket: ID: 11, Len: 7, Bucket Size: 46, Total Buckets: 23
+Sampling from 2 logs failed
+	============  Query  ====================
+	Log[1]: `Apache/2.0.49 (Fedora) configured -- resuming normal operations`
+	============ Response ====================
+LogTemplate[1]: `Apache/{version} ({os}) configured -- resuming normal operations`
+	============ PostProcess ====================
+	Post Template: `Apache/<*> (<*>) configured -- resuming normal operations`
+	============ Aggregate ====================
+	Aggregated Template:  Apache/<*> (<*>) configured -- resuming normal operations
+[UpdateBucket] Logs: This iter found: 45, total: 51681/51978, remain: 297. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 46 -> 1, remain buckets: 10
+Update Success: Time for one update logs: 0.011750936508178711, template `Apache/<*> (<*>) configured -- resuming normal operations`
+========================================================================================
+
+
+Iteration 18
+Sample 3 from current logs bucket: ID: 0, Len: 2, Bucket Size: 45, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `mod_security/1.9dev2 configured`
+	============ Response ====================
+LogTemplate[1]: `mod_security/<*> configured`
+	============ PostProcess ====================
+	Post Template: `mod_security/<*> configured`
+	============ Aggregate ====================
+	Aggregated Template:  mod_security/<*> configured
+[UpdateBucket] Logs: This iter found: 45, total: 51726/51978, remain: 252. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 45 -> 0, remain buckets: 9
+Update Success: Time for one update logs: 0.005911827087402344, template `mod_security/<*> configured`
+========================================================================================
+
+
+Iteration 19
+Sample 3 from current logs bucket: ID: 3, Len: 4, Bucket Size: 45, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `config.update(): Can't create vm:`
+	============ Response ====================
+LogTemplate[1]: `config.update(): Can't create vm:`
+	============ PostProcess ====================
+	Post Template: `config.update(): Can't create vm:`
+	============ Aggregate ====================
+	Aggregated Template:  config.update(): Can't create vm:
+[UpdateBucket] Logs: This iter found: 45, total: 51771/51978, remain: 207. 
+[UpdateBucket] Buckets: Checked 2 ([3, 4]), Parent Bucket size: 45 -> 0, remain buckets: 8
+[TemplateDB] Try Merge: `config.update(): Can't create vm:` | `config.update(): Can't create <*>.jni:<*>`
+	Post Template: `config.update(): Can't create <*>`
+[TemplateDB] Merged: -> `config.update(): Can't create <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 180/180, in child Bucket [3, 4]
+[UpdateBucket] Logs: This iter found: 0, total: 51771/51978, remain: 207. 
+[UpdateBucket] Buckets: Checked 2 ([3, 4]), Parent Bucket size: 0 -> 0, remain buckets: 8
+[TemplateDB] Update Indexes: 180 -> 180 for `config.update(): Can't create <*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `config.update(): Can't create <*>`
+Update Success: Time for one update logs: 0.02073216438293457, template `config.update(): Can't create vm:`
+========================================================================================
+
+
+Iteration 20
+Sample 3 from current logs bucket: ID: 6, Len: 5, Bucket Size: 45, Total Buckets: 23
+Sampling from 2 logs failed
+	============  Query  ====================
+	Log[1]: `suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)`
+	============ Response ====================
+LogTemplate[1]: `suEXEC mechanism enabled (wrapper: {file})`
+	============ PostProcess ====================
+	Post Template: `suEXEC mechanism enabled (wrapper: <*>)`
+	============ Aggregate ====================
+	Aggregated Template:  suEXEC mechanism enabled (wrapper: <*>)
+[UpdateBucket] Logs: This iter found: 8, total: 51779/51978, remain: 199. 
+[UpdateBucket] Buckets: Checked 2 ([5, 6]), Parent Bucket size: 45 -> 37, remain buckets: 8
+Update Success: Time for one update logs: 0.006265163421630859, template `suEXEC mechanism enabled (wrapper: <*>)`
+========================================================================================
+
+
+Iteration 21
+Sample 3 from current logs bucket: ID: 21, Len: 14, Bucket Size: 45, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.`
+	============ Response ====================
+LogTemplate[1]: `mod_python: Creating {number} session mutexes based on {number} max processes and {number} max threads.`
+	============ PostProcess ====================
+	Post Template: `mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.`
+	============ Aggregate ====================
+	Aggregated Template:  mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.
+[UpdateBucket] Logs: This iter found: 45, total: 51824/51978, remain: 154. 
+[UpdateBucket] Buckets: Checked 1 ([21]), Parent Bucket size: 45 -> 0, remain buckets: 7
+Update Success: Time for one update logs: 0.007220029830932617, template `mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.`
+========================================================================================
+
+
+Iteration 22
+Sample 3 from current logs bucket: ID: 15, Len: 8, Bucket Size: 41, Total Buckets: 23
+Sampling from 13 logs, Sim Level: 2, MaxSim to anchor: 0.7778. Anchor: `[client 218.65.235.56] request failed: error reading the headers`, MaxSim Log: `[client 63.233.95.41] request failed: error reading the headers`.
+	============  Query  ====================
+	Log[1]: `[client 218.65.235.56] request failed: error reading the headers`
+	Log[2]: `[client 64.116.212.250] request failed: error reading the headers`
+	Log[3]: `[client 213.238.117.47] request failed: error reading the headers`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] request failed: error reading the headers`
+LogTemplate[2]: `[client {ip}] request failed: error reading the headers`
+LogTemplate[3]: `[client {ip}] request failed: error reading the headers`
+	============ PostProcess ====================
+	Post Template: `[client <*>] request failed: error reading the headers`
+	Post Template: `[client <*>] request failed: error reading the headers`
+	Post Template: `[client <*>] request failed: error reading the headers`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] request failed: error reading the headers
+[UpdateBucket] Logs: This iter found: 14, total: 51838/51978, remain: 140. 
+[UpdateBucket] Buckets: Checked 4 ([12, 13, 14, 15]), Parent Bucket size: 41 -> 27, remain buckets: 7
+Update Success: Time for one update logs: 0.011110067367553711, template `[client <*>] request failed: error reading the headers`
+========================================================================================
+
+
+Iteration 23
+Sample 3 from current logs bucket: ID: 19, Len: 10, Bucket Size: 39, Total Buckets: 23
+Sampling from 36 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `[client 210.91.137.35] request failed: URI too long (longer than 8190)`, MaxSim Log: `[client 211.211.14.224] request failed: URI too long (longer than 8190)`.
+	============  Query  ====================
+	Log[1]: `[client 210.91.137.35] request failed: URI too long (longer than 8190)`
+	Log[2]: `[client 63.168.147.250] request failed: URI too long (longer than 8190)`
+	Log[3]: `[client 66.178.23.14] request failed: URI too long (longer than 8190)`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] request failed: URI too long (longer than 8190)`
+LogTemplate[2]: `[client {ip}] request failed: URI too long (longer than 8190)`
+LogTemplate[3]: `[client {ip}] request failed: URI too long (longer than 8190)`
+	============ PostProcess ====================
+	Post Template: `[client <*>] request failed: URI too long (longer than <*>)`
+	Post Template: `[client <*>] request failed: URI too long (longer than <*>)`
+	Post Template: `[client <*>] request failed: URI too long (longer than <*>)`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] request failed: URI too long (longer than <*>)
+[UpdateBucket] Logs: This iter found: 39, total: 51877/51978, remain: 101. 
+[UpdateBucket] Buckets: Checked 3 ([17, 18, 19]), Parent Bucket size: 39 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.0036818981170654297, template `[client <*>] request failed: URI too long (longer than <*>)`
+========================================================================================
+
+
+Iteration 24
+Sample 3 from current logs bucket: ID: 6, Len: 5, Bucket Size: 37, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Graceful restart requested, doing restart`
+	============ Response ====================
+LogTemplate[1]: `Graceful restart requested, doing restart`
+	============ PostProcess ====================
+	Post Template: `Graceful restart requested, doing restart`
+	============ Aggregate ====================
+	Aggregated Template:  Graceful restart requested, doing restart
+[UpdateBucket] Logs: This iter found: 37, total: 51914/51978, remain: 64. 
+[UpdateBucket] Buckets: Checked 2 ([5, 6]), Parent Bucket size: 37 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.004601240158081055, template `Graceful restart requested, doing restart`
+========================================================================================
+
+
+Iteration 25
+Sample 3 from current logs bucket: ID: 7, Len: 6, Bucket Size: 27, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `uriMap.mapUri() uri must start with /`
+	============ Response ====================
+LogTemplate[1]: `uriMap.mapUri() uri must start with /`
+	============ PostProcess ====================
+	Post Template: `uriMap.mapUri() uri must start with /`
+	============ Aggregate ====================
+	Aggregated Template:  uriMap.mapUri() uri must start with /
+[UpdateBucket] Logs: This iter found: 27, total: 51941/51978, remain: 37. 
+[UpdateBucket] Buckets: Checked 1 ([7]), Parent Bucket size: 27 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.0027518272399902344, template `uriMap.mapUri() uri must start with /`
+========================================================================================
+
+
+Iteration 26
+Sample 3 from current logs bucket: ID: 15, Len: 8, Bucket Size: 27, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `[client 210.245.233.251] Invalid URI in request GET <*>`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] Invalid URI in request GET <*>`
+	============ PostProcess ====================
+	Post Template: `[client <*>] Invalid URI in request GET <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] Invalid URI in request GET <*>
+[UpdateBucket] Logs: This iter found: 27, total: 51968/51978, remain: 10. 
+[UpdateBucket] Buckets: Checked 4 ([12, 13, 14, 15]), Parent Bucket size: 27 -> 0, remain buckets: 3
+Update Success: Time for one update logs: 0.003865957260131836, template `[client <*>] Invalid URI in request GET <*>`
+========================================================================================
+
+
+Iteration 27
+Sample 3 from current logs bucket: ID: 20, Len: 13, Bucket Size: 8, Total Buckets: 23
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `[client 202.143.128.18] client sent <*> request without hostname (see RFC2616 section 14.23): /`
+	============ Response ====================
+LogTemplate[1]: `[client {ip_address}] client sent <*> request without hostname (see RFC2616 section 14.23): /`
+	============ PostProcess ====================
+	Post Template: `[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /
+[UpdateBucket] Logs: This iter found: 8, total: 51976/51978, remain: 2. 
+[UpdateBucket] Buckets: Checked 1 ([20]), Parent Bucket size: 8 -> 0, remain buckets: 2
+Update Success: Time for one update logs: 0.00510096549987793, template `[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /`
+========================================================================================
+
+
+Iteration 28
+Sample 3 from current logs bucket: ID: 11, Len: 7, Bucket Size: 1, Total Buckets: 23
+	============  Query  ====================
+	Log[1]: `[client 210.245.151.81] Attempt to serve directory: /var/www/html/`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] Attempt to serve directory: {directory}`
+	============ PostProcess ====================
+	Post Template: `[client <*>] Attempt to serve directory: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] Attempt to serve directory: <*>
+[UpdateBucket] Logs: This iter found: 1, total: 51977/51978, remain: 1. 
+[UpdateBucket] Buckets: Checked 4 ([8, 9, 10, 11]), Parent Bucket size: 1 -> 0, remain buckets: 1
+Update Success: Time for one update logs: 0.00786280632019043, template `[client <*>] Attempt to serve directory: <*>`
+========================================================================================
+
+
+Iteration 29
+Sample 3 from current logs bucket: ID: 22, Len: 17, Bucket Size: 1, Total Buckets: 23
+	============  Query  ====================
+	Log[1]: `[client 219.239.227.58] mod_security: Access denied with code 403. Error reading POST data, error_code=104 [hostname "63.126.79.67"] [uri "/xmlrpc.php"]`
+	============ Response ====================
+LogTemplate[1]: `[client {ip}] mod_security: Access denied with code {code}. Error reading POST data, error_code={error_code} [hostname "{hostname}"] [uri "{uri}"]`
+	============ PostProcess ====================
+	Post Template: `[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname "<*>"] [uri "<*>"]`
+	============ Aggregate ====================
+	Aggregated Template:  [client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname "<*>"] [uri "<*>"]
+[UpdateBucket] Logs: This iter found: 1, total: 51978/51978, remain: 0. 
+[UpdateBucket] Buckets: Checked 1 ([22]), Parent Bucket size: 1 -> 0, remain buckets: 0
+Update Success: Time for one update logs: 0.00503087043762207, template `[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname "<*>"] [uri "<*>"]`
+========================================================================================
+
+
+Original df_logs: (51978, 4), Clustering df_logs: (51978, 6)
+Saved Apache_log_structured.csv to ./saved_results/LUNAR-single/Apache/Apache_full.log_structured.csv
+Saved Apache_log_templates.csv to ./saved_results/LUNAR-single/Apache/Apache_full.log_templates.csv
+Total parsingg time: 34.45294499397278 seconds
+Total query time: 28.795960426330566 seconds, 30 queries
+Avg. query time: 0.959865027589343 seconds
+Total pure match time: 5.656984567642212 seconds
+
+=== Evaluation on Apache ===
+Evaluate parsing result: ./saved_results/LUNAR-single/Apache/Apache_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/29 [00:00<?, ?it/s]100%|██████████| 29/29 [00:00<00:00, 755.39it/s]
+Grouping_Accuracy (GA): 1.0000, FGA: 1.0000,
+Grouping Accuracy calculation done. [Time taken: 0.060]
+Parsing_Accuracy (PA): 0.9976
+Parsing Accuracy calculation done. [Time taken: 0.003]
+  0%|          | 0/29 [00:00<?, ?it/s]100%|██████████| 29/29 [00:00<00:00, 8659.13it/s]
+1-num-45, {'Apache/<*> configured -- resuming normal operations'} | {'Apache/<*> (<*>) configured -- resuming normal operations'}
+2-num-53, {'LDAP: Built with OpenLDAP LDAP SDK'} | {'LDAP: Built with <*> LDAP SDK'}
+3-num-27, {'[client <*>] Invalid URI in request <*>'} | {'[client <*>] Invalid URI in request GET <*>'}
+4-num-1, {'[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname <*>] [uri <*>]'} | {'[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname "<*>"] [uri "<*>"]'}
+PTA: 0.8621, RTA: 0.8621 FTA: 0.8621
+Identify : 29, Groundtruth : 29
+Template-level accuracy calculation done. [Time taken: 0.017]
+Finish parsing logs: Apache
+Output dir: ./saved_results/LUNAR-single

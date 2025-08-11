@@ -1,0 +1,184 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "<*> open through proxy <*> HTTPS",
+   "<*> open through proxy <*> SOCKS5"
+  ],
+  "logs_to_query_regex": [
+   "<*> open through proxy <*> HTTPS",
+   "<*> open through proxy <*> SOCKS5"
+  ],
+  "llm_template": "<*> open through proxy <*> HTTPS",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "<*> open through proxy <*> HTTPS"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "<*> close, 0 bytes sent, 0 bytes received, lifetime <*>",
+   "<*> close, 952 bytes sent, 782 bytes received, lifetime 00:18",
+   "<*> close, 731 bytes sent, 313 bytes received, lifetime 00:08"
+  ],
+  "logs_to_query_regex": [
+   "<*> close, 0 bytes sent, 0 bytes received, lifetime <*>",
+   "<*> close, 952 bytes sent, 782 bytes received, lifetime 00:18",
+   "<*> close, 731 bytes sent, 313 bytes received, lifetime 00:08"
+  ],
+  "llm_template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "<*> close, 1036 bytes (<*> <*>) sent, 34151 bytes (<*> <*>) received, lifetime <*>",
+   "<*> close, 5851 bytes (<*> <*>) sent, 426560 bytes (416 <*>) received, lifetime 04:01",
+   "<*> close, 365607 bytes (357 <*>) sent, 30452 bytes (<*> <*>) received, lifetime 01:38:48"
+  ],
+  "logs_to_query_regex": [
+   "<*> close, 1036 bytes (<*> <*>) sent, 34151 bytes (<*> <*>) received, lifetime <*>",
+   "<*> close, 5851 bytes (<*> <*>) sent, 426560 bytes (416 <*>) received, lifetime 04:01",
+   "<*> close, 365607 bytes (357 <*>) sent, 30452 bytes (<*> <*>) received, lifetime 01:38:48"
+  ],
+  "llm_template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>",
+   "<*> close, 983 bytes sent, 303510 bytes (296 <*>) received, lifetime 01:57",
+   "<*> close, 933 bytes sent, 141595 bytes (138 <*>) received, lifetime 00:04"
+  ],
+  "logs_to_query_regex": [
+   "<*> close, 1228 bytes (<*> <*>) sent, 0 bytes received, lifetime <*>",
+   "<*> close, 983 bytes sent, 303510 bytes (296 <*>) received, lifetime 01:57",
+   "<*> close, 933 bytes sent, 141595 bytes (138 <*>) received, lifetime 00:04"
+  ],
+  "llm_template": "<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "<*> close, 451 bytes sent, 18846 bytes (<*> <*>) received, lifetime <*>",
+   "<*> close, 446 bytes sent, 195160 bytes (190 <*>) received, lifetime 00:59",
+   "<*> close, 983 bytes sent, 270299 bytes (263 <*>) received, lifetime 01:58"
+  ],
+  "logs_to_query_regex": [
+   "<*> close, 451 bytes sent, 18846 bytes (<*> <*>) received, lifetime <*>",
+   "<*> close, 446 bytes sent, 195160 bytes (190 <*>) received, lifetime 00:59",
+   "<*> close, 983 bytes sent, 270299 bytes (263 <*>) received, lifetime 01:58"
+  ],
+  "llm_template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "<*> error : Could not connect to proxy <*> - Could not resolve <*> error 11001",
+   "awqiizxequsixgr:80 error : Could not connect to proxy <*> - Could not resolve <*> error 11001",
+   "<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061"
+  ],
+  "logs_to_query_regex": [
+   "<*> error : Could not connect to proxy <*> - Could not resolve <*> error 11001",
+   "awqiizxequsixgr:80 error : Could not connect to proxy <*> - Could not resolve <*> error 11001",
+   "<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061"
+  ],
+  "llm_template": "<*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "<*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "<*> error : A connection request was canceled before the completion."
+  ],
+  "logs_to_query_regex": [
+   "<*> error : A connection request was canceled before the completion."
+  ],
+  "llm_template": "<*> error : A connection request was canceled before the completion.",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "<*> error : A connection request was canceled before the completion."
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403",
+   "qumccyndmsiwf:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503",
+   "srkodhptqlryvjp:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503"
+  ],
+  "logs_to_query_regex": [
+   "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 403",
+   "qumccyndmsiwf:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503",
+   "srkodhptqlryvjp:80 error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503"
+  ],
+  "llm_template": "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061"
+  ],
+  "logs_to_query_regex": [
+   "<*> error : Could not connect to proxy <*> - connection attempt failed with error 10061"
+  ],
+  "llm_template": "<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly."
+  ],
+  "logs_to_query_regex": [
+   "<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly."
+  ],
+  "llm_template": "<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly.",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly."
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "<*> open through proxy <*> SOCKS5"
+  ],
+  "logs_to_query_regex": [
+   "<*> open through proxy <*> SOCKS5"
+  ],
+  "llm_template": "<*> open through proxy <*> SOCKS5",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "<*> open through proxy <*> SOCKS5"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503"
+  ],
+  "logs_to_query_regex": [
+   "<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code 503"
+  ],
+  "llm_template": "<*> (IPv6) error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>"
+ }
+]

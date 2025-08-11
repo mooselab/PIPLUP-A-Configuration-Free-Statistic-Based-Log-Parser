@@ -1,0 +1,1650 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/Zookeeper
+Output dir: ./saved_results/LUNAR-single/Zookeeper
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/Zookeeper/Zookeeper_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 17
+Clustering by log length: [98, 10980, 230, 23120, 3884, 1798, 12310, 2465, 2584, 3625, 10547, 174, 57, 1861, 509, 25, 6]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 98/98/98 Logs. Last cluster logs: 98
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 10980/158/10390 Logs. Last cluster logs: 158
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 230/230/230 Logs. Last cluster logs: 230
+--- Finished 2nd Level Clustering by top-3 tokens: 6 clusters, Total/Min/Max: 23120/173/10429 Logs. Last cluster logs: 173
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 3884/194/2020 Logs. Last cluster logs: 194
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 1798/8/1790 Logs. Last cluster logs: 8
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 12310/162/10386 Logs. Last cluster logs: 162
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 2465/85/1790 Logs. Last cluster logs: 85
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 2584/2584/2584 Logs. Last cluster logs: 2584
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 3625/20/3605 Logs. Last cluster logs: 20
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 10547/159/10388 Logs. Last cluster logs: 159
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 174/15/159 Logs. Last cluster logs: 15
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 57/57/57 Logs. Last cluster logs: 57
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 1861/1861/1861 Logs. Last cluster logs: 1861
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 509/52/457 Logs. Last cluster logs: 52
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 25/25/25 Logs. Last cluster logs: 25
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 6/6/6 Logs. Last cluster logs: 6
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 35 clusters
+Clustering results: [98, 10390, 432, 158, 230, 1322, 10429, 10390, 590, 216, 173, 2020, 1670, 194, 1790, 8, 10386, 1762, 162, 1790, 590, 85, 2584, 3605, 20, 10388, 159, 159, 15, 57, 1861, 457, 52, 25, 6]
+Iteration 0
+Sample 3 from current logs bucket: ID: 6, Len: 4, Bucket Size: 10429, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Received connection request <*>`
+	============ Response ====================
+LogTemplate[1]: `Received connection request {connection_id}`
+	============ PostProcess ====================
+	Post Template: `Received connection request <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Received connection request <*>
+[UpdateBucket] Logs: This iter found: 10429, total: 10429/74273, remain: 63844. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 23120 -> 12691, remain buckets: 34
+Update Success: Time for one update logs: 0.19922828674316406, template `Received connection request <*>`
+========================================================================================
+
+
+Iteration 1
+Sample 1 from current logs bucket: ID: 1, Len: 2, Bucket Size: 10390, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Interrupting SendWorker`
+	============ Response ====================
+LogTemplate[1]: `Interrupting SendWorker`
+	============ PostProcess ====================
+	Post Template: `Interrupting SendWorker`
+	============ Aggregate ====================
+	Aggregated Template:  Interrupting SendWorker
+[UpdateBucket] Logs: This iter found: 10390, total: 20819/74273, remain: 53454. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 10980 -> 590, remain buckets: 33
+Update Success: Time for one update logs: 0.05054306983947754, template `Interrupting SendWorker`
+========================================================================================
+
+
+Iteration 2
+Sample 1 from current logs bucket: ID: 7, Len: 4, Bucket Size: 10390, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Send worker leaving thread`
+	============ Response ====================
+LogTemplate[1]: `Send worker leaving thread`
+	============ PostProcess ====================
+	Post Template: `Send worker leaving thread`
+	============ Aggregate ====================
+	Aggregated Template:  Send worker leaving thread
+[UpdateBucket] Logs: This iter found: 10390, total: 31209/74273, remain: 43064. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 12691 -> 2301, remain buckets: 32
+Update Success: Time for one update logs: 0.05263710021972656, template `Send worker leaving thread`
+========================================================================================
+
+
+Iteration 3
+Sample 1 from current logs bucket: ID: 25, Len: 11, Bucket Size: 10388, Total Buckets: 35
+Sampling from 8 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Connection broken for id 188978561024, my id = 1, error =`, MaxSim Log: `Connection broken for id 3, my id = 1, error =`.
+	============  Query  ====================
+	Log[1]: `Connection broken for id 188978561024, my id = 1, error =`
+	Log[2]: `Connection broken for id 188978561024, my id = 2, error =`
+	Log[3]: `Connection broken for id 1, my id = 3, error =`
+	============ Response ====================
+LogTemplate[1]: `Connection broken for id {id}, my id = <*>, error =`  
+LogTemplate[2]: `Connection broken for id {id}, my id = <*>, error =`  
+LogTemplate[3]: `Connection broken for id <*>, my id = <*>, error =`  
+	============ PostProcess ====================
+	Post Template: `Connection broken for id <*> my id = <*> error =`
+	Post Template: `Connection broken for id <*> my id = <*> error =`
+	Post Template: `Connection broken for id <*> my id = <*> error =`
+	============ Aggregate ====================
+	Aggregated Template:  Connection broken for id <*> my id = <*> error =
+[UpdateBucket] Logs: This iter found: 10388, total: 41597/74273, remain: 32676. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 10547 -> 159, remain buckets: 31
+Update Success: Time for one update logs: 0.21666502952575684, template `Connection broken for id <*> my id = <*> error =`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 16, Len: 7, Bucket Size: 10386, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Interrupted while waiting for message on queue`
+	============ Response ====================
+LogTemplate[1]: `Interrupted while waiting for message on queue`
+	============ PostProcess ====================
+	Post Template: `Interrupted while waiting for message on queue`
+	============ Aggregate ====================
+	Aggregated Template:  Interrupted while waiting for message on queue
+[UpdateBucket] Logs: This iter found: 10386, total: 51983/74273, remain: 22290. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 12310 -> 1924, remain buckets: 30
+Update Success: Time for one update logs: 0.05880618095397949, template `Interrupted while waiting for message on queue`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 23, Len: 10, Bucket Size: 3605, Total Buckets: 35
+Sampling from 3521 logs, Sim Level: 4, MaxSim to anchor: 0.8182. Anchor: `Established session 0x14ed93111f20000 with negotiated timeout 10000 for client <*>`, MaxSim Log: `Established session 0x14ed93111f20001 with negotiated timeout 10000 for client <*>`.
+	============  Query  ====================
+	Log[1]: `Established session 0x14ed93111f20000 with negotiated timeout 10000 for client <*>`
+	Log[2]: `Established session 0x34ed9ac1c1e00aa with negotiated timeout 10000 for client <*>`
+	Log[3]: `Established session 0x14edfaa86f60030 with negotiated timeout 20000 for client <*>`
+	============ Response ====================
+LogTemplate[1]: `Established session {session_id} with negotiated timeout {timeout} for client <*>`
+LogTemplate[2]: `Established session {session_id} with negotiated timeout {timeout} for client <*>`
+LogTemplate[3]: `Established session {session_id} with negotiated timeout {timeout} for client <*>`
+	============ PostProcess ====================
+	Post Template: `Established session <*> with negotiated timeout <*> for client <*>`
+	Post Template: `Established session <*> with negotiated timeout <*> for client <*>`
+	Post Template: `Established session <*> with negotiated timeout <*> for client <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Established session <*> with negotiated timeout <*> for client <*>
+[UpdateBucket] Logs: This iter found: 1856, total: 53839/74273, remain: 20434. 
+[UpdateBucket] Buckets: Checked 2 ([23, 24]), Parent Bucket size: 3625 -> 1769, remain buckets: 30
+Update Success: Time for one update logs: 0.06501603126525879, template `Established session <*> with negotiated timeout <*> for client <*>`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 22, Len: 9, Bucket Size: 2584, Total Buckets: 35
+Sampling from 2 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `Cannot open channel to 2 at election address <*>`, MaxSim Log: `Cannot open channel to 3 at election address <*>`.
+	============  Query  ====================
+	Log[1]: `Cannot open channel to 2 at election address <*>`
+	Log[2]: `Cannot open channel to 3 at election address <*>`
+	Log[3]: `Cannot open channel to 1 at election address <*>`
+	============ Response ====================
+LogTemplate[1]: `Cannot open channel to {number} at election address <*>`
+LogTemplate[2]: `Cannot open channel to {number} at election address <*>`
+LogTemplate[3]: `Cannot open channel to {number} at election address <*>`
+	============ PostProcess ====================
+	Post Template: `Cannot open channel to <*> at election address <*>`
+	Post Template: `Cannot open channel to <*> at election address <*>`
+	Post Template: `Cannot open channel to <*> at election address <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Cannot open channel to <*> at election address <*>
+[UpdateBucket] Logs: This iter found: 2584, total: 56423/74273, remain: 17850. 
+[UpdateBucket] Buckets: Checked 1 ([22]), Parent Bucket size: 2584 -> 0, remain buckets: 29
+Update Success: Time for one update logs: 0.06747579574584961, template `Cannot open channel to <*> at election address <*>`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 11, Len: 5, Bucket Size: 2020, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Accepted socket connection from <*>`
+	============ Response ====================
+LogTemplate[1]: `Accepted socket connection from {ip}`
+	============ PostProcess ====================
+	Post Template: `Accepted socket connection from <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Accepted socket connection from <*>
+[UpdateBucket] Logs: This iter found: 2020, total: 58443/74273, remain: 15830. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 3884 -> 1864, remain buckets: 28
+Update Success: Time for one update logs: 0.0670619010925293, template `Accepted socket connection from <*>`
+========================================================================================
+
+
+Iteration 8
+Sample 1 from current logs bucket: ID: 30, Len: 15, Bucket Size: 1861, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Connection request from old client <*>; will be dropped if server is in r-o mode`
+	============ Response ====================
+LogTemplate[1]: `Connection request from old client {client}; will be dropped if server is in r-o mode`
+	============ PostProcess ====================
+	Post Template: `Connection request from old client <*>; will be dropped if server is in r-o mode`
+	============ Aggregate ====================
+	Aggregated Template:  Connection request from old client <*>; will be dropped if server is in r-o mode
+[UpdateBucket] Logs: This iter found: 1861, total: 60304/74273, remain: 13969. 
+[UpdateBucket] Buckets: Checked 1 ([30]), Parent Bucket size: 1861 -> 0, remain buckets: 27
+Update Success: Time for one update logs: 0.051167964935302734, template `Connection request from old client <*>; will be dropped if server is in r-o mode`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 14, Len: 6, Bucket Size: 1790, Total Buckets: 35
+Sampling from 1789 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `Processed session termination for sessionid: 0x34ede65503f0003`, MaxSim Log: `Processed session termination for sessionid: 0x14ede63a5a70006`.
+	============  Query  ====================
+	Log[1]: `Processed session termination for sessionid: 0x34ede65503f0003`
+	Log[2]: `Processed session termination for sessionid: 0x24ed93119420090`
+	Log[3]: `Processed session termination for sessionid: 0x24ed931194200d9`
+	============ Response ====================
+LogTemplate[1]: `Processed session termination for sessionid: {session_id}`
+LogTemplate[2]: `Processed session termination for sessionid: {session_id}`
+LogTemplate[3]: `Processed session termination for sessionid: {session_id}`
+	============ PostProcess ====================
+	Post Template: `Processed session termination for sessionid: <*>`
+	Post Template: `Processed session termination for sessionid: <*>`
+	Post Template: `Processed session termination for sessionid: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Processed session termination for sessionid: <*>
+[UpdateBucket] Logs: This iter found: 1790, total: 62094/74273, remain: 12179. 
+[UpdateBucket] Buckets: Checked 2 ([14, 15]), Parent Bucket size: 1798 -> 8, remain buckets: 26
+Update Success: Time for one update logs: 0.05236625671386719, template `Processed session termination for sessionid: <*>`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 19, Len: 8, Bucket Size: 1790, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Client attempting to establish new session at <*>`
+	============ Response ====================
+LogTemplate[1]: `Client attempting to establish new session at {ip_or_url}`
+	============ PostProcess ====================
+	Post Template: `Client attempting to establish new session at <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Client attempting to establish new session at <*>
+[UpdateBucket] Logs: This iter found: 1790, total: 63884/74273, remain: 10389. 
+[UpdateBucket] Buckets: Checked 3 ([19, 20, 21]), Parent Bucket size: 2465 -> 675, remain buckets: 25
+Update Success: Time for one update logs: 0.050395965576171875, template `Client attempting to establish new session at <*>`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 17, Len: 7, Bucket Size: 1762, Total Buckets: 35
+Sampling from 1761 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `Expiring session 0x34ede65503f0003, timeout of 10000ms exceeded`, MaxSim Log: `Expiring session 0x24ede63a01b0005, timeout of 10000ms exceeded`.
+	============  Query  ====================
+	Log[1]: `Expiring session 0x34ede65503f0003, timeout of 10000ms exceeded`
+	Log[2]: `Expiring session 0x24ed931194200c8, timeout of 20000ms exceeded`
+	Log[3]: `Expiring session 0x34ede65503f0004, timeout of 20000ms exceeded`
+	============ Response ====================
+LogTemplate[1]: `Expiring session {session_id}, timeout of {timeout}ms exceeded`
+LogTemplate[2]: `Expiring session {session_id}, timeout of {timeout}ms exceeded`
+LogTemplate[3]: `Expiring session {session_id}, timeout of {timeout}ms exceeded`
+	============ PostProcess ====================
+	Post Template: `Expiring session <*> timeout of <*> exceeded`
+	Post Template: `Expiring session <*> timeout of <*> exceeded`
+	Post Template: `Expiring session <*> timeout of <*> exceeded`
+	============ Aggregate ====================
+	Aggregated Template:  Expiring session <*> timeout of <*> exceeded
+[UpdateBucket] Logs: This iter found: 1762, total: 65646/74273, remain: 8627. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 1924 -> 162, remain buckets: 24
+Update Success: Time for one update logs: 0.05230593681335449, template `Expiring session <*> timeout of <*> exceeded`
+========================================================================================
+
+
+Iteration 12
+Sample 3 from current logs bucket: ID: 23, Len: 10, Bucket Size: 1749, Total Buckets: 35
+Sampling from 1731 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `Closed socket connection for client <*> which had sessionid 0x14ed93111f20004`, MaxSim Log: `Closed socket connection for client <*> which had sessionid 0x14ed93111f20005`.
+	============  Query  ====================
+	Log[1]: `Closed socket connection for client <*> which had sessionid 0x14ed93111f20004`
+	Log[2]: `Closed socket connection for client <*> which had sessionid 0x24f4a631df9000a`
+	Log[3]: `Closed socket connection for client <*> which had sessionid 0x34ede65503f0004`
+	============ Response ====================
+LogTemplate[1]: `Closed socket connection for client <*> which had sessionid {session_id}`
+
+These logs share a common structure with the only varying part being the sessionid, which can be identified as a dynamic variable `{session_id}`.
+	============ PostProcess ====================
+	Post Template: `Closed socket connection for client <*> which had sessionid <*>`
+	Post Template: `Closed socket connection for client <*> which had sessionid <*>`
+	Post Template: `Closed socket connection for client <*> which had sessionid <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Closed socket connection for client <*> which had sessionid <*>
+[UpdateBucket] Logs: This iter found: 1749, total: 67395/74273, remain: 6878. 
+[UpdateBucket] Buckets: Checked 2 ([23, 24]), Parent Bucket size: 1769 -> 20, remain buckets: 23
+Update Success: Time for one update logs: 0.06117510795593262, template `Closed socket connection for client <*> which had sessionid <*>`
+========================================================================================
+
+
+Iteration 13
+Sample 3 from current logs bucket: ID: 12, Len: 5, Bucket Size: 1670, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `caught end of stream exception`
+	============ Response ====================
+LogTemplate[1]: `caught end of stream exception`
+	============ PostProcess ====================
+	Post Template: `caught end of stream exception`
+	============ Aggregate ====================
+	Aggregated Template:  caught end of stream exception
+[UpdateBucket] Logs: This iter found: 1670, total: 69065/74273, remain: 5208. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 1864 -> 194, remain buckets: 22
+Update Success: Time for one update logs: 0.016254901885986328, template `caught end of stream exception`
+========================================================================================
+
+
+Iteration 14
+Sample 1 from current logs bucket: ID: 5, Len: 4, Bucket Size: 1322, Total Buckets: 35
+Sampling from 8 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `Notification time out: 400`, MaxSim Log: `Notification time out: 800`.
+	============  Query  ====================
+	Log[1]: `Notification time out: 400`
+	Log[2]: `Notification time out: 3200`
+	Log[3]: `Notification time out: 12800`
+	============ Response ====================
+LogTemplate[1]: `Notification time out: {timeout}`  
+LogTemplate[2]: `Notification time out: {timeout}`  
+LogTemplate[3]: `Notification time out: {timeout}`  
+	============ PostProcess ====================
+	Post Template: `Notification time out: <*>`
+	Post Template: `Notification time out: <*>`
+	Post Template: `Notification time out: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Notification time out: <*>
+[UpdateBucket] Logs: This iter found: 1322, total: 70387/74273, remain: 3886. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 2301 -> 979, remain buckets: 21
+Update Success: Time for one update logs: 0.04664492607116699, template `Notification time out: <*>`
+========================================================================================
+
+
+Iteration 15
+Sample 3 from current logs bucket: ID: 8, Len: 4, Bucket Size: 590, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `******* GOODBYE <*> ********`
+	============ Response ====================
+LogTemplate[1]: `******* GOODBYE {placeholder} ********`
+	============ PostProcess ====================
+	Post Template: `******* GOODBYE <*> ********`
+	============ Aggregate ====================
+	Aggregated Template:  ******* GOODBYE <*> ********
+[UpdateBucket] Logs: This iter found: 590, total: 70977/74273, remain: 3296. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 979 -> 389, remain buckets: 20
+Update Success: Time for one update logs: 0.031077146530151367, template `******* GOODBYE <*> ********`
+========================================================================================
+
+
+Iteration 16
+Sample 3 from current logs bucket: ID: 20, Len: 8, Bucket Size: 590, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Unexpected exception causing shutdown while sock still open`
+	============ Response ====================
+LogTemplate[1]: `Unexpected exception causing shutdown while sock still open`
+	============ PostProcess ====================
+	Post Template: `Unexpected exception causing shutdown while sock still open`
+	============ Aggregate ====================
+	Aggregated Template:  Unexpected exception causing shutdown while sock still open
+[UpdateBucket] Logs: This iter found: 590, total: 71567/74273, remain: 2706. 
+[UpdateBucket] Buckets: Checked 3 ([19, 20, 21]), Parent Bucket size: 675 -> 85, remain buckets: 19
+Update Success: Time for one update logs: 0.009020805358886719, template `Unexpected exception causing shutdown while sock still open`
+========================================================================================
+
+
+Iteration 17
+Sample 3 from current logs bucket: ID: 31, Len: 16, Bucket Size: 457, Total Buckets: 35
+Sampling from 154 logs, Sim Level: 13, MaxSim to anchor: 0.9286. Anchor: `Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`, MaxSim Log: `Notification: 2 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`.
+	============  Query  ====================
+	Log[1]: `Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`
+	Log[2]: `Notification: 3 (n.leader), 0x100001564 (n.zxid), 0x3 (n.round), LOOKING (n.state), 3 (n.sid), 0x2 (n.peerEPoch), FOLLOWING (my state)`
+	Log[3]: `Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), LOOKING (n.state), 2 (n.sid), 0x4 (n.peerEPoch), FOLLOWING (my state)`
+	============ Response ====================
+LogTemplate[1]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), LOOKING (n.state), {number} (n.sid), {hex} (n.peerEPoch), LOOKING (my state)`
+LogTemplate[2]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), LOOKING (n.state), {number} (n.sid), {hex} (n.peerEPoch), FOLLOWING (my state)`
+LogTemplate[3]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), LOOKING (n.state), {number} (n.sid), {hex} (n.peerEPoch), FOLLOWING (my state)`
+	============ PostProcess ====================
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)`
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)`
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)`
+	============ Aggregate ====================
+	Aggregated Template:  Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)
+[UpdateBucket] Logs: This iter found: 57, total: 71624/74273, remain: 2649. 
+[UpdateBucket] Buckets: Checked 2 ([31, 32]), Parent Bucket size: 509 -> 452, remain buckets: 19
+Update Success: Time for one update logs: 0.032965898513793945, template `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)`
+========================================================================================
+
+
+Iteration 18
+Sample 3 from current logs bucket: ID: 2, Len: 2, Bucket Size: 432, Total Buckets: 35
+Sampling from 16 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `Server environment:host.name=node1`, MaxSim Log: `Server environment:java.version=1.7.0_79`.
+	============  Query  ====================
+	Log[1]: `Server environment:host.name=node1`
+	============ Response ====================
+LogTemplate[1]: `Server environment:host.name={hostname}`
+	============ PostProcess ====================
+	Post Template: `Server environment:host.name=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Server environment:host.name=<*>
+[UpdateBucket] Logs: This iter found: 36, total: 71660/74273, remain: 2613. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 590 -> 554, remain buckets: 19
+Update Success: Time for one update logs: 0.0224609375, template `Server environment:host.name=<*>`
+========================================================================================
+
+
+Iteration 19
+Sample 3 from current logs bucket: ID: 31, Len: 16, Bucket Size: 400, Total Buckets: 35
+Sampling from 126 logs, Sim Level: 13, MaxSim to anchor: 0.9286. Anchor: `Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`, MaxSim Log: `Notification: 2 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`.
+	============  Query  ====================
+	Log[1]: `Notification: 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)`
+	Log[2]: `Notification: 2 (n.leader), 0xb00000084 (n.zxid), 0x2 (n.round), LEADING (n.state), 2 (n.sid), 0xb (n.peerEPoch), LOOKING (my state)`
+	Log[3]: `Notification: 2 (n.leader), 0x300000dcd (n.zxid), 0x5 (n.round), FOLLOWING (n.state), 3 (n.sid), 0x4 (n.peerEPoch), LOOKING (my state)`
+	============ Response ====================
+LogTemplate[1]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), {state} (n.state), {number} (n.sid), {hex} (n.peerEPoch), LOOKING (my state)`
+LogTemplate[2]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), {state} (n.state), {number} (n.sid), {hex} (n.peerEPoch), LOOKING (my state)`
+LogTemplate[3]: `Notification: {number} (n.leader), {hex} (n.zxid), {hex} (n.round), {state} (n.state), {number} (n.sid), {hex} (n.peerEPoch), LOOKING (my state)`
+	============ PostProcess ====================
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)`
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)`
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)`
+	============ Aggregate ====================
+	Aggregated Template:  Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)
+[UpdateBucket] Logs: This iter found: 354, total: 72014/74273, remain: 2259. 
+[UpdateBucket] Buckets: Checked 2 ([31, 32]), Parent Bucket size: 452 -> 98, remain buckets: 19
+[TemplateDB] Try Merge: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)` | `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), LOOKING (n.state), <*> (n.sid), <*> (n.peerEPoch), FOLLOWING (my state)`
+	Post Template: `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)`
+[TemplateDB] Merged: -> `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 411/411, in child Bucket [31, 32]
+[UpdateBucket] Logs: This iter found: 94, total: 72108/74273, remain: 2165. 
+[UpdateBucket] Buckets: Checked 2 ([31, 32]), Parent Bucket size: 98 -> 4, remain buckets: 18
+[TemplateDB] Update Indexes: 411 -> 505 for `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)`
+[TemplateBaseUpdate] Match unparsed logs 94 with new template `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)`
+Update Success: Time for one update logs: 0.053676605224609375, template `Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), LOOKING (my state)`
+========================================================================================
+
+
+Iteration 20
+Sample 3 from current logs bucket: ID: 2, Len: 2, Bucket Size: 396, Total Buckets: 35
+Sampling from 10 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `Server environment:java.version=1.7.0_79`, MaxSim Log: `Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre`.
+	============  Query  ====================
+	Log[1]: `Server environment:java.version=1.7.0_79`
+	============ Response ====================
+LogTemplate[1]: `Server environment:java.version={java_version}`
+	============ PostProcess ====================
+	Post Template: `Server environment:java.version=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Server environment:java.version=<*>
+[UpdateBucket] Logs: This iter found: 36, total: 72144/74273, remain: 2129. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 554 -> 518, remain buckets: 18
+[TemplateDB] Try Merge: `Server environment:java.version=<*>` | `Server environment:host.name=<*>`
+	Post Template: `Server environment:<*>=<*>`
+[TemplateDB] Merged: -> `Server environment:<*>=<*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 72/72, in child Bucket [1, 2, 3]
+[UpdateBucket] Logs: This iter found: 360, total: 72504/74273, remain: 1769. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 518 -> 158, remain buckets: 17
+[TemplateDB] Update Indexes: 72 -> 432 for `Server environment:<*>=<*>`
+[TemplateBaseUpdate] Match unparsed logs 360 with new template `Server environment:<*>=<*>`
+Update Success: Time for one update logs: 0.03584122657775879, template `Server environment:java.version=<*>`
+========================================================================================
+
+
+Iteration 21
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 230, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Starting quorum peer`
+	============ Response ====================
+LogTemplate[1]: `Starting quorum peer`
+	============ PostProcess ====================
+	Post Template: `Starting quorum peer`
+	============ Aggregate ====================
+	Aggregated Template:  Starting quorum peer
+[UpdateBucket] Logs: This iter found: 36, total: 72540/74273, remain: 1733. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 230 -> 194, remain buckets: 17
+Update Success: Time for one update logs: 0.005543231964111328, template `Starting quorum peer`
+========================================================================================
+
+
+Iteration 22
+Sample 1 from current logs bucket: ID: 9, Len: 4, Bucket Size: 216, Total Buckets: 35
+Sampling from 5 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `autopurge.snapRetainCount set to 3`, MaxSim Log: `autopurge.purgeInterval set to 0`.
+	============  Query  ====================
+	Log[1]: `autopurge.snapRetainCount set to 3`
+	============ Response ====================
+LogTemplate[1]: `autopurge.snapRetainCount set to {number}`
+	============ PostProcess ====================
+	Post Template: `autopurge.snapRetainCount set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  autopurge.snapRetainCount set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 72576/74273, remain: 1697. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 389 -> 353, remain buckets: 17
+Update Success: Time for one update logs: 0.012181997299194336, template `autopurge.snapRetainCount set to <*>`
+========================================================================================
+
+
+Iteration 23
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 194, Total Buckets: 35
+Sampling from 56 logs failed
+	============  Query  ====================
+	Log[1]: `Server environment:java.vendor=Oracle Corporation`
+	============ Response ====================
+LogTemplate[1]: `Server environment:java.vendor={vendor}`
+	============ PostProcess ====================
+	Post Template: `Server environment:java.vendor=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Server environment:java.vendor=<*>
+[UpdateBucket] Logs: This iter found: 36, total: 72612/74273, remain: 1661. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 194 -> 158, remain buckets: 17
+Update Success: Time for one update logs: 0.006167888641357422, template `Server environment:java.vendor=<*>`
+========================================================================================
+
+
+Iteration 24
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 194, Total Buckets: 35
+Sampling from 33 logs failed
+	============  Query  ====================
+	Log[1]: `Purge task is not scheduled.`
+	============ Response ====================
+LogTemplate[1]: `Purge task is not scheduled.`
+	============ PostProcess ====================
+	Post Template: `Purge task is not scheduled.`
+	============ Aggregate ====================
+	Aggregated Template:  Purge task is not scheduled.
+[UpdateBucket] Logs: This iter found: 36, total: 72648/74273, remain: 1625. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 194 -> 158, remain buckets: 17
+Update Success: Time for one update logs: 0.006394863128662109, template `Purge task is not scheduled.`
+========================================================================================
+
+
+Iteration 25
+Sample 3 from current logs bucket: ID: 9, Len: 4, Bucket Size: 180, Total Buckets: 35
+Sampling from 4 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `autopurge.purgeInterval set to 0`, MaxSim Log: `tickTime set to 2000`.
+	============  Query  ====================
+	Log[1]: `autopurge.purgeInterval set to 0`
+	============ Response ====================
+LogTemplate[1]: `autopurge.purgeInterval set to {number}`
+	============ PostProcess ====================
+	Post Template: `autopurge.purgeInterval set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  autopurge.purgeInterval set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 72684/74273, remain: 1589. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 353 -> 317, remain buckets: 17
+[TemplateDB] Try Merge: `autopurge.purgeInterval set to <*>` | `autopurge.snapRetainCount set to <*>`
+[TemplateDB] Reject Merge, Remain Template: `autopurge.purgeInterval set to <*>`
+Update Success: Time for one update logs: 0.016017913818359375, template `autopurge.purgeInterval set to <*>`
+========================================================================================
+
+
+Iteration 26
+Sample 3 from current logs bucket: ID: 10, Len: 4, Bucket Size: 173, Total Buckets: 35
+Sampling from 22 logs failed
+	============  Query  ====================
+	Log[1]: `Reading configuration from: /etc/zookeeper/conf/zoo.cfg`
+	============ Response ====================
+LogTemplate[1]: `Reading configuration from: {file}`
+	============ PostProcess ====================
+	Post Template: `Reading configuration from: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Reading configuration from: <*>
+[UpdateBucket] Logs: This iter found: 36, total: 72720/74273, remain: 1553. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 317 -> 281, remain buckets: 17
+Update Success: Time for one update logs: 0.013011932373046875, template `Reading configuration from: <*>`
+========================================================================================
+
+
+Iteration 27
+Sample 3 from current logs bucket: ID: 18, Len: 7, Bucket Size: 162, Total Buckets: 35
+Sampling from 103 logs failed
+	============  Query  ====================
+	Log[1]: `Server environment:zookeeper.version=3.4.5--1, built on 06/10/2013 17:26 GMT`
+	============ Response ====================
+LogTemplate[1]: `Server environment:zookeeper.version={version}, built on {date} GMT`
+	============ PostProcess ====================
+	Post Template: `Server environment:zookeeper.version=<*>, built on <*> GMT`
+	============ Aggregate ====================
+	Aggregated Template:  Server environment:zookeeper.version=<*>, built on <*> GMT
+[UpdateBucket] Logs: This iter found: 36, total: 72756/74273, remain: 1517. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 162 -> 126, remain buckets: 17
+Update Success: Time for one update logs: 0.0076138973236083984, template `Server environment:zookeeper.version=<*>, built on <*> GMT`
+========================================================================================
+
+
+Iteration 28
+Sample 3 from current logs bucket: ID: 26, Len: 11, Bucket Size: 159, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Closed socket connection for client <*> (no session established for client)`
+	============ Response ====================
+LogTemplate[1]: `Closed socket connection for client {client} (no session established for client)`
+	============ PostProcess ====================
+	Post Template: `Closed socket connection for client <*> (no session established for client)`
+	============ Aggregate ====================
+	Aggregated Template:  Closed socket connection for client <*> (no session established for client)
+[UpdateBucket] Logs: This iter found: 159, total: 72915/74273, remain: 1358. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 159 -> 0, remain buckets: 16
+Update Success: Time for one update logs: 0.013216972351074219, template `Closed socket connection for client <*> (no session established for client)`
+========================================================================================
+
+
+Iteration 29
+Sample 3 from current logs bucket: ID: 27, Len: 12, Bucket Size: 159, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running`
+	============ Response ====================
+LogTemplate[1]: `Exception causing close of session {session_id} due to java.io.IOException: ZooKeeperServer not running`
+	============ PostProcess ====================
+	Post Template: `Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running`
+	============ Aggregate ====================
+	Aggregated Template:  Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running
+[UpdateBucket] Logs: This iter found: 159, total: 73074/74273, remain: 1199. 
+[UpdateBucket] Buckets: Checked 2 ([27, 28]), Parent Bucket size: 174 -> 15, remain buckets: 15
+Update Success: Time for one update logs: 0.013534069061279297, template `Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running`
+========================================================================================
+
+
+Iteration 30
+Sample 3 from current logs bucket: ID: 3, Len: 2, Bucket Size: 158, Total Buckets: 35
+Sampling from 8 logs failed
+	============  Query  ====================
+	Log[1]: `Unexpected Exception:`
+	============ Response ====================
+LogTemplate[1]: `Unexpected Exception:`
+	============ PostProcess ====================
+	Post Template: `Unexpected Exception:`
+	============ Aggregate ====================
+	Aggregated Template:  Unexpected Exception:
+[UpdateBucket] Logs: This iter found: 27, total: 73101/74273, remain: 1172. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 158 -> 131, remain buckets: 15
+Update Success: Time for one update logs: 0.006470918655395508, template `Unexpected Exception:`
+========================================================================================
+
+
+Iteration 31
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 158, Total Buckets: 35
+Sampling from 31 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `Revalidating client: 0x34ed9348509000b`, MaxSim Log: `Revalidating client: 0x34ed93485090007`.
+	============  Query  ====================
+	Log[1]: `Revalidating client: 0x34ed9348509000b`
+	Log[2]: `Revalidating client: 0x34f3fdb1f230008`
+	Log[3]: `Revalidating client: 0x14f05578bd80015`
+	============ Response ====================
+LogTemplate[1]: `Revalidating client: {client_id}`  
+LogTemplate[2]: `Revalidating client: {client_id}`  
+LogTemplate[3]: `Revalidating client: {client_id}`  
+	============ PostProcess ====================
+	Post Template: `Revalidating client: <*>`
+	Post Template: `Revalidating client: <*>`
+	Post Template: `Revalidating client: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Revalidating client: <*>
+[UpdateBucket] Logs: This iter found: 55, total: 73156/74273, remain: 1117. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 158 -> 103, remain buckets: 15
+Update Success: Time for one update logs: 0.007233142852783203, template `Revalidating client: <*>`
+========================================================================================
+
+
+Iteration 32
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 158, Total Buckets: 35
+Sampling from 32 logs failed
+	============  Query  ====================
+	Log[1]: `My election bind port: <*><*>`
+	============ Response ====================
+LogTemplate[1]: `My election bind port: {port1}{port2}`
+	============ PostProcess ====================
+	Post Template: `My election bind port: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  My election bind port: <*>
+[UpdateBucket] Logs: This iter found: 36, total: 73192/74273, remain: 1081. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 158 -> 122, remain buckets: 15
+Update Success: Time for one update logs: 0.009721994400024414, template `My election bind port: <*>`
+========================================================================================
+
+
+Iteration 33
+Sample 3 from current logs bucket: ID: 9, Len: 4, Bucket Size: 144, Total Buckets: 35
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `tickTime set to 2000`, MaxSim Log: `minSessionTimeout set to -1`.
+	============  Query  ====================
+	Log[1]: `tickTime set to 2000`
+	============ Response ====================
+LogTemplate[1]: `tickTime set to {number}`
+	============ PostProcess ====================
+	Post Template: `tickTime set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  tickTime set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 73228/74273, remain: 1045. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 281 -> 245, remain buckets: 15
+[TemplateDB] Try Merge: `tickTime set to <*>` | `autopurge.snapRetainCount set to <*>`
+[TemplateDB] Reject Merge, Remain Template: `tickTime set to <*>`
+Update Success: Time for one update logs: 0.013035058975219727, template `tickTime set to <*>`
+========================================================================================
+
+
+Iteration 34
+Sample 3 from current logs bucket: ID: 10, Len: 4, Bucket Size: 137, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Defaulting to majority quorums`
+	============ Response ====================
+LogTemplate[1]: `Defaulting to majority quorums`
+	============ PostProcess ====================
+	Post Template: `Defaulting to majority quorums`
+	============ Aggregate ====================
+	Aggregated Template:  Defaulting to majority quorums
+[UpdateBucket] Logs: This iter found: 36, total: 73264/74273, remain: 1009. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 245 -> 209, remain buckets: 15
+Update Success: Time for one update logs: 0.010304927825927734, template `Defaulting to majority quorums`
+========================================================================================
+
+
+Iteration 35
+Sample 1 from current logs bucket: ID: 3, Len: 2, Bucket Size: 131, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `shutdown called`
+	============ Response ====================
+LogTemplate[1]: `shutdown called`
+	============ PostProcess ====================
+	Post Template: `shutdown called`
+	============ Aggregate ====================
+	Aggregated Template:  shutdown called
+[UpdateBucket] Logs: This iter found: 11, total: 73275/74273, remain: 998. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 131 -> 120, remain buckets: 15
+Update Success: Time for one update logs: 0.002897024154663086, template `shutdown called`
+========================================================================================
+
+
+Iteration 36
+Sample 1 from current logs bucket: ID: 18, Len: 7, Bucket Size: 126, Total Buckets: 35
+Sampling from 45 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `FOLLOWING - LEADER ELECTION TOOK - 46837`, MaxSim Log: `FOLLOWING - LEADER ELECTION TOOK - 51`.
+	============  Query  ====================
+	Log[1]: `FOLLOWING - LEADER ELECTION TOOK - 46837`
+	Log[2]: `FOLLOWING - LEADER ELECTION TOOK - 53`
+	Log[3]: `LEADING - LEADER ELECTION TOOK - 260`
+	============ Response ====================
+LogTemplate[1]: `FOLLOWING - LEADER ELECTION TOOK - {time}`
+LogTemplate[2]: `FOLLOWING - LEADER ELECTION TOOK - {time}`
+LogTemplate[3]: `LEADING - LEADER ELECTION TOOK - {time}`
+	============ PostProcess ====================
+	Post Template: `FOLLOWING - LEADER ELECTION TOOK - <*>`
+	Post Template: `FOLLOWING - LEADER ELECTION TOOK - <*>`
+	Post Template: `LEADING - LEADER ELECTION TOOK - <*>`
+	============ Aggregate ====================
+	Aggregated Template:  FOLLOWING - LEADER ELECTION TOOK - <*>
+[UpdateBucket] Logs: This iter found: 34, total: 73309/74273, remain: 964. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 126 -> 92, remain buckets: 15
+Update Success: Time for one update logs: 0.00603175163269043, template `FOLLOWING - LEADER ELECTION TOOK - <*>`
+========================================================================================
+
+
+Iteration 37
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 122, Total Buckets: 35
+Sampling from 31 logs failed
+	============  Query  ====================
+	Log[1]: `TCP NoDelay set to: true`
+	============ Response ====================
+LogTemplate[1]: `TCP NoDelay set to: {boolean}`
+	============ PostProcess ====================
+	Post Template: `TCP NoDelay set to: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  TCP NoDelay set to: <*>
+[UpdateBucket] Logs: This iter found: 39, total: 73348/74273, remain: 925. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 122 -> 83, remain buckets: 15
+Update Success: Time for one update logs: 0.009682893753051758, template `TCP NoDelay set to: <*>`
+========================================================================================
+
+
+Iteration 38
+Sample 3 from current logs bucket: ID: 3, Len: 2, Bucket Size: 120, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Shutting down`
+	============ Response ====================
+LogTemplate[1]: `Shutting down`
+	============ PostProcess ====================
+	Post Template: `Shutting down`
+	============ Aggregate ====================
+	Aggregated Template:  Shutting down
+[UpdateBucket] Logs: This iter found: 58, total: 73406/74273, remain: 867. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 120 -> 62, remain buckets: 15
+Update Success: Time for one update logs: 0.006774187088012695, template `Shutting down`
+========================================================================================
+
+
+Iteration 39
+Sample 1 from current logs bucket: ID: 9, Len: 4, Bucket Size: 108, Total Buckets: 35
+Sampling from 2 logs, Sim Level: 2, MaxSim to anchor: 0.6000. Anchor: `minSessionTimeout set to -1`, MaxSim Log: `maxSessionTimeout set to -1`.
+	============  Query  ====================
+	Log[1]: `minSessionTimeout set to -1`
+	Log[2]: `maxSessionTimeout set to -1`
+	============ Response ====================
+LogTemplate[1]: `minSessionTimeout set to {value}`
+LogTemplate[2]: `maxSessionTimeout set to {value}`
+	============ PostProcess ====================
+	Post Template: `minSessionTimeout set to <*>`
+	Post Template: `maxSessionTimeout set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  minSessionTimeout set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 73442/74273, remain: 831. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 209 -> 173, remain buckets: 15
+[TemplateDB] Try Merge: `minSessionTimeout set to <*>` | `autopurge.snapRetainCount set to <*>`
+[TemplateDB] Reject Merge, Remain Template: `minSessionTimeout set to <*>`
+Update Success: Time for one update logs: 0.014556884765625, template `minSessionTimeout set to <*>`
+========================================================================================
+
+
+Iteration 40
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 103, Total Buckets: 35
+Sampling from 17 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `Reading snapshot /var/lib/zookeeper/version-2/snapshot.0`, MaxSim Log: `Reading snapshot /var/lib/zookeeper/version-2/snapshot.100001546`.
+	============  Query  ====================
+	Log[1]: `Reading snapshot /var/lib/zookeeper/version-2/snapshot.0`
+	Log[2]: `Reading snapshot /var/lib/zookeeper/version-2/snapshot.8000000bc`
+	Log[3]: `Reading snapshot /var/lib/zookeeper/version-2/snapshot.700000000`
+	============ Response ====================
+LogTemplate[1]: `Reading snapshot {directory}/snapshot.<*>{snapshot_id}`  
+LogTemplate[2]: `Reading snapshot {directory}/snapshot.<*>{snapshot_id}`  
+LogTemplate[3]: `Reading snapshot {directory}/snapshot.<*>{snapshot_id}`  
+	============ PostProcess ====================
+	Post Template: `Reading snapshot <*>/snapshot.<*>`
+	Post Template: `Reading snapshot <*>/snapshot.<*>`
+	Post Template: `Reading snapshot <*>/snapshot.<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Reading snapshot <*>/snapshot.<*>
+[UpdateBucket] Logs: This iter found: 60, total: 73502/74273, remain: 771. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 103 -> 43, remain buckets: 15
+Update Success: Time for one update logs: 0.007986307144165039, template `Reading snapshot <*>/snapshot.<*>`
+========================================================================================
+
+
+Iteration 41
+Sample 3 from current logs bucket: ID: 10, Len: 4, Bucket Size: 101, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `binding to port <*><*>`
+	============ Response ====================
+LogTemplate[1]: `binding to port {port1}{port2}`
+	============ PostProcess ====================
+	Post Template: `binding to port <*>`
+	============ Aggregate ====================
+	Aggregated Template:  binding to port <*>
+[UpdateBucket] Logs: This iter found: 36, total: 73538/74273, remain: 735. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 173 -> 137, remain buckets: 15
+Update Success: Time for one update logs: 0.011063814163208008, template `binding to port <*>`
+========================================================================================
+
+
+Iteration 42
+Sample 1 from current logs bucket: ID: 0, Len: 1, Bucket Size: 98, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `LOOKING`
+	============ Response ====================
+LogTemplate[1]: `LOOKING`
+	============ PostProcess ====================
+	Post Template: `LOOKING`
+	============ Aggregate ====================
+	Aggregated Template:  LOOKING
+[UpdateBucket] Logs: This iter found: 49, total: 73587/74273, remain: 686. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 98 -> 49, remain buckets: 15
+Update Success: Time for one update logs: 0.004171848297119141, template `LOOKING`
+========================================================================================
+
+
+Iteration 43
+Sample 1 from current logs bucket: ID: 18, Len: 7, Bucket Size: 92, Total Buckets: 35
+Sampling from 13 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `LEADING - LEADER ELECTION TOOK - 67069`, MaxSim Log: `LEADING - LEADER ELECTION TOOK - 253`.
+	============  Query  ====================
+	Log[1]: `LEADING - LEADER ELECTION TOOK - 67069`
+	Log[2]: `LEADING - LEADER ELECTION TOOK - 254`
+	Log[3]: `LEADING - LEADER ELECTION TOOK - 1824`
+	============ Response ====================
+LogTemplate[1]: `LEADING - LEADER ELECTION TOOK - {time}`
+LogTemplate[2]: `LEADING - LEADER ELECTION TOOK - {time}`
+LogTemplate[3]: `LEADING - LEADER ELECTION TOOK - {time}`
+	============ PostProcess ====================
+	Post Template: `LEADING - LEADER ELECTION TOOK - <*>`
+	Post Template: `LEADING - LEADER ELECTION TOOK - <*>`
+	Post Template: `LEADING - LEADER ELECTION TOOK - <*>`
+	============ Aggregate ====================
+	Aggregated Template:  LEADING - LEADER ELECTION TOOK - <*>
+[UpdateBucket] Logs: This iter found: 15, total: 73602/74273, remain: 671. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 92 -> 77, remain buckets: 15
+[TemplateDB] Try Merge: `LEADING - LEADER ELECTION TOOK - <*>` | `FOLLOWING - LEADER ELECTION TOOK - <*>`
+	Post Template: `<*> - LEADER ELECTION TOOK - <*>`
+[TemplateDB] Merged: -> `<*> - LEADER ELECTION TOOK - <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 49/49, in child Bucket [16, 17, 18]
+[UpdateBucket] Logs: This iter found: 0, total: 73602/74273, remain: 671. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 77 -> 77, remain buckets: 15
+[TemplateDB] Update Indexes: 49 -> 49 for `<*> - LEADER ELECTION TOOK - <*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `<*> - LEADER ELECTION TOOK - <*>`
+Update Success: Time for one update logs: 0.013608932495117188, template `LEADING - LEADER ELECTION TOOK - <*>`
+========================================================================================
+
+
+Iteration 44
+Sample 3 from current logs bucket: ID: 21, Len: 8, Bucket Size: 85, Total Buckets: 35
+Sampling from 35 logs, Sim Level: 2, MaxSim to anchor: 0.7778. Anchor: `New election. My id = 1, proposed zxid=0x0`, MaxSim Log: `New election. My id = 1, proposed zxid=0x100001546`.
+	============  Query  ====================
+	Log[1]: `New election. My id = 1, proposed zxid=0x0`
+	Log[2]: `New election. My id = 2, proposed zxid=0x300000dcd`
+	Log[3]: `New election. My id = 3, proposed zxid=0x100001564`
+	============ Response ====================
+LogTemplate[1]: `New election. My id = {id}, proposed zxid={zxid}`
+LogTemplate[2]: `New election. My id = {id}, proposed zxid={zxid}`
+LogTemplate[3]: `New election. My id = {id}, proposed zxid={zxid}`
+	============ PostProcess ====================
+	Post Template: `New election. My id = <*> proposed zxid=<*>`
+	Post Template: `New election. My id = <*> proposed zxid=<*>`
+	Post Template: `New election. My id = <*> proposed zxid=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  New election. My id = <*> proposed zxid=<*>
+[UpdateBucket] Logs: This iter found: 49, total: 73651/74273, remain: 622. 
+[UpdateBucket] Buckets: Checked 3 ([19, 20, 21]), Parent Bucket size: 85 -> 36, remain buckets: 15
+Update Success: Time for one update logs: 0.011408805847167969, template `New election. My id = <*> proposed zxid=<*>`
+========================================================================================
+
+
+Iteration 45
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 83, Total Buckets: 35
+Sampling from 16 logs, Sim Level: 2, MaxSim to anchor: 0.6667. Anchor: `Got zxid 0x100000001 expected 0x1`, MaxSim Log: `Got zxid 0x100001547 expected 0x1`.
+	============  Query  ====================
+	Log[1]: `Got zxid 0x100000001 expected 0x1`
+	Log[2]: `Got zxid 0xd00000001 expected 0x1`
+	Log[3]: `Got zxid 0x10000006c expected 0x1`
+	============ Response ====================
+LogTemplate[1]: `Got zxid {zxid} expected 0x1`  
+LogTemplate[2]: `Got zxid {zxid} expected 0x1`  
+LogTemplate[3]: `Got zxid {zxid} expected 0x1`  
+	============ PostProcess ====================
+	Post Template: `Got zxid <*> expected <*>`
+	Post Template: `Got zxid <*> expected <*>`
+	Post Template: `Got zxid <*> expected <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Got zxid <*> expected <*>
+[UpdateBucket] Logs: This iter found: 28, total: 73679/74273, remain: 594. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 83 -> 55, remain buckets: 15
+Update Success: Time for one update logs: 0.0070378780364990234, template `Got zxid <*> expected <*>`
+========================================================================================
+
+
+Iteration 46
+Sample 3 from current logs bucket: ID: 18, Len: 7, Bucket Size: 77, Total Buckets: 35
+Sampling from 29 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `Getting a diff from the leader 0x0`, MaxSim Log: `Getting a diff from the leader 0x100001546`.
+	============  Query  ====================
+	Log[1]: `Getting a diff from the leader 0x0`
+	Log[2]: `Getting a diff from the leader 0x100001564`
+	Log[3]: `Getting a diff from the leader 0x300000dcd`
+	============ Response ====================
+LogTemplate[1]: `Getting a diff from the leader {hex}`
+
+LogTemplate[2]: `Getting a diff from the leader {hex}`
+
+LogTemplate[3]: `Getting a diff from the leader {hex}`
+	============ PostProcess ====================
+	Post Template: `Getting a diff from the leader <*>`
+	Post Template: `Getting a diff from the leader <*>`
+	Post Template: `Getting a diff from the leader <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Getting a diff from the leader <*>
+[UpdateBucket] Logs: This iter found: 28, total: 73707/74273, remain: 566. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 77 -> 49, remain buckets: 15
+Update Success: Time for one update logs: 0.008285999298095703, template `Getting a diff from the leader <*>`
+========================================================================================
+
+
+Iteration 47
+Sample 3 from current logs bucket: ID: 9, Len: 4, Bucket Size: 72, Total Buckets: 35
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `maxSessionTimeout set to -1`, MaxSim Log: `initLimit set to 10`.
+	============  Query  ====================
+	Log[1]: `maxSessionTimeout set to -1`
+	============ Response ====================
+LogTemplate[1]: `maxSessionTimeout set to {number}`
+	============ PostProcess ====================
+	Post Template: `maxSessionTimeout set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  maxSessionTimeout set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 73743/74273, remain: 530. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 137 -> 101, remain buckets: 15
+[TemplateDB] Try Merge: `maxSessionTimeout set to <*>` | `autopurge.snapRetainCount set to <*>`
+[TemplateDB] Reject Merge, Remain Template: `maxSessionTimeout set to <*>`
+Update Success: Time for one update logs: 0.012473821640014648, template `maxSessionTimeout set to <*>`
+========================================================================================
+
+
+Iteration 48
+Sample 3 from current logs bucket: ID: 10, Len: 4, Bucket Size: 65, Total Buckets: 35
+Sampling from 18 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0`, MaxSim Log: `Snapshotting: 0x100001546 to /var/lib/zookeeper/version-2/snapshot.100001546`.
+	============  Query  ====================
+	Log[1]: `Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0`
+	============ Response ====================
+LogTemplate[1]: `Snapshotting: {hex_value} to {file}`
+	============ PostProcess ====================
+	Post Template: `Snapshotting: <*> to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Snapshotting: <*> to <*>
+[UpdateBucket] Logs: This iter found: 65, total: 73808/74273, remain: 465. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 101 -> 36, remain buckets: 14
+Update Success: Time for one update logs: 0.014512062072753906, template `Snapshotting: <*> to <*>`
+========================================================================================
+
+
+Iteration 49
+Sample 3 from current logs bucket: ID: 3, Len: 2, Bucket Size: 62, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `shutting down`
+	============ Response ====================
+LogTemplate[1]: `shutting down`
+	============ PostProcess ====================
+	Post Template: `shutting down`
+	============ Aggregate ====================
+	Aggregated Template:  shutting down
+[UpdateBucket] Logs: This iter found: 13, total: 73821/74273, remain: 452. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 62 -> 49, remain buckets: 14
+[TemplateDB] Try Merge: `shutting down` | `Shutting down`
+[TemplateDB] Reject Merge, Remain Template: `shutting down`
+Update Success: Time for one update logs: 0.003950834274291992, template `shutting down`
+========================================================================================
+
+
+Iteration 50
+Sample 1 from current logs bucket: ID: 29, Len: 13, Bucket Size: 57, Total Buckets: 35
+Sampling from 7 logs failed
+	============  Query  ====================
+	Log[1]: `Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2`
+	============ Response ====================
+LogTemplate[1]: `Created server with tickTime {tickTime} minSessionTimeout {minSessionTimeout} maxSessionTimeout {maxSessionTimeout} datadir {datadir} snapdir {snapdir}`
+	============ PostProcess ====================
+	Post Template: `Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>
+[UpdateBucket] Logs: This iter found: 49, total: 73870/74273, remain: 403. 
+[UpdateBucket] Buckets: Checked 1 ([29]), Parent Bucket size: 57 -> 8, remain buckets: 14
+Update Success: Time for one update logs: 0.009148836135864258, template `Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>`
+========================================================================================
+
+
+Iteration 51
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 55, Total Buckets: 35
+Sampling from 9 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `Creating new log file: log.100000001`, MaxSim Log: `Creating new log file: log.100001547`.
+	============  Query  ====================
+	Log[1]: `Creating new log file: log.100000001`
+	Log[2]: `Creating new log file: log.900000001`
+	Log[3]: `Creating new log file: log.800000001`
+	============ Response ====================
+LogTemplate[1]: `Creating new log file: log.{file_num}`
+LogTemplate[2]: `Creating new log file: log.{file_num}`
+LogTemplate[3]: `Creating new log file: log.{file_num}`
+	============ PostProcess ====================
+	Post Template: `Creating new log file: log.<*>`
+	Post Template: `Creating new log file: log.<*>`
+	Post Template: `Creating new log file: log.<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Creating new log file: log.<*>
+[UpdateBucket] Logs: This iter found: 25, total: 73895/74273, remain: 378. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 55 -> 30, remain buckets: 14
+Update Success: Time for one update logs: 0.010242700576782227, template `Creating new log file: log.<*>`
+========================================================================================
+
+
+Iteration 52
+Sample 3 from current logs bucket: ID: 0, Len: 1, Bucket Size: 49, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `FOLLOWING`
+	============ Response ====================
+LogTemplate[1]: `FOLLOWING`
+	============ PostProcess ====================
+	Post Template: `FOLLOWING`
+	============ Aggregate ====================
+	Aggregated Template:  FOLLOWING
+[UpdateBucket] Logs: This iter found: 34, total: 73929/74273, remain: 344. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 49 -> 15, remain buckets: 14
+Update Success: Time for one update logs: 0.0042459964752197266, template `FOLLOWING`
+========================================================================================
+
+
+Iteration 53
+Sample 1 from current logs bucket: ID: 3, Len: 2, Bucket Size: 49, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `SyncRequestProcessor exited!`
+	============ Response ====================
+LogTemplate[1]: `SyncRequestProcessor exited!`
+	============ PostProcess ====================
+	Post Template: `SyncRequestProcessor exited!`
+	============ Aggregate ====================
+	Aggregated Template:  SyncRequestProcessor exited!
+[UpdateBucket] Logs: This iter found: 13, total: 73942/74273, remain: 331. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 49 -> 36, remain buckets: 14
+Update Success: Time for one update logs: 0.007607698440551758, template `SyncRequestProcessor exited!`
+========================================================================================
+
+
+Iteration 54
+Sample 1 from current logs bucket: ID: 18, Len: 7, Bucket Size: 49, Total Buckets: 35
+Sampling from 25 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@9317ccb`, MaxSim Log: `Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@4e6dd138`.
+	============  Query  ====================
+	Log[1]: `Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@9317ccb`
+	Log[2]: `Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@3104b646`
+	Log[3]: `Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@19b4ac28`
+	============ Response ====================
+LogTemplate[1]: `Follower sid: {sid} : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@{api}`
+LogTemplate[2]: `Follower sid: {sid} : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@{api}`
+LogTemplate[3]: `Follower sid: {sid} : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@{api}`
+	============ PostProcess ====================
+	Post Template: `Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>`
+	Post Template: `Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>`
+	Post Template: `Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>
+[UpdateBucket] Logs: This iter found: 34, total: 73976/74273, remain: 297. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 49 -> 15, remain buckets: 14
+Update Success: Time for one update logs: 0.011942863464355469, template `Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>`
+========================================================================================
+
+
+Iteration 55
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 43, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `FollowerRequestProcessor exited loop!`
+	============ Response ====================
+LogTemplate[1]: `FollowerRequestProcessor exited loop!`
+	============ PostProcess ====================
+	Post Template: `FollowerRequestProcessor exited loop!`
+	============ Aggregate ====================
+	Aggregated Template:  FollowerRequestProcessor exited loop!
+[UpdateBucket] Logs: This iter found: 11, total: 73987/74273, remain: 286. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 43 -> 32, remain buckets: 14
+Update Success: Time for one update logs: 0.003910064697265625, template `FollowerRequestProcessor exited loop!`
+========================================================================================
+
+
+Iteration 56
+Sample 1 from current logs bucket: ID: 3, Len: 2, Bucket Size: 36, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Sending DIFF`
+	============ Response ====================
+LogTemplate[1]: `Sending DIFF`
+	============ PostProcess ====================
+	Post Template: `Sending DIFF`
+	============ Aggregate ====================
+	Aggregated Template:  Sending DIFF
+[UpdateBucket] Logs: This iter found: 28, total: 74015/74273, remain: 258. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 36 -> 8, remain buckets: 14
+Update Success: Time for one update logs: 0.007737159729003906, template `Sending DIFF`
+========================================================================================
+
+
+Iteration 57
+Sample 1 from current logs bucket: ID: 9, Len: 4, Bucket Size: 36, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `initLimit set to 10`
+	============ Response ====================
+LogTemplate[1]: `initLimit set to {number}`
+	============ PostProcess ====================
+	Post Template: `initLimit set to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  initLimit set to <*>
+[UpdateBucket] Logs: This iter found: 36, total: 74051/74273, remain: 222. 
+[UpdateBucket] Buckets: Checked 6 ([5, 6, 7, 8, 9, 10]), Parent Bucket size: 36 -> 0, remain buckets: 13
+[TemplateDB] Try Merge: `initLimit set to <*>` | `autopurge.snapRetainCount set to <*>`
+[TemplateDB] Reject Merge, Remain Template: `initLimit set to <*>`
+Update Success: Time for one update logs: 0.01080012321472168, template `initLimit set to <*>`
+========================================================================================
+
+
+Iteration 58
+Sample 3 from current logs bucket: ID: 21, Len: 8, Bucket Size: 36, Total Buckets: 35
+Sampling from 29 logs, Sim Level: 4, MaxSim to anchor: 0.7778. Anchor: `Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x100001564`, MaxSim Log: `Synchronizing with Follower sid: 3 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x100001564`.
+	============  Query  ====================
+	Log[1]: `Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x100001564`
+	Log[2]: `Synchronizing with Follower sid: 3 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x50000062e`
+	Log[3]: `Synchronizing with Follower sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x0`
+	============ Response ====================
+LogTemplate[1]: `Synchronizing with Follower sid: {sid} maxCommittedLog={maxCommittedLog} minCommittedLog={minCommittedLog} peerLastZxid={peerLastZxid}`
+LogTemplate[2]: `Synchronizing with Follower sid: {sid} maxCommittedLog={maxCommittedLog} minCommittedLog={minCommittedLog} peerLastZxid={peerLastZxid}`
+LogTemplate[3]: `Synchronizing with Follower sid: {sid} maxCommittedLog={maxCommittedLog} minCommittedLog={minCommittedLog} peerLastZxid={peerLastZxid}`
+	============ PostProcess ====================
+	Post Template: `Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>`
+	Post Template: `Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>`
+	Post Template: `Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>`
+	============ Aggregate ====================
+	Aggregated Template:  Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>
+[UpdateBucket] Logs: This iter found: 34, total: 74085/74273, remain: 188. 
+[UpdateBucket] Buckets: Checked 3 ([19, 20, 21]), Parent Bucket size: 36 -> 2, remain buckets: 13
+Update Success: Time for one update logs: 0.008103132247924805, template `Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>`
+========================================================================================
+
+
+Iteration 59
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 32, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `CommitProcessor exited loop!`
+	============ Response ====================
+LogTemplate[1]: `CommitProcessor exited loop!`
+	============ PostProcess ====================
+	Post Template: `CommitProcessor exited loop!`
+	============ Aggregate ====================
+	Aggregated Template:  CommitProcessor exited loop!
+[UpdateBucket] Logs: This iter found: 13, total: 74098/74273, remain: 175. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 32 -> 19, remain buckets: 13
+[TemplateDB] Try Merge: `CommitProcessor exited loop!` | `FollowerRequestProcessor exited loop!`
+[TemplateDB] Reject Merge, Remain Template: `CommitProcessor exited loop!`
+Update Success: Time for one update logs: 0.004538059234619141, template `CommitProcessor exited loop!`
+========================================================================================
+
+
+Iteration 60
+Sample 1 from current logs bucket: ID: 13, Len: 5, Bucket Size: 30, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Exception when following the leader`
+	============ Response ====================
+LogTemplate[1]: `Exception when following the leader`
+	============ PostProcess ====================
+	Post Template: `Exception when following the leader`
+	============ Aggregate ====================
+	Aggregated Template:  Exception when following the leader
+[UpdateBucket] Logs: This iter found: 11, total: 74109/74273, remain: 164. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 30 -> 19, remain buckets: 13
+Update Success: Time for one update logs: 0.004979848861694336, template `Exception when following the leader`
+========================================================================================
+
+
+Iteration 61
+Sample 1 from current logs bucket: ID: 33, Len: 18, Bucket Size: 25, Total Buckets: 35
+Sampling from 4 logs, Sim Level: 1, MaxSim to anchor: 0.6250. Anchor: `Sending snapshot last zxid of peer is 0x100001564 zxid of leader is 0x300000000sent zxid of db as 0x300000000`, MaxSim Log: `Sending snapshot last zxid of peer is 0x0 zxid of leader is 0x100000000sent zxid of db as 0x100000000`.
+	============  Query  ====================
+	Log[1]: `Sending snapshot last zxid of peer is 0x100001564 zxid of leader is 0x300000000sent zxid of db as 0x300000000`
+	Log[2]: `Sending snapshot last zxid of peer is 0xd0000001b zxid of leader is 0xf00000000sent zxid of db as 0xf00000000`
+	Log[3]: `Sending snapshot last zxid of peer is 0x300000dcd zxid of leader is 0x500000000sent zxid of db as 0x500000000`
+	============ Response ====================
+LogTemplate[1]: `Sending snapshot last zxid of peer is {zxid_peer} zxid of leader is {zxid_leader}sent zxid of db as {zxid_db}`
+LogTemplate[2]: `Sending snapshot last zxid of peer is {zxid_peer} zxid of leader is {zxid_leader}sent zxid of db as {zxid_db}`
+LogTemplate[3]: `Sending snapshot last zxid of peer is {zxid_peer} zxid of leader is {zxid_leader}sent zxid of db as {zxid_db}`
+	============ PostProcess ====================
+	Post Template: `Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>`
+	Post Template: `Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>`
+	Post Template: `Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>
+[UpdateBucket] Logs: This iter found: 6, total: 74115/74273, remain: 158. 
+[UpdateBucket] Buckets: Checked 1 ([33]), Parent Bucket size: 25 -> 19, remain buckets: 13
+Update Success: Time for one update logs: 0.003275156021118164, template `Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>`
+========================================================================================
+
+
+Iteration 62
+Sample 3 from current logs bucket: ID: 24, Len: 10, Bucket Size: 20, Total Buckets: 35
+Sampling from 2 logs, Sim Level: 2, MaxSim to anchor: 0.8182. Anchor: `Have smaller server identifier, so dropping the connection: (2, 1)`, MaxSim Log: `Have smaller server identifier, so dropping the connection: (3, 1)`.
+	============  Query  ====================
+	Log[1]: `Have smaller server identifier, so dropping the connection: (2, 1)`
+	Log[2]: `Have smaller server identifier, so dropping the connection: (3, 1)`
+	Log[3]: `Have smaller server identifier, so dropping the connection: (3, 2)`
+	============ Response ====================
+LogTemplate[1]: `Have smaller server identifier, so dropping the connection: (<*>, 1)`
+LogTemplate[2]: `Have smaller server identifier, so dropping the connection: (<*>, 1)`
+LogTemplate[3]: `Have smaller server identifier, so dropping the connection: (<*>, <*>)`
+	============ PostProcess ====================
+	Post Template: `Have smaller server identifier, so dropping the connection: (<*>, <*>)`
+	Post Template: `Have smaller server identifier, so dropping the connection: (<*>, <*>)`
+	Post Template: `Have smaller server identifier, so dropping the connection: (<*>, <*>)`
+	============ Aggregate ====================
+	Aggregated Template:  Have smaller server identifier, so dropping the connection: (<*>, <*>)
+[UpdateBucket] Logs: This iter found: 20, total: 74135/74273, remain: 138. 
+[UpdateBucket] Buckets: Checked 2 ([23, 24]), Parent Bucket size: 20 -> 0, remain buckets: 12
+Update Success: Time for one update logs: 0.005574941635131836, template `Have smaller server identifier, so dropping the connection: (<*>, <*>)`
+========================================================================================
+
+
+Iteration 63
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 19, Total Buckets: 35
+Sampling from 3 logs failed
+	============  Query  ====================
+	Log[1]: `First is 0x0`
+	============ Response ====================
+LogTemplate[1]: `First is {hex_value}`
+	============ PostProcess ====================
+	Post Template: `First is <*>`
+	============ Aggregate ====================
+	Aggregated Template:  First is <*>
+[UpdateBucket] Logs: This iter found: 15, total: 74150/74273, remain: 123. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 19 -> 4, remain buckets: 12
+Update Success: Time for one update logs: 0.004812002182006836, template `First is <*>`
+========================================================================================
+
+
+Iteration 64
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 19, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `shutdown of request processor complete`
+	============ Response ====================
+LogTemplate[1]: `shutdown of request processor complete`
+	============ PostProcess ====================
+	Post Template: `shutdown of request processor complete`
+	============ Aggregate ====================
+	Aggregated Template:  shutdown of request processor complete
+[UpdateBucket] Logs: This iter found: 13, total: 74163/74273, remain: 110. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 19 -> 6, remain buckets: 12
+Update Success: Time for one update logs: 0.00592494010925293, template `shutdown of request processor complete`
+========================================================================================
+
+
+Iteration 65
+Sample 1 from current logs bucket: ID: 33, Len: 18, Bucket Size: 19, Total Buckets: 35
+Sampling from 18 logs, Sim Level: 3, MaxSim to anchor: 0.7143. Anchor: `Got user-level KeeperException when processing sessionid:0x24ed93119420001 type:create cxid:0x55b8baff zxid:0x100000006 txntype:-1 reqpath:n/a Error Path:/home Error:KeeperErrorCode = NodeExists for /home`, MaxSim Log: `Got user-level KeeperException when processing sessionid:0x34ed93485090000 type:create cxid:0x55b8bb06 zxid:0x100000007 txntype:-1 reqpath:n/a Error Path:/home Error:KeeperErrorCode = NodeExists for /home`.
+	============  Query  ====================
+	Log[1]: `Got user-level KeeperException when processing sessionid:0x24ed93119420001 type:create cxid:0x55b8baff zxid:0x100000006 txntype:-1 reqpath:n/a Error Path:/home Error:KeeperErrorCode = NodeExists for /home`
+	Log[2]: `Got user-level KeeperException when processing sessionid:0x34ee30a5c53002d type:create cxid:0x55bb791f zxid:0x70000010f txntype:-1 reqpath:n/a Error Path:/hdfs-mesos Error:KeeperErrorCode = NodeExists for /hdfs-mesos`
+	Log[3]: `Got user-level KeeperException when processing sessionid:0x34ed93485090000 type:create cxid:0x55b8bb0a zxid:0x10000000b txntype:-1 reqpath:n/a Error Path:/home/curi Error:KeeperErrorCode = NodeExists for /home/curi`
+	============ Response ====================
+LogTemplate[1]: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:{directory} Error:KeeperErrorCode = NodeExists for {directory}`
+
+LogTemplate[2]: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:{directory} Error:KeeperErrorCode = NodeExists for {directory}`
+
+LogTemplate[3]: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:{directory} Error:KeeperErrorCode = NodeExists for {directory}`
+	============ PostProcess ====================
+	Post Template: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>`
+	Post Template: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>`
+	Post Template: `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>
+[UpdateBucket] Logs: This iter found: 19, total: 74182/74273, remain: 91. 
+[UpdateBucket] Buckets: Checked 1 ([33]), Parent Bucket size: 19 -> 0, remain buckets: 11
+Update Success: Time for one update logs: 0.004867076873779297, template `Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>`
+========================================================================================
+
+
+Iteration 66
+Sample 3 from current logs bucket: ID: 0, Len: 1, Bucket Size: 15, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `LEADING`
+	============ Response ====================
+LogTemplate[1]: `LEADING`
+	============ PostProcess ====================
+	Post Template: `LEADING`
+	============ Aggregate ====================
+	Aggregated Template:  LEADING
+[UpdateBucket] Logs: This iter found: 15, total: 74197/74273, remain: 76. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 15 -> 0, remain buckets: 10
+Update Success: Time for one update logs: 0.0037038326263427734, template `LEADING`
+========================================================================================
+
+
+Iteration 67
+Sample 1 from current logs bucket: ID: 18, Len: 7, Bucket Size: 15, Total Buckets: 35
+Sampling from 14 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `Commiting zxid 0x300000000 from <*> not first!`, MaxSim Log: `Commiting zxid 0x100000000 from <*> not first!`.
+	============  Query  ====================
+	Log[1]: `Commiting zxid 0x300000000 from <*> not first!`
+	Log[2]: `Commiting zxid 0xf00000000 from <*> not first!`
+	Log[3]: `Commiting zxid 0x100000000 from <*> not first!`
+	============ Response ====================
+LogTemplate[1]: `Commiting zxid {zxid} from <*> not first!`
+LogTemplate[2]: `Commiting zxid {zxid} from <*> not first!`
+LogTemplate[3]: `Commiting zxid {zxid} from <*> not first!`
+	============ PostProcess ====================
+	Post Template: `Commiting zxid <*> from <*> not first!`
+	Post Template: `Commiting zxid <*> from <*> not first!`
+	Post Template: `Commiting zxid <*> from <*> not first!`
+	============ Aggregate ====================
+	Aggregated Template:  Commiting zxid <*> from <*> not first!
+[UpdateBucket] Logs: This iter found: 15, total: 74212/74273, remain: 61. 
+[UpdateBucket] Buckets: Checked 3 ([16, 17, 18]), Parent Bucket size: 15 -> 0, remain buckets: 9
+Update Success: Time for one update logs: 0.00989389419555664, template `Commiting zxid <*> from <*> not first!`
+========================================================================================
+
+
+Iteration 68
+Sample 3 from current logs bucket: ID: 28, Len: 12, Bucket Size: 15, Total Buckets: 35
+Sampling from 14 logs, Sim Level: 1, MaxSim to anchor: 0.8462. Anchor: `Have quorum of supporters; starting up and setting last processed zxid: 0x300000000`, MaxSim Log: `Have quorum of supporters; starting up and setting last processed zxid: 0x100000000`.
+	============  Query  ====================
+	Log[1]: `Have quorum of supporters; starting up and setting last processed zxid: 0x300000000`
+	Log[2]: `Have quorum of supporters; starting up and setting last processed zxid: 0xb00000000`
+	Log[3]: `Have quorum of supporters; starting up and setting last processed zxid: 0x600000000`
+	============ Response ====================
+LogTemplate[1]: `Have quorum of supporters; starting up and setting last processed zxid: {zxid}`
+	============ PostProcess ====================
+	Post Template: `Have quorum of supporters; starting up and setting last processed zxid: <*>`
+	Post Template: `Have quorum of supporters; starting up and setting last processed zxid: <*>`
+	Post Template: `Have quorum of supporters; starting up and setting last processed zxid: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Have quorum of supporters; starting up and setting last processed zxid: <*>
+[UpdateBucket] Logs: This iter found: 15, total: 74227/74273, remain: 46. 
+[UpdateBucket] Buckets: Checked 2 ([27, 28]), Parent Bucket size: 15 -> 0, remain buckets: 8
+Update Success: Time for one update logs: 0.006533145904541016, template `Have quorum of supporters; starting up and setting last processed zxid: <*>`
+========================================================================================
+
+
+Iteration 69
+Sample 3 from current logs bucket: ID: 3, Len: 2, Bucket Size: 8, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Sending SNAP`
+	============ Response ====================
+LogTemplate[1]: `Sending SNAP`
+	============ PostProcess ====================
+	Post Template: `Sending SNAP`
+	============ Aggregate ====================
+	Aggregated Template:  Sending SNAP
+[UpdateBucket] Logs: This iter found: 6, total: 74233/74273, remain: 40. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 8 -> 2, remain buckets: 8
+[TemplateDB] Try Merge: `Sending SNAP` | `Sending DIFF`
+	Post Template: `Sending <*>`
+[TemplateDB] Merged: -> `Sending <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 34/34, in child Bucket [1, 2, 3]
+[UpdateBucket] Logs: This iter found: 0, total: 74233/74273, remain: 40. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 2 -> 2, remain buckets: 8
+[TemplateDB] Update Indexes: 34 -> 34 for `Sending <*>`
+[TemplateBaseUpdate] Match unparsed logs 0 with new template `Sending <*>`
+Update Success: Time for one update logs: 0.013006210327148438, template `Sending SNAP`
+========================================================================================
+
+
+Iteration 70
+Sample 1 from current logs bucket: ID: 15, Len: 6, Bucket Size: 8, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Unexpected exception, tries=0, connecting to <*>`
+	============ Response ====================
+LogTemplate[1]: `Unexpected exception, tries=<*> connecting to <*>`
+	============ PostProcess ====================
+	Post Template: `Unexpected exception, tries=<*> connecting to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Unexpected exception, tries=<*> connecting to <*>
+[UpdateBucket] Logs: This iter found: 8, total: 74241/74273, remain: 32. 
+[UpdateBucket] Buckets: Checked 2 ([14, 15]), Parent Bucket size: 8 -> 0, remain buckets: 7
+Update Success: Time for one update logs: 0.006201267242431641, template `Unexpected exception, tries=<*> connecting to <*>`
+========================================================================================
+
+
+Iteration 71
+Sample 3 from current logs bucket: ID: 29, Len: 13, Bucket Size: 8, Total Buckets: 35
+Sampling from 5 logs, Sim Level: 1, MaxSim to anchor: 0.8571. Anchor: `Exception causing close of session 0x24ed93119420016 due to java.io.IOException: Connection reset by peer`, MaxSim Log: `Exception causing close of session 0x14ed93111f20010 due to java.io.IOException: Connection reset by peer`.
+	============  Query  ====================
+	Log[1]: `Exception causing close of session 0x24ed93119420016 due to java.io.IOException: Connection reset by peer`
+	Log[2]: `Exception causing close of session 0x24ed9311942000e due to java.io.IOException: Connection reset by peer`
+	Log[3]: `Exception causing close of session 0x14ed93111f20012 due to java.io.IOException: Connection reset by peer`
+	============ Response ====================
+LogTemplate[1]: `Exception causing close of session {session_id} due to java.io.IOException: Connection reset by peer`
+	============ PostProcess ====================
+	Post Template: `Exception causing close of session <*> due to java.io.IOException: Connection reset by peer`
+	Post Template: `Exception causing close of session <*> due to java.io.IOException: Connection reset by peer`
+	Post Template: `Exception causing close of session <*> due to java.io.IOException: Connection reset by peer`
+	============ Aggregate ====================
+	Aggregated Template:  Exception causing close of session <*> due to java.io.IOException: Connection reset by peer
+[UpdateBucket] Logs: This iter found: 8, total: 74249/74273, remain: 24. 
+[UpdateBucket] Buckets: Checked 1 ([29]), Parent Bucket size: 8 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.0038771629333496094, template `Exception causing close of session <*> due to java.io.IOException: Connection reset by peer`
+========================================================================================
+
+
+Iteration 72
+Sample 3 from current logs bucket: ID: 13, Len: 5, Bucket Size: 6, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Getting a snapshot from leader`
+	============ Response ====================
+LogTemplate[1]: `Getting a snapshot from leader`
+	============ PostProcess ====================
+	Post Template: `Getting a snapshot from leader`
+	============ Aggregate ====================
+	Aggregated Template:  Getting a snapshot from leader
+[UpdateBucket] Logs: This iter found: 6, total: 74255/74273, remain: 18. 
+[UpdateBucket] Buckets: Checked 3 ([11, 12, 13]), Parent Bucket size: 6 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.005967855453491211, template `Getting a snapshot from leader`
+========================================================================================
+
+
+Iteration 73
+Sample 1 from current logs bucket: ID: 34, Len: 20, Bucket Size: 6, Total Buckets: 35
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.9048. Anchor: `currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`, MaxSim Log: `acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`.
+	============  Query  ====================
+	Log[1]: `currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`
+	Log[2]: `acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`
+	============ Response ====================
+LogTemplate[1]: `currentEpoch not found! Creating with a reasonable default of {number}. This should only happen when you are upgrading your installation`
+LogTemplate[2]: `acceptedEpoch not found! Creating with a reasonable default of {number}. This should only happen when you are upgrading your installation`
+	============ PostProcess ====================
+	Post Template: `currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+	Post Template: `acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+	============ Aggregate ====================
+	Aggregated Template:  currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation
+[UpdateBucket] Logs: This iter found: 3, total: 74258/74273, remain: 15. 
+[UpdateBucket] Buckets: Checked 1 ([34]), Parent Bucket size: 6 -> 3, remain buckets: 5
+Update Success: Time for one update logs: 0.006987094879150391, template `currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+========================================================================================
+
+
+Iteration 74
+Sample 3 from current logs bucket: ID: 4, Len: 3, Bucket Size: 4, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `PrepRequestProcessor exited loop!`
+	============ Response ====================
+LogTemplate[1]: `PrepRequestProcessor exited loop!`
+	============ PostProcess ====================
+	Post Template: `PrepRequestProcessor exited loop!`
+	============ Aggregate ====================
+	Aggregated Template:  PrepRequestProcessor exited loop!
+[UpdateBucket] Logs: This iter found: 2, total: 74260/74273, remain: 13. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 4 -> 2, remain buckets: 5
+[TemplateDB] Try Merge: `PrepRequestProcessor exited loop!` | `FollowerRequestProcessor exited loop!`
+[TemplateDB] Reject Merge, Remain Template: `PrepRequestProcessor exited loop!`
+Update Success: Time for one update logs: 0.0050699710845947266, template `PrepRequestProcessor exited loop!`
+========================================================================================
+
+
+Iteration 75
+Sample 1 from current logs bucket: ID: 32, Len: 16, Bucket Size: 4, Total Buckets: 35
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.8667. Anchor: `Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe`, MaxSim Log: `Exception when using channel: for id 3 my id = 2 error = java.net.SocketException: Broken pipe`.
+	============  Query  ====================
+	Log[1]: `Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe`
+	Log[2]: `Exception when using channel: for id 3 my id = 2 error = java.net.SocketException: Broken pipe`
+	============ Response ====================
+LogTemplate[1]: `Exception when using channel: for id {id} my id = <*> error = java.net.SocketException: Broken pipe`
+LogTemplate[2]: `Exception when using channel: for id {id} my id = <*> error = java.net.SocketException: Broken pipe`
+	============ PostProcess ====================
+	Post Template: `Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe`
+	Post Template: `Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe`
+	============ Aggregate ====================
+	Aggregated Template:  Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe
+[UpdateBucket] Logs: This iter found: 4, total: 74264/74273, remain: 9. 
+[UpdateBucket] Buckets: Checked 2 ([31, 32]), Parent Bucket size: 4 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.00626826286315918, template `Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe`
+========================================================================================
+
+
+Iteration 76
+Sample 3 from current logs bucket: ID: 34, Len: 20, Bucket Size: 3, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`
+	============ Response ====================
+LogTemplate[1]: `acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation`
+	============ PostProcess ====================
+	Post Template: `acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+	============ Aggregate ====================
+	Aggregated Template:  acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation
+[UpdateBucket] Logs: This iter found: 3, total: 74267/74273, remain: 6. 
+[UpdateBucket] Buckets: Checked 1 ([34]), Parent Bucket size: 3 -> 0, remain buckets: 3
+[TemplateDB] Try Merge: `acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation` | `currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+[TemplateDB] Reject Merge, Remain Template: `acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+Update Success: Time for one update logs: 0.004734992980957031, template `acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation`
+========================================================================================
+
+
+Iteration 77
+Sample 3 from current logs bucket: ID: 3, Len: 2, Bucket Size: 2, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `Shutdown called`
+	============ Response ====================
+LogTemplate[1]: `Shutdown called`
+	============ PostProcess ====================
+	Post Template: `Shutdown called`
+	============ Aggregate ====================
+	Aggregated Template:  Shutdown called
+[UpdateBucket] Logs: This iter found: 2, total: 74269/74273, remain: 4. 
+[UpdateBucket] Buckets: Checked 3 ([1, 2, 3]), Parent Bucket size: 2 -> 0, remain buckets: 2
+[TemplateDB] Try Merge: `Shutdown called` | `shutdown called`
+[TemplateDB] Reject Merge, Remain Template: `Shutdown called`
+Update Success: Time for one update logs: 0.004624128341674805, template `Shutdown called`
+========================================================================================
+
+
+Iteration 78
+Sample 1 from current logs bucket: ID: 4, Len: 3, Bucket Size: 2, Total Buckets: 35
+	============  Query  ====================
+	Log[1]: `SessionTrackerImpl exited loop!`
+	============ Response ====================
+LogTemplate[1]: `SessionTrackerImpl exited loop!`
+	============ PostProcess ====================
+	Post Template: `SessionTrackerImpl exited loop!`
+	============ Aggregate ====================
+	Aggregated Template:  SessionTrackerImpl exited loop!
+[UpdateBucket] Logs: This iter found: 2, total: 74271/74273, remain: 2. 
+[UpdateBucket] Buckets: Checked 1 ([4]), Parent Bucket size: 2 -> 0, remain buckets: 1
+[TemplateDB] Try Merge: `SessionTrackerImpl exited loop!` | `FollowerRequestProcessor exited loop!`
+[TemplateDB] Reject Merge, Remain Template: `SessionTrackerImpl exited loop!`
+Update Success: Time for one update logs: 0.0018558502197265625, template `SessionTrackerImpl exited loop!`
+========================================================================================
+
+
+Iteration 79
+Sample 1 from current logs bucket: ID: 21, Len: 8, Bucket Size: 2, Total Buckets: 35
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `exception while shutting down acceptor: java.net.SocketException: Socket closed`
+	============ Response ====================
+LogTemplate[1]: `exception while shutting down acceptor: java.net.SocketException: Socket closed`
+	============ PostProcess ====================
+	Post Template: `exception while shutting down acceptor: java.net.SocketException: Socket closed`
+	============ Aggregate ====================
+	Aggregated Template:  exception while shutting down acceptor: java.net.SocketException: Socket closed
+[UpdateBucket] Logs: This iter found: 2, total: 74273/74273, remain: 0. 
+[UpdateBucket] Buckets: Checked 3 ([19, 20, 21]), Parent Bucket size: 2 -> 0, remain buckets: 0
+Update Success: Time for one update logs: 0.006035804748535156, template `exception while shutting down acceptor: java.net.SocketException: Socket closed`
+========================================================================================
+
+
+Original df_logs: (74273, 4), Clustering df_logs: (74273, 6)
+Saved Zookeeper_log_structured.csv to ./saved_results/LUNAR-single/Zookeeper/Zookeeper_full.log_structured.csv
+Saved Zookeeper_log_templates.csv to ./saved_results/LUNAR-single/Zookeeper/Zookeeper_full.log_templates.csv
+Total parsingg time: 80.99517393112183 seconds
+Total query time: 72.95539784431458 seconds, 80 queries
+Avg. query time: 0.9119423590611373 seconds
+Total pure match time: 8.039776086807251 seconds
+
+=== Evaluation on Zookeeper ===
+Evaluate parsing result: ./saved_results/LUNAR-single/Zookeeper/Zookeeper_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/89 [00:00<?, ?it/s] 66%|██████▋   | 59/89 [00:00<00:00, 587.23it/s]100%|██████████| 89/89 [00:00<00:00, 598.94it/s]
+Grouping_Accuracy (GA): 0.9931, FGA: 0.8848,
+Grouping Accuracy calculation done. [Time taken: 0.178]
+Parsing_Accuracy (PA): 0.8506
+Parsing Accuracy calculation done. [Time taken: 0.004]
+  0%|          | 0/76 [00:00<?, ?it/s]100%|██████████| 76/76 [00:00<00:00, 13876.33it/s]
+1-num-49, {'FOLLOWING - LEADER ELECTION TOOK - <*>', 'LEADING - LEADER ELECTION TOOK - <*>'} | {'<*> - LEADER ELECTION TOOK - <*>'}
+2-num-10388, {'Connection broken for id <*> my id = <*> error =<*>'} | {'Connection broken for id <*> my id = <*> error ='}
+3-num-25, {'Creating new log file: <*>'} | {'Creating new log file: log.<*>'}
+4-num-34, {'Follower sid: <*> : info : <*>'} | {'Follower sid: <*> : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@<*>'}
+5-num-19, {'Got user-level KeeperException when processing sessionid:<*> type:<*> cxid:<*> zxid:<*> txntype:<*> reqpath:<*> Error Path:<*> Error:KeeperErrorCode = <*> for <*>'} | {'Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:<*> reqpath:n/a Error Path:<*> Error:KeeperErrorCode = NodeExists for <*>'}
+6-num-49, {'New election. My id = <*> proposed <*>'} | {'New election. My id = <*> proposed zxid=<*>'}
+7-num-60, {'Reading snapshot <*>'} | {'Reading snapshot <*>/snapshot.<*>'}
+8-num-34, {'Sending SNAP', 'Sending DIFF'} | {'Sending <*>'}
+9-num-432, {'Server environment:java.io.tmpdir=<*>', 'Server environment:java.compiler=<*>', 'Server environment:os.version=<*>', 'Server environment:user.name=<*>', 'Server environment:os.name=<*>', 'Server environment:java.home=<*>', 'Server environment:java.version=<*>', 'Server environment:os.arch=<*>', 'Server environment:host.name=<*>', 'Server environment:user.dir=<*>', 'Server environment:user.home=<*>', 'Server environment:java.class.path=<*>'} | {'Server environment:<*>=<*>'}
+10-num-8, {'Unexpected exception, tries=<*>, connecting to <*>'} | {'Unexpected exception, tries=<*> connecting to <*>'}
+PTA: 0.8684, RTA: 0.7416 FTA: 0.8000
+Identify : 76, Groundtruth : 89
+Template-level accuracy calculation done. [Time taken: 0.024]
+Finish parsing logs: Zookeeper
+Output dir: ./saved_results/LUNAR-single

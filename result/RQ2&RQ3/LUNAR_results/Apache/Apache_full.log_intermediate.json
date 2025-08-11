@@ -1,0 +1,434 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "[client 81.199.21.119] File does not exist: /var/www/html/sumthin",
+   "[client 65.110.43.170] File does not exist: /var/www/html/drupal",
+   "[client 65.69.87.247] File does not exist: /var/www/html/MSADC"
+  ],
+  "logs_to_query_regex": [
+   "[client 81.199.21.119] File does not exist: /var/www/html/sumthin",
+   "[client 65.110.43.170] File does not exist: /var/www/html/drupal",
+   "[client 65.69.87.247] File does not exist: /var/www/html/MSADC"
+  ],
+  "llm_template": "[client <*>] File does not exist: <*>",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "[client <*>] File does not exist: <*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "[client 204.100.200.22] Directory index forbidden by rule: /var/www/html/",
+   "[client 220.174.104.157] Directory index forbidden by rule: /var/www/html/",
+   "[client 64.175.179.193] Directory index forbidden by rule: /var/www/html/"
+  ],
+  "logs_to_query_regex": [
+   "[client 204.100.200.22] Directory index forbidden by rule: /var/www/html/",
+   "[client 220.174.104.157] Directory index forbidden by rule: /var/www/html/",
+   "[client 64.175.179.193] Directory index forbidden by rule: /var/www/html/"
+  ],
+  "llm_template": "[client <*>] Directory index forbidden by rule: <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "[client <*>] Directory index forbidden by rule: <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "jk2_init() Found child 2330 in scoreboard slot 0",
+   "jk2_init() Found child 32605 in scoreboard slot 9",
+   "jk2_init() Found child 25738 in scoreboard slot 1"
+  ],
+  "logs_to_query_regex": [
+   "jk2_init() Found child 2330 in scoreboard slot 0",
+   "jk2_init() Found child 32605 in scoreboard slot 9",
+   "jk2_init() Found child 25738 in scoreboard slot 1"
+  ],
+  "llm_template": "jk2_init() Found child <*> in scoreboard slot <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "jk2_init() Found child <*> in scoreboard slot <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "workerEnv.init() ok /etc/httpd/conf/workers2.properties"
+  ],
+  "logs_to_query_regex": [
+   "workerEnv.init() ok /etc/httpd/conf/workers2.properties"
+  ],
+  "llm_template": "workerEnv.init() ok <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "workerEnv.init() ok <*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "mod_jk child workerEnv in error state 1",
+   "mod_jk child workerEnv in error state 2",
+   "mod_jk child workerEnv in error state 10"
+  ],
+  "logs_to_query_regex": [
+   "mod_jk child workerEnv in error state 1",
+   "mod_jk child workerEnv in error state 2",
+   "mod_jk child workerEnv in error state 10"
+  ],
+  "llm_template": "mod_jk child workerEnv in error state <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "mod_jk child workerEnv in error state <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "[client 202.133.98.6] script not found or unable to stat: /var/www/cgi-bin/awstats",
+   "[client 201.6.53.88] script not found or unable to stat: /var/www/cgi-bin/awstats.pl",
+   "[client 61.145.100.217] script not found or unable to stat: /var/www/cgi-bin/jud.cgi"
+  ],
+  "logs_to_query_regex": [
+   "[client 202.133.98.6] script not found or unable to stat: /var/www/cgi-bin/awstats",
+   "[client 201.6.53.88] script not found or unable to stat: /var/www/cgi-bin/awstats.pl",
+   "[client 61.145.100.217] script not found or unable to stat: /var/www/cgi-bin/jud.cgi"
+  ],
+  "llm_template": "[client <*>] script not found or unable to stat: <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "[client <*>] script not found or unable to stat: <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "mod_jk2 Shutting down"
+  ],
+  "logs_to_query_regex": [
+   "mod_jk2 Shutting down"
+  ],
+  "llm_template": "mod_jk2 Shutting down",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "mod_jk2 Shutting down"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "mod_jk child init 1 0",
+   "mod_jk child init 1 -2"
+  ],
+  "logs_to_query_regex": [
+   "mod_jk child init 1 0",
+   "mod_jk child init 1 -2"
+  ],
+  "llm_template": "mod_jk child init <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "mod_jk child init <*> <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "jk2_init() Can't find child 4057 in scoreboard",
+   "jk2_init() Can't find child 27316 in scoreboard",
+   "jk2_init() Can't find child 17481 in scoreboard"
+  ],
+  "logs_to_query_regex": [
+   "jk2_init() Can't find child 4057 in scoreboard",
+   "jk2_init() Can't find child 27316 in scoreboard",
+   "jk2_init() Can't find child 17481 in scoreboard"
+  ],
+  "llm_template": "jk2_init() Can't find child <*> in scoreboard",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "jk2_init() Can't find child <*> in scoreboard"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "config.update(): Can't create channel.jni:jni",
+   "config.update(): Can't create worker.jni:onShutdown",
+   "config.update(): Can't create vm:"
+  ],
+  "logs_to_query_regex": [
+   "config.update(): Can't create channel.jni:jni",
+   "config.update(): Can't create worker.jni:onShutdown",
+   "config.update(): Can't create vm:"
+  ],
+  "llm_template": "config.update(): Can't create <*>.jni:<*>",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "config.update(): Can't create <*>"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)"
+  ],
+  "logs_to_query_regex": [
+   "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)"
+  ],
+  "llm_template": "env.createBean2(): Factory error creating <*> (<*>, <*>)",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "env.createBean2(): Factory error creating <*> (<*>, <*>)"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "child process 18801 still did not exit, sending a SIGTERM",
+   "child process 6448 still did not exit, sending a SIGTERM",
+   "child process 29765 still did not exit, sending a SIGTERM"
+  ],
+  "logs_to_query_regex": [
+   "child process 18801 still did not exit, sending a SIGTERM",
+   "child process 6448 still did not exit, sending a SIGTERM",
+   "child process 29765 still did not exit, sending a SIGTERM"
+  ],
+  "llm_template": "child process <*> still did not exit, sending a SIGTERM",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "child process <*> still did not exit, sending a SIGTERM"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/"
+  ],
+  "logs_to_query_regex": [
+   "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/"
+  ],
+  "llm_template": "[client <*>] attempt to invoke directory as script: <*>",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "[client <*>] attempt to invoke directory as script: <*>"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "Digest: generating secret for digest authentication ..."
+  ],
+  "logs_to_query_regex": [
+   "Digest: generating secret for digest authentication ..."
+  ],
+  "llm_template": "Digest: generating secret for digest authentication ...",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Digest: generating secret for digest authentication ..."
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "Digest: done"
+  ],
+  "logs_to_query_regex": [
+   "Digest: done"
+  ],
+  "llm_template": "Digest: done",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "Digest: done"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "LDAP: Built with OpenLDAP LDAP SDK"
+  ],
+  "logs_to_query_regex": [
+   "LDAP: Built with OpenLDAP LDAP SDK"
+  ],
+  "llm_template": "LDAP: Built with <*> LDAP SDK",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "LDAP: Built with OpenLDAP LDAP SDK"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "LDAP: SSL support unavailable"
+  ],
+  "logs_to_query_regex": [
+   "LDAP: SSL support unavailable"
+  ],
+  "llm_template": "LDAP: SSL support unavailable",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "LDAP: SSL support unavailable"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "Apache/2.0.49 (Fedora) configured -- resuming normal operations"
+  ],
+  "logs_to_query_regex": [
+   "Apache/2.0.49 (Fedora) configured -- resuming normal operations"
+  ],
+  "llm_template": "Apache/<*> (<*>) configured -- resuming normal operations",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Apache/<*> configured -- resuming normal operations"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "mod_security/1.9dev2 configured"
+  ],
+  "logs_to_query_regex": [
+   "mod_security/1.9dev2 configured"
+  ],
+  "llm_template": "mod_security/<*> configured",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "mod_security/<*> configured"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "config.update(): Can't create vm:"
+  ],
+  "logs_to_query_regex": [
+   "config.update(): Can't create vm:"
+  ],
+  "llm_template": "config.update(): Can't create vm:",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "config.update(): Can't create <*>"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)"
+  ],
+  "logs_to_query_regex": [
+   "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)"
+  ],
+  "llm_template": "suEXEC mechanism enabled (wrapper: <*>)",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "suEXEC mechanism enabled (wrapper: <*>)"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads."
+  ],
+  "logs_to_query_regex": [
+   "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads."
+  ],
+  "llm_template": "mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads."
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "[client 218.65.235.56] request failed: error reading the headers",
+   "[client 64.116.212.250] request failed: error reading the headers",
+   "[client 213.238.117.47] request failed: error reading the headers"
+  ],
+  "logs_to_query_regex": [
+   "[client 218.65.235.56] request failed: error reading the headers",
+   "[client 64.116.212.250] request failed: error reading the headers",
+   "[client 213.238.117.47] request failed: error reading the headers"
+  ],
+  "llm_template": "[client <*>] request failed: error reading the headers",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "[client <*>] request failed: error reading the headers"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "[client 210.91.137.35] request failed: URI too long (longer than 8190)",
+   "[client 63.168.147.250] request failed: URI too long (longer than 8190)",
+   "[client 66.178.23.14] request failed: URI too long (longer than 8190)"
+  ],
+  "logs_to_query_regex": [
+   "[client 210.91.137.35] request failed: URI too long (longer than 8190)",
+   "[client 63.168.147.250] request failed: URI too long (longer than 8190)",
+   "[client 66.178.23.14] request failed: URI too long (longer than 8190)"
+  ],
+  "llm_template": "[client <*>] request failed: URI too long (longer than <*>)",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "[client <*>] request failed: URI too long (longer than <*>)"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Graceful restart requested, doing restart"
+  ],
+  "logs_to_query_regex": [
+   "Graceful restart requested, doing restart"
+  ],
+  "llm_template": "Graceful restart requested, doing restart",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "Graceful restart requested, doing restart"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "uriMap.mapUri() uri must start with /"
+  ],
+  "logs_to_query_regex": [
+   "uriMap.mapUri() uri must start with /"
+  ],
+  "llm_template": "uriMap.mapUri() uri must start with /",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "uriMap.mapUri() uri must start with /"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "[client 210.245.233.251] Invalid URI in request GET <*>"
+  ],
+  "logs_to_query_regex": [
+   "[client 210.245.233.251] Invalid URI in request GET <*>"
+  ],
+  "llm_template": "[client <*>] Invalid URI in request GET <*>",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "[client <*>] Invalid URI in request <*> <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "[client 202.143.128.18] client sent <*> request without hostname (see RFC2616 section 14.23): /"
+  ],
+  "logs_to_query_regex": [
+   "[client 202.143.128.18] client sent <*> request without hostname (see RFC2616 section 14.23): /"
+  ],
+  "llm_template": "[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "[client 210.245.151.81] Attempt to serve directory: /var/www/html/"
+  ],
+  "logs_to_query_regex": [
+   "[client 210.245.151.81] Attempt to serve directory: /var/www/html/"
+  ],
+  "llm_template": "[client <*>] Attempt to serve directory: <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "[client <*>] Attempt to serve directory: <*>"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "[client 219.239.227.58] mod_security: Access denied with code 403. Error reading POST data, error_code=104 [hostname \"63.126.79.67\"] [uri \"/xmlrpc.php\"]"
+  ],
+  "logs_to_query_regex": [
+   "[client 219.239.227.58] mod_security: Access denied with code 403. Error reading POST data, error_code=104 [hostname \"63.126.79.67\"] [uri \"/xmlrpc.php\"]"
+  ],
+  "llm_template": "[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname \"<*>\"] [uri \"<*>\"]",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "[client <*>] mod_security: Access denied with code <*>. Error reading POST data, error_code=<*> [hostname <*>] [uri <*>]"
+ }
+]

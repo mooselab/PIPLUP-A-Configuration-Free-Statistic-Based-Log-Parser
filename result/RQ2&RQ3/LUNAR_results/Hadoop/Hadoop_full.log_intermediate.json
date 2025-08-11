@@ -1,0 +1,3911 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Progress of TaskAttempt attempt_1445087491445_0005_m_000000_0 is : 0.12453667",
+   "Progress of TaskAttempt attempt_1445182159119_0018_m_000000_1000 is : 0.06350645",
+   "Progress of TaskAttempt attempt_1445144423722_0024_m_000000_0 is : 0.26158828"
+  ],
+  "logs_to_query_regex": [
+   "Progress of TaskAttempt attempt_1445087491445_0005_m_000000_0 is : 0.12453667",
+   "Progress of TaskAttempt attempt_1445182159119_0018_m_000000_1000 is : 0.06350645",
+   "Progress of TaskAttempt attempt_1445144423722_0024_m_000000_0 is : 0.26158828"
+  ],
+  "llm_template": "Progress of TaskAttempt <*> is : <*>",
+  "cluster_id": 213,
+  "update_success": true,
+  "template": "Progress of TaskAttempt <*> is : <*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "MapCompletionEvents request from attempt_1445087491445_0005_r_000000_0. startIndex 0 maxEvents 10000",
+   "MapCompletionEvents request from attempt_1445087491445_0001_r_000000_0. startIndex 10 maxEvents 10000",
+   "MapCompletionEvents request from attempt_1445144423722_0020_r_000000_1000. startIndex 8 maxEvents 10000"
+  ],
+  "logs_to_query_regex": [
+   "MapCompletionEvents request from attempt_1445087491445_0005_r_000000_0. startIndex 0 maxEvents 10000",
+   "MapCompletionEvents request from attempt_1445087491445_0001_r_000000_0. startIndex 10 maxEvents 10000",
+   "MapCompletionEvents request from attempt_1445144423722_0020_r_000000_1000. startIndex 8 maxEvents 10000"
+  ],
+  "llm_template": "MapCompletionEvents request from <*> startIndex <*> maxEvents <*>",
+  "cluster_id": 218,
+  "update_success": true,
+  "template": "MapCompletionEvents request from <*>. startIndex <*> maxEvents <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000",
+   "Address change detected. Old: msra-sa-41/10.190.173.170:8030 New: msra-sa-41:8030"
+  ],
+  "logs_to_query_regex": [
+   "Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000",
+   "Address change detected. Old: msra-sa-41/10.190.173.170:8030 New: msra-sa-41:8030"
+  ],
+  "llm_template": "Address change detected. Old: msra-sa-41/<*> New: msra-sa-<*>",
+  "cluster_id": 170,
+  "update_success": true,
+  "template": "Address change detected. Old: <*> New: <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "Spilling map output"
+  ],
+  "logs_to_query_regex": [
+   "Spilling map output"
+  ],
+  "llm_template": "Spilling map output",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "Spilling map output"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "bufstart = 0; bufend = 34171787; bufvoid = 104857600",
+   "bufstart = 86554835; bufend = 19548620; bufvoid = 104857600",
+   "bufstart = 19512771; bufend = 67736095; bufvoid = 104857600"
+  ],
+  "logs_to_query_regex": [
+   "bufstart = 0; bufend = 34171787; bufvoid = 104857600",
+   "bufstart = 86554835; bufend = 19548620; bufvoid = 104857600",
+   "bufstart = 19512771; bufend = 67736095; bufvoid = 104857600"
+  ],
+  "llm_template": "bufstart = <*>; bufend = <*>; bufvoid = <*>",
+  "cluster_id": 226,
+  "update_success": true,
+  "template": "bufstart = <*>; bufend = <*>; bufvoid = <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "kvstart = 26214396(104857584); kvend = 13785828(55143312); length = 12428569/6553600",
+   "kvstart = 26214396(104857584); kvend = 13786460(55145840); length = 12427937/6553600",
+   "kvstart = 26214396(104857584); kvend = 13786364(55145456); length = 12428033/6553600"
+  ],
+  "logs_to_query_regex": [
+   "kvstart = 26214396(104857584); kvend = 13785828(55143312); length = 12428569/6553600",
+   "kvstart = 26214396(104857584); kvend = 13786460(55145840); length = 12427937/6553600",
+   "kvstart = 26214396(104857584); kvend = 13786364(55145456); length = 12428033/6553600"
+  ],
+  "llm_template": "kvstart = <*>(<*>); kvend = <*>(<*>); length = <*>",
+  "cluster_id": 227,
+  "update_success": true,
+  "template": "kvstart = <*>(<*>); kvend = <*>(<*>); length = <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_483047941_1] for 46 seconds. Will retry shortly ...",
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_-1547462655_1] for 1317 seconds. Will retry shortly ...",
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_-274751412_1] for 1330 seconds. Will retry shortly ..."
+  ],
+  "logs_to_query_regex": [
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_483047941_1] for 46 seconds. Will retry shortly ...",
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_-1547462655_1] for 1317 seconds. Will retry shortly ...",
+   "Failed to renew lease for [DFSClient_NONMAPREDUCE_-274751412_1] for 1330 seconds. Will retry shortly ..."
+  ],
+  "llm_template": "Failed to renew lease for [<*>] for <*> seconds. Will retry shortly ...",
+  "cluster_id": 247,
+  "update_success": true,
+  "template": "Failed to renew lease for <*> for <*> seconds. Will retry shortly ..."
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "Finished spill 0",
+   "Finished spill 1",
+   "Finished spill 4"
+  ],
+  "logs_to_query_regex": [
+   "Finished spill 0",
+   "Finished spill 1",
+   "Finished spill 4"
+  ],
+  "llm_template": "Finished spill <*>",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "Finished spill <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED",
+   "attempt_1445175094696_0003_m_000007_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445087491445_0002_m_000000_0 TaskAttempt Transitioned from NEW to SUCCEEDED"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED",
+   "attempt_1445175094696_0003_m_000007_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445087491445_0002_m_000000_0 TaskAttempt Transitioned from NEW to SUCCEEDED"
+  ],
+  "llm_template": "<*> TaskAttempt Transitioned from NEW to UNASSIGNED",
+  "cluster_id": 85,
+  "update_success": true,
+  "template": "<*> TaskAttempt Transitioned from <*> to <*>"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "(EQUATOR) 44657541 kvi 11164380(44657520)"
+  ],
+  "logs_to_query_regex": [
+   "(EQUATOR) 44657541 kvi 11164380(44657520)"
+  ],
+  "llm_template": "(EQUATOR) <*> kvi <*>(<*>)",
+  "cluster_id": 44,
+  "update_success": true,
+  "template": "(EQUATOR) <*> kvi <*>(<*>)"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "(RESET) equator 44657541 kv 11164380(44657520) kvi 8542952(34171808)"
+  ],
+  "logs_to_query_regex": [
+   "(RESET) equator 44657541 kv 11164380(44657520) kvi 8542952(34171808)"
+  ],
+  "llm_template": "(RESET) equator <*> kv <*>(<*>) kvi <*>(<*>)",
+  "cluster_id": 80,
+  "update_success": true,
+  "template": "(RESET) equator <*> kv <*>(<*>) kvi <*>(<*>)"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445094324383_0003_m_000000_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445182159119_0014_m_000005_0 TaskAttempt Transitioned from ASSIGNED to RUNNING"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445094324383_0003_m_000000_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+   "attempt_1445182159119_0014_m_000005_0 TaskAttempt Transitioned from ASSIGNED to RUNNING"
+  ],
+  "llm_template": "<*> TaskAttempt Transitioned from UNASSIGNED to ASSIGNED",
+  "cluster_id": 85,
+  "update_success": true,
+  "template": "<*> TaskAttempt Transitioned from <*> to <*>"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "Reduce slow start threshold not met. completedMapsForReduceSlowstart 1"
+  ],
+  "logs_to_query_regex": [
+   "Reduce slow start threshold not met. completedMapsForReduceSlowstart 1"
+  ],
+  "llm_template": "Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>",
+  "cluster_id": 216,
+  "update_success": true,
+  "template": "Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "Recalculating schedule, headroom=<memory:0, vCores:-35>",
+   "Recalculating schedule, headroom=<memory:0, vCores:-20>",
+   "Recalculating schedule, headroom=<memory:0, vCores:-27>"
+  ],
+  "logs_to_query_regex": [
+   "Recalculating schedule, headroom=<memory:0, vCores:-35>",
+   "Recalculating schedule, headroom=<memory:0, vCores:-20>",
+   "Recalculating schedule, headroom=<memory:0, vCores:-27>"
+  ],
+  "llm_template": "Recalculating schedule, headroom=<memory:<*>, vCores:<*>",
+  "cluster_id": 40,
+  "update_success": true,
+  "template": "Recalculating schedule, headroom=<memory:<*>, vCores:<*>"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_m_000002_0 TaskAttempt Transitioned from ASSIGNED to RUNNING",
+   "attempt_1445144423722_0021_m_000005_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP",
+   "attempt_1445094324383_0004_m_000003_2 TaskAttempt Transitioned from RUNNING to KILL_CONTAINER_CLEANUP"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_m_000002_0 TaskAttempt Transitioned from ASSIGNED to RUNNING",
+   "attempt_1445144423722_0021_m_000005_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP",
+   "attempt_1445094324383_0004_m_000003_2 TaskAttempt Transitioned from RUNNING to KILL_CONTAINER_CLEANUP"
+  ],
+  "llm_template": "<*> TaskAttempt Transitioned from <*> to <*>",
+  "cluster_id": 85,
+  "update_success": true,
+  "template": "<*> TaskAttempt Transitioned from <*> to <*>"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "Retrying connect to server: minint-75dgdam1.fareast.corp.microsoft.com/10.86.165.66:53419. Already tried 0 time(s); maxRetries=45",
+   "Retrying connect to server: MININT-FNANLI5.fareast.corp.microsoft.com/10.86.169.121:52368. Already tried 32 time(s); maxRetries=45",
+   "Retrying connect to server: MININT-FNANLI5.fareast.corp.microsoft.com/10.86.169.121:55135. Already tried 4 time(s); maxRetries=45"
+  ],
+  "logs_to_query_regex": [
+   "Retrying connect to server: minint-75dgdam1.fareast.corp.microsoft.com/10.86.165.66:53419. Already tried 0 time(s); maxRetries=45",
+   "Retrying connect to server: MININT-FNANLI5.fareast.corp.microsoft.com/10.86.169.121:52368. Already tried 32 time(s); maxRetries=45",
+   "Retrying connect to server: MININT-FNANLI5.fareast.corp.microsoft.com/10.86.169.121:55135. Already tried 4 time(s); maxRetries=45"
+  ],
+  "llm_template": "Retrying connect to server: <*> Already tried <*> time(s); maxRetries=<*>",
+  "cluster_id": 236,
+  "update_success": true,
+  "template": "Retrying connect to server: <*>. Already tried <*> time(s); maxRetries=<*>"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445087491445_0005_01_000002 taskAttempt attempt_1445087491445_0005_m_000000_0",
+   "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445182159119_0002_02_000002 taskAttempt attempt_1445182159119_0002_r_000000_1000",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445062781478_0016_01_000005 taskAttempt attempt_1445062781478_0016_m_000003_0"
+  ],
+  "logs_to_query_regex": [
+   "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445087491445_0005_01_000002 taskAttempt attempt_1445087491445_0005_m_000000_0",
+   "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445182159119_0002_02_000002 taskAttempt attempt_1445182159119_0002_r_000000_1000",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445062781478_0016_01_000005 taskAttempt attempt_1445062781478_0016_m_000003_0"
+  ],
+  "llm_template": "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container <*> taskAttempt <*>",
+  "cluster_id": 235,
+  "update_success": true,
+  "template": "Processing the event EventType: <*> for container <*> taskAttempt <*>"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "Before Scheduling: PendingReds:1 ScheduledMaps:13 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0",
+   "Before Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:9 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0",
+   "Before Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:10 CompletedReds:0 ContAlloc:11 ContRel:0 HostLocal:10 RackLocal:0"
+  ],
+  "logs_to_query_regex": [
+   "Before Scheduling: PendingReds:1 ScheduledMaps:13 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0",
+   "Before Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:9 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0",
+   "Before Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:10 CompletedReds:0 ContAlloc:11 ContRel:0 HostLocal:10 RackLocal:0"
+  ],
+  "llm_template": "Before Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>",
+  "cluster_id": 245,
+  "update_success": true,
+  "template": "Before Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack"
+  ],
+  "logs_to_query_regex": [
+   "Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack"
+  ],
+  "llm_template": "Resolved <*> to <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "Resolved <*> to <*>"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "task_1445087491445_0005_m_000002 Task Transitioned from SCHEDULED to RUNNING",
+   "task_1445182159119_0001_m_000008 Task Transitioned from SCHEDULED to RUNNING",
+   "task_1445144423722_0020_m_000007 Task Transitioned from RUNNING to SUCCEEDED"
+  ],
+  "logs_to_query_regex": [
+   "task_1445087491445_0005_m_000002 Task Transitioned from SCHEDULED to RUNNING",
+   "task_1445182159119_0001_m_000008 Task Transitioned from SCHEDULED to RUNNING",
+   "task_1445144423722_0020_m_000007 Task Transitioned from RUNNING to SUCCEEDED"
+  ],
+  "llm_template": "<*> Task Transitioned from <*> to <*>",
+  "cluster_id": 86,
+  "update_success": true,
+  "template": "<*> Task Transitioned from <*> to <*>"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "MapTask metrics system started"
+  ],
+  "logs_to_query_regex": [
+   "MapTask metrics system started"
+  ],
+  "llm_template": "MapTask metrics system started",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "<*> metrics system started"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "After Scheduling: PendingReds:1 ScheduledMaps:9 ScheduledReds:0 AssignedMaps:4 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:4 ContRel:0 HostLocal:3 RackLocal:1",
+   "After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:13 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:12 RackLocal:1",
+   "After Scheduling: PendingReds:1 ScheduledMaps:5 ScheduledReds:0 AssignedMaps:5 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:5 ContRel:0 HostLocal:4 RackLocal:1"
+  ],
+  "logs_to_query_regex": [
+   "After Scheduling: PendingReds:1 ScheduledMaps:9 ScheduledReds:0 AssignedMaps:4 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:4 ContRel:0 HostLocal:3 RackLocal:1",
+   "After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:13 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:12 RackLocal:1",
+   "After Scheduling: PendingReds:1 ScheduledMaps:5 ScheduledReds:0 AssignedMaps:5 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:5 ContRel:0 HostLocal:4 RackLocal:1"
+  ],
+  "llm_template": "After Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>",
+  "cluster_id": 245,
+  "update_success": true,
+  "template": "After Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "Retrying connect to server: minint-75dgdam1.fareast.corp.microsoft.com/10.86.165.66:53419. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",
+   "Retrying connect to server: MININT-75DGDAM1.fareast.corp.microsoft.com/10.86.165.66:58081. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",
+   "Retrying connect to server: 10.190.173.170/10.190.173.170:29630. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)"
+  ],
+  "logs_to_query_regex": [
+   "Retrying connect to server: minint-75dgdam1.fareast.corp.microsoft.com/10.86.165.66:53419. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",
+   "Retrying connect to server: MININT-75DGDAM1.fareast.corp.microsoft.com/10.86.165.66:58081. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)",
+   "Retrying connect to server: 10.190.173.170/10.190.173.170:29630. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)"
+  ],
+  "llm_template": "Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)",
+  "cluster_id": 253,
+  "update_success": true,
+  "template": "Retrying connect to server: <*>. Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "TaskAttempt: [attempt_1445087491445_0005_m_000002_0] using containerId: [container_1445087491445_0005_01_000005 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]",
+   "TaskAttempt: [attempt_1445087491445_0003_m_000009_2] using containerId: [container_1445087491445_0003_01_000023 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]",
+   "TaskAttempt: [attempt_1445087491445_0004_m_000010_0] using containerId: [container_1445087491445_0004_01_000003 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]"
+  ],
+  "logs_to_query_regex": [
+   "TaskAttempt: [attempt_1445087491445_0005_m_000002_0] using containerId: [container_1445087491445_0005_01_000005 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]",
+   "TaskAttempt: [attempt_1445087491445_0003_m_000009_2] using containerId: [container_1445087491445_0003_01_000023 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]",
+   "TaskAttempt: [attempt_1445087491445_0004_m_000010_0] using containerId: [container_1445087491445_0004_01_000003 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]"
+  ],
+  "llm_template": "TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>]",
+  "cluster_id": 217,
+  "update_success": true,
+  "template": "TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>]"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Executing with tokens:"
+  ],
+  "logs_to_query_regex": [
+   "Executing with tokens:"
+  ],
+  "llm_template": "Executing with tokens:",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "Executing with tokens:"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "Scheduled snapshot period at 10 second(s)."
+  ],
+  "logs_to_query_regex": [
+   "Scheduled snapshot period at 10 second(s)."
+  ],
+  "llm_template": "Scheduled snapshot period at <*> second(s).",
+  "cluster_id": 60,
+  "update_success": true,
+  "template": "Scheduled snapshot period at <*> second(s)."
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "loaded properties from hadoop-metrics2.properties"
+  ],
+  "logs_to_query_regex": [
+   "loaded properties from hadoop-metrics2.properties"
+  ],
+  "llm_template": "loaded properties from <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "loaded properties from <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "session.id is deprecated. Instead, use dfs.metrics.session-id",
+   "mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords"
+  ],
+  "logs_to_query_regex": [
+   "session.id is deprecated. Instead, use dfs.metrics.session-id",
+   "mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords"
+  ],
+  "llm_template": "session.id is deprecated. Instead, use <*>",
+  "cluster_id": 62,
+  "update_success": true,
+  "template": "<*> is deprecated. Instead, use <*>"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "Auth successful for job_1445087491445_0005 (auth:SIMPLE)",
+   "Auth successful for job_1445182159119_0020 (auth:SIMPLE)",
+   "Auth successful for job_1445062781478_0018 (auth:SIMPLE)"
+  ],
+  "logs_to_query_regex": [
+   "Auth successful for job_1445087491445_0005 (auth:SIMPLE)",
+   "Auth successful for job_1445182159119_0020 (auth:SIMPLE)",
+   "Auth successful for job_1445062781478_0018 (auth:SIMPLE)"
+  ],
+  "llm_template": "Auth successful for <*> (auth:SIMPLE)",
+  "cluster_id": 51,
+  "update_success": true,
+  "template": "Auth successful for <*> (auth:<*>)"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "Kind: mapreduce.job, Service: job_1445087491445_0005, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@7f0eb4b4)",
+   "Kind: mapreduce.job, Service: job_1445182159119_0013, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@666adef3)",
+   "Kind: mapreduce.job, Service: job_1445076437777_0002, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@1623b78d)"
+  ],
+  "logs_to_query_regex": [
+   "Kind: mapreduce.job, Service: job_1445087491445_0005, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@7f0eb4b4)",
+   "Kind: mapreduce.job, Service: job_1445182159119_0013, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@666adef3)",
+   "Kind: mapreduce.job, Service: job_1445076437777_0002, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@1623b78d)"
+  ],
+  "llm_template": "Kind: mapreduce.job, Service: <*> Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@<*>)",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "Kind: <*>, Service: <*>, Ident: (<*>)"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "Sleeping for 0ms before retrying again. Got null now."
+  ],
+  "logs_to_query_regex": [
+   "Sleeping for 0ms before retrying again. Got null now."
+  ],
+  "llm_template": "Sleeping for <*> before retrying again. Got <*> now.",
+  "cluster_id": 225,
+  "update_success": true,
+  "template": "Sleeping for <*> before retrying again. Got null now."
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445087491445_0005",
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445062781478_0017",
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445094324383_0001"
+  ],
+  "logs_to_query_regex": [
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445087491445_0005",
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445062781478_0017",
+   "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445094324383_0001"
+  ],
+  "llm_template": "mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "mapreduce.cluster.local.dir for child: <*>"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "Launching attempt_1445087491445_0005_m_000001_0"
+  ],
+  "logs_to_query_regex": [
+   "Launching attempt_1445087491445_0005_m_000001_0"
+  ],
+  "llm_template": "Launching <*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Launching <*>"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "Assigned container container_1445087491445_0005_01_000002 to attempt_1445087491445_0005_m_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "Assigned container container_1445087491445_0005_01_000002 to attempt_1445087491445_0005_m_000000_0"
+  ],
+  "llm_template": "Assigned container <*> to <*>",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "Assigned container <*> to <*>"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Shuffle port returned by ContainerManager for attempt_1445087491445_0005_m_000001_0 : 13562",
+   "Shuffle port returned by ContainerManager for attempt_1445062781478_0015_m_000006_0 : 13562",
+   "Shuffle port returned by ContainerManager for attempt_1445087491445_0001_m_000002_0 : 13562"
+  ],
+  "logs_to_query_regex": [
+   "Shuffle port returned by ContainerManager for attempt_1445087491445_0005_m_000001_0 : 13562",
+   "Shuffle port returned by ContainerManager for attempt_1445062781478_0015_m_000006_0 : 13562",
+   "Shuffle port returned by ContainerManager for attempt_1445087491445_0001_m_000002_0 : 13562"
+  ],
+  "llm_template": "Shuffle port returned by ContainerManager for <*> : <*>",
+  "cluster_id": 229,
+  "update_success": true,
+  "template": "Shuffle port returned by ContainerManager for <*> : <*>"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "ATTEMPT_START task_1445087491445_0005_m_000002"
+  ],
+  "logs_to_query_regex": [
+   "ATTEMPT_START task_1445087491445_0005_m_000002"
+  ],
+  "llm_template": "ATTEMPT_START <*>",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "ATTEMPT_START <*>"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "ProcfsBasedProcessTree currently is supported only on Linux."
+  ],
+  "logs_to_query_regex": [
+   "ProcfsBasedProcessTree currently is supported only on Linux."
+  ],
+  "llm_template": "ProcfsBasedProcessTree currently is supported only on Linux.",
+  "cluster_id": 79,
+  "update_success": true,
+  "template": "ProcfsBasedProcessTree currently is supported only on Linux."
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "JVM with ID : jvm_1445087491445_0005_m_000002 asked for a task",
+   "JVM with ID : jvm_1445087491445_0006_m_000009 asked for a task",
+   "JVM with ID : jvm_1445087491445_0009_m_000018 asked for a task"
+  ],
+  "logs_to_query_regex": [
+   "JVM with ID : jvm_1445087491445_0005_m_000002 asked for a task",
+   "JVM with ID : jvm_1445087491445_0006_m_000009 asked for a task",
+   "JVM with ID : jvm_1445087491445_0009_m_000018 asked for a task"
+  ],
+  "llm_template": "JVM with ID : <*> asked for a task",
+  "cluster_id": 230,
+  "update_success": true,
+  "template": "JVM with ID : <*> asked for a task"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:55452",
+   "Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:54883",
+   "Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:57365"
+  ],
+  "logs_to_query_regex": [
+   "Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:55452",
+   "Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:54883",
+   "Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:57365"
+  ],
+  "llm_template": "Opening proxy : <*>",
+  "cluster_id": 47,
+  "update_success": true,
+  "template": "Opening proxy : <*>"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "JVM with ID: jvm_1445087491445_0005_m_000002 given task: attempt_1445087491445_0005_m_000000_0",
+   "JVM with ID: jvm_1445076437777_0001_m_000002 given task: attempt_1445076437777_0001_m_000000_1000",
+   "JVM with ID: jvm_1445094324383_0004_m_000014 given task: attempt_1445094324383_0004_m_000006_1"
+  ],
+  "logs_to_query_regex": [
+   "JVM with ID: jvm_1445087491445_0005_m_000002 given task: attempt_1445087491445_0005_m_000000_0",
+   "JVM with ID: jvm_1445076437777_0001_m_000002 given task: attempt_1445076437777_0001_m_000000_1000",
+   "JVM with ID: jvm_1445094324383_0004_m_000014 given task: attempt_1445094324383_0004_m_000006_1"
+  ],
+  "llm_template": "JVM with ID: <*> given task: <*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "JVM with ID: <*> given task: <*>"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "getResources() for application_1445087491445_0005: ask=7 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:13312, vCores:-7> knownNMs=3",
+   "getResources() for application_1445087491445_0005: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:6144, vCores:-14> knownNMs=3",
+   "getResources() for application_1445094324383_0002: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:13312, vCores:-7> knownNMs=3"
+  ],
+  "logs_to_query_regex": [
+   "getResources() for application_1445087491445_0005: ask=7 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:13312, vCores:-7> knownNMs=3",
+   "getResources() for application_1445087491445_0005: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:6144, vCores:-14> knownNMs=3",
+   "getResources() for application_1445094324383_0002: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:13312, vCores:-7> knownNMs=3"
+  ],
+  "llm_template": "getResources() for <*>: ask=<*> release=<*> <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:<*> knownNMs=<*>",
+  "cluster_id": 240,
+  "update_success": true,
+  "template": "getResources() for <*>: ask=<*> release= <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:<*> knownNMs=<*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "KILLING attempt_1445087491445_0005_m_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "KILLING attempt_1445087491445_0005_m_000000_0"
+  ],
+  "llm_template": "KILLING <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "KILLING <*>"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445087491445_0005_01_000002 taskAttempt attempt_1445087491445_0005_m_000000_0",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445182159119_0017_01_000004 taskAttempt attempt_1445182159119_0017_m_000002_0",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445062781478_0012_01_000004 taskAttempt attempt_1445062781478_0012_m_000002_0"
+  ],
+  "logs_to_query_regex": [
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445087491445_0005_01_000002 taskAttempt attempt_1445087491445_0005_m_000000_0",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445182159119_0017_01_000004 taskAttempt attempt_1445182159119_0017_m_000002_0",
+   "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445062781478_0012_01_000004 taskAttempt attempt_1445062781478_0012_m_000002_0"
+  ],
+  "llm_template": "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container <*> taskAttempt <*>",
+  "cluster_id": 235,
+  "update_success": true,
+  "template": "Processing the event EventType: <*> for container <*> taskAttempt <*>"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "mapreduce.task.io.sort.mb: 100"
+  ],
+  "logs_to_query_regex": [
+   "mapreduce.task.io.sort.mb: 100"
+  ],
+  "llm_template": "mapreduce.task.io.sort.mb: <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "mapreduce.task.io.sort.mb: <*>"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "Processing split: hdfs://msra-sa-41:9000/wordcount2.txt:402653184+134217728",
+   "Processing split: hdfs://msra-sa-41:9000/pageinput2.txt:536870912+134217728",
+   "Processing split: hdfs://msra-sa-41:9000/wordcount2.txt:1342177280+134217728"
+  ],
+  "logs_to_query_regex": [
+   "Processing split: hdfs://msra-sa-41:9000/wordcount2.txt:402653184+134217728",
+   "Processing split: hdfs://msra-sa-41:9000/pageinput2.txt:536870912+134217728",
+   "Processing split: hdfs://msra-sa-41:9000/wordcount2.txt:1342177280+134217728"
+  ],
+  "llm_template": "Processing split: hdfs://<*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Processing split: <*>+<*>"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "soft limit at 83886080"
+  ],
+  "logs_to_query_regex": [
+   "soft limit at 83886080"
+  ],
+  "llm_template": "soft limit at <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "soft limit at <*>"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "bufstart = 0; bufvoid = 104857600"
+  ],
+  "logs_to_query_regex": [
+   "bufstart = 0; bufvoid = 104857600"
+  ],
+  "llm_template": "bufstart = <*>; bufvoid = <*>",
+  "cluster_id": 63,
+  "update_success": true,
+  "template": "bufstart = <*>; bufvoid = <*>"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "kvstart = 26214396; length = 6553600"
+  ],
+  "logs_to_query_regex": [
+   "kvstart = 26214396; length = 6553600"
+  ],
+  "llm_template": "kvstart = <*>; length = <*>",
+  "cluster_id": 64,
+  "update_success": true,
+  "template": "kvstart = <*>; length = <*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer"
+  ],
+  "logs_to_query_regex": [
+   "Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer"
+  ],
+  "llm_template": "Map output collector class = <*>",
+  "cluster_id": 65,
+  "update_success": true,
+  "template": "Map output collector class = <*>$<*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "Received completed container container_1445087491445_0005_01_000002",
+   "Received completed container container_1445094324383_0001_01_000003",
+   "Received completed container container_1445062781478_0019_01_000007"
+  ],
+  "logs_to_query_regex": [
+   "Received completed container container_1445087491445_0005_01_000002",
+   "Received completed container container_1445094324383_0001_01_000003",
+   "Received completed container container_1445062781478_0019_01_000007"
+  ],
+  "llm_template": "Received completed container <*>",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "Received completed container <*>"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445087491445_0005_m_000000_0: Container killed by the ApplicationMaster.",
+   "Diagnostics report from attempt_1445087491445_0002_m_000004_0: Container killed by the ApplicationMaster.",
+   "Diagnostics report from attempt_1445144423722_0021_m_000002_0: Container killed by the ApplicationMaster."
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445087491445_0005_m_000000_0: Container killed by the ApplicationMaster.",
+   "Diagnostics report from attempt_1445087491445_0002_m_000004_0: Container killed by the ApplicationMaster.",
+   "Diagnostics report from attempt_1445144423722_0021_m_000002_0: Container killed by the ApplicationMaster."
+  ],
+  "llm_template": "Diagnostics report from <*>: Container killed by the ApplicationMaster.",
+  "cluster_id": 231,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: Container killed by the ApplicationMaster."
+ },
+ {
+  "iter": 52,
+  "logs_to_query": [
+   "Num completed Tasks: 1",
+   "Num completed Tasks: 10",
+   "Num completed Tasks: 13"
+  ],
+  "logs_to_query_regex": [
+   "Num completed Tasks: 1",
+   "Num completed Tasks: 10",
+   "Num completed Tasks: 13"
+  ],
+  "llm_template": "Num completed Tasks: <*>",
+  "cluster_id": 33,
+  "update_success": true,
+  "template": "Num completed Tasks: <*>"
+ },
+ {
+  "iter": 53,
+  "logs_to_query": [
+   "Task succeeded with attempt attempt_1445087491445_0005_m_000000_0",
+   "Task succeeded with attempt attempt_1445094324383_0004_m_000008_0",
+   "Task succeeded with attempt attempt_1445062781478_0015_m_000003_0"
+  ],
+  "logs_to_query_regex": [
+   "Task succeeded with attempt attempt_1445087491445_0005_m_000000_0",
+   "Task succeeded with attempt attempt_1445094324383_0004_m_000008_0",
+   "Task succeeded with attempt attempt_1445062781478_0015_m_000003_0"
+  ],
+  "llm_template": "Task succeeded with attempt <*>",
+  "cluster_id": 52,
+  "update_success": true,
+  "template": "Task succeeded with attempt <*>"
+ },
+ {
+  "iter": 54,
+  "logs_to_query": [
+   "Merging 7 sorted segments",
+   "Merging 13 sorted segments",
+   "Merging 8 sorted segments"
+  ],
+  "logs_to_query_regex": [
+   "Merging 7 sorted segments",
+   "Merging 13 sorted segments",
+   "Merging 8 sorted segments"
+  ],
+  "llm_template": "Merging <*> sorted segments",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Merging <*> sorted segments"
+ },
+ {
+  "iter": 55,
+  "logs_to_query": [
+   "Down to the last merge-pass, with 7 segments left of total size: 228411640 bytes",
+   "Down to the last merge-pass, with 5 segments left of total size: 180080717 bytes",
+   "Down to the last merge-pass, with 8 segments left of total size: 288330442 bytes"
+  ],
+  "logs_to_query_regex": [
+   "Down to the last merge-pass, with 7 segments left of total size: 228411640 bytes",
+   "Down to the last merge-pass, with 5 segments left of total size: 180080717 bytes",
+   "Down to the last merge-pass, with 8 segments left of total size: 288330442 bytes"
+  ],
+  "llm_template": "Down to the last merge-pass, with <*> segments left of total size: <*> bytes",
+  "cluster_id": 250,
+  "update_success": true,
+  "template": "Down to the last merge-pass, with <*> segments left of total size: <*> bytes"
+ },
+ {
+  "iter": 56,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_m_000000_0: Shuffling to disk since 227948846 is greater than maxSingleShuffleLimit (32663142)",
+   "attempt_1445182159119_0004_m_000002_0: Shuffling to disk since 216991624 is greater than maxSingleShuffleLimit (32663142)",
+   "attempt_1445094324383_0001_m_000005_0: Shuffling to disk since 216990140 is greater than maxSingleShuffleLimit (35232152)"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_m_000000_0: Shuffling to disk since 227948846 is greater than maxSingleShuffleLimit (32663142)",
+   "attempt_1445182159119_0004_m_000002_0: Shuffling to disk since 216991624 is greater than maxSingleShuffleLimit (32663142)",
+   "attempt_1445094324383_0001_m_000005_0: Shuffling to disk since 216990140 is greater than maxSingleShuffleLimit (35232152)"
+  ],
+  "llm_template": "<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>)",
+  "cluster_id": 239,
+  "update_success": true,
+  "template": "<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>)"
+ },
+ {
+  "iter": 57,
+  "logs_to_query": [
+   "fetcher#2 about to shuffle output of map attempt_1445087491445_0005_m_000000_0 decomp: 227948846 len: 227948850 to DISK",
+   "fetcher#3 about to shuffle output of map attempt_1445087491445_0002_m_000007_1 decomp: 216987422 len: 216987426 to DISK",
+   "fetcher#5 about to shuffle output of map attempt_1445076437777_0005_m_000009_0 decomp: 56695786 len: 56695790 to DISK"
+  ],
+  "logs_to_query_regex": [
+   "fetcher#2 about to shuffle output of map attempt_1445087491445_0005_m_000000_0 decomp: 227948846 len: 227948850 to DISK",
+   "fetcher#3 about to shuffle output of map attempt_1445087491445_0002_m_000007_1 decomp: 216987422 len: 216987426 to DISK",
+   "fetcher#5 about to shuffle output of map attempt_1445076437777_0005_m_000009_0 decomp: 56695786 len: 56695790 to DISK"
+  ],
+  "llm_template": "fetcher#<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK",
+  "cluster_id": 251,
+  "update_success": true,
+  "template": "fetcher#<*> about to shuffle output of map <*>: <*> len: <*> to DISK"
+ },
+ {
+  "iter": 58,
+  "logs_to_query": [
+   "Read 227948850 bytes from map-output for attempt_1445087491445_0005_m_000000_0",
+   "Read 60515791 bytes from map-output for attempt_1445062781478_0018_m_000003_1",
+   "Read 60514810 bytes from map-output for attempt_1445182159119_0012_m_000005_0"
+  ],
+  "logs_to_query_regex": [
+   "Read 227948850 bytes from map-output for attempt_1445087491445_0005_m_000000_0",
+   "Read 60515791 bytes from map-output for attempt_1445062781478_0018_m_000003_1",
+   "Read 60514810 bytes from map-output for attempt_1445182159119_0012_m_000005_0"
+  ],
+  "llm_template": "Read <*> bytes from map-output for <*>",
+  "cluster_id": 96,
+  "update_success": true,
+  "template": "Read <*> bytes from map-output for <*>"
+ },
+ {
+  "iter": 59,
+  "logs_to_query": [
+   "OutputCommitter set in config null"
+  ],
+  "logs_to_query_regex": [
+   "OutputCommitter set in config null"
+  ],
+  "llm_template": "OutputCommitter set in config <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "OutputCommitter set in config <*>"
+ },
+ {
+  "iter": 60,
+  "logs_to_query": [
+   "Starting flush of map output"
+  ],
+  "logs_to_query_regex": [
+   "Starting flush of map output"
+  ],
+  "llm_template": "Starting flush of map output",
+  "cluster_id": 49,
+  "update_success": true,
+  "template": "Starting flush of map output"
+ },
+ {
+  "iter": 61,
+  "logs_to_query": [
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@4c185bfb",
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@5b904247",
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@309134f7"
+  ],
+  "logs_to_query_regex": [
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@4c185bfb",
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@5b904247",
+   "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@309134f7"
+  ],
+  "llm_template": "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@<*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Using ShuffleConsumerPlugin: <*>"
+ },
+ {
+  "iter": 62,
+  "logs_to_query": [
+   "Instantiated MRClientService at MSRA-SA-41.fareast.corp.microsoft.com/10.190.173.170:32060",
+   "Instantiated MRClientService at MSRA-SA-39.fareast.corp.microsoft.com/172.22.149.145:39663",
+   "Instantiated MRClientService at MSRA-SA-39.fareast.corp.microsoft.com/172.22.149.145:25270"
+  ],
+  "logs_to_query_regex": [
+   "Instantiated MRClientService at MSRA-SA-41.fareast.corp.microsoft.com/10.190.173.170:32060",
+   "Instantiated MRClientService at MSRA-SA-39.fareast.corp.microsoft.com/172.22.149.145:39663",
+   "Instantiated MRClientService at MSRA-SA-39.fareast.corp.microsoft.com/172.22.149.145:25270"
+  ],
+  "llm_template": "Instantiated MRClientService at <*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Instantiated MRClientService at <*>"
+ },
+ {
+  "iter": 63,
+  "logs_to_query": [
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@14c86ad8",
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@4dfd671f",
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@24207655"
+  ],
+  "logs_to_query_regex": [
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@14c86ad8",
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@4dfd671f",
+   "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@24207655"
+  ],
+  "llm_template": "Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@<*>",
+  "cluster_id": 45,
+  "update_success": true,
+  "template": "Using ResourceCalculatorProcessTree : <*>"
+ },
+ {
+  "iter": 64,
+  "logs_to_query": [
+   "Task:attempt_1445087491445_0005_m_000004_0 is done. And is in the process of committing",
+   "Task:attempt_1445094324383_0003_m_000003_0 is done. And is in the process of committing",
+   "Task:attempt_1445094324383_0002_m_000005_0 is done. And is in the process of committing"
+  ],
+  "logs_to_query_regex": [
+   "Task:attempt_1445087491445_0005_m_000004_0 is done. And is in the process of committing",
+   "Task:attempt_1445094324383_0003_m_000003_0 is done. And is in the process of committing",
+   "Task:attempt_1445094324383_0002_m_000005_0 is done. And is in the process of committing"
+  ],
+  "llm_template": "Task:<*> is done. And is in the process of committing",
+  "cluster_id": 234,
+  "update_success": true,
+  "template": "Task:<*> is done. And is in the process of committing"
+ },
+ {
+  "iter": 65,
+  "logs_to_query": [
+   "Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler"
+  ],
+  "logs_to_query_regex": [
+   "Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler"
+  ],
+  "llm_template": "Registering class <*> for class <*>",
+  "cluster_id": 68,
+  "update_success": true,
+  "template": "Registering class <*> for class <*>"
+ },
+ {
+  "iter": 66,
+  "logs_to_query": [
+   "Task 'attempt_1445087491445_0005_m_000004_0' done.",
+   "Task 'attempt_1445062781478_0020_m_000009_0' done.",
+   "Task 'attempt_1445076437777_0005_m_000009_0' done."
+  ],
+  "logs_to_query_regex": [
+   "Task 'attempt_1445087491445_0005_m_000004_0' done.",
+   "Task 'attempt_1445062781478_0020_m_000009_0' done.",
+   "Task 'attempt_1445076437777_0005_m_000009_0' done."
+  ],
+  "llm_template": "Task <*> done.",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Task <*> done."
+ },
+ {
+  "iter": 67,
+  "logs_to_query": [
+   "Got allocated containers 4",
+   "Got allocated containers 3",
+   "Got allocated containers 5"
+  ],
+  "logs_to_query_regex": [
+   "Got allocated containers 4",
+   "Got allocated containers 3",
+   "Got allocated containers 5"
+  ],
+  "llm_template": "Got allocated containers <*>",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "Got allocated containers <*>"
+ },
+ {
+  "iter": 68,
+  "logs_to_query": [
+   "Done acknowledgement from attempt_1445087491445_0005_m_000000_0",
+   "Done acknowledgement from attempt_1445182159119_0005_m_000003_0",
+   "Done acknowledgement from attempt_1445182159119_0002_m_000009_1"
+  ],
+  "logs_to_query_regex": [
+   "Done acknowledgement from attempt_1445087491445_0005_m_000000_0",
+   "Done acknowledgement from attempt_1445182159119_0005_m_000003_0",
+   "Done acknowledgement from attempt_1445182159119_0002_m_000009_1"
+  ],
+  "llm_template": "Done acknowledgement from <*>",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "Done acknowledgement from <*>"
+ },
+ {
+  "iter": 69,
+  "logs_to_query": [
+   "Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog"
+  ],
+  "logs_to_query_regex": [
+   "Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog"
+  ],
+  "llm_template": "Logging to org.slf4j.impl.Log4jLoggerAdapter(<*>) via <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Logging to <*>(<*>) via <*>"
+ },
+ {
+  "iter": 70,
+  "logs_to_query": [
+   "OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter"
+  ],
+  "logs_to_query_regex": [
+   "OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter"
+  ],
+  "llm_template": "OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "OutputCommitter is <*>"
+ },
+ {
+  "iter": 71,
+  "logs_to_query": [
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_32067_mapreduce____.dbisl5\\webapp",
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_39670_mapreduce____y341kg\\webapp",
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_19907_mapreduce____lryhnl\\webapp"
+  ],
+  "logs_to_query_regex": [
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_32067_mapreduce____.dbisl5\\webapp",
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_39670_mapreduce____y341kg\\webapp",
+   "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\2\\Jetty_0_0_0_0_19907_mapreduce____lryhnl\\webapp"
+  ],
+  "llm_template": "Extract jar:file:<*>!/webapps/mapreduce to <*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Extract jar:<*> to <*>"
+ },
+ {
+  "iter": 72,
+  "logs_to_query": [
+   "completedMapPercent 0.53846157 totalResourceLimit:<memory:16384, vCores:-4> finalMapResourceLimit:<memory:8192, vCores:-2> finalReduceResourceLimit:<memory:8192, vCores:-2> netScheduledMapResource:<memory:12288, vCores:12> netScheduledReduceResource:<memory:0, vCores:0>"
+  ],
+  "logs_to_query_regex": [
+   "completedMapPercent 0.53846157 totalResourceLimit:<memory:16384, vCores:-4> finalMapResourceLimit:<memory:8192, vCores:-2> finalReduceResourceLimit:<memory:8192, vCores:-2> netScheduledMapResource:<memory:12288, vCores:12> netScheduledReduceResource:<memory:0, vCores:0>"
+  ],
+  "llm_template": "completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:<*> finalMapResourceLimit:<memory:<*>, vCores:<*> finalReduceResourceLimit:<memory:<*>, vCores:<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>",
+  "cluster_id": 243,
+  "update_success": true,
+  "template": "completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:<*> finalMapResourceLimit:<memory:<*>, vCores:<*> finalReduceResourceLimit:<memory:<*>, vCores:<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>"
+ },
+ {
+  "iter": 73,
+  "logs_to_query": [
+   "Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)"
+  ],
+  "logs_to_query_regex": [
+   "Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)"
+  ],
+  "llm_template": "Added global filter <*> (class=<*>)",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Added global filter <*> (class=<*>)"
+ },
+ {
+  "iter": 74,
+  "logs_to_query": [
+   "maxTaskFailuresPerNode is 3"
+  ],
+  "logs_to_query_regex": [
+   "maxTaskFailuresPerNode is 3"
+  ],
+  "llm_template": "maxTaskFailuresPerNode is <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "maxTaskFailuresPerNode is <*>"
+ },
+ {
+  "iter": 75,
+  "logs_to_query": [
+   "Registered webapp guice modules"
+  ],
+  "logs_to_query_regex": [
+   "Registered webapp guice modules"
+  ],
+  "llm_template": "Registered webapp guice modules",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Registered webapp guice modules"
+ },
+ {
+  "iter": 76,
+  "logs_to_query": [
+   "ERROR IN CONTACTING RM."
+  ],
+  "logs_to_query_regex": [
+   "ERROR IN CONTACTING RM."
+  ],
+  "llm_template": "ERROR IN CONTACTING RM.",
+  "cluster_id": 41,
+  "update_success": true,
+  "template": "ERROR IN CONTACTING RM."
+ },
+ {
+  "iter": 77,
+  "logs_to_query": [
+   "for url=13562/mapOutput?job=job_1445087491445_0005&reduce=0&map=attempt_1445087491445_0005_m_000010_0 sent hash and received reply",
+   "for url=13562/mapOutput?job=job_1445062781478_0020&reduce=0&map=attempt_1445062781478_0020_m_000005_0 sent hash and received reply",
+   "for url=13562/mapOutput?job=job_1445087491445_0002&reduce=0&map=attempt_1445087491445_0002_m_000006_1000 sent hash and received reply"
+  ],
+  "logs_to_query_regex": [
+   "for url=13562/mapOutput?job=job_1445087491445_0005&reduce=0&map=attempt_1445087491445_0005_m_000010_0 sent hash and received reply",
+   "for url=13562/mapOutput?job=job_1445062781478_0020&reduce=0&map=attempt_1445062781478_0020_m_000005_0 sent hash and received reply",
+   "for url=13562/mapOutput?job=job_1445087491445_0002&reduce=0&map=attempt_1445087491445_0002_m_000006_1000 sent hash and received reply"
+  ],
+  "llm_template": "for url=<*>/mapOutput?job=<*>&reduce=<*>&map=<*> sent hash and received reply",
+  "cluster_id": 81,
+  "update_success": true,
+  "template": "for url=<*> sent hash and received reply"
+ },
+ {
+  "iter": 78,
+  "logs_to_query": [
+   "Jetty bound to port 32067",
+   "Jetty bound to port 22924",
+   "Jetty bound to port 49789"
+  ],
+  "logs_to_query_regex": [
+   "Jetty bound to port 32067",
+   "Jetty bound to port 22924",
+   "Jetty bound to port 49789"
+  ],
+  "llm_template": "Jetty bound to port <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Jetty bound to port <*>"
+ },
+ {
+  "iter": 79,
+  "logs_to_query": [
+   "blacklistDisablePercent is 33"
+  ],
+  "logs_to_query_regex": [
+   "blacklistDisablePercent is 33"
+  ],
+  "llm_template": "blacklistDisablePercent is <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "blacklistDisablePercent is <*>"
+ },
+ {
+  "iter": 80,
+  "logs_to_query": [
+   "Calling handler for JobFinishedEvent"
+  ],
+  "logs_to_query_regex": [
+   "Calling handler for JobFinishedEvent"
+  ],
+  "llm_template": "Calling handler for JobFinishedEvent",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Calling handler for JobFinishedEvent"
+ },
+ {
+  "iter": 81,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_r_000000_0: Got 3 new map-outputs",
+   "attempt_1445144423722_0021_r_000000_0: Got 3 new map-outputs",
+   "attempt_1445062781478_0014_r_000000_0: Got 3 new map-outputs"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_r_000000_0: Got 3 new map-outputs",
+   "attempt_1445144423722_0021_r_000000_0: Got 3 new map-outputs",
+   "attempt_1445062781478_0014_r_000000_0: Got 3 new map-outputs"
+  ],
+  "llm_template": "<*>: Got <*> new map-outputs",
+  "cluster_id": 50,
+  "update_success": true,
+  "template": "<*>: Got <*> new map-outputs"
+ },
+ {
+  "iter": 82,
+  "logs_to_query": [
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1.jhist to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0015/job_1445182159119_0015_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0008/job_1445087491445_0008_2_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "logs_to_query_regex": [
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1.jhist to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0015/job_1445182159119_0015_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0008/job_1445087491445_0008_2_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "llm_template": "Copying hdfs://<*>/tmp/hadoop-yarn/staging/msrabi/.staging/job_<*>_1.jhist to hdfs://<*>/tmp/hadoop-yarn/staging",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Copying <*> to <*>"
+ },
+ {
+  "iter": 83,
+  "logs_to_query": [
+   "I/O error constructing remote block reader."
+  ],
+  "logs_to_query_regex": [
+   "I/O error constructing remote block reader."
+  ],
+  "llm_template": "I/O error constructing remote block reader.",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "I/O error constructing remote block reader."
+ },
+ {
+  "iter": 84,
+  "logs_to_query": [
+   "Connecting to ResourceManager at MSRA-SA-41/10.190.173.170:8030",
+   "Connecting to ResourceManager at msra-sa-41/10.190.173.170:8030"
+  ],
+  "logs_to_query_regex": [
+   "Connecting to ResourceManager at MSRA-SA-41/10.190.173.170:8030",
+   "Connecting to ResourceManager at msra-sa-41/10.190.173.170:8030"
+  ],
+  "llm_template": "Connecting to ResourceManager at <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Connecting to ResourceManager at <*>"
+ },
+ {
+  "iter": 85,
+  "logs_to_query": [
+   "Successfully connected to /10.190.173.170:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073742826_2022",
+   "Successfully connected to /10.190.173.170:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073742829_2025",
+   "Successfully connected to /10.86.169.121:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073744042_3267"
+  ],
+  "logs_to_query_regex": [
+   "Successfully connected to /10.190.173.170:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073742826_2022",
+   "Successfully connected to /10.190.173.170:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073742829_2025",
+   "Successfully connected to /10.86.169.121:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073744042_3267"
+  ],
+  "llm_template": "Successfully connected to <*> for BP-<*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Successfully connected to <*> for <*>"
+ },
+ {
+  "iter": 86,
+  "logs_to_query": [
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000011_1'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445182159119_0015_m_000003_1'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000008_0'"
+  ],
+  "logs_to_query_regex": [
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000011_1'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445182159119_0015_m_000003_1'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000008_0'"
+  ],
+  "llm_template": "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000011_1'",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Ignoring obsolete output of KILLED map-task: '<*>'"
+ },
+ {
+  "iter": 87,
+  "logs_to_query": [
+   "maxContainerCapability: <memory:8192, vCores:32>"
+  ],
+  "logs_to_query_regex": [
+   "maxContainerCapability: <memory:8192, vCores:32>"
+  ],
+  "llm_template": "maxContainerCapability: <memory:<*>, vCores:<*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "maxContainerCapability: <memory:<*>, vCores:<*>"
+ },
+ {
+  "iter": 88,
+  "logs_to_query": [
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000011_0'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0004_m_000004_0'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0010_m_000000_0'"
+  ],
+  "logs_to_query_regex": [
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0005_m_000011_0'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0004_m_000004_0'",
+   "Ignoring obsolete output of KILLED map-task: 'attempt_1445087491445_0010_m_000000_0'"
+  ],
+  "llm_template": "Ignoring obsolete output of KILLED map-task: '<*>'",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Ignoring obsolete output of KILLED map-task: '<*>'"
+ },
+ {
+  "iter": 89,
+  "logs_to_query": [
+   "MergerManager: memoryLimit=130652568, maxSingleShuffleLimit=32663142, mergeThreshold=86230696, ioSortFactor=10, memToMemMergeOutputsThreshold=10"
+  ],
+  "logs_to_query_regex": [
+   "MergerManager: memoryLimit=130652568, maxSingleShuffleLimit=32663142, mergeThreshold=86230696, ioSortFactor=10, memToMemMergeOutputsThreshold=10"
+  ],
+  "llm_template": "MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>"
+ },
+ {
+  "iter": 90,
+  "logs_to_query": [
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0014/job_1445062781478_0014_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445094324383_0005/job_1445094324383_0005_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "logs_to_query_regex": [
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0014/job_1445062781478_0014_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging",
+   "Copying hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445094324383_0005/job_1445094324383_0005_1_conf.xml to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "llm_template": "Copying hdfs://<*>/tmp/hadoop-yarn/staging/msrabi/.staging/job_<*>_1_conf.xml to hdfs://<*>/tmp/hadoop-yarn/staging",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Copying <*> to <*>"
+ },
+ {
+  "iter": 91,
+  "logs_to_query": [
+   "MapTask metrics system shutdown complete.",
+   "ReduceTask metrics system shutdown complete."
+  ],
+  "logs_to_query_regex": [
+   "MapTask metrics system shutdown complete.",
+   "ReduceTask metrics system shutdown complete."
+  ],
+  "llm_template": "MapTask metrics system shutdown complete.",
+  "cluster_id": 54,
+  "update_success": true,
+  "template": "<*> metrics system shutdown complete."
+ },
+ {
+  "iter": 92,
+  "logs_to_query": [
+   "Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:32067"
+  ],
+  "logs_to_query_regex": [
+   "Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:32067"
+  ],
+  "llm_template": "Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Started <*>"
+ },
+ {
+  "iter": 93,
+  "logs_to_query": [
+   "MapTask metrics system stopped."
+  ],
+  "logs_to_query_regex": [
+   "MapTask metrics system stopped."
+  ],
+  "llm_template": "MapTask metrics system stopped.",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "<*> metrics system stopped."
+ },
+ {
+  "iter": 94,
+  "logs_to_query": [
+   "Stopping MapTask metrics system..."
+  ],
+  "logs_to_query_regex": [
+   "Stopping MapTask metrics system..."
+  ],
+  "llm_template": "Stopping MapTask metrics system...",
+  "cluster_id": 37,
+  "update_success": true,
+  "template": "Stopping <*> metrics system..."
+ },
+ {
+  "iter": 95,
+  "logs_to_query": [
+   "Size of containertokens_dob is 1"
+  ],
+  "logs_to_query_regex": [
+   "Size of containertokens_dob is 1"
+  ],
+  "llm_template": "Size of <*> is <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Size of containertokens_dob is <*>"
+ },
+ {
+  "iter": 96,
+  "logs_to_query": [
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445087491445_0005.",
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445144423722_0024.",
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445087491445_0006."
+  ],
+  "logs_to_query_regex": [
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445087491445_0005.",
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445144423722_0024.",
+   "MRAppMaster launching normal, non-uberized, multi-container job job_1445087491445_0006."
+  ],
+  "llm_template": "MRAppMaster launching normal, non-uberized, multi-container job <*>.",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "MRAppMaster launching normal, non-uberized, multi-container job <*>"
+ },
+ {
+  "iter": 97,
+  "logs_to_query": [
+   "yarn.client.max-cached-nodemanagers-proxies : 0"
+  ],
+  "logs_to_query_regex": [
+   "yarn.client.max-cached-nodemanagers-proxies : 0"
+  ],
+  "llm_template": "yarn.client.max-cached-nodemanagers-proxies : <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "yarn.client.max-cached-nodemanagers-proxies : <*>"
+ },
+ {
+  "iter": 98,
+  "logs_to_query": [
+   "Setting job diagnostics to"
+  ],
+  "logs_to_query_regex": [
+   "Setting job diagnostics to"
+  ],
+  "llm_template": "Setting job diagnostics to",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Setting job diagnostics to"
+ },
+ {
+  "iter": 99,
+  "logs_to_query": [
+   "Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server"
+  ],
+  "logs_to_query_regex": [
+   "Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server"
+  ],
+  "llm_template": "Adding protocol <*> to the server",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Adding protocol <*> to the server"
+ },
+ {
+  "iter": 100,
+  "logs_to_query": [
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445087491445_0005_m_000011",
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445087491445_0003_m_000009",
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445175094696_0001_m_000002"
+  ],
+  "logs_to_query_regex": [
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445087491445_0005_m_000011",
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445087491445_0003_m_000009",
+   "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445175094696_0001_m_000002"
+  ],
+  "llm_template": "DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>"
+ },
+ {
+  "iter": 101,
+  "logs_to_query": [
+   "We launched 1 speculations. Sleeping 15000 milliseconds."
+  ],
+  "logs_to_query_regex": [
+   "We launched 1 speculations. Sleeping 15000 milliseconds."
+  ],
+  "llm_template": "We launched <*> speculations. Sleeping <*> milliseconds.",
+  "cluster_id": 91,
+  "update_success": true,
+  "template": "We launched <*> speculations. Sleeping <*> milliseconds."
+ },
+ {
+  "iter": 102,
+  "logs_to_query": [
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445087491445_0005",
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445087491445_0003",
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445094324383_0002"
+  ],
+  "logs_to_query_regex": [
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445087491445_0005",
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445087491445_0003",
+   "History url is http://MSRA-SA-41.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445094324383_0002"
+  ],
+  "llm_template": "History url is http://MSRA-SA-<*>.fareast.corp.microsoft.com:19888/jobhistory/job/<*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "History url is <*>"
+ },
+ {
+  "iter": 103,
+  "logs_to_query": [
+   "JOB_CREATE job_1445087491445_0005"
+  ],
+  "logs_to_query_regex": [
+   "JOB_CREATE job_1445087491445_0005"
+  ],
+  "llm_template": "JOB_CREATE <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "JOB_CREATE <*>"
+ },
+ {
+  "iter": 104,
+  "logs_to_query": [
+   "Putting shuffle token in serviceData"
+  ],
+  "logs_to_query_regex": [
+   "Putting shuffle token in serviceData"
+  ],
+  "llm_template": "Putting shuffle token in <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Putting shuffle token in serviceData"
+ },
+ {
+  "iter": 105,
+  "logs_to_query": [
+   "Reduce slow start threshold reached. Scheduling reduces."
+  ],
+  "logs_to_query_regex": [
+   "Reduce slow start threshold reached. Scheduling reduces."
+  ],
+  "llm_template": "Reduce slow start threshold reached. Scheduling reduces.",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Reduce slow start threshold reached. Scheduling reduces."
+ },
+ {
+  "iter": 106,
+  "logs_to_query": [
+   "Exception in createBlockOutputStream"
+  ],
+  "logs_to_query_regex": [
+   "Exception in createBlockOutputStream"
+  ],
+  "llm_template": "Exception in createBlockOutputStream",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Exception in createBlockOutputStream"
+ },
+ {
+  "iter": 107,
+  "logs_to_query": [
+   "Default file system [hdfs://msra-sa-41:9000]"
+  ],
+  "logs_to_query_regex": [
+   "Default file system [hdfs://msra-sa-41:9000]"
+  ],
+  "llm_template": "Default file system [hdfs://<*>]",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Default file system [<*>]"
+ },
+ {
+  "iter": 108,
+  "logs_to_query": [
+   "Web app /mapreduce started at 32067",
+   "Web app /mapreduce started at 24289",
+   "Web app /mapreduce started at 49789"
+  ],
+  "logs_to_query_regex": [
+   "Web app /mapreduce started at 32067",
+   "Web app /mapreduce started at 24289",
+   "Web app /mapreduce started at 49789"
+  ],
+  "llm_template": "Web app /mapreduce started at <*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Web app <*> started at <*>"
+ },
+ {
+  "iter": 109,
+  "logs_to_query": [
+   "Socket Reader #1 for port 32070: readAndProcess from client 10.86.164.9 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]",
+   "Socket Reader #1 for port 4824: readAndProcess from client 10.190.173.170 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]",
+   "Socket Reader #1 for port 47384: readAndProcess from client 172.22.149.145 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]"
+  ],
+  "logs_to_query_regex": [
+   "Socket Reader #1 for port 32070: readAndProcess from client 10.86.164.9 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]",
+   "Socket Reader #1 for port 4824: readAndProcess from client 10.190.173.170 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]",
+   "Socket Reader #1 for port 47384: readAndProcess from client 172.22.149.145 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]"
+  ],
+  "llm_template": "Socket Reader <*> for port <*>: readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]",
+  "cluster_id": 259,
+  "update_success": true,
+  "template": "Socket Reader <*> for port <*> readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]"
+ },
+ {
+  "iter": 110,
+  "logs_to_query": [
+   "Could not delete hdfs://msra-sa-41:9000/out/out2/_temporary/1/_temporary/attempt_1445087491445_0005_m_000011_1",
+   "Could not delete hdfs://msra-sa-41:9000/out/out1/_temporary/1/_temporary/attempt_1445087491445_0004_m_000007_0",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out3/_temporary/1/_temporary/attempt_1445062781478_0018_m_000008_0"
+  ],
+  "logs_to_query_regex": [
+   "Could not delete hdfs://msra-sa-41:9000/out/out2/_temporary/1/_temporary/attempt_1445087491445_0005_m_000011_1",
+   "Could not delete hdfs://msra-sa-41:9000/out/out1/_temporary/1/_temporary/attempt_1445087491445_0004_m_000007_0",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out3/_temporary/1/_temporary/attempt_1445062781478_0018_m_000008_0"
+  ],
+  "llm_template": "Could not delete hdfs://<*>/out/out2/_temporary/1/_temporary/attempt_<*>_<*>_m_000011_1",
+  "cluster_id": 35,
+  "update_success": true,
+  "template": "Could not delete <*>"
+ },
+ {
+  "iter": 111,
+  "logs_to_query": [
+   "Could not delete hdfs://msra-sa-41:9000/out/out2/_temporary/1/_temporary/attempt_1445087491445_0005_m_000011_0",
+   "Could not delete hdfs://msra-sa-41:9000/out/out5/_temporary/1/_temporary/attempt_1445094324383_0005_m_000008_2",
+   "Could not delete hdfs://msra-sa-41:9000/out/out3/_temporary/1/_temporary/attempt_1445087491445_0009_m_000006_2"
+  ],
+  "logs_to_query_regex": [
+   "Could not delete hdfs://msra-sa-41:9000/out/out2/_temporary/1/_temporary/attempt_1445087491445_0005_m_000011_0",
+   "Could not delete hdfs://msra-sa-41:9000/out/out5/_temporary/1/_temporary/attempt_1445094324383_0005_m_000008_2",
+   "Could not delete hdfs://msra-sa-41:9000/out/out3/_temporary/1/_temporary/attempt_1445087491445_0009_m_000006_2"
+  ],
+  "llm_template": "Could not delete hdfs://<*>/out/out<*>/_temporary/1/_temporary/attempt_<*>_m_<*>_<*>",
+  "cluster_id": 35,
+  "update_success": true,
+  "template": "Could not delete <*>"
+ },
+ {
+  "iter": 112,
+  "logs_to_query": [
+   "Stopping server on 32070",
+   "Stopping server on 56183",
+   "Stopping server on 10559"
+  ],
+  "logs_to_query_regex": [
+   "Stopping server on 32070",
+   "Stopping server on 56183",
+   "Stopping server on 10559"
+  ],
+  "llm_template": "Stopping server on <*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Stopping server on <*>"
+ },
+ {
+  "iter": 113,
+  "logs_to_query": [
+   "Assigning MSRA-SA-39.fareast.corp.microsoft.com:13562 with 1 to fetcher#5",
+   "Assigning 04DN8IQ.fareast.corp.microsoft.com:13562 with 1 to fetcher#5",
+   "Assigning MSRA-SA-41.fareast.corp.microsoft.com:13562 with 7 to fetcher#5"
+  ],
+  "logs_to_query_regex": [
+   "Assigning MSRA-SA-39.fareast.corp.microsoft.com:13562 with 1 to fetcher#5",
+   "Assigning 04DN8IQ.fareast.corp.microsoft.com:13562 with 1 to fetcher#5",
+   "Assigning MSRA-SA-41.fareast.corp.microsoft.com:13562 with 7 to fetcher#5"
+  ],
+  "llm_template": "Assigning <*> with <*> to fetcher#<*>",
+  "cluster_id": 73,
+  "update_success": true,
+  "template": "Assigning <*> with <*> to <*>"
+ },
+ {
+  "iter": 114,
+  "logs_to_query": [
+   "Excluding datanode 10.86.169.121:50010",
+   "Excluding datanode 10.86.165.66:50010",
+   "Excluding datanode 10.86.164.9:50010"
+  ],
+  "logs_to_query_regex": [
+   "Excluding datanode 10.86.169.121:50010",
+   "Excluding datanode 10.86.165.66:50010",
+   "Excluding datanode 10.86.164.9:50010"
+  ],
+  "llm_template": "Excluding datanode <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Excluding datanode <*>"
+ },
+ {
+  "iter": 115,
+  "logs_to_query": [
+   "We are finishing cleanly so this is the last retry"
+  ],
+  "logs_to_query_regex": [
+   "We are finishing cleanly so this is the last retry"
+  ],
+  "llm_template": "We are finishing cleanly so this is the last retry",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "We are finishing cleanly so this is the last retry"
+ },
+ {
+  "iter": 116,
+  "logs_to_query": [
+   "Scheduling a redundant attempt for task task_1445087491445_0005_m_000011",
+   "Scheduling a redundant attempt for task task_1445144423722_0020_m_000008",
+   "Scheduling a redundant attempt for task task_1445094324383_0004_m_000006"
+  ],
+  "logs_to_query_regex": [
+   "Scheduling a redundant attempt for task task_1445087491445_0005_m_000011",
+   "Scheduling a redundant attempt for task task_1445144423722_0020_m_000008",
+   "Scheduling a redundant attempt for task task_1445094324383_0004_m_000006"
+  ],
+  "llm_template": "Scheduling a redundant attempt for task <*>",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "Scheduling a redundant attempt for task <*>"
+ },
+ {
+  "iter": 117,
+  "logs_to_query": [
+   "Commit-pending state update from attempt_1445087491445_0005_r_000000_1",
+   "Commit-pending state update from attempt_1445062781478_0014_r_000000_0",
+   "Commit-pending state update from attempt_1445094324383_0001_r_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "Commit-pending state update from attempt_1445087491445_0005_r_000000_1",
+   "Commit-pending state update from attempt_1445062781478_0014_r_000000_0",
+   "Commit-pending state update from attempt_1445094324383_0001_r_000000_0"
+  ],
+  "llm_template": "Commit-pending state update from <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "Commit-pending state update from <*>"
+ },
+ {
+  "iter": 118,
+  "logs_to_query": [
+   "IPC Server listener on 32060: starting",
+   "IPC Server listener on 62304: starting",
+   "Stopping IPC Server listener on 60153"
+  ],
+  "logs_to_query_regex": [
+   "IPC Server listener on 32060: starting",
+   "IPC Server listener on 62304: starting",
+   "Stopping IPC Server listener on 60153"
+  ],
+  "llm_template": "IPC Server listener on <*>: starting",
+  "cluster_id": 69,
+  "update_success": true,
+  "template": "IPC Server listener on <*>: starting"
+ },
+ {
+  "iter": 119,
+  "logs_to_query": [
+   "Upper limit on the thread pool size is 500"
+  ],
+  "logs_to_query_regex": [
+   "Upper limit on the thread pool size is 500"
+  ],
+  "llm_template": "Upper limit on the thread pool size is <*>",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Upper limit on the thread pool size is <*>"
+ },
+ {
+  "iter": 120,
+  "logs_to_query": [
+   "Issuing kill to other attempt attempt_1445087491445_0005_m_000009_2",
+   "Issuing kill to other attempt attempt_1445062781478_0018_m_000004_0",
+   "Issuing kill to other attempt attempt_1445182159119_0002_m_000004_0"
+  ],
+  "logs_to_query_regex": [
+   "Issuing kill to other attempt attempt_1445087491445_0005_m_000009_2",
+   "Issuing kill to other attempt attempt_1445062781478_0018_m_000004_0",
+   "Issuing kill to other attempt attempt_1445182159119_0002_m_000004_0"
+  ],
+  "llm_template": "Issuing kill to other attempt <*>",
+  "cluster_id": 71,
+  "update_success": true,
+  "template": "Issuing kill to other attempt <*>"
+ },
+ {
+  "iter": 121,
+  "logs_to_query": [
+   "queue: default"
+  ],
+  "logs_to_query_regex": [
+   "queue: default"
+  ],
+  "llm_template": "queue: <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "queue: <*>"
+ },
+ {
+  "iter": 122,
+  "logs_to_query": [
+   "Http request log for http.requests.mapreduce is not defined"
+  ],
+  "logs_to_query_regex": [
+   "Http request log for http.requests.mapreduce is not defined"
+  ],
+  "llm_template": "Http request log for <*> is not defined",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "Http request log for <*> is not defined"
+ },
+ {
+  "iter": 123,
+  "logs_to_query": [
+   "Assigned to reduce"
+  ],
+  "logs_to_query_regex": [
+   "Assigned to reduce"
+  ],
+  "llm_template": "Assigned to <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Assigned to reduce"
+ },
+ {
+  "iter": 124,
+  "logs_to_query": [
+   "Merging 13 files, 2831866878 bytes from disk",
+   "Merging 10 files, 2125289789 bytes from disk",
+   "Merging 10 files, 601334942 bytes from disk"
+  ],
+  "logs_to_query_regex": [
+   "Merging 13 files, 2831866878 bytes from disk",
+   "Merging 10 files, 2125289789 bytes from disk",
+   "Merging 10 files, 601334942 bytes from disk"
+  ],
+  "llm_template": "Merging <*> files, <*> bytes from disk",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Merging <*> files, <*> bytes from disk"
+ },
+ {
+  "iter": 125,
+  "logs_to_query": [
+   "Stopping IPC Server Responder"
+  ],
+  "logs_to_query_regex": [
+   "Stopping IPC Server Responder"
+  ],
+  "llm_template": "Stopping IPC Server Responder",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Stopping IPC Server Responder"
+ },
+ {
+  "iter": 126,
+  "logs_to_query": [
+   "Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "logs_to_query_regex": [
+   "Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "llm_template": "Copied to done location: hdfs://<*>/tmp/hadoop-yarn/staging",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Copied to done location: <*>"
+ },
+ {
+  "iter": 127,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445087491445_0005_r_000000_0: Container released on a *lost* node",
+   "Diagnostics report from attempt_1445182159119_0016_m_000007_0: Container released on a *lost* node",
+   "Diagnostics report from attempt_1445094324383_0005_r_000000_0: Container released on a *lost* node"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445087491445_0005_r_000000_0: Container released on a *lost* node",
+   "Diagnostics report from attempt_1445182159119_0016_m_000007_0: Container released on a *lost* node",
+   "Diagnostics report from attempt_1445094324383_0005_r_000000_0: Container released on a *lost* node"
+  ],
+  "llm_template": "Diagnostics report from <*>: Container released on a *lost* node",
+  "cluster_id": 237,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: Container released on a *lost* node"
+ },
+ {
+  "iter": 128,
+  "logs_to_query": [
+   "Number of reduces for job job_1445087491445_0005 = 1",
+   "Number of reduces for job job_1445087491445_0010 = 1",
+   "Number of reduces for job job_1445182159119_0012 = 1"
+  ],
+  "logs_to_query_regex": [
+   "Number of reduces for job job_1445087491445_0005 = 1",
+   "Number of reduces for job job_1445087491445_0010 = 1",
+   "Number of reduces for job job_1445182159119_0012 = 1"
+  ],
+  "llm_template": "Number of reduces for job <*> = <*>",
+  "cluster_id": 223,
+  "update_success": true,
+  "template": "Number of reduces for job <*> = <*>"
+ },
+ {
+  "iter": 129,
+  "logs_to_query": [
+   "Not uberizing job_1445087491445_0005 because: not enabled; too many maps; too much input;",
+   "Not uberizing job_1445062781478_0018 because: not enabled; too many maps; too much input;",
+   "Not uberizing job_1445175094696_0003 because: not enabled; too many maps; too much input;"
+  ],
+  "logs_to_query_regex": [
+   "Not uberizing job_1445087491445_0005 because: not enabled; too many maps; too much input;",
+   "Not uberizing job_1445062781478_0018 because: not enabled; too many maps; too much input;",
+   "Not uberizing job_1445175094696_0003 because: not enabled; too many maps; too much input;"
+  ],
+  "llm_template": "Not uberizing <*> because: not enabled; too many maps; too much input;",
+  "cluster_id": 244,
+  "update_success": true,
+  "template": "Not uberizing <*> because: not enabled; too many maps; too much input;"
+ },
+ {
+  "iter": 130,
+  "logs_to_query": [
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0",
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 2",
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 1"
+  ],
+  "logs_to_query_regex": [
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0",
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 2",
+   "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 1"
+  ],
+  "llm_template": "Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>"
+ },
+ {
+  "iter": 131,
+  "logs_to_query": [
+   "Commit go/no-go request from attempt_1445087491445_0005_r_000000_1",
+   "Commit go/no-go request from attempt_1445094324383_0001_r_000000_0",
+   "Commit go/no-go request from attempt_1445144423722_0024_r_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "Commit go/no-go request from attempt_1445087491445_0005_r_000000_1",
+   "Commit go/no-go request from attempt_1445094324383_0001_r_000000_0",
+   "Commit go/no-go request from attempt_1445144423722_0024_r_000000_0"
+  ],
+  "llm_template": "Commit go/no-go request from <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "Commit go/no-go request from <*>"
+ },
+ {
+  "iter": 132,
+  "logs_to_query": [
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#4 in 2525ms",
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#1 in 1242ms",
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#2 in 2902ms"
+  ],
+  "logs_to_query_regex": [
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#4 in 2525ms",
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#1 in 1242ms",
+   "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#2 in 2902ms"
+  ],
+  "llm_template": "<*> freed by fetcher#<*> in <*>",
+  "cluster_id": 77,
+  "update_success": true,
+  "template": "<*> freed by fetcher#<*> in <*>"
+ },
+ {
+  "iter": 133,
+  "logs_to_query": [
+   "Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "logs_to_query_regex": [
+   "Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging"
+  ],
+  "llm_template": "Moved tmp to done: hdfs://<*>/tmp/hadoop-yarn/staging",
+  "cluster_id": 53,
+  "update_success": true,
+  "template": "Moved tmp to done: <*>"
+ },
+ {
+  "iter": 134,
+  "logs_to_query": [
+   "ReduceTask metrics system started"
+  ],
+  "logs_to_query_regex": [
+   "ReduceTask metrics system started"
+  ],
+  "llm_template": "ReduceTask metrics system started",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "<*> metrics system started"
+ },
+ {
+  "iter": 135,
+  "logs_to_query": [
+   "jetty-6.1.26"
+  ],
+  "logs_to_query_regex": [
+   "jetty-6.1.26"
+  ],
+  "llm_template": "jetty-<*>",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "jetty-<*>"
+ },
+ {
+  "iter": 136,
+  "logs_to_query": [
+   "Using callQueue class java.util.concurrent.LinkedBlockingQueue"
+  ],
+  "logs_to_query_regex": [
+   "Using callQueue class java.util.concurrent.LinkedBlockingQueue"
+  ],
+  "llm_template": "Using callQueue class java.util.concurrent.<*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "Using callQueue class <*>"
+ },
+ {
+  "iter": 137,
+  "logs_to_query": [
+   "IPC Server Responder: starting"
+  ],
+  "logs_to_query_regex": [
+   "IPC Server Responder: starting"
+  ],
+  "llm_template": "IPC Server Responder: starting",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "IPC Server Responder: starting"
+ },
+ {
+  "iter": 138,
+  "logs_to_query": [
+   "adding path spec: /mapreduce/*",
+   "adding path spec: /ws/*"
+  ],
+  "logs_to_query_regex": [
+   "adding path spec: /mapreduce/*",
+   "adding path spec: /ws/*"
+  ],
+  "llm_template": "adding path spec: <*>/*",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "adding path spec: <*>"
+ },
+ {
+  "iter": 139,
+  "logs_to_query": [
+   "Starting Socket Reader #1 for port 32060",
+   "Starting Socket Reader #1 for port 53983",
+   "Starting Socket Reader #1 for port 24281"
+  ],
+  "logs_to_query_regex": [
+   "Starting Socket Reader #1 for port 32060",
+   "Starting Socket Reader #1 for port 53983",
+   "Starting Socket Reader #1 for port 24281"
+  ],
+  "llm_template": "Starting Socket Reader <*> for port <*>",
+  "cluster_id": 82,
+  "update_success": true,
+  "template": "Starting Socket Reader <*> for port <*>"
+ },
+ {
+  "iter": 140,
+  "logs_to_query": [
+   "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce",
+   "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static"
+  ],
+  "logs_to_query_regex": [
+   "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce",
+   "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static"
+  ],
+  "llm_template": "Added filter AM_PROXY_FILTER (class=<*>) to context <*>",
+  "cluster_id": 83,
+  "update_success": true,
+  "template": "Added filter <*> (class=<*>) to context <*>"
+ },
+ {
+  "iter": 141,
+  "logs_to_query": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job.jar",
+   "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job.xml",
+   "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0017/job.xml"
+  ],
+  "logs_to_query_regex": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job.jar",
+   "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job.xml",
+   "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0017/job.xml"
+  ],
+  "llm_template": "The job-conf file on the remote FS is <*>/job.xml",
+  "cluster_id": 228,
+  "update_success": true,
+  "template": "The job-jar file on the remote FS is <*>"
+ },
+ {
+  "iter": 142,
+  "logs_to_query": [
+   "Adding #0 tokens and #1 secret keys for NM use for launching container"
+  ],
+  "logs_to_query_regex": [
+   "Adding #0 tokens and #1 secret keys for NM use for launching container"
+  ],
+  "llm_template": "Adding <*> tokens and <*> secret keys for NM use for launching container",
+  "cluster_id": 249,
+  "update_success": true,
+  "template": "Adding <*> tokens and <*> secret keys for NM use for launching container"
+ },
+ {
+  "iter": 143,
+  "logs_to_query": [
+   "Created MRAppMaster for application appattempt_1445087491445_0005_000001",
+   "Created MRAppMaster for application appattempt_1445144423722_0022_000001",
+   "Created MRAppMaster for application appattempt_1445062781478_0017_000001"
+  ],
+  "logs_to_query_regex": [
+   "Created MRAppMaster for application appattempt_1445087491445_0005_000001",
+   "Created MRAppMaster for application appattempt_1445144423722_0022_000001",
+   "Created MRAppMaster for application appattempt_1445062781478_0017_000001"
+  ],
+  "llm_template": "Created MRAppMaster for application <*>",
+  "cluster_id": 57,
+  "update_success": true,
+  "template": "Created MRAppMaster for application <*>"
+ },
+ {
+  "iter": 144,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events",
+   "attempt_1445094324383_0002_r_000000_2 Thread started: EventFetcher for fetching Map Completion Events",
+   "attempt_1445062781478_0016_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events"
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events",
+   "attempt_1445094324383_0002_r_000000_2 Thread started: EventFetcher for fetching Map Completion Events",
+   "attempt_1445062781478_0016_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events"
+  ],
+  "llm_template": "<*> Thread started: EventFetcher for fetching Map Completion Events",
+  "cluster_id": 232,
+  "update_success": true,
+  "template": "<*> Thread started: EventFetcher for fetching Map Completion Events"
+ },
+ {
+  "iter": 145,
+  "logs_to_query": [
+   "assigned 1 of 1 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#1",
+   "assigned 5 of 5 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#4",
+   "assigned 2 of 2 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#2"
+  ],
+  "logs_to_query_regex": [
+   "assigned 1 of 1 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#1",
+   "assigned 5 of 5 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#4",
+   "assigned 2 of 2 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#2"
+  ],
+  "llm_template": "assigned <*> of <*> to MSRA-SA-<*>.fareast.corp.microsoft.com:<*> to fetcher#<*>",
+  "cluster_id": 221,
+  "update_success": true,
+  "template": "assigned <*> of <*> to <*> to fetcher#<*>"
+ },
+ {
+  "iter": 146,
+  "logs_to_query": [
+   "EventFetcher is interrupted.. Returning"
+  ],
+  "logs_to_query_regex": [
+   "EventFetcher is interrupted.. Returning"
+  ],
+  "llm_template": "EventFetcher is interrupted.. Returning",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "EventFetcher is interrupted.. Returning"
+ },
+ {
+  "iter": 147,
+  "logs_to_query": [
+   "Killing taskAttempt:attempt_1445087491445_0005_m_000009_0 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:55452",
+   "Killing taskAttempt:attempt_1445062781478_0012_m_000005_0 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:64484",
+   "Killing taskAttempt:attempt_1445182159119_0003_m_000000_2 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:64260"
+  ],
+  "logs_to_query_regex": [
+   "Killing taskAttempt:attempt_1445087491445_0005_m_000009_0 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:55452",
+   "Killing taskAttempt:attempt_1445062781478_0012_m_000005_0 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:64484",
+   "Killing taskAttempt:attempt_1445182159119_0003_m_000000_2 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:64260"
+  ],
+  "llm_template": "Killing taskAttempt:<*> because it is running on unusable node:<*>",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Killing taskAttempt:<*> because it is running on unusable node:<*>"
+ },
+ {
+  "iter": 148,
+  "logs_to_query": [
+   "Adding job token for job_1445087491445_0005 to jobTokenSecretManager",
+   "Adding job token for job_1445062781478_0012 to jobTokenSecretManager",
+   "Adding job token for job_1445062781478_0019 to jobTokenSecretManager"
+  ],
+  "logs_to_query_regex": [
+   "Adding job token for job_1445087491445_0005 to jobTokenSecretManager",
+   "Adding job token for job_1445062781478_0012 to jobTokenSecretManager",
+   "Adding job token for job_1445062781478_0019 to jobTokenSecretManager"
+  ],
+  "llm_template": "Adding job token for <*> to jobTokenSecretManager",
+  "cluster_id": 214,
+  "update_success": true,
+  "template": "Adding job token for <*> to jobTokenSecretManager"
+ },
+ {
+  "iter": 149,
+  "logs_to_query": [
+   "Task attempt_1445087491445_0005_r_000000_1 is allowed to commit now",
+   "Task attempt_1445182159119_0011_r_000000_0 is allowed to commit now",
+   "Task attempt_1445182159119_0003_r_000000_1 is allowed to commit now"
+  ],
+  "logs_to_query_regex": [
+   "Task attempt_1445087491445_0005_r_000000_1 is allowed to commit now",
+   "Task attempt_1445182159119_0011_r_000000_0 is allowed to commit now",
+   "Task attempt_1445182159119_0003_r_000000_1 is allowed to commit now"
+  ],
+  "llm_template": "Task <*> is allowed to commit now",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Task <*> is allowed to commit now"
+ },
+ {
+  "iter": 150,
+  "logs_to_query": [
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out3/_temporary/2/_temporary/attempt_1445062781478_0018_m_000007_1001",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/_temporary/attempt_1445062781478_0019_m_000006_1",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/_temporary/attempt_1445062781478_0014_m_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out3/_temporary/2/_temporary/attempt_1445062781478_0018_m_000007_1001",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/_temporary/attempt_1445062781478_0019_m_000006_1",
+   "Could not delete hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/_temporary/attempt_1445062781478_0014_m_000000_0"
+  ],
+  "llm_template": "Could not delete hdfs://<*>/pageout/out4/_temporary/<*>/_temporary/attempt_<*>_m_<*>_<*>",
+  "cluster_id": 35,
+  "update_success": true,
+  "template": "Could not delete <*>"
+ },
+ {
+  "iter": 151,
+  "logs_to_query": [
+   "Calling stop for all the services"
+  ],
+  "logs_to_query_regex": [
+   "Calling stop for all the services"
+  ],
+  "llm_template": "Calling stop for all the services",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Calling stop for all the services"
+ },
+ {
+  "iter": 152,
+  "logs_to_query": [
+   "Recovering task task_1445062781478_0018_m_000000 from prior app attempt, status was SUCCEEDED",
+   "Recovering task task_1445087491445_0004_m_000003 from prior app attempt, status was SUCCEEDED",
+   "Recovering task task_1445182159119_0002_m_000000 from prior app attempt, status was SUCCEEDED"
+  ],
+  "logs_to_query_regex": [
+   "Recovering task task_1445062781478_0018_m_000000 from prior app attempt, status was SUCCEEDED",
+   "Recovering task task_1445087491445_0004_m_000003 from prior app attempt, status was SUCCEEDED",
+   "Recovering task task_1445182159119_0002_m_000000 from prior app attempt, status was SUCCEEDED"
+  ],
+  "llm_template": "Recovering task <*> from prior app attempt, status was SUCCEEDED",
+  "cluster_id": 237,
+  "update_success": true,
+  "template": "Recovering task <*> from prior app attempt, status was <*>"
+ },
+ {
+  "iter": 153,
+  "logs_to_query": [
+   "mapResourceRequest:<memory:1024, vCores:1>"
+  ],
+  "logs_to_query_regex": [
+   "mapResourceRequest:<memory:1024, vCores:1>"
+  ],
+  "llm_template": "mapResourceRequest:<memory:<*>, vCores:<*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "mapResourceRequest:<memory:<*>, vCores:<*>"
+ },
+ {
+  "iter": 154,
+  "logs_to_query": [
+   "All maps assigned. Ramping up all remaining reduces:1"
+  ],
+  "logs_to_query_regex": [
+   "All maps assigned. Ramping up all remaining reduces:1"
+  ],
+  "llm_template": "All maps assigned. Ramping up all remaining reduces:<*>",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "All maps assigned. Ramping up all remaining reduces:<*>"
+ },
+ {
+  "iter": 155,
+  "logs_to_query": [
+   "Notify RMCommunicator isAMLastRetry: true",
+   "Notify JHEH isAMLastRetry: true"
+  ],
+  "logs_to_query_regex": [
+   "Notify RMCommunicator isAMLastRetry: true",
+   "Notify JHEH isAMLastRetry: true"
+  ],
+  "llm_template": "Notify <*> isAMLastRetry: <*>",
+  "cluster_id": 36,
+  "update_success": true,
+  "template": "Notify RMCommunicator isAMLastRetry: <*>"
+ },
+ {
+  "iter": 156,
+  "logs_to_query": [
+   "Ramping down all scheduled reduces:0"
+  ],
+  "logs_to_query_regex": [
+   "Ramping down all scheduled reduces:0"
+  ],
+  "llm_template": "Ramping down all scheduled reduces:<*>",
+  "cluster_id": 55,
+  "update_success": true,
+  "template": "Ramping down all scheduled reduces:<*>"
+ },
+ {
+  "iter": 157,
+  "logs_to_query": [
+   "RMCommunicator notified that shouldUnregistered is: true"
+  ],
+  "logs_to_query_regex": [
+   "RMCommunicator notified that shouldUnregistered is: true"
+  ],
+  "llm_template": "RMCommunicator notified that shouldUnregistered is: <*>",
+  "cluster_id": 72,
+  "update_success": true,
+  "template": "RMCommunicator notified that shouldUnregistered is: <*>"
+ },
+ {
+  "iter": 158,
+  "logs_to_query": [
+   "Going to preempt 1 due to lack of space for maps"
+  ],
+  "logs_to_query_regex": [
+   "Going to preempt 1 due to lack of space for maps"
+  ],
+  "llm_template": "Going to preempt <*> due to lack of space for maps",
+  "cluster_id": 241,
+  "update_success": true,
+  "template": "Going to preempt <*> due to lack of space for maps"
+ },
+ {
+  "iter": 159,
+  "logs_to_query": [
+   "Read from history task task_1445062781478_0018_m_000008",
+   "Read from history task task_1445087491445_0006_m_000003",
+   "Read from history task task_1445087491445_0002_m_000008"
+  ],
+  "logs_to_query_regex": [
+   "Read from history task task_1445062781478_0018_m_000008",
+   "Read from history task task_1445087491445_0006_m_000003",
+   "Read from history task task_1445087491445_0002_m_000008"
+  ],
+  "llm_template": "Read from history task <*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "Read from history task <*>"
+ },
+ {
+  "iter": 160,
+  "logs_to_query": [
+   "finalMerge called with 0 in-memory map-outputs and 13 on-disk map-outputs",
+   "finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs"
+  ],
+  "logs_to_query_regex": [
+   "finalMerge called with 0 in-memory map-outputs and 13 on-disk map-outputs",
+   "finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs"
+  ],
+  "llm_template": "finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs"
+ },
+ {
+  "iter": 161,
+  "logs_to_query": [
+   "Ramping up 1"
+  ],
+  "logs_to_query_regex": [
+   "Ramping up 1"
+  ],
+  "llm_template": "Ramping up <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Ramping up <*>"
+ },
+ {
+  "iter": 162,
+  "logs_to_query": [
+   "Event Writer setup for JobId: job_1445087491445_0005, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1.jhist",
+   "Event Writer setup for JobId: job_1445182159119_0002, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0002/job_1445182159119_0002_2.jhist",
+   "Event Writer setup for JobId: job_1445182159119_0018, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job_1445182159119_0018_2.jhist"
+  ],
+  "logs_to_query_regex": [
+   "Event Writer setup for JobId: job_1445087491445_0005, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job_1445087491445_0005_1.jhist",
+   "Event Writer setup for JobId: job_1445182159119_0002, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0002/job_1445182159119_0002_2.jhist",
+   "Event Writer setup for JobId: job_1445182159119_0018, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job_1445182159119_0018_2.jhist"
+  ],
+  "llm_template": "Event Writer setup for JobId: <*> File: <*>",
+  "cluster_id": 223,
+  "update_success": true,
+  "template": "Event Writer setup for JobId: <*>, File: <*>"
+ },
+ {
+  "iter": 163,
+  "logs_to_query": [
+   "Input size for job job_1445087491445_0005 = 1751822336. Number of splits = 13",
+   "Input size for job job_1445076437777_0003 = 1256521728. Number of splits = 10",
+   "Input size for job job_1445087491445_0010 = 1313861632. Number of splits = 10"
+  ],
+  "logs_to_query_regex": [
+   "Input size for job job_1445087491445_0005 = 1751822336. Number of splits = 13",
+   "Input size for job job_1445076437777_0003 = 1256521728. Number of splits = 10",
+   "Input size for job job_1445087491445_0010 = 1313861632. Number of splits = 10"
+  ],
+  "llm_template": "Input size for job <*> = <*> Number of splits = <*>",
+  "cluster_id": 244,
+  "update_success": true,
+  "template": "Input size for job <*> = <*>. Number of splits = <*>"
+ },
+ {
+  "iter": 164,
+  "logs_to_query": [
+   "Failed to connect to /10.86.169.121:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information",
+   "Failed to connect to /10.86.165.66:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information"
+  ],
+  "logs_to_query_regex": [
+   "Failed to connect to /10.86.169.121:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information",
+   "Failed to connect to /10.86.165.66:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information"
+  ],
+  "llm_template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information",
+  "cluster_id": 257,
+  "update_success": true,
+  "template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information"
+ },
+ {
+  "iter": 165,
+  "logs_to_query": [
+   "Emitting job history data to the timeline server is not enabled"
+  ],
+  "logs_to_query_regex": [
+   "Emitting job history data to the timeline server is not enabled"
+  ],
+  "llm_template": "Emitting job history data to the timeline server is not enabled",
+  "cluster_id": 242,
+  "update_success": true,
+  "template": "Emitting job history data to the timeline server is not enabled"
+ },
+ {
+  "iter": 166,
+  "logs_to_query": [
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 5 cluster_timestamp: 1445087491445 } attemptId: 1 } keyId: -1547346236)",
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 23 cluster_timestamp: 1445144423722 } attemptId: 2 } keyId: -127633188)",
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 13 cluster_timestamp: 1445062781478 } attemptId: 2 } keyId: 471522253)"
+  ],
+  "logs_to_query_regex": [
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 5 cluster_timestamp: 1445087491445 } attemptId: 1 } keyId: -1547346236)",
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 23 cluster_timestamp: 1445144423722 } attemptId: 2 } keyId: -127633188)",
+   "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 13 cluster_timestamp: 1445062781478 } attemptId: 2 } keyId: 471522253)"
+  ],
+  "llm_template": "Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId <*> cluster_timestamp: <*> } attemptId: <*> } keyId: <*>)",
+  "cluster_id": 257,
+  "update_success": true,
+  "template": "Kind: <*>, Service: <*>, Ident: (<*>)"
+ },
+ {
+  "iter": 167,
+  "logs_to_query": [
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005",
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445144423722_0024",
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0004"
+  ],
+  "logs_to_query_regex": [
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005",
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445144423722_0024",
+   "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0004"
+  ],
+  "llm_template": "Deleting staging directory hdfs://<*> <*>/.staging/job_<*>_<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Deleting staging directory <*> <*>"
+ },
+ {
+  "iter": 168,
+  "logs_to_query": [
+   "nodeBlacklistingEnabled:true"
+  ],
+  "logs_to_query_regex": [
+   "nodeBlacklistingEnabled:true"
+  ],
+  "llm_template": "nodeBlacklistingEnabled:<*>",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "nodeBlacklistingEnabled:<*>"
+ },
+ {
+  "iter": 169,
+  "logs_to_query": [
+   "MRAppMaster metrics system started"
+  ],
+  "logs_to_query_regex": [
+   "MRAppMaster metrics system started"
+  ],
+  "llm_template": "MRAppMaster metrics system started",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "<*> metrics system started"
+ },
+ {
+  "iter": 170,
+  "logs_to_query": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0014/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0015/job.jar"
+  ],
+  "logs_to_query_regex": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0014/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0015/job.jar"
+  ],
+  "llm_template": "The job-jar file on the remote FS is hdfs://<*>/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005/job.jar",
+  "cluster_id": 228,
+  "update_success": true,
+  "template": "The job-jar file on the remote FS is <*>"
+ },
+ {
+  "iter": 171,
+  "logs_to_query": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0018/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0011/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445094324383_0004/job.jar"
+  ],
+  "logs_to_query_regex": [
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0018/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0011/job.jar",
+   "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445094324383_0004/job.jar"
+  ],
+  "llm_template": "The job-jar file on the remote FS is hdfs://<*>/tmp/hadoop-yarn/staging/msrabi/.staging/job_<*>/job.jar",
+  "cluster_id": 228,
+  "update_success": true,
+  "template": "The job-jar file on the remote FS is <*>"
+ },
+ {
+  "iter": 172,
+  "logs_to_query": [
+   "TaskHeartbeatHandler thread interrupted"
+  ],
+  "logs_to_query_regex": [
+   "TaskHeartbeatHandler thread interrupted"
+  ],
+  "llm_template": "TaskHeartbeatHandler thread interrupted",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "TaskHeartbeatHandler thread interrupted"
+ },
+ {
+  "iter": 173,
+  "logs_to_query": [
+   "Saved output of task 'attempt_1445087491445_0005_r_000000_1' to hdfs://msra-sa-41:9000/out/out2/_temporary/1/task_1445087491445_0005_r_000000",
+   "Saved output of task 'attempt_1445087491445_0008_r_000000_1000' to hdfs://msra-sa-41:9000/out/out4/_temporary/2/task_1445087491445_0008_r_000000",
+   "Saved output of task 'attempt_1445062781478_0014_r_000000_0' to hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/task_1445062781478_0014_r_000000"
+  ],
+  "logs_to_query_regex": [
+   "Saved output of task 'attempt_1445087491445_0005_r_000000_1' to hdfs://msra-sa-41:9000/out/out2/_temporary/1/task_1445087491445_0005_r_000000",
+   "Saved output of task 'attempt_1445087491445_0008_r_000000_1000' to hdfs://msra-sa-41:9000/out/out4/_temporary/2/task_1445087491445_0008_r_000000",
+   "Saved output of task 'attempt_1445062781478_0014_r_000000_0' to hdfs://msra-sa-41:9000/pageout/out4/_temporary/1/task_1445062781478_0014_r_000000"
+  ],
+  "llm_template": "Saved output of task <*> to <*>",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Saved output of task <*> to <*>"
+ },
+ {
+  "iter": 174,
+  "logs_to_query": [
+   "Merging 0 segments, 0 bytes from memory into reduce"
+  ],
+  "logs_to_query_regex": [
+   "Merging 0 segments, 0 bytes from memory into reduce"
+  ],
+  "llm_template": "Merging <*> segments, <*> bytes from memory into reduce",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Merging <*> segments, <*> bytes from memory into reduce"
+ },
+ {
+  "iter": 175,
+  "logs_to_query": [
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:13 CompletedReds:0 ContAlloc:27 ContRel:0 HostLocal:12 RackLocal:13",
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:18 ContRel:0 HostLocal:9 RackLocal:8",
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:10 RackLocal:0"
+  ],
+  "logs_to_query_regex": [
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:13 CompletedReds:0 ContAlloc:27 ContRel:0 HostLocal:12 RackLocal:13",
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:18 ContRel:0 HostLocal:9 RackLocal:8",
+   "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:10 RackLocal:0"
+  ],
+  "llm_template": "Final Stats: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>",
+  "cluster_id": 249,
+  "update_success": true,
+  "template": "Final Stats: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>"
+ },
+ {
+  "iter": 176,
+  "logs_to_query": [
+   "assigned 1 of 1 to 04DN8IQ.fareast.corp.microsoft.com:13562 to fetcher#4",
+   "assigned 1 of 1 to MININT-FNANLI5.fareast.corp.microsoft.com:13562 to fetcher#3",
+   "assigned 1 of 1 to MININT-75DGDAM1.fareast.corp.microsoft.com:13562 to fetcher#1"
+  ],
+  "logs_to_query_regex": [
+   "assigned 1 of 1 to 04DN8IQ.fareast.corp.microsoft.com:13562 to fetcher#4",
+   "assigned 1 of 1 to MININT-FNANLI5.fareast.corp.microsoft.com:13562 to fetcher#3",
+   "assigned 1 of 1 to MININT-75DGDAM1.fareast.corp.microsoft.com:13562 to fetcher#1"
+  ],
+  "llm_template": "assigned <*> of <*> to <*>.fareast.corp.microsoft.com:<*> to fetcher#<*>",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "assigned <*> of <*> to <*> to fetcher#<*>"
+ },
+ {
+  "iter": 177,
+  "logs_to_query": [
+   "Exception in getting events"
+  ],
+  "logs_to_query_regex": [
+   "Exception in getting events"
+  ],
+  "llm_template": "Exception in getting events",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Exception in getting events"
+ },
+ {
+  "iter": 178,
+  "logs_to_query": [
+   "mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords"
+  ],
+  "logs_to_query_regex": [
+   "mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords"
+  ],
+  "llm_template": "mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords",
+  "cluster_id": 62,
+  "update_success": true,
+  "template": "<*> is deprecated. Instead, use <*>"
+ },
+ {
+  "iter": 179,
+  "logs_to_query": [
+   "Stopping ReduceTask metrics system..."
+  ],
+  "logs_to_query_regex": [
+   "Stopping ReduceTask metrics system..."
+  ],
+  "llm_template": "Stopping ReduceTask metrics system...",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Stopping <*> metrics system..."
+ },
+ {
+  "iter": 180,
+  "logs_to_query": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.9\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":53419;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":55226;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/127.0.0.1\"; destination host is: \"10.190.173.170\":25859;"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.9\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":53419;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":55226;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/127.0.0.1\"; destination host is: \"10.190.173.170\":25859;"
+  ],
+  "llm_template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.<*>\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":<*>;",
+  "cluster_id": 262,
+  "update_success": true,
+  "template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>"
+ },
+ {
+  "iter": 181,
+  "logs_to_query": [
+   "Result of canCommit for attempt_1445087491445_0005_r_000000_1:true",
+   "Result of canCommit for attempt_1445087491445_0001_r_000000_0:true",
+   "Result of canCommit for attempt_1445087491445_0008_r_000000_1000:true"
+  ],
+  "logs_to_query_regex": [
+   "Result of canCommit for attempt_1445087491445_0005_r_000000_1:true",
+   "Result of canCommit for attempt_1445087491445_0001_r_000000_0:true",
+   "Result of canCommit for attempt_1445087491445_0008_r_000000_1000:true"
+  ],
+  "llm_template": "Result of canCommit for <*>:true",
+  "cluster_id": 57,
+  "update_success": true,
+  "template": "Result of canCommit for <*>"
+ },
+ {
+  "iter": 182,
+  "logs_to_query": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":53419;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/10.86.169.121\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":58957;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.15\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":62270;"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":53419;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/10.86.169.121\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":58957;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.15\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":62270;"
+  ],
+  "llm_template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"<*>\"; destination host is: \"minint-75dgdam1.fareast.corp.microsoft.com\":<*>;",
+  "cluster_id": 262,
+  "update_success": true,
+  "template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>"
+ },
+ {
+  "iter": 183,
+  "logs_to_query": [
+   "JobHistoryEventHandler notified that forceJobCompletion is true"
+  ],
+  "logs_to_query_regex": [
+   "JobHistoryEventHandler notified that forceJobCompletion is true"
+  ],
+  "llm_template": "JobHistoryEventHandler notified that forceJobCompletion is true",
+  "cluster_id": 72,
+  "update_success": true,
+  "template": "JobHistoryEventHandler notified that forceJobCompletion is <*>"
+ },
+ {
+  "iter": 184,
+  "logs_to_query": [
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0018/job_1445062781478_0018_1.jhist",
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job_1445182159119_0018_1.jhist",
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0019/job_1445182159119_0019_1.jhist"
+  ],
+  "logs_to_query_regex": [
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0018/job_1445062781478_0018_1.jhist",
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0018/job_1445182159119_0018_1.jhist",
+   "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445182159119_0019/job_1445182159119_0019_1.jhist"
+  ],
+  "llm_template": "Previous history file is at hdfs://<*>/tmp/hadoop-yarn/staging/msrabi/.staging/job_<*>/job_<*>_1.jhist",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Previous history file is at <*>"
+ },
+ {
+  "iter": 185,
+  "logs_to_query": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-39/172.22.149.145\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":49594;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":55226;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.15\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":62304;"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-39/172.22.149.145\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":49594;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MSRA-SA-41/10.190.173.170\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":55226;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"04DN8IQ/10.86.164.15\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":62304;"
+  ],
+  "llm_template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"<*>\"; destination host is: \"minint-fnanli5.fareast.corp.microsoft.com\":<*>;",
+  "cluster_id": 262,
+  "update_success": true,
+  "template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>"
+ },
+ {
+  "iter": 186,
+  "logs_to_query": [
+   "Stopping IPC Server listener on 32070",
+   "Stopping IPC Server listener on 24300",
+   "Stopping IPC Server listener on 63282"
+  ],
+  "logs_to_query_regex": [
+   "Stopping IPC Server listener on 32070",
+   "Stopping IPC Server listener on 24300",
+   "Stopping IPC Server listener on 63282"
+  ],
+  "llm_template": "Stopping IPC Server listener on <*>",
+  "cluster_id": 69,
+  "update_success": true,
+  "template": "Stopping IPC Server listener on <*>"
+ },
+ {
+  "iter": 187,
+  "logs_to_query": [
+   "attempt_1445087491445_0005_r_000000_1 given a go for committing the task output.",
+   "attempt_1445175094696_0002_r_000000_0 given a go for committing the task output.",
+   "attempt_1445144423722_0022_r_000000_0 given a go for committing the task output."
+  ],
+  "logs_to_query_regex": [
+   "attempt_1445087491445_0005_r_000000_1 given a go for committing the task output.",
+   "attempt_1445175094696_0002_r_000000_0 given a go for committing the task output.",
+   "attempt_1445144423722_0022_r_000000_0 given a go for committing the task output."
+  ],
+  "llm_template": "<*> given a go for committing the task output.",
+  "cluster_id": 232,
+  "update_success": true,
+  "template": "<*> given a go for committing the task output."
+ },
+ {
+  "iter": 188,
+  "logs_to_query": [
+   "Waiting for application to be successfully unregistered."
+  ],
+  "logs_to_query_regex": [
+   "Waiting for application to be successfully unregistered."
+  ],
+  "llm_template": "Waiting for application to be successfully unregistered.",
+  "cluster_id": 214,
+  "update_success": true,
+  "template": "Waiting for application to be successfully unregistered."
+ },
+ {
+  "iter": 189,
+  "logs_to_query": [
+   "ReduceTask metrics system stopped."
+  ],
+  "logs_to_query_regex": [
+   "ReduceTask metrics system stopped."
+  ],
+  "llm_template": "ReduceTask metrics system stopped.",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "<*> metrics system stopped."
+ },
+ {
+  "iter": 190,
+  "logs_to_query": [
+   "Merging 4 intermediate segments out of a total of 13"
+  ],
+  "logs_to_query_regex": [
+   "Merging 4 intermediate segments out of a total of 13"
+  ],
+  "llm_template": "Merging <*> intermediate segments out of a total of <*>",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "Merging <*> intermediate segments out of a total of <*>"
+ },
+ {
+  "iter": 191,
+  "logs_to_query": [
+   "Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742931_2130"
+  ],
+  "logs_to_query_regex": [
+   "Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742931_2130"
+  ],
+  "llm_template": "Abandoning BP-<*>:blk_1073742931_2130",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Abandoning <*>"
+ },
+ {
+  "iter": 192,
+  "logs_to_query": [
+   "Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742903_2102"
+  ],
+  "logs_to_query_regex": [
+   "Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742903_2102"
+  ],
+  "llm_template": "Abandoning BP-<*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Abandoning <*>"
+ },
+ {
+  "iter": 193,
+  "logs_to_query": [
+   "Recovery is enabled. Will try to recover from previous life on best effort basis."
+  ],
+  "logs_to_query_regex": [
+   "Recovery is enabled. Will try to recover from previous life on best effort basis."
+  ],
+  "llm_template": "Recovery is enabled. Will try to recover from previous life on best effort basis.",
+  "cluster_id": 252,
+  "update_success": true,
+  "template": "Recovery is enabled. Will try to recover from previous life on best effort basis."
+ },
+ {
+  "iter": 194,
+  "logs_to_query": [
+   "Read completed tasks from history 9",
+   "Read completed tasks from history 13",
+   "Read completed tasks from history 10"
+  ],
+  "logs_to_query_regex": [
+   "Read completed tasks from history 9",
+   "Read completed tasks from history 13",
+   "Read completed tasks from history 10"
+  ],
+  "llm_template": "Read completed tasks from history <*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Read completed tasks from history <*>"
+ },
+ {
+  "iter": 195,
+  "logs_to_query": [
+   "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1",
+   "TaskAttempt killed because it ran on unusable node 04DN8IQ.fareast.corp.microsoft.com:55452. AttemptId:attempt_1445087491445_0004_m_000004_0",
+   "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55135. AttemptId:attempt_1445087491445_0010_m_000008_0"
+  ],
+  "logs_to_query_regex": [
+   "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1",
+   "TaskAttempt killed because it ran on unusable node 04DN8IQ.fareast.corp.microsoft.com:55452. AttemptId:attempt_1445087491445_0004_m_000004_0",
+   "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55135. AttemptId:attempt_1445087491445_0010_m_000008_0"
+  ],
+  "llm_template": "TaskAttempt killed because it ran on unusable node <*> AttemptId:<*>",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "TaskAttempt killed because it ran on unusable node <*>. AttemptId:<*>"
+ },
+ {
+  "iter": 196,
+  "logs_to_query": [
+   "History url is http://MININT-FNANLI5.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445144423722_0020",
+   "History url is http://04DN8IQ.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445182159119_0020",
+   "History url is http://MININT-FNANLI5.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445182159119_0018"
+  ],
+  "logs_to_query_regex": [
+   "History url is http://MININT-FNANLI5.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445144423722_0020",
+   "History url is http://04DN8IQ.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445182159119_0020",
+   "History url is http://MININT-FNANLI5.fareast.corp.microsoft.com:19888/jobhistory/job/job_1445182159119_0018"
+  ],
+  "llm_template": "History url is http://<*>:19888/jobhistory/job/job_<*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "History url is <*>"
+ },
+ {
+  "iter": 197,
+  "logs_to_query": [
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.TaskAttemptUnsuccessfulCompletionEvent@7317849d",
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.JobUnsuccessfulCompletionEvent@13bb724a",
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.JobUnsuccessfulCompletionEvent@2890300b"
+  ],
+  "logs_to_query_regex": [
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.TaskAttemptUnsuccessfulCompletionEvent@7317849d",
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.JobUnsuccessfulCompletionEvent@13bb724a",
+   "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.JobUnsuccessfulCompletionEvent@2890300b"
+  ],
+  "llm_template": "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Error writing History Event: <*>"
+ },
+ {
+  "iter": 198,
+  "logs_to_query": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/127.0.0.1\"; destination host is: \"10.190.173.170\":25859;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-75DGDAM1/10.86.165.66\"; destination host is: \"04dn8iq.fareast.corp.microsoft.com\":49470;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/10.86.169.121\"; destination host is: \"04dn8iq.fareast.corp.microsoft.com\":51086;"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/127.0.0.1\"; destination host is: \"10.190.173.170\":25859;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-75DGDAM1/10.86.165.66\"; destination host is: \"04dn8iq.fareast.corp.microsoft.com\":49470;",
+   "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"MININT-FNANLI5/10.86.169.121\"; destination host is: \"04dn8iq.fareast.corp.microsoft.com\":51086;"
+  ],
+  "llm_template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: \"<*>\"; destination host is: \"<*>\":<*>;",
+  "cluster_id": 262,
+  "update_success": true,
+  "template": "Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>"
+ },
+ {
+  "iter": 199,
+  "logs_to_query": [
+   "1 failures on node MININT-FNANLI5.fareast.corp.microsoft.com",
+   "1 failures on node 04DN8IQ.fareast.corp.microsoft.com",
+   "2 failures on node MININT-FNANLI5.fareast.corp.microsoft.com"
+  ],
+  "logs_to_query_regex": [
+   "1 failures on node MININT-FNANLI5.fareast.corp.microsoft.com",
+   "1 failures on node 04DN8IQ.fareast.corp.microsoft.com",
+   "2 failures on node MININT-FNANLI5.fareast.corp.microsoft.com"
+  ],
+  "llm_template": "<*> failures on node <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "<*> failures on node <*>"
+ },
+ {
+  "iter": 200,
+  "logs_to_query": [
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073742514_1708",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743654_2877",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731"
+  ],
+  "logs_to_query_regex": [
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073742514_1708",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743654_2877",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731"
+  ],
+  "llm_template": "DFSOutputStream ResponseProcessor exception for block BP-<*>:blk_1073742514_1708",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "DFSOutputStream ResponseProcessor exception for block <*>"
+ },
+ {
+  "iter": 201,
+  "logs_to_query": [
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743655_2878",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743032_2244"
+  ],
+  "logs_to_query_regex": [
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743655_2878",
+   "DFSOutputStream ResponseProcessor exception for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743032_2244"
+  ],
+  "llm_template": "DFSOutputStream ResponseProcessor exception for block BP-<*>:blk_1073743512_2731",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "DFSOutputStream ResponseProcessor exception for block <*>"
+ },
+ {
+  "iter": 202,
+  "logs_to_query": [
+   "Container complete event for unknown container id container_1445062781478_0018_01_000012",
+   "Container complete event for unknown container id container_1445062781478_0013_01_000013",
+   "Container complete event for unknown container id container_1445076437777_0003_01_000013"
+  ],
+  "logs_to_query_regex": [
+   "Container complete event for unknown container id container_1445062781478_0018_01_000012",
+   "Container complete event for unknown container id container_1445062781478_0013_01_000013",
+   "Container complete event for unknown container id container_1445076437777_0003_01_000013"
+  ],
+  "llm_template": "Container complete event for unknown container id <*>",
+  "cluster_id": 223,
+  "update_success": true,
+  "template": "Container complete event for unknown container id <*>"
+ },
+ {
+  "iter": 203,
+  "logs_to_query": [
+   "Exception running child : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+  ],
+  "logs_to_query_regex": [
+   "Exception running child : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+  ],
+  "llm_template": "Exception running child : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for <*>",
+  "cluster_id": 252,
+  "update_success": true,
+  "template": "Exception running child : <*>: Could not find any valid local directory for <*>"
+ },
+ {
+  "iter": 204,
+  "logs_to_query": [
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073742514_1708 in pipeline 10.190.173.170:50010, 10.86.164.9:50010: bad datanode 10.86.164.9:50010",
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743032_2244 in pipeline 172.22.149.145:50010, 10.86.169.121:50010: bad datanode 10.86.169.121:50010",
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731 in pipeline 10.86.169.121:50010, 10.190.173.170:50010: bad datanode 10.190.173.170:50010"
+  ],
+  "logs_to_query_regex": [
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073742514_1708 in pipeline 10.190.173.170:50010, 10.86.164.9:50010: bad datanode 10.86.164.9:50010",
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743032_2244 in pipeline 172.22.149.145:50010, 10.86.169.121:50010: bad datanode 10.86.169.121:50010",
+   "Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731 in pipeline 10.86.169.121:50010, 10.190.173.170:50010: bad datanode 10.190.173.170:50010"
+  ],
+  "llm_template": "Error Recovery for block BP-<*> in pipeline <*> <*>: bad datanode <*>",
+  "cluster_id": 244,
+  "update_success": true,
+  "template": "Error Recovery for block <*> in pipeline <*>, <*>: bad datanode <*>"
+ },
+ {
+  "iter": 205,
+  "logs_to_query": [
+   "Task: attempt_1445182159119_0004_m_000004_0 - exited : java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0015_m_000005_0 - exited : java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0015_m_000006_0 - exited : java.io.IOException: There is not enough space on the disk"
+  ],
+  "logs_to_query_regex": [
+   "Task: attempt_1445182159119_0004_m_000004_0 - exited : java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0015_m_000005_0 - exited : java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0015_m_000006_0 - exited : java.io.IOException: There is not enough space on the disk"
+  ],
+  "llm_template": "Task: <*> - exited : java.io.IOException: There is not enough space on the disk",
+  "cluster_id": 252,
+  "update_success": true,
+  "template": "Task: <*> - exited : java.io.IOException: There is not enough space on the disk"
+ },
+ {
+  "iter": 206,
+  "logs_to_query": [
+   "ReduceTask metrics system shutdown complete."
+  ],
+  "logs_to_query_regex": [
+   "ReduceTask metrics system shutdown complete."
+  ],
+  "llm_template": "ReduceTask metrics system shutdown complete.",
+  "cluster_id": 54,
+  "update_success": true,
+  "template": "<*> metrics system shutdown complete."
+ },
+ {
+  "iter": 207,
+  "logs_to_query": [
+   "Exception while unregistering"
+  ],
+  "logs_to_query_regex": [
+   "Exception while unregistering"
+  ],
+  "llm_template": "Exception while unregistering",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Exception while unregistering"
+ },
+ {
+  "iter": 208,
+  "logs_to_query": [
+   "Added attempt_1445144423722_0020_m_000002_1 to list of failed maps",
+   "Added attempt_1445182159119_0003_m_000000_2 to list of failed maps",
+   "Added attempt_1445144423722_0020_m_000001_1 to list of failed maps"
+  ],
+  "logs_to_query_regex": [
+   "Added attempt_1445144423722_0020_m_000002_1 to list of failed maps",
+   "Added attempt_1445182159119_0003_m_000000_2 to list of failed maps",
+   "Added attempt_1445144423722_0020_m_000001_1 to list of failed maps"
+  ],
+  "llm_template": "Added <*> to list of failed maps",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Added <*> to list of failed maps"
+ },
+ {
+  "iter": 209,
+  "logs_to_query": [
+   "Task: attempt_1445182159119_0004_m_000004_0 - exited : java.io.IOException: Spill failed",
+   "Task: attempt_1445182159119_0015_m_000006_0 - exited : java.io.IOException: Spill failed",
+   "Task: attempt_1445182159119_0015_m_000005_0 - exited : java.io.IOException: Spill failed"
+  ],
+  "logs_to_query_regex": [
+   "Task: attempt_1445182159119_0004_m_000004_0 - exited : java.io.IOException: Spill failed",
+   "Task: attempt_1445182159119_0015_m_000006_0 - exited : java.io.IOException: Spill failed",
+   "Task: attempt_1445182159119_0015_m_000005_0 - exited : java.io.IOException: Spill failed"
+  ],
+  "llm_template": "Task: <*> - exited : java.io.IOException: Spill failed",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "Task: <*> - exited : java.io.IOException: Spill failed"
+ },
+ {
+  "iter": 210,
+  "logs_to_query": [
+   "DFS chooseDataNode: got # 1 IOException, will wait for 723.7852941897946 msec.",
+   "DFS chooseDataNode: got # 1 IOException, will wait for 154.4690359206521 msec.",
+   "DFS chooseDataNode: got # 1 IOException, will wait for 2558.365341350332 msec."
+  ],
+  "logs_to_query_regex": [
+   "DFS chooseDataNode: got # 1 IOException, will wait for 723.7852941897946 msec.",
+   "DFS chooseDataNode: got # 1 IOException, will wait for 154.4690359206521 msec.",
+   "DFS chooseDataNode: got # 1 IOException, will wait for 2558.365341350332 msec."
+  ],
+  "llm_template": "DFS chooseDataNode: got # <*> IOException, will wait for <*> msec.",
+  "cluster_id": 242,
+  "update_success": true,
+  "template": "DFS chooseDataNode: got # <*> IOException, will wait for <*> msec."
+ },
+ {
+  "iter": 211,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445144423722_0020_m_000006_0: cleanup failed for container container_1445144423722_0020_01_000008 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-41.fareast.corp.microsoft.com",
+   "Diagnostics report from attempt_1445144423722_0023_m_000000_0: cleanup failed for container container_1445144423722_0023_01_000002 : java.lang.IllegalArgumentException: java.net.UnknownHostException: 04DN8IQ.fareast.corp.microsoft.com",
+   "Diagnostics report from attempt_1445144423722_0020_m_000009_0: cleanup failed for container container_1445144423722_0020_01_000011 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-39.fareast.corp.microsoft.com"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445144423722_0020_m_000006_0: cleanup failed for container container_1445144423722_0020_01_000008 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-41.fareast.corp.microsoft.com",
+   "Diagnostics report from attempt_1445144423722_0023_m_000000_0: cleanup failed for container container_1445144423722_0023_01_000002 : java.lang.IllegalArgumentException: java.net.UnknownHostException: 04DN8IQ.fareast.corp.microsoft.com",
+   "Diagnostics report from attempt_1445144423722_0020_m_000009_0: cleanup failed for container container_1445144423722_0020_01_000011 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-39.fareast.corp.microsoft.com"
+  ],
+  "llm_template": "Diagnostics report from <*>: cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>",
+  "cluster_id": 249,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>"
+ },
+ {
+  "iter": 212,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445182159119_0004_m_000004_0: Error: java.io.IOException: There is not enough space on the disk",
+   "Diagnostics report from attempt_1445182159119_0015_m_000005_0: Error: java.io.IOException: There is not enough space on the disk",
+   "Diagnostics report from attempt_1445182159119_0015_m_000006_0: Error: java.io.IOException: There is not enough space on the disk"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445182159119_0004_m_000004_0: Error: java.io.IOException: There is not enough space on the disk",
+   "Diagnostics report from attempt_1445182159119_0015_m_000005_0: Error: java.io.IOException: There is not enough space on the disk",
+   "Diagnostics report from attempt_1445182159119_0015_m_000006_0: Error: java.io.IOException: There is not enough space on the disk"
+  ],
+  "llm_template": "Diagnostics report from <*>: Error: java.io.IOException: There is not enough space on the disk",
+  "cluster_id": 252,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: Error: java.io.IOException: There is not enough space on the disk"
+ },
+ {
+  "iter": 213,
+  "logs_to_query": [
+   "Cannot assign container Container: [ContainerId: container_1445062781478_0018_01_000013, NodeId: MININT-75DGDAM1.fareast.corp.microsoft.com:51951, NodeHttpAddress: MININT-75DGDAM1.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.165.66:51951 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true",
+   "Cannot assign container Container: [ContainerId: container_1445062781478_0015_01_000012, NodeId: MSRA-SA-39.fareast.corp.microsoft.com:49130, NodeHttpAddress: MSRA-SA-39.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 172.22.149.145:49130 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true",
+   "Cannot assign container Container: [ContainerId: container_1445182159119_0004_01_000015, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64260, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.86.164.138:64260 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true"
+  ],
+  "logs_to_query_regex": [
+   "Cannot assign container Container: [ContainerId: container_1445062781478_0018_01_000013, NodeId: MININT-75DGDAM1.fareast.corp.microsoft.com:51951, NodeHttpAddress: MININT-75DGDAM1.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.165.66:51951 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true",
+   "Cannot assign container Container: [ContainerId: container_1445062781478_0015_01_000012, NodeId: MSRA-SA-39.fareast.corp.microsoft.com:49130, NodeHttpAddress: MSRA-SA-39.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 172.22.149.145:49130 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true",
+   "Cannot assign container Container: [ContainerId: container_1445182159119_0004_01_000015, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64260, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.86.164.138:64260 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true"
+  ],
+  "llm_template": "Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:1>, Priority: <*> Token: Token <*> }, ] for a map as either container memory less than required <memory:<*>, vCores:1> or no pending map tasks - maps.isEmpty=true",
+  "cluster_id": 266,
+  "update_success": true,
+  "template": "Cannot assign container Container: [ContainerId: <*>, NodeId: <*>, NodeHttpAddress: <*>, Resource: <*>, Priority: <*>, Token: <*>, ] for a map as either container memory less than required <*> or no pending map tasks - maps.isEmpty=<*>"
+ },
+ {
+  "iter": 214,
+  "logs_to_query": [
+   "Graceful stop failed"
+  ],
+  "logs_to_query_regex": [
+   "Graceful stop failed"
+  ],
+  "llm_template": "Graceful stop failed",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Graceful stop failed"
+ },
+ {
+  "iter": 215,
+  "logs_to_query": [
+   "In stop, writing event MAP_ATTEMPT_FAILED",
+   "In stop, writing event TASK_FINISHED",
+   "In stop, writing event JOB_FINISHED"
+  ],
+  "logs_to_query_regex": [
+   "In stop, writing event MAP_ATTEMPT_FAILED",
+   "In stop, writing event TASK_FINISHED",
+   "In stop, writing event JOB_FINISHED"
+  ],
+  "llm_template": "In stop, writing event <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "In stop, writing event <*>"
+ },
+ {
+  "iter": 216,
+  "logs_to_query": [
+   "Failed to connect to /172.22.149.145:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information",
+   "Failed to connect to /10.190.173.170:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"
+  ],
+  "logs_to_query_regex": [
+   "Failed to connect to /172.22.149.145:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information",
+   "Failed to connect to /10.190.173.170:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"
+  ],
+  "llm_template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information",
+  "cluster_id": 258,
+  "update_success": true,
+  "template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"
+ },
+ {
+  "iter": 217,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445182159119_0004_m_000004_0: Error: java.io.IOException: Spill failed",
+   "Diagnostics report from attempt_1445182159119_0015_m_000006_0: Error: java.io.IOException: Spill failed",
+   "Diagnostics report from attempt_1445182159119_0015_m_000005_0: Error: java.io.IOException: Spill failed"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445182159119_0004_m_000004_0: Error: java.io.IOException: Spill failed",
+   "Diagnostics report from attempt_1445182159119_0015_m_000006_0: Error: java.io.IOException: Spill failed",
+   "Diagnostics report from attempt_1445182159119_0015_m_000005_0: Error: java.io.IOException: Spill failed"
+  ],
+  "llm_template": "Diagnostics report from <*>: Error: java.io.IOException: Spill failed",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: java.io.IOException: Spill failed"
+ },
+ {
+  "iter": 218,
+  "logs_to_query": [
+   "Communication exception: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to 10.190.173.170:25859 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Communication exception: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to 10.190.173.170:29630 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to 10.190.173.170:25859 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Communication exception: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to 10.190.173.170:29630 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "llm_template": "Communication exception: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>",
+  "cluster_id": 262,
+  "update_success": true,
+  "template": "Communication exception: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 219,
+  "logs_to_query": [
+   "Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]",
+   "Slow ReadProcessor read fields took 48944ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [172.22.149.145:50010, 10.86.169.121:50010]",
+   "Slow ReadProcessor read fields took 48906ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.190.173.170:50010, 10.86.169.121:50010]"
+  ],
+  "logs_to_query_regex": [
+   "Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]",
+   "Slow ReadProcessor read fields took 48944ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [172.22.149.145:50010, 10.86.169.121:50010]",
+   "Slow ReadProcessor read fields took 48906ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.190.173.170:50010, 10.86.169.121:50010]"
+  ],
+  "llm_template": "Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: <*> status: <*> status: <*> downstreamAckTimeNanos: <*> targets: [<*>, <*>]",
+  "cluster_id": 257,
+  "update_success": true,
+  "template": "Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: <*> status: <*> status: <*> downstreamAckTimeNanos: <*>, targets: [<*>, <*>]"
+ },
+ {
+  "iter": 220,
+  "logs_to_query": [
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445062781478_0018_01_000012, NodeId: MININT-FNANLI5.fareast.corp.microsoft.com:64642, NodeHttpAddress: MININT-FNANLI5.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.169.121:64642 }, ]. RM may have assignment issues",
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445182159119_0013_01_000012, NodeId: MSRA-SA-41.fareast.corp.microsoft.com:10769, NodeHttpAddress: MSRA-SA-41.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.190.173.170:10769 }, ]. RM may have assignment issues",
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445062781478_0013_01_000013, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64484, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.164.9:64484 }, ]. RM may have assignment issues"
+  ],
+  "logs_to_query_regex": [
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445062781478_0018_01_000012, NodeId: MININT-FNANLI5.fareast.corp.microsoft.com:64642, NodeHttpAddress: MININT-FNANLI5.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.169.121:64642 }, ]. RM may have assignment issues",
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445182159119_0013_01_000012, NodeId: MSRA-SA-41.fareast.corp.microsoft.com:10769, NodeHttpAddress: MSRA-SA-41.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.190.173.170:10769 }, ]. RM may have assignment issues",
+   "Releasing unassigned and invalid container Container: [ContainerId: container_1445062781478_0013_01_000013, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64484, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.164.9:64484 }, ]. RM may have assignment issues"
+  ],
+  "llm_template": "Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:1>, Priority: <*> Token: Token <*> }, ]. RM may have assignment issues",
+  "cluster_id": 264,
+  "update_success": true,
+  "template": "Releasing unassigned and invalid container Container: [ContainerId: <*>, NodeId: <*>, NodeHttpAddress: <*>, Resource: <*>, Priority: <*>, Token: <*>]. RM may have assignment issues"
+ },
+ {
+  "iter": 221,
+  "logs_to_query": [
+   "Assigned from earlierFailedMaps"
+  ],
+  "logs_to_query_regex": [
+   "Assigned from earlierFailedMaps"
+  ],
+  "llm_template": "Assigned from <*>",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Assigned from earlierFailedMaps"
+ },
+ {
+  "iter": 222,
+  "logs_to_query": [
+   "Assigning container Container: [ContainerId: container_1445182159119_0003_01_000016, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64260, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.86.164.138:64260 }, ] to fast fail map",
+   "Assigning container Container: [ContainerId: container_1445182159119_0004_01_000016, NodeId: MSRA-SA-41.fareast.corp.microsoft.com:10769, NodeHttpAddress: MSRA-SA-41.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.190.173.170:10769 }, ] to fast fail map",
+   "Assigning container Container: [ContainerId: container_1445182159119_0015_01_000013, NodeId: MSRA-SA-39.fareast.corp.microsoft.com:28345, NodeHttpAddress: MSRA-SA-39.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 172.22.149.145:28345 }, ] to fast fail map"
+  ],
+  "logs_to_query_regex": [
+   "Assigning container Container: [ContainerId: container_1445182159119_0003_01_000016, NodeId: 04DN8IQ.fareast.corp.microsoft.com:64260, NodeHttpAddress: 04DN8IQ.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.86.164.138:64260 }, ] to fast fail map",
+   "Assigning container Container: [ContainerId: container_1445182159119_0004_01_000016, NodeId: MSRA-SA-41.fareast.corp.microsoft.com:10769, NodeHttpAddress: MSRA-SA-41.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 10.190.173.170:10769 }, ] to fast fail map",
+   "Assigning container Container: [ContainerId: container_1445182159119_0015_01_000013, NodeId: MSRA-SA-39.fareast.corp.microsoft.com:28345, NodeHttpAddress: MSRA-SA-39.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: 172.22.149.145:28345 }, ] to fast fail map"
+  ],
+  "llm_template": "Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:1>, Priority: <*> Token: Token <*> }, ] to fast fail map",
+  "cluster_id": 261,
+  "update_success": true,
+  "template": "Assigning container Container: [ContainerId: <*>, NodeId: <*>, NodeHttpAddress: <*>, Resource: <memory:<*>, vCores:<*>, Priority: <*>, Token: Token { kind: <*>, service: <*> }, ] to fast fail map"
+ },
+ {
+  "iter": 223,
+  "logs_to_query": [
+   "DFS Read"
+  ],
+  "logs_to_query_regex": [
+   "DFS Read"
+  ],
+  "llm_template": "DFS Read",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "DFS Read"
+ },
+ {
+  "iter": 224,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445062781478_0017_m_000002_0: AttemptID:attempt_1445062781478_0017_m_000002_0 Timed out after 600 secs",
+   "Diagnostics report from attempt_1445087491445_0009_r_000000_0: AttemptID:attempt_1445087491445_0009_r_000000_0 Timed out after 600 secs",
+   "Diagnostics report from attempt_1445076437777_0004_r_000000_0: AttemptID:attempt_1445076437777_0004_r_000000_0 Timed out after 600 secs"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445062781478_0017_m_000002_0: AttemptID:attempt_1445062781478_0017_m_000002_0 Timed out after 600 secs",
+   "Diagnostics report from attempt_1445087491445_0009_r_000000_0: AttemptID:attempt_1445087491445_0009_r_000000_0 Timed out after 600 secs",
+   "Diagnostics report from attempt_1445076437777_0004_r_000000_0: AttemptID:attempt_1445076437777_0004_r_000000_0 Timed out after 600 secs"
+  ],
+  "llm_template": "Diagnostics report from <*>: AttemptID:<*> Timed out after <*> secs",
+  "cluster_id": 237,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: AttemptID:<*> Timed out after <*> secs"
+ },
+ {
+  "iter": 225,
+  "logs_to_query": [
+   "Error communicating with RM: Could not contact RM after 360000 milliseconds."
+  ],
+  "logs_to_query_regex": [
+   "Error communicating with RM: Could not contact RM after 360000 milliseconds."
+  ],
+  "llm_template": "Error communicating with RM: Could not contact RM after <*> milliseconds.",
+  "cluster_id": 242,
+  "update_success": true,
+  "template": "Error communicating with RM: Could not contact RM after <*> milliseconds."
+ },
+ {
+  "iter": 226,
+  "logs_to_query": [
+   "Reduce preemption successful attempt_1445087491445_0004_r_000000_1000"
+  ],
+  "logs_to_query_regex": [
+   "Reduce preemption successful attempt_1445087491445_0004_r_000000_1000"
+  ],
+  "llm_template": "Reduce preemption successful <*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Reduce preemption successful <*>"
+ },
+ {
+  "iter": 227,
+  "logs_to_query": [
+   "Runnning cleanup for the task"
+  ],
+  "logs_to_query_regex": [
+   "Runnning cleanup for the task"
+  ],
+  "llm_template": "Runnning cleanup for the task",
+  "cluster_id": 57,
+  "update_success": true,
+  "template": "Runnning cleanup for the task"
+ },
+ {
+  "iter": 228,
+  "logs_to_query": [
+   "Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0",
+   "Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0"
+  ],
+  "logs_to_query_regex": [
+   "Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0",
+   "Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0"
+  ],
+  "llm_template": "Task cleanup failed for attempt <*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Task cleanup failed for attempt <*>"
+ },
+ {
+  "iter": 229,
+  "logs_to_query": [
+   "Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0004",
+   "Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0007"
+  ],
+  "logs_to_query_regex": [
+   "Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0004",
+   "Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0007"
+  ],
+  "llm_template": "Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>"
+ },
+ {
+  "iter": 230,
+  "logs_to_query": [
+   "Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Diagnostics report from attempt_1445144423722_0020_m_000002_0: Error: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Diagnostics report from attempt_1445144423722_0020_m_000001_0: Error: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "logs_to_query_regex": [
+   "Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Diagnostics report from attempt_1445144423722_0020_m_000002_0: Error: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Diagnostics report from attempt_1445144423722_0020_m_000001_0: Error: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "llm_template": "Diagnostics report from <*>: Error: <*>: <*> from <*> to <*> failed on <*>: <*>; For more details see: <*>",
+  "cluster_id": 265,
+  "update_success": true,
+  "template": "Task: <*> - exited : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 231,
+  "logs_to_query": [
+   "Last retry, killing attempt_1445175094696_0004_m_000005_0",
+   "Last retry, killing attempt_1445175094696_0004_m_000006_0",
+   "Last retry, killing attempt_1445175094696_0004_m_000000_0"
+  ],
+  "logs_to_query_regex": [
+   "Last retry, killing attempt_1445175094696_0004_m_000005_0",
+   "Last retry, killing attempt_1445175094696_0004_m_000006_0",
+   "Last retry, killing attempt_1445175094696_0004_m_000000_0"
+  ],
+  "llm_template": "Last retry, killing <*>",
+  "cluster_id": 48,
+  "update_success": true,
+  "template": "Last retry, killing <*>"
+ },
+ {
+  "iter": 232,
+  "logs_to_query": [
+   "Process Thread Dump: Communication exception"
+  ],
+  "logs_to_query_regex": [
+   "Process Thread Dump: Communication exception"
+  ],
+  "llm_template": "Process Thread Dump: Communication exception",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "Process Thread Dump: Communication exception"
+ },
+ {
+  "iter": 233,
+  "logs_to_query": [
+   "Connection retry failed with 4 attempts in 180 seconds"
+  ],
+  "logs_to_query_regex": [
+   "Connection retry failed with 4 attempts in 180 seconds"
+  ],
+  "llm_template": "Connection retry failed with <*> attempts in <*> seconds",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Connection retry failed with <*> attempts in <*> seconds"
+ },
+ {
+  "iter": 234,
+  "logs_to_query": [
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073741828_1004 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073741828_1004 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry...",
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073741827_1003 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073741827_1003 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry...",
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry..."
+  ],
+  "logs_to_query_regex": [
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073741828_1004 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073741828_1004 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry...",
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073741827_1003 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073741827_1003 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry...",
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry..."
+  ],
+  "llm_template": "Could not obtain BP-<*> from any node: java.io.IOException: No live nodes contain block BP-<*> after checking nodes = [<*>, <*> <*>], ignoredNodes = null No live nodes contain current block Block locations: <*> Dead nodes: <*> Will get new block locations from namenode and retry...",
+  "cluster_id": 267,
+  "update_success": true,
+  "template": "Could not obtain <*> from any node: <*> No live nodes contain block <*> after checking nodes = <*>, ignoredNodes = <*> No live nodes contain current block Block locations: <*> Dead nodes: <*>. Will get new block locations from namenode and retry..."
+ },
+ {
+  "iter": 235,
+  "logs_to_query": [
+   "DataStreamer Exception"
+  ],
+  "logs_to_query_regex": [
+   "DataStreamer Exception"
+  ],
+  "llm_template": "DataStreamer Exception",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "DataStreamer Exception"
+ },
+ {
+  "iter": 236,
+  "logs_to_query": [
+   "JobHistoryEventHandler notified that forceJobCompletion is false"
+  ],
+  "logs_to_query_regex": [
+   "JobHistoryEventHandler notified that forceJobCompletion is false"
+  ],
+  "llm_template": "JobHistoryEventHandler notified that forceJobCompletion is false",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "JobHistoryEventHandler notified that forceJobCompletion is <*>"
+ },
+ {
+  "iter": 237,
+  "logs_to_query": [
+   "Unable to parse prior job history, aborting recovery"
+  ],
+  "logs_to_query_regex": [
+   "Unable to parse prior job history, aborting recovery"
+  ],
+  "llm_template": "Unable to parse prior job history, aborting recovery",
+  "cluster_id": 224,
+  "update_success": true,
+  "template": "Unable to parse prior job history, aborting recovery"
+ },
+ {
+  "iter": 238,
+  "logs_to_query": [
+   "Failed to connect to MININT-FNANLI5.fareast.corp.microsoft.com:13562 with 1 map outputs"
+  ],
+  "logs_to_query_regex": [
+   "Failed to connect to MININT-FNANLI5.fareast.corp.microsoft.com:13562 with 1 map outputs"
+  ],
+  "llm_template": "Failed to connect to <*> with <*> map outputs",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Failed to connect to <*> with <*> map outputs"
+ },
+ {
+  "iter": 239,
+  "logs_to_query": [
+   "Found jobId job_1445175094696_0003 to have not been closed. Will close",
+   "Found jobId job_1445144423722_0023 to have not been closed. Will close"
+  ],
+  "logs_to_query_regex": [
+   "Found jobId job_1445175094696_0003 to have not been closed. Will close",
+   "Found jobId job_1445144423722_0023 to have not been closed. Will close"
+  ],
+  "llm_template": "Found jobId <*> to have not been closed. Will close",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "Found jobId <*> to have not been closed. Will close"
+ },
+ {
+  "iter": 240,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445182159119_0003_r_000000_0: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#3",
+   "Diagnostics report from attempt_1445182159119_0014_r_000000_0: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#1"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445182159119_0003_r_000000_0: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#3",
+   "Diagnostics report from attempt_1445182159119_0014_r_000000_0: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#1"
+  ],
+  "llm_template": "Diagnostics report from <*>: Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#<*>",
+  "cluster_id": 242,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: Error: <*>: error in shuffle in fetcher#<*>"
+ },
+ {
+  "iter": 241,
+  "logs_to_query": [
+   "Could not parse the old history file. Will not have old AMinfos"
+  ],
+  "logs_to_query_regex": [
+   "Could not parse the old history file. Will not have old AMinfos"
+  ],
+  "llm_template": "Could not parse the old history file. Will not have old AMinfos",
+  "cluster_id": 244,
+  "update_success": true,
+  "template": "Could not parse the old history file. Will not have old AMinfos"
+ },
+ {
+  "iter": 242,
+  "logs_to_query": [
+   "Could not contact RM after 360000 milliseconds."
+  ],
+  "logs_to_query_regex": [
+   "Could not contact RM after 360000 milliseconds."
+  ],
+  "llm_template": "Could not contact RM after <*> milliseconds.",
+  "cluster_id": 215,
+  "update_success": true,
+  "template": "Could not contact RM after <*> milliseconds."
+ },
+ {
+  "iter": 243,
+  "logs_to_query": [
+   "IPC Server handler 29 on 58622 caught an exception"
+  ],
+  "logs_to_query_regex": [
+   "IPC Server handler 29 on 58622 caught an exception"
+  ],
+  "llm_template": "IPC Server handler <*> on <*> caught an exception",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "IPC Server handler <*> on <*> caught an exception"
+ },
+ {
+  "iter": 244,
+  "logs_to_query": [
+   "Failed to connect to /10.86.169.121:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information"
+  ],
+  "logs_to_query_regex": [
+   "Failed to connect to /10.86.169.121:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information"
+  ],
+  "llm_template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information",
+  "cluster_id": 256,
+  "update_success": true,
+  "template": "Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information"
+ },
+ {
+  "iter": 245,
+  "logs_to_query": [
+   "Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@6a6585ee"
+  ],
+  "logs_to_query_regex": [
+   "Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@6a6585ee"
+  ],
+  "llm_template": "Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@<*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Ignoring exception during close for <*>"
+ },
+ {
+  "iter": 246,
+  "logs_to_query": [
+   "Shuffle failed : local error on this node: 04DN8IQ/10.86.164.138"
+  ],
+  "logs_to_query_regex": [
+   "Shuffle failed : local error on this node: 04DN8IQ/10.86.164.138"
+  ],
+  "llm_template": "Shuffle failed : local error on this node: <*>",
+  "cluster_id": 233,
+  "update_success": true,
+  "template": "Shuffle failed : local error on this node: <*>"
+ },
+ {
+  "iter": 247,
+  "logs_to_query": [
+   "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#3",
+   "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#1"
+  ],
+  "logs_to_query_regex": [
+   "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#3",
+   "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#1"
+  ],
+  "llm_template": "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#<*>",
+  "cluster_id": 238,
+  "update_success": true,
+  "template": "Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#<*>"
+ },
+ {
+  "iter": 248,
+  "logs_to_query": [
+   "Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+  ],
+  "logs_to_query_regex": [
+   "Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+  ],
+  "llm_template": "Diagnostics report from <*>: Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_<*>_<*>_<*>_<*>_<*>",
+  "cluster_id": 254,
+  "update_success": true,
+  "template": "Diagnostics report from <*>: Error: <*>: Could not find any valid local directory for <*>"
+ },
+ {
+  "iter": 249,
+  "logs_to_query": [
+   "Task: attempt_1445182159119_0003_m_000000_0 - failed due to FSError: java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0004_m_000000_0 - failed due to FSError: java.io.IOException: There is not enough space on the disk"
+  ],
+  "logs_to_query_regex": [
+   "Task: attempt_1445182159119_0003_m_000000_0 - failed due to FSError: java.io.IOException: There is not enough space on the disk",
+   "Task: attempt_1445182159119_0004_m_000000_0 - failed due to FSError: java.io.IOException: There is not enough space on the disk"
+  ],
+  "llm_template": "Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk",
+  "cluster_id": 255,
+  "update_success": true,
+  "template": "Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk"
+ },
+ {
+  "iter": 250,
+  "logs_to_query": [
+   "Service JobHistoryEventHandler failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.",
+   "Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected."
+  ],
+  "logs_to_query_regex": [
+   "Service JobHistoryEventHandler failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.",
+   "Service org.apache.hadoop.mapreduce.v2.app.MRAppMaster failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected."
+  ],
+  "llm_template": "Service <*> failed in state STOPPED; cause: <*>: <*>",
+  "cluster_id": 256,
+  "update_success": true,
+  "template": "Service <*> failed in state <*>; cause: <*>: Attempt to process a enum when a union was expected."
+ },
+ {
+  "iter": 251,
+  "logs_to_query": [
+   "Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "logs_to_query_regex": [
+   "Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "llm_template": "Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>",
+  "cluster_id": 263,
+  "update_success": true,
+  "template": "Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 252,
+  "logs_to_query": [
+   "Exception running child : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "logs_to_query_regex": [
+   "Exception running child : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "llm_template": "Exception running child : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>",
+  "cluster_id": 264,
+  "update_success": true,
+  "template": "Exception running child : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 253,
+  "logs_to_query": [
+   "Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Task: attempt_1445144423722_0020_m_000001_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "logs_to_query_regex": [
+   "Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+   "Task: attempt_1445144423722_0020_m_000001_0 - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost"
+  ],
+  "llm_template": "Task: <*> - exited : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/<*> to msra-sa-<*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost",
+  "cluster_id": 265,
+  "update_success": true,
+  "template": "Task: <*> - exited : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 254,
+  "logs_to_query": [
+   "Preempting attempt_1445087491445_0004_r_000000_1000"
+  ],
+  "logs_to_query_regex": [
+   "Preempting attempt_1445087491445_0004_r_000000_1000"
+  ],
+  "llm_template": "Preempting <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Preempting <*>"
+ },
+ {
+  "iter": 255,
+  "logs_to_query": [
+   "Error closing writer for JobID: job_1445144423722_0023"
+  ],
+  "logs_to_query_regex": [
+   "Error closing writer for JobID: job_1445144423722_0023"
+  ],
+  "llm_template": "Error closing writer for JobID: <*>",
+  "cluster_id": 78,
+  "update_success": true,
+  "template": "Error closing writer for JobID: <*>"
+ },
+ {
+  "iter": 256,
+  "logs_to_query": [
+   "Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker."
+  ],
+  "logs_to_query_regex": [
+   "Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker."
+  ],
+  "llm_template": "Reporting fetch failure for <*> to <*>.",
+  "cluster_id": 214,
+  "update_success": true,
+  "template": "Reporting fetch failure for <*>."
+ },
+ {
+  "iter": 257,
+  "logs_to_query": [
+   "IPC Server handler 29 on 58622, call statusUpdate(attempt_1445094324383_0003_m_000000_0, org.apache.hadoop.mapred.MapTaskStatus@cdcdbf7), rpc version=2, client version=19, methodsFingerPrint=937413979 from 10.86.169.121:52490 Call#68 Retry#0: output error"
+  ],
+  "logs_to_query_regex": [
+   "IPC Server handler 29 on 58622, call statusUpdate(attempt_1445094324383_0003_m_000000_0, org.apache.hadoop.mapred.MapTaskStatus@cdcdbf7), rpc version=2, client version=19, methodsFingerPrint=937413979 from 10.86.169.121:52490 Call#68 Retry#0: output error"
+  ],
+  "llm_template": "IPC Server handler <*> on <*> call statusUpdate(<*>, <*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: <*>",
+  "cluster_id": 258,
+  "update_success": true,
+  "template": "IPC Server handler <*> on <*>, call statusUpdate(<*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: output error"
+ },
+ {
+  "iter": 258,
+  "logs_to_query": [
+   "Communication exception: java.net.ConnectException: Call From MSRA-SA-39/172.22.149.145 to minint-fnanli5.fareast.corp.microsoft.com:49594 failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused"
+  ],
+  "logs_to_query_regex": [
+   "Communication exception: java.net.ConnectException: Call From MSRA-SA-39/172.22.149.145 to minint-fnanli5.fareast.corp.microsoft.com:49594 failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused"
+  ],
+  "llm_template": "Communication exception: java.net.ConnectException: Call From <*> to <*>.fareast.corp.microsoft.com:<*> failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: <*>",
+  "cluster_id": 260,
+  "update_success": true,
+  "template": "Communication exception: java.net.ConnectException: Call From <*> to <*> failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: <*>"
+ },
+ {
+  "iter": 259,
+  "logs_to_query": [
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010 10.86.169.121:50010. Will get new block locations from namenode and retry..."
+  ],
+  "logs_to_query_regex": [
+   "Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010 10.86.169.121:50010. Will get new block locations from namenode and retry..."
+  ],
+  "llm_template": "Could not obtain <*> from any node: java.io.IOException: No live nodes contain block <*> after checking nodes = [<*>, <*>], ignoredNodes = null No live nodes contain current block Block locations: <*> Dead nodes: <*> Will get new block locations from namenode and retry...",
+  "cluster_id": 268,
+  "update_success": true,
+  "template": "Could not obtain <*> from any node: <*> No live nodes contain block <*> after checking nodes = <*>, ignoredNodes = <*> No live nodes contain current block Block locations: <*> Dead nodes: <*>. Will get new block locations from namenode and retry..."
+ }
+]

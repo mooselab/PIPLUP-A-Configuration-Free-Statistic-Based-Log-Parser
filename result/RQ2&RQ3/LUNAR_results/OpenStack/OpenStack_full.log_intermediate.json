@@ -1,0 +1,799 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail <*>\" status: 200 len: 1583 time: 0.1919448",
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/639becd4-ec8d-4ee6-b27b-a9e71077a03b <*>\" status: 200 len: 1708 time: 0.2014220",
+   "10.11.10.1 \"GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T09%3A54%3A58.645239%2B00%3A00 <*>\" status: 200 len: 23370 time: 0.3337281"
+  ],
+  "logs_to_query_regex": [
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail <*>\" status: 200 len: 1583 time: 0.1919448",
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/639becd4-ec8d-4ee6-b27b-a9e71077a03b <*>\" status: 200 len: 1708 time: 0.2014220",
+   "10.11.10.1 \"GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T09%3A54%3A58.645239%2B00%3A00 <*>\" status: 200 len: 23370 time: 0.3337281"
+  ],
+  "llm_template": "<*> \"GET <*>/servers/detail <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"GET <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>\" status: 200 len: 1708 time: 0.2011580",
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/images/0673dd71-34c5-4fbb-86c4-40623fbe45b4 <*>\" status: 200 len: 868 time: 0.1494110",
+   "10.11.10.1 \"GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T06%3A14%3A59.138689%2B00%3A00 <*>\" status: 200 len: 23222 time: 0.2552092"
+  ],
+  "logs_to_query_regex": [
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>\" status: 200 len: 1708 time: 0.2011580",
+   "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/images/0673dd71-34c5-4fbb-86c4-40623fbe45b4 <*>\" status: 200 len: 868 time: 0.1494110",
+   "10.11.10.1 \"GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T06%3A14%3A59.138689%2B00%3A00 <*>\" status: 200 len: 23222 time: 0.2552092"
+  ],
+  "llm_template": "<*> \"GET <*>/servers/<*> <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"GET <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 200 len: 380 time: 0.0929029",
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 404 len: 296 time: 0.0895369",
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 404 len: 296 time: 0.0876758"
+  ],
+  "logs_to_query_regex": [
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 200 len: 380 time: 0.0929029",
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 404 len: 296 time: 0.0895369",
+   "10.11.10.1 \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: 404 len: 296 time: 0.0876758"
+  ],
+  "llm_template": "<*> \"POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"POST <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2012-08-10/meta_data.json <*>\" status: 200 len: 264 time: 0.2246630",
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2013-10-17 <*>\" status: 200 len: 157 time: 0.4092629",
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2013-10-17/vendor_data.json <*>\" status: 200 len: 124 time: 0.2405910"
+  ],
+  "logs_to_query_regex": [
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2012-08-10/meta_data.json <*>\" status: 200 len: 264 time: 0.2246630",
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2013-10-17 <*>\" status: 200 len: 157 time: 0.4092629",
+   "10.11.11.225,10.11.10.1 \"GET /openstack/2013-10-17/vendor_data.json <*>\" status: 200 len: 124 time: 0.2405910"
+  ],
+  "llm_template": "<*> \"GET <*> <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"GET <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742",
+   "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "logs_to_query_regex": [
+   "Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742",
+   "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "llm_template": "Active base files: <*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Active base files: <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): checking"
+  ],
+  "logs_to_query_regex": [
+   "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): checking"
+  ],
+  "llm_template": "image <*> at (<*>): checking",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "image <*> at (<*>): checking"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage"
+  ],
+  "logs_to_query_regex": [
+   "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage"
+  ],
+  "llm_template": "image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage",
+  "cluster_id": 35,
+  "update_success": true,
+  "template": "image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "[instance: 2b590f10-49fd-4ec9-ae41-19596c2f4b25] VM Stopped (Lifecycle Event)",
+   "[instance: d76a85c3-c985-48be-9c90-8ccdae90f1b6] VM Paused (Lifecycle Event)",
+   "[instance: 89ec2387-2e4b-4a73-94e8-7dd2ed6a485f] VM Resumed (Lifecycle Event)"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 2b590f10-49fd-4ec9-ae41-19596c2f4b25] VM Stopped (Lifecycle Event)",
+   "[instance: d76a85c3-c985-48be-9c90-8ccdae90f1b6] VM Paused (Lifecycle Event)",
+   "[instance: 89ec2387-2e4b-4a73-94e8-7dd2ed6a485f] VM Resumed (Lifecycle Event)"
+  ],
+  "llm_template": "[instance: <*>] VM Stopped (Lifecycle Event)",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "[instance: <*>] VM Stopped (Lifecycle Event)"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Started (Lifecycle Event)",
+   "[instance: 860b61fa-0dbc-43a5-838c-c2373e55e999] VM Resumed (Lifecycle Event)",
+   "[instance: 05aab6c8-0298-43a3-b439-102d389a632d] VM Paused (Lifecycle Event)"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Started (Lifecycle Event)",
+   "[instance: 860b61fa-0dbc-43a5-838c-c2373e55e999] VM Resumed (Lifecycle Event)",
+   "[instance: 05aab6c8-0298-43a3-b439-102d389a632d] VM Paused (Lifecycle Event)"
+  ],
+  "llm_template": "[instance: <*>] VM Started (Lifecycle Event)",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "[instance: <*>] VM Started (Lifecycle Event)"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Paused (Lifecycle Event)",
+   "[instance: bd2998ed-80c2-4a44-ab7e-e37b3b66d862] VM Paused (Lifecycle Event)",
+   "[instance: 3b099e1b-fac9-4e35-899e-ae1aa8a61525] VM Resumed (Lifecycle Event)"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Paused (Lifecycle Event)",
+   "[instance: bd2998ed-80c2-4a44-ab7e-e37b3b66d862] VM Paused (Lifecycle Event)",
+   "[instance: 3b099e1b-fac9-4e35-899e-ae1aa8a61525] VM Resumed (Lifecycle Event)"
+  ],
+  "llm_template": "[instance: <*>] VM Paused (Lifecycle Event)",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "[instance: <*>] VM Paused (Lifecycle Event)"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total memory: 64172 MB, used: 512.00 MB",
+   "[instance: 38965537-930e-469d-a0d6-18aca9f6eaf0] Total memory: 64172 MB, used: 512.00 MB",
+   "[instance: 8db376c1-d77c-49a6-8ef9-75e34c1b0c5b] Total memory: 64172 MB, used: 512.00 MB"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total memory: 64172 MB, used: 512.00 MB",
+   "[instance: 38965537-930e-469d-a0d6-18aca9f6eaf0] Total memory: 64172 MB, used: 512.00 MB",
+   "[instance: 8db376c1-d77c-49a6-8ef9-75e34c1b0c5b] Total memory: 64172 MB, used: 512.00 MB"
+  ],
+  "llm_template": "[instance: <*>] Total memory: <*> MB, used: <*> MB",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "[instance: <*>] Total memory: <*> MB, used: <*> MB"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Resumed (Lifecycle Event)",
+   "[instance: 9cf3f0d6-60b7-4ca4-b34b-d556b3aaf086] VM Resumed (Lifecycle Event)",
+   "[instance: 02162715-e3b2-451f-aa4a-c0888ef3d4b4] VM Resumed (Lifecycle Event)"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Resumed (Lifecycle Event)",
+   "[instance: 9cf3f0d6-60b7-4ca4-b34b-d556b3aaf086] VM Resumed (Lifecycle Event)",
+   "[instance: 02162715-e3b2-451f-aa4a-c0888ef3d4b4] VM Resumed (Lifecycle Event)"
+  ],
+  "llm_template": "[instance: <*>] VM Resumed (Lifecycle Event)",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "[instance: <*>] VM Resumed (Lifecycle Event)"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance spawned successfully.",
+   "[instance: 0ab15104-831b-4a67-bb20-6e3d407b1cdb] Instance spawned successfully.",
+   "[instance: b15d3ecb-be67-435f-8b18-b0e1e0ea1a01] Instance spawned successfully."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance spawned successfully.",
+   "[instance: 0ab15104-831b-4a67-bb20-6e3d407b1cdb] Instance spawned successfully.",
+   "[instance: b15d3ecb-be67-435f-8b18-b0e1e0ea1a01] Instance spawned successfully."
+  ],
+  "llm_template": "[instance: <*>] Instance spawned successfully.",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "[instance: <*>] Instance spawned successfully."
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total disk: 15 GB, used: 0.00 GB",
+   "[instance: 4ad93dba-0941-4a90-9eb0-7b51ce5288cd] Total disk: 15 GB, used: 0.00 GB",
+   "[instance: 55517d5a-b73e-411a-a9cd-641f443f39c0] Total disk: 15 GB, used: 0.00 GB"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total disk: 15 GB, used: 0.00 GB",
+   "[instance: 4ad93dba-0941-4a90-9eb0-7b51ce5288cd] Total disk: 15 GB, used: 0.00 GB",
+   "[instance: 55517d5a-b73e-411a-a9cd-641f443f39c0] Total disk: 15 GB, used: 0.00 GB"
+  ],
+  "llm_template": "[instance: <*>] Total disk: <*> GB, used: <*> GB",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "[instance: <*>] Total disk: <*> GB, used: <*> GB"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] disk limit not specified, defaulting to unlimited",
+   "[instance: 57563ca2-bafe-43e5-872f-5c3439e9b6a5] disk limit not specified, defaulting to unlimited",
+   "[instance: bc2e5c91-3a6f-4e55-8a05-cf5a58483561] vcpu limit not specified, defaulting to unlimited"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] disk limit not specified, defaulting to unlimited",
+   "[instance: 57563ca2-bafe-43e5-872f-5c3439e9b6a5] disk limit not specified, defaulting to unlimited",
+   "[instance: bc2e5c91-3a6f-4e55-8a05-cf5a58483561] vcpu limit not specified, defaulting to unlimited"
+  ],
+  "llm_template": "[instance: <*>] disk limit not specified, defaulting to unlimited",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "[instance: <*>] disk limit not specified, defaulting to unlimited"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 20.58 seconds to spawn the instance on the hypervisor.",
+   "[instance: 3ccbf387-7d3d-48be-a3ef-7a2f5bc5bf46] Took 19.14 seconds to spawn the instance on the hypervisor.",
+   "[instance: e32d4c43-cd52-4778-9619-fc4573d20fdb] Took 1.01 seconds to destroy the instance on the hypervisor."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 20.58 seconds to spawn the instance on the hypervisor.",
+   "[instance: 3ccbf387-7d3d-48be-a3ef-7a2f5bc5bf46] Took 19.14 seconds to spawn the instance on the hypervisor.",
+   "[instance: e32d4c43-cd52-4778-9619-fc4573d20fdb] Took 1.01 seconds to destroy the instance on the hypervisor."
+  ],
+  "llm_template": "[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor."
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>\" status: 204 len: 203 time: 0.2484462",
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/50d66f33-1585-4ab7-9765-4c4203720af0 <*>\" status: 204 len: 203 time: 0.2586370",
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/538146d5-6b34-4536-836f-dbadd8b0c20e <*>\" status: 204 len: 203 time: 0.2575622"
+  ],
+  "logs_to_query_regex": [
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>\" status: 204 len: 203 time: 0.2484462",
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/50d66f33-1585-4ab7-9765-4c4203720af0 <*>\" status: 204 len: 203 time: 0.2586370",
+   "10.11.10.1 \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/538146d5-6b34-4536-836f-dbadd8b0c20e <*>\" status: 204 len: 203 time: 0.2575622"
+  ],
+  "llm_template": "<*> \"DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"DELETE <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] During sync_power_state the instance has a pending task (spawning). Skip.",
+   "[instance: d7522d8e-6914-45e7-88ad-421d60f15174] During sync_power_state the instance has a pending task (spawning). Skip.",
+   "[instance: 196ce850-a67f-45c9-a5fa-6f5077401835] During sync_power_state the instance has a pending task (spawning). Skip."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] During sync_power_state the instance has a pending task (spawning). Skip.",
+   "[instance: d7522d8e-6914-45e7-88ad-421d60f15174] During sync_power_state the instance has a pending task (spawning). Skip.",
+   "[instance: 196ce850-a67f-45c9-a5fa-6f5077401835] During sync_power_state the instance has a pending task (spawning). Skip."
+  ],
+  "llm_template": "[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip."
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "logs_to_query_regex": [
+   "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "llm_template": "Removable base files: <*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Removable base files: <*>"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "Unknown base file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "logs_to_query_regex": [
+   "Unknown base file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "llm_template": "Unknown base file: <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Unknown base file: <*>"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Creating image",
+   "[instance: 0eb5f495-5368-4594-9dbf-cd545aaab311] Creating image",
+   "[instance: 52ce96af-f619-43fe-b23f-b18b1457f07f] Creating image"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Creating image",
+   "[instance: 0eb5f495-5368-4594-9dbf-cd545aaab311] Creating image",
+   "[instance: 52ce96af-f619-43fe-b23f-b18b1457f07f] Creating image"
+  ],
+  "llm_template": "[instance: <*>] Creating image",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "[instance: <*>] Creating image"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 21.38 seconds to build instance.",
+   "[instance: 9ac8f67e-02ec-4ec9-adc4-27269ff9626c] Took 21.95 seconds to build instance.",
+   "[instance: 55ffad71-2663-43cc-9d87-5479dce35f9f] Took 21.14 seconds to build instance."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 21.38 seconds to build instance.",
+   "[instance: 9ac8f67e-02ec-4ec9-adc4-27269ff9626c] Took 21.95 seconds to build instance.",
+   "[instance: 55ffad71-2663-43cc-9d87-5479dce35f9f] Took 21.14 seconds to build instance."
+  ],
+  "llm_template": "[instance: <*>] Took <*> seconds to build instance.",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "[instance: <*>] Took <*> seconds to build instance."
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Claim successful",
+   "[instance: 608de739-6922-4584-818f-ef772840d097] Claim successful",
+   "[instance: 77c4af47-4501-46eb-aa28-67bf5efc1dff] Claim successful"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Claim successful",
+   "[instance: 608de739-6922-4584-818f-ef772840d097] Claim successful",
+   "[instance: 77c4af47-4501-46eb-aa28-67bf5efc1dff] Claim successful"
+  ],
+  "llm_template": "[instance: <*>] Claim successful",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "[instance: <*>] Claim successful"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "Creating event network-vif-plugged:95fcdc5e-3159-4e86-968a-13a2a06e9e89 for instance 3edec1e4-9678-4a3a-a21b-a145a4ee5e61",
+   "Creating event network-vif-plugged:7b9e1451-53cb-423b-9b95-f50da706e1ef for instance af4c5f12-9b85-41d8-bc71-68af9240d8dc",
+   "Creating event network-vif-plugged:c3e5b428-d0b8-40eb-a767-31c7674934a8 for instance b0bbdc7c-0a69-4b29-a957-16df10d3473f"
+  ],
+  "logs_to_query_regex": [
+   "Creating event network-vif-plugged:95fcdc5e-3159-4e86-968a-13a2a06e9e89 for instance 3edec1e4-9678-4a3a-a21b-a145a4ee5e61",
+   "Creating event network-vif-plugged:7b9e1451-53cb-423b-9b95-f50da706e1ef for instance af4c5f12-9b85-41d8-bc71-68af9240d8dc",
+   "Creating event network-vif-plugged:c3e5b428-d0b8-40eb-a767-31c7674934a8 for instance b0bbdc7c-0a69-4b29-a957-16df10d3473f"
+  ],
+  "llm_template": "Creating event network-vif-plugged:<*> for instance <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Creating event <*> for instance <*>"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total vcpu: 16 VCPU, used: 0.00 VCPU",
+   "[instance: 1eb557e2-c5e8-41d1-85c4-2187ef2950f0] Total vcpu: 16 VCPU, used: 0.00 VCPU",
+   "[instance: a42ae07a-0375-4d33-8e47-fb596b2454dd] Total vcpu: 16 VCPU, used: 0.00 VCPU"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total vcpu: 16 VCPU, used: 0.00 VCPU",
+   "[instance: 1eb557e2-c5e8-41d1-85c4-2187ef2950f0] Total vcpu: 16 VCPU, used: 0.00 VCPU",
+   "[instance: a42ae07a-0375-4d33-8e47-fb596b2454dd] Total vcpu: 16 VCPU, used: 0.00 VCPU"
+  ],
+  "llm_template": "[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] memory limit: 96258.00 MB, free: 95746.00 MB",
+   "[instance: 7ff82c85-22b8-4abe-b2e0-bc7f642b0d66] memory limit: 96258.00 MB, free: 95746.00 MB",
+   "[instance: 8b9da7b6-3469-4443-9fa4-de62b3c2b1d9] memory limit: 96258.00 MB, free: 95746.00 MB"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] memory limit: 96258.00 MB, free: 95746.00 MB",
+   "[instance: 7ff82c85-22b8-4abe-b2e0-bc7f642b0d66] memory limit: 96258.00 MB, free: 95746.00 MB",
+   "[instance: 8b9da7b6-3469-4443-9fa4-de62b3c2b1d9] memory limit: 96258.00 MB, free: 95746.00 MB"
+  ],
+  "llm_template": "[instance: <*>] memory limit: <*> MB, free: <*> MB",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "[instance: <*>] memory limit: <*> MB, free: <*> MB"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] vcpu limit not specified, defaulting to unlimited",
+   "[instance: 6a77c94a-318f-41cf-9891-fcdfb63c8618] vcpu limit not specified, defaulting to unlimited",
+   "[instance: 40d07933-6673-49ce-9ef7-58f6a302c302] vcpu limit not specified, defaulting to unlimited"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] vcpu limit not specified, defaulting to unlimited",
+   "[instance: 6a77c94a-318f-41cf-9891-fcdfb63c8618] vcpu limit not specified, defaulting to unlimited",
+   "[instance: 40d07933-6673-49ce-9ef7-58f6a302c302] vcpu limit not specified, defaulting to unlimited"
+  ],
+  "llm_template": "[instance: <*>] vcpu limit not specified, defaulting to unlimited",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "[instance: <*>] vcpu limit not specified, defaulting to unlimited"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.4893100",
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.5320239",
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.4910321"
+  ],
+  "logs_to_query_regex": [
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.4893100",
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.5320239",
+   "10.11.10.1 \"POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>\" status: 202 len: 733 time: 0.4910321"
+  ],
+  "llm_template": "<*> \"POST <*> <*>\" status: <*> len: <*> time: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "<*> \"POST <*> <*>\" status: <*> len: <*> time: <*>"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.47 seconds to deallocate network for instance.",
+   "[instance: 7a2ed832-e0d9-4f32-a408-c406dfecb645] Took 0.57 seconds to deallocate network for instance.",
+   "[instance: f3253bb8-9a74-431d-8b5c-317caec23c3a] Took 0.46 seconds to deallocate network for instance."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.47 seconds to deallocate network for instance.",
+   "[instance: 7a2ed832-e0d9-4f32-a408-c406dfecb645] Took 0.57 seconds to deallocate network for instance.",
+   "[instance: f3253bb8-9a74-431d-8b5c-317caec23c3a] Took 0.46 seconds to deallocate network for instance."
+  ],
+  "llm_template": "[instance: <*>] Took <*> seconds to deallocate network for instance.",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "[instance: <*>] Took <*> seconds to deallocate network for instance."
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU",
+   "[instance: 71065aa4-40af-4e74-bd6a-ef77c7f4dd02] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU",
+   "[instance: 4d61ac5d-5d6b-408e-af5b-3d686dd8a608] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU",
+   "[instance: 71065aa4-40af-4e74-bd6a-ef77c7f4dd02] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU",
+   "[instance: 4d61ac5d-5d6b-408e-af5b-3d686dd8a608] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU"
+  ],
+  "llm_template": "[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Terminating instance",
+   "[instance: 9a4787c1-febf-44cd-906b-ffdbe2718760] Terminating instance",
+   "[instance: 6e3a1fbb-c5f4-4dbf-8456-f6002179cbd1] Terminating instance"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Terminating instance",
+   "[instance: 9a4787c1-febf-44cd-906b-ffdbe2718760] Terminating instance",
+   "[instance: 6e3a1fbb-c5f4-4dbf-8456-f6002179cbd1] Terminating instance"
+  ],
+  "llm_template": "[instance: <*>] Terminating instance",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "[instance: <*>] Terminating instance"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance destroyed successfully.",
+   "[instance: 3513bb11-58ec-4599-ae71-7293f2052212] Instance destroyed successfully.",
+   "[instance: bc0dcc6c-56a4-4afa-be8d-750c715a300f] Instance destroyed successfully."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance destroyed successfully.",
+   "[instance: 3513bb11-58ec-4599-ae71-7293f2052212] Instance destroyed successfully.",
+   "[instance: bc0dcc6c-56a4-4afa-be8d-750c715a300f] Instance destroyed successfully."
+  ],
+  "llm_template": "[instance: <*>] Instance destroyed successfully.",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "[instance: <*>] Instance destroyed successfully."
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deleting instance files /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del",
+   "[instance: 3c93475e-d015-4107-b518-2d6883b92981] Deleting instance files /var/lib/nova/instances/3c93475e-d015-4107-b518-2d6883b92981_del",
+   "[instance: 1b79067c-f821-426e-8c2a-8415b77c9571] Deleting instance files /var/lib/nova/instances/1b79067c-f821-426e-8c2a-8415b77c9571_del"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deleting instance files /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del",
+   "[instance: 3c93475e-d015-4107-b518-2d6883b92981] Deleting instance files /var/lib/nova/instances/3c93475e-d015-4107-b518-2d6883b92981_del",
+   "[instance: 1b79067c-f821-426e-8c2a-8415b77c9571] Deleting instance files /var/lib/nova/instances/1b79067c-f821-426e-8c2a-8415b77c9571_del"
+  ],
+  "llm_template": "[instance: <*>] Deleting instance files <*>_del",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "[instance: <*>] Deleting instance files <*>"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deletion of /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del complete",
+   "[instance: 95960536-049b-41f6-9049-05fc479b6a7c] Deletion of /var/lib/nova/instances/95960536-049b-41f6-9049-05fc479b6a7c_del complete",
+   "[instance: 43204226-2f87-4da7-b7ee-4d20cc66e846] Deletion of /var/lib/nova/instances/43204226-2f87-4da7-b7ee-4d20cc66e846_del complete"
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deletion of /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del complete",
+   "[instance: 95960536-049b-41f6-9049-05fc479b6a7c] Deletion of /var/lib/nova/instances/95960536-049b-41f6-9049-05fc479b6a7c_del complete",
+   "[instance: 43204226-2f87-4da7-b7ee-4d20cc66e846] Deletion of /var/lib/nova/instances/43204226-2f87-4da7-b7ee-4d20cc66e846_del complete"
+  ],
+  "llm_template": "[instance: <*>] Deletion of <*>_del complete",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "[instance: <*>] Deletion of <*> complete"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "logs_to_query_regex": [
+   "Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "llm_template": "Removing base or swap file: <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Removing base or swap file: <*>"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "HTTP exception thrown: No instances found for any event"
+  ],
+  "logs_to_query_regex": [
+   "HTTP exception thrown: No instances found for any event"
+  ],
+  "llm_template": "HTTP exception thrown: No instances found for any event",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "HTTP exception thrown: No instances found for any event"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.99 seconds to destroy the instance on the hypervisor.",
+   "[instance: a931e625-18bf-417c-9bda-471abeb5de21] Took 1.00 seconds to destroy the instance on the hypervisor.",
+   "[instance: ca088276-4c0e-43e7-8222-4d9c11504c65] Took 1.13 seconds to destroy the instance on the hypervisor."
+  ],
+  "logs_to_query_regex": [
+   "[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.99 seconds to destroy the instance on the hypervisor.",
+   "[instance: a931e625-18bf-417c-9bda-471abeb5de21] Took 1.00 seconds to destroy the instance on the hypervisor.",
+   "[instance: ca088276-4c0e-43e7-8222-4d9c11504c65] Took 1.13 seconds to destroy the instance on the hypervisor."
+  ],
+  "llm_template": "[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor."
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us"
+  ],
+  "logs_to_query_regex": [
+   "Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us"
+  ],
+  "llm_template": "Compute_service record updated for <*>",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "Compute_service record updated for <*>"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us"
+  ],
+  "logs_to_query_regex": [
+   "Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us"
+  ],
+  "llm_template": "Auditing locally available compute resources for node <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Auditing locally available compute resources for node <*>"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "Total usable vcpus: 16, total allocated vcpus: 1",
+   "Total usable vcpus: 16, total allocated vcpus: 0"
+  ],
+  "logs_to_query_regex": [
+   "Total usable vcpus: 16, total allocated vcpus: 1",
+   "Total usable vcpus: 16, total allocated vcpus: 0"
+  ],
+  "llm_template": "Total usable vcpus: <*> total allocated vcpus: <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Total usable vcpus: <*>, total allocated vcpus: <*>"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]",
+   "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=512MB phys_disk=15GB used_disk=0GB total_vcpus=16 used_vcpus=0 pci_stats=[]"
+  ],
+  "logs_to_query_regex": [
+   "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]",
+   "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=512MB phys_disk=15GB used_disk=0GB total_vcpus=16 used_vcpus=0 pci_stats=[]"
+  ],
+  "llm_template": "Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=<*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "logs_to_query_regex": [
+   "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742"
+  ],
+  "llm_template": "Base or swap file too young to remove: <*>",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Base or swap file too young to remove: <*>"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'."
+  ],
+  "logs_to_query_regex": [
+   "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'."
+  ],
+  "llm_template": "Successfully synced instances from host '<*>'.",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Successfully synced instances from host '<*>'."
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList."
+  ],
+  "logs_to_query_regex": [
+   "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList."
+  ],
+  "llm_template": "The instance sync for host <*> did not match. Re-created its InstanceList.",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "The instance sync for host <*> did not match. Re-created its InstanceList."
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor."
+  ],
+  "logs_to_query_regex": [
+   "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor."
+  ],
+  "llm_template": "While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor."
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.",
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-17 16:00:00 to 2017-05-17 17:00:00. 1 instances.",
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-16 23:00:00 to 2017-05-17 00:00:00. 87 instances."
+  ],
+  "logs_to_query_regex": [
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.",
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-17 16:00:00 to 2017-05-17 17:00:00. 1 instances.",
+   "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-16 23:00:00 to 2017-05-17 00:00:00. 87 instances."
+  ],
+  "llm_template": "Running instance usage audit for host <*> from <*> to <*> instances.",
+  "cluster_id": 33,
+  "update_success": true,
+  "template": "Running instance usage audit for host <*> from <*> to <*>. <*> instances."
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "couldn't obtain the vcpu count from domain id: b93203d4-c79b-41fe-8090-5f2b89b0d081, exception: Requested operation is not valid: cpu affinity is not supported",
+   "couldn't obtain the vcpu count from domain id: 86a51d93-1bbf-4cfa-9afd-4c807a2f644a, exception: Requested operation is not valid: cpu affinity is not supported",
+   "couldn't obtain the vcpu count from domain id: 5ca5dcc8-87ec-4b4a-8ded-6c9d555050e0, exception: Requested operation is not valid: cpu affinity is not supported"
+  ],
+  "logs_to_query_regex": [
+   "couldn't obtain the vcpu count from domain id: b93203d4-c79b-41fe-8090-5f2b89b0d081, exception: Requested operation is not valid: cpu affinity is not supported",
+   "couldn't obtain the vcpu count from domain id: 86a51d93-1bbf-4cfa-9afd-4c807a2f644a, exception: Requested operation is not valid: cpu affinity is not supported",
+   "couldn't obtain the vcpu count from domain id: 5ca5dcc8-87ec-4b4a-8ded-6c9d555050e0, exception: Requested operation is not valid: cpu affinity is not supported"
+  ],
+  "llm_template": "couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported",
+  "cluster_id": 36,
+  "update_success": true,
+  "template": "couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "Error during ComputeManager._run_image_cache_manager_pass"
+  ],
+  "logs_to_query_regex": [
+   "Error during ComputeManager._run_image_cache_manager_pass"
+  ],
+  "llm_template": "Error during <*>",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "Error during <*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "Bad response code while validating token: 503"
+  ],
+  "logs_to_query_regex": [
+   "Bad response code while validating token: 503"
+  ],
+  "llm_template": "Bad response code while validating token: <*>",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "Bad response code while validating token: <*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "Identity response: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"
+  ],
+  "logs_to_query_regex": [
+   "Identity response: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"
+  ],
+  "llm_template": "Identity response: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML <*>.0//EN\">",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "Identity response: <*>"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "Unable to validate token: Failed to fetch token data from identity server"
+  ],
+  "logs_to_query_regex": [
+   "Unable to validate token: Failed to fetch token data from identity server"
+  ],
+  "llm_template": "Unable to validate token: Failed to fetch token data from identity server",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "Unable to validate token: Failed to fetch token data from identity server"
+ }
+]

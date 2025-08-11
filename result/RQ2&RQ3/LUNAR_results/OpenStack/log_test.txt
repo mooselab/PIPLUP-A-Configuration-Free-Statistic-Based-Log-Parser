@@ -1,0 +1,1212 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/OpenStack
+Output dir: ./saved_results/LUNAR-single/OpenStack
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/OpenStack/OpenStack_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 15
+Clustering by log length: [8, 24348, 17912, 19090, 2, 5546, 15449, 100798, 1739, 8545, 2065, 30, 45, 12043, 12]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 8/8/8 Logs. Last cluster logs: 8
+--- Finished 2nd Level Clustering by top-3 tokens: 5 clusters, Total/Min/Max: 24348/2064/15094 Logs. Last cluster logs: 2065
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 17912/1739/12043 Logs. Last cluster logs: 1739
+--- Finished 2nd Level Clustering by top-3 tokens: 6 clusters, Total/Min/Max: 19090/502/10331 Logs. Last cluster logs: 502
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 2/2/2 Logs. Last cluster logs: 2
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 5546/2/2066 Logs. Last cluster logs: 2
+--- Finished 2nd Level Clustering by top-3 tokens: 5 clusters, Total/Min/Max: 15449/995/6195 Logs. Last cluster logs: 995
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 100798/2065/98733 Logs. Last cluster logs: 2065
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 1739/1739/1739 Logs. Last cluster logs: 1739
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 8545/2/4130 Logs. Last cluster logs: 2
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 2065/2065/2065 Logs. Last cluster logs: 2065
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 30/30/30 Logs. Last cluster logs: 30
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 45/45/45 Logs. Last cluster logs: 45
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 12043/12043/12043 Logs. Last cluster logs: 12043
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 12/12/12 Logs. Last cluster logs: 12
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 37 clusters
+Clustering results: [8, 2066, 15094, 2064, 3059, 2065, 12043, 4130, 1739, 10331, 2065, 2064, 2064, 2064, 502, 2, 2066, 1739, 1739, 2, 2064, 6195, 2065, 4130, 995, 98733, 2065, 1739, 4049, 4130, 364, 2, 2065, 30, 45, 12043, 12]
+Iteration 0
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 98733, Total Buckets: 37
+Sampling from 90105 logs, Sim Level: 5, MaxSim to anchor: 0.8182. Anchor: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail <*>" status: 200 len: 1583 time: 0.1919448`, MaxSim Log: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail <*>" status: 200 len: 1583 time: 0.1995330`.
+	============  Query  ====================
+	Log[1]: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail <*>" status: 200 len: 1583 time: 0.1919448`
+	Log[2]: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/639becd4-ec8d-4ee6-b27b-a9e71077a03b <*>" status: 200 len: 1708 time: 0.2014220`
+	Log[3]: `10.11.10.1 "GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T09%3A54%3A58.645239%2B00%3A00 <*>" status: 200 len: 23370 time: 0.3337281`
+	============ Response ====================
+LogTemplate[1]: `{ip_or_url} "GET {url}/servers/detail <*>" status: 200 len: {number} time: {time}`
+LogTemplate[2]: `{ip_or_url} "GET {url}/servers/{server_id} <*>" status: 200 len: {number} time: {time}`
+LogTemplate[3]: `{ip_or_url} "GET {url}/servers/detail?all_tenants=True&changes-since={timestamp} <*>" status: 200 len: {number} time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "GET <*>/servers/detail <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*>/servers/detail?all_tenants=True&changes-since=<*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "GET <*>/servers/detail <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 67363, total: 67363/207632, remain: 140269. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 100798 -> 33435, remain buckets: 37
+Update Success: Time for one update logs: 2.1691319942474365, template `<*> "GET <*>/servers/detail <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 1
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 31370, Total Buckets: 37
+Sampling from 31226 logs, Sim Level: 4, MaxSim to anchor: 0.6667. Anchor: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>" status: 200 len: 1708 time: 0.2011580`, MaxSim Log: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3416d0fa-6f0f-41ce-9c0a-59ae9a735da8 <*>" status: 200 len: 1708 time: 0.1938121`.
+	============  Query  ====================
+	Log[1]: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>" status: 200 len: 1708 time: 0.2011580`
+	Log[2]: `10.11.10.1 "GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/images/0673dd71-34c5-4fbb-86c4-40623fbe45b4 <*>" status: 200 len: 868 time: 0.1494110`
+	Log[3]: `10.11.10.1 "GET /v2/e9746973ac574c6b8a9e8857f56a7608/servers/detail?all_tenants=True&changes-since=2017-05-17T06%3A14%3A59.138689%2B00%3A00 <*>" status: 200 len: 23222 time: 0.2552092`
+	============ Response ====================
+LogTemplate[1]: `{ip_or_url} "GET {url}/servers/{server_id} <*>" status: {status} len: {length} time: {time}`
+LogTemplate[2]: `{ip_or_url} "GET {url}/images/{image_id} <*>" status: {status} len: {length} time: {time}`
+LogTemplate[3]: `{ip_or_url} "GET {url}/servers/detail?all_tenants=True&changes-since={timestamp} <*>" status: {status} len: {length} time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*>/images/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*>/servers/detail?all_tenants=True&changes-since=<*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 2419, total: 69782/207632, remain: 137850. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 33435 -> 31016, remain buckets: 37
+[TemplateDB] Try Merge: `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>` | `<*> "GET <*>/servers/detail <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+[TemplateDB] Merged: -> `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 69782/69782, in child Bucket [25, 26]
+Update Success: Time for one update logs: 2.1820058822631836, template `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 2
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 28951, Total Buckets: 37
+Sampling from 28807 logs, Sim Level: 5, MaxSim to anchor: 0.8182. Anchor: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: 200 len: 380 time: 0.0929029`, MaxSim Log: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: 200 len: 380 time: 0.1026800`.
+	============  Query  ====================
+	Log[1]: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: 200 len: 380 time: 0.0929029`
+	Log[2]: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: 404 len: 296 time: 0.0895369`
+	Log[3]: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: 404 len: 296 time: 0.0876758`
+	============ Response ====================
+LogTemplate[1]: `10.11.10.1 "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: {status} len: {length} time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 4129, total: 73911/207632, remain: 133721. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 31016 -> 26887, remain buckets: 37
+Update Success: Time for one update logs: 0.6747009754180908, template `<*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 3
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 24822, Total Buckets: 37
+Sampling from 24813 logs, Sim Level: 5, MaxSim to anchor: 0.6667. Anchor: `10.11.11.225,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2246630`, MaxSim Log: `10.11.11.226,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2296920`.
+	============  Query  ====================
+	Log[1]: `10.11.11.225,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2246630`
+	Log[2]: `10.11.11.225,10.11.10.1 "GET /openstack/2013-10-17 <*>" status: 200 len: 157 time: 0.4092629`
+	Log[3]: `10.11.11.225,10.11.10.1 "GET /openstack/2013-10-17/vendor_data.json <*>" status: 200 len: 124 time: 0.0009141`
+	============ Response ====================
+LogTemplate[1]: `{ip_or_url}, {ip_or_url} "GET {url} <*>" status: 200 len: {number} time: {decimal}`
+
+LogTemplate[2]: `{ip_or_url}, {ip_or_url} "GET {url} <*>" status: 200 len: {number} time: {decimal}`
+
+LogTemplate[3]: `{ip_or_url}, {ip_or_url} "GET {url} <*>" status: 200 len: {number} time: {decimal}`
+	============ PostProcess ====================
+	Post Template: `<*>, <*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*>, <*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*>, <*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*>, <*> "GET <*> <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 0, total: 73911/207632, remain: 133721. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 26887 -> 26887, remain buckets: 37
+Update failed: Template can not match logs `<*>, <*> "GET <*> <*>" status: <*> len: <*> time: <*>`. Retry query
+Update failed. Retry 0 times when updating is not successful
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 24822, Total Buckets: 37
+Sampling from 24813 logs, Sim Level: 5, MaxSim to anchor: 0.6667. Anchor: `10.11.11.225,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2246630`, MaxSim Log: `10.11.11.226,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2296920`.
+	============  Query  ====================
+	Log[1]: `10.11.11.225,10.11.10.1 "GET /openstack/2012-08-10/meta_data.json <*>" status: 200 len: 264 time: 0.2246630`
+	Log[2]: `10.11.11.225,10.11.10.1 "GET /openstack/2013-10-17 <*>" status: 200 len: 157 time: 0.4092629`
+	Log[3]: `10.11.11.225,10.11.10.1 "GET /openstack/2013-10-17/vendor_data.json <*>" status: 200 len: 124 time: 0.2405910`
+	============ Response ====================
+LogTemplate[1]: `10.11.11.225,10.11.10.1 "GET {url} <*>" status: 200 len: {length} time: {time}`
+
+LogTemplate[2]: `10.11.11.225,10.11.10.1 "GET {url} <*>" status: 200 len: {length} time: {time}`
+
+LogTemplate[3]: `10.11.11.225,10.11.10.1 "GET {url} <*>" status: 200 len: {length} time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "GET <*> <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 20693, total: 94604/207632, remain: 113028. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 26887 -> 6194, remain buckets: 37
+[TemplateDB] Try Merge: `<*> "GET <*> <*>" status: <*> len: <*> time: <*>` | `<*> "GET <*>/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+[TemplateDB] Merged: -> `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 90475/90475, in child Bucket [25, 26]
+Update Success: Time for one update logs: 2.3676340579986572, template `<*> "GET <*> <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 2, Len: 4, Bucket Size: 15094, Total Buckets: 37
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`, MaxSim Log: `Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`.
+	============  Query  ====================
+	Log[1]: `Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	Log[2]: `Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	============ Response ====================
+LogTemplate[1]: `Active base files: {directory}`
+LogTemplate[2]: `Removable base files: {directory}`
+	============ PostProcess ====================
+	Post Template: `Active base files: <*>`
+	Post Template: `Removable base files: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Active base files: <*>
+[UpdateBucket] Logs: This iter found: 12035, total: 106639/207632, remain: 100993. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 24348 -> 12313, remain buckets: 37
+Update Success: Time for one update logs: 0.2370290756225586, template `Active base files: <*>`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 6, Len: 5, Bucket Size: 12043, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): checking`
+	============ Response ====================
+LogTemplate[1]: `image {image_id} at ({directory}): checking`
+	============ PostProcess ====================
+	Post Template: `image <*> at (<*>): checking`
+	============ Aggregate ====================
+	Aggregated Template:  image <*> at (<*>): checking
+[UpdateBucket] Logs: This iter found: 12043, total: 118682/207632, remain: 88950. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 17912 -> 5869, remain buckets: 36
+Update Success: Time for one update logs: 0.23461699485778809, template `image <*> at (<*>): checking`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 35, Len: 19, Bucket Size: 12043, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage`
+	============ Response ====================
+LogTemplate[1]: `image {image_id} at ({file}): in use: on this node {count} local, {count} on other nodes sharing this instance storage`
+	============ PostProcess ====================
+	Post Template: `image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage`
+	============ Aggregate ====================
+	Aggregated Template:  image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage
+[UpdateBucket] Logs: This iter found: 12043, total: 130725/207632, remain: 76907. 
+[UpdateBucket] Buckets: Checked 1 ([35]), Parent Bucket size: 12043 -> 0, remain buckets: 35
+Update Success: Time for one update logs: 0.3217000961303711, template `image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 9, Len: 6, Bucket Size: 10331, Total Buckets: 37
+Sampling from 8264 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `[instance: 2b590f10-49fd-4ec9-ae41-19596c2f4b25] VM Stopped (Lifecycle Event)`, MaxSim Log: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Stopped (Lifecycle Event)`.
+	============  Query  ====================
+	Log[1]: `[instance: 2b590f10-49fd-4ec9-ae41-19596c2f4b25] VM Stopped (Lifecycle Event)`
+	Log[2]: `[instance: d76a85c3-c985-48be-9c90-8ccdae90f1b6] VM Paused (Lifecycle Event)`
+	Log[3]: `[instance: 89ec2387-2e4b-4a73-94e8-7dd2ed6a485f] VM Resumed (Lifecycle Event)`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] VM Stopped (Lifecycle Event)`
+LogTemplate[2]: `[instance: {instance_id}] VM Paused (Lifecycle Event)`
+LogTemplate[3]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] VM Stopped (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Paused (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] VM Stopped (Lifecycle Event)
+[UpdateBucket] Logs: This iter found: 2067, total: 132792/207632, remain: 74840. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 19090 -> 17023, remain buckets: 35
+Update Success: Time for one update logs: 0.21297121047973633, template `[instance: <*>] VM Stopped (Lifecycle Event)`
+========================================================================================
+
+
+Iteration 8
+Sample 3 from current logs bucket: ID: 9, Len: 6, Bucket Size: 8264, Total Buckets: 37
+Sampling from 6197 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Started (Lifecycle Event)`, MaxSim Log: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Paused (Lifecycle Event)`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Started (Lifecycle Event)`
+	Log[2]: `[instance: 860b61fa-0dbc-43a5-838c-c2373e55e999] VM Resumed (Lifecycle Event)`
+	Log[3]: `[instance: 05aab6c8-0298-43a3-b439-102d389a632d] VM Paused (Lifecycle Event)`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] VM Started (Lifecycle Event)`
+LogTemplate[2]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+LogTemplate[3]: `[instance: {instance_id}] VM Paused (Lifecycle Event)`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] VM Started (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Paused (Lifecycle Event)`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] VM Started (Lifecycle Event)
+[UpdateBucket] Logs: This iter found: 2066, total: 134858/207632, remain: 72774. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 17023 -> 14957, remain buckets: 35
+[TemplateDB] Try Merge: `[instance: <*>] VM Started (Lifecycle Event)` | `[instance: <*>] VM Stopped (Lifecycle Event)`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] VM Started (Lifecycle Event)`
+Update Success: Time for one update logs: 0.18020296096801758, template `[instance: <*>] VM Started (Lifecycle Event)`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 9, Len: 6, Bucket Size: 6198, Total Buckets: 37
+Sampling from 4131 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Paused (Lifecycle Event)`, MaxSim Log: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Resumed (Lifecycle Event)`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Paused (Lifecycle Event)`
+	Log[2]: `[instance: bd2998ed-80c2-4a44-ab7e-e37b3b66d862] VM Paused (Lifecycle Event)`
+	Log[3]: `[instance: 3b099e1b-fac9-4e35-899e-ae1aa8a61525] VM Resumed (Lifecycle Event)`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] VM Paused (Lifecycle Event)`
+LogTemplate[2]: `[instance: {instance_id}] VM Paused (Lifecycle Event)`
+LogTemplate[3]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] VM Paused (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Paused (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] VM Paused (Lifecycle Event)
+[UpdateBucket] Logs: This iter found: 2066, total: 136924/207632, remain: 70708. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 14957 -> 12891, remain buckets: 35
+[TemplateDB] Try Merge: `[instance: <*>] VM Paused (Lifecycle Event)` | `[instance: <*>] VM Stopped (Lifecycle Event)`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] VM Paused (Lifecycle Event)`
+Update Success: Time for one update logs: 0.1494307518005371, template `[instance: <*>] VM Paused (Lifecycle Event)`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 21, Len: 9, Bucket Size: 6195, Total Buckets: 37
+Sampling from 6194 logs, Sim Level: 3, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total memory: 64172 MB, used: 512.00 MB`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] Total memory: 64172 MB, used: 512.00 MB`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total memory: 64172 MB, used: 512.00 MB`
+	Log[2]: `[instance: 38965537-930e-469d-a0d6-18aca9f6eaf0] Total memory: 64172 MB, used: 512.00 MB`
+	Log[3]: `[instance: 8db376c1-d77c-49a6-8ef9-75e34c1b0c5b] Total memory: 64172 MB, used: 512.00 MB`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Total memory: {total_memory} MB, used: {used_memory} MB`
+LogTemplate[2]: `[instance: {instance_id}] Total memory: {total_memory} MB, used: {used_memory} MB`
+LogTemplate[3]: `[instance: {instance_id}] Total memory: {total_memory} MB, used: {used_memory} MB`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Total memory: <*> MB, used: <*> MB`
+	Post Template: `[instance: <*>] Total memory: <*> MB, used: <*> MB`
+	Post Template: `[instance: <*>] Total memory: <*> MB, used: <*> MB`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Total memory: <*> MB, used: <*> MB
+[UpdateBucket] Logs: This iter found: 2065, total: 138989/207632, remain: 68643. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 15449 -> 13384, remain buckets: 35
+Update Success: Time for one update logs: 0.13519787788391113, template `[instance: <*>] Total memory: <*> MB, used: <*> MB`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 9, Len: 6, Bucket Size: 4132, Total Buckets: 37
+Sampling from 2065 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Resumed (Lifecycle Event)`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] VM Resumed (Lifecycle Event)`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] VM Resumed (Lifecycle Event)`
+	Log[2]: `[instance: 9cf3f0d6-60b7-4ca4-b34b-d556b3aaf086] VM Resumed (Lifecycle Event)`
+	Log[3]: `[instance: 02162715-e3b2-451f-aa4a-c0888ef3d4b4] VM Resumed (Lifecycle Event)`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+LogTemplate[2]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+LogTemplate[3]: `[instance: {instance_id}] VM Resumed (Lifecycle Event)`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	Post Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] VM Resumed (Lifecycle Event)
+[UpdateBucket] Logs: This iter found: 4132, total: 143121/207632, remain: 64511. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 12891 -> 8759, remain buckets: 34
+[TemplateDB] Try Merge: `[instance: <*>] VM Resumed (Lifecycle Event)` | `[instance: <*>] VM Stopped (Lifecycle Event)`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] VM Resumed (Lifecycle Event)`
+Update Success: Time for one update logs: 0.11902904510498047, template `[instance: <*>] VM Resumed (Lifecycle Event)`
+========================================================================================
+
+
+Iteration 12
+Sample 3 from current logs bucket: ID: 7, Len: 5, Bucket Size: 4130, Total Buckets: 37
+Sampling from 4129 logs, Sim Level: 2, MaxSim to anchor: 0.6667. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance spawned successfully.`, MaxSim Log: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance destroyed successfully.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance spawned successfully.`
+	Log[2]: `[instance: 0ab15104-831b-4a67-bb20-6e3d407b1cdb] Instance spawned successfully.`
+	Log[3]: `[instance: b15d3ecb-be67-435f-8b18-b0e1e0ea1a01] Instance spawned successfully.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Instance spawned successfully.`  
+LogTemplate[2]: `[instance: {instance_id}] Instance spawned successfully.`  
+LogTemplate[3]: `[instance: {instance_id}] Instance spawned successfully.`  
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Instance spawned successfully.`
+	Post Template: `[instance: <*>] Instance spawned successfully.`
+	Post Template: `[instance: <*>] Instance spawned successfully.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Instance spawned successfully.
+[UpdateBucket] Logs: This iter found: 2066, total: 145187/207632, remain: 62445. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 5869 -> 3803, remain buckets: 34
+Update Success: Time for one update logs: 0.09990501403808594, template `[instance: <*>] Instance spawned successfully.`
+========================================================================================
+
+
+Iteration 13
+Sample 3 from current logs bucket: ID: 21, Len: 9, Bucket Size: 4130, Total Buckets: 37
+Sampling from 4129 logs, Sim Level: 3, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total disk: 15 GB, used: 0.00 GB`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] Total disk: 15 GB, used: 0.00 GB`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total disk: 15 GB, used: 0.00 GB`
+	Log[2]: `[instance: 4ad93dba-0941-4a90-9eb0-7b51ce5288cd] Total disk: 15 GB, used: 0.00 GB`
+	Log[3]: `[instance: 55517d5a-b73e-411a-a9cd-641f443f39c0] Total disk: 15 GB, used: 0.00 GB`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Total disk: {total_disk} GB, used: {used_disk} GB`
+LogTemplate[2]: `[instance: {instance_id}] Total disk: {total_disk} GB, used: {used_disk} GB`
+LogTemplate[3]: `[instance: {instance_id}] Total disk: {total_disk} GB, used: {used_disk} GB`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Total disk: <*> GB, used: <*> GB`
+	Post Template: `[instance: <*>] Total disk: <*> GB, used: <*> GB`
+	Post Template: `[instance: <*>] Total disk: <*> GB, used: <*> GB`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Total disk: <*> GB, used: <*> GB
+[UpdateBucket] Logs: This iter found: 2065, total: 147252/207632, remain: 60380. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 13384 -> 11319, remain buckets: 34
+Update Success: Time for one update logs: 0.09716200828552246, template `[instance: <*>] Total disk: <*> GB, used: <*> GB`
+========================================================================================
+
+
+Iteration 14
+Sample 3 from current logs bucket: ID: 23, Len: 9, Bucket Size: 4130, Total Buckets: 37
+Sampling from 4129 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] disk limit not specified, defaulting to unlimited`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] vcpu limit not specified, defaulting to unlimited`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] disk limit not specified, defaulting to unlimited`
+	Log[2]: `[instance: 57563ca2-bafe-43e5-872f-5c3439e9b6a5] disk limit not specified, defaulting to unlimited`
+	Log[3]: `[instance: bc2e5c91-3a6f-4e55-8a05-cf5a58483561] vcpu limit not specified, defaulting to unlimited`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] disk limit not specified, defaulting to unlimited`
+LogTemplate[2]: `[instance: {instance_id}] disk limit not specified, defaulting to unlimited`
+LogTemplate[3]: `[instance: {instance_id}] vcpu limit not specified, defaulting to unlimited`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] disk limit not specified, defaulting to unlimited`
+	Post Template: `[instance: <*>] disk limit not specified, defaulting to unlimited`
+	Post Template: `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] disk limit not specified, defaulting to unlimited
+[UpdateBucket] Logs: This iter found: 2065, total: 149317/207632, remain: 58315. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 11319 -> 9254, remain buckets: 34
+Update Success: Time for one update logs: 0.11913585662841797, template `[instance: <*>] disk limit not specified, defaulting to unlimited`
+========================================================================================
+
+
+Iteration 15
+Sample 3 from current logs bucket: ID: 29, Len: 12, Bucket Size: 4130, Total Buckets: 37
+Sampling from 4129 logs, Sim Level: 3, MaxSim to anchor: 0.8333. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 20.58 seconds to spawn the instance on the hypervisor.`, MaxSim Log: `[instance: 88d627ba-f040-43e4-be85-78e8f91aa971] Took 20.58 seconds to spawn the instance on the hypervisor.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 20.58 seconds to spawn the instance on the hypervisor.`
+	Log[2]: `[instance: 3ccbf387-7d3d-48be-a3ef-7a2f5bc5bf46] Took 19.14 seconds to spawn the instance on the hypervisor.`
+	Log[3]: `[instance: e32d4c43-cd52-4778-9619-fc4573d20fdb] Took 1.01 seconds to destroy the instance on the hypervisor.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Took {time} seconds to spawn the instance on the hypervisor.`
+
+LogTemplate[2]: `[instance: {instance_id}] Took {time} seconds to spawn the instance on the hypervisor.`
+
+LogTemplate[3]: `[instance: {instance_id}] Took {time} seconds to destroy the instance on the hypervisor.`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.`
+	Post Template: `[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.`
+	Post Template: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.
+[UpdateBucket] Logs: This iter found: 2066, total: 151383/207632, remain: 56249. 
+[UpdateBucket] Buckets: Checked 4 ([28, 29, 30, 31]), Parent Bucket size: 8545 -> 6479, remain buckets: 34
+Update Success: Time for one update logs: 0.12161731719970703, template `[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.`
+========================================================================================
+
+
+Iteration 16
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 4129, Total Buckets: 37
+Sampling from 4122 logs, Sim Level: 2, MaxSim to anchor: 0.6667. Anchor: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>" status: 204 len: 203 time: 0.2484462`, MaxSim Log: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3416d0fa-6f0f-41ce-9c0a-59ae9a735da8 <*>" status: 204 len: 203 time: 0.2591450`.
+	============  Query  ====================
+	Log[1]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/3edec1e4-9678-4a3a-a21b-a145a4ee5e61 <*>" status: 204 len: 203 time: 0.2484462`
+	Log[2]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/50d66f33-1585-4ab7-9765-4c4203720af0 <*>" status: 204 len: 203 time: 0.2586370`
+	Log[3]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/538146d5-6b34-4536-836f-dbadd8b0c20e <*>" status: 204 len: 203 time: 0.2575622`
+	============ Response ====================
+LogTemplate[1]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/{server_id} <*>" status: 204 len: 203 time: {time}`
+
+LogTemplate[2]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/{server_id} <*>" status: 204 len: 203 time: {time}`
+
+LogTemplate[3]: `10.11.10.1 "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/{server_id} <*>" status: 204 len: 203 time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 2064, total: 153447/207632, remain: 54185. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 6194 -> 4130, remain buckets: 34
+Update Success: Time for one update logs: 0.15460491180419922, template `<*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 17
+Sample 3 from current logs bucket: ID: 28, Len: 12, Bucket Size: 4049, Total Buckets: 37
+Sampling from 2065 logs, Sim Level: 1, MaxSim to anchor: 0.8462. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] During sync_power_state the instance has a pending task (spawning). Skip.`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] During sync_power_state the instance has a pending task (spawning). Skip.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] During sync_power_state the instance has a pending task (spawning). Skip.`
+	Log[2]: `[instance: d7522d8e-6914-45e7-88ad-421d60f15174] During sync_power_state the instance has a pending task (spawning). Skip.`
+	Log[3]: `[instance: 196ce850-a67f-45c9-a5fa-6f5077401835] During sync_power_state the instance has a pending task (spawning). Skip.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] During sync_power_state the instance has a pending task (spawning). Skip.`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.`
+	Post Template: `[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.`
+	Post Template: `[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.
+[UpdateBucket] Logs: This iter found: 4049, total: 157496/207632, remain: 50136. 
+[UpdateBucket] Buckets: Checked 4 ([28, 29, 30, 31]), Parent Bucket size: 6479 -> 2430, remain buckets: 33
+Update Success: Time for one update logs: 0.12119817733764648, template `[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.`
+========================================================================================
+
+
+Iteration 18
+Sample 3 from current logs bucket: ID: 2, Len: 4, Bucket Size: 3059, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	============ Response ====================
+LogTemplate[1]: `Removable base files: {directory}`
+	============ PostProcess ====================
+	Post Template: `Removable base files: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Removable base files: <*>
+[UpdateBucket] Logs: This iter found: 3059, total: 160555/207632, remain: 47077. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 12313 -> 9254, remain buckets: 32
+[TemplateDB] Try Merge: `Removable base files: <*>` | `Active base files: <*>`
+[TemplateDB] Reject Merge, Remain Template: `Removable base files: <*>`
+Update Success: Time for one update logs: 0.09750008583068848, template `Removable base files: <*>`
+========================================================================================
+
+
+Iteration 19
+Sample 3 from current logs bucket: ID: 4, Len: 4, Bucket Size: 3059, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Unknown base file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	============ Response ====================
+LogTemplate[1]: `Unknown base file: {base_file}`
+	============ PostProcess ====================
+	Post Template: `Unknown base file: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Unknown base file: <*>
+[UpdateBucket] Logs: This iter found: 3059, total: 163614/207632, remain: 44018. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 9254 -> 6195, remain buckets: 31
+Update Success: Time for one update logs: 0.08964681625366211, template `Unknown base file: <*>`
+========================================================================================
+
+
+Iteration 20
+Sample 3 from current logs bucket: ID: 1, Len: 4, Bucket Size: 2066, Total Buckets: 37
+Sampling from 2065 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Creating image`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Creating image`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Creating image`
+	Log[2]: `[instance: 0eb5f495-5368-4594-9dbf-cd545aaab311] Creating image`
+	Log[3]: `[instance: 52ce96af-f619-43fe-b23f-b18b1457f07f] Creating image`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Creating image`
+LogTemplate[2]: `[instance: {instance_id}] Creating image`
+LogTemplate[3]: `[instance: {instance_id}] Creating image`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Creating image`
+	Post Template: `[instance: <*>] Creating image`
+	Post Template: `[instance: <*>] Creating image`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Creating image
+[UpdateBucket] Logs: This iter found: 2066, total: 165680/207632, remain: 41952. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 6195 -> 4129, remain buckets: 30
+Update Success: Time for one update logs: 0.07415390014648438, template `[instance: <*>] Creating image`
+========================================================================================
+
+
+Iteration 21
+Sample 3 from current logs bucket: ID: 16, Len: 8, Bucket Size: 2066, Total Buckets: 37
+Sampling from 2065 logs, Sim Level: 2, MaxSim to anchor: 0.7778. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 21.38 seconds to build instance.`, MaxSim Log: `[instance: 0b997993-29df-4b07-bcc7-093231fd673e] Took 21.38 seconds to build instance.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 21.38 seconds to build instance.`
+	Log[2]: `[instance: 9ac8f67e-02ec-4ec9-adc4-27269ff9626c] Took 21.95 seconds to build instance.`
+	Log[3]: `[instance: 55ffad71-2663-43cc-9d87-5479dce35f9f] Took 21.14 seconds to build instance.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Took {time} seconds to build instance.`  
+LogTemplate[2]: `[instance: {instance_id}] Took {time} seconds to build instance.`  
+LogTemplate[3]: `[instance: {instance_id}] Took {time} seconds to build instance.`  
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Took <*> seconds to build instance.`
+	Post Template: `[instance: <*>] Took <*> seconds to build instance.`
+	Post Template: `[instance: <*>] Took <*> seconds to build instance.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Took <*> seconds to build instance.
+[UpdateBucket] Logs: This iter found: 2066, total: 167746/207632, remain: 39886. 
+[UpdateBucket] Buckets: Checked 4 ([16, 17, 18, 19]), Parent Bucket size: 5546 -> 3480, remain buckets: 29
+Update Success: Time for one update logs: 0.07452893257141113, template `[instance: <*>] Took <*> seconds to build instance.`
+========================================================================================
+
+
+Iteration 22
+Sample 3 from current logs bucket: ID: 5, Len: 4, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Claim successful`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] Claim successful`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Claim successful`
+	Log[2]: `[instance: 608de739-6922-4584-818f-ef772840d097] Claim successful`
+	Log[3]: `[instance: 77c4af47-4501-46eb-aa28-67bf5efc1dff] Claim successful`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Claim successful`  
+LogTemplate[2]: `[instance: {instance_id}] Claim successful`  
+LogTemplate[3]: `[instance: {instance_id}] Claim successful`  
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Claim successful`
+	Post Template: `[instance: <*>] Claim successful`
+	Post Template: `[instance: <*>] Claim successful`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Claim successful
+[UpdateBucket] Logs: This iter found: 2065, total: 169811/207632, remain: 37821. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 4129 -> 2064, remain buckets: 28
+Update Success: Time for one update logs: 0.06858372688293457, template `[instance: <*>] Claim successful`
+========================================================================================
+
+
+Iteration 23
+Sample 3 from current logs bucket: ID: 10, Len: 6, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `Creating event network-vif-plugged:95fcdc5e-3159-4e86-968a-13a2a06e9e89 for instance 3edec1e4-9678-4a3a-a21b-a145a4ee5e61`, MaxSim Log: `Creating event network-vif-plugged:623f8dac-b4d6-4f0f-aa15-f941548beb5b for instance 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8`.
+	============  Query  ====================
+	Log[1]: `Creating event network-vif-plugged:95fcdc5e-3159-4e86-968a-13a2a06e9e89 for instance 3edec1e4-9678-4a3a-a21b-a145a4ee5e61`
+	Log[2]: `Creating event network-vif-plugged:7b9e1451-53cb-423b-9b95-f50da706e1ef for instance af4c5f12-9b85-41d8-bc71-68af9240d8dc`
+	Log[3]: `Creating event network-vif-plugged:c3e5b428-d0b8-40eb-a767-31c7674934a8 for instance b0bbdc7c-0a69-4b29-a957-16df10d3473f`
+	============ Response ====================
+LogTemplate[1]: `Creating event network-vif-plugged:{vif_id} for instance {instance_id}`
+LogTemplate[2]: `Creating event network-vif-plugged:{vif_id} for instance {instance_id}`
+LogTemplate[3]: `Creating event network-vif-plugged:{vif_id} for instance {instance_id}`
+	============ PostProcess ====================
+	Post Template: `Creating event network-vif-plugged:<*> for instance <*>`
+	Post Template: `Creating event network-vif-plugged:<*> for instance <*>`
+	Post Template: `Creating event network-vif-plugged:<*> for instance <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Creating event network-vif-plugged:<*> for instance <*>
+[UpdateBucket] Logs: This iter found: 2065, total: 171876/207632, remain: 35756. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 8759 -> 6694, remain buckets: 27
+Update Success: Time for one update logs: 0.08198666572570801, template `Creating event network-vif-plugged:<*> for instance <*>`
+========================================================================================
+
+
+Iteration 24
+Sample 3 from current logs bucket: ID: 21, Len: 9, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total vcpu: 16 VCPU, used: 0.00 VCPU`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] Total vcpu: 16 VCPU, used: 0.00 VCPU`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+	Log[2]: `[instance: 1eb557e2-c5e8-41d1-85c4-2187ef2950f0] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+	Log[3]: `[instance: a42ae07a-0375-4d33-8e47-fb596b2454dd] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+LogTemplate[2]: `[instance: {instance_id}] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+LogTemplate[3]: `[instance: {instance_id}] Total vcpu: 16 VCPU, used: 0.00 VCPU`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU`
+	Post Template: `[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU`
+	Post Template: `[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU
+[UpdateBucket] Logs: This iter found: 2065, total: 173941/207632, remain: 33691. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 9254 -> 7189, remain buckets: 26
+Update Success: Time for one update logs: 0.08334469795227051, template `[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU`
+========================================================================================
+
+
+Iteration 25
+Sample 3 from current logs bucket: ID: 22, Len: 9, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] memory limit: 96258.00 MB, free: 95746.00 MB`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] memory limit: 96258.00 MB, free: 95746.00 MB`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] memory limit: 96258.00 MB, free: 95746.00 MB`
+	Log[2]: `[instance: 7ff82c85-22b8-4abe-b2e0-bc7f642b0d66] memory limit: 96258.00 MB, free: 95746.00 MB`
+	Log[3]: `[instance: 8b9da7b6-3469-4443-9fa4-de62b3c2b1d9] memory limit: 96258.00 MB, free: 95746.00 MB`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] memory limit: {memory_limit} MB, free: {memory_free} MB`
+LogTemplate[2]: `[instance: {instance_id}] memory limit: {memory_limit} MB, free: {memory_free} MB`
+LogTemplate[3]: `[instance: {instance_id}] memory limit: {memory_limit} MB, free: {memory_free} MB`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] memory limit: <*> MB, free: <*> MB`
+	Post Template: `[instance: <*>] memory limit: <*> MB, free: <*> MB`
+	Post Template: `[instance: <*>] memory limit: <*> MB, free: <*> MB`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] memory limit: <*> MB, free: <*> MB
+[UpdateBucket] Logs: This iter found: 2065, total: 176006/207632, remain: 31626. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 7189 -> 5124, remain buckets: 25
+Update Success: Time for one update logs: 0.08148312568664551, template `[instance: <*>] memory limit: <*> MB, free: <*> MB`
+========================================================================================
+
+
+Iteration 26
+Sample 3 from current logs bucket: ID: 23, Len: 9, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] vcpu limit not specified, defaulting to unlimited`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] vcpu limit not specified, defaulting to unlimited`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] vcpu limit not specified, defaulting to unlimited`
+	Log[2]: `[instance: 6a77c94a-318f-41cf-9891-fcdfb63c8618] vcpu limit not specified, defaulting to unlimited`
+	Log[3]: `[instance: 40d07933-6673-49ce-9ef7-58f6a302c302] vcpu limit not specified, defaulting to unlimited`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] vcpu limit not specified, defaulting to unlimited`
+LogTemplate[2]: `[instance: {instance_id}] vcpu limit not specified, defaulting to unlimited`
+LogTemplate[3]: `[instance: {instance_id}] vcpu limit not specified, defaulting to unlimited`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+	Post Template: `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+	Post Template: `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] vcpu limit not specified, defaulting to unlimited
+[UpdateBucket] Logs: This iter found: 2065, total: 178071/207632, remain: 29561. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 5124 -> 3059, remain buckets: 24
+[TemplateDB] Try Merge: `[instance: <*>] vcpu limit not specified, defaulting to unlimited` | `[instance: <*>] disk limit not specified, defaulting to unlimited`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+Update Success: Time for one update logs: 0.05743098258972168, template `[instance: <*>] vcpu limit not specified, defaulting to unlimited`
+========================================================================================
+
+
+Iteration 27
+Sample 3 from current logs bucket: ID: 25, Len: 10, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2058 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `10.11.10.1 "POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>" status: 202 len: 733 time: 0.4893100`, MaxSim Log: `10.11.10.1 "POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>" status: 202 len: 733 time: 0.4452009`.
+	============  Query  ====================
+	Log[1]: `10.11.10.1 "POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>" status: 202 len: 733 time: 0.4893100`
+	Log[2]: `10.11.10.1 "POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>" status: 202 len: 733 time: 0.5320239`
+	Log[3]: `10.11.10.1 "POST /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers <*>" status: 202 len: 733 time: 0.4910321`
+	============ Response ====================
+LogTemplate[1]: `{ip_or_url} "POST {url} <*>" status: 202 len: 733 time: {time}`
+	============ PostProcess ====================
+	Post Template: `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> "POST <*> <*>" status: <*> len: <*> time: <*>
+[UpdateBucket] Logs: This iter found: 2065, total: 180136/207632, remain: 27496. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 4130 -> 2065, remain buckets: 23
+[TemplateDB] Try Merge: `<*> "POST <*> <*>" status: <*> len: <*> time: <*>` | `<*> "POST /v2/e9746973ac574c6b8a9e8857f56a7608/os-server-external-events <*>" status: <*> len: <*> time: <*>`
+	Post Template: `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+[TemplateDB] Merged: -> `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+[TemplateBaseUpdate] Update previous logs with merged template, succeed/all: 6194/6194, in child Bucket [25, 26]
+Update Success: Time for one update logs: 0.23438787460327148, template `<*> "POST <*> <*>" status: <*> len: <*> time: <*>`
+========================================================================================
+
+
+Iteration 28
+Sample 3 from current logs bucket: ID: 26, Len: 10, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 2, MaxSim to anchor: 0.8182. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.47 seconds to deallocate network for instance.`, MaxSim Log: `[instance: 969dbe7f-36a6-422b-988b-31f9e0ccd93d] Took 0.47 seconds to deallocate network for instance.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.47 seconds to deallocate network for instance.`
+	Log[2]: `[instance: 7a2ed832-e0d9-4f32-a408-c406dfecb645] Took 0.57 seconds to deallocate network for instance.`
+	Log[3]: `[instance: f3253bb8-9a74-431d-8b5c-317caec23c3a] Took 0.46 seconds to deallocate network for instance.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Took {time} seconds to deallocate network for instance.`
+
+LogTemplate[2]: `[instance: {instance_id}] Took {time} seconds to deallocate network for instance.`
+
+LogTemplate[3]: `[instance: {instance_id}] Took {time} seconds to deallocate network for instance.`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Took <*> seconds to deallocate network for instance.`
+	Post Template: `[instance: <*>] Took <*> seconds to deallocate network for instance.`
+	Post Template: `[instance: <*>] Took <*> seconds to deallocate network for instance.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Took <*> seconds to deallocate network for instance.
+[UpdateBucket] Logs: This iter found: 2065, total: 182201/207632, remain: 25431. 
+[UpdateBucket] Buckets: Checked 2 ([25, 26]), Parent Bucket size: 2065 -> 0, remain buckets: 22
+Update Success: Time for one update logs: 0.06189417839050293, template `[instance: <*>] Took <*> seconds to deallocate network for instance.`
+========================================================================================
+
+
+Iteration 29
+Sample 3 from current logs bucket: ID: 32, Len: 13, Bucket Size: 2065, Total Buckets: 37
+Sampling from 2064 logs, Sim Level: 1, MaxSim to anchor: 0.8571. Anchor: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`, MaxSim Log: `[instance: 874ffb7b-49b3-4c6d-a2e9-35bf272650b1] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`.
+	============  Query  ====================
+	Log[1]: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+	Log[2]: `[instance: 71065aa4-40af-4e74-bd6a-ef77c7f4dd02] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+	Log[3]: `[instance: 4d61ac5d-5d6b-408e-af5b-3d686dd8a608] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+LogTemplate[2]: `[instance: {instance_id}] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+LogTemplate[3]: `[instance: {instance_id}] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU`
+	Post Template: `[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU`
+	Post Template: `[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU
+[UpdateBucket] Logs: This iter found: 2065, total: 184266/207632, remain: 23366. 
+[UpdateBucket] Buckets: Checked 1 ([32]), Parent Bucket size: 2065 -> 0, remain buckets: 21
+Update Success: Time for one update logs: 0.05345726013183594, template `[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU`
+========================================================================================
+
+
+Iteration 30
+Sample 3 from current logs bucket: ID: 3, Len: 4, Bucket Size: 2064, Total Buckets: 37
+Sampling from 2063 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Terminating instance`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Terminating instance`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Terminating instance`
+	Log[2]: `[instance: 9a4787c1-febf-44cd-906b-ffdbe2718760] Terminating instance`
+	Log[3]: `[instance: 6e3a1fbb-c5f4-4dbf-8456-f6002179cbd1] Terminating instance`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Terminating instance`  
+LogTemplate[2]: `[instance: {instance_id}] Terminating instance`  
+LogTemplate[3]: `[instance: {instance_id}] Terminating instance`  
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Terminating instance`
+	Post Template: `[instance: <*>] Terminating instance`
+	Post Template: `[instance: <*>] Terminating instance`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Terminating instance
+[UpdateBucket] Logs: This iter found: 2064, total: 186330/207632, remain: 21302. 
+[UpdateBucket] Buckets: Checked 5 ([1, 2, 3, 4, 5]), Parent Bucket size: 2064 -> 0, remain buckets: 20
+Update Success: Time for one update logs: 0.06310200691223145, template `[instance: <*>] Terminating instance`
+========================================================================================
+
+
+Iteration 31
+Sample 3 from current logs bucket: ID: 7, Len: 5, Bucket Size: 2064, Total Buckets: 37
+Sampling from 2063 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance destroyed successfully.`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Instance destroyed successfully.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Instance destroyed successfully.`
+	Log[2]: `[instance: 3513bb11-58ec-4599-ae71-7293f2052212] Instance destroyed successfully.`
+	Log[3]: `[instance: bc0dcc6c-56a4-4afa-be8d-750c715a300f] Instance destroyed successfully.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Instance destroyed successfully.`  
+LogTemplate[2]: `[instance: {instance_id}] Instance destroyed successfully.`  
+LogTemplate[3]: `[instance: {instance_id}] Instance destroyed successfully.`  
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Instance destroyed successfully.`
+	Post Template: `[instance: <*>] Instance destroyed successfully.`
+	Post Template: `[instance: <*>] Instance destroyed successfully.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Instance destroyed successfully.
+[UpdateBucket] Logs: This iter found: 2064, total: 188394/207632, remain: 19238. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 3803 -> 1739, remain buckets: 19
+[TemplateDB] Try Merge: `[instance: <*>] Instance destroyed successfully.` | `[instance: <*>] Instance spawned successfully.`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] Instance destroyed successfully.`
+Update Success: Time for one update logs: 0.06807088851928711, template `[instance: <*>] Instance destroyed successfully.`
+========================================================================================
+
+
+Iteration 32
+Sample 3 from current logs bucket: ID: 11, Len: 6, Bucket Size: 2064, Total Buckets: 37
+Sampling from 2063 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deleting instance files /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Deleting instance files /var/lib/nova/instances/3416d0fa-6f0f-41ce-9c0a-59ae9a735da8_del`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deleting instance files /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del`
+	Log[2]: `[instance: 3c93475e-d015-4107-b518-2d6883b92981] Deleting instance files /var/lib/nova/instances/3c93475e-d015-4107-b518-2d6883b92981_del`
+	Log[3]: `[instance: 1b79067c-f821-426e-8c2a-8415b77c9571] Deleting instance files /var/lib/nova/instances/1b79067c-f821-426e-8c2a-8415b77c9571_del`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Deleting instance files {directory}/{instance_id}_del`
+LogTemplate[2]: `[instance: {instance_id}] Deleting instance files {directory}/{instance_id}_del`
+LogTemplate[3]: `[instance: {instance_id}] Deleting instance files {directory}/{instance_id}_del`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Deleting instance files <*>_del`
+	Post Template: `[instance: <*>] Deleting instance files <*>_del`
+	Post Template: `[instance: <*>] Deleting instance files <*>_del`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Deleting instance files <*>_del
+[UpdateBucket] Logs: This iter found: 2064, total: 190458/207632, remain: 17174. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 6694 -> 4630, remain buckets: 18
+Update Success: Time for one update logs: 0.1011812686920166, template `[instance: <*>] Deleting instance files <*>_del`
+========================================================================================
+
+
+Iteration 33
+Sample 3 from current logs bucket: ID: 12, Len: 6, Bucket Size: 2064, Total Buckets: 37
+Sampling from 2063 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deletion of /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del complete`, MaxSim Log: `[instance: 3416d0fa-6f0f-41ce-9c0a-59ae9a735da8] Deletion of /var/lib/nova/instances/3416d0fa-6f0f-41ce-9c0a-59ae9a735da8_del complete`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Deletion of /var/lib/nova/instances/3edec1e4-9678-4a3a-a21b-a145a4ee5e61_del complete`
+	Log[2]: `[instance: 95960536-049b-41f6-9049-05fc479b6a7c] Deletion of /var/lib/nova/instances/95960536-049b-41f6-9049-05fc479b6a7c_del complete`
+	Log[3]: `[instance: 43204226-2f87-4da7-b7ee-4d20cc66e846] Deletion of /var/lib/nova/instances/43204226-2f87-4da7-b7ee-4d20cc66e846_del complete`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Deletion of {directory}/{instance_id}_del complete`
+LogTemplate[2]: `[instance: {instance_id}] Deletion of {directory}/{instance_id}_del complete`
+LogTemplate[3]: `[instance: {instance_id}] Deletion of {directory}/{instance_id}_del complete`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Deletion of <*>_del complete`
+	Post Template: `[instance: <*>] Deletion of <*>_del complete`
+	Post Template: `[instance: <*>] Deletion of <*>_del complete`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Deletion of <*>_del complete
+[UpdateBucket] Logs: This iter found: 2064, total: 192522/207632, remain: 15110. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 4630 -> 2566, remain buckets: 17
+Update Success: Time for one update logs: 0.06879615783691406, template `[instance: <*>] Deletion of <*>_del complete`
+========================================================================================
+
+
+Iteration 34
+Sample 3 from current logs bucket: ID: 13, Len: 6, Bucket Size: 2064, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	============ Response ====================
+LogTemplate[1]: `Removing base or swap file: {file}`
+	============ PostProcess ====================
+	Post Template: `Removing base or swap file: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Removing base or swap file: <*>
+[UpdateBucket] Logs: This iter found: 2064, total: 194586/207632, remain: 13046. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 2566 -> 502, remain buckets: 16
+Update Success: Time for one update logs: 0.05785393714904785, template `Removing base or swap file: <*>`
+========================================================================================
+
+
+Iteration 35
+Sample 3 from current logs bucket: ID: 20, Len: 9, Bucket Size: 2064, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `HTTP exception thrown: No instances found for any event`
+	============ Response ====================
+LogTemplate[1]: `HTTP exception thrown: No instances found for any event`
+	============ PostProcess ====================
+	Post Template: `HTTP exception thrown: No instances found for any event`
+	============ Aggregate ====================
+	Aggregated Template:  HTTP exception thrown: No instances found for any event
+[UpdateBucket] Logs: This iter found: 2064, total: 196650/207632, remain: 10982. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 3059 -> 995, remain buckets: 15
+Update Success: Time for one update logs: 0.02431178092956543, template `HTTP exception thrown: No instances found for any event`
+========================================================================================
+
+
+Iteration 36
+Sample 3 from current logs bucket: ID: 29, Len: 12, Bucket Size: 2064, Total Buckets: 37
+Sampling from 2063 logs, Sim Level: 2, MaxSim to anchor: 0.8333. Anchor: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.99 seconds to destroy the instance on the hypervisor.`, MaxSim Log: `[instance: 1b403aac-3d6e-49de-aacf-4548fb97f58d] Took 0.99 seconds to destroy the instance on the hypervisor.`.
+	============  Query  ====================
+	Log[1]: `[instance: 3edec1e4-9678-4a3a-a21b-a145a4ee5e61] Took 0.99 seconds to destroy the instance on the hypervisor.`
+	Log[2]: `[instance: a931e625-18bf-417c-9bda-471abeb5de21] Took 1.00 seconds to destroy the instance on the hypervisor.`
+	Log[3]: `[instance: ca088276-4c0e-43e7-8222-4d9c11504c65] Took 1.13 seconds to destroy the instance on the hypervisor.`
+	============ Response ====================
+LogTemplate[1]: `[instance: {instance_id}] Took {time} seconds to destroy the instance on the hypervisor.`
+
+LogTemplate[2]: `[instance: {instance_id}] Took {time} seconds to destroy the instance on the hypervisor.`
+
+LogTemplate[3]: `[instance: {instance_id}] Took {time} seconds to destroy the instance on the hypervisor.`
+	============ PostProcess ====================
+	Post Template: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+	Post Template: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+	Post Template: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+	============ Aggregate ====================
+	Aggregated Template:  [instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.
+[UpdateBucket] Logs: This iter found: 2064, total: 198714/207632, remain: 8918. 
+[UpdateBucket] Buckets: Checked 4 ([28, 29, 30, 31]), Parent Bucket size: 2430 -> 366, remain buckets: 14
+[TemplateDB] Try Merge: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.` | `[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.`
+[TemplateDB] Reject Merge, Remain Template: `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+Update Success: Time for one update logs: 0.07628607749938965, template `[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.`
+========================================================================================
+
+
+Iteration 37
+Sample 3 from current logs bucket: ID: 8, Len: 5, Bucket Size: 1739, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us`
+	============ Response ====================
+LogTemplate[1]: `Compute_service record updated for {ip_or_url}`
+	============ PostProcess ====================
+	Post Template: `Compute_service record updated for <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Compute_service record updated for <*>
+[UpdateBucket] Logs: This iter found: 1739, total: 200453/207632, remain: 7179. 
+[UpdateBucket] Buckets: Checked 3 ([6, 7, 8]), Parent Bucket size: 1739 -> 0, remain buckets: 13
+Update Success: Time for one update logs: 0.04889392852783203, template `Compute_service record updated for <*>`
+========================================================================================
+
+
+Iteration 38
+Sample 3 from current logs bucket: ID: 17, Len: 8, Bucket Size: 1739, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us`
+	============ Response ====================
+LogTemplate[1]: `Auditing locally available compute resources for node {node_name}`
+	============ PostProcess ====================
+	Post Template: `Auditing locally available compute resources for node <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Auditing locally available compute resources for node <*>
+[UpdateBucket] Logs: This iter found: 1739, total: 202192/207632, remain: 5440. 
+[UpdateBucket] Buckets: Checked 4 ([16, 17, 18, 19]), Parent Bucket size: 3480 -> 1741, remain buckets: 12
+Update Success: Time for one update logs: 0.051795005798339844, template `Auditing locally available compute resources for node <*>`
+========================================================================================
+
+
+Iteration 39
+Sample 3 from current logs bucket: ID: 18, Len: 8, Bucket Size: 1739, Total Buckets: 37
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `Total usable vcpus: 16, total allocated vcpus: 1`, MaxSim Log: `Total usable vcpus: 16, total allocated vcpus: 0`.
+	============  Query  ====================
+	Log[1]: `Total usable vcpus: 16, total allocated vcpus: 1`
+	Log[2]: `Total usable vcpus: 16, total allocated vcpus: 0`
+	============ Response ====================
+LogTemplate[1]: `Total usable vcpus: {num1}, total allocated vcpus: {num2}`
+LogTemplate[2]: `Total usable vcpus: {num1}, total allocated vcpus: {num2}`
+	============ PostProcess ====================
+	Post Template: `Total usable vcpus: <*> total allocated vcpus: <*>`
+	Post Template: `Total usable vcpus: <*> total allocated vcpus: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Total usable vcpus: <*> total allocated vcpus: <*>
+[UpdateBucket] Logs: This iter found: 1739, total: 203931/207632, remain: 3701. 
+[UpdateBucket] Buckets: Checked 4 ([16, 17, 18, 19]), Parent Bucket size: 1741 -> 2, remain buckets: 11
+Update Success: Time for one update logs: 0.05637192726135254, template `Total usable vcpus: <*> total allocated vcpus: <*>`
+========================================================================================
+
+
+Iteration 40
+Sample 3 from current logs bucket: ID: 27, Len: 11, Bucket Size: 1739, Total Buckets: 37
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.5714. Anchor: `Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]`, MaxSim Log: `Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=512MB phys_disk=15GB used_disk=0GB total_vcpus=16 used_vcpus=0 pci_stats=[]`.
+	============  Query  ====================
+	Log[1]: `Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]`
+	Log[2]: `Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=512MB phys_disk=15GB used_disk=0GB total_vcpus=16 used_vcpus=0 pci_stats=[]`
+	============ Response ====================
+LogTemplate[1]: `Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]`  
+LogTemplate[2]: `Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]`  
+	============ PostProcess ====================
+	Post Template: `Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]`
+	Post Template: `Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]`
+	============ Aggregate ====================
+	Aggregated Template:  Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]
+[UpdateBucket] Logs: This iter found: 1739, total: 205670/207632, remain: 1962. 
+[UpdateBucket] Buckets: Checked 1 ([27]), Parent Bucket size: 1739 -> 0, remain buckets: 10
+Update Success: Time for one update logs: 0.06828618049621582, template `Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]`
+========================================================================================
+
+
+Iteration 41
+Sample 3 from current logs bucket: ID: 24, Len: 9, Bucket Size: 995, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742`
+	============ Response ====================
+LogTemplate[1]: `Base or swap file too young to remove: {file}`
+	============ PostProcess ====================
+	Post Template: `Base or swap file too young to remove: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Base or swap file too young to remove: <*>
+[UpdateBucket] Logs: This iter found: 995, total: 206665/207632, remain: 967. 
+[UpdateBucket] Buckets: Checked 5 ([20, 21, 22, 23, 24]), Parent Bucket size: 995 -> 0, remain buckets: 9
+Update Success: Time for one update logs: 0.04238390922546387, template `Base or swap file too young to remove: <*>`
+========================================================================================
+
+
+Iteration 42
+Sample 3 from current logs bucket: ID: 14, Len: 6, Bucket Size: 502, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.`
+	============ Response ====================
+LogTemplate[1]: `Successfully synced instances from host '{hostname}'.`
+	============ PostProcess ====================
+	Post Template: `Successfully synced instances from host '<*>'.`
+	============ Aggregate ====================
+	Aggregated Template:  Successfully synced instances from host '<*>'.
+[UpdateBucket] Logs: This iter found: 502, total: 207167/207632, remain: 465. 
+[UpdateBucket] Buckets: Checked 6 ([9, 10, 11, 12, 13, 14]), Parent Bucket size: 502 -> 0, remain buckets: 8
+Update Success: Time for one update logs: 0.026021957397460938, template `Successfully synced instances from host '<*>'.`
+========================================================================================
+
+
+Iteration 43
+Sample 3 from current logs bucket: ID: 30, Len: 12, Bucket Size: 364, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.`
+	============ Response ====================
+LogTemplate[1]: `The instance sync for host '{hostname}' did not match. Re-created its InstanceList.`
+	============ PostProcess ====================
+	Post Template: `The instance sync for host <*> did not match. Re-created its InstanceList.`
+	============ Aggregate ====================
+	Aggregated Template:  The instance sync for host <*> did not match. Re-created its InstanceList.
+[UpdateBucket] Logs: This iter found: 364, total: 207531/207632, remain: 101. 
+[UpdateBucket] Buckets: Checked 4 ([28, 29, 30, 31]), Parent Bucket size: 366 -> 2, remain buckets: 7
+Update Success: Time for one update logs: 0.022517919540405273, template `The instance sync for host <*> did not match. Re-created its InstanceList.`
+========================================================================================
+
+
+Iteration 44
+Sample 3 from current logs bucket: ID: 34, Len: 17, Bucket Size: 45, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.`
+	============ Response ====================
+LogTemplate[1]: `While synchronizing instance power states, found {number} instances in the database and {number} instances on the hypervisor.`
+	============ PostProcess ====================
+	Post Template: `While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.`
+	============ Aggregate ====================
+	Aggregated Template:  While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.
+[UpdateBucket] Logs: This iter found: 45, total: 207576/207632, remain: 56. 
+[UpdateBucket] Buckets: Checked 1 ([34]), Parent Bucket size: 45 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.009307861328125, template `While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.`
+========================================================================================
+
+
+Iteration 45
+Sample 3 from current logs bucket: ID: 33, Len: 15, Bucket Size: 30, Total Buckets: 37
+Sampling from 29 logs, Sim Level: 4, MaxSim to anchor: 0.7500. Anchor: `Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.`, MaxSim Log: `Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-17 01:00:00 to 2017-05-17 02:00:00. 87 instances.`.
+	============  Query  ====================
+	Log[1]: `Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.`
+	Log[2]: `Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-17 16:00:00 to 2017-05-17 17:00:00. 1 instances.`
+	Log[3]: `Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-16 23:00:00 to 2017-05-17 00:00:00. 87 instances.`
+	============ Response ====================
+LogTemplate[1]: `Running instance usage audit for host {host} from {time_start} to {time_end}. {num_instances} instances.`
+	============ PostProcess ====================
+	Post Template: `Running instance usage audit for host <*> from <*> to <*> instances.`
+	Post Template: `Running instance usage audit for host <*> from <*> to <*> instances.`
+	Post Template: `Running instance usage audit for host <*> from <*> to <*> instances.`
+	============ Aggregate ====================
+	Aggregated Template:  Running instance usage audit for host <*> from <*> to <*> instances.
+[UpdateBucket] Logs: This iter found: 30, total: 207606/207632, remain: 26. 
+[UpdateBucket] Buckets: Checked 1 ([33]), Parent Bucket size: 30 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.0055768489837646484, template `Running instance usage audit for host <*> from <*> to <*> instances.`
+========================================================================================
+
+
+Iteration 46
+Sample 3 from current logs bucket: ID: 36, Len: 20, Bucket Size: 12, Total Buckets: 37
+Sampling from 11 logs, Sim Level: 1, MaxSim to anchor: 0.8947. Anchor: `couldn't obtain the vcpu count from domain id: b93203d4-c79b-41fe-8090-5f2b89b0d081, exception: Requested operation is not valid: cpu affinity is not supported`, MaxSim Log: `couldn't obtain the vcpu count from domain id: 98e9712a-cd1a-4619-9590-2be57eb33299, exception: Requested operation is not valid: cpu affinity is not supported`.
+	============  Query  ====================
+	Log[1]: `couldn't obtain the vcpu count from domain id: b93203d4-c79b-41fe-8090-5f2b89b0d081, exception: Requested operation is not valid: cpu affinity is not supported`
+	Log[2]: `couldn't obtain the vcpu count from domain id: 86a51d93-1bbf-4cfa-9afd-4c807a2f644a, exception: Requested operation is not valid: cpu affinity is not supported`
+	Log[3]: `couldn't obtain the vcpu count from domain id: 5ca5dcc8-87ec-4b4a-8ded-6c9d555050e0, exception: Requested operation is not valid: cpu affinity is not supported`
+	============ Response ====================
+LogTemplate[1]: `couldn't obtain the vcpu count from domain id: {domain_id}, exception: Requested operation is not valid: cpu affinity is not supported`
+	============ PostProcess ====================
+	Post Template: `couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported`
+	Post Template: `couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported`
+	Post Template: `couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported`
+	============ Aggregate ====================
+	Aggregated Template:  couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported
+[UpdateBucket] Logs: This iter found: 12, total: 207618/207632, remain: 14. 
+[UpdateBucket] Buckets: Checked 1 ([36]), Parent Bucket size: 12 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.004400968551635742, template `couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported`
+========================================================================================
+
+
+Iteration 47
+Sample 3 from current logs bucket: ID: 0, Len: 3, Bucket Size: 8, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Error during ComputeManager._run_image_cache_manager_pass`
+	============ Response ====================
+LogTemplate[1]: `Error during {api}`
+	============ PostProcess ====================
+	Post Template: `Error during <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Error during <*>
+[UpdateBucket] Logs: This iter found: 8, total: 207626/207632, remain: 6. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 8 -> 0, remain buckets: 3
+Update Success: Time for one update logs: 0.004357814788818359, template `Error during <*>`
+========================================================================================
+
+
+Iteration 48
+Sample 3 from current logs bucket: ID: 15, Len: 7, Bucket Size: 2, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Bad response code while validating token: 503`
+	============ Response ====================
+LogTemplate[1]: `Bad response code while validating token: {response_code}`
+	============ PostProcess ====================
+	Post Template: `Bad response code while validating token: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Bad response code while validating token: <*>
+[UpdateBucket] Logs: This iter found: 2, total: 207628/207632, remain: 4. 
+[UpdateBucket] Buckets: Checked 1 ([15]), Parent Bucket size: 2 -> 0, remain buckets: 2
+Update Success: Time for one update logs: 0.0035059452056884766, template `Bad response code while validating token: <*>`
+========================================================================================
+
+
+Iteration 49
+Sample 3 from current logs bucket: ID: 19, Len: 8, Bucket Size: 2, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">`
+	============ Response ====================
+LogTemplate[1]: `Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">`
+	============ PostProcess ====================
+	Post Template: `Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML <*>.0//EN">`
+	============ Aggregate ====================
+	Aggregated Template:  Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML <*>.0//EN">
+[UpdateBucket] Logs: This iter found: 2, total: 207630/207632, remain: 2. 
+[UpdateBucket] Buckets: Checked 4 ([16, 17, 18, 19]), Parent Bucket size: 2 -> 0, remain buckets: 1
+Update Success: Time for one update logs: 0.0103759765625, template `Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML <*>.0//EN">`
+========================================================================================
+
+
+Iteration 50
+Sample 3 from current logs bucket: ID: 31, Len: 12, Bucket Size: 2, Total Buckets: 37
+Sampling from 1 logs failed
+	============  Query  ====================
+	Log[1]: `Unable to validate token: Failed to fetch token data from identity server`
+	============ Response ====================
+LogTemplate[1]: `Unable to validate token: Failed to fetch token data from identity server`
+	============ PostProcess ====================
+	Post Template: `Unable to validate token: Failed to fetch token data from identity server`
+	============ Aggregate ====================
+	Aggregated Template:  Unable to validate token: Failed to fetch token data from identity server
+[UpdateBucket] Logs: This iter found: 2, total: 207632/207632, remain: 0. 
+[UpdateBucket] Buckets: Checked 4 ([28, 29, 30, 31]), Parent Bucket size: 2 -> 0, remain buckets: 0
+Update Success: Time for one update logs: 0.005911111831665039, template `Unable to validate token: Failed to fetch token data from identity server`
+========================================================================================
+
+
+Original df_logs: (207632, 4), Clustering df_logs: (207632, 6)
+Saved OpenStack_log_structured.csv to ./saved_results/LUNAR-single/OpenStack/OpenStack_full.log_structured.csv
+Saved OpenStack_log_templates.csv to ./saved_results/LUNAR-single/OpenStack/OpenStack_full.log_templates.csv
+Total parsingg time: 698.565506696701 seconds
+Total query time: 667.7991144657135 seconds, 52 queries
+Avg. query time: 12.842288193131376 seconds
+Total pure match time: 30.76639223098755 seconds
+
+=== Evaluation on OpenStack ===
+Evaluate parsing result: ./saved_results/LUNAR-single/OpenStack/OpenStack_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/48 [00:00<?, ?it/s] 44%|████▍     | 21/48 [00:00<00:00, 204.70it/s] 92%|█████████▏| 44/48 [00:00<00:00, 216.62it/s]100%|██████████| 48/48 [00:00<00:00, 214.70it/s]
+Grouping_Accuracy (GA): 1.0000, FGA: 1.0000,
+Grouping Accuracy calculation done. [Time taken: 0.317]
+Parsing_Accuracy (PA): 0.9518
+Parsing Accuracy calculation done. [Time taken: 0.015]
+  0%|          | 0/48 [00:00<?, ?it/s]100%|██████████| 48/48 [00:00<00:00, 3125.22it/s]
+1-num-2064, {'<*> "DELETE <*> <*>" status: <*> len: <*> time: <*>'} | {'<*> "DELETE /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/<*> <*>" status: <*> len: <*> time: <*>'}
+2-num-2065, {'Creating event <*> for instance <*>'} | {'Creating event network-vif-plugged:<*> for instance <*>'}
+3-num-1739, {'Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=<*>'} | {'Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[]'}
+4-num-2, {'Identity response: <*>'} | {'Identity response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML <*>.0//EN">'}
+5-num-2064, {'[instance: <*>] Deleting instance files <*>'} | {'[instance: <*>] Deleting instance files <*>_del'}
+6-num-2064, {'[instance: <*>] Deletion of <*> complete'} | {'[instance: <*>] Deletion of <*>_del complete'}
+PTA: 0.8750, RTA: 0.8750 FTA: 0.8750
+Identify : 48, Groundtruth : 48
+Template-level accuracy calculation done. [Time taken: 0.077]
+Finish parsing logs: OpenStack
+Output dir: ./saved_results/LUNAR-single

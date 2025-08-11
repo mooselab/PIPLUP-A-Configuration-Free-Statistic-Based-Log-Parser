@@ -1,0 +1,2239 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "setTodayTotalDetailSteps=1514038440000##7007##548365##8661##12361##27173954"
+  ],
+  "logs_to_query_regex": [
+   "setTodayTotalDetailSteps=1514038440000##7007##548365##8661##12361##27173954"
+  ],
+  "llm_template": "setTodayTotalDetailSteps=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setTodayTotalDetailSteps=<*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "onStandStepChanged 3579"
+  ],
+  "logs_to_query_regex": [
+   "onStandStepChanged 3579"
+  ],
+  "llm_template": "onStandStepChanged <*>",
+  "cluster_id": 54,
+  "update_success": true,
+  "template": "onStandStepChanged <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "getTodayTotalDetailSteps = 1514038440000##6993##548365##8661##12266##27164404",
+   "getTodayTotalDetailSteps = 1514282580000##4095##1008175##77229##62451##54496870",
+   "getTodayTotalDetailSteps = 1514724660000##11160##91977##31610##12071##38775002"
+  ],
+  "logs_to_query_regex": [
+   "getTodayTotalDetailSteps = 1514038440000##6993##548365##8661##12266##27164404",
+   "getTodayTotalDetailSteps = 1514282580000##4095##1008175##77229##62451##54496870",
+   "getTodayTotalDetailSteps = 1514724660000##11160##91977##31610##12071##38775002"
+  ],
+  "llm_template": "getTodayTotalDetailSteps = <*>",
+  "cluster_id": 69,
+  "update_success": true,
+  "template": "getTodayTotalDetailSteps = <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "calculateCaloriesWithCache totalCalories=126775"
+  ],
+  "logs_to_query_regex": [
+   "calculateCaloriesWithCache totalCalories=126775"
+  ],
+  "llm_template": "calculateCaloriesWithCache totalCalories=<*>",
+  "cluster_id": 55,
+  "update_success": true,
+  "template": "calculateCaloriesWithCache totalCalories=<*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "REPORT : 109 77 2334 0",
+   "REPORT : 154 109 3298 0",
+   "REPORT : 2334 1666 49994 0"
+  ],
+  "logs_to_query_regex": [
+   "REPORT : 109 77 2334 0",
+   "REPORT : 154 109 3298 0",
+   "REPORT : 2334 1666 49994 0"
+  ],
+  "llm_template": "REPORT : <*>",
+  "cluster_id": 127,
+  "update_success": true,
+  "template": "REPORT : <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "processHandleBroadcastAction action:android.intent.action.TIME_TICK"
+  ],
+  "logs_to_query_regex": [
+   "processHandleBroadcastAction action:android.intent.action.TIME_TICK"
+  ],
+  "llm_template": "processHandleBroadcastAction action:<*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "processHandleBroadcastAction action:<*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "calculateAltitudeWithCache totalAltitude=0"
+  ],
+  "logs_to_query_regex": [
+   "calculateAltitudeWithCache totalAltitude=0"
+  ],
+  "llm_template": "calculateAltitudeWithCache totalAltitude=<*>",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "calculateAltitudeWithCache totalAltitude=<*>"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "getBinderPackageName packageName = com.huawei.health"
+  ],
+  "logs_to_query_regex": [
+   "getBinderPackageName packageName = com.huawei.health"
+  ],
+  "llm_template": "getBinderPackageName packageName = <*>",
+  "cluster_id": 71,
+  "update_success": true,
+  "template": "getBinderPackageName packageName = <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "upLoadOneMinuteDataToEngine time=25233975,0,93,0,20002"
+  ],
+  "logs_to_query_regex": [
+   "upLoadOneMinuteDataToEngine time=25233975,0,93,0,20002"
+  ],
+  "llm_template": "upLoadOneMinuteDataToEngine time=<*>",
+  "cluster_id": 56,
+  "update_success": true,
+  "template": "upLoadOneMinuteDataToEngine time=<*>"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "new date =20180102, type=40002,54.0,old=null",
+   "new date =20180102, type=40012,571.0,old=441.0",
+   "new date =20180102, type=40006,5460.0,old=5340.0"
+  ],
+  "logs_to_query_regex": [
+   "new date =20180102, type=40002,54.0,old=null",
+   "new date =20180102, type=40012,571.0,old=441.0",
+   "new date =20180102, type=40006,5460.0,old=5340.0"
+  ],
+  "llm_template": "new date =<*>, type=<*>,old=<*>",
+  "cluster_id": 84,
+  "update_success": true,
+  "template": "new date =<*>, type=<*>,old=<*>"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "onReceive action: android.intent.action.SCREEN_ON"
+  ],
+  "logs_to_query_regex": [
+   "onReceive action: android.intent.action.SCREEN_ON"
+  ],
+  "llm_template": "onReceive action: android.intent.action.<*>",
+  "cluster_id": 60,
+  "update_success": true,
+  "template": "onReceive action: <*>"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "flush sensor data"
+  ],
+  "logs_to_query_regex": [
+   "flush sensor data"
+  ],
+  "llm_template": "flush sensor data",
+  "cluster_id": 61,
+  "update_success": true,
+  "template": "flush sensor data"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "initDataPrivacy the dataPrivacy switch is open, start push health data!",
+   "initUserPrivacy the userPrivacy switch is open, start push user data!"
+  ],
+  "logs_to_query_regex": [
+   "initDataPrivacy the dataPrivacy switch is open, start push health data!",
+   "initUserPrivacy the userPrivacy switch is open, start push user data!"
+  ],
+  "llm_template": "initDataPrivacy the dataPrivacy switch is open, start push <*> data!",
+  "cluster_id": 137,
+  "update_success": true,
+  "template": "initDataPrivacy the dataPrivacy switch is <*>, start push health data!"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "saveStatData() type =40002,time = 1513958400000,statClient = 2,who is 1",
+   "saveStatData() type =40004,time = 1514476800000,statClient = 2,who is 1",
+   "saveStatData() type =40005,time = 1514217600000,statClient = 2,who is 1"
+  ],
+  "logs_to_query_regex": [
+   "saveStatData() type =40002,time = 1513958400000,statClient = 2,who is 1",
+   "saveStatData() type =40004,time = 1514476800000,statClient = 2,who is 1",
+   "saveStatData() type =40005,time = 1514217600000,statClient = 2,who is 1"
+  ],
+  "llm_template": "saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>",
+  "cluster_id": 136,
+  "update_success": true,
+  "template": "saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "sendSyncFailedBroadcast"
+  ],
+  "logs_to_query_regex": [
+   "sendSyncFailedBroadcast"
+  ],
+  "llm_template": "sendSyncFailedBroadcast",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "sendSyncFailedBroadcast"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "needAutoSync autoSyncSwitch is open"
+  ],
+  "logs_to_query_regex": [
+   "needAutoSync autoSyncSwitch is open"
+  ],
+  "llm_template": "needAutoSync <*> is open",
+  "cluster_id": 74,
+  "update_success": true,
+  "template": "needAutoSync autoSyncSwitch is <*>"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "initDataPrivacy the dataPrivacy is true"
+  ],
+  "logs_to_query_regex": [
+   "initDataPrivacy the dataPrivacy is true"
+  ],
+  "llm_template": "initDataPrivacy the dataPrivacy is <*>",
+  "cluster_id": 89,
+  "update_success": true,
+  "template": "initDataPrivacy the dataPrivacy is <*>"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "initUserPrivacy the userPrivacy is true"
+  ],
+  "logs_to_query_regex": [
+   "initUserPrivacy the userPrivacy is true"
+  ],
+  "llm_template": "initUserPrivacy the userPrivacy is <*>",
+  "cluster_id": 90,
+  "update_success": true,
+  "template": "initUserPrivacy the userPrivacy is <*>"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "ifCanSync not! no cloud version"
+  ],
+  "logs_to_query_regex": [
+   "ifCanSync not! no cloud version"
+  ],
+  "llm_template": "ifCanSync not! no cloud version",
+  "cluster_id": 91,
+  "update_success": true,
+  "template": "ifCanSync not! no cloud version"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "initUserPrivacy the userPrivacy switch is open, start push user data!"
+  ],
+  "logs_to_query_regex": [
+   "initUserPrivacy the userPrivacy switch is open, start push user data!"
+  ],
+  "llm_template": "initUserPrivacy the userPrivacy switch is open, start push user data!",
+  "cluster_id": 137,
+  "update_success": true,
+  "template": "initUserPrivacy the userPrivacy switch is <*>, start push user data!"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "startSync hiSyncOption = HiSyncOption{syncAction=2, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1",
+   "startSync hiSyncOption = HiSyncOption{syncAction=1, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1",
+   "startSync hiSyncOption = HiSyncOption{syncAction=3, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1"
+  ],
+  "logs_to_query_regex": [
+   "startSync hiSyncOption = HiSyncOption{syncAction=2, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1",
+   "startSync hiSyncOption = HiSyncOption{syncAction=1, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1",
+   "startSync hiSyncOption = HiSyncOption{syncAction=3, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1"
+  ],
+  "llm_template": "startSync hiSyncOption = <*>,app = <*> who = <*>",
+  "cluster_id": 144,
+  "update_success": true,
+  "template": "startSync hiSyncOption = HiSyncOption{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app = <*> who = <*>"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "saveHealthDetailData() deviceID = 2,clientID=1,id=1"
+  ],
+  "logs_to_query_regex": [
+   "saveHealthDetailData() deviceID = 2,clientID=1,id=1"
+  ],
+  "llm_template": "saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>",
+  "cluster_id": 72,
+  "update_success": true,
+  "template": "saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "startListenerChange subscribeList = [1]"
+  ],
+  "logs_to_query_regex": [
+   "startListenerChange subscribeList = [1]"
+  ],
+  "llm_template": "startListenerChange subscribeList = [<*>]",
+  "cluster_id": 73,
+  "update_success": true,
+  "template": "startListenerChange subscribeList = [<*>]"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "insertHiHealthData() end totalTime = 45",
+   "insertHiHealthData() end totalTime = 17",
+   "insertHiHealthData() end totalTime = 120"
+  ],
+  "logs_to_query_regex": [
+   "insertHiHealthData() end totalTime = 45",
+   "insertHiHealthData() end totalTime = 17",
+   "insertHiHealthData() end totalTime = 120"
+  ],
+  "llm_template": "insertHiHealthData() end totalTime = <*>",
+  "cluster_id": 88,
+  "update_success": true,
+  "template": "insertHiHealthData() end totalTime = <*>"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "insertHiHealthData() checkAppType 0 appID = 1"
+  ],
+  "logs_to_query_regex": [
+   "insertHiHealthData() checkAppType 0 appID = 1"
+  ],
+  "llm_template": "insertHiHealthData() checkAppType <*> appID = <*>",
+  "cluster_id": 93,
+  "update_success": true,
+  "template": "insertHiHealthData() checkAppType <*> appID = <*>"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "getAppContext() isAppValid health or wear, packageName = com.huawei.health"
+  ],
+  "logs_to_query_regex": [
+   "getAppContext() isAppValid health or wear, packageName = com.huawei.health"
+  ],
+  "llm_template": "getAppContext() isAppValid health or wear, packageName = <*>",
+  "cluster_id": 132,
+  "update_success": true,
+  "template": "getAppContext() isAppValid health or wear, packageName = <*>"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "insertHiHealthData() size = 4,app = 1,One Data Type = 40002,packageName = com.huawei.health,writeStatType = 0",
+   "insertHiHealthData() size = 44,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0",
+   "insertHiHealthData() size = 25,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0"
+  ],
+  "logs_to_query_regex": [
+   "insertHiHealthData() size = 4,app = 1,One Data Type = 40002,packageName = com.huawei.health,writeStatType = 0",
+   "insertHiHealthData() size = 44,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0",
+   "insertHiHealthData() size = 25,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0"
+  ],
+  "llm_template": "insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = com.huawei.health,writeStatType = <*>",
+  "cluster_id": 143,
+  "update_success": true,
+  "template": "insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "checkInsertStatus stepStatSum or calorieStatSum is enough"
+  ],
+  "logs_to_query_regex": [
+   "checkInsertStatus stepStatSum or calorieStatSum is enough"
+  ],
+  "llm_template": "checkInsertStatus stepStatSum or calorieStatSum is enough",
+  "cluster_id": 97,
+  "update_success": true,
+  "template": "checkInsertStatus stepStatSum or calorieStatSum is enough"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "startInsertSportSync start auto sync,app is 1"
+  ],
+  "logs_to_query_regex": [
+   "startInsertSportSync start auto sync,app is 1"
+  ],
+  "llm_template": "startInsertSportSync start auto sync,app is <*>",
+  "cluster_id": 98,
+  "update_success": true,
+  "template": "startInsertSportSync start auto sync,app is <*>"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "stepSyncOrNot appSynTimes is 0, statsyncTimes is 0"
+  ],
+  "logs_to_query_regex": [
+   "stepSyncOrNot appSynTimes is 0, statsyncTimes is 0"
+  ],
+  "llm_template": "stepSyncOrNot appSynTimes is <*> statsyncTimes is <*>",
+  "cluster_id": 129,
+  "update_success": true,
+  "template": "stepSyncOrNot appSynTimes is <*>, statsyncTimes is <*>"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "startInsertSportSync first 500 steps sync,do all sync"
+  ],
+  "logs_to_query_regex": [
+   "startInsertSportSync first 500 steps sync,do all sync"
+  ],
+  "llm_template": "startInsertSportSync first <*> steps sync,do all sync",
+  "cluster_id": 130,
+  "update_success": true,
+  "template": "startInsertSportSync first <*> steps sync,do all sync"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0"
+  ],
+  "logs_to_query_regex": [
+   "checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0"
+  ],
+  "llm_template": "checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>",
+  "cluster_id": 140,
+  "update_success": true,
+  "template": "checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "checkInsertStatus stepSum or calorieSum is enough"
+  ],
+  "logs_to_query_regex": [
+   "checkInsertStatus stepSum or calorieSum is enough"
+  ],
+  "llm_template": "checkInsertStatus stepSum or calorieSum is enough",
+  "cluster_id": 96,
+  "update_success": true,
+  "template": "checkInsertStatus stepSum or calorieSum is enough"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "setWriteDBLastDataMinute=25233979"
+  ],
+  "logs_to_query_regex": [
+   "setWriteDBLastDataMinute=25233979"
+  ],
+  "llm_template": "setWriteDBLastDataMinute=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setWriteDBLastDataMinute=<*>"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "timeStamp back,extendReportTimeStamp=1514039575000"
+  ],
+  "logs_to_query_regex": [
+   "timeStamp back,extendReportTimeStamp=1514039575000"
+  ],
+  "llm_template": "timeStamp back,extendReportTimeStamp=<*>",
+  "cluster_id": 57,
+  "update_success": true,
+  "template": "timeStamp back,extendReportTimeStamp=<*>"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "bulkSaveDetailHiHealthData() size = 20,totalTime = 34",
+   "bulkSaveDetailHiHealthData() size = 9,totalTime = 34",
+   "bulkSaveDetailHiHealthData() size = 20,totalTime = 10"
+  ],
+  "logs_to_query_regex": [
+   "bulkSaveDetailHiHealthData() size = 20,totalTime = 34",
+   "bulkSaveDetailHiHealthData() size = 9,totalTime = 34",
+   "bulkSaveDetailHiHealthData() size = 20,totalTime = 10"
+  ],
+  "llm_template": "bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>",
+  "cluster_id": 106,
+  "update_success": true,
+  "template": "bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "writeDataToDB size 327",
+   "writeDataToDB size 1079",
+   "writeDataToDB size 1056"
+  ],
+  "logs_to_query_regex": [
+   "writeDataToDB size 327",
+   "writeDataToDB size 1079",
+   "writeDataToDB size 1056"
+  ],
+  "llm_template": "writeDataToDB size <*>",
+  "cluster_id": 68,
+  "update_success": true,
+  "template": "writeDataToDB size <*>"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 48",
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 19",
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 14"
+  ],
+  "logs_to_query_regex": [
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 48",
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 19",
+   "saveRealTimeHealthDatasStat() size = 1,totalTime = 14"
+  ],
+  "llm_template": "saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>",
+  "cluster_id": 99,
+  "update_success": true,
+  "template": "saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "InsertCallBack() onSuccess type = 0 data=true"
+  ],
+  "logs_to_query_regex": [
+   "InsertCallBack() onSuccess type = 0 data=true"
+  ],
+  "llm_template": "InsertCallBack() onSuccess type = <*> data=<*>",
+  "cluster_id": 100,
+  "update_success": true,
+  "template": "InsertCallBack() onSuccess type = <*> data=<*>"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "InsertEvent success begin:25233975 end:25233979"
+  ],
+  "logs_to_query_regex": [
+   "InsertEvent success begin:25233975 end:25233979"
+  ],
+  "llm_template": "InsertEvent success begin:<*> end:<*>",
+  "cluster_id": 86,
+  "update_success": true,
+  "template": "InsertEvent success begin:<*> end:<*>"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "isScreenOn true"
+  ],
+  "logs_to_query_regex": [
+   "isScreenOn true"
+  ],
+  "llm_template": "isScreenOn <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "isScreenOn <*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "Alarm uploadStaticsToDB totalSteps=7163Calories:153367Floor:240Distance:5112",
+   "Alarm uploadStaticsToDB totalSteps=7571Calories:192323Floor:150Distance:5404",
+   "Alarm uploadStaticsToDB totalSteps=3275Calories:79432Floor:60Distance:2299"
+  ],
+  "logs_to_query_regex": [
+   "Alarm uploadStaticsToDB totalSteps=7163Calories:153367Floor:240Distance:5112",
+   "Alarm uploadStaticsToDB totalSteps=7571Calories:192323Floor:150Distance:5404",
+   "Alarm uploadStaticsToDB totalSteps=3275Calories:79432Floor:60Distance:2299"
+  ],
+  "llm_template": "Alarm uploadStaticsToDB totalSteps=<*>",
+  "cluster_id": 67,
+  "update_success": true,
+  "template": "Alarm uploadStaticsToDB totalSteps=<*>"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "uploadStaticsToDB() onResult type = 4 obj=true",
+   "uploadStaticsToDB() onResult type = 0 obj=true"
+  ],
+  "logs_to_query_regex": [
+   "uploadStaticsToDB() onResult type = 4 obj=true",
+   "uploadStaticsToDB() onResult type = 0 obj=true"
+  ],
+  "llm_template": "uploadStaticsToDB() onResult type = <*> obj=true",
+  "cluster_id": 95,
+  "update_success": true,
+  "template": "uploadStaticsToDB() onResult type = <*> obj=<*>"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "theDayChanged 1514044800216"
+  ],
+  "logs_to_query_regex": [
+   "theDayChanged 1514044800216"
+  ],
+  "llm_template": "theDayChanged <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "theDayChanged <*>"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1513958400000,type = 40003",
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514304000000,type = 40004",
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514217600000,type = 40005"
+  ],
+  "logs_to_query_regex": [
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1513958400000,type = 40003",
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514304000000,type = 40004",
+   "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514217600000,type = 40005"
+  ],
+  "llm_template": "saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>",
+  "cluster_id": 133,
+  "update_success": true,
+  "template": "saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "getStepCounterStatus= true"
+  ],
+  "logs_to_query_regex": [
+   "getStepCounterStatus= true"
+  ],
+  "llm_template": "getStepCounterStatus= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getStepCounterStatus= <*>"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "registersensorsuccess: true"
+  ],
+  "logs_to_query_regex": [
+   "registersensorsuccess: true"
+  ],
+  "llm_template": "registersensorsuccess: <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "registersensorsuccess: <*>"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "getTodayBasicStandardSteps= 1514018661124##0##3428"
+  ],
+  "logs_to_query_regex": [
+   "getTodayBasicStandardSteps= 1514018661124##0##3428"
+  ],
+  "llm_template": "getTodayBasicStandardSteps= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getTodayBasicStandardSteps= <*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "flushTempCacheToDB by ext"
+  ],
+  "logs_to_query_regex": [
+   "flushTempCacheToDB by ext"
+  ],
+  "llm_template": "flushTempCacheToDB by ext",
+  "cluster_id": 65,
+  "update_success": true,
+  "template": "flushTempCacheToDB by <*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "initEnviroument"
+  ],
+  "logs_to_query_regex": [
+   "initEnviroument"
+  ],
+  "llm_template": "initEnviroument",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "initEnviroument"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "getStepCounterStatus"
+  ],
+  "logs_to_query_regex": [
+   "getStepCounterStatus"
+  ],
+  "llm_template": "getStepCounterStatus",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getStepCounterStatus"
+ },
+ {
+  "iter": 52,
+  "logs_to_query": [
+   "getDiffTotalSteps= 1513958400215##0"
+  ],
+  "logs_to_query_regex": [
+   "getDiffTotalSteps= 1513958400215##0"
+  ],
+  "llm_template": "getDiffTotalSteps= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getDiffTotalSteps= <*>"
+ },
+ {
+  "iter": 53,
+  "logs_to_query": [
+   "uploadStaticsToDB failed message=true"
+  ],
+  "logs_to_query_regex": [
+   "uploadStaticsToDB failed message=true"
+  ],
+  "llm_template": "uploadStaticsToDB failed message=<*>",
+  "cluster_id": 64,
+  "update_success": true,
+  "template": "uploadStaticsToDB failed message=<*>"
+ },
+ {
+  "iter": 54,
+  "logs_to_query": [
+   "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT"
+  ],
+  "logs_to_query_regex": [
+   "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT"
+  ],
+  "llm_template": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>",
+  "cluster_id": 134,
+  "update_success": true,
+  "template": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>"
+ },
+ {
+  "iter": 55,
+  "logs_to_query": [
+   "reStartStepCounter"
+  ],
+  "logs_to_query_regex": [
+   "reStartStepCounter"
+  ],
+  "llm_template": "reStartStepCounter",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "reStartStepCounter"
+ },
+ {
+  "iter": 56,
+  "logs_to_query": [
+   "getTodaySportData mStepsRecordManager=com.huawei.health.g.c@8a2a501"
+  ],
+  "logs_to_query_regex": [
+   "getTodaySportData mStepsRecordManager=com.huawei.health.g.c@8a2a501"
+  ],
+  "llm_template": "getTodaySportData mStepsRecordManager=<*>",
+  "cluster_id": 58,
+  "update_success": true,
+  "template": "getTodaySportData mStepsRecordManager=<*>"
+ },
+ {
+  "iter": 57,
+  "logs_to_query": [
+   "clear()"
+  ],
+  "logs_to_query_regex": [
+   "clear()"
+  ],
+  "llm_template": "clear()",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "clear()"
+ },
+ {
+  "iter": 58,
+  "logs_to_query": [
+   "flushTempCacheToDB by stand"
+  ],
+  "logs_to_query_regex": [
+   "flushTempCacheToDB by stand"
+  ],
+  "llm_template": "flushTempCacheToDB by <*>",
+  "cluster_id": 63,
+  "update_success": true,
+  "template": "flushTempCacheToDB by <*>"
+ },
+ {
+  "iter": 59,
+  "logs_to_query": [
+   "setDiffTotalSteps=0"
+  ],
+  "logs_to_query_regex": [
+   "setDiffTotalSteps=0"
+  ],
+  "llm_template": "setDiffTotalSteps=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setDiffTotalSteps=<*>"
+ },
+ {
+  "iter": 60,
+  "logs_to_query": [
+   "FAILED_SCREEN_OFF block report"
+  ],
+  "logs_to_query_regex": [
+   "FAILED_SCREEN_OFF block report"
+  ],
+  "llm_template": "FAILED_SCREEN_OFF block report",
+  "cluster_id": 66,
+  "update_success": true,
+  "template": "<*> block report"
+ },
+ {
+  "iter": 61,
+  "logs_to_query": [
+   "next day:steps0mLastReport7214"
+  ],
+  "logs_to_query_regex": [
+   "next day:steps0mLastReport7214"
+  ],
+  "llm_template": "next day:<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "next day:<*>"
+ },
+ {
+  "iter": 62,
+  "logs_to_query": [
+   "closeNotification..."
+  ],
+  "logs_to_query_regex": [
+   "closeNotification..."
+  ],
+  "llm_template": "closeNotification...",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "closeNotification..."
+ },
+ {
+  "iter": 63,
+  "logs_to_query": [
+   "setDeviceShutDownValue shutDownTime=0,isShutDown=false"
+  ],
+  "logs_to_query_regex": [
+   "setDeviceShutDownValue shutDownTime=0,isShutDown=false"
+  ],
+  "llm_template": "setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>"
+ },
+ {
+  "iter": 64,
+  "logs_to_query": [
+   "getFirstStartDaemonFromUI: true"
+  ],
+  "logs_to_query_regex": [
+   "getFirstStartDaemonFromUI: true"
+  ],
+  "llm_template": "getFirstStartDaemonFromUI: <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getFirstStartDaemonFromUI: <*>"
+ },
+ {
+  "iter": 65,
+  "logs_to_query": [
+   "deleteHealthNotification()"
+  ],
+  "logs_to_query_regex": [
+   "deleteHealthNotification()"
+  ],
+  "llm_template": "deleteHealthNotification()",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "deleteHealthNotification()"
+ },
+ {
+  "iter": 66,
+  "logs_to_query": [
+   "getDeviceShutDownBoolean shutDown=false"
+  ],
+  "logs_to_query_regex": [
+   "getDeviceShutDownBoolean shutDown=false"
+  ],
+  "llm_template": "getDeviceShutDownBoolean shutDown=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getDeviceShutDownBoolean shutDown=<*>"
+ },
+ {
+  "iter": 67,
+  "logs_to_query": [
+   "getDeviceShutDownTime shutDownTime=0"
+  ],
+  "logs_to_query_regex": [
+   "getDeviceShutDownTime shutDownTime=0"
+  ],
+  "llm_template": "getDeviceShutDownTime shutDownTime=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getDeviceShutDownTime shutDownTime=<*>"
+ },
+ {
+  "iter": 68,
+  "logs_to_query": [
+   "getVersion= Athene3"
+  ],
+  "logs_to_query_regex": [
+   "getVersion= Athene3"
+  ],
+  "llm_template": "getVersion= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getVersion= <*>"
+ },
+ {
+  "iter": 69,
+  "logs_to_query": [
+   "getVersion"
+  ],
+  "logs_to_query_regex": [
+   "getVersion"
+  ],
+  "llm_template": "getVersion",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getVersion"
+ },
+ {
+  "iter": 70,
+  "logs_to_query": [
+   "getServiceRestartRecord= 1514018661059"
+  ],
+  "logs_to_query_regex": [
+   "getServiceRestartRecord= 1514018661059"
+  ],
+  "llm_template": "getServiceRestartRecord= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getServiceRestartRecord= <*>"
+ },
+ {
+  "iter": 71,
+  "logs_to_query": [
+   "setServiceRestartRecord=1514100778324"
+  ],
+  "logs_to_query_regex": [
+   "setServiceRestartRecord=1514100778324"
+  ],
+  "llm_template": "setServiceRestartRecord=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setServiceRestartRecord=<*>"
+ },
+ {
+  "iter": 72,
+  "logs_to_query": [
+   "getStepsTarget= 10000"
+  ],
+  "logs_to_query_regex": [
+   "getStepsTarget= 10000"
+  ],
+  "llm_template": "getStepsTarget= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getStepsTarget= <*>"
+ },
+ {
+  "iter": 73,
+  "logs_to_query": [
+   "getStepsTarget"
+  ],
+  "logs_to_query_regex": [
+   "getStepsTarget"
+  ],
+  "llm_template": "getStepsTarget",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getStepsTarget"
+ },
+ {
+  "iter": 74,
+  "logs_to_query": [
+   "getLastSyncDBTime= -1"
+  ],
+  "logs_to_query_regex": [
+   "getLastSyncDBTime= -1"
+  ],
+  "llm_template": "getLastSyncDBTime= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getLastSyncDBTime= <*>"
+ },
+ {
+  "iter": 75,
+  "logs_to_query": [
+   "FAILED_ERROR_DATA"
+  ],
+  "logs_to_query_regex": [
+   "FAILED_ERROR_DATA"
+  ],
+  "llm_template": "FAILED_ERROR_DATA",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "FAILED_ERROR_DATA"
+ },
+ {
+  "iter": 76,
+  "logs_to_query": [
+   "getDiffTotalCalories= 1513941509360##38.0"
+  ],
+  "logs_to_query_regex": [
+   "getDiffTotalCalories= 1513941509360##38.0"
+  ],
+  "llm_template": "getDiffTotalCalories= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getDiffTotalCalories= <*>"
+ },
+ {
+  "iter": 77,
+  "logs_to_query": [
+   "getDiffTotalAltitude= 1513941509363##0.0"
+  ],
+  "logs_to_query_regex": [
+   "getDiffTotalAltitude= 1513941509363##0.0"
+  ],
+  "llm_template": "getDiffTotalAltitude= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getDiffTotalAltitude= <*>##<*>"
+ },
+ {
+  "iter": 78,
+  "logs_to_query": [
+   "getDiffTotalCalories"
+  ],
+  "logs_to_query_regex": [
+   "getDiffTotalCalories"
+  ],
+  "llm_template": "getDiffTotalCalories",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getDiffTotalCalories"
+ },
+ {
+  "iter": 79,
+  "logs_to_query": [
+   "getCfgFile enter..."
+  ],
+  "logs_to_query_regex": [
+   "getCfgFile enter..."
+  ],
+  "llm_template": "getCfgFile enter...",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getCfgFile enter..."
+ },
+ {
+  "iter": 80,
+  "logs_to_query": [
+   "registerDynamicBroadcastReceiver"
+  ],
+  "logs_to_query_regex": [
+   "registerDynamicBroadcastReceiver"
+  ],
+  "llm_template": "registerDynamicBroadcastReceiver",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "registerDynamicBroadcastReceiver"
+ },
+ {
+  "iter": 81,
+  "logs_to_query": [
+   "initStepCounter : deviceType 1"
+  ],
+  "logs_to_query_regex": [
+   "initStepCounter : deviceType 1"
+  ],
+  "llm_template": "initStepCounter : deviceType <*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "initStepCounter : deviceType <*>"
+ },
+ {
+  "iter": 82,
+  "logs_to_query": [
+   "readXmlIfSupportEX result=true"
+  ],
+  "logs_to_query_regex": [
+   "readXmlIfSupportEX result=true"
+  ],
+  "llm_template": "readXmlIfSupportEX result=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "readXmlIfSupportEX result=<*>"
+ },
+ {
+  "iter": 83,
+  "logs_to_query": [
+   "getMidWareStepCountService: isSystemApp = true"
+  ],
+  "logs_to_query_regex": [
+   "getMidWareStepCountService: isSystemApp = true"
+  ],
+  "llm_template": "getMidWareStepCountService: isSystemApp = <*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "getMidWareStepCountService: isSystemApp = <*>"
+ },
+ {
+  "iter": 84,
+  "logs_to_query": [
+   "supportStandStepCounter true"
+  ],
+  "logs_to_query_regex": [
+   "supportStandStepCounter true"
+  ],
+  "llm_template": "supportStandStepCounter true",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "supportStandStepCounter <*>"
+ },
+ {
+  "iter": 85,
+  "logs_to_query": [
+   "readXmlIfSupportEX"
+  ],
+  "logs_to_query_regex": [
+   "readXmlIfSupportEX"
+  ],
+  "llm_template": "readXmlIfSupportEX",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "readXmlIfSupportEX"
+ },
+ {
+  "iter": 86,
+  "logs_to_query": [
+   "getIntercepterDistance from Prefence success and intercepterDistanceStr= 1513941509364##0.0"
+  ],
+  "logs_to_query_regex": [
+   "getIntercepterDistance from Prefence success and intercepterDistanceStr= 1513941509364##0.0"
+  ],
+  "llm_template": "getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>"
+ },
+ {
+  "iter": 87,
+  "logs_to_query": [
+   "getStepsNotificationShowStatus= false"
+  ],
+  "logs_to_query_regex": [
+   "getStepsNotificationShowStatus= false"
+  ],
+  "llm_template": "getStepsNotificationShowStatus= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getStepsNotificationShowStatus= <*>"
+ },
+ {
+  "iter": 88,
+  "logs_to_query": [
+   "the first init mLastReportTimeStamp1514100674406",
+   "the first init mLastReportTimeStamp1514685840000",
+   "the first init mLastReportTimeStamp1514893020000"
+  ],
+  "logs_to_query_regex": [
+   "the first init mLastReportTimeStamp1514100674406",
+   "the first init mLastReportTimeStamp1514685840000",
+   "the first init mLastReportTimeStamp1514893020000"
+  ],
+  "llm_template": "the first init <*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "the first init <*>"
+ },
+ {
+  "iter": 89,
+  "logs_to_query": [
+   "screen status unknown,think screen on"
+  ],
+  "logs_to_query_regex": [
+   "screen status unknown,think screen on"
+  ],
+  "llm_template": "screen status unknown,think screen on",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "screen status unknown,think screen <*>"
+ },
+ {
+  "iter": 90,
+  "logs_to_query": [
+   "policy=/system/emui/base:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec"
+  ],
+  "logs_to_query_regex": [
+   "policy=/system/emui/base:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec"
+  ],
+  "llm_template": "policy=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "policy=<*>"
+ },
+ {
+  "iter": 91,
+  "logs_to_query": [
+   "getMidWareStepCountService: pkgName = com.huawei.systemserver, service = com.huawei.systemserver.ihealth.connectivity.HwStepCounterService"
+  ],
+  "logs_to_query_regex": [
+   "getMidWareStepCountService: pkgName = com.huawei.systemserver, service = com.huawei.systemserver.ihealth.connectivity.HwStepCounterService"
+  ],
+  "llm_template": "getMidWareStepCountService: pkgName = <*> service = <*>",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "getMidWareStepCountService: pkgName = <*>, service = <*>"
+ },
+ {
+  "iter": 92,
+  "logs_to_query": [
+   "getGoalNotificationShowStatus= true"
+  ],
+  "logs_to_query_regex": [
+   "getGoalNotificationShowStatus= true"
+  ],
+  "llm_template": "getGoalNotificationShowStatus= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getGoalNotificationShowStatus= <*>"
+ },
+ {
+  "iter": 93,
+  "logs_to_query": [
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@c83b4a6",
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@864a3d9",
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@9252368"
+  ],
+  "logs_to_query_regex": [
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@c83b4a6",
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@864a3d9",
+   "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@9252368"
+  ],
+  "llm_template": "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@<*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "startStepCounterInter mStandStepCounter = <*>"
+ },
+ {
+  "iter": 94,
+  "logs_to_query": [
+   "supportPrivateStandStepcounter=true,supportStandStepCounter=true"
+  ],
+  "logs_to_query_regex": [
+   "supportPrivateStandStepcounter=true,supportStandStepCounter=true"
+  ],
+  "llm_template": "supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>"
+ },
+ {
+  "iter": 95,
+  "logs_to_query": [
+   "initExtendStepCounter 101"
+  ],
+  "logs_to_query_regex": [
+   "initExtendStepCounter 101"
+  ],
+  "llm_template": "initExtendStepCounter <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "initExtendStepCounter <*>"
+ },
+ {
+  "iter": 96,
+  "logs_to_query": [
+   "getStringHuid() who is com.huawei.health"
+  ],
+  "logs_to_query_regex": [
+   "getStringHuid() who is com.huawei.health"
+  ],
+  "llm_template": "getStringHuid() who is <*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "getStringHuid() who is <*>"
+ },
+ {
+  "iter": 97,
+  "logs_to_query": [
+   "getWriteDBLastDataMinute= 25234951"
+  ],
+  "logs_to_query_regex": [
+   "getWriteDBLastDataMinute= 25234951"
+  ],
+  "llm_template": "getWriteDBLastDataMinute= <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getWriteDBLastDataMinute= <*>"
+ },
+ {
+  "iter": 98,
+  "logs_to_query": [
+   "setDeviceClassType=1"
+  ],
+  "logs_to_query_regex": [
+   "setDeviceClassType=1"
+  ],
+  "llm_template": "setDeviceClassType=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setDeviceClassType=<*>"
+ },
+ {
+  "iter": 99,
+  "logs_to_query": [
+   "initBinder() app = 1, packageName = com.huawei.health"
+  ],
+  "logs_to_query_regex": [
+   "initBinder() app = 1, packageName = com.huawei.health"
+  ],
+  "llm_template": "initBinder() app = <*> packageName = <*>",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "initBinder() app = <*>, packageName = <*>"
+ },
+ {
+  "iter": 100,
+  "logs_to_query": [
+   "initCacheFromFile enter..."
+  ],
+  "logs_to_query_regex": [
+   "initCacheFromFile enter..."
+  ],
+  "llm_template": "initCacheFromFile enter...",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "initCacheFromFile enter..."
+ },
+ {
+  "iter": 101,
+  "logs_to_query": [
+   "initDataManager enter..."
+  ],
+  "logs_to_query_regex": [
+   "initDataManager enter..."
+  ],
+  "llm_template": "initDataManager enter...",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "initDataManager enter..."
+ },
+ {
+  "iter": 102,
+  "logs_to_query": [
+   "getStepsNotificationShowStatus"
+  ],
+  "logs_to_query_regex": [
+   "getStepsNotificationShowStatus"
+  ],
+  "llm_template": "getStepsNotificationShowStatus",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getStepsNotificationShowStatus"
+ },
+ {
+  "iter": 103,
+  "logs_to_query": [
+   "checkSportDataNum setp and calories is too less"
+  ],
+  "logs_to_query_regex": [
+   "checkSportDataNum setp and calories is too less"
+  ],
+  "llm_template": "checkSportDataNum setp and calories is too less",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "checkSportDataNum setp and calories is too less"
+ },
+ {
+  "iter": 104,
+  "logs_to_query": [
+   "SystemClock.elapsedRealtime(): 29950"
+  ],
+  "logs_to_query_regex": [
+   "SystemClock.elapsedRealtime(): 29950"
+  ],
+  "llm_template": "SystemClock.elapsedRealtime(): <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "SystemClock.elapsedRealtime(): <*>"
+ },
+ {
+  "iter": 105,
+  "logs_to_query": [
+   "getGoalNotificationShowStatus"
+  ],
+  "logs_to_query_regex": [
+   "getGoalNotificationShowStatus"
+  ],
+  "llm_template": "getGoalNotificationShowStatus",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getGoalNotificationShowStatus"
+ },
+ {
+  "iter": 106,
+  "logs_to_query": [
+   "startStepCounter enter..."
+  ],
+  "logs_to_query_regex": [
+   "startStepCounter enter..."
+  ],
+  "llm_template": "startStepCounter enter...",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "startStepCounter enter..."
+ },
+ {
+  "iter": 107,
+  "logs_to_query": [
+   "setGoalNotificationShowStatus=true"
+  ],
+  "logs_to_query_regex": [
+   "setGoalNotificationShowStatus=true"
+  ],
+  "llm_template": "setGoalNotificationShowStatus=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setGoalNotificationShowStatus=<*>"
+ },
+ {
+  "iter": 108,
+  "logs_to_query": [
+   "setBasicStandardSteps basicStandardStep=3786 restartSteps=0",
+   "setBasicStandardSteps basicStandardStep=12910 restartSteps=0",
+   "setBasicStandardSteps basicStandardStep=26302 restartSteps=0"
+  ],
+  "logs_to_query_regex": [
+   "setBasicStandardSteps basicStandardStep=3786 restartSteps=0",
+   "setBasicStandardSteps basicStandardStep=12910 restartSteps=0",
+   "setBasicStandardSteps basicStandardStep=26302 restartSteps=0"
+  ],
+  "llm_template": "setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>"
+ },
+ {
+  "iter": 109,
+  "logs_to_query": [
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514890379525",
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514891028590",
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514890382546"
+  ],
+  "logs_to_query_regex": [
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514890379525",
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514891028590",
+   "readHiHealthData() checkAppType 0 appID = 1 id = 1 time = 1514890382546"
+  ],
+  "llm_template": "readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>",
+  "cluster_id": 141,
+  "update_success": true,
+  "template": "readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>"
+ },
+ {
+  "iter": 110,
+  "logs_to_query": [
+   "compareMidWareCacheAndLocalCache enter..."
+  ],
+  "logs_to_query_regex": [
+   "compareMidWareCacheAndLocalCache enter..."
+  ],
+  "llm_template": "compareMidWareCacheAndLocalCache enter...",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "compareMidWareCacheAndLocalCache enter..."
+ },
+ {
+  "iter": 111,
+  "logs_to_query": [
+   "getWriteDBLastDataMinute"
+  ],
+  "logs_to_query_regex": [
+   "getWriteDBLastDataMinute"
+  ],
+  "llm_template": "getWriteDBLastDataMinute",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getWriteDBLastDataMinute"
+ },
+ {
+  "iter": 112,
+  "logs_to_query": [
+   "reload : 3786 restar 0",
+   "reload : 9010 restar 0",
+   "reload : 0 restar 5017"
+  ],
+  "logs_to_query_regex": [
+   "reload : 3786 restar 0",
+   "reload : 9010 restar 0",
+   "reload : 0 restar 5017"
+  ],
+  "llm_template": "reload : <*> restar <*>",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "reload : <*> restar <*>"
+ },
+ {
+  "iter": 113,
+  "logs_to_query": [
+   "getMidWareCache mRemote=com.huawei.health.c.c@d990a94"
+  ],
+  "logs_to_query_regex": [
+   "getMidWareCache mRemote=com.huawei.health.c.c@d990a94"
+  ],
+  "llm_template": "getMidWareCache mRemote=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getMidWareCache mRemote=<*>"
+ },
+ {
+  "iter": 114,
+  "logs_to_query": [
+   "context=com.huawei.health.manager.DaemonService@c6229ff"
+  ],
+  "logs_to_query_regex": [
+   "context=com.huawei.health.manager.DaemonService@c6229ff"
+  ],
+  "llm_template": "context=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "context=<*>"
+ },
+ {
+  "iter": 115,
+  "logs_to_query": [
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890379518",
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890382541",
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890380902"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890379518",
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890382541",
+   "aggregateHiHealthData() checkAppType 0 appID = 1 id = 1 time= 1514890380902"
+  ],
+  "llm_template": "aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>",
+  "cluster_id": 139,
+  "update_success": true,
+  "template": "aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>"
+ },
+ {
+  "iter": 116,
+  "logs_to_query": [
+   "getMidWareCache result=true"
+  ],
+  "logs_to_query_regex": [
+   "getMidWareCache result=true"
+  ],
+  "llm_template": "getMidWareCache result=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "getMidWareCache result=<*>"
+ },
+ {
+  "iter": 117,
+  "logs_to_query": [
+   "getARDebugConfig"
+  ],
+  "logs_to_query_regex": [
+   "getARDebugConfig"
+  ],
+  "llm_template": "getARDebugConfig",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "getARDebugConfig"
+ },
+ {
+  "iter": 118,
+  "logs_to_query": [
+   "setGoalNotifiShownRecord 1514044800237 false",
+   "setGoalNotifiShownRecord 1514563200178 false",
+   "setGoalNotifiShownRecord 1514217600241 false"
+  ],
+  "logs_to_query_regex": [
+   "setGoalNotifiShownRecord 1514044800237 false",
+   "setGoalNotifiShownRecord 1514563200178 false",
+   "setGoalNotifiShownRecord 1514217600241 false"
+  ],
+  "llm_template": "setGoalNotifiShownRecord <*> false",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "setGoalNotifiShownRecord <*>"
+ },
+ {
+  "iter": 119,
+  "logs_to_query": [
+   "getTodayNoSyncTotalValue datas is null or empty"
+  ],
+  "logs_to_query_regex": [
+   "getTodayNoSyncTotalValue datas is null or empty"
+  ],
+  "llm_template": "getTodayNoSyncTotalValue datas is null or empty",
+  "cluster_id": 128,
+  "update_success": true,
+  "template": "<*> datas is null or empty"
+ },
+ {
+  "iter": 120,
+  "logs_to_query": [
+   "startStepCounterInter stand"
+  ],
+  "logs_to_query_regex": [
+   "startStepCounterInter stand"
+  ],
+  "llm_template": "startStepCounterInter stand",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "startStepCounterInter stand"
+ },
+ {
+  "iter": 121,
+  "logs_to_query": [
+   "setActionRestartSensorAlarm=1514131087050"
+  ],
+  "logs_to_query_regex": [
+   "setActionRestartSensorAlarm=1514131087050"
+  ],
+  "llm_template": "setActionRestartSensorAlarm=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setActionRestartSensorAlarm=<*>"
+ },
+ {
+  "iter": 122,
+  "logs_to_query": [
+   "onBind intent = Intent { act=com.huawei.hihealthservice.HiHealthService pkg=com.huawei.health }"
+  ],
+  "logs_to_query_regex": [
+   "onBind intent = Intent { act=com.huawei.hihealthservice.HiHealthService pkg=com.huawei.health }"
+  ],
+  "llm_template": "onBind intent = Intent <*>",
+  "cluster_id": 135,
+  "update_success": true,
+  "template": "onBind intent = Intent { act=<*> pkg=<*> }"
+ },
+ {
+  "iter": 123,
+  "logs_to_query": [
+   "registerLogCallback com.huawei.health.c.c@d990a94"
+  ],
+  "logs_to_query_regex": [
+   "registerLogCallback com.huawei.health.c.c@d990a94"
+  ],
+  "llm_template": "registerLogCallback <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "registerLogCallback <*>"
+ },
+ {
+  "iter": 124,
+  "logs_to_query": [
+   "support extand step counter!,return true"
+  ],
+  "logs_to_query_regex": [
+   "support extand step counter!,return true"
+  ],
+  "llm_template": "support <*> step counter!,return true",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "support extand step counter!,return <*>"
+ },
+ {
+  "iter": 125,
+  "logs_to_query": [
+   "setStepCounterStatus=true"
+  ],
+  "logs_to_query_regex": [
+   "setStepCounterStatus=true"
+  ],
+  "llm_template": "setStepCounterStatus=<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "setStepCounterStatus=<*>"
+ },
+ {
+  "iter": 126,
+  "logs_to_query": [
+   "onStartCommand Intent { pkg=com.huawei.health cmp=com.huawei.health/.manager.DaemonService (has extras) }"
+  ],
+  "logs_to_query_regex": [
+   "onStartCommand Intent { pkg=com.huawei.health cmp=com.huawei.health/.manager.DaemonService (has extras) }"
+  ],
+  "llm_template": "onStartCommand Intent <*>",
+  "cluster_id": 135,
+  "update_success": true,
+  "template": "onStartCommand Intent { pkg=<*> cmp=<*> (has extras) }"
+ },
+ {
+  "iter": 127,
+  "logs_to_query": [
+   "readHiHealthData() end time = 1514890379525, totalTime = 31",
+   "readHiHealthData() end time = 1514890383903, totalTime = 18",
+   "readHiHealthData() end time = 1514890502942, totalTime = 11"
+  ],
+  "logs_to_query_regex": [
+   "readHiHealthData() end time = 1514890379525, totalTime = 31",
+   "readHiHealthData() end time = 1514890383903, totalTime = 18",
+   "readHiHealthData() end time = 1514890502942, totalTime = 11"
+  ],
+  "llm_template": "readHiHealthData() end time = <*> totalTime = <*>",
+  "cluster_id": 135,
+  "update_success": true,
+  "template": "readHiHealthData() end time = <*> totalTime = <*>"
+ },
+ {
+  "iter": 128,
+  "logs_to_query": [
+   "userInfo changed detail"
+  ],
+  "logs_to_query_regex": [
+   "userInfo changed detail"
+  ],
+  "llm_template": "userInfo changed detail",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "userInfo changed detail"
+ },
+ {
+  "iter": 129,
+  "logs_to_query": [
+   "rebuild notification"
+  ],
+  "logs_to_query_regex": [
+   "rebuild notification"
+  ],
+  "llm_template": "rebuild notification",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "rebuild notification"
+ },
+ {
+  "iter": 130,
+  "logs_to_query": [
+   "subscribeHiHealthData() checkAppType 0 appID = 1",
+   "aggregateHiHealthDataEx() checkAppType 0 appID = 1"
+  ],
+  "logs_to_query_regex": [
+   "subscribeHiHealthData() checkAppType 0 appID = 1",
+   "aggregateHiHealthDataEx() checkAppType 0 appID = 1"
+  ],
+  "llm_template": "subscribeHiHealthData() checkAppType <*> appID = <*>",
+  "cluster_id": 128,
+  "update_success": true,
+  "template": "subscribeHiHealthData() checkAppType <*> appID = <*>"
+ },
+ {
+  "iter": 131,
+  "logs_to_query": [
+   "onCreate()"
+  ],
+  "logs_to_query_regex": [
+   "onCreate()"
+  ],
+  "llm_template": "onCreate()",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "onCreate()"
+ },
+ {
+  "iter": 132,
+  "logs_to_query": [
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1514822400000, endTime=1514908799999, type=[2], count = 0, sortOrder=0, readType=0, alignType=0}"
+  ],
+  "logs_to_query_regex": [
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1514822400000, endTime=1514908799999, type=[2], count = 0, sortOrder=0, readType=0, alignType=0}"
+  ],
+  "llm_template": "readHiHealthData() readOption = <*>",
+  "cluster_id": 141,
+  "update_success": true,
+  "template": "readHiHealthData() readOption = HiDataReadOption{startTime=<*>, endTime=<*>, type=<*>, count = <*>, sortOrder=<*>, readType=<*>, alignType=<*>}"
+ },
+ {
+  "iter": 133,
+  "logs_to_query": [
+   "insert conflict event timeBegin 25247769 timeEnd 25247776"
+  ],
+  "logs_to_query_regex": [
+   "insert conflict event timeBegin 25247769 timeEnd 25247776"
+  ],
+  "llm_template": "insert conflict event timeBegin <*> timeEnd <*>",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "insert conflict event timeBegin <*> timeEnd <*>"
+ },
+ {
+  "iter": 134,
+  "logs_to_query": [
+   "aggregateHiHealthDataEx() checkAppType 0 appID = 1"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthDataEx() checkAppType 0 appID = 1"
+  ],
+  "llm_template": "aggregateHiHealthDataEx() checkAppType <*> appID = <*>",
+  "cluster_id": 128,
+  "update_success": true,
+  "template": "aggregateHiHealthDataEx() checkAppType <*> appID = <*>"
+ },
+ {
+  "iter": 135,
+  "logs_to_query": [
+   "aggregateHiHealthData() time = 1514890379518, totalTime = 37",
+   "aggregateHiHealthData() time = 1514890501471, totalTime = 21",
+   "aggregateHiHealthData() time = 1514890382505, totalTime = 34"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData() time = 1514890379518, totalTime = 37",
+   "aggregateHiHealthData() time = 1514890501471, totalTime = 21",
+   "aggregateHiHealthData() time = 1514890382505, totalTime = 34"
+  ],
+  "llm_template": "aggregateHiHealthData() time = <*> totalTime = <*>",
+  "cluster_id": 131,
+  "update_success": true,
+  "template": "aggregateHiHealthData() time = <*> totalTime = <*>"
+ },
+ {
+  "iter": 136,
+  "logs_to_query": [
+   "checkLocalDataValue false"
+  ],
+  "logs_to_query_regex": [
+   "checkLocalDataValue false"
+  ],
+  "llm_template": "checkLocalDataValue <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "checkLocalDataValue <*>"
+ },
+ {
+  "iter": 137,
+  "logs_to_query": [
+   "target init: target10000"
+  ],
+  "logs_to_query_regex": [
+   "target init: target10000"
+  ],
+  "llm_template": "target init: <*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "target init: <*>"
+ },
+ {
+  "iter": 138,
+  "logs_to_query": [
+   "onStartCommand Intent { cmp=com.huawei.health/.manager.DaemonService }"
+  ],
+  "logs_to_query_regex": [
+   "onStartCommand Intent { cmp=com.huawei.health/.manager.DaemonService }"
+  ],
+  "llm_template": "onStartCommand Intent <*>",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "onStartCommand Intent { cmp=<*> }"
+ },
+ {
+  "iter": 139,
+  "logs_to_query": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890379659, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890380901, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890382431, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890379659, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890380901, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=0, endTime=1514890382431, type=[42003, 42005, 42004], alignType=0, aggregateType=1, groupUnitType=7}"
+  ],
+  "llm_template": "aggregateHiHealthData aggregateOption is <*>",
+  "cluster_id": 139,
+  "update_success": true,
+  "template": "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}"
+ },
+ {
+  "iter": 140,
+  "logs_to_query": [
+   "moveOldData()"
+  ],
+  "logs_to_query_regex": [
+   "moveOldData()"
+  ],
+  "llm_template": "moveOldData()",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "moveOldData()"
+ },
+ {
+  "iter": 141,
+  "logs_to_query": [
+   "MyServiceConn connect 1.0.0.0"
+  ],
+  "logs_to_query_regex": [
+   "MyServiceConn connect 1.0.0.0"
+  ],
+  "llm_template": "MyServiceConn connect <*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "MyServiceConn connect <*>"
+ },
+ {
+  "iter": 142,
+  "logs_to_query": [
+   "start compare with midware counter"
+  ],
+  "logs_to_query_regex": [
+   "start compare with midware counter"
+  ],
+  "llm_template": "start compare with midware counter",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "start compare with midware counter"
+ },
+ {
+  "iter": 143,
+  "logs_to_query": [
+   "startNotification..."
+  ],
+  "logs_to_query_regex": [
+   "startNotification..."
+  ],
+  "llm_template": "startNotification...",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "startNotification..."
+ },
+ {
+  "iter": 144,
+  "logs_to_query": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=1512230400000, endTime=1514908799999, type=[2004, 2001], alignType=0, aggregateType=1, groupUnitType=0}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-28800000, endTime=1514908799999, type=[2004, 2001], alignType=0, aggregateType=3, groupUnitType=3}"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=1512230400000, endTime=1514908799999, type=[2004, 2001], alignType=0, aggregateType=1, groupUnitType=0}",
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-28800000, endTime=1514908799999, type=[2004, 2001], alignType=0, aggregateType=3, groupUnitType=3}"
+  ],
+  "llm_template": "aggregateHiHealthData aggregateOption is <*>",
+  "cluster_id": 138,
+  "update_success": true,
+  "template": "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}"
+ },
+ {
+  "iter": 145,
+  "logs_to_query": [
+   "initDiffAltitude from File mAltitudeDiff=0.0"
+  ],
+  "logs_to_query_regex": [
+   "initDiffAltitude from File mAltitudeDiff=0.0"
+  ],
+  "llm_template": "initDiffAltitude from File mAltitudeDiff=<*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "initDiffAltitude from File mAltitudeDiff=<*>"
+ },
+ {
+  "iter": 146,
+  "logs_to_query": [
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171224 oldDay is 20171223",
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171231 oldDay is 20171230",
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20180103 oldDay is 20180102"
+  ],
+  "logs_to_query_regex": [
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171224 oldDay is 20171223",
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171231 oldDay is 20171230",
+   "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20180103 oldDay is 20180102"
+  ],
+  "llm_template": "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>",
+  "cluster_id": 145,
+  "update_success": true,
+  "template": "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>"
+ },
+ {
+  "iter": 147,
+  "logs_to_query": [
+   "registerLogCallback com.huawei.health.c.c@d990a94 cb:com.huawei.health.b.a.g@2415283"
+  ],
+  "logs_to_query_regex": [
+   "registerLogCallback com.huawei.health.c.c@d990a94 cb:com.huawei.health.b.a.g@2415283"
+  ],
+  "llm_template": "registerLogCallback <*> cb:<*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "registerLogCallback <*>"
+ },
+ {
+  "iter": 148,
+  "logs_to_query": [
+   "initTrackDistancefromFile from File mTrackDistance=0.0"
+  ],
+  "logs_to_query_regex": [
+   "initTrackDistancefromFile from File mTrackDistance=0.0"
+  ],
+  "llm_template": "initTrackDistancefromFile from File mTrackDistance=<*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "initTrackDistancefromFile from File mTrackDistance=<*>"
+ },
+ {
+  "iter": 149,
+  "logs_to_query": [
+   "MyGetDetailDataCallback onResult bundle == null"
+  ],
+  "logs_to_query_regex": [
+   "MyGetDetailDataCallback onResult bundle == null"
+  ],
+  "llm_template": "MyGetDetailDataCallback onResult bundle == null",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "MyGetDetailDataCallback onResult bundle == <*>"
+ },
+ {
+  "iter": 150,
+  "logs_to_query": [
+   "createHealthNotification()"
+  ],
+  "logs_to_query_regex": [
+   "createHealthNotification()"
+  ],
+  "llm_template": "createHealthNotification()",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "createHealthNotification()"
+ },
+ {
+  "iter": 151,
+  "logs_to_query": [
+   "getUserPreference key = custom.UserPreference_HeartZone_Config",
+   "getUserPreference key = custom.onboarding_concern_status"
+  ],
+  "logs_to_query_regex": [
+   "getUserPreference key = custom.UserPreference_HeartZone_Config",
+   "getUserPreference key = custom.onboarding_concern_status"
+  ],
+  "llm_template": "getUserPreference key = custom.<*>",
+  "cluster_id": 87,
+  "update_success": true,
+  "template": "getUserPreference key = <*>"
+ },
+ {
+  "iter": 152,
+  "logs_to_query": [
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:52:59, timeZone=0}",
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:00, timeZone=0}",
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:02, timeZone=0}"
+  ],
+  "logs_to_query_regex": [
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:52:59, timeZone=0}",
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:00, timeZone=0}",
+   "fetchDataSourceByType type = 2,timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:02, timeZone=0}"
+  ],
+  "llm_template": "fetchDataSourceByType type = <*>,timeInterval = <*>",
+  "cluster_id": 138,
+  "update_success": true,
+  "template": "fetchDataSourceByType type = <*>,timeInterval = HiTimeInterval{startTime=<*>, endTime=<*>, timeZone=<*>}"
+ },
+ {
+  "iter": 153,
+  "logs_to_query": [
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:52:59, timeZone=0}",
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:02, timeZone=0}",
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:55:01, timeZone=0}"
+  ],
+  "logs_to_query_regex": [
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:52:59, timeZone=0}",
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:53:02, timeZone=0}",
+   "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=2018-01-02 18:52:59, endTime=2018-01-02 18:55:01, timeZone=0}"
+  ],
+  "llm_template": "getHealthClientListByTime() dataClientIDs is null timeInterval = <*>",
+  "cluster_id": 139,
+  "update_success": true,
+  "template": "getHealthClientListByTime() dataClientIDs is null timeInterval = HiTimeInterval{startTime=<*>, endTime=<*>, timeZone=<*>}"
+ },
+ {
+  "iter": 154,
+  "logs_to_query": [
+   "upDateHealthNotification()|214|7.14|10000"
+  ],
+  "logs_to_query_regex": [
+   "upDateHealthNotification()|214|7.14|10000"
+  ],
+  "llm_template": "upDateHealthNotification()|<*>|<*>|<*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "upDateHealthNotification()|<*>|<*>|<*>"
+ },
+ {
+  "iter": 155,
+  "logs_to_query": [
+   "setGoalNotifiShownRecord 1514112824312 true",
+   "setGoalNotifiShownRecord 1514206951578 true",
+   "setGoalNotifiShownRecord 1514715692093 true"
+  ],
+  "logs_to_query_regex": [
+   "setGoalNotifiShownRecord 1514112824312 true",
+   "setGoalNotifiShownRecord 1514206951578 true",
+   "setGoalNotifiShownRecord 1514715692093 true"
+  ],
+  "llm_template": "setGoalNotifiShownRecord <*> true",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "setGoalNotifiShownRecord <*>"
+ },
+ {
+  "iter": 156,
+  "logs_to_query": [
+   "initSyncModel current SyncModel is 2"
+  ],
+  "logs_to_query_regex": [
+   "initSyncModel current SyncModel is 2"
+  ],
+  "llm_template": "initSyncModel current SyncModel is <*>",
+  "cluster_id": 92,
+  "update_success": true,
+  "template": "initSyncModel current SyncModel is <*>"
+ },
+ {
+  "iter": 157,
+  "logs_to_query": [
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298379500, endTime=1514890379500, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}",
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298501426, endTime=1514890501426, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}",
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298382433, endTime=1514890382433, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}"
+  ],
+  "logs_to_query_regex": [
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298379500, endTime=1514890379500, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}",
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298501426, endTime=1514890501426, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}",
+   "readHiHealthData() readOption = HiDataReadOption{startTime=1512298382433, endTime=1514890382433, type=[44105, 44004], count = 7, sortOrder=1, readType=0, alignType=0}"
+  ],
+  "llm_template": "readHiHealthData() readOption = <*>",
+  "cluster_id": 142,
+  "update_success": true,
+  "template": "readHiHealthData() readOption = HiDataReadOption{startTime=<*>, endTime=<*>, type=<*>, count = <*>, sortOrder=<*>, readType=<*>, alignType=<*>}"
+ },
+ {
+  "iter": 158,
+  "logs_to_query": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-28800000, endTime=1514908799999, type=[44102, 44103, 44101, 44104, 44107, 44203, 44208, 44106, 44105, 44001, 44002, 44003, 44005], alignType=0, aggregateType=1, groupUnitType=3}"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-28800000, endTime=1514908799999, type=[44102, 44103, 44101, 44104, 44107, 44203, 44208, 44106, 44105, 44001, 44002, 44003, 44005], alignType=0, aggregateType=1, groupUnitType=3}"
+  ],
+  "llm_template": "aggregateHiHealthData aggregateOption is <*>",
+  "cluster_id": 147,
+  "update_success": true,
+  "template": "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}"
+ },
+ {
+  "iter": 159,
+  "logs_to_query": [
+   "initDiffCaloriesfromFile mCaloriesDiff=38.0"
+  ],
+  "logs_to_query_regex": [
+   "initDiffCaloriesfromFile mCaloriesDiff=38.0"
+  ],
+  "llm_template": "initDiffCaloriesfromFile mCaloriesDiff=<*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "initDiffCaloriesfromFile mCaloriesDiff=<*>"
+ },
+ {
+  "iter": 160,
+  "logs_to_query": [
+   "fetchPhoneDataClient"
+  ],
+  "logs_to_query_regex": [
+   "fetchPhoneDataClient"
+  ],
+  "llm_template": "fetchPhoneDataClient",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "fetchPhoneDataClient"
+ },
+ {
+  "iter": 161,
+  "logs_to_query": [
+   "switchTrackMonitor false"
+  ],
+  "logs_to_query_regex": [
+   "switchTrackMonitor false"
+  ],
+  "llm_template": "switchTrackMonitor <*>",
+  "cluster_id": 59,
+  "update_success": true,
+  "template": "switchTrackMonitor <*>"
+ },
+ {
+  "iter": 162,
+  "logs_to_query": [
+   "setFirstStartDaemonFromUI success: true"
+  ],
+  "logs_to_query_regex": [
+   "setFirstStartDaemonFromUI success: true"
+  ],
+  "llm_template": "setFirstStartDaemonFromUI success: <*>",
+  "cluster_id": 70,
+  "update_success": true,
+  "template": "setFirstStartDaemonFromUI success: <*>"
+ },
+ {
+  "iter": 163,
+  "logs_to_query": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=1512298379505, endTime=1514890379505, type=[2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], alignType=0, aggregateType=1, groupUnitType=0}"
+  ],
+  "logs_to_query_regex": [
+   "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=1512298379505, endTime=1514890379505, type=[2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], alignType=0, aggregateType=1, groupUnitType=0}"
+  ],
+  "llm_template": "aggregateHiHealthData aggregateOption is <*>",
+  "cluster_id": 146,
+  "update_success": true,
+  "template": "aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}"
+ }
+]

@@ -1,0 +1,1175 @@
+Start to parse logs
+[PARAM]: pad_query: False
+[PARAM]: add_skip_sim: False
+[PARAM]: cluster_method: TopKToken
+[PARAM]: cluster_topk: 3
+[PARAM]: sample_method: lcu_sampling
+[PARAM]: lcu_sample_size: 3
+[PARAM]: lcu_lamb: 0.6
+Save dir: ./saved_results/LUNAR-single
+Input dir: ././datasets/HDFS
+Output dir: ./saved_results/LUNAR-single/HDFS
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+
+======================== Prompt ========================
+VarExam
+# Basic Requirements:
+- I will provide multiple log messages, each delimited by backticks.
+- You must identify and extract all dynamic variables in each log with {placeholder} and output static log templates.
+- Identify the semantics of variables and compare the differences between logs to identify potential dynamic variables if they belong to the same template.
+- Preserve any dynamic variables already marked by `<*>` or `{placeholder}`.
+- Pay attention to the slightly different strings among logs, which have high possibility to be dynamic variable.
+- Do not convert non-variables, especially when only one log is presented in the group.
+# Advices on variables:
+- Common variables: numbers, IP addresses, URLs, file paths, directories, hex values, usernames, etc.
+- Full directory with filename, complex url with server address or domain should be recognize as one variable.
+# Advices on non-variables:
+- Error messages/types, java exceptions, detailed commands or interrupted messages are NOT dynamic variables as they contain important information.
+- Specific actions or status words are NOT dynamic variables.
+# Variable Examples: 
+- `/var/www/html/xxx` -> `{directory}`
+- `/var/lib/zookeeper/log.000000001` -> `{file}`
+- `blk_-1234567832142354978` -> `{blk_id}`
+- `com.huawei.health.manager.Service@32a6bf8` -> `{api}`
+- `2017-07-02 15:46:40.536` -> `{time}`
+- `192.168.0.1:8008` -> `{ip_or_url}`
+# Output Constraints: 
+- For each log line, output corresponding log template starting with LogTemplate[idx], no other line break. 
+- Each input log's template is delimited by backticks. 
+
+======================== Prompt ========================
+Parsing file: ././datasets/HDFS/HDFS_full.log_structured.csv
+Clustering load data
+Clustering add regex before preprocess
+Clustering by log length: 17
+Clustering by log length: [5, 695097, 1409107, 2136879, 2079543, 1706514, 1403103, 10653, 1719816, 5554, 13, 65, 5, 1328, 16, 37, 5]
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 5/5/5 Logs. Last cluster logs: 5
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 695097/120036/575061 Logs. Last cluster logs: 575061
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 1409107/123/1402047 Logs. Last cluster logs: 123
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 2136879/10/1706679 Logs. Last cluster logs: 10
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 2079543/104/1723232 Logs. Last cluster logs: 104
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 1706514/1706514/1706514 Logs. Last cluster logs: 1706514
+--- Finished 2nd Level Clustering by top-3 tokens: 3 clusters, Total/Min/Max: 1403103/92/1396174 Logs. Last cluster logs: 92
+--- Finished 2nd Level Clustering by top-3 tokens: 4 clusters, Total/Min/Max: 10653/165/7097 Logs. Last cluster logs: 3226
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 1719816/75/1719741 Logs. Last cluster logs: 75
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 5554/9/5545 Logs. Last cluster logs: 9
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 13/13/13 Logs. Last cluster logs: 13
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 65/65/65 Logs. Last cluster logs: 65
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 5/5/5 Logs. Last cluster logs: 5
+--- Finished 2nd Level Clustering by top-3 tokens: 2 clusters, Total/Min/Max: 1328/40/1288 Logs. Last cluster logs: 40
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 16/16/16 Logs. Last cluster logs: 16
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 37/37/37 Logs. Last cluster logs: 37
+--- Finished 2nd Level Clustering by top-3 tokens: 1 clusters, Total/Min/Max: 5/5/5 Logs. Last cluster logs: 5
+Clustering (min_cluster_size=100) by length and 1st 3 tokens: 33 clusters
+Clustering results: [5, 120036, 575061, 6937, 1402047, 123, 1706679, 428726, 1464, 10, 1723232, 356207, 104, 1706514, 6837, 1396174, 92, 7097, 165, 165, 3226, 1719741, 75, 5545, 9, 13, 65, 5, 1288, 40, 16, 37, 5]
+Iteration 0
+Sample 3 from current logs bucket: ID: 10, Len: 7, Bucket Size: 1723232, Total Buckets: 33
+Sampling from 575060 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `Receiving block blk_-1608999687919862906 src: <*> dest: <*>`, MaxSim Log: `Receiving block blk_7503483334202473044 src: <*> dest: <*>`.
+	============  Query  ====================
+	Log[1]: `Receiving block blk_-1608999687919862906 src: <*> dest: <*>`
+	Log[2]: `Receiving block blk_5907585157003432006 src: <*> dest: <*>`
+	Log[3]: `Receiving block blk_-1678689221288052077 src: <*> dest: <*>`
+	============ Response ====================
+LogTemplate[1]: `Receiving block {blk_id} src: <*> dest: <*>`
+LogTemplate[2]: `Receiving block {blk_id} src: <*> dest: <*>`
+LogTemplate[3]: `Receiving block {blk_id} src: <*> dest: <*>`
+	============ PostProcess ====================
+	Post Template: `Receiving block <*> src: <*> dest: <*>`
+	Post Template: `Receiving block <*> src: <*> dest: <*>`
+	Post Template: `Receiving block <*> src: <*> dest: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Receiving block <*> src: <*> dest: <*>
+[UpdateBucket] Logs: This iter found: 1723232, total: 1723232/11167740, remain: 9444508. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 2079543 -> 356311, remain buckets: 32
+Update Success: Time for one update logs: 31.76869010925293, template `Receiving block <*> src: <*> dest: <*>`
+========================================================================================
+
+
+Iteration 1
+Sample 3 from current logs bucket: ID: 21, Len: 11, Bucket Size: 1719741, Total Buckets: 33
+Sampling from 568856 logs, Sim Level: 2, MaxSim to anchor: 0.8333. Anchor: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-1608999687919862906 size 91178`, MaxSim Log: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-5820341108159367267 size 91178`.
+	============  Query  ====================
+	Log[1]: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-1608999687919862906 size 91178`
+	Log[2]: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-6822673405702604079 size 67108864`
+	Log[3]: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-5648472981224770449 size 67108864`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to {blk_id} size <*>`
+	============ PostProcess ====================
+	Post Template: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>`
+	Post Template: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>`
+	Post Template: `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>
+[UpdateBucket] Logs: This iter found: 1719741, total: 3442973/11167740, remain: 7724767. 
+[UpdateBucket] Buckets: Checked 2 ([21, 22]), Parent Bucket size: 1719816 -> 75, remain buckets: 31
+Update Success: Time for one update logs: 35.263570070266724, template `BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>`
+========================================================================================
+
+
+Iteration 2
+Sample 3 from current logs bucket: ID: 6, Len: 6, Bucket Size: 1706679, Total Buckets: 33
+Sampling from 1706601 logs, Sim Level: 2, MaxSim to anchor: 0.7143. Anchor: `PacketResponder 1 for block blk_-1608999687919862906 terminating`, MaxSim Log: `PacketResponder 2 for block blk_-1608999687919862906 terminating`.
+	============  Query  ====================
+	Log[1]: `PacketResponder 1 for block blk_-1608999687919862906 terminating`
+	Log[2]: `PacketResponder 1 for block blk_-6056622916670525559 terminating`
+	Log[3]: `PacketResponder 0 for block blk_-3547889882361354405 terminating`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder <*> for block {blk_id} terminating`
+LogTemplate[2]: `PacketResponder <*> for block {blk_id} terminating`
+LogTemplate[3]: `PacketResponder <*> for block {blk_id} terminating`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> for block <*> terminating`
+	Post Template: `PacketResponder <*> for block <*> terminating`
+	Post Template: `PacketResponder <*> for block <*> terminating`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> for block <*> terminating
+[UpdateBucket] Logs: This iter found: 1706679, total: 5149652/11167740, remain: 6018088. 
+[UpdateBucket] Buckets: Checked 4 ([6, 7, 8, 9]), Parent Bucket size: 2136879 -> 430200, remain buckets: 30
+Update Success: Time for one update logs: 29.220798015594482, template `PacketResponder <*> for block <*> terminating`
+========================================================================================
+
+
+Iteration 3
+Sample 3 from current logs bucket: ID: 13, Len: 8, Bucket Size: 1706514, Total Buckets: 33
+Sampling from 568853 logs, Sim Level: 2, MaxSim to anchor: 0.7778. Anchor: `Received block blk_-1608999687919862906 of size 91178 from <*>`, MaxSim Log: `Received block blk_-5820341108159367267 of size 91178 from <*>`.
+	============  Query  ====================
+	Log[1]: `Received block blk_-1608999687919862906 of size 91178 from <*>`
+	Log[2]: `Received block blk_-8005182901348606262 of size 67108864 from <*>`
+	Log[3]: `Received block blk_1168209160973120039 of size 3553408 from <*>`
+	============ Response ====================
+LogTemplate[1]: `Received block {blk_id} of size {size} from <*>`
+LogTemplate[2]: `Received block {blk_id} of size {size} from <*>`
+LogTemplate[3]: `Received block {blk_id} of size {size} from <*>`
+	============ PostProcess ====================
+	Post Template: `Received block <*> of size <*> from <*>`
+	Post Template: `Received block <*> of size <*> from <*>`
+	Post Template: `Received block <*> of size <*> from <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Received block <*> of size <*> from <*>
+[UpdateBucket] Logs: This iter found: 1706514, total: 6856166/11167740, remain: 4311574. 
+[UpdateBucket] Buckets: Checked 1 ([13]), Parent Bucket size: 1706514 -> 0, remain buckets: 29
+Update Success: Time for one update logs: 30.772057056427002, template `Received block <*> of size <*> from <*>`
+========================================================================================
+
+
+Iteration 4
+Sample 3 from current logs bucket: ID: 4, Len: 5, Bucket Size: 1402047, Total Buckets: 33
+Sampling from 1341842 logs, Sim Level: 2, MaxSim to anchor: 0.6667. Anchor: `Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir39/blk_-8213344449220111733`, MaxSim Log: `Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir17/blk_-8213344449220111733`.
+	============  Query  ====================
+	Log[1]: `Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir39/blk_-8213344449220111733`
+	Log[2]: `Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir41/blk_-8213344449220111733`
+	Log[3]: `Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir17/blk_-8213344449220111733`
+	============ Response ====================
+LogTemplate[1]: `Deleting block {blk_id} file {directory}/{file}`
+LogTemplate[2]: `Deleting block {blk_id} file {directory}/{file}`
+LogTemplate[3]: `Deleting block {blk_id} file {directory}/{file}`
+	============ PostProcess ====================
+	Post Template: `Deleting block <*> file <*>`
+	Post Template: `Deleting block <*> file <*>`
+	Post Template: `Deleting block <*> file <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Deleting block <*> file <*>
+[UpdateBucket] Logs: This iter found: 1402047, total: 8258213/11167740, remain: 2909527. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 1409107 -> 7060, remain buckets: 28
+Update Success: Time for one update logs: 22.70759892463684, template `Deleting block <*> file <*>`
+========================================================================================
+
+
+Iteration 5
+Sample 3 from current logs bucket: ID: 15, Len: 9, Bucket Size: 1396174, Total Buckets: 33
+Sampling from 465014 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `BLOCK* NameSystem.delete: blk_-1608999687919862906 is added to invalidSet of <*>`, MaxSim Log: `BLOCK* NameSystem.delete: blk_-3544583377289625738 is added to invalidSet of <*>`.
+	============  Query  ====================
+	Log[1]: `BLOCK* NameSystem.delete: blk_-1608999687919862906 is added to invalidSet of <*>`
+	Log[2]: `BLOCK* NameSystem.delete: blk_-5485840272426283522 is added to invalidSet of <*>`
+	Log[3]: `BLOCK* NameSystem.delete: blk_-2743398995579108999 is added to invalidSet of <*>`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* NameSystem.delete: {blk_id} is added to invalidSet of <*>`
+	============ PostProcess ====================
+	Post Template: `BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>`
+	Post Template: `BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>`
+	Post Template: `BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>
+[UpdateBucket] Logs: This iter found: 1396174, total: 9654387/11167740, remain: 1513353. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 1403103 -> 6929, remain buckets: 27
+Update Success: Time for one update logs: 25.891085147857666, template `BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>`
+========================================================================================
+
+
+Iteration 6
+Sample 3 from current logs bucket: ID: 2, Len: 4, Bucket Size: 575061, Total Buckets: 33
+Sampling from 575060 logs, Sim Level: 1, MaxSim to anchor: 0.3333. Anchor: `BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906`, MaxSim Log: `BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.split. blk_7503483334202473044`.
+	============  Query  ====================
+	Log[1]: `BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* NameSystem.allocateBlock: {file}`
+	============ PostProcess ====================
+	Post Template: `BLOCK* NameSystem.allocateBlock: <*>`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* NameSystem.allocateBlock: <*>
+[UpdateBucket] Logs: This iter found: 575061, total: 10229448/11167740, remain: 938292. 
+[UpdateBucket] Buckets: Checked 2 ([1, 2]), Parent Bucket size: 695097 -> 120036, remain buckets: 26
+Update Success: Time for one update logs: 9.193866968154907, template `BLOCK* NameSystem.allocateBlock: <*>`
+========================================================================================
+
+
+Iteration 7
+Sample 3 from current logs bucket: ID: 7, Len: 6, Bucket Size: 428726, Total Buckets: 33
+Sampling from 137433 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `<*> Served block blk_-3544583377289625738 to <*>`, MaxSim Log: `<*> Served block blk_-1608999687919862906 to <*>`.
+	============  Query  ====================
+	Log[1]: `<*> Served block blk_-3544583377289625738 to <*>`
+	Log[2]: `<*> Served block blk_1526697555052708608 to <*>`
+	Log[3]: `<*> Served block blk_-7721597443770395688 to <*>`
+	============ Response ====================
+LogTemplate[1]: `<*> Served block {blk_id} to <*>`
+LogTemplate[2]: `<*> Served block {blk_id} to <*>`
+LogTemplate[3]: `<*> Served block {blk_id} to <*>`
+	============ PostProcess ====================
+	Post Template: `<*> Served block <*> to <*>`
+	Post Template: `<*> Served block <*> to <*>`
+	Post Template: `<*> Served block <*> to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> Served block <*> to <*>
+[UpdateBucket] Logs: This iter found: 428726, total: 10658174/11167740, remain: 509566. 
+[UpdateBucket] Buckets: Checked 4 ([6, 7, 8, 9]), Parent Bucket size: 430200 -> 1474, remain buckets: 25
+Update Success: Time for one update logs: 7.314314842224121, template `<*> Served block <*> to <*>`
+========================================================================================
+
+
+Iteration 8
+Sample 3 from current logs bucket: ID: 11, Len: 7, Bucket Size: 356207, Total Buckets: 33
+Sampling from 129294 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `<*>:Got exception while serving blk_-8781759536960110370 to <*>:`, MaxSim Log: `<*>:Got exception while serving blk_1732876454483854279 to <*>:`.
+	============  Query  ====================
+	Log[1]: `<*>:Got exception while serving blk_-8781759536960110370 to <*>:`
+	Log[2]: `<*>:Got exception while serving blk_-2990987390306542711 to <*>:`
+	Log[3]: `<*>:Got exception while serving blk_-5664805602612331613 to <*>:`
+	============ Response ====================
+LogTemplate[1]: `<*>:Got exception while serving {blk_id} to <*>:`  
+LogTemplate[2]: `<*>:Got exception while serving {blk_id} to <*>:`  
+LogTemplate[3]: `<*>:Got exception while serving {blk_id} to <*>:`  
+	============ PostProcess ====================
+	Post Template: `<*>:Got exception while serving <*> to <*>:`
+	Post Template: `<*>:Got exception while serving <*> to <*>:`
+	Post Template: `<*>:Got exception while serving <*> to <*>:`
+	============ Aggregate ====================
+	Aggregated Template:  <*>:Got exception while serving <*> to <*>:
+[UpdateBucket] Logs: This iter found: 356207, total: 11014381/11167740, remain: 153359. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 356311 -> 104, remain buckets: 24
+Update Success: Time for one update logs: 6.429999113082886, template `<*>:Got exception while serving <*> to <*>:`
+========================================================================================
+
+
+Iteration 9
+Sample 3 from current logs bucket: ID: 1, Len: 4, Bucket Size: 120036, Total Buckets: 33
+Sampling from 82704 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `Verification succeeded for blk_-9073992586687739851`, MaxSim Log: `Verification succeeded for blk_-2917825689581470793`.
+	============  Query  ====================
+	Log[1]: `Verification succeeded for blk_-9073992586687739851`
+	Log[2]: `Verification succeeded for blk_3729187763473191795`
+	Log[3]: `Verification succeeded for blk_-8219591258537815551`
+	============ Response ====================
+LogTemplate[1]: `Verification succeeded for {blk_id}`
+LogTemplate[2]: `Verification succeeded for {blk_id}`
+LogTemplate[3]: `Verification succeeded for {blk_id}`
+	============ PostProcess ====================
+	Post Template: `Verification succeeded for <*>`
+	Post Template: `Verification succeeded for <*>`
+	Post Template: `Verification succeeded for <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Verification succeeded for <*>
+[UpdateBucket] Logs: This iter found: 120036, total: 11134417/11167740, remain: 33323. 
+[UpdateBucket] Buckets: Checked 2 ([1, 2]), Parent Bucket size: 120036 -> 0, remain buckets: 23
+Update Success: Time for one update logs: 1.786747694015503, template `Verification succeeded for <*>`
+========================================================================================
+
+
+Iteration 10
+Sample 3 from current logs bucket: ID: 17, Len: 10, Bucket Size: 7097, Total Buckets: 33
+Sampling from 5242 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Received block blk_-1608999687919862906 src: <*> dest: <*> of size 91178`, MaxSim Log: `Received block blk_-5820341108159367267 src: <*> dest: <*> of size 91178`.
+	============  Query  ====================
+	Log[1]: `Received block blk_-1608999687919862906 src: <*> dest: <*> of size 91178`
+	Log[2]: `Received block blk_4681655290076483069 src: <*> dest: <*> of size 67108864`
+	Log[3]: `Received block blk_-2448354470515293024 src: <*> dest: <*> of size 67108864`
+	============ Response ====================
+LogTemplate[1]: `Received block {blk_id} src: <*> dest: <*> of size {size}`
+
+LogTemplate[2]: `Received block {blk_id} src: <*> dest: <*> of size {size}`
+
+LogTemplate[3]: `Received block {blk_id} src: <*> dest: <*> of size {size}`
+	============ PostProcess ====================
+	Post Template: `Received block <*> src: <*> dest: <*> of size <*>`
+	Post Template: `Received block <*> src: <*> dest: <*> of size <*>`
+	Post Template: `Received block <*> src: <*> dest: <*> of size <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Received block <*> src: <*> dest: <*> of size <*>
+[UpdateBucket] Logs: This iter found: 7097, total: 11141514/11167740, remain: 26226. 
+[UpdateBucket] Buckets: Checked 4 ([17, 18, 19, 20]), Parent Bucket size: 10653 -> 3556, remain buckets: 22
+Update Success: Time for one update logs: 0.17039895057678223, template `Received block <*> src: <*> dest: <*> of size <*>`
+========================================================================================
+
+
+Iteration 11
+Sample 3 from current logs bucket: ID: 3, Len: 5, Bucket Size: 6937, Total Buckets: 33
+Sampling from 5242 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `<*>:Transmitted block blk_-1608999687919862906 to <*>`, MaxSim Log: `<*>:Transmitted block blk_-8213344449220111733 to <*>`.
+	============  Query  ====================
+	Log[1]: `<*>:Transmitted block blk_-1608999687919862906 to <*>`
+	Log[2]: `<*>:Transmitted block blk_7942840078170046443 to <*>`
+	Log[3]: `<*>:Transmitted block blk_1654611257590636641 to <*>`
+	============ Response ====================
+LogTemplate[1]: `<*>:Transmitted block {blk_id} to <*>`
+LogTemplate[2]: `<*>:Transmitted block {blk_id} to <*>`
+LogTemplate[3]: `<*>:Transmitted block {blk_id} to <*>`
+	============ PostProcess ====================
+	Post Template: `<*>:Transmitted block <*> to <*>`
+	Post Template: `<*>:Transmitted block <*> to <*>`
+	Post Template: `<*>:Transmitted block <*> to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*>:Transmitted block <*> to <*>
+[UpdateBucket] Logs: This iter found: 6937, total: 11148451/11167740, remain: 19289. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 7060 -> 123, remain buckets: 21
+Update Success: Time for one update logs: 0.15171408653259277, template `<*>:Transmitted block <*> to <*>`
+========================================================================================
+
+
+Iteration 12
+Sample 3 from current logs bucket: ID: 14, Len: 9, Bucket Size: 6837, Total Buckets: 33
+Sampling from 5191 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*>`, MaxSim Log: `BLOCK* ask <*> to replicate blk_-8213344449220111733 to datanode(s) <*>`.
+	============  Query  ====================
+	Log[1]: `BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*>`
+	Log[2]: `BLOCK* ask <*> to replicate blk_-8757462367053637901 to datanode(s) <*>`
+	Log[3]: `BLOCK* ask <*> to replicate blk_-875258379733599572 to datanode(s) <*>`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*>`
+LogTemplate[2]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*>`
+LogTemplate[3]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*>`
+	============ PostProcess ====================
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* ask <*> to replicate <*> to datanode(s) <*>
+[UpdateBucket] Logs: This iter found: 6837, total: 11155288/11167740, remain: 12452. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 6929 -> 92, remain buckets: 20
+Update Success: Time for one update logs: 0.16696596145629883, template `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+========================================================================================
+
+
+Iteration 13
+Sample 3 from current logs bucket: ID: 23, Len: 12, Bucket Size: 5545, Total Buckets: 33
+Sampling from 5344 logs, Sim Level: 1, MaxSim to anchor: 0.8462. Anchor: `Unexpected error trying to delete block blk_-1067131609371010449. BlockInfo not found in volumeMap.`, MaxSim Log: `Unexpected error trying to delete block blk_4207153147078127808. BlockInfo not found in volumeMap.`.
+	============  Query  ====================
+	Log[1]: `Unexpected error trying to delete block blk_-1067131609371010449. BlockInfo not found in volumeMap.`
+	Log[2]: `Unexpected error trying to delete block blk_7316889599660798557. BlockInfo not found in volumeMap.`
+	Log[3]: `Unexpected error trying to delete block blk_8542762486739162614. BlockInfo not found in volumeMap.`
+	============ Response ====================
+LogTemplate[1]: `Unexpected error trying to delete block {blk_id}. BlockInfo not found in volumeMap.`
+	============ PostProcess ====================
+	Post Template: `Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.`
+	Post Template: `Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.`
+	Post Template: `Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.`
+	============ Aggregate ====================
+	Aggregated Template:  Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.
+[UpdateBucket] Logs: This iter found: 5545, total: 11160833/11167740, remain: 6907. 
+[UpdateBucket] Buckets: Checked 2 ([23, 24]), Parent Bucket size: 5554 -> 9, remain buckets: 19
+Update Success: Time for one update logs: 0.13846182823181152, template `Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.`
+========================================================================================
+
+
+Iteration 14
+Sample 3 from current logs bucket: ID: 20, Len: 10, Bucket Size: 3226, Total Buckets: 33
+Sampling from 3225 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `writeBlock blk_7648436334209344608 received exception java.io.IOException: Could not read from stream`, MaxSim Log: `writeBlock blk_-5447417104355795463 received exception java.io.IOException: Could not read from stream`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_7648436334209344608 received exception java.io.IOException: Could not read from stream`
+	Log[2]: `writeBlock blk_3036603747764053369 received exception java.io.IOException: Could not read from stream`
+	Log[3]: `writeBlock blk_-1406154528245975013 received exception java.io.IOException: Could not read from stream`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.IOException: Could not read from stream`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.io.IOException: Could not read from stream`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.IOException: Could not read from stream`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.IOException: Could not read from stream`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Could not read from stream`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Could not read from stream`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.IOException: Could not read from stream
+[UpdateBucket] Logs: This iter found: 3226, total: 11164059/11167740, remain: 3681. 
+[UpdateBucket] Buckets: Checked 4 ([17, 18, 19, 20]), Parent Bucket size: 3556 -> 330, remain buckets: 18
+Update Success: Time for one update logs: 0.06947493553161621, template `writeBlock <*> received exception java.io.IOException: Could not read from stream`
+========================================================================================
+
+
+Iteration 15
+Sample 3 from current logs bucket: ID: 8, Len: 6, Bucket Size: 1464, Total Buckets: 33
+Sampling from 487 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `Receiving empty packet for block blk_-3842070622043972712`, MaxSim Log: `Receiving empty packet for block blk_7621437832633701631`.
+	============  Query  ====================
+	Log[1]: `Receiving empty packet for block blk_-3842070622043972712`
+	Log[2]: `Receiving empty packet for block blk_-653035456983812021`
+	Log[3]: `Receiving empty packet for block blk_8317049859859238573`
+	============ Response ====================
+LogTemplate[1]: `Receiving empty packet for block {blk_id}`  
+LogTemplate[2]: `Receiving empty packet for block {blk_id}`  
+LogTemplate[3]: `Receiving empty packet for block blk_{placeholder}`  
+	============ PostProcess ====================
+	Post Template: `Receiving empty packet for block <*>`
+	Post Template: `Receiving empty packet for block <*>`
+	Post Template: `Receiving empty packet for block <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Receiving empty packet for block <*>
+[UpdateBucket] Logs: This iter found: 1464, total: 11165523/11167740, remain: 2217. 
+[UpdateBucket] Buckets: Checked 4 ([6, 7, 8, 9]), Parent Bucket size: 1474 -> 10, remain buckets: 17
+Update Success: Time for one update logs: 0.05137491226196289, template `Receiving empty packet for block <*>`
+========================================================================================
+
+
+Iteration 16
+Sample 3 from current logs bucket: ID: 28, Len: 19, Bucket Size: 1288, Total Buckets: 33
+Sampling from 1258 logs, Sim Level: 2, MaxSim to anchor: 0.9000. Anchor: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_5398314277015661293 on <*> size 67108864 But it does not belong to any file.`, MaxSim Log: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_74623038764341097 on <*> size 67108864 But it does not belong to any file.`.
+	============  Query  ====================
+	Log[1]: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_5398314277015661293 on <*> size 67108864 But it does not belong to any file.`
+	Log[2]: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3703211096265336789 on <*> size 28494830 But it does not belong to any file.`
+	Log[3]: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3673675130220675796 on <*> size 44962515 But it does not belong to any file.`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for {blk_id} on <*> size <*> But it does not belong to any file.`
+	============ PostProcess ====================
+	Post Template: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.`
+	Post Template: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.`
+	Post Template: `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.
+[UpdateBucket] Logs: This iter found: 1288, total: 11166811/11167740, remain: 929. 
+[UpdateBucket] Buckets: Checked 2 ([28, 29]), Parent Bucket size: 1328 -> 40, remain buckets: 16
+Update Success: Time for one update logs: 0.05801701545715332, template `BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.`
+========================================================================================
+
+
+Iteration 17
+Sample 3 from current logs bucket: ID: 18, Len: 10, Bucket Size: 165, Total Buckets: 33
+Sampling from 100 logs, Sim Level: 1, MaxSim to anchor: 0.7778. Anchor: `<*> Starting thread to transfer block blk_-1608999687919862906 to <*>, <*>`, MaxSim Log: `<*> Starting thread to transfer block blk_-4304326910587241051 to <*>, <*>`.
+	============  Query  ====================
+	Log[1]: `<*> Starting thread to transfer block blk_-1608999687919862906 to <*>, <*>`
+	Log[2]: `<*> Starting thread to transfer block blk_-4715545735585530740 to <*>, <*>`
+	Log[3]: `<*> Starting thread to transfer block blk_-5057834626410636236 to <*>, <*>`
+	============ Response ====================
+LogTemplate[1]: `<*> Starting thread to transfer block {blk_id} to <*>, <*>`
+LogTemplate[2]: `<*> Starting thread to transfer block {blk_id} to <*>, <*>`
+LogTemplate[3]: `<*> Starting thread to transfer block {blk_id} to <*>, <*>`
+	============ PostProcess ====================
+	Post Template: `<*> Starting thread to transfer block <*> to <*>`
+	Post Template: `<*> Starting thread to transfer block <*> to <*>`
+	Post Template: `<*> Starting thread to transfer block <*> to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*> Starting thread to transfer block <*> to <*>
+[UpdateBucket] Logs: This iter found: 165, total: 11166976/11167740, remain: 764. 
+[UpdateBucket] Buckets: Checked 4 ([17, 18, 19, 20]), Parent Bucket size: 330 -> 165, remain buckets: 15
+Update Success: Time for one update logs: 0.019073009490966797, template `<*> Starting thread to transfer block <*> to <*>`
+========================================================================================
+
+
+Iteration 18
+Sample 3 from current logs bucket: ID: 19, Len: 10, Bucket Size: 165, Total Buckets: 33
+Sampling from 100 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*> <*>`, MaxSim Log: `BLOCK* ask <*> to replicate blk_-4304326910587241051 to datanode(s) <*> <*>`.
+	============  Query  ====================
+	Log[1]: `BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*> <*>`
+	Log[2]: `BLOCK* ask <*> to replicate blk_6336460554009766891 to datanode(s) <*> <*>`
+	Log[3]: `BLOCK* ask <*> to replicate blk_-1188252971231200744 to datanode(s) <*> <*>`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*> <*>`  
+LogTemplate[2]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*> <*>`  
+LogTemplate[3]: `BLOCK* ask <*> to replicate {blk_id} to datanode(s) <*> <*>`  
+	============ PostProcess ====================
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	Post Template: `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* ask <*> to replicate <*> to datanode(s) <*>
+[UpdateBucket] Logs: This iter found: 165, total: 11167141/11167740, remain: 599. 
+[UpdateBucket] Buckets: Checked 4 ([17, 18, 19, 20]), Parent Bucket size: 165 -> 0, remain buckets: 14
+Update Success: Time for one update logs: 0.014281988143920898, template `BLOCK* ask <*> to replicate <*> to datanode(s) <*>`
+========================================================================================
+
+
+Iteration 19
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 123, Total Buckets: 33
+Sampling from 64 logs, Sim Level: 4, MaxSim to anchor: 0.6667. Anchor: `PacketResponder blk_-3102267849859399193 2 Exception java.io.EOFException`, MaxSim Log: `PacketResponder blk_1528078116812077719 2 Exception java.io.EOFException`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_-3102267849859399193 2 Exception java.io.EOFException`
+	Log[2]: `PacketResponder blk_4989727389302910967 2 Exception java.io.EOFException`
+	Log[3]: `PacketResponder blk_1528078116812077719 2 Exception java.io.EOFException`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 2 Exception java.io.EOFException`
+LogTemplate[2]: `PacketResponder {blk_id} 2 Exception java.io.EOFException`
+LogTemplate[3]: `PacketResponder {blk_id} 2 Exception java.io.EOFException`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.EOFException`
+	Post Template: `PacketResponder <*> Exception java.io.EOFException`
+	Post Template: `PacketResponder <*> Exception java.io.EOFException`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.EOFException
+[UpdateBucket] Logs: This iter found: 19, total: 11167160/11167740, remain: 580. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 123 -> 104, remain buckets: 14
+Update Success: Time for one update logs: 0.00410914421081543, template `PacketResponder <*> Exception java.io.EOFException`
+========================================================================================
+
+
+Iteration 20
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 104, Total Buckets: 33
+Sampling from 35 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `writeBlock blk_4241467193520768333 received exception java.io.EOFException`, MaxSim Log: `writeBlock blk_3858821904894294369 received exception java.io.EOFException`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_4241467193520768333 received exception java.io.EOFException`
+	Log[2]: `writeBlock blk_-644449815674781039 received exception java.io.EOFException`
+	Log[3]: `writeBlock blk_-5051155910414339630 received exception java.io.EOFException`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.EOFException`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.io.EOFException`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.EOFException`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.EOFException`
+	Post Template: `writeBlock <*> received exception java.io.EOFException`
+	Post Template: `writeBlock <*> received exception java.io.EOFException`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.EOFException
+[UpdateBucket] Logs: This iter found: 47, total: 11167207/11167740, remain: 533. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 104 -> 57, remain buckets: 14
+Update Success: Time for one update logs: 0.008453845977783203, template `writeBlock <*> received exception java.io.EOFException`
+========================================================================================
+
+
+Iteration 21
+Sample 3 from current logs bucket: ID: 12, Len: 7, Bucket Size: 104, Total Buckets: 33
+Sampling from 78 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `Exception in receiveBlock for block blk_4241467193520768333 java.io.EOFException`, MaxSim Log: `Exception in receiveBlock for block blk_3858821904894294369 java.io.EOFException`.
+	============  Query  ====================
+	Log[1]: `Exception in receiveBlock for block blk_4241467193520768333 java.io.EOFException`
+	Log[2]: `Exception in receiveBlock for block blk_9099447004863711723 java.io.EOFException`
+	Log[3]: `Exception in receiveBlock for block blk_120486571976949188 java.io.EOFException`
+	============ Response ====================
+LogTemplate[1]: `Exception in receiveBlock for block {blk_id} java.io.EOFException`
+LogTemplate[2]: `Exception in receiveBlock for block {blk_id} java.io.EOFException`
+LogTemplate[3]: `Exception in receiveBlock for block {blk_id} java.io.EOFException`
+	============ PostProcess ====================
+	Post Template: `Exception in receiveBlock for block <*> java.io.EOFException`
+	Post Template: `Exception in receiveBlock for block <*> java.io.EOFException`
+	Post Template: `Exception in receiveBlock for block <*> java.io.EOFException`
+	============ Aggregate ====================
+	Aggregated Template:  Exception in receiveBlock for block <*> java.io.EOFException
+[UpdateBucket] Logs: This iter found: 48, total: 11167255/11167740, remain: 485. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 104 -> 56, remain buckets: 14
+Update Success: Time for one update logs: 0.012733936309814453, template `Exception in receiveBlock for block <*> java.io.EOFException`
+========================================================================================
+
+
+Iteration 22
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 92, Total Buckets: 33
+Sampling from 70 logs, Sim Level: 4, MaxSim to anchor: 0.8000. Anchor: `writeBlock blk_-3102267849859399193 received exception java.io.IOException: Connection reset by peer`, MaxSim Log: `writeBlock blk_4241467193520768333 received exception java.io.IOException: Connection reset by peer`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_-3102267849859399193 received exception java.io.IOException: Connection reset by peer`
+	Log[2]: `writeBlock blk_-4083716689384497698 received exception java.io.IOException: Connection reset by peer`
+	Log[3]: `writeBlock blk_120486571976949188 received exception java.io.IOException: Connection reset by peer`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.IOException: Connection reset by peer`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.io.IOException: Connection reset by peer`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.IOException: Connection reset by peer`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.IOException: Connection reset by peer`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Connection reset by peer`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Connection reset by peer`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.IOException: Connection reset by peer
+[UpdateBucket] Logs: This iter found: 75, total: 11167330/11167740, remain: 410. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 92 -> 17, remain buckets: 14
+Update Success: Time for one update logs: 0.013154983520507812, template `writeBlock <*> received exception java.io.IOException: Connection reset by peer`
+========================================================================================
+
+
+Iteration 23
+Sample 3 from current logs bucket: ID: 22, Len: 11, Bucket Size: 75, Total Buckets: 33
+Sampling from 53 logs, Sim Level: 1, MaxSim to anchor: 0.8333. Anchor: `Exception in receiveBlock for block blk_-3102267849859399193 java.io.IOException: Connection reset by peer`, MaxSim Log: `Exception in receiveBlock for block blk_4241467193520768333 java.io.IOException: Connection reset by peer`.
+	============  Query  ====================
+	Log[1]: `Exception in receiveBlock for block blk_-3102267849859399193 java.io.IOException: Connection reset by peer`
+	Log[2]: `Exception in receiveBlock for block blk_377785190538046925 java.io.IOException: Connection reset by peer`
+	Log[3]: `Exception in receiveBlock for block blk_-2308563252795628677 java.io.IOException: Connection reset by peer`
+	============ Response ====================
+LogTemplate[1]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Connection reset by peer`
+LogTemplate[2]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Connection reset by peer`
+LogTemplate[3]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Connection reset by peer`
+	============ PostProcess ====================
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer`
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer`
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer`
+	============ Aggregate ====================
+	Aggregated Template:  Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer
+[UpdateBucket] Logs: This iter found: 75, total: 11167405/11167740, remain: 335. 
+[UpdateBucket] Buckets: Checked 2 ([21, 22]), Parent Bucket size: 75 -> 0, remain buckets: 13
+Update Success: Time for one update logs: 0.011580944061279297, template `Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer`
+========================================================================================
+
+
+Iteration 24
+Sample 3 from current logs bucket: ID: 26, Len: 16, Bucket Size: 65, Total Buckets: 33
+Sampling from 37 logs, Sim Level: 1, MaxSim to anchor: 0.6000. Anchor: `Changing block file offset of block blk_4241467193520768333 from 0 to 30867456 meta file offset to 241159`, MaxSim Log: `Changing block file offset of block blk_3858821904894294369 from 0 to 23724032 meta file offset to 185351`.
+	============  Query  ====================
+	Log[1]: `Changing block file offset of block blk_4241467193520768333 from 0 to 30867456 meta file offset to 241159`
+	Log[2]: `Changing block file offset of block blk_7160764053931337311 from 0 to 36503552 meta file offset to 285191`
+	Log[3]: `Changing block file offset of block blk_8006271611835981128 from 0 to 66519040 meta file offset to 519687`
+	============ Response ====================
+LogTemplate[1]: `Changing block file offset of block {blk_id} from 0 to {number} meta file offset to {number}`
+LogTemplate[2]: `Changing block file offset of block {blk_id} from 0 to {number} meta file offset to {number}`
+LogTemplate[3]: `Changing block file offset of block {blk_id} from 0 to {number} meta file offset to {number}`
+	============ PostProcess ====================
+	Post Template: `Changing block file offset of block <*> from <*> to <*> meta file offset to <*>`
+	Post Template: `Changing block file offset of block <*> from <*> to <*> meta file offset to <*>`
+	Post Template: `Changing block file offset of block <*> from <*> to <*> meta file offset to <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Changing block file offset of block <*> from <*> to <*> meta file offset to <*>
+[UpdateBucket] Logs: This iter found: 65, total: 11167470/11167740, remain: 270. 
+[UpdateBucket] Buckets: Checked 1 ([26]), Parent Bucket size: 65 -> 0, remain buckets: 12
+Update Success: Time for one update logs: 0.006670236587524414, template `Changing block file offset of block <*> from <*> to <*> meta file offset to <*>`
+========================================================================================
+
+
+Iteration 25
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 57, Total Buckets: 33
+Sampling from 9 logs, Sim Level: 2, MaxSim to anchor: 0.6667. Anchor: `PacketResponder blk_8085135783040518166 1 Exception java.nio.channels.ClosedByInterruptException`, MaxSim Log: `PacketResponder blk_8516616325149469651 1 Exception java.nio.channels.ClosedByInterruptException`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_8085135783040518166 1 Exception java.nio.channels.ClosedByInterruptException`
+	Log[2]: `PacketResponder blk_120486571976949188 1 Exception java.nio.channels.ClosedByInterruptException`
+	Log[3]: `PacketResponder blk_8516616325149469651 1 Exception java.nio.channels.ClosedByInterruptException`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 1 Exception java.nio.channels.ClosedByInterruptException`
+LogTemplate[2]: `PacketResponder {blk_id} 1 Exception java.nio.channels.ClosedByInterruptException`
+LogTemplate[3]: `PacketResponder {blk_id} 1 Exception java.nio.channels.ClosedByInterruptException`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException`
+	Post Template: `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException`
+	Post Template: `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException
+[UpdateBucket] Logs: This iter found: 10, total: 11167480/11167740, remain: 260. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 57 -> 47, remain buckets: 12
+[TemplateDB] Try Merge: `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException` | `PacketResponder <*> Exception java.io.EOFException`
+[TemplateDB] Reject Merge, Remain Template: `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException`
+Update Success: Time for one update logs: 0.00936579704284668, template `PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException`
+========================================================================================
+
+
+Iteration 26
+Sample 3 from current logs bucket: ID: 12, Len: 7, Bucket Size: 56, Total Buckets: 33
+Sampling from 26 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `<*>:Exception writing block blk_3858821904894294369 to mirror <*>`, MaxSim Log: `<*>:Exception writing block blk_-4567777441263358151 to mirror <*>`.
+	============  Query  ====================
+	Log[1]: `<*>:Exception writing block blk_3858821904894294369 to mirror <*>`
+	Log[2]: `<*>:Exception writing block blk_8895996987918469659 to mirror <*>`
+	Log[3]: `<*>:Exception writing block blk_7160764053931337311 to mirror <*>`
+	============ Response ====================
+LogTemplate[1]: `<*>:Exception writing block {blk_id} to mirror <*>`
+LogTemplate[2]: `<*>:Exception writing block {blk_id} to mirror <*>`
+LogTemplate[3]: `<*>:Exception writing block {blk_id} to mirror <*>`
+	============ PostProcess ====================
+	Post Template: `<*>:Exception writing block <*> to mirror <*>`
+	Post Template: `<*>:Exception writing block <*> to mirror <*>`
+	Post Template: `<*>:Exception writing block <*> to mirror <*>`
+	============ Aggregate ====================
+	Aggregated Template:  <*>:Exception writing block <*> to mirror <*>
+[UpdateBucket] Logs: This iter found: 34, total: 11167514/11167740, remain: 226. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 56 -> 22, remain buckets: 12
+Update Success: Time for one update logs: 0.012050867080688477, template `<*>:Exception writing block <*> to mirror <*>`
+========================================================================================
+
+
+Iteration 27
+Sample 3 from current logs bucket: ID: 5, Len: 5, Bucket Size: 47, Total Buckets: 33
+Sampling from 45 logs, Sim Level: 1, MaxSim to anchor: 0.6667. Anchor: `PendingReplicationMonitor timed out block blk_-5057834626410636236`, MaxSim Log: `PendingReplicationMonitor timed out block blk_-2526833798441848968`.
+	============  Query  ====================
+	Log[1]: `PendingReplicationMonitor timed out block blk_-5057834626410636236`
+	Log[2]: `PendingReplicationMonitor timed out block blk_6180515937140679205`
+	Log[3]: `PendingReplicationMonitor timed out block blk_-74511355666073839`
+	============ Response ====================
+LogTemplate[1]: `PendingReplicationMonitor timed out block {blk_id}`  
+LogTemplate[2]: `PendingReplicationMonitor timed out block {blk_id}`  
+LogTemplate[3]: `PendingReplicationMonitor timed out block {blk_id}`  
+	============ PostProcess ====================
+	Post Template: `PendingReplicationMonitor timed out block <*>`
+	Post Template: `PendingReplicationMonitor timed out block <*>`
+	Post Template: `PendingReplicationMonitor timed out block <*>`
+	============ Aggregate ====================
+	Aggregated Template:  PendingReplicationMonitor timed out block <*>
+[UpdateBucket] Logs: This iter found: 47, total: 11167561/11167740, remain: 179. 
+[UpdateBucket] Buckets: Checked 3 ([3, 4, 5]), Parent Bucket size: 47 -> 0, remain buckets: 11
+Update Success: Time for one update logs: 0.010040044784545898, template `PendingReplicationMonitor timed out block <*>`
+========================================================================================
+
+
+Iteration 28
+Sample 3 from current logs bucket: ID: 29, Len: 19, Bucket Size: 40, Total Buckets: 33
+Sampling from 39 logs, Sim Level: 3, MaxSim to anchor: 0.8095. Anchor: `PacketResponder blk_4241467193520768333 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 59942 millis timeout left.`, MaxSim Log: `PacketResponder blk_3858821904894294369 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 59728 millis timeout left.`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_4241467193520768333 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 59942 millis timeout left.`
+	Log[2]: `PacketResponder blk_7008279672769077211 2 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 115663 millis timeout left.`
+	Log[3]: `writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left.`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. {millis} millis timeout left.`
+
+LogTemplate[2]: `PacketResponder {blk_id} 2 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. {millis} millis timeout left.`
+
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. {millis} millis timeout left.`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.
+[UpdateBucket] Logs: This iter found: 33, total: 11167594/11167740, remain: 146. 
+[UpdateBucket] Buckets: Checked 2 ([28, 29]), Parent Bucket size: 40 -> 7, remain buckets: 11
+Update Success: Time for one update logs: 0.007866859436035156, template `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+========================================================================================
+
+
+Iteration 29
+Sample 3 from current logs bucket: ID: 31, Len: 22, Bucket Size: 37, Total Buckets: 33
+Sampling from 36 logs, Sim Level: 5, MaxSim to anchor: 0.9091. Anchor: `PacketResponder blk_4241467193520768333 2 Exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`, MaxSim Log: `PacketResponder blk_3858821904894294369 2 Exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_4241467193520768333 2 Exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[2]: `writeBlock blk_-6363674043695218814 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[3]: `PacketResponder blk_-6129683979428294672 1 Exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} <*> Exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[3]: `PacketResponder {blk_id} <*> Exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `PacketResponder <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]
+[UpdateBucket] Logs: This iter found: 22, total: 11167616/11167740, remain: 124. 
+[UpdateBucket] Buckets: Checked 1 ([31]), Parent Bucket size: 37 -> 15, remain buckets: 11
+Update Success: Time for one update logs: 0.008816242218017578, template `PacketResponder <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+========================================================================================
+
+
+Iteration 30
+Sample 3 from current logs bucket: ID: 12, Len: 7, Bucket Size: 22, Total Buckets: 33
+Sampling from 20 logs, Sim Level: 4, MaxSim to anchor: 0.7500. Anchor: `PacketResponder blk_3858821904894294369 0 Exception java.io.IOException: Broken pipe`, MaxSim Log: `PacketResponder blk_-4567777441263358151 0 Exception java.io.IOException: Broken pipe`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_3858821904894294369 0 Exception java.io.IOException: Broken pipe`
+	Log[2]: `PacketResponder blk_-4567777441263358151 0 Exception java.io.IOException: Broken pipe`
+	Log[3]: `PacketResponder blk_-7052911997539087826 2 Exception java.io.IOException: Broken pipe`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 0 Exception java.io.IOException: Broken pipe`
+LogTemplate[2]: `PacketResponder {blk_id} 0 Exception java.io.IOException: Broken pipe`
+LogTemplate[3]: `PacketResponder {blk_id} 2 Exception java.io.IOException: Broken pipe`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Broken pipe`
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Broken pipe`
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Broken pipe`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.IOException: Broken pipe
+[UpdateBucket] Logs: This iter found: 6, total: 11167622/11167740, remain: 118. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 22 -> 16, remain buckets: 11
+Update Success: Time for one update logs: 0.007866144180297852, template `PacketResponder <*> Exception java.io.IOException: Broken pipe`
+========================================================================================
+
+
+Iteration 31
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 17, Total Buckets: 33
+Sampling from 15 logs, Sim Level: 4, MaxSim to anchor: 0.8000. Anchor: `PacketResponder blk_-4567777441263358151 1 Exception java.io.IOException: Connection reset by peer`, MaxSim Log: `PacketResponder blk_7008279672769077211 1 Exception java.io.IOException: Connection reset by peer`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_-4567777441263358151 1 Exception java.io.IOException: Connection reset by peer`
+	Log[2]: `PacketResponder blk_9160796703302881264 1 Exception java.io.IOException: Connection reset by peer`
+	Log[3]: `PacketResponder blk_-6059290274455367169 2 Exception java.io.IOException: Connection reset by peer`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 1 Exception java.io.IOException: Connection reset by peer`  
+LogTemplate[2]: `PacketResponder {blk_id} 1 Exception java.io.IOException: Connection reset by peer`  
+LogTemplate[3]: `PacketResponder {blk_id} 2 Exception java.io.IOException: Connection reset by peer`  
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Connection reset by peer`
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Connection reset by peer`
+	Post Template: `PacketResponder <*> Exception java.io.IOException: Connection reset by peer`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.IOException: Connection reset by peer
+[UpdateBucket] Logs: This iter found: 11, total: 11167633/11167740, remain: 107. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 17 -> 6, remain buckets: 11
+Update Success: Time for one update logs: 0.0061838626861572266, template `PacketResponder <*> Exception java.io.IOException: Connection reset by peer`
+========================================================================================
+
+
+Iteration 32
+Sample 3 from current logs bucket: ID: 12, Len: 7, Bucket Size: 16, Total Buckets: 33
+Sampling from 14 logs, Sim Level: 2, MaxSim to anchor: 0.7500. Anchor: `writeBlock blk_-4250706752040073149 received exception java.io.IOException: Interrupted receiveBlock`, MaxSim Log: `writeBlock blk_-6994808880344424033 received exception java.io.IOException: Interrupted receiveBlock`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_-4250706752040073149 received exception java.io.IOException: Interrupted receiveBlock`
+	Log[2]: `writeBlock blk_-6994808880344424033 received exception java.io.IOException: Interrupted receiveBlock`
+	Log[3]: `writeBlock blk_-4723951162006187997 received exception java.io.IOException: Interrupted receiveBlock`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.IOException: Interrupted receiveBlock`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.io.IOException: Interrupted receiveBlock`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.IOException: Interrupted receiveBlock`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock
+[UpdateBucket] Logs: This iter found: 11, total: 11167644/11167740, remain: 96. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 16 -> 5, remain buckets: 11
+Update Success: Time for one update logs: 0.002913951873779297, template `writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock`
+========================================================================================
+
+
+Iteration 33
+Sample 3 from current logs bucket: ID: 30, Len: 21, Bucket Size: 16, Total Buckets: 33
+Sampling from 15 logs, Sim Level: 1, MaxSim to anchor: 0.8182. Anchor: `Exception in receiveBlock for block blk_3858821904894294369 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.`, MaxSim Log: `Exception in receiveBlock for block blk_-4567777441263358151 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489959 millis timeout left.`.
+	============  Query  ====================
+	Log[1]: `Exception in receiveBlock for block blk_3858821904894294369 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.`
+	Log[2]: `Exception in receiveBlock for block blk_-6994808880344424033 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left.`
+	Log[3]: `Exception in receiveBlock for block blk_8895996987918469659 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 484981 millis timeout left.`
+	============ Response ====================
+LogTemplate[1]: `Exception in receiveBlock for block {blk_id} java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. {timeout} millis timeout left.`
+	============ PostProcess ====================
+	Post Template: `Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	============ Aggregate ====================
+	Aggregated Template:  Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.
+[UpdateBucket] Logs: This iter found: 16, total: 11167660/11167740, remain: 80. 
+[UpdateBucket] Buckets: Checked 1 ([30]), Parent Bucket size: 16 -> 0, remain buckets: 10
+Update Success: Time for one update logs: 0.005051851272583008, template `Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+========================================================================================
+
+
+Iteration 34
+Sample 3 from current logs bucket: ID: 31, Len: 22, Bucket Size: 15, Total Buckets: 33
+Sampling from 14 logs, Sim Level: 3, MaxSim to anchor: 0.9091. Anchor: `writeBlock blk_7008279672769077211 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`, MaxSim Log: `writeBlock blk_6224343649004202692 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_7008279672769077211 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[2]: `writeBlock blk_-539148231797001003 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[3]: `writeBlock blk_584730932939516842 received exception java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]
+[UpdateBucket] Logs: This iter found: 5, total: 11167665/11167740, remain: 75. 
+[UpdateBucket] Buckets: Checked 1 ([31]), Parent Bucket size: 15 -> 10, remain buckets: 10
+Update Success: Time for one update logs: 0.005741119384765625, template `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+========================================================================================
+
+
+Iteration 35
+Sample 3 from current logs bucket: ID: 25, Len: 14, Bucket Size: 13, Total Buckets: 33
+Sampling from 8 logs, Sim Level: 1, MaxSim to anchor: 0.8571. Anchor: `writeBlock blk_992101295951175683 received exception java.io.IOException: Block blk_992101295951175683 is valid, and cannot be written to.`, MaxSim Log: `writeBlock blk_5862064168004546076 received exception java.io.IOException: Block blk_5862064168004546076 is valid, and cannot be written to.`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_992101295951175683 received exception java.io.IOException: Block blk_992101295951175683 is valid, and cannot be written to.`
+	Log[2]: `writeBlock blk_9122720022222323339 received exception java.io.IOException: Block blk_9122720022222323339 is valid, and cannot be written to.`
+	Log[3]: `writeBlock blk_-8122638974387556519 received exception java.io.IOException: Block blk_-8122638974387556519 is valid, and cannot be written to.`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.IOException: Block {blk_id} is valid, and cannot be written to.`
+
+LogTemplate[2]: `writeBlock {blk_id} received exception java.io.IOException: Block {blk_id} is valid, and cannot be written to.`
+
+LogTemplate[3]: `writeBlock {blk_id} received exception java.io.IOException: Block {blk_id} is valid, and cannot be written to.`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.
+[UpdateBucket] Logs: This iter found: 9, total: 11167674/11167740, remain: 66. 
+[UpdateBucket] Buckets: Checked 1 ([25]), Parent Bucket size: 13 -> 4, remain buckets: 10
+Update Success: Time for one update logs: 0.006244182586669922, template `writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.`
+========================================================================================
+
+
+Iteration 36
+Sample 3 from current logs bucket: ID: 9, Len: 6, Bucket Size: 10, Total Buckets: 33
+Sampling from 4 logs, Sim Level: 1, MaxSim to anchor: 0.7143. Anchor: `Adding an already existing block blk_-2074647664485597823`, MaxSim Log: `Adding an already existing block blk_-7052911997539087826`.
+	============  Query  ====================
+	Log[1]: `Adding an already existing block blk_-2074647664485597823`
+	Log[2]: `Adding an already existing block blk_9176263204797010146`
+	Log[3]: `Adding an already existing block blk_5697572983288390847`
+	============ Response ====================
+LogTemplate[1]: `Adding an already existing block {blk_id}`  
+LogTemplate[2]: `Adding an already existing block {blk_id}`  
+LogTemplate[3]: `Adding an already existing block {blk_id}`  
+	============ PostProcess ====================
+	Post Template: `Adding an already existing block <*>`
+	Post Template: `Adding an already existing block <*>`
+	Post Template: `Adding an already existing block <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Adding an already existing block <*>
+[UpdateBucket] Logs: This iter found: 10, total: 11167684/11167740, remain: 56. 
+[UpdateBucket] Buckets: Checked 4 ([6, 7, 8, 9]), Parent Bucket size: 10 -> 0, remain buckets: 9
+Update Success: Time for one update logs: 0.007882833480834961, template `Adding an already existing block <*>`
+========================================================================================
+
+
+Iteration 37
+Sample 3 from current logs bucket: ID: 31, Len: 22, Bucket Size: 10, Total Buckets: 33
+Sampling from 9 logs, Sim Level: 2, MaxSim to anchor: 0.9091. Anchor: `writeBlock blk_-516029862489211143 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`, MaxSim Log: `writeBlock blk_844104329351281298 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_-516029862489211143 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[2]: `writeBlock blk_3709643589615046481 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[3]: `writeBlock blk_9099447004863711723 received exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[2]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[3]: `writeBlock {blk_id} received exception java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]
+[UpdateBucket] Logs: This iter found: 10, total: 11167694/11167740, remain: 46. 
+[UpdateBucket] Buckets: Checked 1 ([31]), Parent Bucket size: 10 -> 0, remain buckets: 8
+[TemplateDB] Try Merge: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]` | `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+[TemplateDB] Reject Merge, Remain Template: `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+Update Success: Time for one update logs: 0.004484891891479492, template `writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+========================================================================================
+
+
+Iteration 38
+Sample 3 from current logs bucket: ID: 24, Len: 12, Bucket Size: 9, Total Buckets: 33
+Sampling from 8 logs, Sim Level: 1, MaxSim to anchor: 0.8333. Anchor: `<*>:Failed to transfer blk_992101295951175683 to <*> got java.io.IOException: Connection reset by peer`, MaxSim Log: `<*>:Failed to transfer blk_5862064168004546076 to <*> got java.io.IOException: Connection reset by peer`.
+	============  Query  ====================
+	Log[1]: `<*>:Failed to transfer blk_992101295951175683 to <*> got java.io.IOException: Connection reset by peer`
+	Log[2]: `<*>:Failed to transfer blk_9122720022222323339 to <*> got java.io.IOException: Connection reset by peer`
+	Log[3]: `<*>:Failed to transfer blk_7162246307091465257 to <*> got java.io.IOException: Connection reset by peer`
+	============ Response ====================
+LogTemplate[1]: `<*>:Failed to transfer {blk_id} to <*> got java.io.IOException: Connection reset by peer`
+LogTemplate[2]: `<*>:Failed to transfer {blk_id} to <*> got java.io.IOException: Connection reset by peer`
+LogTemplate[3]: `<*>:Failed to transfer {blk_id} to <*> got java.io.IOException: Connection reset by peer`
+	============ PostProcess ====================
+	Post Template: `<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer`
+	Post Template: `<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer`
+	Post Template: `<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer`
+	============ Aggregate ====================
+	Aggregated Template:  <*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer
+[UpdateBucket] Logs: This iter found: 9, total: 11167703/11167740, remain: 37. 
+[UpdateBucket] Buckets: Checked 2 ([23, 24]), Parent Bucket size: 9 -> 0, remain buckets: 7
+Update Success: Time for one update logs: 0.006201028823852539, template `<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer`
+========================================================================================
+
+
+Iteration 39
+Sample 3 from current logs bucket: ID: 29, Len: 19, Bucket Size: 7, Total Buckets: 33
+Sampling from 6 logs, Sim Level: 1, MaxSim to anchor: 0.8095. Anchor: `writeBlock blk_3858821904894294369 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.`, MaxSim Log: `writeBlock blk_-4567777441263358151 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489959 millis timeout left.`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_3858821904894294369 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.`
+	Log[2]: `writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left.`
+	Log[3]: `writeBlock blk_-6363674043695218814 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left.`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. {timeout} millis timeout left.`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	Post Template: `writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.
+[UpdateBucket] Logs: This iter found: 7, total: 11167710/11167740, remain: 30. 
+[UpdateBucket] Buckets: Checked 2 ([28, 29]), Parent Bucket size: 7 -> 0, remain buckets: 6
+Update Success: Time for one update logs: 0.005320310592651367, template `writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.`
+========================================================================================
+
+
+Iteration 40
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 6, Total Buckets: 33
+Sampling from 5 logs failed
+	============  Query  ====================
+	Log[1]: `writeBlock blk_1684134505299265593 received exception java.net.NoRouteToHostException: No route to host`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.net.NoRouteToHostException: No route to host`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.net.NoRouteToHostException: No route to host`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.net.NoRouteToHostException: No route to host
+[UpdateBucket] Logs: This iter found: 1, total: 11167711/11167740, remain: 29. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 6 -> 5, remain buckets: 6
+Update Success: Time for one update logs: 0.007666826248168945, template `writeBlock <*> received exception java.net.NoRouteToHostException: No route to host`
+========================================================================================
+
+
+Iteration 41
+Sample 3 from current logs bucket: ID: 0, Len: 3, Bucket Size: 5, Total Buckets: 33
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.5000. Anchor: `Reopen Block blk_7008279672769077211`, MaxSim Log: `Reopen Block blk_-7052911997539087826`.
+	============  Query  ====================
+	Log[1]: `Reopen Block blk_7008279672769077211`
+	Log[2]: `Reopen Block blk_8006271611835981128`
+	Log[3]: `Reopen Block blk_-6363674043695218814`
+	============ Response ====================
+LogTemplate[1]: `Reopen Block {blk_id}`
+LogTemplate[2]: `Reopen Block {blk_id}`
+LogTemplate[3]: `Reopen Block {blk_id}`
+	============ PostProcess ====================
+	Post Template: `Reopen Block <*>`
+	Post Template: `Reopen Block <*>`
+	Post Template: `Reopen Block <*>`
+	============ Aggregate ====================
+	Aggregated Template:  Reopen Block <*>
+[UpdateBucket] Logs: This iter found: 5, total: 11167716/11167740, remain: 24. 
+[UpdateBucket] Buckets: Checked 1 ([0]), Parent Bucket size: 5 -> 0, remain buckets: 5
+Update Success: Time for one update logs: 0.005857944488525391, template `Reopen Block <*>`
+========================================================================================
+
+
+Iteration 42
+Sample 3 from current logs bucket: ID: 12, Len: 7, Bucket Size: 5, Total Buckets: 33
+Sampling from 4 logs, Sim Level: 1, MaxSim to anchor: 0.7500. Anchor: `writeBlock blk_6189089042276997489 received exception java.io.IOException: Broken pipe`, MaxSim Log: `writeBlock blk_5051010748021875388 received exception java.io.IOException: Broken pipe`.
+	============  Query  ====================
+	Log[1]: `writeBlock blk_6189089042276997489 received exception java.io.IOException: Broken pipe`
+	Log[2]: `writeBlock blk_7160764053931337311 received exception java.io.IOException: Broken pipe`
+	Log[3]: `writeBlock blk_584730932939516842 received exception java.io.IOException: Broken pipe`
+	============ Response ====================
+LogTemplate[1]: `writeBlock {blk_id} received exception java.io.IOException: Broken pipe`
+	============ PostProcess ====================
+	Post Template: `writeBlock <*> received exception java.io.IOException: Broken pipe`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Broken pipe`
+	Post Template: `writeBlock <*> received exception java.io.IOException: Broken pipe`
+	============ Aggregate ====================
+	Aggregated Template:  writeBlock <*> received exception java.io.IOException: Broken pipe
+[UpdateBucket] Logs: This iter found: 5, total: 11167721/11167740, remain: 19. 
+[UpdateBucket] Buckets: Checked 3 ([10, 11, 12]), Parent Bucket size: 5 -> 0, remain buckets: 4
+Update Success: Time for one update logs: 0.004180192947387695, template `writeBlock <*> received exception java.io.IOException: Broken pipe`
+========================================================================================
+
+
+Iteration 43
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 5, Total Buckets: 33
+Sampling from 4 logs, Sim Level: 2, MaxSim to anchor: 0.8000. Anchor: `Exception in receiveBlock for block blk_-6994808880344424033 java.io.IOException: Broken pipe`, MaxSim Log: `Exception in receiveBlock for block blk_7160764053931337311 java.io.IOException: Broken pipe`.
+	============  Query  ====================
+	Log[1]: `Exception in receiveBlock for block blk_-6994808880344424033 java.io.IOException: Broken pipe`
+	Log[2]: `Exception in receiveBlock for block blk_7160764053931337311 java.io.IOException: Broken pipe`
+	Log[3]: `Exception in receiveBlock for block blk_584730932939516842 java.io.IOException: Broken pipe`
+	============ Response ====================
+LogTemplate[1]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Broken pipe`
+LogTemplate[2]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Broken pipe`
+LogTemplate[3]: `Exception in receiveBlock for block {blk_id} java.io.IOException: Broken pipe`
+	============ PostProcess ====================
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Broken pipe`
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Broken pipe`
+	Post Template: `Exception in receiveBlock for block <*> java.io.IOException: Broken pipe`
+	============ Aggregate ====================
+	Aggregated Template:  Exception in receiveBlock for block <*> java.io.IOException: Broken pipe
+[UpdateBucket] Logs: This iter found: 3, total: 11167724/11167740, remain: 16. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 5 -> 2, remain buckets: 4
+Update Success: Time for one update logs: 0.0064868927001953125, template `Exception in receiveBlock for block <*> java.io.IOException: Broken pipe`
+========================================================================================
+
+
+Iteration 44
+Sample 3 from current logs bucket: ID: 27, Len: 17, Bucket Size: 5, Total Buckets: 33
+Sampling from 4 logs, Sim Level: 1, MaxSim to anchor: 0.7895. Anchor: `PacketResponder blk_-4250706752040073149 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59985 millis timeout left.`, MaxSim Log: `PacketResponder blk_-4723951162006187997 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59799 millis timeout left.`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_-4250706752040073149 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59985 millis timeout left.`
+	Log[2]: `PacketResponder blk_-4723951162006187997 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59799 millis timeout left.`
+	Log[3]: `PacketResponder blk_-644449815674781039 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59983 millis timeout left.`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. {timeout} millis timeout left.`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.`
+	Post Template: `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.`
+	Post Template: `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.
+[UpdateBucket] Logs: This iter found: 5, total: 11167729/11167740, remain: 11. 
+[UpdateBucket] Buckets: Checked 1 ([27]), Parent Bucket size: 5 -> 0, remain buckets: 3
+Update Success: Time for one update logs: 0.007216215133666992, template `PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.`
+========================================================================================
+
+
+Iteration 45
+Sample 3 from current logs bucket: ID: 32, Len: 24, Bucket Size: 5, Total Buckets: 33
+Sampling from 4 logs, Sim Level: 2, MaxSim to anchor: 0.9130. Anchor: `Exception in receiveBlock for block blk_7008279672769077211 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`, MaxSim Log: `Exception in receiveBlock for block blk_6224343649004202692 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`.
+	============  Query  ====================
+	Log[1]: `Exception in receiveBlock for block blk_7008279672769077211 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[2]: `Exception in receiveBlock for block blk_6224343649004202692 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Log[3]: `Exception in receiveBlock for block blk_584730932939516842 java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Response ====================
+LogTemplate[1]: `Exception in receiveBlock for block {blk_id} java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[2]: `Exception in receiveBlock for block {blk_id} java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+LogTemplate[3]: `Exception in receiveBlock for block {blk_id} java.net.SocketTimeoutException: {timeout} millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ PostProcess ====================
+	Post Template: `Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	Post Template: `Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+	============ Aggregate ====================
+	Aggregated Template:  Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]
+[UpdateBucket] Logs: This iter found: 5, total: 11167734/11167740, remain: 6. 
+[UpdateBucket] Buckets: Checked 1 ([32]), Parent Bucket size: 5 -> 0, remain buckets: 2
+Update Success: Time for one update logs: 0.005513906478881836, template `Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]`
+========================================================================================
+
+
+Iteration 46
+Sample 3 from current logs bucket: ID: 25, Len: 14, Bucket Size: 4, Total Buckets: 33
+Sampling from 3 logs, Sim Level: 1, MaxSim to anchor: 0.8667. Anchor: `BLOCK* Removing block blk_-3530301067936445915 from neededReplications as it does not belong to any file.`, MaxSim Log: `BLOCK* Removing block blk_3570750915105748881 from neededReplications as it does not belong to any file.`.
+	============  Query  ====================
+	Log[1]: `BLOCK* Removing block blk_-3530301067936445915 from neededReplications as it does not belong to any file.`
+	Log[2]: `BLOCK* Removing block blk_3570750915105748881 from neededReplications as it does not belong to any file.`
+	Log[3]: `BLOCK* Removing block blk_-8590003046192319107 from neededReplications as it does not belong to any file.`
+	============ Response ====================
+LogTemplate[1]: `BLOCK* Removing block {blk_id} from neededReplications as it does not belong to any file.`
+	============ PostProcess ====================
+	Post Template: `BLOCK* Removing block <*> from neededReplications as it does not belong to any file.`
+	Post Template: `BLOCK* Removing block <*> from neededReplications as it does not belong to any file.`
+	Post Template: `BLOCK* Removing block <*> from neededReplications as it does not belong to any file.`
+	============ Aggregate ====================
+	Aggregated Template:  BLOCK* Removing block <*> from neededReplications as it does not belong to any file.
+[UpdateBucket] Logs: This iter found: 4, total: 11167738/11167740, remain: 2. 
+[UpdateBucket] Buckets: Checked 1 ([25]), Parent Bucket size: 4 -> 0, remain buckets: 1
+Update Success: Time for one update logs: 0.005205869674682617, template `BLOCK* Removing block <*> from neededReplications as it does not belong to any file.`
+========================================================================================
+
+
+Iteration 47
+Sample 3 from current logs bucket: ID: 16, Len: 9, Bucket Size: 2, Total Buckets: 33
+Sampling from 1 logs, Sim Level: 1, MaxSim to anchor: 0.8000. Anchor: `PacketResponder blk_8006271611835981128 1 Exception java.io.IOException: The stream is closed`, MaxSim Log: `PacketResponder blk_-2448583810301041956 1 Exception java.io.IOException: The stream is closed`.
+	============  Query  ====================
+	Log[1]: `PacketResponder blk_8006271611835981128 1 Exception java.io.IOException: The stream is closed`
+	Log[2]: `PacketResponder blk_-2448583810301041956 1 Exception java.io.IOException: The stream is closed`
+	============ Response ====================
+LogTemplate[1]: `PacketResponder {blk_id} 1 Exception java.io.IOException: The stream is closed`
+LogTemplate[2]: `PacketResponder {blk_id} 1 Exception java.io.IOException: The stream is closed`
+	============ PostProcess ====================
+	Post Template: `PacketResponder <*> Exception java.io.IOException: The stream is closed`
+	Post Template: `PacketResponder <*> Exception java.io.IOException: The stream is closed`
+	============ Aggregate ====================
+	Aggregated Template:  PacketResponder <*> Exception java.io.IOException: The stream is closed
+[UpdateBucket] Logs: This iter found: 2, total: 11167740/11167740, remain: 0. 
+[UpdateBucket] Buckets: Checked 3 ([14, 15, 16]), Parent Bucket size: 2 -> 0, remain buckets: 0
+Update Success: Time for one update logs: 0.008168935775756836, template `PacketResponder <*> Exception java.io.IOException: The stream is closed`
+========================================================================================
+
+
+Original df_logs: (11167740, 4), Clustering df_logs: (11167740, 6)
+Saved HDFS_log_structured.csv to ./saved_results/LUNAR-single/HDFS/HDFS_full.log_structured.csv
+Saved HDFS_log_templates.csv to ./saved_results/LUNAR-single/HDFS/HDFS_full.log_templates.csv
+Total parsingg time: 1278.1496968269348 seconds
+Total query time: 67.22516012191772 seconds, 48 queries
+Avg. query time: 1.4005238774308113 seconds
+Total pure match time: 1210.924536705017 seconds
+
+=== Evaluation on HDFS ===
+Evaluate parsing result: ./saved_results/LUNAR-single/HDFS/HDFS_full.log_structured.csv
+Start compute grouping accuracy
+  0%|          | 0/46 [00:00<?, ?it/s]  2%|▏         | 1/46 [00:00<00:28,  1.61it/s]  4%|▍         | 2/46 [00:00<00:17,  2.59it/s]  7%|▋         | 3/46 [00:01<00:13,  3.15it/s]  9%|▊         | 4/46 [00:01<00:11,  3.58it/s] 11%|█         | 5/46 [00:01<00:10,  3.75it/s] 13%|█▎        | 6/46 [00:01<00:10,  3.98it/s] 15%|█▌        | 7/46 [00:01<00:09,  4.12it/s] 17%|█▋        | 8/46 [00:02<00:08,  4.24it/s] 20%|█▉        | 9/46 [00:02<00:09,  3.84it/s] 22%|██▏       | 10/46 [00:02<00:09,  3.84it/s] 24%|██▍       | 11/46 [00:03<00:09,  3.76it/s] 26%|██▌       | 12/46 [00:03<00:08,  3.95it/s] 28%|██▊       | 13/46 [00:03<00:08,  4.09it/s] 30%|███       | 14/46 [00:03<00:07,  4.21it/s] 33%|███▎      | 15/46 [00:04<00:07,  4.00it/s] 35%|███▍      | 16/46 [00:04<00:07,  4.14it/s] 37%|███▋      | 17/46 [00:04<00:06,  4.25it/s] 39%|███▉      | 18/46 [00:04<00:06,  4.33it/s] 41%|████▏     | 19/46 [00:04<00:06,  4.38it/s] 43%|████▎     | 20/46 [00:05<00:05,  4.42it/s] 46%|████▌     | 21/46 [00:05<00:05,  4.45it/s] 48%|████▊     | 22/46 [00:05<00:05,  4.45it/s] 50%|█████     | 23/46 [00:05<00:05,  4.47it/s] 52%|█████▏    | 24/46 [00:06<00:04,  4.49it/s] 54%|█████▍    | 25/46 [00:06<00:04,  4.48it/s] 57%|█████▋    | 26/46 [00:06<00:04,  4.50it/s] 59%|█████▊    | 27/46 [00:06<00:04,  4.50it/s] 61%|██████    | 28/46 [00:06<00:03,  4.51it/s] 63%|██████▎   | 29/46 [00:07<00:04,  3.96it/s] 65%|██████▌   | 30/46 [00:07<00:03,  4.05it/s] 67%|██████▋   | 31/46 [00:07<00:04,  3.70it/s] 70%|██████▉   | 32/46 [00:07<00:03,  3.91it/s] 72%|███████▏  | 33/46 [00:08<00:03,  3.63it/s] 74%|███████▍  | 34/46 [00:08<00:03,  3.80it/s] 76%|███████▌  | 35/46 [00:08<00:02,  3.99it/s] 78%|███████▊  | 36/46 [00:08<00:02,  4.13it/s] 80%|████████  | 37/46 [00:09<00:02,  4.18it/s] 83%|████████▎ | 38/46 [00:09<00:01,  4.28it/s] 85%|████████▍ | 39/46 [00:09<00:01,  4.33it/s] 87%|████████▋ | 40/46 [00:09<00:01,  4.39it/s] 89%|████████▉ | 41/46 [00:10<00:01,  4.29it/s] 91%|█████████▏| 42/46 [00:10<00:00,  4.36it/s] 93%|█████████▎| 43/46 [00:10<00:00,  4.40it/s] 96%|█████████▌| 44/46 [00:10<00:00,  4.44it/s] 98%|█████████▊| 45/46 [00:11<00:00,  4.46it/s]100%|██████████| 46/46 [00:11<00:00,  4.17it/s]
+Grouping_Accuracy (GA): 1.0000, FGA: 0.9677,
+Grouping Accuracy calculation done. [Time taken: 18.818]
+Parsing_Accuracy (PA): 1.0000
+Parsing Accuracy calculation done. [Time taken: 0.816]
+  0%|          | 0/47 [00:00<?, ?it/s]  2%|▏         | 1/47 [00:00<00:20,  2.28it/s] 19%|█▉        | 9/47 [00:00<00:01, 21.31it/s] 32%|███▏      | 15/47 [00:00<00:01, 28.44it/s] 62%|██████▏   | 29/47 [00:00<00:00, 54.21it/s] 79%|███████▊  | 37/47 [00:01<00:00, 45.84it/s]100%|██████████| 47/47 [00:01<00:00, 45.76it/s]
+1-num-10, {'writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for <*> ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]'} | {'writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]'}
+2-num-5, {'writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for <*> ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]'} | {'writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]'}
+PTA: 0.9574, RTA: 0.9783 FTA: 0.9677
+Identify : 47, Groundtruth : 46
+Template-level accuracy calculation done. [Time taken: 7.312]
+Finish parsing logs: HDFS
+Output dir: ./saved_results/LUNAR-single

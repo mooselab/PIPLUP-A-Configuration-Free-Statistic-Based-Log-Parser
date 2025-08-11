@@ -1,0 +1,5115 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Out of Memory: Killed process 28473 (httpd).",
+   "Out of Memory: Killed process 19786 (python).",
+   "Out of Memory: Killed process 15533 (sendmail)."
+  ],
+  "logs_to_query_regex": [
+   "Out of Memory: Killed process 28473 (httpd).",
+   "Out of Memory: Killed process 19786 (python).",
+   "Out of Memory: Killed process 15533 (sendmail)."
+  ],
+  "llm_template": "Out of Memory: Killed process <*> (<*>).",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Out of Memory: Killed process <*> (<*>)."
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=unknown.sagonet.net user=root",
+   "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.196.56.79 user=test",
+   "authentication failure; logname=LOGIN uid=0 euid=0 tty=tty2 ruser= rhost= user=root"
+  ],
+  "logs_to_query_regex": [
+   "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=unknown.sagonet.net user=root",
+   "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.196.56.79 user=test",
+   "authentication failure; logname=LOGIN uid=0 euid=0 tty=tty2 ruser= rhost= user=root"
+  ],
+  "llm_template": "authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "connection from 209.184.7.130 () at Sat <*> 11 03:28:22 2005",
+   "connection from 210.118.170.95 () at Sat <*> 25 09:20:24 2005",
+   "connection from 212.65.68.82 () at Sat <*> 16 08:14:07 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 209.184.7.130 () at Sat <*> 11 03:28:22 2005",
+   "connection from 210.118.170.95 () at Sat <*> 25 09:20:24 2005",
+   "connection from 212.65.68.82 () at Sat <*> 16 08:14:07 2005"
+  ],
+  "llm_template": "connection from <*> () at Sat <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "connection from 222.33.90.199 () at Sun <*> 12 00:07:45 2005",
+   "connection from 211.107.232.1 () at Sun <*> 24 13:46:34 2005",
+   "connection from 218.146.61.230 () at Sun <*> 17 08:06:14 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 222.33.90.199 () at Sun <*> 12 00:07:45 2005",
+   "connection from 211.107.232.1 () at Sun <*> 24 13:46:34 2005",
+   "connection from 218.146.61.230 () at Sun <*> 17 08:06:14 2005"
+  ],
+  "llm_template": "connection from <*> () at Sun <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon <*> 13 02:01:27 2005",
+   "connection from 212.5.120.141 (host-141.STSK.macomnet.net) at Mon <*> 13 09:09:44 2005",
+   "connection from 65.35.73.251 (251-73.35-65.tampabay.res.rr.com) at Mon <*> 13 12:49:32 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon <*> 13 02:01:27 2005",
+   "connection from 212.5.120.141 (host-141.STSK.macomnet.net) at Mon <*> 13 09:09:44 2005",
+   "connection from 65.35.73.251 (251-73.35-65.tampabay.res.rr.com) at Mon <*> 13 12:49:32 2005"
+  ],
+  "llm_template": "connection from <*> (<*>) at Mon <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri <*> 17 07:07:00 2005",
+   "connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri <*> 17 07:07:02 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri <*> 17 20:55:07 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri <*> 17 07:07:00 2005",
+   "connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri <*> 17 07:07:02 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri <*> 17 20:55:07 2005"
+  ],
+  "llm_template": "connection from <*> (<*>) at Fri <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:10 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:12 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:11 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:10 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:12 2005",
+   "connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Sat <*> 18 02:08:11 2005"
+  ],
+  "llm_template": "connection from <*> (<*>) at Sat <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "connection from 210.245.165.136 () at Wed <*> 22 13:16:30 2005",
+   "connection from 210.245.165.136 () at Wed <*> 22 13:16:31 2005",
+   "connection from 208.62.55.75 () at Wed <*> 29 10:48:08 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 210.245.165.136 () at Wed <*> 22 13:16:30 2005",
+   "connection from 210.245.165.136 () at Wed <*> 22 13:16:31 2005",
+   "connection from 208.62.55.75 () at Wed <*> 29 10:48:08 2005"
+  ],
+  "llm_template": "connection from <*> () at Wed <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "check pass; user unknown"
+  ],
+  "logs_to_query_regex": [
+   "check pass; user unknown"
+  ],
+  "llm_template": "check pass; user unknown",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "check pass; user <*>"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "Initializing CPU#0"
+  ],
+  "logs_to_query_regex": [
+   "Initializing CPU#0"
+  ],
+  "llm_template": "Initializing CPU#<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Initializing CPU#<*>"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "SELinux: Initializing."
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Initializing."
+  ],
+  "llm_template": "SELinux: Initializing.",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "SELinux: Initializing."
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "audit(1118297138.4294965368:0): initialized"
+  ],
+  "logs_to_query_regex": [
+   "audit(1118297138.4294965368:0): initialized"
+  ],
+  "llm_template": "audit(<*>): initialized",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "audit(<*>): initialized"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "Stopping squid:"
+  ],
+  "logs_to_query_regex": [
+   "Stopping squid:"
+  ],
+  "llm_template": "Stopping squid:",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Stopping squid:"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "shutting down"
+  ],
+  "logs_to_query_regex": [
+   "shutting down"
+  ],
+  "llm_template": "shutting down",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "shutting down"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "[<0212ebf3>] __alloc_pages+0x274/0x281"
+  ],
+  "logs_to_query_regex": [
+   "[<0212ebf3>] __alloc_pages+0x274/0x281"
+  ],
+  "llm_template": "[<*>] __alloc_pages+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __alloc_pages+<*>"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "[<0213d341>] read_swap_cache_async+0x41/0x84"
+  ],
+  "logs_to_query_regex": [
+   "[<0213d341>] read_swap_cache_async+0x41/0x84"
+  ],
+  "llm_template": "[<*>] read_swap_cache_async+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] read_swap_cache_async+<*>"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "connection from 203.101.45.59 (dsl-Chn-static-059.45.101.203.touchtelindia.net) at Sun <*> 3 10:05:25 2005",
+   "connection from 62.99.164.82 (62.99.164.82.sh.interxion.inode.at) at Sun <*> 3 23:16:09 2005",
+   "connection from 203.101.45.59 (dsl-Chn-static-059.45.101.203.touchtelindia.net) at Sun <*> 17 15:09:16 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 203.101.45.59 (dsl-Chn-static-059.45.101.203.touchtelindia.net) at Sun <*> 3 10:05:25 2005",
+   "connection from 62.99.164.82 (62.99.164.82.sh.interxion.inode.at) at Sun <*> 3 23:16:09 2005",
+   "connection from 203.101.45.59 (dsl-Chn-static-059.45.101.203.touchtelindia.net) at Sun <*> 17 15:09:16 2005"
+  ],
+  "llm_template": "connection from <*> (<*>) at Sun <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "[<02135dee>] swapin_readahead+0x2c/0x47"
+  ],
+  "logs_to_query_regex": [
+   "[<02135dee>] swapin_readahead+0x2c/0x47"
+  ],
+  "llm_template": "[<*>] swapin_readahead+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] swapin_readahead+<*>"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "[<02135e66>] do_swap_page+0x5d/0x1f9"
+  ],
+  "logs_to_query_regex": [
+   "[<02135e66>] do_swap_page+0x5d/0x1f9"
+  ],
+  "llm_template": "[<*>] do_swap_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_swap_page+<*>"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "[<021364a7>] handle_mm_fault+0x9d/0xe2"
+  ],
+  "logs_to_query_regex": [
+   "[<021364a7>] handle_mm_fault+0x9d/0xe2"
+  ],
+  "llm_template": "[<*>] handle_mm_fault+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] handle_mm_fault+<*>"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "[<02114537>] do_page_fault+0x12f/0x446"
+  ],
+  "logs_to_query_regex": [
+   "[<02114537>] do_page_fault+0x12f/0x446"
+  ],
+  "llm_template": "[<*>] do_page_fault+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_page_fault+<*>"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "[<0210737b>] do_IRQ+0x15d/0x169"
+  ],
+  "logs_to_query_regex": [
+   "[<0210737b>] do_IRQ+0x15d/0x169"
+  ],
+  "llm_template": "[<*>] do_IRQ+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_IRQ+<*>"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "[<0227ecc1>] schedule+0x3ed/0x44d"
+  ],
+  "logs_to_query_regex": [
+   "[<0227ecc1>] schedule+0x3ed/0x44d"
+  ],
+  "llm_template": "[<*>] schedule+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] schedule+<*>"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "session closed for user htt"
+  ],
+  "logs_to_query_regex": [
+   "session closed for user htt"
+  ],
+  "llm_template": "session closed for user <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "session closed for user <*>"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "session opened for user htt by (uid=0)",
+   "session opened for user test by root(uid=0)",
+   "session opened for user root by LOGIN(uid=0)"
+  ],
+  "logs_to_query_regex": [
+   "session opened for user htt by (uid=0)",
+   "session opened for user test by root(uid=0)",
+   "session opened for user root by LOGIN(uid=0)"
+  ],
+  "llm_template": "session opened for user <*> by <*>(uid=<*>)",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "session opened for user <*> by <*>"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)"
+  ],
+  "logs_to_query_regex": [
+   "BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)"
+  ],
+  "llm_template": "BIOS-e820: <*> - <*> (usable)",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "BIOS-e820: <*> - <*> (usable)"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "connection from 211.72.2.106 () at Tue <*> 5 13:52:21 2005",
+   "connection from 211.72.2.106 () at Tue <*> 5 13:52:23 2005",
+   "connection from 172.181.208.156 () at Tue <*> 26 05:47:42 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 211.72.2.106 () at Tue <*> 5 13:52:21 2005",
+   "connection from 211.72.2.106 () at Tue <*> 5 13:52:23 2005",
+   "connection from 172.181.208.156 () at Tue <*> 26 05:47:42 2005"
+  ],
+  "llm_template": "connection from <*> () at Tue <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "[<0215242b>] dput+0x12c/0x13a"
+  ],
+  "logs_to_query_regex": [
+   "[<0215242b>] dput+0x12c/0x13a"
+  ],
+  "llm_template": "[<*>] dput+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] dput+<*>"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)"
+  ],
+  "logs_to_query_regex": [
+   "BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)"
+  ],
+  "llm_template": "BIOS-e820: <*> - <*> (reserved)",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "BIOS-e820: <*> - <*> (reserved)"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "[<021303bd>] do_page_cache_readahead+0xa3/0x101"
+  ],
+  "logs_to_query_regex": [
+   "[<021303bd>] do_page_cache_readahead+0xa3/0x101"
+  ],
+  "llm_template": "[<*>] do_page_cache_readahead+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_page_cache_readahead+<*>"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "[<0212c71b>] filemap_nopage+0x119/0x26d"
+  ],
+  "logs_to_query_regex": [
+   "[<0212c71b>] filemap_nopage+0x119/0x26d"
+  ],
+  "llm_template": "[<*>] filemap_nopage+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] filemap_nopage+<*>"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "On node 0 totalpages: 32430"
+  ],
+  "logs_to_query_regex": [
+   "On node 0 totalpages: 32430"
+  ],
+  "llm_template": "On node <*> totalpages: <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "On node <*> totalpages: <*>"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "mapped 4G/4G trampoline to ffff3000."
+  ],
+  "logs_to_query_regex": [
+   "mapped 4G/4G trampoline to ffff3000."
+  ],
+  "llm_template": "mapped <*> trampoline to <*>.",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "mapped <*> trampoline to <*>."
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "CPU 0 irqstacks, hard=02345000 soft=02344000"
+  ],
+  "logs_to_query_regex": [
+   "CPU 0 irqstacks, hard=02345000 soft=02344000"
+  ],
+  "llm_template": "CPU <*> irqstacks, hard=<*> soft=<*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "CPU <*> irqstacks, hard=<*> soft=<*>"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Using tsc for high-res timesource"
+  ],
+  "logs_to_query_regex": [
+   "Using tsc for high-res timesource"
+  ],
+  "llm_template": "Using tsc for high-res timesource",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Using tsc for high-res timesource"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "[<021361c7>] do_no_page+0xa1/0x235"
+  ],
+  "logs_to_query_regex": [
+   "[<021361c7>] do_no_page+0xa1/0x235"
+  ],
+  "llm_template": "[<*>] do_no_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_no_page+<*>"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "Calibrating delay loop... 1441.79 BogoMIPS",
+   "Calibrating delay loop... 1445.88 BogoMIPS"
+  ],
+  "logs_to_query_regex": [
+   "Calibrating delay loop... 1441.79 BogoMIPS",
+   "Calibrating delay loop... 1445.88 BogoMIPS"
+  ],
+  "llm_template": "Calibrating delay loop... <*> BogoMIPS",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Calibrating delay loop... <*> BogoMIPS"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "SELinux: Starting in permissive mode"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Starting in permissive mode"
+  ],
+  "llm_template": "SELinux: Starting in permissive mode",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "SELinux: Starting in permissive mode"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "selinux_register_security: Registering secondary module capability"
+  ],
+  "logs_to_query_regex": [
+   "selinux_register_security: Registering secondary module capability"
+  ],
+  "llm_template": "selinux_register_security: Registering secondary module capability",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "selinux_register_security: Registering secondary module capability"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "Intel machine check architecture supported."
+  ],
+  "logs_to_query_regex": [
+   "Intel machine check architecture supported."
+  ],
+  "llm_template": "Intel machine check architecture supported.",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Intel machine check architecture supported."
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "[<02135342>] follow_page+0xda/0xe5"
+  ],
+  "logs_to_query_regex": [
+   "[<02135342>] follow_page+0xda/0xe5"
+  ],
+  "llm_template": "[<*>] follow_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] follow_page+<*>"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "POSIX conformance testing by UNIFIX"
+  ],
+  "logs_to_query_regex": [
+   "POSIX conformance testing by UNIFIX"
+  ],
+  "llm_template": "POSIX conformance testing by UNIFIX",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "POSIX conformance testing by UNIFIX"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "NET: Registered protocol family 16",
+   "NET: Registered protocol family 2",
+   "NET: Registered protocol family 17"
+  ],
+  "logs_to_query_regex": [
+   "NET: Registered protocol family 16",
+   "NET: Registered protocol family 2",
+   "NET: Registered protocol family 17"
+  ],
+  "llm_template": "NET: Registered protocol family <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "NET: Registered protocol family <*>"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "[<0213f1ba>] rw_vm+0x1ce/0x1ea"
+  ],
+  "logs_to_query_regex": [
+   "[<0213f1ba>] rw_vm+0x1ce/0x1ea"
+  ],
+  "llm_template": "[<*>] rw_vm+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] rw_vm+<*>"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "connection from 202.82.200.188 () at Thu <*> 7 16:33:52 2005",
+   "connection from 221.4.102.93 () at Thu <*> 7 23:09:45 2005",
+   "connection from 216.12.111.241 () at Thu <*> 21 09:04:43 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 202.82.200.188 () at Thu <*> 7 16:33:52 2005",
+   "connection from 221.4.102.93 () at Thu <*> 7 23:09:45 2005",
+   "connection from 216.12.111.241 () at Thu <*> 21 09:04:43 2005"
+  ],
+  "llm_template": "connection from <*> () at Thu <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "[<0212bd04>] find_or_create_page+0x39/0x70"
+  ],
+  "logs_to_query_regex": [
+   "[<0212bd04>] find_or_create_page+0x39/0x70"
+  ],
+  "llm_template": "[<*>] find_or_create_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] find_or_create_page+<*>"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "[<02142ed7>] grow_dev_page+0x27/0xc3"
+  ],
+  "logs_to_query_regex": [
+   "[<02142ed7>] grow_dev_page+0x27/0xc3"
+  ],
+  "llm_template": "[<02142ed7>] grow_dev_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] grow_dev_page+<*>"
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "PCI: Using configuration type 1"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Using configuration type 1"
+  ],
+  "llm_template": "PCI: Using configuration type <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "PCI: Using configuration type <*>"
+ },
+ {
+  "iter": 49,
+  "logs_to_query": [
+   "[<02143014>] __getblk_slow+0xa1/0xcb"
+  ],
+  "logs_to_query_regex": [
+   "[<02143014>] __getblk_slow+0xa1/0xcb"
+  ],
+  "llm_template": "[<*>] __getblk_slow+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __getblk_slow+<*>"
+ },
+ {
+  "iter": 50,
+  "logs_to_query": [
+   "usbcore: registered new driver usbfs",
+   "usbcore: registered new driver hiddev",
+   "usbcore: registered new driver hid"
+  ],
+  "logs_to_query_regex": [
+   "usbcore: registered new driver usbfs",
+   "usbcore: registered new driver hiddev",
+   "usbcore: registered new driver hid"
+  ],
+  "llm_template": "usbcore: registered new driver <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "usbcore: registered new driver <*>"
+ },
+ {
+  "iter": 51,
+  "logs_to_query": [
+   "[<0214328d>] __getblk+0x25/0x2b"
+  ],
+  "logs_to_query_regex": [
+   "[<0214328d>] __getblk+0x25/0x2b"
+  ],
+  "llm_template": "[<*>] __getblk+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __getblk+<*>"
+ },
+ {
+  "iter": 52,
+  "logs_to_query": [
+   "DMA zone: 4096 pages, LIFO batch:1",
+   "HighMem zone: 0 pages, LIFO batch:1"
+  ],
+  "logs_to_query_regex": [
+   "DMA zone: 4096 pages, LIFO batch:1",
+   "HighMem zone: 0 pages, LIFO batch:1"
+  ],
+  "llm_template": "DMA zone: <*> pages, LIFO batch:<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "DMA zone: <*> pages, LIFO batch:<*>"
+ },
+ {
+  "iter": 53,
+  "logs_to_query": [
+   "126MB LOWMEM available."
+  ],
+  "logs_to_query_regex": [
+   "126MB LOWMEM available."
+  ],
+  "llm_template": "<*> LOWMEM available.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "<*> LOWMEM available."
+ },
+ {
+  "iter": 54,
+  "logs_to_query": [
+   "Normal zone: 28334 pages, LIFO batch:6"
+  ],
+  "logs_to_query_regex": [
+   "Normal zone: 28334 pages, LIFO batch:6"
+  ],
+  "llm_template": "Normal zone: <*> pages, LIFO batch:<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Normal zone: <*> pages, LIFO batch:<*>"
+ },
+ {
+  "iter": 55,
+  "logs_to_query": [
+   "[<0212db65>] mempool_alloc+0x5d/0xf6"
+  ],
+  "logs_to_query_regex": [
+   "[<0212db65>] mempool_alloc+0x5d/0xf6"
+  ],
+  "llm_template": "[<*>] mempool_alloc+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] mempool_alloc+<*>"
+ },
+ {
+  "iter": 56,
+  "logs_to_query": [
+   "zapping low mappings."
+  ],
+  "logs_to_query_regex": [
+   "zapping low mappings."
+  ],
+  "llm_template": "zapping low mappings.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "zapping low mappings."
+ },
+ {
+  "iter": 57,
+  "logs_to_query": [
+   "connection from 210.202.115.220 (NK210-202-115-220.adsl.static.ebtnet.net) at Tue Aug 9 09:12:50 2005",
+   "connection from 210.202.115.220 (NK210-202-115-220.adsl.static.ebtnet.net) at Tue Aug 9 09:12:51 2005"
+  ],
+  "logs_to_query_regex": [
+   "connection from 210.202.115.220 (NK210-202-115-220.adsl.static.ebtnet.net) at Tue Aug 9 09:12:50 2005",
+   "connection from 210.202.115.220 (NK210-202-115-220.adsl.static.ebtnet.net) at Tue Aug 9 09:12:51 2005"
+  ],
+  "llm_template": "connection from <*> (<*>) at <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "connection from <*> (<*>) at <*>"
+ },
+ {
+  "iter": 58,
+  "logs_to_query": [
+   "HighMem zone: 0 pages, LIFO batch:1"
+  ],
+  "logs_to_query_regex": [
+   "HighMem zone: 0 pages, LIFO batch:1"
+  ],
+  "llm_template": "HighMem zone: <*> pages, LIFO batch:<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "HighMem zone: <*> pages, LIFO batch:<*>"
+ },
+ {
+  "iter": 59,
+  "logs_to_query": [
+   "DMI 2.3 present."
+  ],
+  "logs_to_query_regex": [
+   "DMI 2.3 present."
+  ],
+  "llm_template": "DMI <*> present.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "DMI <*> present."
+ },
+ {
+  "iter": 60,
+  "logs_to_query": [
+   "Initializing random number generator: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Initializing random number generator: succeeded"
+  ],
+  "llm_template": "Initializing random number generator: <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Initializing random number generator: succeeded"
+ },
+ {
+  "iter": 61,
+  "logs_to_query": [
+   "[<02158800>] __mark_inode_dirty+0x20/0xca"
+  ],
+  "logs_to_query_regex": [
+   "[<02158800>] __mark_inode_dirty+0x20/0xca"
+  ],
+  "llm_template": "[<*>] __mark_inode_dirty+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __mark_inode_dirty+<*>"
+ },
+ {
+  "iter": 62,
+  "logs_to_query": [
+   "You can enable it with acpi=force"
+  ],
+  "logs_to_query_regex": [
+   "You can enable it with acpi=force"
+  ],
+  "llm_template": "You can enable it with <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "You can enable it with <*>"
+ },
+ {
+  "iter": 63,
+  "logs_to_query": [
+   "Built 1 zonelists"
+  ],
+  "logs_to_query_regex": [
+   "Built 1 zonelists"
+  ],
+  "llm_template": "Built <*> zonelists",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Built <*> zonelists"
+ },
+ {
+  "iter": 64,
+  "logs_to_query": [
+   "audit: initializing netlink socket (disabled)"
+  ],
+  "logs_to_query_regex": [
+   "audit: initializing netlink socket (disabled)"
+  ],
+  "llm_template": "audit: initializing netlink socket (disabled)",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "audit: initializing netlink socket (disabled)"
+ },
+ {
+  "iter": 65,
+  "logs_to_query": [
+   "Failure registering capabilities with the kernel"
+  ],
+  "logs_to_query_regex": [
+   "Failure registering capabilities with the kernel"
+  ],
+  "llm_template": "Failure registering capabilities with the kernel",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Failure registering capabilities with the kernel"
+ },
+ {
+  "iter": 66,
+  "logs_to_query": [
+   "Capability LSM initialized"
+  ],
+  "logs_to_query_regex": [
+   "Capability LSM initialized"
+  ],
+  "llm_template": "Capability LSM initialized",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Capability LSM initialized"
+ },
+ {
+  "iter": 67,
+  "logs_to_query": [
+   "Total HugeTLB memory allocated, 0"
+  ],
+  "logs_to_query_regex": [
+   "Total HugeTLB memory allocated, 0"
+  ],
+  "llm_template": "Total HugeTLB memory allocated, <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Total HugeTLB memory allocated, <*>"
+ },
+ {
+  "iter": 68,
+  "logs_to_query": [
+   "[<0215456f>] inode_update_time+0x8e/0x96"
+  ],
+  "logs_to_query_regex": [
+   "[<0215456f>] inode_update_time+0x8e/0x96"
+  ],
+  "llm_template": "[<*>] inode_update_time+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] inode_update_time+<*>"
+ },
+ {
+  "iter": 69,
+  "logs_to_query": [
+   "PCI: Invalid ACPI-PCI IRQ routing table"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Invalid ACPI-PCI IRQ routing table"
+  ],
+  "llm_template": "PCI: Invalid ACPI-PCI IRQ routing table",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "PCI: Invalid ACPI-PCI IRQ routing table"
+ },
+ {
+  "iter": 70,
+  "logs_to_query": [
+   "Version 1.0.6 Starting"
+  ],
+  "logs_to_query_regex": [
+   "Version 1.0.6 Starting"
+  ],
+  "llm_template": "Version <*> Starting",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Version <*> Starting"
+ },
+ {
+  "iter": 71,
+  "logs_to_query": [
+   "isapnp: Scanning for PnP cards..."
+  ],
+  "logs_to_query_regex": [
+   "isapnp: Scanning for PnP cards..."
+  ],
+  "llm_template": "isapnp: Scanning for PnP cards...",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "isapnp: Scanning for PnP cards..."
+ },
+ {
+  "iter": 72,
+  "logs_to_query": [
+   "PCI: Probing PCI hardware (bus 00)"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Probing PCI hardware (bus 00)"
+  ],
+  "llm_template": "PCI: Probing PCI hardware (bus <*>)",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "PCI: Probing PCI hardware (bus <*>)"
+ },
+ {
+  "iter": 73,
+  "logs_to_query": [
+   "[<0212cfe2>] generic_file_aio_write_nolock+0x302/0x84e"
+  ],
+  "logs_to_query_regex": [
+   "[<0212cfe2>] generic_file_aio_write_nolock+0x302/0x84e"
+  ],
+  "llm_template": "[<*>] generic_file_aio_write_nolock+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] generic_file_aio_write_nolock+<*>"
+ },
+ {
+  "iter": 74,
+  "logs_to_query": [
+   "ACPI: Interpreter disabled."
+  ],
+  "logs_to_query_regex": [
+   "ACPI: Interpreter disabled."
+  ],
+  "llm_template": "ACPI: Interpreter disabled.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "ACPI: Interpreter disabled."
+ },
+ {
+  "iter": 75,
+  "logs_to_query": [
+   "Real Time Clock Driver v1.12"
+  ],
+  "logs_to_query_regex": [
+   "Real Time Clock Driver v1.12"
+  ],
+  "llm_template": "Real Time Clock Driver <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Real Time Clock Driver <*>"
+ },
+ {
+  "iter": 76,
+  "logs_to_query": [
+   "agpgart: detected 4MB dedicated video ram."
+  ],
+  "logs_to_query_regex": [
+   "agpgart: detected 4MB dedicated video ram."
+  ],
+  "llm_template": "agpgart: detected <*> dedicated video ram.",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "agpgart: detected <*> dedicated video ram."
+ },
+ {
+  "iter": 77,
+  "logs_to_query": [
+   "Starting pcmcia: succeeded",
+   "Starting readahead: succeeded",
+   "Starting hpoj: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Starting pcmcia: succeeded",
+   "Starting readahead: succeeded",
+   "Starting hpoj: succeeded"
+  ],
+  "llm_template": "Starting <*>: succeeded",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Starting pcmcia: succeeded"
+ },
+ {
+  "iter": 78,
+  "logs_to_query": [
+   "HCI daemon ver 2.4 started"
+  ],
+  "logs_to_query_regex": [
+   "HCI daemon ver 2.4 started"
+  ],
+  "llm_template": "HCI daemon ver <*> started",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "HCI daemon ver <*> started"
+ },
+ {
+  "iter": 79,
+  "logs_to_query": [
+   "[<021c8bda>] vt_console_print+0x64/0x28f"
+  ],
+  "logs_to_query_regex": [
+   "[<021c8bda>] vt_console_print+0x64/0x28f"
+  ],
+  "llm_template": "[<*>] vt_console_print+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] vt_console_print+<*>"
+ },
+ {
+  "iter": 80,
+  "logs_to_query": [
+   "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2"
+  ],
+  "logs_to_query_regex": [
+   "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2"
+  ],
+  "llm_template": "Uniform Multi-Platform E-IDE driver Revision: <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Uniform Multi-Platform E-IDE driver Revision: <*>"
+ },
+ {
+  "iter": 81,
+  "logs_to_query": [
+   "BIOS-provided physical RAM map:"
+  ],
+  "logs_to_query_regex": [
+   "BIOS-provided physical RAM map:"
+  ],
+  "llm_template": "BIOS-provided physical RAM map:",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "BIOS-provided physical RAM map:"
+ },
+ {
+  "iter": 82,
+  "logs_to_query": [
+   "Bringing up loopback interface: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Bringing up loopback interface: succeeded"
+  ],
+  "llm_template": "Bringing up loopback interface: succeeded",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Bringing up loopback interface: succeeded"
+ },
+ {
+  "iter": 83,
+  "logs_to_query": [
+   "klogd 1.4.1, log source = /proc/kmsg started."
+  ],
+  "logs_to_query_regex": [
+   "klogd 1.4.1, log source = /proc/kmsg started."
+  ],
+  "llm_template": "klogd <*> log source = <*> started.",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "klogd <*>, log source = <*> started."
+ },
+ {
+  "iter": 84,
+  "logs_to_query": [
+   "ide0 at 0x1f0-0x1f7,0x3f6 on irq 14"
+  ],
+  "logs_to_query_regex": [
+   "ide0 at 0x1f0-0x1f7,0x3f6 on irq 14"
+  ],
+  "llm_template": "ide0 at <*> on irq <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "ide0 at <*> on irq <*>"
+ },
+ {
+  "iter": 85,
+  "logs_to_query": [
+   "hda: max request size: 128KiB"
+  ],
+  "logs_to_query_regex": [
+   "hda: max request size: 128KiB"
+  ],
+  "llm_template": "hda: max request size: <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "hda: max request size: <*>"
+ },
+ {
+  "iter": 86,
+  "logs_to_query": [
+   "Detected 731.214 MHz processor.",
+   "Detected 730.921 MHz processor.",
+   "Detected 731.217 MHz processor."
+  ],
+  "logs_to_query_regex": [
+   "Detected 731.214 MHz processor.",
+   "Detected 730.921 MHz processor.",
+   "Detected 731.217 MHz processor."
+  ],
+  "llm_template": "Detected <*> MHz processor.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Detected <*> MHz processor."
+ },
+ {
+  "iter": 87,
+  "logs_to_query": [
+   "Kernel command line: ro root=LABEL=/ rhgb quiet"
+  ],
+  "logs_to_query_regex": [
+   "Kernel command line: ro root=LABEL=/ rhgb quiet"
+  ],
+  "llm_template": "Kernel command line: ro root=<*> rhgb quiet",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Kernel command line: ro root=<*> rhgb quiet"
+ },
+ {
+  "iter": 88,
+  "logs_to_query": [
+   "[<021288cf>] __print_symbol+0x110/0x121"
+  ],
+  "logs_to_query_regex": [
+   "[<021288cf>] __print_symbol+0x110/0x121"
+  ],
+  "llm_template": "[<*>] __print_symbol+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __print_symbol+<*>"
+ },
+ {
+  "iter": 89,
+  "logs_to_query": [
+   "ide1 at 0x170-0x177,0x376 on irq 15"
+  ],
+  "logs_to_query_regex": [
+   "ide1 at 0x170-0x177,0x376 on irq 15"
+  ],
+  "llm_template": "ide1 at <*> on irq <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "ide1 at <*> on irq <*>"
+ },
+ {
+  "iter": 90,
+  "logs_to_query": [
+   "Uniform CD-ROM driver Revision: 3.20"
+  ],
+  "logs_to_query_regex": [
+   "Uniform CD-ROM driver Revision: 3.20"
+  ],
+  "llm_template": "Uniform CD-ROM driver Revision: <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Uniform CD-ROM driver Revision: <*>"
+ },
+ {
+  "iter": 91,
+  "logs_to_query": [
+   "Console: colour VGA+ 80x25"
+  ],
+  "logs_to_query_regex": [
+   "Console: colour VGA+ 80x25"
+  ],
+  "llm_template": "Console: colour VGA+ <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Console: colour <*>"
+ },
+ {
+  "iter": 92,
+  "logs_to_query": [
+   "CPU: Intel Pentium III (Coppermine) stepping 06"
+  ],
+  "logs_to_query_regex": [
+   "CPU: Intel Pentium III (Coppermine) stepping 06"
+  ],
+  "llm_template": "CPU: Intel Pentium III (Coppermine) stepping <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "CPU: Intel Pentium III (Coppermine) stepping <*>"
+ },
+ {
+  "iter": 93,
+  "logs_to_query": [
+   "Charge: * * * (-1% unknown)"
+  ],
+  "logs_to_query_regex": [
+   "Charge: * * * (-1% unknown)"
+  ],
+  "llm_template": "Charge: * * * (-<*>% unknown)",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Charge: * * * (<*> unknown)"
+ },
+ {
+  "iter": 94,
+  "logs_to_query": [
+   "Freeing initrd memory: 186k freed"
+  ],
+  "logs_to_query_regex": [
+   "Freeing initrd memory: 186k freed"
+  ],
+  "llm_template": "Freeing initrd memory: <*> freed",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Freeing initrd memory: <*> freed"
+ },
+ {
+  "iter": 95,
+  "logs_to_query": [
+   "Security Scaffold v1.0.0 initialized"
+  ],
+  "logs_to_query_regex": [
+   "Security Scaffold v1.0.0 initialized"
+  ],
+  "llm_template": "Security Scaffold <*> initialized",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Security Scaffold <*> initialized"
+ },
+ {
+  "iter": 96,
+  "logs_to_query": [
+   "Initializing Cryptographic API"
+  ],
+  "logs_to_query_regex": [
+   "Initializing Cryptographic API"
+  ],
+  "llm_template": "Initializing Cryptographic API",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Initializing Cryptographic API"
+ },
+ {
+  "iter": 97,
+  "logs_to_query": [
+   "Enabling fast FPU save and restore... done."
+  ],
+  "logs_to_query_regex": [
+   "Enabling fast FPU save and restore... done."
+  ],
+  "llm_template": "Enabling fast FPU save and restore... done.",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Enabling fast FPU save and restore... done."
+ },
+ {
+  "iter": 98,
+  "logs_to_query": [
+   "[<0212d602>] generic_file_aio_write+0x69/0x7c"
+  ],
+  "logs_to_query_regex": [
+   "[<0212d602>] generic_file_aio_write+0x69/0x7c"
+  ],
+  "llm_template": "[<*>] generic_file_aio_write+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] generic_file_aio_write+<*>"
+ },
+ {
+  "iter": 99,
+  "logs_to_query": [
+   "Device: /dev/hda, found in smartd database."
+  ],
+  "logs_to_query_regex": [
+   "Device: /dev/hda, found in smartd database."
+  ],
+  "llm_template": "Device: <*> found in smartd database.",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Device: <*>, found in smartd database."
+ },
+ {
+  "iter": 100,
+  "logs_to_query": [
+   "VFS: Mounted root (ext2 filesystem)."
+  ],
+  "logs_to_query_regex": [
+   "VFS: Mounted root (ext2 filesystem)."
+  ],
+  "llm_template": "VFS: Mounted root (<*>).",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "VFS: Mounted root (ext2 filesystem)."
+ },
+ {
+  "iter": 101,
+  "logs_to_query": [
+   "CPU: L2 cache: 256K"
+  ],
+  "logs_to_query_regex": [
+   "CPU: L2 cache: 256K"
+  ],
+  "llm_template": "CPU: L2 cache: <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "CPU: L2 cache: <*>"
+ },
+ {
+  "iter": 102,
+  "logs_to_query": [
+   "Device: /dev/hda, opened"
+  ],
+  "logs_to_query_regex": [
+   "Device: /dev/hda, opened"
+  ],
+  "llm_template": "Device: <*> opened",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Device: <*>, opened"
+ },
+ {
+  "iter": 103,
+  "logs_to_query": [
+   "Enabling unmasked SIMD FPU exception support... done."
+  ],
+  "logs_to_query_regex": [
+   "Enabling unmasked SIMD FPU exception support... done."
+  ],
+  "llm_template": "Enabling unmasked SIMD FPU exception support... done.",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Enabling unmasked SIMD FPU exception support... done."
+ },
+ {
+  "iter": 104,
+  "logs_to_query": [
+   "md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27"
+  ],
+  "logs_to_query_regex": [
+   "md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27"
+  ],
+  "llm_template": "md: md driver <*> MAX_MD_DEVS=<*>, MD_SB_DISKS=<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "md: md driver <*> MAX_MD_DEVS=<*>, MD_SB_DISKS=<*>"
+ },
+ {
+  "iter": 105,
+  "logs_to_query": [
+   "creating device node '/udev/lp0'",
+   "creating device node '/udev/vcsa3'",
+   "creating device node '/udev/vcsa6'"
+  ],
+  "logs_to_query_regex": [
+   "creating device node '/udev/lp0'",
+   "creating device node '/udev/vcsa3'",
+   "creating device node '/udev/vcsa6'"
+  ],
+  "llm_template": "creating device node '<*>'",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "creating device node <*>"
+ },
+ {
+  "iter": 106,
+  "logs_to_query": [
+   "IPv6 over IPv4 tunneling driver"
+  ],
+  "logs_to_query_regex": [
+   "IPv6 over IPv4 tunneling driver"
+  ],
+  "llm_template": "IPv6 over IPv4 tunneling driver",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "IPv6 over IPv4 tunneling driver"
+ },
+ {
+  "iter": 107,
+  "logs_to_query": [
+   "Checking 'hlt' instruction... OK."
+  ],
+  "logs_to_query_regex": [
+   "Checking 'hlt' instruction... OK."
+  ],
+  "llm_template": "Checking <*> instruction... OK.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Checking <*> instruction... OK."
+ },
+ {
+  "iter": 108,
+  "logs_to_query": [
+   "ide-floppy driver 0.99.newide"
+  ],
+  "logs_to_query_regex": [
+   "ide-floppy driver 0.99.newide"
+  ],
+  "llm_template": "ide-floppy driver <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "ide-floppy driver <*>"
+ },
+ {
+  "iter": 109,
+  "logs_to_query": [
+   "isapnp: No Plug & Play device found"
+  ],
+  "logs_to_query_regex": [
+   "isapnp: No Plug & Play device found"
+  ],
+  "llm_template": "isapnp: No Plug & Play device found",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "isapnp: No Plug & Play device found"
+ },
+ {
+  "iter": 110,
+  "logs_to_query": [
+   "[<02141447>] do_sync_write+0x68/0x9d"
+  ],
+  "logs_to_query_regex": [
+   "[<02141447>] do_sync_write+0x68/0x9d"
+  ],
+  "llm_template": "[<*>] do_sync_write+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_sync_write+<*>"
+ },
+ {
+  "iter": 111,
+  "logs_to_query": [
+   "syslogd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "syslogd startup succeeded"
+  ],
+  "llm_template": "syslogd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 112,
+  "logs_to_query": [
+   "kjournald starting. Commit interval 5 seconds"
+  ],
+  "logs_to_query_regex": [
+   "kjournald starting. Commit interval 5 seconds"
+  ],
+  "llm_template": "kjournald starting. Commit interval <*> seconds",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "kjournald starting. Commit interval <*> seconds"
+ },
+ {
+  "iter": 113,
+  "logs_to_query": [
+   "uhci_hcd 0000:00:1f.2: UHCI Host Controller"
+  ],
+  "logs_to_query_regex": [
+   "uhci_hcd 0000:00:1f.2: UHCI Host Controller"
+  ],
+  "llm_template": "uhci_hcd <*>: UHCI Host Controller",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "uhci_hcd <*>: UHCI Host Controller"
+ },
+ {
+  "iter": 114,
+  "logs_to_query": [
+   "ACPI: Subsystem revision 20040326"
+  ],
+  "logs_to_query_regex": [
+   "ACPI: Subsystem revision 20040326"
+  ],
+  "llm_template": "ACPI: Subsystem revision <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "ACPI: Subsystem revision <*>"
+ },
+ {
+  "iter": 115,
+  "logs_to_query": [
+   "md: autorun ..."
+  ],
+  "logs_to_query_regex": [
+   "md: autorun ..."
+  ],
+  "llm_template": "md: autorun ...",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "md: autorun ..."
+ },
+ {
+  "iter": 116,
+  "logs_to_query": [
+   "Linux agpgart interface v0.100 (c) Dave <*>es"
+  ],
+  "logs_to_query_regex": [
+   "Linux agpgart interface v0.100 (c) Dave <*>es"
+  ],
+  "llm_template": "Linux agpgart interface v0.<*> (c) Dave <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Linux agpgart interface <*> (c) Dave Jones"
+ },
+ {
+  "iter": 117,
+  "logs_to_query": [
+   "klogd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "klogd startup succeeded"
+  ],
+  "llm_template": "klogd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 118,
+  "logs_to_query": [
+   "inserting floppy driver for 2.6.5-1.358"
+  ],
+  "logs_to_query_regex": [
+   "inserting floppy driver for 2.6.5-1.358"
+  ],
+  "llm_template": "inserting floppy driver for <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "inserting floppy driver for <*>"
+ },
+ {
+  "iter": 119,
+  "logs_to_query": [
+   "PCI: Probing PCI hardware"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Probing PCI hardware"
+  ],
+  "llm_template": "PCI: Probing PCI hardware",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "PCI: Probing PCI hardware"
+ },
+ {
+  "iter": 120,
+  "logs_to_query": [
+   "EXT3-fs: recovery complete."
+  ],
+  "logs_to_query_regex": [
+   "EXT3-fs: recovery complete."
+  ],
+  "llm_template": "EXT3-fs: recovery complete.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "EXT3-fs: recovery complete."
+ },
+ {
+  "iter": 121,
+  "logs_to_query": [
+   "agpgart: Detected an Intel i810 E Chipset."
+  ],
+  "logs_to_query_regex": [
+   "agpgart: Detected an Intel i810 E Chipset."
+  ],
+  "llm_template": "agpgart: Detected an Intel <*> Chipset.",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "agpgart: Detected an <*> Chipset."
+ },
+ {
+  "iter": 122,
+  "logs_to_query": [
+   "[<02118726>] __call_console_drivers+0x36/0x42"
+  ],
+  "logs_to_query_regex": [
+   "[<02118726>] __call_console_drivers+0x36/0x42"
+  ],
+  "llm_template": "[<*>] __call_console_drivers+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __call_console_drivers+<*>"
+ },
+ {
+  "iter": 123,
+  "logs_to_query": [
+   "cdrom: open failed."
+  ],
+  "logs_to_query_regex": [
+   "cdrom: open failed."
+  ],
+  "llm_template": "cdrom: open failed.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "cdrom: open failed."
+ },
+ {
+  "iter": 124,
+  "logs_to_query": [
+   "EXT3-fs: hda2: 4 orphan inodes deleted"
+  ],
+  "logs_to_query_regex": [
+   "EXT3-fs: hda2: 4 orphan inodes deleted"
+  ],
+  "llm_template": "EXT3-fs: <*>: <*> orphan inodes deleted",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "EXT3-fs: <*>: <*> orphan inodes deleted"
+ },
+ {
+  "iter": 125,
+  "logs_to_query": [
+   "Floppy drive(s): fd0 is 1.44M"
+  ],
+  "logs_to_query_regex": [
+   "Floppy drive(s): fd0 is 1.44M"
+  ],
+  "llm_template": "Floppy drive(s): <*> is <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Floppy drive(s): <*> is <*>"
+ },
+ {
+  "iter": 126,
+  "logs_to_query": [
+   "Freeing unused kernel memory: 144k freed"
+  ],
+  "logs_to_query_regex": [
+   "Freeing unused kernel memory: 144k freed"
+  ],
+  "llm_template": "Freeing unused kernel memory: <*> freed",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Freeing unused kernel memory: <*> freed"
+ },
+ {
+  "iter": 127,
+  "logs_to_query": [
+   "[<021189cd>] printk+0x106/0x113"
+  ],
+  "logs_to_query_regex": [
+   "[<021189cd>] printk+0x106/0x113"
+  ],
+  "llm_template": "[<*>] printk+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] printk+<*>"
+ },
+ {
+  "iter": 128,
+  "logs_to_query": [
+   "irqbalance startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "irqbalance startup succeeded"
+  ],
+  "llm_template": "irqbalance startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 129,
+  "logs_to_query": [
+   "Transparent bridge - 0000:00:1e.0"
+  ],
+  "logs_to_query_regex": [
+   "Transparent bridge - 0000:00:1e.0"
+  ],
+  "llm_template": "Transparent bridge - <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Transparent bridge - <*>"
+ },
+ {
+  "iter": 130,
+  "logs_to_query": [
+   "agpgart: AGP aperture is 64M @ 0xf4000000"
+  ],
+  "logs_to_query_regex": [
+   "agpgart: AGP aperture is 64M @ 0xf4000000"
+  ],
+  "llm_template": "agpgart: AGP aperture is <*> @ <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "agpgart: AGP aperture is <*> @ <*>"
+ },
+ {
+  "iter": 131,
+  "logs_to_query": [
+   "SCSI subsystem initialized"
+  ],
+  "logs_to_query_regex": [
+   "SCSI subsystem initialized"
+  ],
+  "llm_template": "SCSI subsystem initialized",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "SCSI subsystem initialized"
+ },
+ {
+  "iter": 132,
+  "logs_to_query": [
+   "Bluetooth: HCI socket layer initialized",
+   "Bluetooth: RFCOMM socket layer initialized"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: HCI socket layer initialized",
+   "Bluetooth: RFCOMM socket layer initialized"
+  ],
+  "llm_template": "Bluetooth: <*> socket layer initialized",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Bluetooth: HCI socket layer initialized"
+ },
+ {
+  "iter": 133,
+  "logs_to_query": [
+   "Disabled Privacy Extensions on device 022db720(lo)"
+  ],
+  "logs_to_query_regex": [
+   "Disabled Privacy Extensions on device 022db720(lo)"
+  ],
+  "llm_template": "Disabled Privacy Extensions on device <*>(lo)",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Disabled Privacy Extensions on device <*>(<*>)"
+ },
+ {
+  "iter": 134,
+  "logs_to_query": [
+   "portmap startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "portmap startup succeeded"
+  ],
+  "llm_template": "portmap startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 135,
+  "logs_to_query": [
+   "VFS: Disk quotas dquot_6.5.1"
+  ],
+  "logs_to_query_regex": [
+   "VFS: Disk quotas dquot_6.5.1"
+  ],
+  "llm_template": "VFS: Disk quotas <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "VFS: Disk quotas <*>"
+ },
+ {
+  "iter": 136,
+  "logs_to_query": [
+   "ICH: IDE controller at PCI slot 0000:00:1f.1"
+  ],
+  "logs_to_query_regex": [
+   "ICH: IDE controller at PCI slot 0000:00:1f.1"
+  ],
+  "llm_template": "ICH: IDE controller at PCI slot <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "ICH: IDE controller at PCI slot <*>"
+ },
+ {
+  "iter": 137,
+  "logs_to_query": [
+   "[<021060c2>] show_trace+0x92/0x97"
+  ],
+  "logs_to_query_regex": [
+   "[<021060c2>] show_trace+0x92/0x97"
+  ],
+  "llm_template": "[<*>] show_trace+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] show_trace+<*>"
+ },
+ {
+  "iter": 138,
+  "logs_to_query": [
+   "ALERT exited abnormally with [1]"
+  ],
+  "logs_to_query_regex": [
+   "ALERT exited abnormally with [1]"
+  ],
+  "llm_template": "ALERT exited abnormally with [<*>]",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "ALERT exited abnormally with <*>"
+ },
+ {
+  "iter": 139,
+  "logs_to_query": [
+   "*** info [startup.c(95)]:",
+   "*** info [client.c(284)]:",
+   "*** info [mice.c(1766)]:"
+  ],
+  "logs_to_query_regex": [
+   "*** info [startup.c(95)]:",
+   "*** info [client.c(284)]:",
+   "*** info [mice.c(1766)]:"
+  ],
+  "llm_template": "*** info [<*>]:",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "*** info [startup.c(<*>)]:"
+ },
+ {
+  "iter": 140,
+  "logs_to_query": [
+   "EXT3 FS on hda2, internal journal",
+   "EXT3 FS on hda1, internal journal"
+  ],
+  "logs_to_query_regex": [
+   "EXT3 FS on hda2, internal journal",
+   "EXT3 FS on hda1, internal journal"
+  ],
+  "llm_template": "EXT3 FS on <*> internal journal",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "EXT3 FS on <*>, internal journal"
+ },
+ {
+  "iter": 141,
+  "logs_to_query": [
+   "rpc.statd startup succeeded",
+   "snmpd startup succeeded",
+   "httpd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "rpc.statd startup succeeded",
+   "snmpd startup succeeded",
+   "httpd startup succeeded"
+  ],
+  "llm_template": "rpc.statd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 142,
+  "logs_to_query": [
+   "SELinux: Registering netfilter hooks",
+   "SELinux: Unregistering netfilter hooks"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Registering netfilter hooks",
+   "SELinux: Unregistering netfilter hooks"
+  ],
+  "llm_template": "SELinux: <*> netfilter hooks",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "SELinux: Registering netfilter hooks"
+ },
+ {
+  "iter": 143,
+  "logs_to_query": [
+   "Monitoring 1 ATA and 0 SCSI devices"
+  ],
+  "logs_to_query_regex": [
+   "Monitoring 1 ATA and 0 SCSI devices"
+  ],
+  "llm_template": "Monitoring <*> ATA and <*> SCSI devices",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Monitoring <*> ATA and <*> SCSI devices"
+ },
+ {
+  "iter": 144,
+  "logs_to_query": [
+   "[<02106159>] dump_stack+0x11/0x13"
+  ],
+  "logs_to_query_regex": [
+   "[<02106159>] dump_stack+0x11/0x13"
+  ],
+  "llm_template": "[<*>] dump_stack+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] dump_stack+<*>"
+ },
+ {
+  "iter": 145,
+  "logs_to_query": [
+   "Bluetooth: RFCOMM TTY layer initialized"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: RFCOMM TTY layer initialized"
+  ],
+  "llm_template": "Bluetooth: RFCOMM TTY layer initialized",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Bluetooth: RFCOMM TTY layer initialized"
+ },
+ {
+  "iter": 146,
+  "logs_to_query": [
+   "rpc.idmapd startup succeeded",
+   "gpm startup succeeded",
+   "hcid startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "rpc.idmapd startup succeeded",
+   "gpm startup succeeded",
+   "hcid startup succeeded"
+  ],
+  "llm_template": "rpc.idmapd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 147,
+  "logs_to_query": [
+   "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1"
+  ],
+  "logs_to_query_regex": [
+   "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1"
+  ],
+  "llm_template": "input: ImPS/2 <*> Wheel Mouse on <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "input: <*> on <*>"
+ },
+ {
+  "iter": 148,
+  "logs_to_query": [
+   "removing device node '/udev/vcs2'",
+   "removing device node '/udev/vcsa5'",
+   "removing device node '/udev/vcs5'"
+  ],
+  "logs_to_query_regex": [
+   "removing device node '/udev/vcs2'",
+   "removing device node '/udev/vcsa5'",
+   "removing device node '/udev/vcs5'"
+  ],
+  "llm_template": "removing device node '<*>'",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "removing device node <*>"
+ },
+ {
+  "iter": 149,
+  "logs_to_query": [
+   "Setting network parameters: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Setting network parameters: succeeded"
+  ],
+  "llm_template": "Setting network parameters: <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Setting network parameters: succeeded"
+ },
+ {
+  "iter": 150,
+  "logs_to_query": [
+   "Started working: 30 available services"
+  ],
+  "logs_to_query_regex": [
+   "Started working: 30 available services"
+  ],
+  "llm_template": "Started working: <*> available services",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Started working: <*> available services"
+ },
+ {
+  "iter": 151,
+  "logs_to_query": [
+   "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]"
+  ],
+  "logs_to_query_regex": [
+   "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]"
+  ],
+  "llm_template": "<*>: PC-style at <*> (<*>) [<*>]",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "parport0: PC-style at <*> (<*>) [<*>]"
+ },
+ {
+  "iter": 152,
+  "logs_to_query": [
+   "hcid startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "hcid startup succeeded"
+  ],
+  "llm_template": "hcid startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 153,
+  "logs_to_query": [
+   "RAMDISK: Compressed image found at block 0"
+  ],
+  "logs_to_query_regex": [
+   "RAMDISK: Compressed image found at block 0"
+  ],
+  "llm_template": "RAMDISK: Compressed image found at block <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "RAMDISK: Compressed image found at block <*>"
+ },
+ {
+  "iter": 154,
+  "logs_to_query": [
+   "[<02129a6c>] do_acct_process+0x283/0x297"
+  ],
+  "logs_to_query_regex": [
+   "[<02129a6c>] do_acct_process+0x283/0x297"
+  ],
+  "llm_template": "[<*>] do_acct_process+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_acct_process+<*>"
+ },
+ {
+  "iter": 155,
+  "logs_to_query": [
+   "Mounting other filesystems: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Mounting other filesystems: succeeded"
+  ],
+  "llm_template": "Mounting other filesystems: <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Mounting other filesystems: succeeded"
+ },
+ {
+  "iter": 156,
+  "logs_to_query": [
+   "Starting background readahead:"
+  ],
+  "logs_to_query_regex": [
+   "Starting background readahead:"
+  ],
+  "llm_template": "Starting background readahead:",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Starting background readahead:"
+ },
+ {
+  "iter": 157,
+  "logs_to_query": [
+   "kernel time sync status 0040"
+  ],
+  "logs_to_query_regex": [
+   "kernel time sync status 0040"
+  ],
+  "llm_template": "kernel time sync status <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "kernel time sync status <*>"
+ },
+ {
+  "iter": 158,
+  "logs_to_query": [
+   "sdpd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sdpd startup succeeded"
+  ],
+  "llm_template": "sdpd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 159,
+  "logs_to_query": [
+   "EXT3-fs: mounted filesystem with ordered data mode."
+  ],
+  "logs_to_query_regex": [
+   "EXT3-fs: mounted filesystem with ordered data mode."
+  ],
+  "llm_template": "EXT3-fs: mounted filesystem with ordered data mode.",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "EXT3-fs: mounted filesystem with ordered data mode."
+ },
+ {
+  "iter": 160,
+  "logs_to_query": [
+   "ICH: chipset revision 2"
+  ],
+  "logs_to_query_regex": [
+   "ICH: chipset revision 2"
+  ],
+  "llm_template": "ICH: chipset revision <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "ICH: chipset revision <*>"
+ },
+ {
+  "iter": 161,
+  "logs_to_query": [
+   "using 1 CPU"
+  ],
+  "logs_to_query_regex": [
+   "using 1 CPU"
+  ],
+  "llm_template": "using <*> CPU",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "using <*> CPU"
+ },
+ {
+  "iter": 162,
+  "logs_to_query": [
+   "kernel time sync disabled 0041"
+  ],
+  "logs_to_query_regex": [
+   "kernel time sync disabled 0041"
+  ],
+  "llm_template": "kernel time sync disabled <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "kernel time sync disabled <*>"
+ },
+ {
+  "iter": 163,
+  "logs_to_query": [
+   "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html"
+  ],
+  "logs_to_query_regex": [
+   "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html"
+  ],
+  "llm_template": "3c59x: <*> and others. <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "<*>: Donald Becker and others. <*>"
+ },
+ {
+  "iter": 164,
+  "logs_to_query": [
+   "apmd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "apmd startup succeeded"
+  ],
+  "llm_template": "apmd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 165,
+  "logs_to_query": [
+   "[<02129a95>] acct_process+0x15/0x1f"
+  ],
+  "logs_to_query_regex": [
+   "[<02129a95>] acct_process+0x15/0x1f"
+  ],
+  "llm_template": "[<*>] acct_process+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] acct_process+<*>"
+ },
+ {
+  "iter": 166,
+  "logs_to_query": [
+   "listening on IPv4 interface lo, 127.0.0.1#53",
+   "listening on IPv4 interface eth0:15, 63.126.79.90#53",
+   "listening on IPv4 interface eth0:8, 63.126.79.81#53"
+  ],
+  "logs_to_query_regex": [
+   "listening on IPv4 interface lo, 127.0.0.1#53",
+   "listening on IPv4 interface eth0:15, 63.126.79.90#53",
+   "listening on IPv4 interface eth0:8, 63.126.79.81#53"
+  ],
+  "llm_template": "listening on IPv4 interface <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "listening on IPv4 interface <*>, <*>"
+ },
+ {
+  "iter": 167,
+  "logs_to_query": [
+   "Using cfq io scheduler"
+  ],
+  "logs_to_query_regex": [
+   "Using cfq io scheduler"
+  ],
+  "llm_template": "Using <*> io scheduler",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Using <*> io scheduler"
+ },
+ {
+  "iter": 168,
+  "logs_to_query": [
+   "NET-SNMP version 5.1.1"
+  ],
+  "logs_to_query_regex": [
+   "NET-SNMP version 5.1.1"
+  ],
+  "llm_template": "NET-SNMP version <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "NET-SNMP version <*>"
+ },
+ {
+  "iter": 169,
+  "logs_to_query": [
+   "kernel time sync enabled 0001"
+  ],
+  "logs_to_query_regex": [
+   "kernel time sync enabled 0001"
+  ],
+  "llm_template": "kernel time sync enabled <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "kernel time sync enabled <*>"
+ },
+ {
+  "iter": 170,
+  "logs_to_query": [
+   "automount startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "automount startup succeeded"
+  ],
+  "llm_template": "automount startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 171,
+  "logs_to_query": [
+   "USB Universal Host Controller Interface driver v2.2"
+  ],
+  "logs_to_query_regex": [
+   "USB Universal Host Controller Interface driver v2.2"
+  ],
+  "llm_template": "USB Universal Host Controller Interface driver v2.<*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "USB Universal Host Controller Interface driver <*>"
+ },
+ {
+  "iter": 172,
+  "logs_to_query": [
+   "Home page is http://smartmontools.sourceforge.net/"
+  ],
+  "logs_to_query_regex": [
+   "Home page is http://smartmontools.sourceforge.net/"
+  ],
+  "llm_template": "Home page is <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Home page is <*>"
+ },
+ {
+  "iter": 173,
+  "logs_to_query": [
+   "kernel.core_uses_pid = 1",
+   "net.ipv4.conf.default.rp_filter = 1"
+  ],
+  "logs_to_query_regex": [
+   "kernel.core_uses_pid = 1",
+   "net.ipv4.conf.default.rp_filter = 1"
+  ],
+  "llm_template": "kernel.core_uses_pid = <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "kernel.core_uses_pid = <*>"
+ },
+ {
+  "iter": 174,
+  "logs_to_query": [
+   "Received SNMP packet(s) from 67.170.148.126",
+   "Received SNMP packet(s) from 62.193.6.2",
+   "Received SNMP packet(s) from 208.53.158.10"
+  ],
+  "logs_to_query_regex": [
+   "Received SNMP packet(s) from 67.170.148.126",
+   "Received SNMP packet(s) from 62.193.6.2",
+   "Received SNMP packet(s) from 208.53.158.10"
+  ],
+  "llm_template": "Received SNMP packet(s) from <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Received SNMP packet(s) from <*>"
+ },
+ {
+  "iter": 175,
+  "logs_to_query": [
+   "ip_tables: (C) 2000-2002 Netfilter core team"
+  ],
+  "logs_to_query_regex": [
+   "ip_tables: (C) 2000-2002 Netfilter core team"
+  ],
+  "llm_template": "ip_tables: (C) <*> Netfilter core team",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "ip_tables: (C) <*> Netfilter core team"
+ },
+ {
+  "iter": 176,
+  "logs_to_query": [
+   "smartd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "smartd startup succeeded"
+  ],
+  "llm_template": "smartd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 177,
+  "logs_to_query": [
+   "[<02119ccc>] do_exit+0x9f/0x2e3"
+  ],
+  "logs_to_query_regex": [
+   "[<02119ccc>] do_exit+0x9f/0x2e3"
+  ],
+  "llm_template": "[<*>] do_exit+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_exit+<*>"
+ },
+ {
+  "iter": 178,
+  "logs_to_query": [
+   "PCI: Found IRQ 11 for device 0000:00:1f.2",
+   "PCI: Found IRQ 5 for device 0000:01:0c.0"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Found IRQ 11 for device 0000:00:1f.2",
+   "PCI: Found IRQ 5 for device 0000:01:0c.0"
+  ],
+  "llm_template": "PCI: Found IRQ <*> for device <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "PCI: Found IRQ <*> for device <*>"
+ },
+ {
+  "iter": 179,
+  "logs_to_query": [
+   "bad username [;;]",
+   "bad username []",
+   "bad username [\\]"
+  ],
+  "logs_to_query_regex": [
+   "bad username [;;]",
+   "bad username []",
+   "bad username [\\]"
+  ],
+  "llm_template": "bad username <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "bad username [<*>]"
+ },
+ {
+  "iter": 180,
+  "logs_to_query": [
+   "shutting down for system reboot"
+  ],
+  "logs_to_query_regex": [
+   "shutting down for system reboot"
+  ],
+  "llm_template": "shutting down for system reboot",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "shutting down for system reboot"
+ },
+ {
+  "iter": 181,
+  "logs_to_query": [
+   "Opened configuration file /etc/smartd.conf"
+  ],
+  "logs_to_query_regex": [
+   "Opened configuration file /etc/smartd.conf"
+  ],
+  "llm_template": "Opened configuration file <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Opened configuration file <*>"
+ },
+ {
+  "iter": 182,
+  "logs_to_query": [
+   "smartd received signal 15: Terminated"
+  ],
+  "logs_to_query_regex": [
+   "smartd received signal 15: Terminated"
+  ],
+  "llm_template": "smartd received signal <*>: Terminated",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "smartd received signal <*>: Terminated"
+ },
+ {
+  "iter": 183,
+  "logs_to_query": [
+   "cupsd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "cupsd startup succeeded"
+  ],
+  "llm_template": "cupsd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 184,
+  "logs_to_query": [
+   "no longer listening on 127.0.0.1#53",
+   "no longer listening on 63.126.79.81#53",
+   "no longer listening on 63.126.79.80#53"
+  ],
+  "logs_to_query_regex": [
+   "no longer listening on 127.0.0.1#53",
+   "no longer listening on 63.126.79.81#53",
+   "no longer listening on 63.126.79.80#53"
+  ],
+  "llm_template": "no longer listening on <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "no longer listening on <*>"
+ },
+ {
+  "iter": 185,
+  "logs_to_query": [
+   "Couldn't authenticate user"
+  ],
+  "logs_to_query_regex": [
+   "Couldn't authenticate user"
+  ],
+  "llm_template": "Couldn't authenticate user",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Couldn't authenticate user"
+ },
+ {
+  "iter": 186,
+  "logs_to_query": [
+   "Configuration file /etc/smartd.conf parsed."
+  ],
+  "logs_to_query_regex": [
+   "Configuration file /etc/smartd.conf parsed."
+  ],
+  "llm_template": "Configuration file <*> parsed.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Configuration file <*> parsed."
+ },
+ {
+  "iter": 187,
+  "logs_to_query": [
+   "[<0211c38d>] proc_dointvec+0x11/0x15"
+  ],
+  "logs_to_query_regex": [
+   "[<0211c38d>] proc_dointvec+0x11/0x15"
+  ],
+  "llm_template": "[<*>] proc_dointvec+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] proc_dointvec+<*>"
+ },
+ {
+  "iter": 188,
+  "logs_to_query": [
+   "Started gpm successfully. Entered daemon mode."
+  ],
+  "logs_to_query_regex": [
+   "Started gpm successfully. Entered daemon mode."
+  ],
+  "llm_template": "Started gpm successfully. Entered daemon mode.",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Started gpm successfully. Entered daemon mode."
+ },
+ {
+  "iter": 189,
+  "logs_to_query": [
+   "[<0211c01d>] do_proc_dointvec_conv+0x0/0x36"
+  ],
+  "logs_to_query_regex": [
+   "[<0211c01d>] do_proc_dointvec_conv+0x0/0x36"
+  ],
+  "llm_template": "[<*>] do_proc_dointvec_conv+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_proc_dointvec_conv+<*>"
+ },
+ {
+  "iter": 190,
+  "logs_to_query": [
+   "Initializing IPsec netlink socket"
+  ],
+  "logs_to_query_regex": [
+   "Initializing IPsec netlink socket"
+  ],
+  "llm_template": "Initializing IPsec netlink socket",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Initializing IPsec netlink socket"
+ },
+ {
+  "iter": 191,
+  "logs_to_query": [
+   "[<0211bdc5>] do_rw_proc+0x79/0x8d"
+  ],
+  "logs_to_query_regex": [
+   "[<0211bdc5>] do_rw_proc+0x79/0x8d"
+  ],
+  "llm_template": "[<*>] do_rw_proc+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_rw_proc+<*>"
+ },
+ {
+  "iter": 192,
+  "logs_to_query": [
+   "Kerberos authentication failed"
+  ],
+  "logs_to_query_regex": [
+   "Kerberos authentication failed"
+  ],
+  "llm_template": "Kerberos authentication failed",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Kerberos authentication failed"
+ },
+ {
+  "iter": 193,
+  "logs_to_query": [
+   "Squid Parent: child process 2264 started",
+   "Squid Parent: child process 2294 started",
+   "Squid Parent: child process 2295 started"
+  ],
+  "logs_to_query_regex": [
+   "Squid Parent: child process 2264 started",
+   "Squid Parent: child process 2294 started",
+   "Squid Parent: child process 2295 started"
+  ],
+  "llm_template": "Squid Parent: child process <*> started",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Squid Parent: child process <*> started"
+ },
+ {
+  "iter": 194,
+  "logs_to_query": [
+   "PID hash table entries: 512 (order 9: 4096 bytes)",
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)",
+   "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)"
+  ],
+  "logs_to_query_regex": [
+   "PID hash table entries: 512 (order 9: 4096 bytes)",
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)",
+   "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)"
+  ],
+  "llm_template": "PID hash table entries: <*> (order <*>: <*> bytes)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "PID hash table entries: <*> (order <*>: <*> bytes)"
+ },
+ {
+  "iter": 195,
+  "logs_to_query": [
+   "uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80"
+  ],
+  "logs_to_query_regex": [
+   "uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80"
+  ],
+  "llm_template": "uhci_hcd <*>: irq <*> io base <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "uhci_hcd <*>: irq <*>, io base <*>"
+ },
+ {
+  "iter": 196,
+  "logs_to_query": [
+   "[<02142d47>] invalidate_inode_buffers+0x9/0x33"
+  ],
+  "logs_to_query_regex": [
+   "[<02142d47>] invalidate_inode_buffers+0x9/0x33"
+  ],
+  "llm_template": "[<02142d47>] invalidate_inode_buffers+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] invalidate_inode_buffers+<*>"
+ },
+ {
+  "iter": 197,
+  "logs_to_query": [
+   "[<02115f01>] __wake_up+0xe/0x16"
+  ],
+  "logs_to_query_regex": [
+   "[<02115f01>] __wake_up+0xe/0x16"
+  ],
+  "llm_template": "[<*>] __wake_up+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __wake_up+<*>"
+ },
+ {
+  "iter": 198,
+  "logs_to_query": [
+   "md: Autodetecting RAID arrays."
+  ],
+  "logs_to_query_regex": [
+   "md: Autodetecting RAID arrays."
+  ],
+  "llm_template": "md: Autodetecting RAID arrays.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "md: Autodetecting RAID arrays."
+ },
+ {
+  "iter": 199,
+  "logs_to_query": [
+   "frequency initialized 0.000 PPM from /var/lib/ntp/drift"
+  ],
+  "logs_to_query_regex": [
+   "frequency initialized 0.000 PPM from /var/lib/ntp/drift"
+  ],
+  "llm_template": "frequency initialized <*> PPM from <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "frequency initialized <*> PPM from <*>"
+ },
+ {
+  "iter": 200,
+  "logs_to_query": [
+   "Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)"
+  ],
+  "logs_to_query_regex": [
+   "Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)"
+  ],
+  "llm_template": "Inode-cache hash table entries: <*> (order: <*> bytes)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Inode-cache hash table entries: <*> (order: <*>, <*> bytes)"
+ },
+ {
+  "iter": 201,
+  "logs_to_query": [
+   "Adding 262072k swap on /dev/hda3. Priority:-1 extents:1"
+  ],
+  "logs_to_query_regex": [
+   "Adding 262072k swap on /dev/hda3. Priority:-1 extents:1"
+  ],
+  "llm_template": "Adding <*> swap on <*> Priority:<*> extents:<*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Adding <*> swap on <*>. Priority:<*> extents:<*>"
+ },
+ {
+  "iter": 202,
+  "logs_to_query": [
+   "SELinux: Disabled at runtime."
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Disabled at runtime."
+  ],
+  "llm_template": "SELinux: Disabled at runtime.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "SELinux: Disabled at runtime."
+ },
+ {
+  "iter": 203,
+  "logs_to_query": [
+   "[<02115ed2>] __wake_up_common+0x2f/0x50"
+  ],
+  "logs_to_query_regex": [
+   "[<02115ed2>] __wake_up_common+0x2f/0x50"
+  ],
+  "llm_template": "[<*>] __wake_up_common+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __wake_up_common+<*>"
+ },
+ {
+  "iter": 204,
+  "logs_to_query": [
+   "configure: keyword \"authenticate\" unknown, line ignored"
+  ],
+  "logs_to_query_regex": [
+   "configure: keyword \"authenticate\" unknown, line ignored"
+  ],
+  "llm_template": "configure: keyword <*> unknown, line ignored",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "configure: keyword <*> unknown, line ignored"
+ },
+ {
+  "iter": 205,
+  "logs_to_query": [
+   "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)",
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)"
+  ],
+  "logs_to_query_regex": [
+   "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)",
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)"
+  ],
+  "llm_template": "Mount-cache hash table entries: <*> (order: <*> bytes)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Mount-cache hash table entries: <*> (order: <*>, <*> bytes)"
+ },
+ {
+  "iter": 206,
+  "logs_to_query": [
+   "microcode: CPU0 already at revision 0x8 (current=0x8)"
+  ],
+  "logs_to_query_regex": [
+   "microcode: CPU0 already at revision 0x8 (current=0x8)"
+  ],
+  "llm_template": "microcode: CPU0 already at revision <*> (current=<*>)",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "microcode: CPU0 already at revision <*> (current=<*>)"
+ },
+ {
+  "iter": 207,
+  "logs_to_query": [
+   "parport0: irq 7 detected"
+  ],
+  "logs_to_query_regex": [
+   "parport0: irq 7 detected"
+  ],
+  "llm_template": "parport0: irq <*> detected",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "parport0: irq <*> detected"
+ },
+ {
+  "iter": 208,
+  "logs_to_query": [
+   "notify question section contains no SOA"
+  ],
+  "logs_to_query_regex": [
+   "notify question section contains no SOA"
+  ],
+  "llm_template": "notify question section contains no SOA",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "notify question section contains no SOA"
+ },
+ {
+  "iter": 209,
+  "logs_to_query": [
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)"
+  ],
+  "logs_to_query_regex": [
+   "Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)"
+  ],
+  "llm_template": "Dquot-cache hash table entries: <*> (order <*> bytes)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Dquot-cache hash table entries: <*> (order <*>, <*> bytes)"
+ },
+ {
+  "iter": 210,
+  "logs_to_query": [
+   "[<0213f423>] put_user_size+0x29/0x2d"
+  ],
+  "logs_to_query_regex": [
+   "[<0213f423>] put_user_size+0x29/0x2d"
+  ],
+  "llm_template": "[<*>] put_user_size+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] put_user_size+<*>"
+ },
+ {
+  "iter": 211,
+  "logs_to_query": [
+   "xinetd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "xinetd startup succeeded"
+  ],
+  "llm_template": "xinetd startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 212,
+  "logs_to_query": [
+   "Stopping MySQL: succeeded",
+   "Stopping squid: succeeded",
+   "Stopping MySQL: failed"
+  ],
+  "logs_to_query_regex": [
+   "Stopping MySQL: succeeded",
+   "Stopping squid: succeeded",
+   "Stopping MySQL: failed"
+  ],
+  "llm_template": "Stopping <*>: <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Stopping MySQL: succeeded"
+ },
+ {
+  "iter": 213,
+  "logs_to_query": [
+   "microcode: No suitable data for cpu 0"
+  ],
+  "logs_to_query_regex": [
+   "microcode: No suitable data for cpu 0"
+  ],
+  "llm_template": "microcode: No suitable data for cpu <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "microcode: No suitable data for cpu <*>"
+ },
+ {
+  "iter": 214,
+  "logs_to_query": [
+   "PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0"
+  ],
+  "logs_to_query_regex": [
+   "PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0"
+  ],
+  "llm_template": "PCI: Using IRQ router <*> at <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "PCI: Using IRQ router PIIX/ICH [<*>] at <*>"
+ },
+ {
+  "iter": 215,
+  "logs_to_query": [
+   "There is already a security framework initialized, register_security failed."
+  ],
+  "logs_to_query_regex": [
+   "There is already a security framework initialized, register_security failed."
+  ],
+  "llm_template": "There is already a security framework initialized, register_security failed.",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "There is already a security framework initialized, register_security failed."
+ },
+ {
+  "iter": 216,
+  "logs_to_query": [
+   "sendmail startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sendmail startup succeeded"
+  ],
+  "llm_template": "sendmail startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 217,
+  "logs_to_query": [
+   "FDC 0 is a National Semiconductor PC87306"
+  ],
+  "logs_to_query_regex": [
+   "FDC 0 is a National Semiconductor PC87306"
+  ],
+  "llm_template": "FDC <*> is a National Semiconductor <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "FDC <*> is a National Semiconductor <*>"
+ },
+ {
+  "iter": 218,
+  "logs_to_query": [
+   "sendmail shutdown failed"
+  ],
+  "logs_to_query_regex": [
+   "sendmail shutdown failed"
+  ],
+  "llm_template": "sendmail shutdown failed",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "<*> shutdown failed"
+ },
+ {
+  "iter": 219,
+  "logs_to_query": [
+   "pci_hotplug: PCI Hot Plug PCI Core version: 0.5"
+  ],
+  "logs_to_query_regex": [
+   "pci_hotplug: PCI Hot Plug PCI Core version: 0.5"
+  ],
+  "llm_template": "pci_hotplug: PCI Hot Plug PCI Core version: <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "pci_hotplug: PCI Hot Plug PCI Core version: <*>"
+ },
+ {
+  "iter": 220,
+  "logs_to_query": [
+   "ntpd exiting on signal 15"
+  ],
+  "logs_to_query_regex": [
+   "ntpd exiting on signal 15"
+  ],
+  "llm_template": "ntpd exiting on signal <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "ntpd exiting on signal <*>"
+ },
+ {
+  "iter": 221,
+  "logs_to_query": [
+   "Bluetooth: Core ver 2.4"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: Core ver 2.4"
+  ],
+  "llm_template": "Bluetooth: Core ver <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Bluetooth: <*> ver <*>"
+ },
+ {
+  "iter": 222,
+  "logs_to_query": [
+   "messagebus -TERM succeeded",
+   "sshd -TERM succeeded"
+  ],
+  "logs_to_query_regex": [
+   "messagebus -TERM succeeded",
+   "sshd -TERM succeeded"
+  ],
+  "llm_template": "messagebus -TERM succeeded",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "messagebus -TERM succeeded"
+ },
+ {
+  "iter": 223,
+  "logs_to_query": [
+   "ttloop: read: Connection timed out"
+  ],
+  "logs_to_query_regex": [
+   "ttloop: read: Connection timed out"
+  ],
+  "llm_template": "ttloop: read: Connection timed out",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "ttloop: read: Connection timed out"
+ },
+ {
+  "iter": 224,
+  "logs_to_query": [
+   "ttloop: read: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "ttloop: read: Connection reset by peer"
+  ],
+  "llm_template": "ttloop: read: Connection reset by peer",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "ttloop: read: Connection reset by peer"
+ },
+ {
+  "iter": 225,
+  "logs_to_query": [
+   "CPU: L1 I cache: 16K, L1 D cache: 16K"
+  ],
+  "logs_to_query_regex": [
+   "CPU: L1 I cache: 16K, L1 D cache: 16K"
+  ],
+  "llm_template": "CPU: L1 I cache: <*> L1 D cache: <*>",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "CPU: L1 I cache: <*>, L1 D cache: <*>"
+ },
+ {
+  "iter": 226,
+  "logs_to_query": [
+   "process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT"
+  ],
+  "logs_to_query_regex": [
+   "process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT"
+  ],
+  "llm_template": "process <*> is using obsolete setsockopt <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "process <*> is using obsolete setsockopt SO_BSDCOMPAT"
+ },
+ {
+  "iter": 227,
+  "logs_to_query": [
+   "sm-client startup succeeded",
+   "gpm startup succeeded",
+   "spamd startup succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sm-client startup succeeded",
+   "gpm startup succeeded",
+   "spamd startup succeeded"
+  ],
+  "llm_template": "<*> startup succeeded",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*> startup succeeded"
+ },
+ {
+  "iter": 228,
+  "logs_to_query": [
+   "sshd -TERM succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sshd -TERM succeeded"
+  ],
+  "llm_template": "sshd -TERM succeeded",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "sshd -TERM succeeded"
+ },
+ {
+  "iter": 229,
+  "logs_to_query": [
+   "Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)"
+  ],
+  "logs_to_query_regex": [
+   "Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)"
+  ],
+  "llm_template": "Version <*> (APM BIOS <*> Linux driver <*>)",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Version <*> (APM BIOS <*>, Linux driver <*>)"
+ },
+ {
+  "iter": 230,
+  "logs_to_query": [
+   "ttloop: peer died: Invalid or incomplete multibyte or wide character"
+  ],
+  "logs_to_query_regex": [
+   "ttloop: peer died: Invalid or incomplete multibyte or wide character"
+  ],
+  "llm_template": "ttloop: peer died: <*>",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "ttloop: peer died: Invalid or incomplete multibyte or wide character"
+ },
+ {
+  "iter": 231,
+  "logs_to_query": [
+   "Bluetooth: L2CAP ver 2.1"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: L2CAP ver 2.1"
+  ],
+  "llm_template": "Bluetooth: L2CAP ver <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Bluetooth: <*> ver <*>"
+ },
+ {
+  "iter": 232,
+  "logs_to_query": [
+   "1+0 records in",
+   "1+0 records out"
+  ],
+  "logs_to_query_regex": [
+   "1+0 records in",
+   "1+0 records out"
+  ],
+  "llm_template": "<*> records in",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "<*> records in"
+ },
+ {
+  "iter": 233,
+  "logs_to_query": [
+   "audit(1138278091.510:111925): syscall=103 exit=0 a0=8 a1=0 a2=3 a3=3 items=0 pid=506 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0",
+   "audit(1138296110.949:306401): syscall=103 exit=29788 a0=3 a1=9821858 a2=20000 a3=3 items=0 pid=1178 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0",
+   "audit(1138296127.049:438389): syscall=102 exit=0 a0=2 a1=fef3cbb0 a2=aea13c a3=3 items=0 pid=1595 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0"
+  ],
+  "logs_to_query_regex": [
+   "audit(1138278091.510:111925): syscall=103 exit=0 a0=8 a1=0 a2=3 a3=3 items=0 pid=506 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0",
+   "audit(1138296110.949:306401): syscall=103 exit=29788 a0=3 a1=9821858 a2=20000 a3=3 items=0 pid=1178 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0",
+   "audit(1138296127.049:438389): syscall=102 exit=0 a0=2 a1=fef3cbb0 a2=aea13c a3=3 items=0 pid=1595 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0"
+  ],
+  "llm_template": "audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>"
+ },
+ {
+  "iter": 234,
+  "logs_to_query": [
+   "cupsd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "cupsd shutdown succeeded"
+  ],
+  "llm_template": "cupsd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 235,
+  "logs_to_query": [
+   "Linux Plug and Play Support v0.97 (c) Adam Belay"
+  ],
+  "logs_to_query_regex": [
+   "Linux Plug and Play Support v0.97 (c) Adam Belay"
+  ],
+  "llm_template": "Linux Plug and Play Support v0.<*> (c) Adam Belay",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Linux Plug and Play Support <*> (c) Adam Belay"
+ },
+ {
+  "iter": 236,
+  "logs_to_query": [
+   "Bluetooth: HCI device and connection manager initialized"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: HCI device and connection manager initialized"
+  ],
+  "llm_template": "Bluetooth: HCI device and connection manager initialized",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Bluetooth: HCI device and connection manager initialized"
+ },
+ {
+  "iter": 237,
+  "logs_to_query": [
+   "1+0 records out"
+  ],
+  "logs_to_query_regex": [
+   "1+0 records out"
+  ],
+  "llm_template": "<*> records out",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "<*> records out"
+ },
+ {
+  "iter": 238,
+  "logs_to_query": [
+   "smartd is exiting (exit status 0)"
+  ],
+  "logs_to_query_regex": [
+   "smartd is exiting (exit status 0)"
+  ],
+  "llm_template": "smartd is exiting (exit status <*>)",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "smartd is exiting (exit status <*>)"
+ },
+ {
+  "iter": 239,
+  "logs_to_query": [
+   "ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio"
+  ],
+  "logs_to_query_regex": [
+   "ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio"
+  ],
+  "llm_template": "ide0: BM-DMA at <*> BIOS settings: hda:<*>, hdb:<*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "ide0: BM-DMA at <*>, BIOS settings: hda:<*>, hdb:<*>"
+ },
+ {
+  "iter": 240,
+  "logs_to_query": [
+   "Bluetooth: RFCOMM ver 1.2"
+  ],
+  "logs_to_query_regex": [
+   "Bluetooth: RFCOMM ver 1.2"
+  ],
+  "llm_template": "Bluetooth: RFCOMM ver <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Bluetooth: <*> ver <*>"
+ },
+ {
+  "iter": 241,
+  "logs_to_query": [
+   "sm-client shutdown failed",
+   "portmap shutdown failed",
+   "jserver shutdown failed"
+  ],
+  "logs_to_query_regex": [
+   "sm-client shutdown failed",
+   "portmap shutdown failed",
+   "jserver shutdown failed"
+  ],
+  "llm_template": "<*> shutdown failed",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "<*> shutdown failed"
+ },
+ {
+  "iter": 242,
+  "logs_to_query": [
+   "Caught signal 15, un-registering and exiting."
+  ],
+  "logs_to_query_regex": [
+   "Caught signal 15, un-registering and exiting."
+  ],
+  "llm_template": "Caught signal <*> un-registering and exiting.",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Caught signal <*>, un-registering and exiting."
+ },
+ {
+  "iter": 243,
+  "logs_to_query": [
+   "ACPI: ACPI tables contain no PCI IRQ routing entries"
+  ],
+  "logs_to_query_regex": [
+   "ACPI: ACPI tables contain no PCI IRQ routing entries"
+  ],
+  "llm_template": "ACPI: ACPI tables contain no PCI IRQ routing entries",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "ACPI: ACPI tables contain no PCI IRQ routing entries"
+ },
+ {
+  "iter": 244,
+  "logs_to_query": [
+   "open(/dev/pts/0): No such file or directory"
+  ],
+  "logs_to_query_regex": [
+   "open(/dev/pts/0): No such file or directory"
+  ],
+  "llm_template": "open(<*>): No such file or directory",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "open(<*>): No such file or directory"
+ },
+ {
+  "iter": 245,
+  "logs_to_query": [
+   "No such internal service: services/stream - DISABLING"
+  ],
+  "logs_to_query_regex": [
+   "No such internal service: services/stream - DISABLING"
+  ],
+  "llm_template": "No such internal service: services/stream - DISABLING",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "No such internal service: <*> - DISABLING"
+ },
+ {
+  "iter": 246,
+  "logs_to_query": [
+   "ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio"
+  ],
+  "logs_to_query_regex": [
+   "ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio"
+  ],
+  "llm_template": "ide1: <*>-DMA at <*>, BIOS settings: hdc:DMA, hdd:pio",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "ide1: BM-DMA at <*>, BIOS settings: hdc:<*>, hdd:<*>"
+ },
+ {
+  "iter": 247,
+  "logs_to_query": [
+   "imps2: Auto-detected intellimouse PS/2"
+  ],
+  "logs_to_query_regex": [
+   "imps2: Auto-detected intellimouse PS/2"
+  ],
+  "llm_template": "imps2: Auto-detected intellimouse PS/2",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "imps2: Auto-detected intellimouse PS/2"
+ },
+ {
+  "iter": 248,
+  "logs_to_query": [
+   "Client hung up - probable port-scan"
+  ],
+  "logs_to_query_regex": [
+   "Client hung up - probable port-scan"
+  ],
+  "llm_template": "Client hung up - probable port-scan",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Client hung up - probable port-scan"
+ },
+ {
+  "iter": 249,
+  "logs_to_query": [
+   "[smux_accept] accepted fd 12 from 81.181.213.88:1896"
+  ],
+  "logs_to_query_regex": [
+   "[smux_accept] accepted fd 12 from 81.181.213.88:1896"
+  ],
+  "llm_template": "[smux_accept] accepted fd <*> from <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "[smux_accept] accepted fd <*> from <*>"
+ },
+ {
+  "iter": 250,
+  "logs_to_query": [
+   "connect from 88-213-181-81-cable.canals.ro"
+  ],
+  "logs_to_query_regex": [
+   "connect from 88-213-181-81-cable.canals.ro"
+  ],
+  "llm_template": "connect from <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "connect from <*>"
+ },
+ {
+  "iter": 251,
+  "logs_to_query": [
+   "Connection from 81.181.213.88 on illegal port"
+  ],
+  "logs_to_query_regex": [
+   "Connection from 81.181.213.88 on illegal port"
+  ],
+  "llm_template": "Connection from <*> on illegal port",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "Connection from <*> on illegal port"
+ },
+ {
+  "iter": 252,
+  "logs_to_query": [
+   "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)"
+  ],
+  "logs_to_query_regex": [
+   "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)"
+  ],
+  "llm_template": "apm: BIOS version <*> Flags <*> (Driver version <*>)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "apm: BIOS version <*> Flags <*> (Driver version <*>)"
+ },
+ {
+  "iter": 253,
+  "logs_to_query": [
+   "net.ipv4.conf.default.rp_filter = 1"
+  ],
+  "logs_to_query_regex": [
+   "net.ipv4.conf.default.rp_filter = 1"
+  ],
+  "llm_template": "net.ipv4.conf.default.rp_filter = <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "net.ipv4.conf.default.rp_filter = <*>"
+ },
+ {
+  "iter": 254,
+  "logs_to_query": [
+   "starting BIND 9.2.3 -u named -t /var/named/chroot"
+  ],
+  "logs_to_query_regex": [
+   "starting BIND 9.2.3 -u named -t /var/named/chroot"
+  ],
+  "llm_template": "starting BIND <*> -u named -t <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "starting BIND <*> -u <*> -t <*>"
+ },
+ {
+  "iter": 255,
+  "logs_to_query": [
+   "hda: dma_timer_expiry: dma status == 0x20"
+  ],
+  "logs_to_query_regex": [
+   "hda: dma_timer_expiry: dma status == 0x20"
+  ],
+  "llm_template": "hda: dma_timer_expiry: dma status == <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "hda: dma_timer_expiry: dma status == <*>"
+ },
+ {
+  "iter": 256,
+  "logs_to_query": [
+   "smartd has fork()ed into background mode. New PID=1757.",
+   "smartd has fork()ed into background mode. New PID=1760.",
+   "smartd has fork()ed into background mode. New PID=1767."
+  ],
+  "logs_to_query_regex": [
+   "smartd has fork()ed into background mode. New PID=1757.",
+   "smartd has fork()ed into background mode. New PID=1760.",
+   "smartd has fork()ed into background mode. New PID=1767."
+  ],
+  "llm_template": "smartd has fork()ed into background mode. New PID=<*>.",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "smartd has fork()ed into background mode. New PID=<*>."
+ },
+ {
+  "iter": 257,
+  "logs_to_query": [
+   "kernel.sysrq = 0"
+  ],
+  "logs_to_query_regex": [
+   "kernel.sysrq = 0"
+  ],
+  "llm_template": "kernel.sysrq = <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "kernel.sysrq = <*>"
+ },
+ {
+  "iter": 258,
+  "logs_to_query": [
+   "httpd: page allocation failure. order:0, mode:0xd2",
+   "httpd: page allocation failure. order:0, mode:0x50",
+   "sendmail: page allocation failure. order:0, mode:0x1d2"
+  ],
+  "logs_to_query_regex": [
+   "httpd: page allocation failure. order:0, mode:0xd2",
+   "httpd: page allocation failure. order:0, mode:0x50",
+   "sendmail: page allocation failure. order:0, mode:0x1d2"
+  ],
+  "llm_template": "httpd: page allocation failure. order:<*>, mode:<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "httpd: page allocation failure. order:<*>, mode:<*>"
+ },
+ {
+  "iter": 259,
+  "logs_to_query": [
+   "[<0a8e1123>] ext3_get_inode_loc+0x4f/0x201 [ext3]"
+  ],
+  "logs_to_query_regex": [
+   "[<0a8e1123>] ext3_get_inode_loc+0x4f/0x201 [ext3]"
+  ],
+  "llm_template": "[<*>] ext3_get_inode_loc+<*> [ext3]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "[<*>] ext3_get_inode_loc+<*>"
+ },
+ {
+  "iter": 260,
+  "logs_to_query": [
+   "restart."
+  ],
+  "logs_to_query_regex": [
+   "restart."
+  ],
+  "llm_template": "restart.",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "restart."
+ },
+ {
+  "iter": 261,
+  "logs_to_query": [
+   "Device: /dev/hda, is SMART capable. Adding to \"monitor\" list."
+  ],
+  "logs_to_query_regex": [
+   "Device: /dev/hda, is SMART capable. Adding to \"monitor\" list."
+  ],
+  "llm_template": "Device: <*> is SMART capable. Adding to \"monitor\" list.",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Device: <*>, is SMART capable. Adding to \"monitor\" list."
+ },
+ {
+  "iter": 262,
+  "logs_to_query": [
+   "couldn't add command channel 127.0.0.1#953: not found",
+   "couldn't add command channel ::1#953: not found"
+  ],
+  "logs_to_query_regex": [
+   "couldn't add command channel 127.0.0.1#953: not found",
+   "couldn't add command channel ::1#953: not found"
+  ],
+  "llm_template": "couldn't add command channel <*>: not found",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "couldn't add command channel <*> not found"
+ },
+ {
+  "iter": 263,
+  "logs_to_query": [
+   "[<021295e4>] check_free_space+0x1b5/0x1cb"
+  ],
+  "logs_to_query_regex": [
+   "[<021295e4>] check_free_space+0x1b5/0x1cb"
+  ],
+  "llm_template": "[<*>] check_free_space+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] check_free_space+<*>"
+ },
+ {
+  "iter": 264,
+  "logs_to_query": [
+   "mice: PS/2 mouse device common for all mice"
+  ],
+  "logs_to_query_regex": [
+   "mice: PS/2 mouse device common for all mice"
+  ],
+  "llm_template": "mice: <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "mice: <*> mouse device common for all mice"
+ },
+ {
+  "iter": 265,
+  "logs_to_query": [
+   "loading configuration from '/etc/named.conf'"
+  ],
+  "logs_to_query_regex": [
+   "loading configuration from '/etc/named.conf'"
+  ],
+  "llm_template": "loading configuration from '<*>'",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "loading configuration from <*>"
+ },
+ {
+  "iter": 266,
+  "logs_to_query": [
+   "[<0212c5b2>] page_cache_read+0x2a/0x7a"
+  ],
+  "logs_to_query_regex": [
+   "[<0212c5b2>] page_cache_read+0x2a/0x7a"
+  ],
+  "llm_template": "[<*>] page_cache_read+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] page_cache_read+<*>"
+ },
+ {
+  "iter": 267,
+  "logs_to_query": [
+   "hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)"
+  ],
+  "logs_to_query_regex": [
+   "hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)"
+  ],
+  "llm_template": "hda: <*> sectors (<*> MB) w/<*> Cache, CHS=<*>, UDMA(<*>)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "hda: <*> sectors (<*> MB) w/<*> Cache, CHS=<*>, UDMA(<*>)"
+ },
+ {
+  "iter": 268,
+  "logs_to_query": [
+   "serio: i8042 AUX port at 0x60,0x64 irq 12",
+   "serio: i8042 KBD port at 0x60,0x64 irq 1"
+  ],
+  "logs_to_query_regex": [
+   "serio: i8042 AUX port at 0x60,0x64 irq 12",
+   "serio: i8042 KBD port at 0x60,0x64 irq 1"
+  ],
+  "llm_template": "serio: i8042 AUX port at <*> irq <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "serio: i8042 AUX port at <*>,<*> irq <*>"
+ },
+ {
+  "iter": 269,
+  "logs_to_query": [
+   "[<0a8e1ba6>] ext3_reserve_inode_write+0x21/0x81 [ext3]"
+  ],
+  "logs_to_query_regex": [
+   "[<0a8e1ba6>] ext3_reserve_inode_write+0x21/0x81 [ext3]"
+  ],
+  "llm_template": "[<*>] ext3_reserve_inode_write+<*> [ext3]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "[<*>] ext3_reserve_inode_write+<*>"
+ },
+ {
+  "iter": 270,
+  "logs_to_query": [
+   "precision = 1.000 usec",
+   "precision = 2.000 usec"
+  ],
+  "logs_to_query_regex": [
+   "precision = 1.000 usec",
+   "precision = 2.000 usec"
+  ],
+  "llm_template": "precision = <*> usec",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "precision = <*> usec"
+ },
+ {
+  "iter": 271,
+  "logs_to_query": [
+   "sm-client shutdown succeeded",
+   "httpd shutdown succeeded",
+   "privoxy shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sm-client shutdown succeeded",
+   "httpd shutdown succeeded",
+   "privoxy shutdown succeeded"
+  ],
+  "llm_template": "sm-client shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 272,
+  "logs_to_query": [
+   "[<02115617>] recalc_task_prio+0x141/0x14c"
+  ],
+  "logs_to_query_regex": [
+   "[<02115617>] recalc_task_prio+0x141/0x14c"
+  ],
+  "llm_template": "[<*>] recalc_task_prio+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] recalc_task_prio+<*>"
+ },
+ {
+  "iter": 273,
+  "logs_to_query": [
+   "atd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "atd shutdown succeeded"
+  ],
+  "llm_template": "atd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 274,
+  "logs_to_query": [
+   "IP: routing cache hash table of 512 buckets, 4Kbytes"
+  ],
+  "logs_to_query_regex": [
+   "IP: routing cache hash table of 512 buckets, 4Kbytes"
+  ],
+  "llm_template": "IP: routing cache hash table of <*> buckets, <*>",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "IP: routing cache hash table of <*> buckets, <*>"
+ },
+ {
+  "iter": 275,
+  "logs_to_query": [
+   "getpeername (ftpd): Transport endpoint is not connected"
+  ],
+  "logs_to_query_regex": [
+   "getpeername (ftpd): Transport endpoint is not connected"
+  ],
+  "llm_template": "getpeername (ftpd): Transport endpoint is not connected",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "getpeername (ftpd): Transport endpoint is not connected"
+ },
+ {
+  "iter": 276,
+  "logs_to_query": [
+   "serio: i8042 KBD port at 0x60,0x64 irq 1"
+  ],
+  "logs_to_query_regex": [
+   "serio: i8042 KBD port at 0x60,0x64 irq 1"
+  ],
+  "llm_template": "serio: i8042 KBD port at <*> irq <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "serio: i8042 KBD port at <*>,<*> irq <*>"
+ },
+ {
+  "iter": 277,
+  "logs_to_query": [
+   "privoxy shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "privoxy shutdown succeeded"
+  ],
+  "llm_template": "privoxy shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 278,
+  "logs_to_query": [
+   "synchronized to LOCAL(0), stratum=10"
+  ],
+  "logs_to_query_regex": [
+   "synchronized to LOCAL(0), stratum=10"
+  ],
+  "llm_template": "synchronized to <*> stratum=<*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "synchronized to LOCAL(<*>), stratum=<*>"
+ },
+ {
+  "iter": 279,
+  "logs_to_query": [
+   "xfs shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "xfs shutdown succeeded"
+  ],
+  "llm_template": "xfs shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 280,
+  "logs_to_query": [
+   "security: 30 classes, 303377 rules"
+  ],
+  "logs_to_query_regex": [
+   "security: 30 classes, 303377 rules"
+  ],
+  "llm_template": "security: <*> classes, <*> rules",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "security: <*> classes, <*> rules"
+ },
+ {
+  "iter": 281,
+  "logs_to_query": [
+   "<*> 09 06:06:44 Privoxy(-150093696) Info: loading configuration file '/etc/privoxy/config':",
+   "<*> 26 12:22:42 Privoxy(-150327168) Info: loading configuration file '/etc/privoxy/config':",
+   "<*> 10 11:32:05 Privoxy(-150769536) Info: loading configuration file '/etc/privoxy/config':"
+  ],
+  "logs_to_query_regex": [
+   "<*> 09 06:06:44 Privoxy(-150093696) Info: loading configuration file '/etc/privoxy/config':",
+   "<*> 26 12:22:42 Privoxy(-150327168) Info: loading configuration file '/etc/privoxy/config':",
+   "<*> 10 11:32:05 Privoxy(-150769536) Info: loading configuration file '/etc/privoxy/config':"
+  ],
+  "llm_template": "<*> Privoxy(<*>) Info: loading configuration file '<*>':",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "<*> Privoxy(<*>) Info: loading configuration file <*>"
+ },
+ {
+  "iter": 282,
+  "logs_to_query": [
+   "SELinux: Setting up existing superblocks."
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Setting up existing superblocks."
+  ],
+  "llm_template": "SELinux: Setting up existing superblocks.",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "SELinux: Setting up existing superblocks."
+ },
+ {
+  "iter": 283,
+  "logs_to_query": [
+   "audit(1138278092.486:112647): item=0 name=/initrd inode=1021 dev=00:00",
+   "audit(1138296191.846:687489): item=0 name=/initrd inode=1021 dev=00:00"
+  ],
+  "logs_to_query_regex": [
+   "audit(1138278092.486:112647): item=0 name=/initrd inode=1021 dev=00:00",
+   "audit(1138296191.846:687489): item=0 name=/initrd inode=1021 dev=00:00"
+  ],
+  "llm_template": "audit(<*>): item=<*> name=<*> inode=<*> dev=<*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "audit(<*>): item=<*> name=<*> inode=<*> dev=<*>"
+ },
+ {
+  "iter": 284,
+  "logs_to_query": [
+   "input: AT Translated Set 2 keyboard on isa0060/serio0"
+  ],
+  "logs_to_query_regex": [
+   "input: AT Translated Set 2 keyboard on isa0060/serio0"
+  ],
+  "llm_template": "input: AT Translated Set <*> keyboard on isa0060/serio0",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "input: <*> on <*>"
+ },
+ {
+  "iter": 285,
+  "logs_to_query": [
+   "jserver shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "jserver shutdown succeeded"
+  ],
+  "llm_template": "jserver shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 286,
+  "logs_to_query": [
+   "Connecting at fd 6"
+  ],
+  "logs_to_query_regex": [
+   "Connecting at fd 6"
+  ],
+  "llm_template": "Connecting at fd <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Connecting at fd <*>"
+ },
+ {
+  "iter": 287,
+  "logs_to_query": [
+   "bad username [ ]"
+  ],
+  "logs_to_query_regex": [
+   "bad username [ ]"
+  ],
+  "llm_template": "bad username <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "bad username [<*>]"
+ },
+ {
+  "iter": 288,
+  "logs_to_query": [
+   "gpm shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "gpm shutdown succeeded"
+  ],
+  "llm_template": "gpm shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 289,
+  "logs_to_query": [
+   "Switching to runlevel: 6"
+  ],
+  "logs_to_query_regex": [
+   "Switching to runlevel: 6"
+  ],
+  "llm_template": "Switching to runlevel: <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Switching to runlevel: <*>"
+ },
+ {
+  "iter": 290,
+  "logs_to_query": [
+   "audit(1138278092.486:112647): avc: denied { setattr } for pid=509 exe=/usr/bin/rhgb name=/ dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir",
+   "audit(1138278092.594:113951): avc: denied { setattr } for pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file",
+   "audit(1138296212.406:734909): avc: denied { remove_name } for pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir"
+  ],
+  "logs_to_query_regex": [
+   "audit(1138278092.486:112647): avc: denied { setattr } for pid=509 exe=/usr/bin/rhgb name=/ dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir",
+   "audit(1138278092.594:113951): avc: denied { setattr } for pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file",
+   "audit(1138296212.406:734909): avc: denied { remove_name } for pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir"
+  ],
+  "llm_template": "audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>"
+ },
+ {
+  "iter": 291,
+  "logs_to_query": [
+   "Authentication failed from 163.27.187.39 (163.27.187.39): Software caused connection abort",
+   "Authentication failed from 81.181.213.88 (88-213-181-81-cable.canals.ro): Software caused connection abort"
+  ],
+  "logs_to_query_regex": [
+   "Authentication failed from 163.27.187.39 (163.27.187.39): Software caused connection abort",
+   "Authentication failed from 81.181.213.88 (88-213-181-81-cable.canals.ro): Software caused connection abort"
+  ],
+  "llm_template": "Authentication failed from <*> (<*>): Software caused connection abort",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Authentication failed from <*> (<*>): Software caused connection abort"
+ },
+ {
+  "iter": 292,
+  "logs_to_query": [
+   "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)"
+  ],
+  "logs_to_query_regex": [
+   "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)"
+  ],
+  "llm_template": "Dentry cache hash table entries: <*> (order: <*> bytes)",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "Dentry cache hash table entries: <*> (order: <*>, <*> bytes)"
+ },
+ {
+  "iter": 293,
+  "logs_to_query": [
+   "httpd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "httpd shutdown succeeded"
+  ],
+  "llm_template": "httpd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 294,
+  "logs_to_query": [
+   "TCP: Hash tables configured (established 8192 bind 16384)"
+  ],
+  "logs_to_query_regex": [
+   "TCP: Hash tables configured (established 8192 bind 16384)"
+  ],
+  "llm_template": "TCP: Hash tables configured (established <*> bind <*>)",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "TCP: Hash tables configured (established <*> bind <*>)"
+ },
+ {
+  "iter": 295,
+  "logs_to_query": [
+   "Stopping Canna server: succeeded"
+  ],
+  "logs_to_query_regex": [
+   "Stopping Canna server: succeeded"
+  ],
+  "llm_template": "Stopping Canna server: <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Stopping Canna server: succeeded"
+ },
+ {
+  "iter": 296,
+  "logs_to_query": [
+   "[<021359c3>] do_wp_page+0x97/0x21c"
+  ],
+  "logs_to_query_regex": [
+   "[<021359c3>] do_wp_page+0x97/0x21c"
+  ],
+  "llm_template": "[<*>] do_wp_page+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] do_wp_page+<*>"
+ },
+ {
+  "iter": 297,
+  "logs_to_query": [
+   "spamd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "spamd shutdown succeeded"
+  ],
+  "llm_template": "spamd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 298,
+  "logs_to_query": [
+   "Kernel logging (proc) stopped."
+  ],
+  "logs_to_query_regex": [
+   "Kernel logging (proc) stopped."
+  ],
+  "llm_template": "Kernel logging (proc) stopped.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Kernel logging <*> stopped."
+ },
+ {
+  "iter": 299,
+  "logs_to_query": [
+   "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"
+  ],
+  "logs_to_query_regex": [
+   "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"
+  ],
+  "llm_template": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"
+ },
+ {
+  "iter": 300,
+  "logs_to_query": [
+   "PCI: PCI BIOS revision 2.10 entry at 0xfc0ce, last bus=1"
+  ],
+  "logs_to_query_regex": [
+   "PCI: PCI BIOS revision 2.10 entry at 0xfc0ce, last bus=1"
+  ],
+  "llm_template": "PCI: PCI BIOS revision <*> entry at <*> last bus=<*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "PCI: PCI BIOS revision <*> entry at <*>, last bus=<*>"
+ },
+ {
+  "iter": 301,
+  "logs_to_query": [
+   "succeeded"
+  ],
+  "logs_to_query_regex": [
+   "succeeded"
+  ],
+  "llm_template": "succeeded",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "succeeded"
+ },
+ {
+  "iter": 302,
+  "logs_to_query": [
+   "smartd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "smartd shutdown succeeded"
+  ],
+  "llm_template": "smartd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 303,
+  "logs_to_query": [
+   "EXT3-fs: write access will be enabled during recovery."
+  ],
+  "logs_to_query_regex": [
+   "EXT3-fs: write access will be enabled during recovery."
+  ],
+  "llm_template": "EXT3-fs: write access will be enabled during recovery.",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "EXT3-fs: write access will be enabled during recovery."
+ },
+ {
+  "iter": 304,
+  "logs_to_query": [
+   "Kernel log daemon terminating."
+  ],
+  "logs_to_query_regex": [
+   "Kernel log daemon terminating."
+  ],
+  "llm_template": "Kernel log daemon terminating.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Kernel log daemon terminating."
+ },
+ {
+  "iter": 305,
+  "logs_to_query": [
+   "ACPI disabled because your bios is from 2000 and too old"
+  ],
+  "logs_to_query_regex": [
+   "ACPI disabled because your bios is from 2000 and too old"
+  ],
+  "llm_template": "ACPI disabled because your bios is from <*> and too old",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "ACPI disabled because your bios is from <*> and too old"
+ },
+ {
+  "iter": 306,
+  "logs_to_query": [
+   "[<0214201b>] __fput+0xb3/0xd1"
+  ],
+  "logs_to_query_regex": [
+   "[<0214201b>] __fput+0xb3/0xd1"
+  ],
+  "llm_template": "[<*>] __fput+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] __fput+<*>"
+ },
+ {
+  "iter": 307,
+  "logs_to_query": [
+   "named shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "named shutdown succeeded"
+  ],
+  "llm_template": "named shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 308,
+  "logs_to_query": [
+   "Service telnet failed to start and is deactivated."
+  ],
+  "logs_to_query_regex": [
+   "Service telnet failed to start and is deactivated."
+  ],
+  "llm_template": "Service <*> failed to start and is deactivated.",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Service telnet failed to start and is deactivated."
+ },
+ {
+  "iter": 309,
+  "logs_to_query": [
+   "User unknown timed out after 900 seconds at Sat <*> 18 02:23:10 2005",
+   "User unknown timed out after 900 seconds at Wed Sep 14 22:05:47 2005",
+   "User unknown timed out after 900 seconds at Sat Aug 27 18:30:17 2005"
+  ],
+  "logs_to_query_regex": [
+   "User unknown timed out after 900 seconds at Sat <*> 18 02:23:10 2005",
+   "User unknown timed out after 900 seconds at Wed Sep 14 22:05:47 2005",
+   "User unknown timed out after 900 seconds at Sat Aug 27 18:30:17 2005"
+  ],
+  "llm_template": "User unknown timed out after <*> seconds at <*>",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "User <*> timed out after <*> seconds at <*>"
+ },
+ {
+  "iter": 310,
+  "logs_to_query": [
+   "[<021208bf>] sys_rt_sigaction+0x6b/0x80"
+  ],
+  "logs_to_query_regex": [
+   "[<021208bf>] sys_rt_sigaction+0x6b/0x80"
+  ],
+  "llm_template": "[<*>] sys_rt_sigaction+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] sys_rt_sigaction+<*>"
+ },
+ {
+  "iter": 311,
+  "logs_to_query": [
+   "snmpd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "snmpd shutdown succeeded"
+  ],
+  "llm_template": "snmpd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 312,
+  "logs_to_query": [
+   "password changed for test"
+  ],
+  "logs_to_query_regex": [
+   "password changed for test"
+  ],
+  "llm_template": "password changed for test",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "password changed for <*>"
+ },
+ {
+  "iter": 313,
+  "logs_to_query": [
+   "warning: can't get client address: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "warning: can't get client address: Connection reset by peer"
+  ],
+  "llm_template": "warning: can't get client address: Connection reset by peer",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "warning: can't get client address: Connection reset by peer"
+ },
+ {
+  "iter": 314,
+  "logs_to_query": [
+   "agpgart: Maximum main memory to use for agp memory: 93M"
+  ],
+  "logs_to_query_regex": [
+   "agpgart: Maximum main memory to use for agp memory: 93M"
+  ],
+  "llm_template": "agpgart: Maximum main memory to use for agp memory: <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "agpgart: Maximum main memory to use for agp memory: <*>"
+ },
+ {
+  "iter": 315,
+  "logs_to_query": [
+   "xinetd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "xinetd shutdown succeeded"
+  ],
+  "llm_template": "xinetd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 316,
+  "logs_to_query": [
+   "[<0213f3d3>] get_user_size+0x30/0x57"
+  ],
+  "logs_to_query_regex": [
+   "[<0213f3d3>] get_user_size+0x30/0x57"
+  ],
+  "llm_template": "[<*>] get_user_size+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] get_user_size+<*>"
+ },
+ {
+  "iter": 317,
+  "logs_to_query": [
+   "VM: killing process httpd",
+   "VM: killing process sendmail"
+  ],
+  "logs_to_query_regex": [
+   "VM: killing process httpd",
+   "VM: killing process sendmail"
+  ],
+  "llm_template": "VM: killing process <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "VM: killing process <*>"
+ },
+ {
+  "iter": 318,
+  "logs_to_query": [
+   "Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled"
+  ],
+  "logs_to_query_regex": [
+   "Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled"
+  ],
+  "llm_template": "Serial: <*> driver $Revision: <*> $ <*> ports, IRQ sharing enabled",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "Serial: <*> driver $Revision: <*> $ <*> ports, IRQ sharing enabled"
+ },
+ {
+  "iter": 319,
+  "logs_to_query": [
+   "rsyncd version 2.6.2 starting, listening on port 873"
+  ],
+  "logs_to_query_regex": [
+   "rsyncd version 2.6.2 starting, listening on port 873"
+  ],
+  "llm_template": "rsyncd version <*> starting, listening on port <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "rsyncd version <*> starting, listening on port <*>"
+ },
+ {
+  "iter": 320,
+  "logs_to_query": [
+   "crond shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "crond shutdown succeeded"
+  ],
+  "llm_template": "crond shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 321,
+  "logs_to_query": [
+   "uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1"
+  ],
+  "logs_to_query_regex": [
+   "uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1"
+  ],
+  "llm_template": "uhci_hcd <*>: new USB bus registered, assigned bus number <*>",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "uhci_hcd <*>: new USB bus registered, assigned bus number <*>"
+ },
+ {
+  "iter": 322,
+  "logs_to_query": [
+   "started."
+  ],
+  "logs_to_query_regex": [
+   "started."
+  ],
+  "llm_template": "started.",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "started."
+ },
+ {
+  "iter": 323,
+  "logs_to_query": [
+   "[<021284a0>] module_text_address+0x3a/0x5d"
+  ],
+  "logs_to_query_regex": [
+   "[<021284a0>] module_text_address+0x3a/0x5d"
+  ],
+  "llm_template": "[<*>] module_text_address+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] module_text_address+<*>"
+ },
+ {
+  "iter": 324,
+  "logs_to_query": [
+   "[<021529bb>] d_alloc+0x38/0x1b0"
+  ],
+  "logs_to_query_regex": [
+   "[<021529bb>] d_alloc+0x38/0x1b0"
+  ],
+  "llm_template": "[<*>] d_alloc+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] d_alloc+<*>"
+ },
+ {
+  "iter": 325,
+  "logs_to_query": [
+   "apmd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "apmd shutdown succeeded"
+  ],
+  "llm_template": "apmd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 326,
+  "logs_to_query": [
+   "service(sshd) ignoring max retries; 8 > 3",
+   "service(sshd) ignoring max retries; 7 > 3"
+  ],
+  "logs_to_query_regex": [
+   "service(sshd) ignoring max retries; 8 > 3",
+   "service(sshd) ignoring max retries; 7 > 3"
+  ],
+  "llm_template": "service(sshd) ignoring max retries; <*> > <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "service(<*>) ignoring max retries; <*> > <*>"
+ },
+ {
+  "iter": 327,
+  "logs_to_query": [
+   "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize"
+  ],
+  "logs_to_query_regex": [
+   "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize"
+  ],
+  "llm_template": "RAMDISK driver initialized: <*> RAM disks of <*> size <*> blocksize",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "RAMDISK driver initialized: <*> RAM disks of <*> size <*> blocksize"
+ },
+ {
+  "iter": 328,
+  "logs_to_query": [
+   "file descriptor of service comsat has been closed"
+  ],
+  "logs_to_query_regex": [
+   "file descriptor of service comsat has been closed"
+  ],
+  "llm_template": "file descriptor of service <*> has been closed",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "file descriptor of service comsat has been closed"
+ },
+ {
+  "iter": 329,
+  "logs_to_query": [
+   "ntpd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "ntpd shutdown succeeded"
+  ],
+  "llm_template": "ntpd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 330,
+  "logs_to_query": [
+   "[<02152b72>] d_instantiate+0x3f/0x42"
+  ],
+  "logs_to_query_regex": [
+   "[<02152b72>] d_instantiate+0x3f/0x42"
+  ],
+  "llm_template": "[<*>] d_instantiate+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] d_instantiate+<*>"
+ },
+ {
+  "iter": 331,
+  "logs_to_query": [
+   "xinetd Version 2.3.13 started with libwrap loadavg options compiled in."
+  ],
+  "logs_to_query_regex": [
+   "xinetd Version 2.3.13 started with libwrap loadavg options compiled in."
+  ],
+  "llm_template": "xinetd Version <*> started with libwrap loadavg options compiled in.",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "xinetd Version <*> started with <*> options compiled in."
+ },
+ {
+  "iter": 332,
+  "logs_to_query": [
+   "running"
+  ],
+  "logs_to_query_regex": [
+   "running"
+  ],
+  "llm_template": "running",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "running"
+ },
+ {
+  "iter": 333,
+  "logs_to_query": [
+   "ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx"
+  ],
+  "logs_to_query_regex": [
+   "ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx"
+  ],
+  "llm_template": "ide: Assuming <*> system bus speed for PIO modes; override with idebus=xx",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "ide: Assuming <*> system bus speed for PIO modes; override with idebus=<*>"
+ },
+ {
+  "iter": 334,
+  "logs_to_query": [
+   "FAILED LOGIN 1 FROM (null) FOR , Authentication failure",
+   "FAILED LOGIN 2 FROM (null) FOR , Authentication failure"
+  ],
+  "logs_to_query_regex": [
+   "FAILED LOGIN 1 FROM (null) FOR , Authentication failure",
+   "FAILED LOGIN 2 FROM (null) FOR , Authentication failure"
+  ],
+  "llm_template": "FAILED LOGIN <*> FROM <*> FOR , Authentication failure",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "FAILED LOGIN <*> FROM (<*>) FOR , Authentication failure"
+ },
+ {
+  "iter": 335,
+  "logs_to_query": [
+   "rpc.statd shutdown succeeded",
+   "portmap shutdown succeeded",
+   "syslogd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "rpc.statd shutdown succeeded",
+   "portmap shutdown succeeded",
+   "syslogd shutdown succeeded"
+  ],
+  "llm_template": "rpc.statd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 336,
+  "logs_to_query": [
+   "[<0a8b23ef>] journal_start+0x78/0x9e [jbd]"
+  ],
+  "logs_to_query_regex": [
+   "[<0a8b23ef>] journal_start+0x78/0x9e [jbd]"
+  ],
+  "llm_template": "[<*>] journal_start+<*> [jbd]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "[<*>] journal_start+<*>"
+ },
+ {
+  "iter": 337,
+  "logs_to_query": [
+   "Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+  ],
+  "logs_to_query_regex": [
+   "Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+  ],
+  "llm_template": "Authentication failed from <*> (<*>): Permission denied in replay cache code",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "Authentication failed from <*> (<*>): Permission denied in replay cache code"
+ },
+ {
+  "iter": 338,
+  "logs_to_query": [
+   "[<0211fc74>] sys_rt_sigprocmask+0x87/0x9a"
+  ],
+  "logs_to_query_regex": [
+   "[<0211fc74>] sys_rt_sigprocmask+0x87/0x9a"
+  ],
+  "llm_template": "[<*>] sys_rt_sigprocmask+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] sys_rt_sigprocmask+<*>"
+ },
+ {
+  "iter": 339,
+  "logs_to_query": [
+   "wall: user test broadcasted 1 lines (36 chars)"
+  ],
+  "logs_to_query_regex": [
+   "wall: user test broadcasted 1 lines (36 chars)"
+  ],
+  "llm_template": "wall: user <*> broadcasted <*> lines (<*> chars)",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "wall: user test broadcasted <*> lines (<*> chars)"
+ },
+ {
+  "iter": 340,
+  "logs_to_query": [
+   "portmap shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "portmap shutdown succeeded"
+  ],
+  "llm_template": "portmap shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 341,
+  "logs_to_query": [
+   "tty2: invalid character 0x1b in login name"
+  ],
+  "logs_to_query_regex": [
+   "tty2: invalid character 0x1b in login name"
+  ],
+  "llm_template": "tty2: invalid character <*> in login name",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "tty2: invalid character <*> in login name"
+ },
+ {
+  "iter": 342,
+  "logs_to_query": [
+   "SELinux: initialized (dev , type selinuxfs), uses genfs_contexts",
+   "SELinux: initialized (dev , type futexfs), uses genfs_contexts",
+   "SELinux: initialized (dev , type bdev), uses genfs_contexts"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: initialized (dev , type selinuxfs), uses genfs_contexts",
+   "SELinux: initialized (dev , type futexfs), uses genfs_contexts",
+   "SELinux: initialized (dev , type bdev), uses genfs_contexts"
+  ],
+  "llm_template": "SELinux: initialized (dev <*> type <*>), uses genfs_contexts",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "SELinux: initialized (dev , type <*>), uses <*>"
+ },
+ {
+  "iter": 343,
+  "logs_to_query": [
+   "Squid Parent: child process 2294 exited with status 0",
+   "Squid Parent: child process 2284 exited with status 0",
+   "Squid Parent: child process 2263 exited with status 0"
+  ],
+  "logs_to_query_regex": [
+   "Squid Parent: child process 2294 exited with status 0",
+   "Squid Parent: child process 2284 exited with status 0",
+   "Squid Parent: child process 2263 exited with status 0"
+  ],
+  "llm_template": "Squid Parent: child process <*> exited with status <*>",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "Squid Parent: child process <*> exited with status <*>"
+ },
+ {
+  "iter": 344,
+  "logs_to_query": [
+   "sendmail: page allocation failure. order:0, mode:0x1d2",
+   "sendmail: page allocation failure. order:0, mode:0x50"
+  ],
+  "logs_to_query_regex": [
+   "sendmail: page allocation failure. order:0, mode:0x1d2",
+   "sendmail: page allocation failure. order:0, mode:0x50"
+  ],
+  "llm_template": "sendmail: page allocation failure. order:<*>, mode:<*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "sendmail: page allocation failure. order:<*>, mode:<*>"
+ },
+ {
+  "iter": 345,
+  "logs_to_query": [
+   "Unable to get command line from client!"
+  ],
+  "logs_to_query_regex": [
+   "Unable to get command line from client!"
+  ],
+  "llm_template": "Unable to get command line from client!",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Unable to get command line from client!"
+ },
+ {
+  "iter": 346,
+  "logs_to_query": [
+   "hda: status timeout: status=0xd0 { Busy }"
+  ],
+  "logs_to_query_regex": [
+   "hda: status timeout: status=0xd0 { Busy }"
+  ],
+  "llm_template": "hda: status timeout: status=<*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "hda: status timeout: status=<*> <*>"
+ },
+ {
+  "iter": 347,
+  "logs_to_query": [
+   "select reported EBADF but no bad file descriptors were found"
+  ],
+  "logs_to_query_regex": [
+   "select reported EBADF but no bad file descriptors were found"
+  ],
+  "llm_template": "select reported <*> but no bad file descriptors were found",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "select reported EBADF but no bad file descriptors were found"
+ },
+ {
+  "iter": 348,
+  "logs_to_query": [
+   "terminating"
+  ],
+  "logs_to_query_regex": [
+   "terminating"
+  ],
+  "llm_template": "terminating",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "terminating"
+ },
+ {
+  "iter": 349,
+  "logs_to_query": [
+   "klogd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "klogd shutdown succeeded"
+  ],
+  "llm_template": "klogd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 350,
+  "logs_to_query": [
+   "ANONYMOUS FTP LOGIN FROM 81.240.142.171, 171-142.240.81.adsl.skynet.be (Sgpuser@home.com)"
+  ],
+  "logs_to_query_regex": [
+   "ANONYMOUS FTP LOGIN FROM 81.240.142.171, 171-142.240.81.adsl.skynet.be (Sgpuser@home.com)"
+  ],
+  "llm_template": "ANONYMOUS FTP LOGIN FROM <*> (<*>)",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "ANONYMOUS FTP LOGIN FROM <*>, <*> (<*>)"
+ },
+ {
+  "iter": 351,
+  "logs_to_query": [
+   "bind failed (Address already in use (errno = 98)). service = telnet"
+  ],
+  "logs_to_query_regex": [
+   "bind failed (Address already in use (errno = 98)). service = telnet"
+  ],
+  "llm_template": "bind failed (Address already in use (errno = <*>)). service = <*>",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "bind failed (Address already in use (errno = <*>)). service = <*>"
+ },
+ {
+  "iter": 352,
+  "logs_to_query": [
+   "[<02221a76>] input_unregister_device+0xd/0xc1"
+  ],
+  "logs_to_query_regex": [
+   "[<02221a76>] input_unregister_device+0xd/0xc1"
+  ],
+  "llm_template": "[<*>] input_unregister_device+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] input_unregister_device+<*>"
+ },
+ {
+  "iter": 353,
+  "logs_to_query": [
+   "rsync: connection unexpectedly closed (0 bytes read so far)"
+  ],
+  "logs_to_query_regex": [
+   "rsync: connection unexpectedly closed (0 bytes read so far)"
+  ],
+  "llm_template": "rsync: connection unexpectedly closed (<*> bytes read so far)",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "rsync: connection unexpectedly closed (<*> bytes read so far)"
+ },
+ {
+  "iter": 354,
+  "logs_to_query": [
+   "Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)"
+  ],
+  "logs_to_query_regex": [
+   "Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)"
+  ],
+  "llm_template": "Memory: <*>/129720k available (<*> kernel code, <*> reserved, <*> data, <*> init, 0k highmem)",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "Memory: <*> available (<*> kernel code, <*> reserved, <*> data, <*> init, <*> highmem)"
+ },
+ {
+  "iter": 355,
+  "logs_to_query": [
+   "Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004"
+  ],
+  "logs_to_query_regex": [
+   "Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004"
+  ],
+  "llm_template": "Linux version <*> (<*>) (gcc version <*> (<*>)) <*>",
+  "cluster_id": 34,
+  "update_success": true,
+  "template": "Linux version <*> (<*>) (gcc version <*> (Red Hat Linux <*>)) <*>"
+ },
+ {
+  "iter": 356,
+  "logs_to_query": [
+   "security: 5 users, 7 roles, 1244 types, 1 bools"
+  ],
+  "logs_to_query_regex": [
+   "security: 5 users, 7 roles, 1244 types, 1 bools"
+  ],
+  "llm_template": "security: <*> users, <*> roles, <*> types, <*> bools",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "security: <*> users, <*> roles, <*> types, <*> bools"
+ },
+ {
+  "iter": 357,
+  "logs_to_query": [
+   "exiting"
+  ],
+  "logs_to_query_regex": [
+   "exiting"
+  ],
+  "llm_template": "exiting",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "exiting"
+ },
+ {
+  "iter": 358,
+  "logs_to_query": [
+   "[<02134aa0>] clear_page_tables+0x7c/0x8f"
+  ],
+  "logs_to_query_regex": [
+   "[<02134aa0>] clear_page_tables+0x7c/0x8f"
+  ],
+  "llm_template": "[<02134aa0>] clear_page_tables+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] clear_page_tables+<*>"
+ },
+ {
+  "iter": 359,
+  "logs_to_query": [
+   "SELinux: initialized (dev , type devpts), uses transition SIDs",
+   "SELinux: initialized (dev , type pipefs), uses task SIDs",
+   "SELinux: initialized (dev , type sockfs), uses task SIDs"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: initialized (dev , type devpts), uses transition SIDs",
+   "SELinux: initialized (dev , type pipefs), uses task SIDs",
+   "SELinux: initialized (dev , type sockfs), uses task SIDs"
+  ],
+  "llm_template": "SELinux: initialized (dev <*> type <*>), uses task SIDs",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "SELinux: initialized (dev , type <*>), uses <*>"
+ },
+ {
+  "iter": 360,
+  "logs_to_query": [
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=bozesan.teleson.ro user=test",
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.196.56.67 user=test",
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=88-213-181-81-cable.canals.ro user=root"
+  ],
+  "logs_to_query_regex": [
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=bozesan.teleson.ro user=test",
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.196.56.67 user=test",
+   "1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=88-213-181-81-cable.canals.ro user=root"
+  ],
+  "llm_template": "<*> more authentication failure; logname=<*> uid=<*> euid=<*> tty=NODEVssh ruser=<*> rhost=<*> user=<*>",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "<*> more authentication failure; logname= uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ },
+ {
+  "iter": 361,
+  "logs_to_query": [
+   "[<02137b89>] free_pgtables+0x76/0x7b"
+  ],
+  "logs_to_query_regex": [
+   "[<02137b89>] free_pgtables+0x76/0x7b"
+  ],
+  "llm_template": "[<*>] free_pgtables+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] free_pgtables+<*>"
+ },
+ {
+  "iter": 362,
+  "logs_to_query": [
+   "Exiting"
+  ],
+  "logs_to_query_regex": [
+   "Exiting"
+  ],
+  "llm_template": "Exiting",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "Exiting"
+ },
+ {
+  "iter": 363,
+  "logs_to_query": [
+   "[<02137ca8>] unmap_region+0x80/0xaa"
+  ],
+  "logs_to_query_regex": [
+   "[<02137ca8>] unmap_region+0x80/0xaa"
+  ],
+  "llm_template": "[<*>] unmap_region+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] unmap_region+<*>"
+ },
+ {
+  "iter": 364,
+  "logs_to_query": [
+   "sendmail shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "sendmail shutdown succeeded"
+  ],
+  "llm_template": "sendmail shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 365,
+  "logs_to_query": [
+   "SELinux: initialized (dev , type devpts), uses transition SIDs",
+   "SELinux: initialized (dev , type tmpfs), uses transition SIDs"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: initialized (dev , type devpts), uses transition SIDs",
+   "SELinux: initialized (dev , type tmpfs), uses transition SIDs"
+  ],
+  "llm_template": "SELinux: initialized (dev <*> type <*>), uses transition SIDs",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "SELinux: initialized (dev , type <*>), uses <*>"
+ },
+ {
+  "iter": 366,
+  "logs_to_query": [
+   "[<02137c1f>] unmap_vma_list+0xe/0x17"
+  ],
+  "logs_to_query_regex": [
+   "[<02137c1f>] unmap_vma_list+0xe/0x17"
+  ],
+  "llm_template": "[<*>] unmap_vma_list+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] unmap_vma_list+<*>"
+ },
+ {
+  "iter": 367,
+  "logs_to_query": [
+   "audit(1138278089.855:0): avc: denied { read write } for pid=1 exe=/sbin/init name=initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file"
+  ],
+  "logs_to_query_regex": [
+   "audit(1138278089.855:0): avc: denied { read write } for pid=1 exe=/sbin/init name=initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file"
+  ],
+  "llm_template": "audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>"
+ },
+ {
+  "iter": 368,
+  "logs_to_query": [
+   "[<0212144c>] sys_setuid+0xdd/0xe9"
+  ],
+  "logs_to_query_regex": [
+   "[<0212144c>] sys_setuid+0xdd/0xe9"
+  ],
+  "llm_template": "[<*>] sys_setuid+<*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "[<*>] sys_setuid+<*>"
+ },
+ {
+  "iter": 369,
+  "logs_to_query": [
+   "printk: 185 messages suppressed."
+  ],
+  "logs_to_query_regex": [
+   "printk: 185 messages suppressed."
+  ],
+  "llm_template": "printk: <*> messages suppressed.",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "printk: <*> messages suppressed."
+ },
+ {
+  "iter": 370,
+  "logs_to_query": [
+   "SELinux: initialized (dev , type mqueue), not configured for labeling",
+   "SELinux: initialized (dev , type hugetlbfs), not configured for labeling"
+  ],
+  "logs_to_query_regex": [
+   "SELinux: initialized (dev , type mqueue), not configured for labeling",
+   "SELinux: initialized (dev , type hugetlbfs), not configured for labeling"
+  ],
+  "llm_template": "SELinux: initialized (dev <*> type <*>), not configured for labeling",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "SELinux: initialized (dev , type <*>), not configured for labeling"
+ },
+ {
+  "iter": 371,
+  "logs_to_query": [
+   "Master rebooting..."
+  ],
+  "logs_to_query_regex": [
+   "Master rebooting..."
+  ],
+  "llm_template": "Master rebooting...",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "Master rebooting..."
+ },
+ {
+  "iter": 372,
+  "logs_to_query": [
+   "syslogd shutdown succeeded"
+  ],
+  "logs_to_query_regex": [
+   "syslogd shutdown succeeded"
+  ],
+  "llm_template": "syslogd shutdown succeeded",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "<*> shutdown succeeded"
+ },
+ {
+  "iter": 373,
+  "logs_to_query": [
+   "SELinux: Completing initialization."
+  ],
+  "logs_to_query_regex": [
+   "SELinux: Completing initialization."
+  ],
+  "llm_template": "SELinux: Completing initialization.",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "SELinux: Completing initialization."
+ },
+ {
+  "iter": 374,
+  "logs_to_query": [
+   "audit: enabled (after initialization)"
+  ],
+  "logs_to_query_regex": [
+   "audit: enabled (after initialization)"
+  ],
+  "llm_template": "audit: enabled (after initialization)",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "audit: enabled (after initialization)"
+ },
+ {
+  "iter": 375,
+  "logs_to_query": [
+   "Warning! Could not relabel with system_u:object_r:devpts_t, not relabeling."
+  ],
+  "logs_to_query_regex": [
+   "Warning! Could not relabel with system_u:object_r:devpts_t, not relabeling."
+  ],
+  "llm_template": "Warning! Could not relabel with <*> not relabeling.",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "Warning! Could not relabel with <*>, not relabeling."
+ },
+ {
+  "iter": 376,
+  "logs_to_query": [
+   "pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t"
+  ],
+  "logs_to_query_regex": [
+   "pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t"
+  ],
+  "llm_template": "pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "pam_check_access failed, user does not have proper access: <*>"
+ },
+ {
+  "iter": 377,
+  "logs_to_query": [
+   "rsync error: error in rsync protocol data stream (code 12) at io.c(342)"
+  ],
+  "logs_to_query_regex": [
+   "rsync error: error in rsync protocol data stream (code 12) at io.c(342)"
+  ],
+  "llm_template": "rsync error: error in rsync protocol data stream (code <*>) at io.c(<*>)",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "rsync error: error in rsync protocol data stream (code <*>) at io.c(<*>)"
+ }
+]

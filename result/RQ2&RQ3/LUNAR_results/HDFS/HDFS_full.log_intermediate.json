@@ -1,0 +1,808 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Receiving block blk_-1608999687919862906 src: <*> dest: <*>",
+   "Receiving block blk_5907585157003432006 src: <*> dest: <*>",
+   "Receiving block blk_-1678689221288052077 src: <*> dest: <*>"
+  ],
+  "logs_to_query_regex": [
+   "Receiving block blk_-1608999687919862906 src: <*> dest: <*>",
+   "Receiving block blk_5907585157003432006 src: <*> dest: <*>",
+   "Receiving block blk_-1678689221288052077 src: <*> dest: <*>"
+  ],
+  "llm_template": "Receiving block <*> src: <*> dest: <*>",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Receiving block <*> src: <*> dest: <*>"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-1608999687919862906 size 91178",
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-6822673405702604079 size 67108864",
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-5648472981224770449 size 67108864"
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-1608999687919862906 size 91178",
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-6822673405702604079 size 67108864",
+   "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to blk_-5648472981224770449 size 67108864"
+  ],
+  "llm_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "PacketResponder 1 for block blk_-1608999687919862906 terminating",
+   "PacketResponder 1 for block blk_-6056622916670525559 terminating",
+   "PacketResponder 0 for block blk_-3547889882361354405 terminating"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder 1 for block blk_-1608999687919862906 terminating",
+   "PacketResponder 1 for block blk_-6056622916670525559 terminating",
+   "PacketResponder 0 for block blk_-3547889882361354405 terminating"
+  ],
+  "llm_template": "PacketResponder <*> for block <*> terminating",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "PacketResponder <*> for block <*> terminating"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "Received block blk_-1608999687919862906 of size 91178 from <*>",
+   "Received block blk_-8005182901348606262 of size 67108864 from <*>",
+   "Received block blk_1168209160973120039 of size 3553408 from <*>"
+  ],
+  "logs_to_query_regex": [
+   "Received block blk_-1608999687919862906 of size 91178 from <*>",
+   "Received block blk_-8005182901348606262 of size 67108864 from <*>",
+   "Received block blk_1168209160973120039 of size 3553408 from <*>"
+  ],
+  "llm_template": "Received block <*> of size <*> from <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "Received block <*> of size <*> from <*>"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir39/blk_-8213344449220111733",
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir41/blk_-8213344449220111733",
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir17/blk_-8213344449220111733"
+  ],
+  "logs_to_query_regex": [
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir39/blk_-8213344449220111733",
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir41/blk_-8213344449220111733",
+   "Deleting block blk_-8213344449220111733 file /mnt/hadoop/dfs/data/current/subdir17/blk_-8213344449220111733"
+  ],
+  "llm_template": "Deleting block <*> file <*>",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Deleting block <*> file <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "BLOCK* NameSystem.delete: blk_-1608999687919862906 is added to invalidSet of <*>",
+   "BLOCK* NameSystem.delete: blk_-5485840272426283522 is added to invalidSet of <*>",
+   "BLOCK* NameSystem.delete: blk_-2743398995579108999 is added to invalidSet of <*>"
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* NameSystem.delete: blk_-1608999687919862906 is added to invalidSet of <*>",
+   "BLOCK* NameSystem.delete: blk_-5485840272426283522 is added to invalidSet of <*>",
+   "BLOCK* NameSystem.delete: blk_-2743398995579108999 is added to invalidSet of <*>"
+  ],
+  "llm_template": "BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906"
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906"
+  ],
+  "llm_template": "BLOCK* NameSystem.allocateBlock: <*>",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "BLOCK* NameSystem.allocateBlock: <*> <*>"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "<*> Served block blk_-3544583377289625738 to <*>",
+   "<*> Served block blk_1526697555052708608 to <*>",
+   "<*> Served block blk_-7721597443770395688 to <*>"
+  ],
+  "logs_to_query_regex": [
+   "<*> Served block blk_-3544583377289625738 to <*>",
+   "<*> Served block blk_1526697555052708608 to <*>",
+   "<*> Served block blk_-7721597443770395688 to <*>"
+  ],
+  "llm_template": "<*> Served block <*> to <*>",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "<*> Served block <*> to <*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "<*>:Got exception while serving blk_-8781759536960110370 to <*>:",
+   "<*>:Got exception while serving blk_-2990987390306542711 to <*>:",
+   "<*>:Got exception while serving blk_-5664805602612331613 to <*>:"
+  ],
+  "logs_to_query_regex": [
+   "<*>:Got exception while serving blk_-8781759536960110370 to <*>:",
+   "<*>:Got exception while serving blk_-2990987390306542711 to <*>:",
+   "<*>:Got exception while serving blk_-5664805602612331613 to <*>:"
+  ],
+  "llm_template": "<*>:Got exception while serving <*> to <*>:",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "<*>:Got exception while serving <*> to <*>:"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "Verification succeeded for blk_-9073992586687739851",
+   "Verification succeeded for blk_3729187763473191795",
+   "Verification succeeded for blk_-8219591258537815551"
+  ],
+  "logs_to_query_regex": [
+   "Verification succeeded for blk_-9073992586687739851",
+   "Verification succeeded for blk_3729187763473191795",
+   "Verification succeeded for blk_-8219591258537815551"
+  ],
+  "llm_template": "Verification succeeded for <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "Verification succeeded for <*>"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "Received block blk_-1608999687919862906 src: <*> dest: <*> of size 91178",
+   "Received block blk_4681655290076483069 src: <*> dest: <*> of size 67108864",
+   "Received block blk_-2448354470515293024 src: <*> dest: <*> of size 67108864"
+  ],
+  "logs_to_query_regex": [
+   "Received block blk_-1608999687919862906 src: <*> dest: <*> of size 91178",
+   "Received block blk_4681655290076483069 src: <*> dest: <*> of size 67108864",
+   "Received block blk_-2448354470515293024 src: <*> dest: <*> of size 67108864"
+  ],
+  "llm_template": "Received block <*> src: <*> dest: <*> of size <*>",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Received block <*> src: <*> dest: <*> of size <*>"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "<*>:Transmitted block blk_-1608999687919862906 to <*>",
+   "<*>:Transmitted block blk_7942840078170046443 to <*>",
+   "<*>:Transmitted block blk_1654611257590636641 to <*>"
+  ],
+  "logs_to_query_regex": [
+   "<*>:Transmitted block blk_-1608999687919862906 to <*>",
+   "<*>:Transmitted block blk_7942840078170046443 to <*>",
+   "<*>:Transmitted block blk_1654611257590636641 to <*>"
+  ],
+  "llm_template": "<*>:Transmitted block <*> to <*>",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "<*>:Transmitted block <*> to <*>"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*>",
+   "BLOCK* ask <*> to replicate blk_-8757462367053637901 to datanode(s) <*>",
+   "BLOCK* ask <*> to replicate blk_-875258379733599572 to datanode(s) <*>"
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*>",
+   "BLOCK* ask <*> to replicate blk_-8757462367053637901 to datanode(s) <*>",
+   "BLOCK* ask <*> to replicate blk_-875258379733599572 to datanode(s) <*>"
+  ],
+  "llm_template": "BLOCK* ask <*> to replicate <*> to datanode(s) <*>",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "BLOCK* ask <*> to replicate <*> to datanode(s) <*>"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "Unexpected error trying to delete block blk_-1067131609371010449. BlockInfo not found in volumeMap.",
+   "Unexpected error trying to delete block blk_7316889599660798557. BlockInfo not found in volumeMap.",
+   "Unexpected error trying to delete block blk_8542762486739162614. BlockInfo not found in volumeMap."
+  ],
+  "logs_to_query_regex": [
+   "Unexpected error trying to delete block blk_-1067131609371010449. BlockInfo not found in volumeMap.",
+   "Unexpected error trying to delete block blk_7316889599660798557. BlockInfo not found in volumeMap.",
+   "Unexpected error trying to delete block blk_8542762486739162614. BlockInfo not found in volumeMap."
+  ],
+  "llm_template": "Unexpected error trying to delete block <*> BlockInfo not found in volumeMap.",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "Unexpected error trying to delete block <*>. BlockInfo not found in volumeMap."
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "writeBlock blk_7648436334209344608 received exception java.io.IOException: Could not read from stream",
+   "writeBlock blk_3036603747764053369 received exception java.io.IOException: Could not read from stream",
+   "writeBlock blk_-1406154528245975013 received exception java.io.IOException: Could not read from stream"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_7648436334209344608 received exception java.io.IOException: Could not read from stream",
+   "writeBlock blk_3036603747764053369 received exception java.io.IOException: Could not read from stream",
+   "writeBlock blk_-1406154528245975013 received exception java.io.IOException: Could not read from stream"
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.IOException: Could not read from stream",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.IOException: Could not read from stream"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "Receiving empty packet for block blk_-3842070622043972712",
+   "Receiving empty packet for block blk_-653035456983812021",
+   "Receiving empty packet for block blk_8317049859859238573"
+  ],
+  "logs_to_query_regex": [
+   "Receiving empty packet for block blk_-3842070622043972712",
+   "Receiving empty packet for block blk_-653035456983812021",
+   "Receiving empty packet for block blk_8317049859859238573"
+  ],
+  "llm_template": "Receiving empty packet for block <*>",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "Receiving empty packet for block <*>"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_5398314277015661293 on <*> size 67108864 But it does not belong to any file.",
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3703211096265336789 on <*> size 28494830 But it does not belong to any file.",
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3673675130220675796 on <*> size 44962515 But it does not belong to any file."
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_5398314277015661293 on <*> size 67108864 But it does not belong to any file.",
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3703211096265336789 on <*> size 28494830 But it does not belong to any file.",
+   "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_3673675130220675796 on <*> size 44962515 But it does not belong to any file."
+  ],
+  "llm_template": "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file."
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "<*> Starting thread to transfer block blk_-1608999687919862906 to <*>, <*>",
+   "<*> Starting thread to transfer block blk_-4715545735585530740 to <*>, <*>",
+   "<*> Starting thread to transfer block blk_-5057834626410636236 to <*>, <*>"
+  ],
+  "logs_to_query_regex": [
+   "<*> Starting thread to transfer block blk_-1608999687919862906 to <*>, <*>",
+   "<*> Starting thread to transfer block blk_-4715545735585530740 to <*>, <*>",
+   "<*> Starting thread to transfer block blk_-5057834626410636236 to <*>, <*>"
+  ],
+  "llm_template": "<*> Starting thread to transfer block <*> to <*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "<*> Starting thread to transfer block <*> to <*>, <*>"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*> <*>",
+   "BLOCK* ask <*> to replicate blk_6336460554009766891 to datanode(s) <*> <*>",
+   "BLOCK* ask <*> to replicate blk_-1188252971231200744 to datanode(s) <*> <*>"
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* ask <*> to replicate blk_-1608999687919862906 to datanode(s) <*> <*>",
+   "BLOCK* ask <*> to replicate blk_6336460554009766891 to datanode(s) <*> <*>",
+   "BLOCK* ask <*> to replicate blk_-1188252971231200744 to datanode(s) <*> <*>"
+  ],
+  "llm_template": "BLOCK* ask <*> to replicate <*> to datanode(s) <*>",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "BLOCK* ask <*> to replicate <*> to datanode(s) <*>"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "PacketResponder blk_-3102267849859399193 2 Exception java.io.EOFException",
+   "PacketResponder blk_4989727389302910967 2 Exception java.io.EOFException",
+   "PacketResponder blk_1528078116812077719 2 Exception java.io.EOFException"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_-3102267849859399193 2 Exception java.io.EOFException",
+   "PacketResponder blk_4989727389302910967 2 Exception java.io.EOFException",
+   "PacketResponder blk_1528078116812077719 2 Exception java.io.EOFException"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.EOFException",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.EOFException"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "writeBlock blk_4241467193520768333 received exception java.io.EOFException",
+   "writeBlock blk_-644449815674781039 received exception java.io.EOFException",
+   "writeBlock blk_-5051155910414339630 received exception java.io.EOFException"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_4241467193520768333 received exception java.io.EOFException",
+   "writeBlock blk_-644449815674781039 received exception java.io.EOFException",
+   "writeBlock blk_-5051155910414339630 received exception java.io.EOFException"
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.EOFException",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.EOFException"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "Exception in receiveBlock for block blk_4241467193520768333 java.io.EOFException",
+   "Exception in receiveBlock for block blk_9099447004863711723 java.io.EOFException",
+   "Exception in receiveBlock for block blk_120486571976949188 java.io.EOFException"
+  ],
+  "logs_to_query_regex": [
+   "Exception in receiveBlock for block blk_4241467193520768333 java.io.EOFException",
+   "Exception in receiveBlock for block blk_9099447004863711723 java.io.EOFException",
+   "Exception in receiveBlock for block blk_120486571976949188 java.io.EOFException"
+  ],
+  "llm_template": "Exception in receiveBlock for block <*> java.io.EOFException",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Exception in receiveBlock for block <*> java.io.EOFException"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "writeBlock blk_-3102267849859399193 received exception java.io.IOException: Connection reset by peer",
+   "writeBlock blk_-4083716689384497698 received exception java.io.IOException: Connection reset by peer",
+   "writeBlock blk_120486571976949188 received exception java.io.IOException: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_-3102267849859399193 received exception java.io.IOException: Connection reset by peer",
+   "writeBlock blk_-4083716689384497698 received exception java.io.IOException: Connection reset by peer",
+   "writeBlock blk_120486571976949188 received exception java.io.IOException: Connection reset by peer"
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.IOException: Connection reset by peer",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.IOException: Connection reset by peer"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "Exception in receiveBlock for block blk_-3102267849859399193 java.io.IOException: Connection reset by peer",
+   "Exception in receiveBlock for block blk_377785190538046925 java.io.IOException: Connection reset by peer",
+   "Exception in receiveBlock for block blk_-2308563252795628677 java.io.IOException: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "Exception in receiveBlock for block blk_-3102267849859399193 java.io.IOException: Connection reset by peer",
+   "Exception in receiveBlock for block blk_377785190538046925 java.io.IOException: Connection reset by peer",
+   "Exception in receiveBlock for block blk_-2308563252795628677 java.io.IOException: Connection reset by peer"
+  ],
+  "llm_template": "Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "Exception in receiveBlock for block <*> java.io.IOException: Connection reset by peer"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Changing block file offset of block blk_4241467193520768333 from 0 to 30867456 meta file offset to 241159",
+   "Changing block file offset of block blk_7160764053931337311 from 0 to 36503552 meta file offset to 285191",
+   "Changing block file offset of block blk_8006271611835981128 from 0 to 66519040 meta file offset to 519687"
+  ],
+  "logs_to_query_regex": [
+   "Changing block file offset of block blk_4241467193520768333 from 0 to 30867456 meta file offset to 241159",
+   "Changing block file offset of block blk_7160764053931337311 from 0 to 36503552 meta file offset to 285191",
+   "Changing block file offset of block blk_8006271611835981128 from 0 to 66519040 meta file offset to 519687"
+  ],
+  "llm_template": "Changing block file offset of block <*> from <*> to <*> meta file offset to <*>",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "Changing block file offset of block <*> from <*> to <*> meta file offset to <*>"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "PacketResponder blk_8085135783040518166 1 Exception java.nio.channels.ClosedByInterruptException",
+   "PacketResponder blk_120486571976949188 1 Exception java.nio.channels.ClosedByInterruptException",
+   "PacketResponder blk_8516616325149469651 1 Exception java.nio.channels.ClosedByInterruptException"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_8085135783040518166 1 Exception java.nio.channels.ClosedByInterruptException",
+   "PacketResponder blk_120486571976949188 1 Exception java.nio.channels.ClosedByInterruptException",
+   "PacketResponder blk_8516616325149469651 1 Exception java.nio.channels.ClosedByInterruptException"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.nio.channels.ClosedByInterruptException",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.nio.channels.ClosedByInterruptException"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "<*>:Exception writing block blk_3858821904894294369 to mirror <*>",
+   "<*>:Exception writing block blk_8895996987918469659 to mirror <*>",
+   "<*>:Exception writing block blk_7160764053931337311 to mirror <*>"
+  ],
+  "logs_to_query_regex": [
+   "<*>:Exception writing block blk_3858821904894294369 to mirror <*>",
+   "<*>:Exception writing block blk_8895996987918469659 to mirror <*>",
+   "<*>:Exception writing block blk_7160764053931337311 to mirror <*>"
+  ],
+  "llm_template": "<*>:Exception writing block <*> to mirror <*>",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "<*>:Exception writing block <*> to mirror <*>"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "PendingReplicationMonitor timed out block blk_-5057834626410636236",
+   "PendingReplicationMonitor timed out block blk_6180515937140679205",
+   "PendingReplicationMonitor timed out block blk_-74511355666073839"
+  ],
+  "logs_to_query_regex": [
+   "PendingReplicationMonitor timed out block blk_-5057834626410636236",
+   "PendingReplicationMonitor timed out block blk_6180515937140679205",
+   "PendingReplicationMonitor timed out block blk_-74511355666073839"
+  ],
+  "llm_template": "PendingReplicationMonitor timed out block <*>",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "PendingReplicationMonitor timed out block <*>"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "PacketResponder blk_4241467193520768333 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 59942 millis timeout left.",
+   "PacketResponder blk_7008279672769077211 2 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 115663 millis timeout left.",
+   "writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left."
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_4241467193520768333 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 59942 millis timeout left.",
+   "PacketResponder blk_7008279672769077211 2 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 115663 millis timeout left.",
+   "writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left."
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left."
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "PacketResponder blk_4241467193520768333 2 Exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_-6363674043695218814 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "PacketResponder blk_-6129683979428294672 1 Exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_4241467193520768333 2 Exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_-6363674043695218814 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "PacketResponder blk_-6129683979428294672 1 Exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "PacketResponder blk_3858821904894294369 0 Exception java.io.IOException: Broken pipe",
+   "PacketResponder blk_-4567777441263358151 0 Exception java.io.IOException: Broken pipe",
+   "PacketResponder blk_-7052911997539087826 2 Exception java.io.IOException: Broken pipe"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_3858821904894294369 0 Exception java.io.IOException: Broken pipe",
+   "PacketResponder blk_-4567777441263358151 0 Exception java.io.IOException: Broken pipe",
+   "PacketResponder blk_-7052911997539087826 2 Exception java.io.IOException: Broken pipe"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.IOException: Broken pipe",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.IOException: Broken pipe"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "PacketResponder blk_-4567777441263358151 1 Exception java.io.IOException: Connection reset by peer",
+   "PacketResponder blk_9160796703302881264 1 Exception java.io.IOException: Connection reset by peer",
+   "PacketResponder blk_-6059290274455367169 2 Exception java.io.IOException: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_-4567777441263358151 1 Exception java.io.IOException: Connection reset by peer",
+   "PacketResponder blk_9160796703302881264 1 Exception java.io.IOException: Connection reset by peer",
+   "PacketResponder blk_-6059290274455367169 2 Exception java.io.IOException: Connection reset by peer"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.IOException: Connection reset by peer",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.IOException: Connection reset by peer"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "writeBlock blk_-4250706752040073149 received exception java.io.IOException: Interrupted receiveBlock",
+   "writeBlock blk_-6994808880344424033 received exception java.io.IOException: Interrupted receiveBlock",
+   "writeBlock blk_-4723951162006187997 received exception java.io.IOException: Interrupted receiveBlock"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_-4250706752040073149 received exception java.io.IOException: Interrupted receiveBlock",
+   "writeBlock blk_-6994808880344424033 received exception java.io.IOException: Interrupted receiveBlock",
+   "writeBlock blk_-4723951162006187997 received exception java.io.IOException: Interrupted receiveBlock"
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.IOException: Interrupted receiveBlock"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "Exception in receiveBlock for block blk_3858821904894294369 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.",
+   "Exception in receiveBlock for block blk_-6994808880344424033 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left.",
+   "Exception in receiveBlock for block blk_8895996987918469659 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 484981 millis timeout left."
+  ],
+  "logs_to_query_regex": [
+   "Exception in receiveBlock for block blk_3858821904894294369 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.",
+   "Exception in receiveBlock for block blk_-6994808880344424033 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left.",
+   "Exception in receiveBlock for block blk_8895996987918469659 java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 484981 millis timeout left."
+  ],
+  "llm_template": "Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "Exception in receiveBlock for block <*> java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left."
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "writeBlock blk_7008279672769077211 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_-539148231797001003 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_584730932939516842 received exception java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_7008279672769077211 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_-539148231797001003 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_584730932939516842 received exception java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "llm_template": "writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for <*> ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "writeBlock blk_992101295951175683 received exception java.io.IOException: Block blk_992101295951175683 is valid, and cannot be written to.",
+   "writeBlock blk_9122720022222323339 received exception java.io.IOException: Block blk_9122720022222323339 is valid, and cannot be written to.",
+   "writeBlock blk_-8122638974387556519 received exception java.io.IOException: Block blk_-8122638974387556519 is valid, and cannot be written to."
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_992101295951175683 received exception java.io.IOException: Block blk_992101295951175683 is valid, and cannot be written to.",
+   "writeBlock blk_9122720022222323339 received exception java.io.IOException: Block blk_9122720022222323339 is valid, and cannot be written to.",
+   "writeBlock blk_-8122638974387556519 received exception java.io.IOException: Block blk_-8122638974387556519 is valid, and cannot be written to."
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to.",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.IOException: Block <*> is valid, and cannot be written to."
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "Adding an already existing block blk_-2074647664485597823",
+   "Adding an already existing block blk_9176263204797010146",
+   "Adding an already existing block blk_5697572983288390847"
+  ],
+  "logs_to_query_regex": [
+   "Adding an already existing block blk_-2074647664485597823",
+   "Adding an already existing block blk_9176263204797010146",
+   "Adding an already existing block blk_5697572983288390847"
+  ],
+  "llm_template": "Adding an already existing block <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Adding an already existing block <*>"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "writeBlock blk_-516029862489211143 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_3709643589615046481 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_9099447004863711723 received exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_-516029862489211143 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_3709643589615046481 received exception java.net.SocketTimeoutException: 60000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "writeBlock blk_9099447004863711723 received exception java.net.SocketTimeoutException: 120000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "llm_template": "writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for <*> ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "<*>:Failed to transfer blk_992101295951175683 to <*> got java.io.IOException: Connection reset by peer",
+   "<*>:Failed to transfer blk_9122720022222323339 to <*> got java.io.IOException: Connection reset by peer",
+   "<*>:Failed to transfer blk_7162246307091465257 to <*> got java.io.IOException: Connection reset by peer"
+  ],
+  "logs_to_query_regex": [
+   "<*>:Failed to transfer blk_992101295951175683 to <*> got java.io.IOException: Connection reset by peer",
+   "<*>:Failed to transfer blk_9122720022222323339 to <*> got java.io.IOException: Connection reset by peer",
+   "<*>:Failed to transfer blk_7162246307091465257 to <*> got java.io.IOException: Connection reset by peer"
+  ],
+  "llm_template": "<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "<*>:Failed to transfer <*> to <*> got java.io.IOException: Connection reset by peer"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "writeBlock blk_3858821904894294369 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.",
+   "writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left.",
+   "writeBlock blk_-6363674043695218814 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left."
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_3858821904894294369 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489996 millis timeout left.",
+   "writeBlock blk_8085135783040518166 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 489984 millis timeout left.",
+   "writeBlock blk_-6363674043695218814 received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. 0 millis timeout left."
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left.",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[connected local=<*> remote=<*>]. <*> millis timeout left."
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "writeBlock blk_1684134505299265593 received exception java.net.NoRouteToHostException: No route to host"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_1684134505299265593 received exception java.net.NoRouteToHostException: No route to host"
+  ],
+  "llm_template": "writeBlock <*> received exception java.net.NoRouteToHostException: No route to host",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.net.NoRouteToHostException: No route to host"
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "Reopen Block blk_7008279672769077211",
+   "Reopen Block blk_8006271611835981128",
+   "Reopen Block blk_-6363674043695218814"
+  ],
+  "logs_to_query_regex": [
+   "Reopen Block blk_7008279672769077211",
+   "Reopen Block blk_8006271611835981128",
+   "Reopen Block blk_-6363674043695218814"
+  ],
+  "llm_template": "Reopen Block <*>",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "Reopen Block <*>"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "writeBlock blk_6189089042276997489 received exception java.io.IOException: Broken pipe",
+   "writeBlock blk_7160764053931337311 received exception java.io.IOException: Broken pipe",
+   "writeBlock blk_584730932939516842 received exception java.io.IOException: Broken pipe"
+  ],
+  "logs_to_query_regex": [
+   "writeBlock blk_6189089042276997489 received exception java.io.IOException: Broken pipe",
+   "writeBlock blk_7160764053931337311 received exception java.io.IOException: Broken pipe",
+   "writeBlock blk_584730932939516842 received exception java.io.IOException: Broken pipe"
+  ],
+  "llm_template": "writeBlock <*> received exception java.io.IOException: Broken pipe",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "writeBlock <*> received exception java.io.IOException: Broken pipe"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "Exception in receiveBlock for block blk_-6994808880344424033 java.io.IOException: Broken pipe",
+   "Exception in receiveBlock for block blk_7160764053931337311 java.io.IOException: Broken pipe",
+   "Exception in receiveBlock for block blk_584730932939516842 java.io.IOException: Broken pipe"
+  ],
+  "logs_to_query_regex": [
+   "Exception in receiveBlock for block blk_-6994808880344424033 java.io.IOException: Broken pipe",
+   "Exception in receiveBlock for block blk_7160764053931337311 java.io.IOException: Broken pipe",
+   "Exception in receiveBlock for block blk_584730932939516842 java.io.IOException: Broken pipe"
+  ],
+  "llm_template": "Exception in receiveBlock for block <*> java.io.IOException: Broken pipe",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Exception in receiveBlock for block <*> java.io.IOException: Broken pipe"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "PacketResponder blk_-4250706752040073149 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59985 millis timeout left.",
+   "PacketResponder blk_-4723951162006187997 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59799 millis timeout left.",
+   "PacketResponder blk_-644449815674781039 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59983 millis timeout left."
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_-4250706752040073149 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59985 millis timeout left.",
+   "PacketResponder blk_-4723951162006187997 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59799 millis timeout left.",
+   "PacketResponder blk_-644449815674781039 1 Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. 59983 millis timeout left."
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left.",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.InterruptedIOException: Interruped while waiting for IO on channel java.nio.channels.SocketChannel[closed]. <*> millis timeout left."
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "Exception in receiveBlock for block blk_7008279672769077211 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "Exception in receiveBlock for block blk_6224343649004202692 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "Exception in receiveBlock for block blk_584730932939516842 java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "logs_to_query_regex": [
+   "Exception in receiveBlock for block blk_7008279672769077211 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "Exception in receiveBlock for block blk_6224343649004202692 java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+   "Exception in receiveBlock for block blk_584730932939516842 java.net.SocketTimeoutException: 485000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+  ],
+  "llm_template": "Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+  "cluster_id": 32,
+  "update_success": true,
+  "template": "Exception in receiveBlock for block <*> java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]"
+ },
+ {
+  "iter": 47,
+  "logs_to_query": [
+   "BLOCK* Removing block blk_-3530301067936445915 from neededReplications as it does not belong to any file.",
+   "BLOCK* Removing block blk_3570750915105748881 from neededReplications as it does not belong to any file.",
+   "BLOCK* Removing block blk_-8590003046192319107 from neededReplications as it does not belong to any file."
+  ],
+  "logs_to_query_regex": [
+   "BLOCK* Removing block blk_-3530301067936445915 from neededReplications as it does not belong to any file.",
+   "BLOCK* Removing block blk_3570750915105748881 from neededReplications as it does not belong to any file.",
+   "BLOCK* Removing block blk_-8590003046192319107 from neededReplications as it does not belong to any file."
+  ],
+  "llm_template": "BLOCK* Removing block <*> from neededReplications as it does not belong to any file.",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "BLOCK* Removing block <*> from neededReplications as it does not belong to any file."
+ },
+ {
+  "iter": 48,
+  "logs_to_query": [
+   "PacketResponder blk_8006271611835981128 1 Exception java.io.IOException: The stream is closed",
+   "PacketResponder blk_-2448583810301041956 1 Exception java.io.IOException: The stream is closed"
+  ],
+  "logs_to_query_regex": [
+   "PacketResponder blk_8006271611835981128 1 Exception java.io.IOException: The stream is closed",
+   "PacketResponder blk_-2448583810301041956 1 Exception java.io.IOException: The stream is closed"
+  ],
+  "llm_template": "PacketResponder <*> Exception java.io.IOException: The stream is closed",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "PacketResponder <*> <*> Exception java.io.IOException: The stream is closed"
+ }
+]

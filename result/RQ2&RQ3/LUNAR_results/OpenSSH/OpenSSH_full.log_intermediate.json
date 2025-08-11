@@ -1,0 +1,680 @@
+[
+ {
+  "iter": 1,
+  "logs_to_query": [
+   "Failed password for root from <*> port 42393 ssh2",
+   "Failed password for uucp from <*> port 59665 ssh2",
+   "Accepted password for suyuxin from <*> port 13537 ssh2"
+  ],
+  "logs_to_query_regex": [
+   "Failed password for root from <*> port 42393 ssh2",
+   "Failed password for uucp from <*> port 59665 ssh2",
+   "Accepted password for suyuxin from <*> port 13537 ssh2"
+  ],
+  "llm_template": "Failed password for <*> from <*> port <*> ssh2",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Failed password for <*> from <*> port <*> ssh2"
+ },
+ {
+  "iter": 2,
+  "logs_to_query": [
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=gnats",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data"
+  ],
+  "logs_to_query_regex": [
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=gnats",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data"
+  ],
+  "llm_template": "pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ },
+ {
+  "iter": 3,
+  "logs_to_query": [
+   "Connection closed by <*> [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Connection closed by <*> [preauth]"
+  ],
+  "llm_template": "Connection closed by <*> [preauth]",
+  "cluster_id": 4,
+  "update_success": true,
+  "template": "Connection closed by <*> [preauth]"
+ },
+ {
+  "iter": 4,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: Bye Bye [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: Bye Bye [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: Bye Bye [preauth]",
+  "cluster_id": 11,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: Bye Bye [preauth]"
+ },
+ {
+  "iter": 5,
+  "logs_to_query": [
+   "PAM service(sshd) ignoring max retries; 6 > 3",
+   "PAM service(sshd) ignoring max retries; 5 > 3",
+   "PAM service(sshd) ignoring max retries; 4 > 3"
+  ],
+  "logs_to_query_regex": [
+   "PAM service(sshd) ignoring max retries; 6 > 3",
+   "PAM service(sshd) ignoring max retries; 5 > 3",
+   "PAM service(sshd) ignoring max retries; 4 > 3"
+  ],
+  "llm_template": "PAM service(sshd) ignoring max retries; <*> > <*>",
+  "cluster_id": 13,
+  "update_success": true,
+  "template": "PAM service(sshd) ignoring max retries; <*> > <*>"
+ },
+ {
+  "iter": 6,
+  "logs_to_query": [
+   "Disconnecting: Too many authentication failures for root [preauth]",
+   "Disconnecting: Too many authentication failures for usuario [preauth]",
+   "Disconnecting: Too many authentication failures for service [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Disconnecting: Too many authentication failures for root [preauth]",
+   "Disconnecting: Too many authentication failures for usuario [preauth]",
+   "Disconnecting: Too many authentication failures for service [preauth]"
+  ],
+  "llm_template": "Disconnecting: Too many authentication failures for <*> [preauth]",
+  "cluster_id": 12,
+  "update_success": true,
+  "template": "Disconnecting: Too many authentication failures for <*> [preauth]"
+ },
+ {
+  "iter": 7,
+  "logs_to_query": [
+   "message repeated 5 times: [ Failed password for root from <*> port 42393 ssh2]",
+   "message repeated 4 times: [ Failed password for root from <*> port 53551 ssh2]",
+   "message repeated 2 times: [ Failed password for curi from <*> port 35777 ssh2]"
+  ],
+  "logs_to_query_regex": [
+   "message repeated 5 times: [ Failed password for root from <*> port 42393 ssh2]",
+   "message repeated 4 times: [ Failed password for root from <*> port 53551 ssh2]",
+   "message repeated 2 times: [ Failed password for curi from <*> port 35777 ssh2]"
+  ],
+  "llm_template": "message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]",
+  "cluster_id": 29,
+  "update_success": true,
+  "template": "message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]"
+ },
+ {
+  "iter": 8,
+  "logs_to_query": [
+   "PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi"
+  ],
+  "logs_to_query_regex": [
+   "PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=root",
+   "PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi"
+  ],
+  "llm_template": "PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=root",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ },
+ {
+  "iter": 9,
+  "logs_to_query": [
+   "pam_unix(sshd:auth): check pass; user unknown"
+  ],
+  "logs_to_query_regex": [
+   "pam_unix(sshd:auth): check pass; user unknown"
+  ],
+  "llm_template": "pam_unix(sshd:auth): check pass; user unknown",
+  "cluster_id": 3,
+  "update_success": true,
+  "template": "pam_unix(sshd:auth): check pass; user unknown"
+ },
+ {
+  "iter": 10,
+  "logs_to_query": [
+   "Failed password for invalid user webmaster from <*> port 38926 ssh2",
+   "Failed password for invalid user ftpuser from <*> port 56428 ssh2",
+   "Failed password for invalid user admin from <*> port 50536 ssh2"
+  ],
+  "logs_to_query_regex": [
+   "Failed password for invalid user webmaster from <*> port 38926 ssh2",
+   "Failed password for invalid user ftpuser from <*> port 56428 ssh2",
+   "Failed password for invalid user admin from <*> port 50536 ssh2"
+  ],
+  "llm_template": "Failed password for invalid user <*> from <*> port <*> ssh2",
+  "cluster_id": 22,
+  "update_success": true,
+  "template": "Failed password for invalid user <*> from <*> port <*> ssh2"
+ },
+ {
+  "iter": 11,
+  "logs_to_query": [
+   "reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!",
+   "reverse mapping checking getaddrinfo for . [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!",
+   "reverse mapping checking getaddrinfo for no-data [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!"
+  ],
+  "logs_to_query_regex": [
+   "reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!",
+   "reverse mapping checking getaddrinfo for . [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!",
+   "reverse mapping checking getaddrinfo for no-data [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!"
+  ],
+  "llm_template": "reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!",
+  "cluster_id": 25,
+  "update_success": true,
+  "template": "reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!"
+ },
+ {
+  "iter": 12,
+  "logs_to_query": [
+   "Invalid user webmaster from <*>"
+  ],
+  "logs_to_query_regex": [
+   "Invalid user webmaster from <*>"
+  ],
+  "llm_template": "Invalid user webmaster from <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "Invalid user <*> from <*>"
+ },
+ {
+  "iter": 13,
+  "logs_to_query": [
+   "input_userauth_request: invalid user webmaster [preauth]",
+   "input_userauth_request: invalid user fengw [preauth]",
+   "input_userauth_request: invalid user zinm10 [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "input_userauth_request: invalid user webmaster [preauth]",
+   "input_userauth_request: invalid user fengw [preauth]",
+   "input_userauth_request: invalid user zinm10 [preauth]"
+  ],
+  "llm_template": "input_userauth_request: invalid user <*> [preauth]",
+  "cluster_id": 2,
+  "update_success": true,
+  "template": "input_userauth_request: invalid user <*> [preauth]"
+ },
+ {
+  "iter": 14,
+  "logs_to_query": [
+   "Invalid user test9 from <*>",
+   "Invalid user jboss from <*>",
+   "Invalid user python3 from <*>"
+  ],
+  "logs_to_query_regex": [
+   "Invalid user test9 from <*>",
+   "Invalid user jboss from <*>",
+   "Invalid user python3 from <*>"
+  ],
+  "llm_template": "Invalid user <*> from <*>",
+  "cluster_id": 1,
+  "update_success": true,
+  "template": "Invalid user <*> from <*>"
+ },
+ {
+  "iter": 15,
+  "logs_to_query": [
+   "fatal: Read from socket failed: Connection reset by peer [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "fatal: Read from socket failed: Connection reset by peer [preauth]"
+  ],
+  "llm_template": "fatal: Read from socket failed: Connection reset by peer [preauth]",
+  "cluster_id": 20,
+  "update_success": true,
+  "template": "fatal: Read from socket failed: Connection reset by peer [preauth]"
+ },
+ {
+  "iter": 16,
+  "logs_to_query": [
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=uucp",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=sys",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data"
+  ],
+  "logs_to_query_regex": [
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=uucp",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=sys",
+   "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=www-data"
+  ],
+  "llm_template": "pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=<*>",
+  "cluster_id": 18,
+  "update_success": true,
+  "template": "pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ },
+ {
+  "iter": 17,
+  "logs_to_query": [
+   "error: Received disconnect from <*>: 14: No more user authentication methods available. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "error: Received disconnect from <*>: 14: No more user authentication methods available. [preauth]"
+  ],
+  "llm_template": "error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth]",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth]"
+ },
+ {
+  "iter": 18,
+  "logs_to_query": [
+   "Did not receive identification string from <*>"
+  ],
+  "logs_to_query_regex": [
+   "Did not receive identification string from <*>"
+  ],
+  "llm_template": "Did not receive identification string from <*>",
+  "cluster_id": 9,
+  "update_success": true,
+  "template": "Did not receive identification string from <*>"
+ },
+ {
+  "iter": 19,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: Closed due to user request. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: Closed due to user request. [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: Closed due to user request. [preauth]",
+  "cluster_id": 23,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: Closed due to user request. [preauth]"
+ },
+ {
+  "iter": 20,
+  "logs_to_query": [
+   "Address <*> maps to <*>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!",
+   "Address <*> maps to localhost, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!",
+   "Address <*> maps to scanning.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"
+  ],
+  "logs_to_query_regex": [
+   "Address <*> maps to <*>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!",
+   "Address <*> maps to localhost, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!",
+   "Address <*> maps to scanning.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"
+  ],
+  "llm_template": "Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!",
+  "cluster_id": 31,
+  "update_success": true,
+  "template": "Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"
+ },
+ {
+  "iter": 21,
+  "logs_to_query": [
+   "Accepted password for fztu from <*> port 49116 ssh2",
+   "Accepted password for jmzhu from <*> port 48253 ssh2",
+   "Accepted password for curi from <*> port 27993 ssh2"
+  ],
+  "logs_to_query_regex": [
+   "Accepted password for fztu from <*> port 49116 ssh2",
+   "Accepted password for jmzhu from <*> port 48253 ssh2",
+   "Accepted password for curi from <*> port 27993 ssh2"
+  ],
+  "llm_template": "Accepted password for <*> from <*> port <*> ssh2",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Accepted password for <*> from <*> port <*> ssh2"
+ },
+ {
+  "iter": 22,
+  "logs_to_query": [
+   "pam_unix(sshd:session): session closed for user fztu",
+   "pam_unix(sshd:session): session closed for user yuewang",
+   "pam_unix(sshd:session): session closed for user hxu"
+  ],
+  "logs_to_query_regex": [
+   "pam_unix(sshd:session): session closed for user fztu",
+   "pam_unix(sshd:session): session closed for user yuewang",
+   "pam_unix(sshd:session): session closed for user hxu"
+  ],
+  "llm_template": "pam_unix(sshd:session): session closed for user <*>",
+  "cluster_id": 6,
+  "update_success": true,
+  "template": "pam_unix(sshd:session): session closed for user <*>"
+ },
+ {
+  "iter": 23,
+  "logs_to_query": [
+   "pam_unix(sshd:session): session opened for user fztu by (uid=0)",
+   "pam_unix(sshd:session): session opened for user tzhao by (uid=0)",
+   "pam_unix(sshd:session): session opened for user jmzhu by (uid=0)"
+  ],
+  "logs_to_query_regex": [
+   "pam_unix(sshd:session): session opened for user fztu by (uid=0)",
+   "pam_unix(sshd:session): session opened for user tzhao by (uid=0)",
+   "pam_unix(sshd:session): session opened for user jmzhu by (uid=0)"
+  ],
+  "llm_template": "pam_unix(sshd:session): session opened for user <*> by (uid=<*>)",
+  "cluster_id": 14,
+  "update_success": true,
+  "template": "pam_unix(sshd:session): session opened for user <*> by (uid=<*>)"
+ },
+ {
+  "iter": 24,
+  "logs_to_query": [
+   "error: Received disconnect from <*>: 3: <*>: Auth fail [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "error: Received disconnect from <*>: 3: <*>: Auth fail [preauth]"
+  ],
+  "llm_template": "error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]",
+  "cluster_id": 19,
+  "update_success": true,
+  "template": "error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]"
+ },
+ {
+  "iter": 25,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: [preauth]",
+  "cluster_id": 7,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: [preauth]"
+ },
+ {
+  "iter": 26,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: Normal Shutdown, Thank you for playing [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: Normal Shutdown, Thank you for playing [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]",
+  "cluster_id": 27,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]"
+ },
+ {
+  "iter": 27,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: Client disconnecting normally [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: Client disconnecting normally [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: Client disconnecting normally [preauth]",
+  "cluster_id": 17,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: Client disconnecting normally [preauth]"
+ },
+ {
+  "iter": 28,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: disconnect [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: disconnect [preauth]"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: disconnect [preauth]",
+  "cluster_id": 10,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: disconnect [preauth]"
+ },
+ {
+  "iter": 29,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: disconnected by user"
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: disconnected by user"
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: disconnected by user",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: disconnected by user"
+ },
+ {
+  "iter": 30,
+  "logs_to_query": [
+   "Bad protocol version identification 'GET / <*>' from <*> port 30762",
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282",
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "logs_to_query_regex": [
+   "Bad protocol version identification 'GET / <*>' from <*> port 30762",
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282",
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "llm_template": "Bad protocol version identification 'GET / <*>' from <*> port <*>",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Bad protocol version identification <*> from <*> port <*>"
+ },
+ {
+  "iter": 31,
+  "logs_to_query": [
+   "Bad protocol version identification '<*>' from <*> port 8864",
+   "Bad protocol version identification '\\026\\003\\001\\001\"\\001' from <*> port 37667",
+   "Bad protocol version identification '\\026\\003\\001\\001\"\\001' from <*> port 52764"
+  ],
+  "logs_to_query_regex": [
+   "Bad protocol version identification '<*>' from <*> port 8864",
+   "Bad protocol version identification '\\026\\003\\001\\001\"\\001' from <*> port 37667",
+   "Bad protocol version identification '\\026\\003\\001\\001\"\\001' from <*> port 52764"
+  ],
+  "llm_template": "Bad protocol version identification '\\026\\003\\001\\001\"\\001' from <*> port <*>",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Bad protocol version identification <*> from <*> port <*>"
+ },
+ {
+  "iter": 32,
+  "logs_to_query": [
+   "Bad protocol version identification '<*>' from <*> port 8864",
+   "Bad protocol version identification 'SSH-2.0' from <*> port 56716",
+   "Bad protocol version identification '\\377\\375\\<*>' from <*> port 34170"
+  ],
+  "logs_to_query_regex": [
+   "Bad protocol version identification '<*>' from <*> port 8864",
+   "Bad protocol version identification 'SSH-2.0' from <*> port 56716",
+   "Bad protocol version identification '\\377\\375\\<*>' from <*> port 34170"
+  ],
+  "llm_template": "Bad protocol version identification <*> from <*> port <*>",
+  "cluster_id": 16,
+  "update_success": true,
+  "template": "Bad protocol version identification <*> from <*> port <*>"
+ },
+ {
+  "iter": 33,
+  "logs_to_query": [
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282",
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 4710",
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "logs_to_query_regex": [
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 3282",
+   "Bad protocol version identification 'GET /manager/html <*>' from <*> port 4710",
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "llm_template": "Bad protocol version identification 'GET /manager/html <*>' from <*> port <*>",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Bad protocol version identification <*> from <*> port <*>"
+ },
+ {
+  "iter": 34,
+  "logs_to_query": [
+   "Bad packet length 1819045217. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Bad packet length 1819045217. [preauth]"
+  ],
+  "llm_template": "Bad packet length <*> [preauth]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Bad packet length <*>. [preauth]"
+ },
+ {
+  "iter": 35,
+  "logs_to_query": [
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "logs_to_query_regex": [
+   "Bad protocol version identification 'CONNECT <*>:443 <*>' from <*> port 45014"
+  ],
+  "llm_template": "Bad protocol version identification 'CONNECT <*> <*>' from <*> port <*>",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Bad protocol version identification <*> from <*> port <*>"
+ },
+ {
+  "iter": 36,
+  "logs_to_query": [
+   "fatal: no hostkey alg [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "fatal: no hostkey alg [preauth]"
+  ],
+  "llm_template": "fatal: no hostkey alg [preauth]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "fatal: no hostkey alg [preauth]"
+ },
+ {
+  "iter": 37,
+  "logs_to_query": [
+   "error: Received disconnect from <*>: 13: Authentication cancelled by user. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "error: Received disconnect from <*>: 13: Authentication cancelled by user. [preauth]"
+  ],
+  "llm_template": "error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth]",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth]"
+ },
+ {
+  "iter": 38,
+  "logs_to_query": [
+   "error: connect_to <*> port 22: failed."
+  ],
+  "logs_to_query_regex": [
+   "error: connect_to <*> port 22: failed."
+  ],
+  "llm_template": "error: connect_to <*> port <*>: failed.",
+  "cluster_id": 8,
+  "update_success": true,
+  "template": "error: connect_to <*> port <*>: failed."
+ },
+ {
+  "iter": 39,
+  "logs_to_query": [
+   "Failed password for invalid user from <*> port 2223 ssh2",
+   "Failed password for invalid user from <*> port 60796 ssh2",
+   "Failed password for invalid user from <*> port 37920 ssh2"
+  ],
+  "logs_to_query_regex": [
+   "Failed password for invalid user from <*> port 2223 ssh2",
+   "Failed password for invalid user from <*> port 60796 ssh2",
+   "Failed password for invalid user from <*> port 37920 ssh2"
+  ],
+  "llm_template": "Failed password for invalid user from <*> port <*> ssh2",
+  "cluster_id": 21,
+  "update_success": true,
+  "template": "Failed password for <*> from <*> port <*> ssh2"
+ },
+ {
+  "iter": 40,
+  "logs_to_query": [
+   "fatal: Write failed: Connection reset by peer [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "fatal: Write failed: Connection reset by peer [preauth]"
+  ],
+  "llm_template": "fatal: Write failed: Connection reset by peer [preauth]",
+  "cluster_id": 15,
+  "update_success": true,
+  "template": "fatal: Write failed: Connection reset by peer [preauth]"
+ },
+ {
+  "iter": 41,
+  "logs_to_query": [
+   "Received disconnect from <*>: 11: Disconnect requested by Windows SSH Client."
+  ],
+  "logs_to_query_regex": [
+   "Received disconnect from <*>: 11: Disconnect requested by Windows SSH Client."
+  ],
+  "llm_template": "Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.",
+  "cluster_id": 24,
+  "update_success": true,
+  "template": "Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client."
+ },
+ {
+  "iter": 42,
+  "logs_to_query": [
+   "error: Received disconnect from <*>: 3: <*>: timeout in waiting for rekeying process. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "error: Received disconnect from <*>: 3: <*>: timeout in waiting for rekeying process. [preauth]"
+  ],
+  "llm_template": "error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth]",
+  "cluster_id": 30,
+  "update_success": true,
+  "template": "error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth]"
+ },
+ {
+  "iter": 43,
+  "logs_to_query": [
+   "error: Received disconnect from <*>: 3: <*>: User authentication canceled by user [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "error: Received disconnect from <*>: 3: <*>: User authentication canceled by user [preauth]"
+  ],
+  "llm_template": "error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth]",
+  "cluster_id": 28,
+  "update_success": true,
+  "template": "error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth]"
+ },
+ {
+  "iter": 44,
+  "logs_to_query": [
+   "Disconnecting: Packet corrupt [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Disconnecting: Packet corrupt [preauth]"
+  ],
+  "llm_template": "Disconnecting: Packet corrupt [preauth]",
+  "cluster_id": 0,
+  "update_success": true,
+  "template": "Disconnecting: Packet corrupt [preauth]"
+ },
+ {
+  "iter": 45,
+  "logs_to_query": [
+   "Corrupted MAC on input. [preauth]"
+  ],
+  "logs_to_query_regex": [
+   "Corrupted MAC on input. [preauth]"
+  ],
+  "llm_template": "Corrupted MAC on input. [preauth]",
+  "cluster_id": 5,
+  "update_success": true,
+  "template": "Corrupted MAC on input. [preauth]"
+ },
+ {
+  "iter": 46,
+  "logs_to_query": [
+   "PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi"
+  ],
+  "logs_to_query_regex": [
+   "PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<*> user=curi"
+  ],
+  "llm_template": "PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=ssh ruser=<*> rhost=<*> user=curi",
+  "cluster_id": 26,
+  "update_success": true,
+  "template": "PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>"
+ }
+]
