@@ -1,5 +1,5 @@
 # source ~/.zshrc
-# conda activate logevaluate
+# conda activate logevaluate  
 
 cd evaluation
 for sim_thresh in default 0.4 0.5 0.6 0.7
