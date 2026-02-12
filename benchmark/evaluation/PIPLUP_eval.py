@@ -37,7 +37,6 @@ datasets_rq1 = [
     "OpenSSH",
 ]
 
-
 datasets_full = [
     "Proxifier",
     "Linux",
@@ -55,20 +54,6 @@ datasets_full = [
     "Thunderbird"
 ]
 
-'''"Proxifier",
-    "Linux",
-    "Apache",
-    "Zookeeper",
-    "Mac",
-    "Hadoop",
-    "OpenStack",
-    "HealthApp",
-    "HPC",
-    "OpenSSH",
-    "BGL",
-    "HDFS",
-    "Spark",
-    "Thunderbird",'''
 
 benchmark_settings = {
     'HDFS': {
@@ -160,6 +145,12 @@ def PIPLUP_args():
     parser.add_argument('-full', '--full_data',
                         help="Set this if you want to test on full dataset",
                         default=False, action='store_true')
+    parser.add_argument('-no_merge', '--disable_merge_module', 
+                        help="Set this if you want to disable the merge module",
+                        default=False, action='store_true')
+    parser.add_argument('-no_preprocess', '--disable_preprocessing_module', 
+                        help="Set this if you want to disable the preprocessing module",
+                        default=False, action='store_true')
     parser.add_argument('--complex', type=int,
                         help="Set this if you want to test on complex dataset",
                         default=0)
@@ -173,6 +164,10 @@ def PIPLUP_args():
     parser.add_argument('--sim_thresh', 
                         help="The similarity threshold for clustering",
                         default='default')
+    parser.add_argument('--hit_limit', type=int,
+                        help="The sample size for hit limit",
+                        default=385)
+
     args = parser.parse_args()
     return args
 
@@ -203,7 +198,7 @@ if __name__ == "__main__":
         indir = os.path.join(input_dir, os.path.dirname(log_file))
         if os.path.exists(os.path.join(output_dir, f"{dataset}_full.log_structured.csv")):
             parser = None
-            print("parseing result exist.")
+            print("parsing result exist.")
         else:
             pass
         parser = LogParser
@@ -216,8 +211,8 @@ if __name__ == "__main__":
             log_file=log_file,
             LogParser=parser,
             param_dict={
-                'log_format': setting['log_format'], 'indir': indir, 'outdir': output_dir, 
-                'br_thresh':args.br_thresh, 'sim_thresh': args.sim_thresh,
+                'log_format': setting['log_format'], 'indir': indir, 'outdir': output_dir, 'preprocess':not args.disable_preprocessing_module,
+                'br_thresh':args.br_thresh, 'sim_thresh': args.sim_thresh, 'hit_limit': args.hit_limit, 'merge':not args.disable_merge_module,
                 'keep_para':False
             },
             otc=args.oracle_template_correction,
@@ -226,4 +221,4 @@ if __name__ == "__main__":
             result_file=result_file
         )  # it internally saves the results into a summary file
     metric_file = os.path.join(output_dir, result_file)
-    post_average(metric_file, f"PIPLUP_{data_type}_br_thresh={args.br_thresh}_sim_thresh={args.sim_thresh}", args.complex, args.frequent)
+    post_average(metric_file, f"PIPLUP_{data_type}_br_thresh={args.br_thresh}_sim_thresh={args.sim_thresh}_hit_limit={args.hit_limit}", args.complex, args.frequent)
