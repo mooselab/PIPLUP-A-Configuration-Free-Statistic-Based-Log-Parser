@@ -1,0 +1,152 @@
+EventId,EventTemplate,Occurrences
+93067dc4,onStandStepChanged <*>,30161
+252628f5,onReceive action: <*>,3239
+409ce25a,processHandleBroadcastAction action:<*>,8602
+b8f897f8,flush sensor data,1617
+e0a83abb,getTodayTotalDetailSteps = <*>,27447
+e3a0630a,setTodayTotalDetailSteps=<*>,27431
+ec91e8ec,calculateCaloriesWithCache totalCalories=<*>,27426
+213c973d,calculateAltitudeWithCache totalAltitude=<*>,27426
+f7985a60,REPORT : <*>,23539
+1703b836,<*> true,93
+ffb006b5,"screen status unknown,think screen on",42
+0635a938,flushTempCacheToDB by stand,193
+efbbbe85,flushTempCacheToDB by ext,244
+0be9e3dc,Alarm uploadStaticsToDB totalSteps=<*>:153367Floor:240Distance:<*>,307
+3b251b90,writeDataToDB size <*>,437
+761b3014,upLoadOneMinuteDataToEngine time=<*>,1920
+49c66533,getBinderPackageName packageName = <*>,3156
+7a65ac79,"getAppContext() isAppValid health or wear, packageName = <*>",744
+7b52b221,insertHiHealthData() checkAppType <*> appID = <*>,744
+add2582e,"insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>",744
+3cb629bc,"saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>",744
+4b6bb3be,"saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>",1172
+4fa3b706,"new date =<*>, type=<*>,old=<*>",7237
+4dba71b3,"saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>",288
+8e2921bb,"bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>",744
+5bcd28f4,"saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>",437
+aad2bd2d,startListenerChange subscribeList = [<*>],744
+8263ced3,"insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>",212
+034409f5,insertHiHealthData() end totalTime = <*>,744
+3afbef33,uploadStaticsToDB() onResult type = <*> obj=<*>,307
+c5b5f7d6,uploadStaticsToDB failed message=<*>,212
+71835e93,checkInsertStatus stepSum or calorieSum is enough,685
+42ded8e2,checkInsertStatus stepStatSum or calorieStatSum is enough,705
+2b2b801d,stepSyncOrNot appSynTimes is <*> statsyncTimes is <*>,705
+9b2e9261,"startInsertSportSync start auto sync,app is <*>",705
+dbdd9143,"checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>",705
+cdb47d81,"startInsertSportSync first <*> steps sync,do all sync",705
+50c2e421,"startSync hiSyncOption = <*>{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app = <*> who = <*>",792
+6e805a4c,needAutoSync autoSyncSwitch is open,792
+e4156b58,"initDataPrivacy the dataPrivacy switch is open, start push health data!",792
+f257f214,"initUserPrivacy the userPrivacy switch is open, start push user data!",792
+38085a58,initDataPrivacy the dataPrivacy is true,792
+1d4b8a6f,initUserPrivacy the userPrivacy is true,792
+3f9b4da2,ifCanSync not! no cloud version,792
+8764d489,sendSyncFailedBroadcast,792
+87e69fe2,InsertCallBack() onSuccess type = <*> data=<*>,437
+75d2c94f,InsertEvent success begin:<*> end:<*>,436
+2afb84ca,setWriteDBLastDataMinute=<*>,436
+b072e131,"timeStamp back,extendReportTimeStamp=<*>",651
+c7295c12,getTodaySportData mStepsRecordManager=<*>,206
+057ae03f,theDayChanged <*>,11
+e788f919,initEnviroument,11
+3244bf49,getStepCounterStatus,16
+86bcfaea,reStartStepCounter,11
+3616b800,clear(),11
+40f31420,getTodayBasicStandardSteps= <*>,32
+aa1d16b4,getDiffTotalSteps= <*>,32
+9e363d96,setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>,16
+a2e429e1,setDiffTotalSteps=<*>,11
+00dbbc8e,reload : <*> restar <*>,16
+b9adbd56,next <*>,11
+0d02a5eb,setGoalNotifiShownRecord <*> false,11
+8e523808,closeNotification...,15
+c5a628cf,deleteHealthNotification(),15
+60f8b5ac,"checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>",11
+f6840ac8,getTodayNoSyncTotalValue datas is null or empty,11
+8e829e30,<*> false,209
+75638e92,FAILED_SCREEN_OFF block report,185
+05f47718,"setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>",10
+7a3c496e,getDeviceShutDownBoolean shutDown=<*>,5
+b9af14ff,getDeviceShutDownTime shutDownTime=<*>,5
+876820fd,getVersion,5
+75ec699f,getVersion= <*>,5
+96937c24,getServiceRestartRecord= <*>,5
+518dcad5,setServiceRestartRecord=<*>,5
+6e29dbb9,getStepsTarget,5
+1e9c2c94,getStepsTarget= <*>,5
+7ee6011c,FAILED_ERROR_DATA,10
+fe6b9d18,getLastSyncDBTime= -<*>,5
+e07dafec,userInfo changed detail,5
+53ff7617,getDiffTotalCalories,5
+7ff3b1fc,getDiffTotalCalories= <*>,5
+a70937a1,getDiffTotalAltitude= <*>,5
+bcfc9615,getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>,5
+16d1d82a,registerDynamicBroadcastReceiver,20
+91c1a59c,readXmlIfSupportEX,9
+c042318f,policy=<*>:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec,5
+20c4a566,<*> enter...,29
+1e2cca1a,"support extand step counter!,return true",9
+80042fae,readXmlIfSupportEX result=<*>,9
+6e47c65f,getMidWareCache result=<*>,5
+9feaaa88,"supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>",9
+15fd6a5a,setDeviceClassType=<*>,9
+ea9a7c5f,initStepCounter : deviceType <*>,5
+f491d814,getStepsNotificationShowStatus,5
+0cd2ab88,getMidWareStepCountService: pkgName = <*> service = <*>,15
+950911f0,getGoalNotificationShowStatus,5
+3ae1b69f,setGoalNotificationShowStatus=<*>,5
+f1ecae27,getMidWareStepCountService: isSystemApp = <*>,15
+79bef4a6,initExtendStepCounter <*>,5
+42fd1467,getWriteDBLastDataMinute,5
+69ab3663,getWriteDBLastDataMinute= <*>,5
+846b120c,context=<*>,5
+73b68b47,SystemClock.elapsedRealtime(): <*>,5
+0905fa41,the first init <*>,5
+22fa9d2b,target init: target10000,5
+133bfbb1,getARDebugConfig,5
+d7bb8bc7,setActionRestartSensorAlarm=<*>,5
+41db5583,onStartCommand Intent { cmp=<*>.manager.DaemonService },5
+94112f5f,MyServiceConn connect <*>,5
+cc5615c5,setStepCounterStatus=<*>,5
+40fe0956,start compare with midware counter,5
+f9d0ac78,startStepCounterInter mStandStepCounter = <*>,5
+123e891c,getMidWareCache mRemote=<*>,5
+a94e6269,MyGetDetailDataCallback onResult bundle == <*>,5
+6a318824,startStepCounterInter stand,5
+754c1ca1,registerLogCallback <*>,5
+ce8726f5,registerLogCallback <*> cb:<*>,5
+a032e834,onCreate(),5
+12f0e7ae,initSyncModel current SyncModel is <*>,5
+7d503f13,onBind intent = <*> { act=<*> pkg=<*> },5
+d53f3580,moveOldData(),5
+524797ca,initBinder() app = <*> packageName = <*>,10
+856373ff,getStringHuid() who is <*>,68
+1e4798c0,setGoalNotifiShownRecord <*> true,4
+99a51c1a,startNotification...,4
+f829716b,createHealthNotification(),4
+72b39ce7,upDateHealthNotification()|<*>,4
+f13f8e51,rebuild notification,4
+5240a25e,checkSportDataNum setp and calories is too less,39
+773eed6d,initDiffCaloriesfromFile mCaloriesDiff=<*>,1
+63cc42a5,initDiffAltitude from File mAltitudeDiff=<*>,1
+07ecc3c5,initTrackDistancefromFile from File mTrackDistance=<*>,1
+8734c559,insert conflict event timeBegin <*> timeEnd <*>,1
+9d2ebb3d,setFirstStartDaemonFromUI success: true,1
+9fbba67b,onStartCommand Intent { pkg=<*> cmp=<*>.manager.DaemonService (has extras) },1
+3c85de0c,subscribeHiHealthData() checkAppType <*> appID = <*>,3
+81a6b4e5,aggregateHiHealthDataEx() checkAppType <*> appID = <*>,21
+18baacc9,fetchPhoneDataClient,1
+7fb5264b,getUserPreference key = <*>,9
+63a07512,aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>,21
+41f50f22,readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>,27
+aecb3931,"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",5
+9cd83e4a,"readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>, <*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}",4
+ffce70bc,"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*> <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",13
+6ff5bca8,aggregateHiHealthData() time = <*> totalTime = <*>,21
+60e81ef7,readHiHealthData() end time = <*> totalTime = <*>,27
+057cc7fc,"readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}",23
+800a3738,"fetchDataSourceByType type = <*>,timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}",7
+1801eb11,"getHealthClientListByTime() dataClientIDs is null timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}",7
+d691991d,"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-<*>, endTime=<*>, type=[<*>, <*> <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",3

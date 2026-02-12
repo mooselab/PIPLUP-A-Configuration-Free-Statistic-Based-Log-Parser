@@ -1,0 +1,48 @@
+EventId,EventTemplate,Occurrences
+9b47c2e1,"<*> ""GET <*>"" status: <*> len: <*> time: <*>",90122
+50e0ef31,[instance: <*>] Creating image,2066
+c583951f,[instance: <*>] VM <*> (Lifecycle Event),10331
+7d8b6b51,"While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.",45
+fe9c1237,[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.,4049
+904416f0,image <*> at (<*>): checking,12043
+1ea73ca5,"image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage",12043
+b36febb0,Active base files: <*>,12035
+3964d785,Removable base files: <*>,3059
+3b70c34a,Creating event network-vif-plugged:<*> for instance <*>,2065
+7ac7655f,"<*> ""POST <*>"" status: <*> len: <*> time: <*>",6194
+796fd834,[instance: <*>] Instance spawned successfully.,2066
+93995b30,[instance: <*>] Instance destroyed successfully.,2064
+9f276c62,[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.,2066
+a4ab0dee,[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.,2064
+e51c49ab,[instance: <*>] Took <*> seconds to build instance.,2066
+bcb3de43,"<*> ""DELETE <*>"" status: <*> len: <*> time: <*>",2064
+06476222,[instance: <*>] Terminating instance,2064
+27286d97,[instance: <*>] Deleting instance files <*>,2064
+822b21a7,[instance: <*>] Deletion of <*> complete,2064
+652a820e,[instance: <*>] Took <*> seconds to deallocate network for instance.,2065
+66acd71e,HTTP exception thrown: No instances found for any event,2064
+51387d9b,Unknown base file: <*>,3059
+8087023c,Removing base or swap file: <*>,2064
+8deb8bff,[instance: <*>] Attempting claim: memory <*> disk <*> vcpus <*> CPU,2065
+74b2c838,[instance: <*>] Total memory: <*> used: <*>,2065
+6038f94f,[instance: <*>] memory limit: <*> free: <*>,2065
+888c1f6a,[instance: <*>] Total disk: <*> used: <*>,2065
+b6262c55,"[instance: <*>] disk limit not specified, defaulting to unlimited",2065
+1c72f1dd,"[instance: <*>] vcpu limit not specified, defaulting to unlimited",2065
+dae1599d,"[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU",2065
+ad03d9ef,[instance: <*>] Claim successful,2065
+61a90d8b,Auditing locally available compute resources for node <*>,1739
+346c93fc,Total usable vcpus: <*> total allocated vcpus: <*>,1739
+9668c22a,Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[],1739
+7d500875,Compute_service record updated for <*>,1739
+45d153d6,Successfully synced instances from host '<*>'.,502
+220e55da,The instance sync for host <*> did not match. Re-created its InstanceList.,364
+b6c72e7d,"<*> ""GET <*>&changes-since=<*>"" status: <*> len: <*> time: <*>",177
+5ff0a538,"<*> ""GET <*>&changes-since=<*>&host=<*>"" status: <*> len: <*> time: <*>",176
+b7d6364d,Base or swap file too young to remove: <*>,995
+ed89184a,couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported,12
+d016213e,Running instance usage audit for host <*> from <*> to <*> instances.,30
+f5c027b5,Error during ComputeManager._run_image_cache_manager_pass,8
+7ca28619,Bad response code while validating token: <*>,2
+8008bcd3,"Identity response: <!DOCTYPE HTML PUBLIC ""-//IETF//DTD HTML <*>"">",2
+c28159fd,Unable to validate token: Failed to fetch token data from identity server,2

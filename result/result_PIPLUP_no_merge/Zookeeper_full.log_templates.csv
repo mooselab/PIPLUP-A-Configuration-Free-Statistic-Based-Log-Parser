@@ -1,0 +1,72 @@
+EventId,EventTemplate,Occurrences
+0bfc14c6,Reading configuration from: <*>,36
+91491bf0,Defaulting to majority quorums,36
+331b4187,<*> set to <*>,216
+0f7cc562,Purge task is not scheduled.,36
+d459c04c,Starting quorum peer,36
+176369f3,binding to port <*>,36
+2741e1e8,currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,3
+71910293,acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,3
+fcea708e,My election bind port: <*>,36
+00078e14,LOOKING,49
+1aeda87c,New election. My id = <*> proposed zxid=<*>,49
+cd9a2201,"Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)",505
+1e7a3631,Cannot open channel to <*> at election address <*>,2584
+286299e2,Notification time out: <*>,1322
+9879a9ab,Received connection request <*>,10429
+c172d526,FOLLOWING,34
+4c226563,TCP NoDelay set to: true,39
+2a1511be,"Server environment:zookeeper.version=<*>, built on <*> GMT",36
+8dc08652,Server <*>,432
+bded947b,Server environment:java.vendor=<*> Corporation,36
+93339c61,Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>,49
+a1237171,FOLLOWING - LEADER ELECTION TOOK - <*>,34
+66c79aaa,LEADING - LEADER ELECTION TOOK - <*>,15
+ac5f8762,Getting a diff from the leader <*>,28
+dfd8b545,Snapshotting: <*> to <*>,65
+036ce310,Connection broken for id <*> my id = <*> error =,10388
+273e53f2,Interrupting SendWorker,10390
+45a3ec5d,Interrupted while waiting for message on queue,10386
+7a2ec7d0,Send worker leaving thread,10390
+cea40c10,Got zxid <*> expected <*>,28
+53c73c05,Creating new log file: log.<*>,25
+abe76bf8,Accepted socket connection from <*>,2020
+1bc7bc65,Connection request from old client <*>; will be dropped if server is in r-o mode,1861
+00a8e7f7,Client attempting to establish new session at <*>,1790
+37ce0325,Established session <*> with negotiated timeout <*> for client <*>,1856
+ecefe136,caught end of stream exception,1670
+20d23992,Closed socket connection for client <*> which had sessionid <*>,1749
+1caefedb,Revalidating client: <*>,55
+5f73d604,Exception when using channel: for id <*> my id = <*> error = <*>: Broken pipe,4
+63d9783e,Unexpected Exception:,27
+ef0c5ad2,Exception causing close of session <*> due to <*>: Connection reset by peer,8
+cec2484c,Reading snapshot <*>,60
+0d395a72,"Have smaller server identifier, so dropping the connection: (<*>, <*>)",20
+1b298505,Exception when following the leader,11
+feceb4c6,shutdown called,11
+4e66438e,Shutdown called,2
+6a7eb108,Shutting down,58
+68a7558d,shutting down,13
+6d0785f5,<*> exited loop!,28
+c7ef5ae9,shutdown of request processor complete,13
+7f667bb2,SyncRequestProcessor exited!,13
+e5abeaab,"Unexpected exception, tries=<*>, connecting to <*>",8
+23719262,LEADING,15
+7c6c9afa,Follower sid: <*> : info : <*>,34
+6c3f5f59,Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>,34
+9d86801d,Sending DIFF,28
+0eb178bd,Sending SNAP,6
+c5851f56,Commiting zxid <*> from <*> not first!,15
+22ee3efb,First is <*>,15
+4d52daa2,Have quorum of supporters; starting up and setting last processed zxid: <*>,15
+c74ac368,Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>,6
+24022c09,Expiring session <*> timeout of 10000ms exceeded,1602
+fbd85e7d,Expiring session <*> timeout of 20000ms exceeded,160
+61a003ea,Processed session termination for sessionid: <*>,1790
+0cf47064,Unexpected exception causing shutdown while sock still open,590
+f311a57e,******* GOODBYE <*> ********,590
+8695caf0,exception while shutting down acceptor: <*>: Socket closed,2
+4c5926a1,Getting a snapshot from leader,6
+5899cc0f,Exception causing close of session <*> due to <*>: ZooKeeperServer not running,159
+bed3680d,Closed socket connection for client <*> (no session established for client),159
+28253da9,Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:-<*> reqpath:<*> Error <*> Error:KeeperErrorCode = <*> for <*>,19

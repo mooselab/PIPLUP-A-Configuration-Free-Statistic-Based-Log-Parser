@@ -1,0 +1,246 @@
+EventId,EventTemplate,Occurrences
+ca7d7941,loaded properties from hadoop-metrics2.properties,977
+4dc89700,Scheduled snapshot period at <*> second(s).,978
+82b54a4b,<*> metrics system started,978
+58e2370e,MapTask metrics system stopped.,302
+3c5bb15c,Executing with tokens:,978
+e0885064,"Kind: mapreduce.job, Service: <*> Ident: (<*>)",909
+a11d3c48,Sleeping for <*> before retrying again. Got null now.,909
+6f163461,<*> for child: <*>,907
+3729a2cd,"<*> is deprecated. Instead, use <*>",963
+fc4324dd,ProcfsBasedProcessTree currently is supported only on Linux.,905
+ce10d82c,Using ResourceCalculatorProcessTree : <*>,905
+a42129b8,Processing split: hdfs://msra-<*>,834
+150f6473,(EQUATOR) <*> kvi <*>),5542
+99a227ed,<*>: <*>,834
+fefbdbcf,soft limit at <*>,834
+fe766f3e,bufstart = <*>; bufvoid = <*>,834
+6e49102f,kvstart = <*>; length = <*>,834
+b6a9d915,Map output collector class = <*>,834
+895d7761,Spilling map output,5339
+36ab94b8,bufstart = <*>; bufend = <*>; bufvoid = <*>,5339
+cc0e7b9f,kvstart = <*>); kvend = <*>); length = <*>,5339
+cdf7dd93,Finished spill <*>,5204
+960b4f80,(RESET) equator <*> kv <*>) kvi <*>),4579
+4dfb8c4d,<*> error constructing remote block reader.,16
+918e5863,"Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection timed out: no further information",5
+5a3e1f9d,Successfully connected to <*> for <*>,6
+0491d81f,Starting flush of map output,644
+7707888f,Merging <*> sorted segments,678
+5be2cae8,"Down to the last merge-pass, with <*> segments left of total size: <*> bytes",678
+dfe6ae4e,<*> is done. And is in the process of committing,625
+cf0f4f26,Task <*> done.,616
+c991e706,"Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection refused: no further information",1
+e223c99a,Using ShuffleConsumerPlugin: <*>,71
+06bfe26e,"MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>",71
+1ad5a5a0,<*> Thread started: EventFetcher for fetching Map Completion Events,71
+8d8a633f,<*>: Got <*> new map-outputs,414
+f1006a67,Assigning <*> with <*> to fetcher#<*>,472
+f9d007d0,assigned <*> of <*> to <*> to fetcher#<*>,472
+e344cdca,for url=<*>&reduce=<*>&map=<*> sent hash and received reply,469
+b0d32eee,<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),667
+9924e90f,fetcher#<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK,664
+df901a8f,Ignoring obsolete output of KILLED map-task: '<*>',66
+aa171447,Created MRAppMaster for application <*>,69
+c86bf2f3,"Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: -<*>)",69
+c0c8618d,OutputCommitter set in config null,69
+55ac0cfa,OutputCommitter is <*>,69
+3a2b3aef,Registering class <*> for class <*>,621
+b3a00eb3,Default file system [hdfs://msra-<*>],226
+3a03968c,Emitting job history data to the timeline server is not enabled,69
+9c396752,Adding job token for <*> to jobTokenSecretManager,69
+ce54fccc,Not uberizing <*> because: not enabled; too many maps; too much input;,69
+655c64ba,Input size for job <*> = <*> Number of splits = <*>,69
+70d3f175,Number of reduces for job <*> = <*>,69
+db930ec6,"MRAppMaster launching normal, non-uberized, multi-container job <*>.",69
+0211a8d6,Using callQueue class <*>,138
+e5777033,Starting Socket Reader <*> for port <*>,138
+0b0a461e,Adding protocol <*> to the server,69
+ccc17099,IPC Server Responder: starting,138
+73b103d7,IPC Server listener on <*>: starting,138
+81b07bff,Instantiated MRClientService at <*>,69
+ef226d74,Logging to <*>) via <*>,69
+7bec5cbf,Http request log for <*> is not defined,69
+eb1f01e8,<*> global filter 'safety' (class=<*>),69
+9e2d8347,<*> filter AM_PROXY_FILTER (class=<*>) to context mapreduce,69
+483157a9,<*> filter AM_PROXY_FILTER (class=<*>) to context static,69
+23287a46,adding path spec: /mapreduce/*,69
+602cb0dc,adding path spec: /ws/*,69
+8aa20788,Jetty bound to port <*>,69
+ff52c40c,<*>,69
+381f919e,Extract jar:file:/D:<*> to C:<*>.dbisl5\webapp,69
+43663525,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>,69
+01425cf2,Web app /mapreduce started at <*>,69
+5ba9445a,Registered webapp guice modules,69
+6af6b73e,JOB_CREATE <*>,69
+8b1732f5,nodeBlacklistingEnabled:true,69
+07a75a5d,maxTaskFailuresPerNode is <*>,69
+168a0869,blacklistDisablePercent is <*>,69
+ac916d8e,Connecting to ResourceManager at MSRA-<*>,69
+e5d98c45,"maxContainerCapability: <memory:<*>, vCores:<*>",69
+62365dbe,queue: default,69
+293bdc87,Upper limit on the thread pool size is <*>,69
+52caee6e,<*> : <*>,69
+6659e8b0,Resolved <*> to /default-rack,3297
+81ec4814,<*> Transitioned from NEW to <*>,379
+d51b9a84,"mapResourceRequest:<memory:<*>, vCores:<*>",65
+54f80471,Event Writer setup for JobId: <*> File: hdfs://msra-<*>,69
+1e08dd42,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,2094
+796ebb64,"getResources() for <*>: ask=<*> release= <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:-<*> knownNMs=<*>",899
+922a05a6,"Recalculating schedule, headroom=<memory:<*>, vCores:-<*>",4415
+1fbfd66f,Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>,3841
+0f71bb1f,Got allocated containers <*>,606
+5e5f5ff9,Assigned container <*> to <*>,906
+6a48285f,The job-jar file on the remote FS is hdfs://msra-<*>,69
+e287d903,The job-conf file on the remote FS is <*>,69
+7c188553,Adding <*> tokens and <*> secret keys for NM use for launching container,69
+e497a05e,Size of containertokens_dob is <*>,69
+944f8887,Putting shuffle token in serviceData,69
+63fbbb87,<*> TaskAttempt Transitioned from <*> to <*>,4713
+6a5eae01,Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container <*> taskAttempt <*>,906
+b6adf88f,Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container <*> taskAttempt <*>,838
+df347da1,Launching <*>,906
+fc9ef42a,Opening proxy : <*>,1757
+f4ac93f2,Shuffle port returned by ContainerManager for <*> : <*>,906
+551393b4,TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>],1033
+e215e532,ATTEMPT_START <*>,905
+3be0b589,<*> Task Transitioned from <*> to <*>,1825
+71c7c3bf,Auth successful for <*> (auth:SIMPLE),962
+60675cee,JVM with ID : <*> asked for a task,902
+2a1c144a,JVM with ID: <*> given task: <*>,902
+3670935b,Progress of TaskAttempt <*> is : <*>,45882
+a018cf56,Exception in createBlockOutputStream,30
+21f96340,Abandoning <*>,30
+ec6edfd1,Excluding datanode <*>,30
+31cf9f34,Done acknowledgement from <*>,605
+da04743d,KILLING <*>,851
+007ded00,Task succeeded with attempt <*>,701
+3a2741bf,Num completed Tasks: <*>,701
+ec6b84b4,Reduce slow start threshold reached. Scheduling reduces.,65
+983af3ff,All maps assigned. Ramping up all remaining reduces:<*>,43
+ba0e1b89,Received completed container <*>,826
+1d180b41,Diagnostics report from <*>: Container killed by the ApplicationMaster.,733
+ff65c706,Assigned to reduce,73
+be4da74d,DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,255
+71478d85,We launched <*> speculations. Sleeping <*> milliseconds.,255
+1a8c09a8,Scheduling a redundant attempt for task <*>,194
+c78095d6,MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,18140
+68216da6,Killing <*> because it is running on unusable node:<*>,55
+228f590f,Diagnostics report from <*>: Container released on a *lost* node,55
+85c118b7,Could not delete hdfs://msra-<*>,216
+62baac3c,"completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:-<*> finalMapResourceLimit:<memory:<*>, vCores:-<*> finalReduceResourceLimit:<memory:<*>, vCores:-<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>",531
+abfa93dd,Ramping up <*>,31
+39160175,Socket Reader <*> for port <*>: readAndProcess from client <*> threw exception [<*>: An existing connection was forcibly closed by the remote host],217
+b4c03c0a,Issuing kill to other attempt <*>,182
+71c3d1dc,Commit-pending state update from <*>,47
+7d812712,<*> given a go for committing the task output.,47
+7bcc9014,Commit <*> request from <*>,47
+fe6107f0,Result of canCommit for <*>,47
+81e00d20,Calling handler for JobFinishedEvent,47
+dad8f9fa,We are finishing cleanly so this is the last retry,50
+9f79897c,Notify RMCommunicator isAMLastRetry: <*>,52
+cf25703d,Notify JHEH isAMLastRetry: <*>,52
+b2ea851d,RMCommunicator notified that shouldUnregistered is: true,50
+b288d94f,JobHistoryEventHandler notified that forceJobCompletion is true,50
+2784eb31,Calling stop for all the services,52
+c02382a8,Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>,52
+1dda5ff4,Copying hdfs://msra-<*> to hdfs://msra-<*>,94
+0cf613fa,Copied to done location: hdfs://msra-<*>,94
+9695de89,Moved tmp to done: hdfs://msra-<*>,141
+9ae352d7,Setting job diagnostics to,48
+c7ed50ba,History url is http:<*>,48
+fd178178,Waiting for application to be successfully unregistered.,45
+593f35e7,Deleting staging directory hdfs://msra-<*>,45
+fa5d86c2,Stopping server on <*>,48
+da6217eb,Stopping IPC Server listener on <*>,48
+8429e6cc,Stopping IPC Server Responder,48
+f495a4dd,TaskHeartbeatHandler thread interrupted,48
+806d6f9b,Read <*> bytes from map-output for <*>,649
+78d771c0,<*> freed by fetcher#<*> in <*>,455
+d120a818,EventFetcher is interrupted.. Returning,54
+f3c8ba02,finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs,56
+105acdeb,"Merging <*> files, <*> bytes from disk",56
+c54fbca1,"Merging <*> segments, <*> bytes from memory into reduce",56
+ca635f8f,Merging <*> intermediate segments out of a total of <*>,7
+3766cffb,Task <*> is allowed to commit now,48
+06faffd6,Saved output of task <*> to hdfs://msra-<*>,48
+198f3928,Recovery is enabled. Will try to recover from previous life on best effort basis.,15
+2a72d746,Previous history file is at hdfs://msra-<*>,19
+f5694858,Read from history task <*>,96
+34e334b2,Read completed tasks from history <*>,11
+a4f4ef26,"Recovering task <*> from prior app attempt, status was SUCCEEDED",96
+1f3b539d,Stopping MapTask metrics system...,302
+0e5c4a3d,Stopping ReduceTask metrics system...,15
+4ae2b9bb,MapTask metrics system shutdown complete.,302
+17af1c22,ReduceTask metrics system shutdown complete.,15
+48484a41,"Communication exception: <*>: Failed on local exception: <*>: An existing connection was forcibly closed by the remote host; Host Details : local host is: ""<*>""; destination host is: ""<*>"":<*>;",44
+c869410a,Retrying connect to server: <*> Already tried <*> time(s); maxRetries=<*>,2517
+6638ff0a,"Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ]. RM may have assignment issues",7
+85b23688,Container complete event for unknown container id <*>,19
+9d851f6e,"Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] for a map as either container memory less than required <memory:<*>, vCores:<*> or no pending map tasks - maps.isEmpty=<*>",12
+8b6ad6b4,Exception in getting events,3
+615c4e9d,"Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)",1048
+a80d5d67,Address change detected. Old: msra-<*> New: msra-<*>,5795
+255e4283,Failed to renew lease for [<*>] for <*> seconds. Will retry shortly ...,5300
+b4ff2357,ERROR IN CONTACTING RM.,480
+650c5665,Communication exception: <*>: Call From MSRA-<*> to <*> failed on connection exception: <*>: Connection timed out: no further information; For more details see: http:<*>,1
+77de7fd6,TaskAttempt killed because it ran on unusable node <*> <*>,25
+e6d2bc87,DFSOutputStream ResponseProcessor exception for block <*>,14
+a1697c10,Error Recovery for block <*> in pipeline <*> <*>: bad datanode <*>,14
+ed750287,"Failed to connect to <*> for block, add to deadNodes and continue. <*>: No route to host: no further information",10
+10ba5c17,"Could not obtain <*> from any node: <*>: No live nodes contain block <*> after checking nodes = [<*>, <*>], ignoredNodes = <*> No live nodes contain current block Block locations: <*> nodes: <*> Will get new block locations from namenode and retry...",6
+6064e286,"DFS chooseDataNode: got # <*> IOException, will wait for <*> msec.",6
+8a08c061,DFS Read,3
+3203d13e,Exception running child : <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,2
+b99c6b8e,Runnning cleanup for the task,6
+fad6031b,Exception cleaning up: <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,2
+d1ac5801,"Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: -<*> status: SUCCESS status: ERROR downstreamAckTimeNanos: <*> targets: [<*>, <*>]",9
+2ef07439,DataStreamer Exception,3
+30e29814,Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0,1
+b0d2baa1,Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0,1
+16ffd5a6,Error writing History Event: <*>,4
+0e4be9d6,<*> failures on node <*>,10
+85f05336,<*> to list of failed maps,10
+78876e8e,Could not contact RM after <*> milliseconds.,3
+2d1bcd62,Error communicating with RM: Could not contact RM after <*> milliseconds.,3
+4a3798b7,"In stop, writing event <*>",6
+3935715f,Service <*> failed in state STOPPED; cause: <*>: Attempt to process a enum when a union was expected.,2
+b8a3188e,Diagnostics report from <*>: cleanup failed for container <*> : <*>: <*>: <*>,12
+625aadcb,Exception while unregistering,3
+98ad1203,Graceful stop failed,3
+c458f8b7,Diagnostics report from <*>: <*> Timed out after <*> secs,7
+a0834e40,Ramping down all scheduled reduces:<*>,100
+a4ede057,Going to preempt <*> due to lack of space for maps,100
+678229a7,Preempting attempt_1445087491445_0004_r_000000_1000,1
+ba668177,Reduce preemption successful attempt_1445087491445_0004_r_000000_1000,1
+4ee1b94f,Connection retry failed with <*> attempts in <*> seconds,1
+86fd018a,Failed to connect to <*> with <*> map outputs,1
+3ff11e72,Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker.,1
+86c07748,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0004,1
+4137dec0,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0007,1
+65b26667,RMCommunicator notified that shouldUnregistered is: false,2
+19cee14f,JobHistoryEventHandler notified that forceJobCompletion is false,2
+da659c68,Found jobId job_1445175094696_0003 to have not been closed. Will close,1
+dfb734f1,Found jobId job_1445144423722_0023 to have not been closed. Will close,1
+e006ea08,Communication exception: <*>: No Route to Host from MININT-<*> to <*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,10
+bdca8fec,Process Thread Dump: Communication exception,5
+ecd92ac1,"Last retry, killing <*>",5
+2747aaea,Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: <*>: Could not find any valid local directory for <*>,2
+41e13b78,Ignoring exception during close for <*>,1
+a1bcecde,Exception running child : <*>: Could not find any valid local directory for <*>,1
+80cb1d88,Task: attempt_1445182159119_0003_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,1
+698ea058,Task: attempt_1445182159119_0004_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,1
+18eabef4,Diagnostics report from attempt_1445182159119_0003_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,2
+f2ee4b43,Diagnostics report from attempt_1445182159119_0014_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,2
+af25606a,"Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] to fast fail map",8
+a275647a,Assigned from earlierFailedMaps,8
+9a4283fe,Exception running child : <*>: error in shuffle in fetcher#<*>,2
+3cd1115d,Diagnostics <*> from <*>: Error: <*>: There is not enough space on the disk,12
+de41c9e8,Task: <*> - exited : <*>: Spill failed,3
+0d5613e7,Diagnostics report from <*>: Error: <*>: Spill failed,6
+23a63b1d,"Unable to parse prior job history, aborting recovery",4
+a0380f1e,Could not parse the old history file. Will not have old AMinfos,4
+92242dd5,Error closing writer for JobID: job_1445144423722_0023,1
+587e9fcc,"IPC Server handler <*> on <*> call statusUpdate(attempt_1445094324383_0003_m_000000_0, <*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: output error",1
+a6e521e6,IPC Server handler <*> on <*> caught an exception,1
+2dfdac37,Shuffle failed : local error on this node: <*>,2

@@ -1,0 +1,41 @@
+EventId,EventTemplate,Occurrences
+f7fe7f88,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,18909
+9302fad4,Invalid user <*> from <*>,14581
+6b674ff1,input_userauth_request: invalid user <*> [preauth],14581
+0849a7d0,pam_unix(sshd:auth): check pass; user unknown,19852
+21bb6d0e,Failed password for invalid user <*> from <*> port <*> ssh2,19848
+2491ca3e,Connection closed by <*> [preauth],68958
+7e3ab1bb,Received disconnect from <*>: <*>: Bye Bye [preauth],46593
+86417e88,pam_unix(sshd:auth): authentication failure; logname= <*> euid=<*> tty=<*> ruser= <*>,140701
+f831cb6d,Failed password for <*> from <*> port <*> ssh2,140768
+fb624da8,Accepted password for <*> from <*> port <*> ssh2,182
+b542638e,message repeated <*> times: [ Failed password for root from <*> port <*> ssh2],36966
+722a1804,message repeated <*> times: [ Failed password for curi from <*> port <*> ssh2],1
+509a487f,Disconnecting: Too many authentication failures for <*> [preauth],37298
+cfe39ade,PAM <*> more authentication failures; logname= <*> euid=<*> tty=<*> ruser= <*> user=<*>,36966
+2f2318e5,PAM service(sshd) ignoring max retries; <*> > <*>,37963
+c926c7d9,Did not receive identification string from <*>,838
+8f56eb3b,error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth],176
+83d20af6,Received disconnect from <*>: <*>: Closed due to user request. [preauth],592
+e2390d93,error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth],930
+2ba1d1de,pam_unix(sshd:session): session opened for user <*> by (uid=<*>),182
+d38d93bd,Received disconnect from <*>: <*>: disconnected by user,34
+ac22ce5f,pam_unix(sshd:session): session closed for user <*>,182
+f32f0642,fatal: Write failed: Connection reset by peer [preauth],3
+a998e480,fatal: Read from socket failed: Connection reset by peer [preauth],952
+b899cbda,Bad packet length <*> [preauth],1
+cd0e7f83,Disconnecting: Packet corrupt [preauth],1
+b5660ce6,Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!,497
+5b2f1978,Received disconnect from <*>: <*>: [preauth],108
+60beff6e,fatal: no hostkey alg [preauth],6
+bf9b6a0d,Bad protocol version identification <*> from <*> port <*>,22
+395602aa,Received disconnect from <*>: <*>: Client disconnecting normally [preauth],81
+3d167205,error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth],3
+d77b5121,Failed password for invalid user from <*> port <*> ssh2,4
+796a8d29,error: connect_to <*> port <*>: failed.,6
+142422c8,Corrupted MAC on input. [preauth],1
+69bf3f99,error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth],2
+8f283d75,Received disconnect from <*>: <*>: disconnect [preauth],60
+4a3b51ed,error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth],4
+e5821216,Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.,3
+ba1e1dc4,"Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]",92

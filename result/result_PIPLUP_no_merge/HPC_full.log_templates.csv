@@ -1,0 +1,113 @@
+EventId,EventTemplate,Occurrences
+ffde4f31,<*> failed to configure resourcemgmt subsystem err = <*>,50
+07b9d7a6,wait (command <*>),12982
+9154a7f9,boot (command <*>),13414
+45d7d070,halt (command <*>),616
+7420bcff,clusterAddMember (command <*>),264
+c4b885bc,risBoot (command <*>),268
+53a4d3c2,bootGenvmunix (command <*>),262
+34697c0b,member_delete (command <*>),15
+e194bf1d,haltcluster (command <*>),44
+b4e25afc,Command has completed successfully,1741
+5452c51c,Command has been aborted,257
+10186599,Targeting <*> and nodes:<*>,748
+8046e5ac,Targeting <*> and nodes:node-[<*>] child of command <*>,1288
+fe6bf7ad,Targeting <*> and nodes:node-[<*>],27
+a76e0c18,Targeting domains:node-D0 and nodes:node-[<*>],3
+3daaa52b,Targeting domains:node-D[<*>] and nodes:node-[<*>],30
+13055d58,Targeting domains:node-D7 and nodes:node-[<*>] child of command <*>,4
+f793c047,Targeting domains:node-D7 and nodes:node-[<*>],6
+a54ec79a,Targeting domains:node-D4 and nodes:node-[<*>],1
+2bc16896,Targeting domains:node-D2 and nodes:node-[<*>],1
+020e3c63,psu failure\ ambient=<*>,517
+870a1d8b,PSU status ( on off ),26
+b975407c,PSU status ( off on ),21
+e4dbd82a,ambient=<*> threshold exceeded,28
+939ce800,Temperature (<*>) exceeds warning threshold,941
+97e2eb74,ClusterFileSystem: There is no server for ServerFileSystem domain <*>,5126
+b474ba8e,NIFF: node <*> detected a failed network connection on network <*> via interface <*>,1127
+e07f96ea,ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>,70
+27eab568,Fan speeds ( <*> ),2428
+c786e6be,fan failure\ ambient=<*>,2
+50a9b221,Fan speeds ( <*> **** <*> ),19344
+3dff51fb,Command Failed on: <*>,194
+bd82b62d,Failed subcommands <*>,88
+c6409432,power/control ok,81
+e13d082a,power/control problem,355
+36247cfe,no recent update,61
+f971a90f,update received,34
+ec4e03ec,Link error,4002
+641961b9,Link ok,2257
+db5aa7f9,Link in reset,2344
+5144570d,Link error on broadcast tree Interconnect-0T00:<*>,1167
+a8108a6e,ServerFileSystem: ServerFileSystem domain <*> is full,2561
+a1974aed,ServerFileSystem domain <*> is full,38
+bafedd1e,ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>,8152
+75101dcd,running,30064
+8cfafe98,configured out,19839
+61326117,blocked,2286
+b02b9741,not responding,12367
+1ee85f6c,starting,148
+3b38bec1,closing,70
+3a4c7f4a,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,73
+2f853555,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok>,64
+ea1f3179,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok>,199
+c76a5e84,active,1263
+dd1f1cf0,inconsistent nodesets <*> <ok> <*> <ok>,53
+f88728f3,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,158
+22b4ca2b,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,16
+59ad506e,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,33
+a779d729,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,13
+6c9bed6c,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,24
+34569348,responding,181
+44bd3c50,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,8
+656047e3,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,35
+aa7b172a,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,14
+2b036347,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,14
+bea88d2f,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,38
+aa4af2af,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,20
+127ee59e,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,7
+322e8361,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,2
+4532819c,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,5
+ed236542,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,5
+ad921d60,unknown,55
+3807af3d,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,2
+2c307a83,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,5
+0900deb4,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,2
+d512361d,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,2
+f11607d7,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,3
+bf51b2d8,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,1
+0bdb50fc,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,1
+7b83d3f0,warning,49741
+7e85bcb6,critical,4629
+fea08751,normal,45818
+28a9ef59,ambient=<*>,54739
+878838c0,boot (command <*>) Error: Unknown We failed to determine the state of this node,94
+6c9ec50a,halt (command <*>) Error: timeout waiting for SRM prompt,9
+2f3b3008,boot (command <*>) Error: Console-Busy Port already in use,11
+9050ee25,Linkerror event interval expired,84894
+9520cfe2,clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: <*>: no such process>,1
+7eff77c0,risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>,5
+f2a96abc,risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>,3
+6da99430,bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>,3
+bebe6d7b,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D3,1
+8f009ee4,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D6,1
+a84ecf37,bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>,1
+b1f962e3,boot (command <*>) Error: HALT asserted\ cannot continue,167
+df639fd3,boot (command <*>) Error: timeout waiting for Loading LMF licenses,23
+b38fa951,boot (command <*>) Error: timeout while booting.,3
+8c1777d1,boot (command <*>) Error: node went to SRM while trying to boot,25
+af97b31f,haltcluster (command <*>) Error: timeout waiting for SRM prompts,8
+0ed0c914,Command Cancelled - cluster would lose quorum,1
+bfc79f6a,halt (command <*>) Error: Couldn\047t Connect to console (state = <*>),98
+29e37d25,clusterAddMember (command <*>) Error: Cannot run clusterAddMember\ because <*> connection state is REFUSED and needs to be SRM,3
+40527fe9,boot (command <*>) Error: node went to SRM while booting,7
+6eff2f7f,haltcluster (command <*>) Error: haltcluster: bad spawn id,6
+df497127,member_delete (command <*>) Error: node is up according to cluster_get_info,1
+551adf73,link errors remain current,13645
+fd606a8b,boot (command <*>) Error: System could not find kernel,3
+529ccf6b,wait (command <*>) Error: Unknown We failed to determine the state of this node,1
+6a00db1a,boot (command <*>) Error: CMF-Port This node\047s port is not connected,1
+857e2bf1,wait (command <*>) Error: Console-Busy Port already in use,1
+1257c799,NIFF: node <*> has detected an available network connection on network <*> via interface <*>,23121
+b7bb20db,Component State Change: Component <*> is in the available state (HWID=<*>),2869
