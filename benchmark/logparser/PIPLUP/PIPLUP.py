@@ -25,16 +25,6 @@ class Logcluster:
         self.templateList = [correct_single_template(' '.join(logTemplate))]
         self.br_thresh = br_thresh
         self.hit_time = 1
-
-    # Check whether template1 can describe template2 (template2 can be merged into template1)
-    def templateMatches(self, template1, template2):
-        # Escape all parts of the template except the <*> placeholders
-        parts = re.split(r"<\*>", template1)
-        regex_pattern = ".*?".join(re.escape(part) for part in parts)
-        
-        # Add anchors to ensure the entire template2 string is matched
-        regex_pattern = f"^{regex_pattern}$"
-        return bool(re.fullmatch(regex_pattern, template2, re.DOTALL))
     
     def seqSimilarity(self, seq1, seq2):
         sim = 0
@@ -98,23 +88,14 @@ class Logcluster:
         self.pathList = np.unique(self.pathList, axis=0).tolist()
         # Update the template list
         self.templateList = [correct_single_template(' '.join(t)) for t in self.pathList]
-        # Clean the templates
-        newList = [True for _ in self.templateList]
-        for i, t1 in enumerate(self.templateList):
-            if newList[i] == False: continue
-            for j in range(i+1, len(self.templateList)):
-                t2 = self.templateList[j]
-                if self.templateMatches(t2, t1): newList[i] = False; break
-                if self.templateMatches(t1, t2): newList[j] = False
-        self.templateList = [item for i, item in enumerate(self.templateList) if newList[i]]
         
         return True
 
 
 
 class LogParser:
-    def __init__(self, log_format, indir='./', outdir='./result/', 
-                 br_thresh=2, update_population=385, sim_thresh='default', keep_para=False):
+    def __init__(self, log_format, indir='./', outdir='./result/', hit_limit=385, merge=True, preprocess=True,
+                 br_thresh=2, sim_thresh='default', keep_para=False):
 
         """
         Attributes
@@ -132,12 +113,11 @@ class LogParser:
                 1: 1,
                 2: (2-1)/2,
                 3: (3-1)/3,
-                4: (4-1)/4,
+                4: (4-2)/4,
                 5: (5-2)/5, 
-                6: (6-2)/6, 
+                6: (6-3)/6, 
                 7: (7-3)/7,
                 8: (8-3)/8,
-                9: (9-3)/9,
                 'others': 0.5
             }
         else:
@@ -148,13 +128,15 @@ class LogParser:
         self.logName = None
         self.savePath = outdir
         self.df_log = None
-        self.update_population = update_population
+        self.hit_limit = int(hit_limit)
         self.log_format = log_format
         self.keep_para = keep_para
         self.commonword_list = None
         self.storage_tree = {'None':{}}
         self.shallow_tree = {'None':[]}
         self.br_thresh = br_thresh
+        self.preprocess = preprocess
+        self.merge = merge
 
     def treeSearch(self, seq):
         retLogClust = None
@@ -203,10 +185,9 @@ class LogParser:
         simTokens = 0
         numOfPar = 0
         for token1, token2 in zip(seq1, seq2):
-            if '<*>' in token1:
-                if not any(ch.isalnum() for ch in token1): 
-                    numOfPar += 1
-                    continue
+            if '<*>' in token1 and not any(ch.isalnum() for ch in token1): 
+                numOfPar += 1
+                continue
             if token1 == token2:
                 simTokens += 1 
 
@@ -257,14 +238,22 @@ class LogParser:
     
     # Check whether template1 can describe template2 (template2 can be merged into template1)
     def templateMatches(self, template1, template2):
-        # Escape all parts of the template except the <*> placeholders
-        parts = re.split(r"<\*>", template1)
+        parts = template1.split("<*>")
+        pos = 0
+        # quick scan before regex
+        for part in parts:
+            if not part:
+                continue
+            idx = template2.find(part, pos)
+            if idx == -1:
+                return False
+            pos = idx + len(part)
+        
         regex_pattern = ".*?".join(re.escape(part) for part in parts)
         
         # Add anchors to ensure the entire template2 string is matched
         regex_pattern = f"^{regex_pattern}$"
         return bool(re.fullmatch(regex_pattern, template2, re.DOTALL))
-    
     
     def outputResult(self, logClustL):
         log_templates = [0] * self.df_log.shape[0]
@@ -330,14 +319,12 @@ class LogParser:
         return len(set1.intersection(set2))/len(set1.union(set2))
 
     def mergeTemplates(self, cluster, constant, oldTemplateList=[]):
-        pattern = r"[a-zA-Z0-9]"
         # Find the cluster in the shallow tree
         cluster_list = self.shallow_tree[constant]
         # Iterate through the clusters with the same frequent word
         for i, t1 in enumerate(cluster.templateList):
             # Skip if it is not updated
             if t1 in oldTemplateList: continue
-            # Skip if it is too general
             # Iterate through the clusters
             for logClust in cluster_list:
                 # Skip if it is too general
@@ -355,55 +342,66 @@ class LogParser:
     
     def parse(self, logName):
         print('Parsing file: ' + os.path.join(self.path, logName))
+        #time_consumption = {'load_data': 0,'preprocess':0, 'tree_search':0, 'cluster_update':0, 'template_match':0}
         start_time = datetime.now()
         self.logName = logName
         logCluL = []
         self.load_data()
-        # self.get_frequent_words_from_log()
+        
+        # Loading time
+        #time_consumption['load_data'] = (datetime.now() - start_time).total_seconds()
         count = 0
         matched_types = []
         use_sequence = []
+        
         for idx, line in self.df_log.iterrows():
+            #t1 = datetime.now()
             logID = line['LineId']
-            # Add preprocess
-            if idx < 2000:
-                logmessageL, sequence, matched = preprocess(line['Content'], estimation_stage=True)
-                # print(matched_types)
-                logmessageL = logmessageL.strip().split()
-                matched_types.extend(matched)
-                use_sequence = sequence
-            else:
-                if idx == 2000:
-                    matched_types = set(matched_types)
-                    # print(matched_types)
-                    use_sequence = [i for i in use_sequence if i in matched_types]
-                logmessageL = preprocess(line['Content'], estimation_stage=False, use_sequence=use_sequence).strip().split()
+            if self.preprocess:
+                # Add preprocess
+                if idx < 2000:
+                    logmessageL, sequence, matched = preprocess(line['Content'], estimation_stage=True)
+                    logmessageL = logmessageL.strip().split()
+                    matched_types.extend(matched)
+                    use_sequence = sequence
+                else:
+                    if idx == 2000:
+                        matched_types = set(matched_types)
+                        use_sequence = [i for i in use_sequence if i in matched_types]
+                    logmessageL = preprocess(line['Content'], estimation_stage=False, use_sequence=use_sequence).strip().split()
+            else: logmessageL = line['Content'].strip().split()
+            #t2 = datetime.now()
+            # Preprocessing time
+            #time_consumption['preprocess'] += (t2 - t1).total_seconds()
             
             matchCluster, first_constant, newTemplate = self.treeSearch(logmessageL)
+            #t1 = datetime.now()
+            # Tree search time
+            #time_consumption['tree_search'] += (t1 - t2).total_seconds()
             
             #Match no existing log cluster
             if matchCluster is None:
                 newCluster = Logcluster(logTemplate=logmessageL, logIDL=[logID], br_thresh=self.br_thresh)
                 logCluL.append(newCluster)
                 constant = self.addSeqToPrefixTree(newCluster)
-                self.mergeTemplates(newCluster, constant)
+                if self.merge:
+                    self.mergeTemplates(newCluster, constant)
+                    
             
             #Add the new log message to the existing cluster
             else:
                 # Increase the hit time
                 matchCluster.hit_time += 1
-                oldTemplate = matchCluster.logTemplate
                 matchCluster.logTemplate = newTemplate
                 constant = first_constant
                 # The template changed, update the list
                 oldTemplateList = matchCluster.templateList.copy()
                 matchCluster.logIDL.append(logID)
                 updated = matchCluster.updateSequence(logmessageL)
-                
-                if (oldTemplate != newTemplate or matchCluster.hit_time == self.update_population) and first_constant == 'None': 
+                if (matchCluster.hit_time == self.hit_limit) and first_constant == 'None': 
                     # Find the first constant
                     for token in newTemplate:
-                        if '<*>' not in token:
+                        if any(ch.isalnum() for ch in token):
                             constant = token
                             break
                     
@@ -434,19 +432,28 @@ class LogParser:
                                 shallowTreeCopy.pop(index)
                         self.shallow_tree['None'] = shallowTreeCopy
                     
-                if updated:
+                if updated and self.merge:
                     self.mergeTemplates(matchCluster, constant, oldTemplateList)
-
+            #t2 = datetime.now()
+            # Cluster update time
+            #time_consumption['cluster_update'] += (t2 - t1).total_seconds()
 
             count += 1
             if count % 1000 == 0 or count == len(self.df_log):
                 print('Processed {0:.1f}% of log lines.'.format(count * 100.0 / len(self.df_log)))
 
-
+        # t1 = datetime.now()
         if not os.path.exists(self.savePath):
             os.makedirs(self.savePath)
 
         self.outputResult(logCluL)
+        # t2 = datetime.now()
+        # Template output time
+        # time_consumption['template_match'] = (t2 - t1).total_seconds()
+        
+        '''print("Time consumption breakdown (in seconds):")
+        for key, value in time_consumption.items():
+            print(f"  {key}: {value}.2f")'''
 
         print('Parsing done. [Time taken: {!s}]'.format(datetime.now() - start_time))
 
@@ -505,3 +512,5 @@ class LogParser:
         parameter_list = parameter_list[0] if parameter_list else ()
         parameter_list = list(parameter_list) if isinstance(parameter_list, tuple) else [parameter_list]
         return parameter_list
+
+
