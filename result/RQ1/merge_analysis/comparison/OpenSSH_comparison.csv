@@ -1,0 +1,41 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+Failed password for <*> from <*> port <*> ssh2,Failed password for <*> from <*> port <*> ssh2,Failed password for <*> from <*> port <*> ssh2,140768
+pam_unix(sshd:auth): authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>,pam_unix(sshd:auth): authentication failure; logname= <*> euid=<*> tty=<*> ruser= <*>,pam_unix(sshd:auth): authentication failure; logname= <*> euid=<*> tty=<*> ruser= <*>,140701
+Connection closed by <*> [preauth],Connection closed by <*> [preauth],Connection closed by <*> [preauth],68958
+Received disconnect from <*>: <*>: Bye Bye [preauth],Received disconnect from <*>: <*>: Bye Bye [preauth],Received disconnect from <*>: <*>: Bye Bye [preauth],46593
+PAM service(sshd) ignoring max retries; <*> > <*>,PAM service(sshd) ignoring max retries; <*> > <*>,PAM service(sshd) ignoring max retries; <*> > <*>,37963
+Disconnecting: Too many authentication failures for <*> [preauth],Disconnecting: Too many authentication failures for <*> [preauth],Disconnecting: Too many authentication failures for <*> [preauth],37298
+message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2],message repeated <*> times: [ Failed password for root from <*> port <*> ssh2],message repeated <*> times: [ Failed password for root from <*> port <*> ssh2],36966
+PAM <*> more authentication failures; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>,PAM <*> more authentication failures; logname= <*> euid=<*> tty=<*> ruser= <*> user=<*>,PAM <*> more authentication failures; logname= <*> euid=<*> tty=<*> ruser= <*> user=<*>,36966
+pam_unix(sshd:auth): check pass; user unknown,pam_unix(sshd:auth): check pass; user unknown,pam_unix(sshd:auth): check pass; user unknown,19852
+Failed password for invalid user <*> from <*> port <*> ssh2,Failed password for invalid user <*> from <*> port <*> ssh2,Failed password for <*> from <*> port <*> ssh2,19848
+reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,18909
+Invalid user <*> from <*>,Invalid user <*> from <*>,Invalid user <*> from <*>,14581
+input_userauth_request: invalid user <*> [preauth],input_userauth_request: invalid user <*> [preauth],input_userauth_request: invalid user <*> [preauth],14581
+fatal: Read from socket failed: Connection reset by peer [preauth],fatal: Read from socket failed: Connection reset by peer [preauth],fatal: Read from socket failed: Connection reset by peer [preauth],952
+error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth],error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth],error: Received disconnect from <*>: <*>: No more user authentication methods available. [preauth],930
+Did not receive identification string from <*>,Did not receive identification string from <*>,Did not receive identification string from <*>,838
+Received disconnect from <*>: <*>: Closed due to user request. [preauth],Received disconnect from <*>: <*>: Closed due to user request. [preauth],Received disconnect from <*>: <*>: Closed due to user request. [preauth],592
+Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!,Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!,Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!,497
+pam_unix(sshd:session): session closed for user <*>,pam_unix(sshd:session): session closed for user <*>,pam_unix(sshd:session): session closed for user <*>,182
+pam_unix(sshd:session): session opened for user <*> by (uid=<*>),pam_unix(sshd:session): session opened for user <*> by (uid=<*>),pam_unix(sshd:session): session opened for user <*> by (uid=<*>),182
+Accepted password for <*> from <*> port <*> ssh2,Accepted password for <*> from <*> port <*> ssh2,Accepted password for <*> from <*> port <*> ssh2,182
+error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth],error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth],error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth],176
+Received disconnect from <*>: <*>: [preauth],Received disconnect from <*>: <*>: [preauth],Received disconnect from <*>: <*>: [preauth],108
+"Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]","Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]","Received disconnect from <*>: <*>: Normal Shutdown, Thank you for playing [preauth]",92
+Received disconnect from <*>: <*>: Client disconnecting normally [preauth],Received disconnect from <*>: <*>: Client disconnecting normally [preauth],Received disconnect from <*>: <*>: Client disconnecting normally [preauth],81
+Received disconnect from <*>: <*>: disconnect [preauth],Received disconnect from <*>: <*>: disconnect [preauth],Received disconnect from <*>: <*>: disconnect [preauth],60
+Received disconnect from <*>: <*>: disconnected by user,Received disconnect from <*>: <*>: disconnected by user,Received disconnect from <*>: <*>: disconnected by user,34
+Bad protocol version identification <*> from <*> port <*>,Bad protocol version identification <*> from <*> port <*>,Bad protocol version identification <*> from <*> port <*>,22
+error: connect_to <*> port <*>: failed.,error: connect_to <*> port <*>: failed.,error: connect_to <*> port <*>: failed.,6
+fatal: no hostkey alg [preauth],fatal: no hostkey alg [preauth],fatal: no hostkey alg [preauth],6
+error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth],error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth],error: Received disconnect from <*>: <*>: Authentication cancelled by user. [preauth],4
+Failed password for <*> from <*> port <*> ssh2,Failed password for invalid user from <*> port <*> ssh2,Failed password for <*> from <*> port <*> ssh2,4
+error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth],error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth],error: Received disconnect from <*>: <*>: <*>: timeout in waiting for rekeying process. [preauth],3
+Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.,Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.,Received disconnect from <*>: <*>: Disconnect requested by Windows SSH Client.,3
+fatal: Write failed: Connection reset by peer [preauth],fatal: Write failed: Connection reset by peer [preauth],fatal: Write failed: Connection reset by peer [preauth],3
+error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth],error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth],error: Received disconnect from <*>: <*>: <*>: User authentication canceled by user [preauth],2
+message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2],message repeated <*> times: [ Failed password for curi from <*> port <*> ssh2],message repeated <*> times: [ Failed password for curi from <*> port <*> ssh2],1
+Disconnecting: Packet corrupt [preauth],Disconnecting: Packet corrupt [preauth],Disconnecting: Packet corrupt [preauth],1
+Corrupted MAC on input. [preauth],Corrupted MAC on input. [preauth],Corrupted MAC on input. [preauth],1
+Bad packet length <*> [preauth],Bad packet length <*> [preauth],Bad packet length <*> [preauth],1

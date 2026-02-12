@@ -1,0 +1,113 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+Linkerror event interval expired,Linkerror event interval expired,Linkerror event interval expired,84894
+ambient=<*>,ambient=<*>,ambient=<*>,54739
+warning,warning,warning,49741
+normal,normal,normal,45818
+running,running,running,30064
+NIFF: node <*> has detected an available network connection on network <*> via interface <*>,NIFF: node <*> has detected an available network connection on network <*> via interface <*>,NIFF: node <*> has detected an available network connection on network <*> via interface <*>,23121
+configured out,configured out,configured out,19839
+Fan speeds ( <*> ),Fan speeds ( <*> **** <*> ),Fan speeds ( <*> ),19344
+link errors remain current,link errors remain current,link errors remain current,13645
+boot (command <*>),boot (command <*>),boot (command <*>),13414
+wait (command <*>),wait (command <*>),wait (command <*>),12982
+not responding,not responding,not responding,12367
+ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>,ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>,ClusterFileSystem: ServerFileSystem domain <*> is no longer served by node <*>,8152
+ClusterFileSystem: There is no server for ServerFileSystem domain <*>,ClusterFileSystem: There is no server for ServerFileSystem domain <*>,ClusterFileSystem: There is no server for ServerFileSystem domain <*>,5126
+critical,critical,critical,4629
+Link error,Link error,Link error,4002
+Component State Change: Component <*> is in the available state (HWID=<*>),Component State Change: Component <*> is in the available state (HWID=<*>),Component State Change: Component <*> is in the available state (HWID=<*>),2869
+ServerFileSystem: ServerFileSystem domain <*> is full,ServerFileSystem: ServerFileSystem domain <*> is full,ServerFileSystem: ServerFileSystem domain <*> is full,2561
+Fan speeds ( <*> ),Fan speeds ( <*> ),Fan speeds ( <*> ),2428
+Link in reset,Link in reset,Link in reset,2344
+blocked,blocked,blocked,2286
+Link ok,Link ok,Link ok,2257
+Command has completed successfully,Command has completed successfully,Command has completed successfully,1741
+Targeting domains:<*> and nodes:<*>,Targeting <*> and nodes:node-[<*>] child of command <*>,Targeting <*> and nodes:node-[<*>] child of command <*>,1288
+active,active,active,1263
+Link error on broadcast tree <*>,Link error on broadcast tree Interconnect-0T00:<*>,Link error on broadcast tree Interconnect-0T00:<*>,1167
+NIFF: node <*> detected a failed network connection on network <*> via interface <*>,NIFF: node <*> detected a failed network connection on network <*> via interface <*>,NIFF: node <*> detected a failed network connection on network <*> via interface <*>,1127
+Temperature <*> exceeds warning threshold,Temperature (<*>) exceeds warning threshold,Temperature (<*>) exceeds warning threshold,941
+Targeting domains:<*> and nodes:<*>,Targeting <*> and nodes:<*>,Targeting <*> and nodes:<*>,748
+halt (command <*>),halt (command <*>),halt (command <*>),616
+psu failure\ ambient=<*>,psu failure\ ambient=<*>,psu failure\ ambient=<*>,517
+power/control problem,power/control problem,power/control problem,355
+risBoot (command <*>),risBoot (command <*>),risBoot (command <*>),268
+clusterAddMember (command <*>),clusterAddMember (command <*>),clusterAddMember (command <*>),264
+bootGenvmunix (command <*>),bootGenvmunix (command <*>),bootGenvmunix (command <*>),262
+Command has been aborted,Command has been aborted,Command has been aborted,257
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,199
+Command Failed on: <*>,Command Failed on: <*>,Command Failed on: <*>,194
+responding,responding,responding,181
+boot (command <*>) Error: HALT asserted\ cannot continue,boot (command <*>) Error: HALT asserted\ cannot continue,boot (command <*>) Error: HALT asserted\ cannot continue,167
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,158
+starting,starting,starting,148
+halt (command <*>),halt (command <*>) Error: Couldn\047t Connect to console (state = <*>),halt (command <*>) Error: Couldn\047t Connect to console (state = <*>),98
+boot (command <*>) Error: Unknown We failed to determine the state of this node,boot (command <*>) Error: Unknown We failed to determine the state of this node,boot (command <*>) Error: Unknown We failed to determine the state of this node,94
+Failed subcommands <*>,Failed subcommands <*>,Failed subcommands <*>,88
+power/control ok,power/control ok,power/control ok,81
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,73
+closing,closing,closing,70
+ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>,ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>,ServerFileSystem: An ServerFileSystem domain panic has occurred on <*>,70
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,64
+no recent update,no recent update,no recent update,61
+unknown,unknown,unknown,55
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,53
+<*> failed to configure resourcemgmt subsystem err = <*>,<*> failed to configure resourcemgmt subsystem err = <*>,<*> failed to configure resourcemgmt subsystem err = <*>,50
+haltcluster (command <*>),haltcluster (command <*>),haltcluster (command <*>),44
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,38
+ServerFileSystem domain <*> is full,ServerFileSystem domain <*> is full,ServerFileSystem domain <*> is full,38
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,35
+update received,update received,update received,34
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,33
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D[<*>] and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],30
+ambient=<*>,ambient=<*> threshold exceeded,ambient=<*> threshold exceeded,28
+Targeting domains:<*> and nodes:<*>,Targeting <*> and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],27
+PSU status (<*>),PSU status ( on off ),PSU status ( on off ),26
+boot (command <*>) Error: node went to SRM while trying to boot,boot (command <*>) Error: node went to SRM while trying to boot,boot (command <*>) Error: node went to SRM while trying to boot,25
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,24
+boot (command <*>) Error: timeout waiting for Loading LMF licenses,boot (command <*>) Error: timeout waiting for Loading LMF licenses,boot (command <*>) Error: timeout waiting for Loading LMF licenses,23
+PSU status (<*>),PSU status ( off on ),PSU status ( off on ),21
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,20
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,16
+member_delete (command <*>),member_delete (command <*>),member_delete (command <*>),15
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,14
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,14
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,13
+boot (command <*>) Error: Console-Busy Port already in use,boot (command <*>) Error: Console-Busy Port already in use,boot (command <*>) Error: Console-Busy Port already in use,11
+halt (command <*>) Error: timeout waiting for SRM prompt,halt (command <*>) Error: timeout waiting for SRM prompt,halt (command <*>) Error: timeout waiting for SRM prompt,9
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,8
+haltcluster (command <*>) Error: timeout waiting for SRM prompts,haltcluster (command <*>) Error: timeout waiting for SRM prompts,haltcluster (command <*>) Error: timeout waiting for SRM prompts,8
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,7
+boot (command <*>) Error: node went to SRM while booting,boot (command <*>) Error: node went to SRM while booting,boot (command <*>) Error: node went to SRM while booting,7
+haltcluster (command <*>) Error: haltcluster: bad spawn id,haltcluster (command <*>) Error: haltcluster: bad spawn id,haltcluster (command <*>) Error: haltcluster: bad spawn id,6
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D7 and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],6
+risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>,risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>,risBoot (command <*>) Error: Timed out while waiting for SRM prompt: <ABORT code completed>,5
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,5
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,5
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,5
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D7 and nodes:node-[<*>] child of command <*>,Targeting <*> and nodes:node-[<*>] child of command <*>,4
+boot (command <*>) Error: System could not find kernel,boot (command <*>) Error: System could not find kernel,boot (command <*>) Error: System could not find kernel,3
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D0 and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],3
+clusterAddMember (command <*>) Error: Cannot run clusterAddMember\ because <*> connection state is REFUSED and needs to be SRM,clusterAddMember (command <*>) Error: Cannot run clusterAddMember\ because <*> connection state is REFUSED and needs to be SRM,clusterAddMember (command <*>) Error: Cannot run clusterAddMember\ because <*> connection state is REFUSED and needs to be SRM,3
+bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>,bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>,bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>,3
+boot (command <*>) Error: timeout while booting.,boot (command <*>) Error: timeout while booting.,boot (command <*>) Error: timeout while booting.,3
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,3
+risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>,risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>,risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>,3
+fan failure\ ambient=<*>,fan failure\ ambient=<*>,fan failure\ ambient=<*>,2
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,2
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,2
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,2
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,2
+Command Cancelled - cluster would lose quorum,Command Cancelled - cluster would lose quorum,Command Cancelled - cluster would lose quorum,1
+wait (command <*>) Error: Console-Busy Port already in use,wait (command <*>) Error: Console-Busy Port already in use,wait (command <*>) Error: Console-Busy Port already in use,1
+wait (command <*>) Error: Unknown We failed to determine the state of this node,wait (command <*>) Error: Unknown We failed to determine the state of this node,wait (command <*>) Error: Unknown We failed to determine the state of this node,1
+clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\ check <*>: <ABORT code errored: kill: <*>: no such process>,clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: <*>: no such process>,clusterAddMember (command <*>) Error: cluster_add_member failed unexpectedly\ check /cluster/admin/cluster_add_member.log: <ABORT code errored: kill: <*>: no such process>,1
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D2 and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],1
+Targeting domains:<*> and nodes:<*>,Targeting domains:node-D4 and nodes:node-[<*>],Targeting <*> and nodes:node-[<*>],1
+member_delete (command <*>) Error: node is up according to cluster_get_info,member_delete (command <*>) Error: node is up according to cluster_get_info,member_delete (command <*>) Error: node is up according to cluster_get_info,1
+member_delete (command <*>) Error: <*> is NOT a member of cluster <*>,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D6,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D6,1
+member_delete (command <*>) Error: <*> is NOT a member of cluster <*>,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D3,member_delete (command <*>) Error: <*> is NOT a member of cluster node-D3,1
+boot (command <*>) Error: CMF-Port This node\047s port is not connected,boot (command <*>) Error: CMF-Port This node\047s port is not connected,boot (command <*>) Error: CMF-Port This node\047s port is not connected,1
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,1
+bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>,bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>,bootGenvmunix (command <*>) Error: node returned to srm while booting: <ABORT code completed>,1
+inconsistent nodesets <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok> <*> <ok>,inconsistent nodesets <*> <ok> <*> <ok>,1

@@ -1,0 +1,164 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+onStandStepChanged <*>,onStandStepChanged <*>,onStandStepChanged <*>,30161
+getTodayTotalDetailSteps = <*>,getTodayTotalDetailSteps = <*>,getTodayTotalDetailSteps = <*>,27447
+setTodayTotalDetailSteps=<*>,setTodayTotalDetailSteps=<*>,setTodayTotalDetailSteps=<*>,27431
+calculateAltitudeWithCache totalAltitude=<*>,calculateAltitudeWithCache totalAltitude=<*>,calculateAltitudeWithCache totalAltitude=<*>,27426
+calculateCaloriesWithCache totalCalories=<*>,calculateCaloriesWithCache totalCalories=<*>,calculateCaloriesWithCache totalCalories=<*>,27426
+REPORT : <*>,REPORT : <*>,REPORT : <*>,23539
+processHandleBroadcastAction action:<*>,processHandleBroadcastAction action:<*>,processHandleBroadcastAction action:<*>,8602
+"new date =<*>, type=<*>,old=<*>","new date =<*>, type=<*>,old=<*>","new date =<*>, type=<*>,old=<*>",7237
+onReceive action: <*>,onReceive action: <*>,onReceive action: <*>,3239
+getBinderPackageName packageName = <*>,getBinderPackageName packageName = <*>,getBinderPackageName packageName = <*>,3156
+upLoadOneMinuteDataToEngine time=<*>,upLoadOneMinuteDataToEngine time=<*>,upLoadOneMinuteDataToEngine time=<*>,1920
+flush sensor data,flush sensor data,flush sensor data,1617
+"saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>","saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>","saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>",1172
+initDataPrivacy the dataPrivacy is <*>,initDataPrivacy the dataPrivacy is true,initDataPrivacy the dataPrivacy is true,792
+initDataPrivacy the dataPrivacy switch is <*> start push health data!,"initDataPrivacy the dataPrivacy switch is open, start push health data!","initDataPrivacy the dataPrivacy switch is open, start push health data!",792
+ifCanSync not! no cloud version,ifCanSync not! no cloud version,ifCanSync not! no cloud version,792
+needAutoSync autoSyncSwitch is <*>,needAutoSync autoSyncSwitch is open,needAutoSync autoSyncSwitch is open,792
+"startSync hiSyncOption =<*> HiSyncOption{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app =<*> <*> who =<*> <*>","startSync hiSyncOption = <*>{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app = <*> who = <*>","startSync hiSyncOption = <*>{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app = <*> who = <*>",792
+initUserPrivacy the userPrivacy switch is <*> start push user data!,"initUserPrivacy the userPrivacy switch is open, start push user data!","initUserPrivacy the userPrivacy switch is open, start push user data!",792
+initUserPrivacy the userPrivacy is <*>,initUserPrivacy the userPrivacy is true,initUserPrivacy the userPrivacy is true,792
+sendSyncFailedBroadcast,sendSyncFailedBroadcast,sendSyncFailedBroadcast,792
+insertHiHealthData() end totalTime = <*>,insertHiHealthData() end totalTime = <*>,insertHiHealthData() end totalTime = <*>,744
+insertHiHealthData() checkAppType <*> appID = <*>,insertHiHealthData() checkAppType <*> appID = <*>,insertHiHealthData() checkAppType <*> appID = <*>,744
+"saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>","saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>","saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>",744
+"insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>","insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>","insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>",744
+"getAppContext() isAppValid health or wear, packageName = <*>","getAppContext() isAppValid health or wear, packageName = <*>","getAppContext() isAppValid health or wear, packageName = <*>",744
+startListenerChange subscribeList = [<*>],startListenerChange subscribeList = [<*>],startListenerChange subscribeList = [<*>],744
+"bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>","bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>","bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>",744
+checkInsertStatus stepStatSum or calorieStatSum is enough,checkInsertStatus stepStatSum or calorieStatSum is enough,checkInsertStatus stepStatSum or calorieStatSum is enough,705
+"checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>","checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>","checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>",705
+stepSyncOrNot appSynTimes is <*> statsyncTimes is <*>,stepSyncOrNot appSynTimes is <*> statsyncTimes is <*>,stepSyncOrNot appSynTimes is <*> statsyncTimes is <*>,705
+"startInsertSportSync first <*> steps sync,do all sync","startInsertSportSync first <*> steps sync,do all sync","startInsertSportSync first <*> steps sync,do all sync",705
+"startInsertSportSync start auto sync,app is <*>","startInsertSportSync start auto sync,app is <*>","startInsertSportSync start auto sync,app is <*>",705
+checkInsertStatus stepSum or calorieSum is enough,checkInsertStatus stepSum or calorieSum is enough,checkInsertStatus stepSum or calorieSum is enough,685
+"timeStamp back,extendReportTimeStamp=<*>","timeStamp back,extendReportTimeStamp=<*>","timeStamp back,extendReportTimeStamp=<*>",651
+InsertCallBack() onSuccess type = <*> data=<*>,InsertCallBack() onSuccess type = <*> data=<*>,InsertCallBack() onSuccess type = <*> data=<*>,437
+"saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>","saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>","saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>",437
+writeDataToDB size <*>,writeDataToDB size <*>,writeDataToDB size <*>,437
+InsertEvent success begin:<*> end:<*>,InsertEvent success begin:<*> end:<*>,InsertEvent success begin:<*> end:<*>,436
+setWriteDBLastDataMinute=<*>,setWriteDBLastDataMinute=<*>,setWriteDBLastDataMinute=<*>,436
+Alarm uploadStaticsToDB totalSteps=<*>,Alarm uploadStaticsToDB totalSteps=<*>:153367Floor:240Distance:<*>,Alarm uploadStaticsToDB totalSteps=<*>:153367Floor:240Distance:<*>,307
+uploadStaticsToDB() onResult type = <*> obj=<*>,uploadStaticsToDB() onResult type = <*> obj=<*>,uploadStaticsToDB() onResult type = <*> obj=<*>,307
+"saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>","saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>","saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>",288
+flushTempCacheToDB by <*>,flushTempCacheToDB by ext,flushTempCacheToDB by ext,244
+"insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>","insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>","insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = <*>",212
+uploadStaticsToDB failed message=<*>,uploadStaticsToDB failed message=<*>,uploadStaticsToDB failed message=<*>,212
+getTodaySportData mStepsRecordManager=<*>,getTodaySportData mStepsRecordManager=<*>,getTodaySportData mStepsRecordManager=<*>,206
+flushTempCacheToDB by <*>,flushTempCacheToDB by stand,flushTempCacheToDB by stand,193
+isScreenOn <*>,<*> false,<*> false,185
+<*> block report,FAILED_SCREEN_OFF block report,FAILED_SCREEN_OFF block report,185
+getStringHuid() who is <*>,getStringHuid() who is <*>,getStringHuid() who is <*>,68
+"screen status unknown,think screen <*>","screen status unknown,think screen on","screen status unknown,think screen on",42
+isScreenOn <*>,<*> true,<*> true,42
+checkSportDataNum setp and calories is too less,checkSportDataNum setp and calories is too less,checkSportDataNum setp and calories is too less,39
+getDiffTotalSteps= <*>,getDiffTotalSteps= <*>,getDiffTotalSteps= <*>,32
+getTodayBasicStandardSteps= <*>,getTodayBasicStandardSteps= <*>,getTodayBasicStandardSteps= <*>,32
+readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>,readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>,readHiHealthData() checkAppType <*> appID = <*> id = <*> time = <*>,27
+readHiHealthData() end time = <*> totalTime = <*>,readHiHealthData() end time = <*> totalTime = <*>,readHiHealthData() end time = <*> totalTime = <*>,27
+"readHiHealthData() readOption =<*> HiDataReadOption{startTime=<*>, endTime=<*>, type=<*>, count =<*> <*> sortOrder=<*>, readType=<*>, alignType=<*>}","readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}","readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}",23
+aggregateHiHealthData() time = <*> totalTime = <*>,aggregateHiHealthData() time = <*> totalTime = <*>,aggregateHiHealthData() time = <*> totalTime = <*>,21
+aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>,aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>,aggregateHiHealthData() checkAppType <*> appID = <*> id = <*> time= <*>,21
+aggregateHiHealthDataEx() checkAppType <*> appID = <*>,aggregateHiHealthDataEx() checkAppType <*> appID = <*>,aggregateHiHealthDataEx() checkAppType <*> appID = <*>,21
+registerDynamicBroadcastReceiver,registerDynamicBroadcastReceiver,registerDynamicBroadcastReceiver,20
+checkLocalDataValue <*>,<*> false,<*> false,18
+registersensorsuccess: <*>,<*> true,<*> true,16
+reload : <*> restar <*>,reload : <*> restar <*>,reload : <*> restar <*>,16
+getStepCounterStatus= <*>,<*> true,<*> true,16
+getStepCounterStatus,getStepCounterStatus,getStepCounterStatus,16
+setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>,setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>,setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>,16
+getMidWareStepCountService: pkgName = <*> service = <*>,getMidWareStepCountService: pkgName = <*> service = <*>,getMidWareStepCountService: pkgName = <*> service = <*>,15
+closeNotification...,closeNotification...,closeNotification...,15
+getMidWareStepCountService: isSystemApp = <*>,getMidWareStepCountService: isSystemApp = <*>,getMidWareStepCountService: isSystemApp = <*>,15
+deleteHealthNotification(),deleteHealthNotification(),deleteHealthNotification(),15
+"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*> <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",13
+initEnviroument,initEnviroument,initEnviroument,11
+setGoalNotifiShownRecord <*>,setGoalNotifiShownRecord <*> false,setGoalNotifiShownRecord <*> false,11
+clear(),clear(),clear(),11
+"checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>","checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>","checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>",11
+setDiffTotalSteps=<*>,setDiffTotalSteps=<*>,setDiffTotalSteps=<*>,11
+<*> datas is null or empty,getTodayNoSyncTotalValue datas is null or empty,getTodayNoSyncTotalValue datas is null or empty,11
+reStartStepCounter,reStartStepCounter,reStartStepCounter,11
+next day:<*>,next <*>,next <*>,11
+theDayChanged <*>,theDayChanged <*>,theDayChanged <*>,11
+initBinder() app = <*> packageName = <*>,initBinder() app = <*> packageName = <*>,initBinder() app = <*> packageName = <*>,10
+"setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>","setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>","setDeviceShutDownValue shutDownTime=<*>,isShutDown=<*>",10
+FAILED_ERROR_DATA,FAILED_ERROR_DATA,FAILED_ERROR_DATA,10
+"support extand step counter!,return <*>","support extand step counter!,return true","support extand step counter!,return true",9
+"supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>","supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>","supportPrivateStandStepcounter=<*>,supportStandStepCounter=<*>",9
+supportStandStepCounter <*>,<*> true,<*> true,9
+getUserPreference key = <*>,getUserPreference key = <*>,getUserPreference key = <*>,9
+getCfgFile enter...,<*> enter...,<*> enter...,9
+setDeviceClassType=<*>,setDeviceClassType=<*>,setDeviceClassType=<*>,9
+readXmlIfSupportEX,readXmlIfSupportEX,readXmlIfSupportEX,9
+readXmlIfSupportEX result=<*>,readXmlIfSupportEX result=<*>,readXmlIfSupportEX result=<*>,9
+"fetchDataSourceByType type =<*> <*>,timeInterval =<*> HiTimeInterval{startTime=<*>, endTime=<*>, timeZone=<*>}","fetchDataSourceByType type = <*>,timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}","fetchDataSourceByType type = <*>,timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}",7
+"getHealthClientListByTime() dataClientIDs is null timeInterval =<*> HiTimeInterval{startTime=<*>, endTime=<*>, timeZone=<*>}","getHealthClientListByTime() dataClientIDs is null timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}","getHealthClientListByTime() dataClientIDs is null timeInterval = <*>{startTime=<*>, endTime=<*>, timeZone=<*>}",7
+compareMidWareCacheAndLocalCache enter...,<*> enter...,<*> enter...,5
+registerLogCallback <*>,registerLogCallback <*> cb:<*>,registerLogCallback <*> cb:<*>,5
+start compare with midware counter,start compare with midware counter,start compare with midware counter,5
+setActionRestartSensorAlarm=<*>,setActionRestartSensorAlarm=<*>,setActionRestartSensorAlarm=<*>,5
+setGoalNotificationShowStatus=<*>,setGoalNotificationShowStatus=<*>,setGoalNotificationShowStatus=<*>,5
+setServiceRestartRecord=<*>,setServiceRestartRecord=<*>,setServiceRestartRecord=<*>,5
+setStepCounterStatus=<*>,setStepCounterStatus=<*>,setStepCounterStatus=<*>,5
+"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",5
+startStepCounter enter...,<*> enter...,<*> enter...,5
+startStepCounterInter mStandStepCounter = <*>,startStepCounterInter mStandStepCounter = <*>,startStepCounterInter mStandStepCounter = <*>,5
+startStepCounterInter stand,startStepCounterInter stand,startStepCounterInter stand,5
+target init: <*>,target init: target10000,target init: target10000,5
+the first init <*>,the first init <*>,the first init <*>,5
+SystemClock.elapsedRealtime(): <*>,SystemClock.elapsedRealtime(): <*>,SystemClock.elapsedRealtime(): <*>,5
+MyServiceConn connect <*>,MyServiceConn connect <*>,MyServiceConn connect <*>,5
+MyGetDetailDataCallback onResult bundle == <*>,MyGetDetailDataCallback onResult bundle == <*>,MyGetDetailDataCallback onResult bundle == <*>,5
+userInfo changed detail,userInfo changed detail,userInfo changed detail,5
+registerLogCallback <*>,registerLogCallback <*>,registerLogCallback <*>,5
+getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>,getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>,getIntercepterDistance from Prefence success and intercepterDistanceStr= <*>,5
+initExtendStepCounter <*>,initExtendStepCounter <*>,initExtendStepCounter <*>,5
+getWriteDBLastDataMinute,getWriteDBLastDataMinute,getWriteDBLastDataMinute,5
+getWriteDBLastDataMinute= <*>,getWriteDBLastDataMinute= <*>,getWriteDBLastDataMinute= <*>,5
+getGoalNotificationShowStatus,getGoalNotificationShowStatus,getGoalNotificationShowStatus,5
+initCacheFromFile enter...,<*> enter...,<*> enter...,5
+initDataManager enter...,<*> enter...,<*> enter...,5
+getVersion,getVersion,getVersion,5
+getFirstStartDaemonFromUI: <*>,<*> true,<*> true,5
+getGoalNotificationShowStatus= <*>,<*> true,<*> true,5
+getStepsTarget= <*>,getStepsTarget= <*>,getStepsTarget= <*>,5
+initStepCounter : deviceType <*>,initStepCounter : deviceType <*>,initStepCounter : deviceType <*>,5
+initSyncModel current SyncModel is <*>,initSyncModel current SyncModel is <*>,initSyncModel current SyncModel is <*>,5
+getStepsTarget,getStepsTarget,getStepsTarget,5
+getDiffTotalCalories= <*>,getDiffTotalCalories= <*>,getDiffTotalCalories= <*>,5
+getDiffTotalCalories,getDiffTotalCalories,getDiffTotalCalories,5
+getStepsNotificationShowStatus= <*>,<*> false,<*> false,5
+getDiffTotalAltitude= <*>,getDiffTotalAltitude= <*>,getDiffTotalAltitude= <*>,5
+getStepsNotificationShowStatus,getStepsNotificationShowStatus,getStepsNotificationShowStatus,5
+getDeviceShutDownTime shutDownTime=<*>,getDeviceShutDownTime shutDownTime=<*>,getDeviceShutDownTime shutDownTime=<*>,5
+getDeviceShutDownBoolean shutDown=<*>,getDeviceShutDownBoolean shutDown=<*>,getDeviceShutDownBoolean shutDown=<*>,5
+getARDebugConfig,getARDebugConfig,getARDebugConfig,5
+moveOldData(),moveOldData(),moveOldData(),5
+getServiceRestartRecord= <*>,getServiceRestartRecord= <*>,getServiceRestartRecord= <*>,5
+onBind intent = Intent { act=<*> pkg=<*> },onBind intent = <*> { act=<*> pkg=<*> },onBind intent = <*> { act=<*> pkg=<*> },5
+onCreate(),onCreate(),onCreate(),5
+getMidWareCache result=<*>,getMidWareCache result=<*>,getMidWareCache result=<*>,5
+onStartCommand Intent { cmp=<*> },onStartCommand Intent { cmp=<*>.manager.DaemonService },onStartCommand Intent { cmp=<*>.manager.DaemonService },5
+getMidWareCache mRemote=<*>,getMidWareCache mRemote=<*>,getMidWareCache mRemote=<*>,5
+policy=<*>,policy=<*>:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec,policy=<*>:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec,5
+context=<*>,context=<*>,context=<*>,5
+getLastSyncDBTime= <*>,getLastSyncDBTime= -<*>,getLastSyncDBTime= -<*>,5
+getVersion= <*>,getVersion= <*>,getVersion= <*>,5
+upDateHealthNotification()|<*>|<*>|<*>,upDateHealthNotification()|<*>,upDateHealthNotification()|<*>,4
+rebuild notification,rebuild notification,rebuild notification,4
+startNotification...,startNotification...,startNotification...,4
+"readHiHealthData() readOption =<*> HiDataReadOption{startTime=<*>, endTime=<*>, type=<*>, count =<*> <*> sortOrder=<*>, readType=<*>, alignType=<*>}","readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>, <*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}","readHiHealthData() readOption = <*>{startTime=<*>, endTime=<*>, type=[<*>], count = <*> sortOrder=<*>, readType=<*>, alignType=<*>}",4
+setGoalNotifiShownRecord <*>,setGoalNotifiShownRecord <*> true,setGoalNotifiShownRecord <*> true,4
+createHealthNotification(),createHealthNotification(),createHealthNotification(),4
+subscribeHiHealthData() checkAppType <*> appID = <*>,subscribeHiHealthData() checkAppType <*> appID = <*>,subscribeHiHealthData() checkAppType <*> appID = <*>,3
+"aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=<*>, alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=-<*>, endTime=<*>, type=[<*>, <*> <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}","aggregateHiHealthData aggregateOption is HiAggregateOption{startTime=<*>, endTime=<*>, type=[<*>, <*>], alignType=<*>, aggregateType=<*>, groupUnitType=<*>}",3
+switchTrackMonitor <*>,<*> false,<*> false,1
+initDiffAltitude from File mAltitudeDiff=<*>,initDiffAltitude from File mAltitudeDiff=<*>,initDiffAltitude from File mAltitudeDiff=<*>,1
+initTrackDistancefromFile from File mTrackDistance=<*>,initTrackDistancefromFile from File mTrackDistance=<*>,initTrackDistancefromFile from File mTrackDistance=<*>,1
+insert conflict event timeBegin <*> timeEnd <*>,insert conflict event timeBegin <*> timeEnd <*>,insert conflict event timeBegin <*> timeEnd <*>,1
+setFirstStartDaemonFromUI success: <*>,setFirstStartDaemonFromUI success: true,setFirstStartDaemonFromUI success: true,1
+fetchPhoneDataClient,fetchPhoneDataClient,fetchPhoneDataClient,1
+onStartCommand Intent { pkg=<*> cmp=<*> (has extras) },onStartCommand Intent { pkg=<*> cmp=<*>.manager.DaemonService (has extras) },onStartCommand Intent { pkg=<*> cmp=<*>.manager.DaemonService (has extras) },1
+initDiffCaloriesfromFile mCaloriesDiff=<*>,initDiffCaloriesfromFile mCaloriesDiff=<*>,initDiffCaloriesfromFile mCaloriesDiff=<*>,1

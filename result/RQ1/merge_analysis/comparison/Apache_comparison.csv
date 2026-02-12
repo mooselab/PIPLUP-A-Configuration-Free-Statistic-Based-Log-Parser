@@ -1,0 +1,31 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+[client <*>] File does not exist: <*>,[client <*>] File does not exist: <*>,[client <*>] File does not exist: <*>,20861
+[client <*>] Directory index forbidden by rule: <*>,[client <*>] Directory index forbidden by rule: <*>,[client <*>] Directory index forbidden by rule: <*>,6745
+jk2_init() Found child <*> in scoreboard slot <*>,jk2_init() Found child <*> in scoreboard slot <*>,jk2_init() Found child <*> in scoreboard slot <*>,6335
+workerEnv.init() ok <*>,workerEnv.init() ok <*>,workerEnv.init() ok <*>,5708
+mod_jk child workerEnv in error state <*>,mod_jk child workerEnv in error state <*>,mod_jk child workerEnv in error state <*>,4349
+[client <*>] script not found or unable to stat: <*>,[client <*>] script not found or unable to stat: <*>,[client <*>] script not found or unable to stat: <*>,3301
+mod_jk2 Shutting down,mod_jk2 Shutting down,mod_jk2 Shutting down,1336
+jk2_init() Can't find child <*> in scoreboard,jk2_init() Can't find child <*> in scoreboard,jk2_init() Can't find child <*> in scoreboard,971
+mod_jk child init <*>,mod_jk child init <*> -<*>,mod_jk child init <*>,971
+mod_jk child init <*>,mod_jk child init <*>,mod_jk child init <*>,288
+"env.createBean2(): Factory error creating <*> (<*>, <*>)",env.createBean2(): Factory error creating <*> ( <*> <*>),env.createBean2(): Factory error creating <*> ( <*> <*>),180
+config.update(): Can't create <*>,config.update(): Can't create <*>,config.update(): Can't create <*>,180
+"child process <*> still did not exit, sending a SIGTERM","child process <*> still did not exit, sending a SIGTERM","child process <*> still did not exit, sending a SIGTERM",168
+[client <*>] attempt to invoke directory as script: <*>,[client <*>] attempt to invoke directory as script: <*>,[client <*>] attempt to invoke directory as script: <*>,92
+LDAP: Built with OpenLDAP LDAP SDK,LDAP: Built with OpenLDAP LDAP SDK,LDAP: Built with OpenLDAP LDAP SDK,53
+LDAP: SSL support unavailable,LDAP: SSL support unavailable,LDAP: SSL support unavailable,53
+mod_security/<*> configured,<*> configured,<*> configured,45
+mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.,mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.,mod_python: Creating <*> session mutexes based on <*> max processes and <*> max threads.,45
+Digest: generating secret for digest authentication ...,Digest: generating secret for digest authentication ...,Digest: generating secret for digest authentication ...,45
+Apache/<*> configured -- resuming normal operations,<*> (Fedora) configured -- resuming normal operations,<*> (Fedora) configured -- resuming normal operations,45
+Digest: done,Digest: done,Digest: done,45
+[client <*>] request failed: URI too long (longer than <*>),[client <*>] request failed: URI too long (longer than <*>),[client <*>] request failed: URI too long (longer than <*>),39
+"Graceful restart requested, doing restart","Graceful restart requested, doing restart","Graceful restart requested, doing restart",37
+[client <*>] Invalid URI in request <*>,[client <*>] Invalid URI in request GET <*>,[client <*>] Invalid URI in request GET <*>,27
+uriMap.mapUri() uri must start with /,uriMap.mapUri() uri must start with /,uriMap.mapUri() uri must start with /,27
+[client <*>] request failed: error reading the headers,[client <*>] request failed: error reading the headers,[client <*>] request failed: error reading the headers,14
+[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /,[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /,[client <*>] client sent <*> request without hostname (see RFC2616 section <*>): /,8
+suEXEC mechanism enabled (wrapper: <*>),suEXEC mechanism enabled (wrapper: <*>),suEXEC mechanism enabled (wrapper: <*>),8
+"[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname <*>] [uri <*>]","[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname ""<*>""] [uri ""/xmlrpc.php""]","[client <*>] mod_security: Access denied with code <*> Error reading POST data, error_code=<*> [hostname ""<*>""] [uri ""/xmlrpc.php""]",1
+[client <*>] Attempt to serve directory: <*>,[client <*>] Attempt to serve directory: <*>,[client <*>] Attempt to serve directory: <*>,1

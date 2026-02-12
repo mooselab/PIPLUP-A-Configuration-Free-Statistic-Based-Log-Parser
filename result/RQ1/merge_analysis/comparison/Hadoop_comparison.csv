@@ -1,0 +1,253 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+Progress of TaskAttempt <*> is : <*>,Progress of TaskAttempt <*> is : <*>,Progress of TaskAttempt <*> is : <*>,45882
+MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,MapCompletionEvents request from <*> startIndex <*> maxEvents <*>,18140
+Address change detected. Old: <*> New: <*>,Address change detected. Old: msra-<*> New: msra-<*>,Address change detected. Old: msra-<*> New: msra-<*>,5795
+(EQUATOR) <*> kvi <*>(<*>),(EQUATOR) <*> kvi <*>),(EQUATOR) <*> kvi <*>),5542
+bufstart = <*>; bufend = <*>; bufvoid = <*>,bufstart = <*>; bufend = <*>; bufvoid = <*>,bufstart = <*>; bufvoid = <*>,5339
+kvstart = <*>(<*>); kvend = <*>(<*>); length = <*>,kvstart = <*>); kvend = <*>); length = <*>,kvstart = <*>; length = <*>,5339
+Spilling map output,Spilling map output,Spilling map output,5339
+Failed to renew lease for <*> for <*> seconds. Will retry shortly ...,Failed to renew lease for [<*>] for <*> seconds. Will retry shortly ...,Failed to renew lease for [<*>] for <*> seconds. Will retry shortly ...,5300
+Finished spill <*>,Finished spill <*>,Finished spill <*>,5204
+<*> TaskAttempt Transitioned from <*> to <*>,<*> TaskAttempt Transitioned from <*> to <*>,<*> TaskAttempt Transitioned from <*> to <*>,4713
+(RESET) equator <*> kv <*>(<*>) kvi <*>(<*>),(RESET) equator <*> kv <*>) kvi <*>),(RESET) equator <*> kv <*>) kvi <*>),4579
+"Recalculating schedule, headroom=<memory:<*>, vCores:<*>","Recalculating schedule, headroom=<memory:<*>, vCores:-<*>","Recalculating schedule, headroom=<memory:<*>, vCores:-<*>",4415
+Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>,Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>,Reduce slow start threshold not met. completedMapsForReduceSlowstart <*>,3841
+Resolved <*> to <*>,Resolved <*> to /default-rack,Resolved <*> to /default-rack,3297
+Retrying connect to server: <*> Already tried <*> time(s); maxRetries=<*>,Retrying connect to server: <*> Already tried <*> time(s); maxRetries=<*>,Retrying connect to server: <*> Already tried <*> time(s); maxRetries=<*>,2517
+<*> Task Transitioned from <*> to <*>,<*> Task Transitioned from <*> to <*>,<*> Task Transitioned from <*> to <*>,1825
+Opening proxy : <*>,Opening proxy : <*>,Opening proxy : <*>,1757
+After Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,1249
+"Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)","Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)","Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=<*>, sleepTime=<*> MILLISECONDS)",1048
+TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>],TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>],TaskAttempt: [<*>] using containerId: [<*> on NM: [<*>],1033
+Executing with tokens:,Executing with tokens:,Executing with tokens:,978
+Scheduled snapshot period at <*> second(s).,Scheduled snapshot period at <*> second(s).,Scheduled snapshot period at <*> second(s).,978
+<*> metrics system started,<*> metrics system started,<*> metrics system started,978
+loaded properties from <*>,loaded properties from hadoop-metrics2.properties,loaded properties from hadoop-metrics2.properties,977
+"<*> is deprecated. Instead, use <*>","<*> is deprecated. Instead, use <*>","<*> is deprecated. Instead, use <*>",963
+Auth successful for <*> (auth:<*>),Auth successful for <*> (auth:SIMPLE),Auth successful for <*> (auth:SIMPLE),962
+Kind: <*> Service: <*> Ident: (<*>),"Kind: mapreduce.job, Service: <*> Ident: (<*>)","Kind: mapreduce.job, Service: <*> Ident: (<*>)",909
+Sleeping for <*> before retrying again. Got null now.,Sleeping for <*> before retrying again. Got null now.,Sleeping for <*> before retrying again. Got null now.,909
+mapreduce.cluster.local.dir for child: <*>,<*> for child: <*>,<*> for child: <*>,907
+Processing the event EventType: <*> for container <*> taskAttempt <*>,Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container <*> taskAttempt <*>,Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container <*> taskAttempt <*>,906
+Launching <*>,Launching <*>,Launching <*>,906
+Shuffle port returned by ContainerManager for <*> : <*>,Shuffle port returned by ContainerManager for <*> : <*>,Shuffle port returned by ContainerManager for <*> : <*>,906
+Assigned container <*> to <*>,Assigned container <*> to <*>,Assigned container <*> to <*>,906
+ATTEMPT_START <*>,ATTEMPT_START <*>,ATTEMPT_START <*>,905
+ProcfsBasedProcessTree currently is supported only on Linux.,ProcfsBasedProcessTree currently is supported only on Linux.,ProcfsBasedProcessTree currently is supported only on Linux.,905
+Using ResourceCalculatorProcessTree : <*>,Using ResourceCalculatorProcessTree : <*>,Using ResourceCalculatorProcessTree : <*>,905
+JVM with ID: <*> given task: <*>,JVM with ID: <*> given task: <*>,JVM with ID: <*> given task: <*>,902
+JVM with ID : <*> asked for a task,JVM with ID : <*> asked for a task,JVM with ID : <*> asked for a task,902
+"getResources() for <*>: ask=<*> release=<*> <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:<*> knownNMs=<*>","getResources() for <*>: ask=<*> release= <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:-<*> knownNMs=<*>","getResources() for <*>: ask=<*> release= <*> newContainers=<*> finishedContainers=<*> resourcelimit=<memory:<*>, vCores:-<*> knownNMs=<*>",899
+KILLING <*>,KILLING <*>,KILLING <*>,851
+Processing the event EventType: <*> for container <*> taskAttempt <*>,Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container <*> taskAttempt <*>,Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container <*> taskAttempt <*>,838
+bufstart = <*>; bufvoid = <*>,bufstart = <*>; bufvoid = <*>,bufstart = <*>; bufvoid = <*>,834
+Map output collector class = <*>$<*>,Map output collector class = <*>,Map output collector class = <*>,834
+soft limit at <*>,soft limit at <*>,soft limit at <*>,834
+kvstart = <*>; length = <*>,kvstart = <*>; length = <*>,kvstart = <*>; length = <*>,834
+mapreduce.task.io.sort.mb: <*>,<*>: <*>,<*>: <*>,834
+Processing split: <*>,Processing split: hdfs://msra-<*>,Processing split: hdfs://msra-<*>,834
+Received completed container <*>,Received completed container <*>,Received completed container <*>,826
+Before Scheduling: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,797
+Diagnostics report from <*>: Container killed by the ApplicationMaster.,Diagnostics report from <*>: Container killed by the ApplicationMaster.,Diagnostics report from <*>: Container killed by the ApplicationMaster.,733
+Task succeeded with attempt <*>,Task succeeded with attempt <*>,Task succeeded with attempt <*>,701
+Num completed Tasks: <*>,Num completed Tasks: <*>,Num completed Tasks: <*>,701
+"Down to the last merge-pass, with <*> segments left of total size: <*> bytes","Down to the last merge-pass, with <*> segments left of total size: <*> bytes","Down to the last merge-pass, with <*> segments left of total size: <*> bytes",678
+Merging <*> sorted segments,Merging <*> sorted segments,Merging <*> sorted segments,678
+<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),<*>: Shuffling to disk since <*> is greater than maxSingleShuffleLimit (<*>),667
+fetcher#<*> about to shuffle output of map <*>: <*> len: <*> to DISK,fetcher#<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK,fetcher#<*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK,664
+Read <*> bytes from map-output for <*>,Read <*> bytes from map-output for <*>,Read <*> bytes from map-output for <*>,649
+Starting flush of map output,Starting flush of map output,Starting flush of map output,644
+Task:<*> is done. And is in the process of committing,<*> is done. And is in the process of committing,<*> is done. And is in the process of committing,625
+Registering class <*> for class <*>,Registering class <*> for class <*>,Registering class <*> for class <*>,621
+Task <*> done.,Task <*> done.,Task <*> done.,616
+Got allocated containers <*>,Got allocated containers <*>,Got allocated containers <*>,606
+Done acknowledgement from <*>,Done acknowledgement from <*>,Done acknowledgement from <*>,605
+"completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:<*> finalMapResourceLimit:<memory:<*>, vCores:<*> finalReduceResourceLimit:<memory:<*>, vCores:<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>","completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:-<*> finalMapResourceLimit:<memory:<*>, vCores:-<*> finalReduceResourceLimit:<memory:<*>, vCores:-<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>","completedMapPercent <*> totalResourceLimit:<memory:<*>, vCores:-<*> finalMapResourceLimit:<memory:<*>, vCores:-<*> finalReduceResourceLimit:<memory:<*>, vCores:-<*> netScheduledMapResource:<memory:<*>, vCores:<*> netScheduledReduceResource:<memory:<*>, vCores:<*>",531
+ERROR IN CONTACTING RM.,ERROR IN CONTACTING RM.,ERROR IN CONTACTING RM.,480
+Assigning <*> with <*> to <*>,Assigning <*> with <*> to fetcher#<*>,Assigning <*> with <*> to fetcher#<*>,472
+assigned <*> of <*> to <*> to fetcher#<*>,assigned <*> of <*> to <*> to fetcher#<*>,assigned <*> of <*> to <*> to fetcher#<*>,472
+for url=<*> sent hash and received reply,for url=<*>&reduce=<*>&map=<*> sent hash and received reply,for url=<*>&reduce=<*>&map=<*> sent hash and received reply,469
+<*> freed by fetcher#<*> in <*>,<*> freed by fetcher#<*> in <*>,<*> freed by fetcher#<*> in <*>,455
+<*>: Got <*> new map-outputs,<*>: Got <*> new map-outputs,<*>: Got <*> new map-outputs,414
+Stopping <*> metrics system...,Stopping MapTask metrics system...,Stopping MapTask metrics system...,302
+<*> metrics system stopped.,MapTask metrics system stopped.,MapTask metrics system stopped.,302
+<*> metrics system shutdown complete.,MapTask metrics system shutdown complete.,MapTask metrics system shutdown complete.,302
+DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>,255
+We launched <*> speculations. Sleeping <*> milliseconds.,We launched <*> speculations. Sleeping <*> milliseconds.,We launched <*> speculations. Sleeping <*> milliseconds.,255
+<*> Task Transitioned from <*> to <*>,<*> Transitioned from NEW to <*>,<*> Transitioned from NEW to <*>,249
+Default file system [<*>],Default file system [hdfs://msra-<*>],Default file system [hdfs://msra-<*>],226
+Socket Reader <*> for port <*> readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host],Socket Reader <*> for port <*>: readAndProcess from client <*> threw exception [<*>: An existing connection was forcibly closed by the remote host],Socket Reader <*> for port <*>: readAndProcess from client <*> threw exception [<*>: An existing connection was forcibly closed by the remote host],217
+Could not delete <*>,Could not delete hdfs://msra-<*>,Could not delete hdfs://msra-<*>,216
+Scheduling a redundant attempt for task <*>,Scheduling a redundant attempt for task <*>,Scheduling a redundant attempt for task <*>,194
+Issuing kill to other attempt <*>,Issuing kill to other attempt <*>,Issuing kill to other attempt <*>,182
+Moved tmp to done: <*>,Moved tmp to done: hdfs://msra-<*>,Moved tmp to done: hdfs://msra-<*>,141
+IPC Server Responder: starting,IPC Server Responder: starting,IPC Server Responder: starting,138
+Starting Socket Reader <*> for port <*>,Starting Socket Reader <*> for port <*>,Starting Socket Reader <*> for port <*>,138
+IPC Server listener on <*>: starting,IPC Server listener on <*>: starting,IPC Server listener on <*>: starting,138
+Using callQueue class <*>,Using callQueue class <*>,Using callQueue class <*>,138
+<*> TaskAttempt Transitioned from <*> to <*>,<*> Transitioned from NEW to <*>,<*> Transitioned from NEW to <*>,130
+Going to preempt <*> due to lack of space for maps,Going to preempt <*> due to lack of space for maps,Going to preempt <*> due to lack of space for maps,100
+Ramping down all scheduled reduces:<*>,Ramping down all scheduled reduces:<*>,Ramping down all scheduled reduces:<*>,100
+Read from history task <*>,Read from history task <*>,Read from history task <*>,96
+"Recovering task <*> from prior app attempt, status was <*>","Recovering task <*> from prior app attempt, status was SUCCEEDED","Recovering task <*> from prior app attempt, status was SUCCEEDED",96
+Copying <*> to <*>,Copying hdfs://msra-<*> to hdfs://msra-<*>,Copying hdfs://msra-<*> to hdfs://msra-<*>,94
+Copied to done location: <*>,Copied to done location: hdfs://msra-<*>,Copied to done location: hdfs://msra-<*>,94
+Assigned to reduce,Assigned to reduce,Assigned to reduce,73
+"MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>","MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>","MergerManager: memoryLimit=<*>, maxSingleShuffleLimit=<*>, mergeThreshold=<*>, ioSortFactor=<*>, memToMemMergeOutputsThreshold=<*>",71
+Using ShuffleConsumerPlugin: <*>,Using ShuffleConsumerPlugin: <*>,Using ShuffleConsumerPlugin: <*>,71
+<*> Thread started: EventFetcher for fetching Map Completion Events,<*> Thread started: EventFetcher for fetching Map Completion Events,<*> Thread started: EventFetcher for fetching Map Completion Events,71
+Kind: <*> Service: <*> Ident: (<*>),"Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: -<*>)","Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: -<*>)",69
+Logging to <*>(<*>) via <*>,Logging to <*>) via <*>,Logging to <*>) via <*>,69
+"MRAppMaster launching normal, non-uberized, multi-container job <*>","MRAppMaster launching normal, non-uberized, multi-container job <*>.","MRAppMaster launching normal, non-uberized, multi-container job <*>.",69
+adding path spec: <*>,adding path spec: /ws/*,adding path spec: /ws/*,69
+adding path spec: <*>,adding path spec: /mapreduce/*,adding path spec: /mapreduce/*,69
+Web app <*> started at <*>,Web app /mapreduce started at <*>,Web app /mapreduce started at <*>,69
+Jetty bound to port <*>,Jetty bound to port <*>,Jetty bound to port <*>,69
+Number of reduces for job <*> = <*>,Number of reduces for job <*> = <*>,Number of reduces for job <*> = <*>,69
+Not uberizing <*> because: not enabled; too many maps; too much input;,Not uberizing <*> because: not enabled; too many maps; too much input;,Not uberizing <*> because: not enabled; too many maps; too much input;,69
+queue: <*>,queue: default,queue: default,69
+jetty-<*>,<*>,<*>,69
+OutputCommitter is <*>,OutputCommitter is <*>,OutputCommitter is <*>,69
+OutputCommitter set in config <*>,OutputCommitter set in config null,OutputCommitter set in config null,69
+Upper limit on the thread pool size is <*>,Upper limit on the thread pool size is <*>,Upper limit on the thread pool size is <*>,69
+nodeBlacklistingEnabled:<*>,nodeBlacklistingEnabled:true,nodeBlacklistingEnabled:true,69
+maxTaskFailuresPerNode is <*>,maxTaskFailuresPerNode is <*>,maxTaskFailuresPerNode is <*>,69
+The job-jar file on the remote FS is <*>,The job-jar file on the remote FS is hdfs://msra-<*>,The job-jar file on the remote FS is hdfs://msra-<*>,69
+The job-conf file on the remote FS is <*>,The job-conf file on the remote FS is <*>,The job-conf file on the remote FS is <*>,69
+Putting shuffle token in serviceData,Putting shuffle token in serviceData,Putting shuffle token in serviceData,69
+Started <*>,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>,Started HttpServer2$SelectChannelConnectorWithSafeStartup@<*>,69
+"maxContainerCapability: <memory:<*>, vCores:<*>","maxContainerCapability: <memory:<*>, vCores:<*>","maxContainerCapability: <memory:<*>, vCores:<*>",69
+blacklistDisablePercent is <*>,blacklistDisablePercent is <*>,blacklistDisablePercent is <*>,69
+Size of containertokens_dob is <*>,Size of containertokens_dob is <*>,Size of containertokens_dob is <*>,69
+Registered webapp guice modules,Registered webapp guice modules,Registered webapp guice modules,69
+yarn.client.max-cached-nodemanagers-proxies : <*>,<*> : <*>,<*> : <*>,69
+JOB_CREATE <*>,JOB_CREATE <*>,JOB_CREATE <*>,69
+Adding <*> tokens and <*> secret keys for NM use for launching container,Adding <*> tokens and <*> secret keys for NM use for launching container,Adding <*> tokens and <*> secret keys for NM use for launching container,69
+Emitting job history data to the timeline server is not enabled,Emitting job history data to the timeline server is not enabled,Emitting job history data to the timeline server is not enabled,69
+Created MRAppMaster for application <*>,Created MRAppMaster for application <*>,Created MRAppMaster for application <*>,69
+Connecting to ResourceManager at <*>,Connecting to ResourceManager at MSRA-<*>,Connecting to ResourceManager at MSRA-<*>,69
+Http request log for <*> is not defined,Http request log for <*> is not defined,Http request log for <*> is not defined,69
+Extract jar:<*> to <*>,Extract jar:file:/D:<*> to C:<*>.dbisl5\webapp,Extract jar:file:/D:<*> to C:<*>.dbisl5\webapp,69
+Adding job token for <*> to jobTokenSecretManager,Adding job token for <*> to jobTokenSecretManager,Adding job token for <*> to jobTokenSecretManager,69
+Adding protocol <*> to the server,Adding protocol <*> to the server,Adding protocol <*> to the server,69
+Added global filter <*> (class=<*>),<*> global filter 'safety' (class=<*>),<*> global filter 'safety' (class=<*>),69
+Added filter <*> (class=<*>) to context <*>,<*> filter AM_PROXY_FILTER (class=<*>) to context static,<*> filter AM_PROXY_FILTER (class=<*>) to context static,69
+Input size for job <*> = <*> Number of splits = <*>,Input size for job <*> = <*> Number of splits = <*>,Input size for job <*> = <*> Number of splits = <*>,69
+Instantiated MRClientService at <*>,Instantiated MRClientService at <*>,Instantiated MRClientService at <*>,69
+Added filter <*> (class=<*>) to context <*>,<*> filter AM_PROXY_FILTER (class=<*>) to context mapreduce,<*> filter AM_PROXY_FILTER (class=<*>) to context mapreduce,69
+Event Writer setup for JobId: <*> File: <*>,Event Writer setup for JobId: <*> File: hdfs://msra-<*>,Event Writer setup for JobId: <*> File: hdfs://msra-<*>,69
+Ignoring obsolete output of KILLED map-task: '<*>',Ignoring obsolete output of KILLED map-task: '<*>',Ignoring obsolete output of KILLED map-task: '<*>',66
+"mapResourceRequest:<memory:<*>, vCores:<*>","mapResourceRequest:<memory:<*>, vCores:<*>","mapResourceRequest:<memory:<*>, vCores:<*>",65
+Reduce slow start threshold reached. Scheduling reduces.,Reduce slow start threshold reached. Scheduling reduces.,Reduce slow start threshold reached. Scheduling reduces.,65
+finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs,finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs,finalMerge called with <*> in-memory map-outputs and <*> on-disk map-outputs,56
+"Merging <*> files, <*> bytes from disk","Merging <*> files, <*> bytes from disk","Merging <*> files, <*> bytes from disk",56
+"Merging <*> segments, <*> bytes from memory into reduce","Merging <*> segments, <*> bytes from memory into reduce","Merging <*> segments, <*> bytes from memory into reduce",56
+Diagnostics report from <*>: Container released on a *lost* node,Diagnostics report from <*>: Container released on a *lost* node,Diagnostics report from <*>: Container released on a *lost* node,55
+Killing taskAttempt:<*> because it is running on unusable node:<*>,Killing <*> because it is running on unusable node:<*>,Killing <*> because it is running on unusable node:<*>,55
+EventFetcher is interrupted.. Returning,EventFetcher is interrupted.. Returning,EventFetcher is interrupted.. Returning,54
+Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>,Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>,Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>,52
+Calling stop for all the services,Calling stop for all the services,Calling stop for all the services,52
+Notify JHEH isAMLastRetry: <*>,Notify JHEH isAMLastRetry: <*>,Notify JHEH isAMLastRetry: <*>,52
+Notify RMCommunicator isAMLastRetry: <*>,Notify RMCommunicator isAMLastRetry: <*>,Notify RMCommunicator isAMLastRetry: <*>,52
+We are finishing cleanly so this is the last retry,We are finishing cleanly so this is the last retry,We are finishing cleanly so this is the last retry,50
+JobHistoryEventHandler notified that forceJobCompletion is <*>,JobHistoryEventHandler notified that forceJobCompletion is true,JobHistoryEventHandler notified that forceJobCompletion is true,50
+RMCommunicator notified that shouldUnregistered is: <*>,RMCommunicator notified that shouldUnregistered is: true,RMCommunicator notified that shouldUnregistered is: true,50
+Stopping IPC Server Responder,Stopping IPC Server Responder,Stopping IPC Server Responder,48
+Task <*> is allowed to commit now,Task <*> is allowed to commit now,Task <*> is allowed to commit now,48
+Stopping server on <*>,Stopping server on <*>,Stopping server on <*>,48
+Stopping IPC Server listener on <*>,Stopping IPC Server listener on <*>,Stopping IPC Server listener on <*>,48
+Setting job diagnostics to,Setting job diagnostics to,Setting job diagnostics to,48
+Saved output of task <*> to <*>,Saved output of task <*> to hdfs://msra-<*>,Saved output of task <*> to hdfs://msra-<*>,48
+History url is <*>,History url is http:<*>,History url is http:<*>,48
+TaskHeartbeatHandler thread interrupted,TaskHeartbeatHandler thread interrupted,TaskHeartbeatHandler thread interrupted,48
+Final Stats: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,<*>: PendingReds:<*> ScheduledMaps:<*> ScheduledReds:<*> AssignedMaps:<*> AssignedReds:<*> CompletedMaps:<*> CompletedReds:<*> ContAlloc:<*> ContRel:<*> HostLocal:<*> RackLocal:<*>,48
+Commit-pending state update from <*>,Commit-pending state update from <*>,Commit-pending state update from <*>,47
+Calling handler for JobFinishedEvent,Calling handler for JobFinishedEvent,Calling handler for JobFinishedEvent,47
+<*> given a go for committing the task output.,<*> given a go for committing the task output.,<*> given a go for committing the task output.,47
+Commit go/no-go request from <*>,Commit <*> request from <*>,Commit <*> request from <*>,47
+Result of canCommit for <*>,Result of canCommit for <*>,Result of canCommit for <*>,47
+Deleting staging directory <*>,Deleting staging directory hdfs://msra-<*>,Deleting staging directory hdfs://msra-<*>,45
+Waiting for application to be successfully unregistered.,Waiting for application to be successfully unregistered.,Waiting for application to be successfully unregistered.,45
+Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>,"Communication exception: <*>: Failed on local exception: <*>: An existing connection was forcibly closed by the remote host; Host Details : local host is: ""<*>""; destination host is: ""<*>"":<*>;","Communication exception: <*>: Failed on local exception: <*>: An existing connection was forcibly closed by the remote host; Host Details : local host is: ""<*>""; destination host is: ""<*>"":<*>;",44
+All maps assigned. Ramping up all remaining reduces:<*>,All maps assigned. Ramping up all remaining reduces:<*>,All maps assigned. Ramping up all remaining reduces:<*>,43
+Ramping up <*>,Ramping up <*>,Ramping up <*>,31
+Abandoning <*>,Abandoning <*>,Abandoning <*>,30
+Exception in createBlockOutputStream,Exception in createBlockOutputStream,Exception in createBlockOutputStream,30
+Excluding datanode <*>,Excluding datanode <*>,Excluding datanode <*>,30
+TaskAttempt killed because it ran on unusable node <*> AttemptId:<*>,TaskAttempt killed because it ran on unusable node <*> <*>,TaskAttempt killed because it ran on unusable node <*> <*>,25
+Container complete event for unknown container id <*>,Container complete event for unknown container id <*>,Container complete event for unknown container id <*>,19
+Previous history file is at <*>,Previous history file is at hdfs://msra-<*>,Previous history file is at hdfs://msra-<*>,19
+I/O error constructing remote block reader.,<*> error constructing remote block reader.,<*> error constructing remote block reader.,16
+Stopping <*> metrics system...,Stopping ReduceTask metrics system...,Stopping ReduceTask metrics system...,15
+<*> metrics system stopped.,0,0,15
+<*> metrics system shutdown complete.,ReduceTask metrics system shutdown complete.,ReduceTask metrics system shutdown complete.,15
+Recovery is enabled. Will try to recover from previous life on best effort basis.,Recovery is enabled. Will try to recover from previous life on best effort basis.,Recovery is enabled. Will try to recover from previous life on best effort basis.,15
+Error Recovery for block <*> in pipeline <*> <*>: bad datanode <*>,Error Recovery for block <*> in pipeline <*> <*>: bad datanode <*>,Error Recovery for block <*> in pipeline <*> <*>: bad datanode <*>,14
+DFSOutputStream ResponseProcessor exception for block <*>,DFSOutputStream ResponseProcessor exception for block <*>,DFSOutputStream ResponseProcessor exception for block <*>,14
+Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <*> Priority: <*> Token: <*> ] for a map as either container memory less than required <*> or no pending map tasks - maps.isEmpty=<*>,"Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] for a map as either container memory less than required <memory:<*>, vCores:<*> or no pending map tasks - maps.isEmpty=<*>","Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] for a map as either container memory less than required <memory:<*>, vCores:<*> or no pending map tasks - maps.isEmpty=<*>",12
+Diagnostics report from <*>: Error: java.io.IOException: There is not enough space on the disk,Diagnostics <*> from <*>: Error: <*>: There is not enough space on the disk,Diagnostics <*> from <*>: Error: <*>: There is not enough space on the disk,12
+Diagnostics report from <*>: cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>,Diagnostics report from <*>: cleanup failed for container <*> : <*>: <*>: <*>,Diagnostics report from <*>: cleanup failed for container <*> : <*>: <*>: <*>,12
+Read completed tasks from history <*>,Read completed tasks from history <*>,Read completed tasks from history <*>,11
+<*> failures on node <*>,<*> failures on node <*>,<*> failures on node <*>,10
+Added <*> to list of failed maps,<*> to list of failed maps,<*> to list of failed maps,10
+Communication exception: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>,Communication exception: <*>: No Route to Host from MININT-<*> to <*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,Communication exception: <*>: No Route to Host from MININT-<*> to <*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,10
+"Failed to connect to <*> for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: No route to host: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: No route to host: no further information",10
+"Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: <*> status: <*> status: <*> downstreamAckTimeNanos: <*> targets: [<*>, <*>]","Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: -<*> status: SUCCESS status: ERROR downstreamAckTimeNanos: <*> targets: [<*>, <*>]","Slow ReadProcessor read fields took <*> (threshold=<*>); ack: seqno: -<*> status: SUCCESS status: ERROR downstreamAckTimeNanos: <*> targets: [<*>, <*>]",9
+Assigned from earlierFailedMaps,Assigned from earlierFailedMaps,Assigned from earlierFailedMaps,8
+"Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: <*> service: <*> }, ] to fast fail map","Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] to fast fail map","Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] to fast fail map",8
+Diagnostics report from <*>: AttemptID:<*> Timed out after <*> secs,Diagnostics report from <*>: <*> Timed out after <*> secs,Diagnostics report from <*>: <*> Timed out after <*> secs,7
+Merging <*> intermediate segments out of a total of <*>,Merging <*> intermediate segments out of a total of <*>,Merging <*> intermediate segments out of a total of <*>,7
+Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <*> Priority: <*> Token: <*>]. RM may have assignment issues,"Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ]. RM may have assignment issues","Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:<*>, vCores:<*>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ]. RM may have assignment issues",7
+"In stop, writing event <*>","In stop, writing event <*>","In stop, writing event <*>",6
+Diagnostics report from <*>: java.io.IOException: Spill failed,Diagnostics report from <*>: Error: <*>: Spill failed,Diagnostics report from <*>: Error: <*>: Spill failed,6
+Runnning cleanup for the task,Runnning cleanup for the task,Runnning cleanup for the task,6
+Successfully connected to <*> for <*>,Successfully connected to <*> for <*>,Successfully connected to <*> for <*>,6
+Could not obtain <*> from any node: <*> No live nodes contain block <*> after checking nodes = <*> ignoredNodes = <*> No live nodes contain current block Block locations: <*> Dead nodes: <*> Will get new block locations from namenode and retry...,"Could not obtain <*> from any node: <*>: No live nodes contain block <*> after checking nodes = [<*>, <*>], ignoredNodes = <*> No live nodes contain current block Block locations: <*> nodes: <*> Will get new block locations from namenode and retry...","Could not obtain <*> from any node: <*>: No live nodes contain block <*> after checking nodes = [<*>, <*>], ignoredNodes = <*> No live nodes contain current block Block locations: <*> nodes: <*> Will get new block locations from namenode and retry...",6
+"DFS chooseDataNode: got # <*> IOException, will wait for <*> msec.","DFS chooseDataNode: got # <*> IOException, will wait for <*> msec.","DFS chooseDataNode: got # <*> IOException, will wait for <*> msec.",6
+Task: <*> - exited : java.io.IOException: There is not enough space on the disk,0,0,6
+"Last retry, killing <*>","Last retry, killing <*>","Last retry, killing <*>",5
+"Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection timed out: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection timed out: no further information",5
+Process Thread Dump: Communication exception,Process Thread Dump: Communication exception,Process Thread Dump: Communication exception,5
+"Unable to parse prior job history, aborting recovery","Unable to parse prior job history, aborting recovery","Unable to parse prior job history, aborting recovery",4
+Could not parse the old history file. Will not have old AMinfos,Could not parse the old history file. Will not have old AMinfos,Could not parse the old history file. Will not have old AMinfos,4
+Diagnostics report from <*>: Error: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>,0,0,4
+Error writing History Event: <*>,Error writing History Event: <*>,Error writing History Event: <*>,4
+Graceful stop failed,Graceful stop failed,Graceful stop failed,3
+Error communicating with RM: Could not contact RM after <*> milliseconds.,Error communicating with RM: Could not contact RM after <*> milliseconds.,Error communicating with RM: Could not contact RM after <*> milliseconds.,3
+Task: <*> - exited : java.io.IOException: Spill failed,Task: <*> - exited : <*>: Spill failed,Task: <*> - exited : <*>: Spill failed,3
+Exception in getting events,Exception in getting events,Exception in getting events,3
+Exception while unregistering,Exception while unregistering,Exception while unregistering,3
+Could not contact RM after <*> milliseconds.,Could not contact RM after <*> milliseconds.,Could not contact RM after <*> milliseconds.,3
+DataStreamer Exception,DataStreamer Exception,DataStreamer Exception,3
+DFS Read,DFS Read,DFS Read,3
+JobHistoryEventHandler notified that forceJobCompletion is <*>,JobHistoryEventHandler notified that forceJobCompletion is false,JobHistoryEventHandler notified that forceJobCompletion is false,2
+Exception cleaning up: java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>,Exception cleaning up: <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,Exception cleaning up: <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,2
+RMCommunicator notified that shouldUnregistered is: <*>,RMCommunicator notified that shouldUnregistered is: false,RMCommunicator notified that shouldUnregistered is: false,2
+Service <*> failed in state <*>; cause: <*>: Attempt to process a enum when a union was expected.,Service <*> failed in state STOPPED; cause: <*>: Attempt to process a enum when a union was expected.,Service <*> failed in state STOPPED; cause: <*>: Attempt to process a enum when a union was expected.,2
+Shuffle failed : local error on this node: <*>,Shuffle failed : local error on this node: <*>,Shuffle failed : local error on this node: <*>,2
+Diagnostics report from <*>: Error: <*>: error in shuffle in fetcher#<*>,Diagnostics report from attempt_1445182159119_0003_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,Diagnostics report from attempt_1445182159119_0003_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,2
+Diagnostics report from <*>: Error: <*>: error in shuffle in fetcher#<*>,Diagnostics report from attempt_1445182159119_0014_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,Diagnostics report from attempt_1445182159119_0014_r_000000_0: Error: <*>: error in shuffle in fetcher#<*>,2
+Diagnostics report from <*>: Error: <*>: Could not find any valid local directory for <*>,Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: <*>: Could not find any valid local directory for <*>,Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: <*>: Could not find any valid local directory for <*>,2
+Exception running child : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>,Exception running child : <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,Exception running child : <*>: No Route to Host from MININT-<*> to msra-<*> failed on socket timeout exception: <*>: No route to host: no further information; For more details see: http:<*>,2
+Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#<*>,Exception running child : <*>: error in shuffle in fetcher#<*>,Exception running child : <*>: error in shuffle in fetcher#<*>,2
+Task: <*> - exited : java.net.NoRouteToHostException: No Route to Host from <*> to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: <*>,0,0,2
+Exception running child : <*>: Could not find any valid local directory for <*>,Exception running child : <*>: Could not find any valid local directory for <*>,Exception running child : <*>: Could not find any valid local directory for <*>,1
+"IPC Server handler <*> on <*> call statusUpdate(<*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: output error","IPC Server handler <*> on <*> call statusUpdate(attempt_1445094324383_0003_m_000000_0, <*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: output error","IPC Server handler <*> on <*> call statusUpdate(attempt_1445094324383_0003_m_000000_0, <*>), rpc version=<*>, client version=<*>, methodsFingerPrint=<*> from <*> Call#<*> Retry#<*>: output error",1
+Preempting <*>,Preempting attempt_1445087491445_0004_r_000000_1000,Preempting attempt_1445087491445_0004_r_000000_1000,1
+"Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection refused: no further information","Failed to connect to <*> for block, add to deadNodes and continue. <*>: Connection refused: no further information",1
+Ignoring exception during close for <*>,Ignoring exception during close for <*>,Ignoring exception during close for <*>,1
+IPC Server handler <*> on <*> caught an exception,IPC Server handler <*> on <*> caught an exception,IPC Server handler <*> on <*> caught an exception,1
+Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk,Task: attempt_1445182159119_0004_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,Task: attempt_1445182159119_0004_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,1
+Error closing writer for JobID: <*>,Error closing writer for JobID: job_1445144423722_0023,Error closing writer for JobID: job_1445144423722_0023,1
+Reduce preemption successful <*>,Reduce preemption successful attempt_1445087491445_0004_r_000000_1000,Reduce preemption successful attempt_1445087491445_0004_r_000000_1000,1
+Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0007,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0007,1
+Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0004,Error communicating with RM: Resource Manager doesn't recognize AttemptId: application_1445087491445_0004,1
+Reporting fetch failure for <*>.,Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker.,Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker.,1
+Found jobId <*> to have not been closed. Will close,Found jobId job_1445144423722_0023 to have not been closed. Will close,Found jobId job_1445144423722_0023 to have not been closed. Will close,1
+Communication exception: java.net.ConnectException: Call From <*> to <*> failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: <*>,Communication exception: <*>: Call From MSRA-<*> to <*> failed on connection exception: <*>: Connection timed out: no further information; For more details see: http:<*>,Communication exception: <*>: Call From MSRA-<*> to <*> failed on connection exception: <*>: Connection timed out: no further information; For more details see: http:<*>,1
+Found jobId <*> to have not been closed. Will close,Found jobId job_1445175094696_0003 to have not been closed. Will close,Found jobId job_1445175094696_0003 to have not been closed. Will close,1
+Connection retry failed with <*> attempts in <*> seconds,Connection retry failed with <*> attempts in <*> seconds,Connection retry failed with <*> attempts in <*> seconds,1
+Task cleanup failed for attempt <*>,Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0,Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0,1
+Task cleanup failed for attempt <*>,Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0,Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0,1
+Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk,Task: attempt_1445182159119_0003_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,Task: attempt_1445182159119_0003_m_000000_0 - failed due to FSError: <*>: There is not enough space on the disk,1
+Failed to connect to <*> with <*> map outputs,Failed to connect to <*> with <*> map outputs,Failed to connect to <*> with <*> map outputs,1

@@ -1,0 +1,351 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+Out of Memory: Killed process <*> (<*>).,Out of Memory: Killed process <*> (<*>).,Out of Memory: Killed process <*> (<*>).,10404
+authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>,authentication failure; <*> uid=<*> euid=<*> ruser= <*>,authentication failure; <*> uid=<*> euid=<*> ruser= <*>,2879
+connection from <*> (<*>) at <*>,connection from <*> (<*>) at <*>,connection from <*> (<*>) at <*>,2805
+check pass; user <*>,check pass; user unknown,check pass; user unknown,1043
+session closed for user <*>,session closed for user <*>,session closed for user <*>,561
+session opened for user <*> by <*>,session opened for user <*> by (uid=<*>),session opened for user <*> by (uid=<*>),561
+connection from <*> (<*>) at <*>,connection from <*> () at <*>,connection from <*> (<*>) at <*>,506
+creating device node <*>,creating device node '<*>',creating device node '<*>',268
+<*> startup succeeded,<*> startup succeeded,<*> startup succeeded,261
+ALERT exited abnormally with <*>,ALERT exited abnormally with [<*>],ALERT exited abnormally with [<*>],231
+removing device node <*>,removing device node '<*>',removing device node '<*>',216
+listening on IPv4 interface <*>,listening on IPv4 interface <*> <*>,listening on IPv4 interface <*> <*>,192
+[<*>] do_page_fault+<*>,[<*>] do_page_fault+<*>,[<*>] do_page_fault+<*>,190
+audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>,audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=-<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>,audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=-<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>,113
+ttloop: peer died: Invalid or incomplete multibyte or wide character,ttloop: peer died: Invalid or incomplete multibyte or wide character,ttloop: peer died: Invalid or incomplete multibyte or wide character,112
+<*> shutdown succeeded,<*> shutdown succeeded,<*> shutdown succeeded,107
+[<*>] __alloc_pages+<*>,[<*>] __alloc_pages+<*>,[<*>] __alloc_pages+<*>,90
+"httpd: page allocation failure. order:<*>, mode:<*>","httpd: page allocation failure. order:<*>, mode:<*>","httpd: page allocation failure. order:<*>, mode:<*>",77
+[<*>] handle_mm_fault+<*>,[<*>] handle_mm_fault+<*>,[<*>] handle_mm_fault+<*>,73
+[<*>] schedule+<*>,[<*>] schedule+<*>,[<*>] schedule+<*>,72
+ttloop: read: Connection timed out,ttloop: read: Connection timed out,ttloop: read: Connection timed out,57
+audit(<*>): item=<*> name=<*> inode=<*> dev=<*>,audit(<*>): item=<*> inode=<*> dev=<*>,audit(<*>): item=<*> inode=<*> dev=<*>,57
+audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>,audit(<*>): avc: denied { <*> } for pid=<*> exe=<*> scontext=<*>:system_r:kernel_t <*>,audit(<*>): avc: denied { <*> } for pid=<*> exe=<*> scontext=<*>:system_r:kernel_t <*>,52
+[<*>] put_user_size+<*>,[<*>] put_user_size+<*>,[<*>] put_user_size+<*>,49
+NET: Registered protocol family <*>,NET: Registered protocol family <*>,NET: Registered protocol family <*>,48
+no longer listening on <*>,no longer listening on <*>,no longer listening on <*>,48
+[<*>] read_swap_cache_async+<*>,[<*>] read_swap_cache_async+<*>,[<*>] read_swap_cache_async+<*>,44
+getpeername (ftpd): Transport endpoint is not connected,getpeername (ftpd): Transport endpoint is not connected,getpeername (ftpd): Transport endpoint is not connected,43
+restart.,restart.,restart.,42
+[<*>] do_swap_page+<*>,[<*>] do_swap_page+<*>,[<*>] do_swap_page+<*>,41
+User <*> timed out after <*> seconds at <*>,User unknown timed out after <*> seconds at <*>,User unknown timed out after <*> seconds at <*>,36
+usbcore: registered new driver <*>,usbcore: registered new driver <*>,usbcore: registered new driver <*>,32
+[<*>] filemap_nopage+<*>,[<*>] filemap_nopage+<*>,[<*>] filemap_nopage+<*>,30
+[<*>] do_no_page+<*>,[<*>] do_no_page+<*>,[<*>] do_no_page+<*>,30
+VM: killing process <*>,VM: killing process httpd,VM: killing process httpd,26
+Kerberos authentication failed,Kerberos authentication failed,Kerberos authentication failed,25
+PCI: Found IRQ <*> for device <*>,PCI: Found IRQ <*> for device <*>:1f.<*>,PCI: Found IRQ <*> for device <*>:1f.<*>,24
+Bluetooth: <*> ver <*>,Bluetooth: <*> ver <*>,Bluetooth: <*> ver <*>,24
+BIOS-e820: <*> - <*> (reserved),BIOS-<*>: <*> - <*> (reserved),BIOS-<*>: <*> - <*> (reserved),24
+[<*>] do_page_cache_readahead+<*>,[<*>] do_page_cache_readahead+<*>,[<*>] do_page_cache_readahead+<*>,23
+[<*>] swapin_readahead+<*>,[<*>] swapin_readahead+<*>,[<*>] swapin_readahead+<*>,23
+connection from <*> (<*>) at <*>,connection from <*> (<*>.maximumasp.com) at <*>,connection from <*> (<*>) at <*>,23
+connection from <*> (<*>) at <*>,connection from <*> (dsl-Chn-static-<*>.touchtelindia.net) at <*>,connection from <*> (<*>) at <*>,23
+[<*>] recalc_task_prio+<*>,[<*>] recalc_task_prio+<*>,[<*>] recalc_task_prio+<*>,20
+[<*>] follow_page+<*>,[<*>] follow_page+<*>,[<*>] follow_page+<*>,19
+warning: can't get client address: Connection reset by peer,warning: can't get client address: Connection reset by peer,warning: can't get client address: Connection reset by peer,18
+Authentication failed from <*> (<*>): Software caused connection abort,Authentication failed from <*> (<*>): Software caused connection abort,Authentication failed from <*> (<*>): Software caused connection abort,17
+ip_tables: (C) <*> Netfilter core team,ip_tables: (C) <*> Netfilter core team,ip_tables: (C) <*> Netfilter core team,17
+succeeded,succeeded,succeeded,16
+<*>: Donald Becker and others. <*>,3c59x: Donald Becker and others. <*>,3c59x: Donald Becker and others. <*>,16
+EXT3-fs: mounted filesystem with ordered data mode.,EXT3-fs: mounted filesystem with ordered data mode.,EXT3-fs: mounted filesystem with ordered data mode.,16
+kjournald starting. Commit interval <*> seconds,kjournald starting. Commit interval <*> seconds,kjournald starting. Commit interval <*> seconds,16
+parport0: irq <*> detected,parport0: irq <*> detected,parport0: irq <*> detected,16
+parport0: PC-style at <*> (<*>) [<*>],"parport0: PC-style at <*> (<*>) [PCSPP,TRISTATE,EPP]","parport0: PC-style at <*> (<*>) [PCSPP,TRISTATE,EPP]",16
+[<*>] vt_console_print+<*>,[<*>] vt_console_print+<*>,[<*>] vt_console_print+<*>,16
+[<*>] rw_vm+<*>,[<*>] rw_vm+<*>,[<*>] rw_vm+<*>,16
+couldn't add command channel <*> not found,couldn't add command channel <*>: not found,couldn't add command channel <*>: not found,16
+notify question section contains no SOA,notify question section contains no SOA,notify question section contains no SOA,16
+BIOS-e820: <*> - <*> (usable),BIOS-<*>: <*> - <*> (usable),BIOS-<*>: <*> - <*> (usable),16
+<*> shutdown failed,<*> shutdown failed,<*> shutdown failed,15
+[<*>] generic_file_aio_write_nolock+<*>,[<*>] generic_file_aio_write_nolock+<*>,[<*>] generic_file_aio_write_nolock+<*>,15
+[<*>] generic_file_aio_write+<*>,[<*>] generic_file_aio_write+<*>,[<*>] generic_file_aio_write+<*>,15
+imps2: Auto-detected intellimouse PS/2,imps2: Auto-detected intellimouse <*>,imps2: Auto-detected intellimouse <*>,15
+[<*>] acct_process+<*>,[<*>] acct_process+<*>,[<*>] acct_process+<*>,15
+[<*>] ext3_file_write+<*>,[<*>] ext3_file_write+<*> [ext3],[<*>] ext3_file_write+<*> [ext3],15
+[<*>] __print_symbol+<*>,[<*>] __print_symbol+<*>,[<*>] __print_symbol+<*>,15
+*** info [mice.c(<*>)]:,*** info [startup.c(<*>)]:,*** info [startup.c(<*>)]:,15
+[<*>] do_acct_process+<*>,[<*>] do_acct_process+<*>,[<*>] do_acct_process+<*>,15
+[<*>] do_exit+<*>,[<*>] do_exit+<*>,[<*>] do_exit+<*>,15
+[<*>] do_sync_write+<*>,[<*>] do_sync_write+<*>,[<*>] do_sync_write+<*>,15
+[<*>] journal_start+<*>,[<*>] journal_start+<*> [jbd],[<*>] journal_start+<*> [jbd],14
+[<*>] __mark_inode_dirty+<*>,[<*>] __mark_inode_dirty+<*>,[<*>] __mark_inode_dirty+<*>,14
+[<*>] __getblk_slow+<*>,[<*>] __getblk_slow+<*>,[<*>] __getblk_slow+<*>,14
+[<*>] ext3_reserve_inode_write+<*>,[<*>] ext3_reserve_inode_write+<*> [ext3],[<*>] ext3_reserve_inode_write+<*> [ext3],14
+[<*>] find_or_create_page+<*>,[<*>] find_or_create_page+<*>,[<*>] find_or_create_page+<*>,14
+[<*>] ext3_dirty_inode+<*>,[<*>] ext3_dirty_inode+<*> [ext3],[<*>] ext3_dirty_inode+<*> [ext3],14
+[<*>] grow_dev_page+<*>,[<*>] grow_dev_page+<*>,[<*>] grow_dev_page+<*>,14
+[<*>] __getblk+<*>,[<*>] __getblk+<*>,[<*>] __getblk+<*>,14
+[<*>] ext3_get_inode_loc+<*>,[<*>] ext3_get_inode_loc+<*> [ext3],[<*>] ext3_get_inode_loc+<*> [ext3],14
+[<*>] ext3_mark_inode_dirty+<*>,[<*>] ext3_mark_inode_dirty+<*> [ext3],[<*>] ext3_mark_inode_dirty+<*> [ext3],14
+[<*>] inode_update_time+<*>,[<*>] inode_update_time+<*>,[<*>] inode_update_time+<*>,14
+[<*>] dump_stack+<*>,[<*>] dump_stack+<*>,[<*>] dump_stack+<*>,13
+[<*>] do_IRQ+<*>,[<*>] do_IRQ+<*>,[<*>] do_IRQ+<*>,13
+[<*>] printk+<*>,[<*>] printk+<*>,[<*>] printk+<*>,11
+bad username [<*>],bad username [<*>],bad username [<*>],11
+[<*>] mempool_alloc+<*>,[<*>] mempool_alloc+<*>,[<*>] mempool_alloc+<*>,11
+"SELinux: initialized (dev , type <*>), uses <*>","SELinux: initialized (dev , type <*>), uses genfs_contexts","SELinux: initialized (dev , type <*>), uses genfs_contexts",11
+[<*>] show_trace+<*>,[<*>] show_trace+<*>,[<*>] show_trace+<*>,11
+service(<*>) ignoring max retries; <*> > <*>,service(sshd) ignoring max retries; <*> > <*>,service(sshd) ignoring max retries; <*> > <*>,11
+"sendmail: page allocation failure. order:<*>, mode:<*>","sendmail: page allocation failure. order:<*>, mode:<*>","sendmail: page allocation failure. order:<*>, mode:<*>",11
+ttloop: read: Connection reset by peer,ttloop: read: Connection reset by peer,ttloop: read: Connection reset by peer,10
+[<*>] page_cache_read+<*>,[<*>] page_cache_read+<*>,[<*>] page_cache_read+<*>,10
+[<*>] __wake_up+<*>,[<*>] __wake_up+<*>,[<*>] __wake_up+<*>,10
+Couldn't authenticate user,Couldn't authenticate user,Couldn't authenticate user,10
+[<*>] do_wp_page+<*>,[<*>] do_wp_page+<*>,[<*>] do_wp_page+<*>,10
+Starting MySQL: succeeded,Starting <*>: succeeded,Starting <*>: succeeded,9
+klogd <*> log source = <*> started.,klogd <*> log source = <*> started.,klogd <*> log source = <*> started.,9
+[<*>] __wake_up_common+<*>,[<*>] __wake_up_common+<*>,[<*>] __wake_up_common+<*>,9
+agpgart: Detected an <*> Chipset.,agpgart: Detected an Intel i810 E Chipset.,agpgart: Detected an Intel i810 E Chipset.,8
+You can enable it with <*>,You can enable it with acpi=<*>,You can enable it with acpi=<*>,8
+Version <*> Starting,Version <*> Starting,Version <*> Starting,8
+Version <*> (APM BIOS <*> Linux driver <*>),Version <*> (APM BIOS <*> Linux driver <*>),Version <*> (APM BIOS <*> Linux driver <*>),8
+agpgart: AGP aperture is <*> @ <*>,agpgart: AGP aperture is <*> @ <*>,agpgart: AGP aperture is <*> @ <*>,8
+VFS: Mounted root (ext2 filesystem).,VFS: Mounted root (ext2 filesystem).,VFS: Mounted root (ext2 filesystem).,8
+file descriptor of service comsat has been closed,file descriptor of service comsat has been closed,file descriptor of service comsat has been closed,8
+agpgart: Maximum main memory to use for agp memory: <*>,agpgart: Maximum main memory to use for agp memory: <*>,agpgart: Maximum main memory to use for agp memory: <*>,8
+mapped <*> trampoline to <*>.,mapped <*> trampoline to <*>.,mapped <*> trampoline to <*>.,8
+md: autorun ...,md: autorun ...,md: autorun ...,8
+"md: md driver <*> MAX_MD_DEVS=<*>, MD_SB_DISKS=<*>","md: md driver <*> MAX_MD_DEVS=<*>, MD_SB_DISKS=<*>","md: md driver <*> MAX_MD_DEVS=<*>, MD_SB_DISKS=<*>",8
+mice: <*> mouse device common for all mice,mice: <*> mouse device common for all mice,mice: <*> mouse device common for all mice,8
+microcode: CPU0 already at revision <*> (current=<*>),microcode: CPU0 already at revision <*> (current=<*>),microcode: CPU0 already at revision <*> (current=<*>),8
+microcode: No suitable data for cpu <*>,microcode: No suitable data for cpu <*>,microcode: No suitable data for cpu <*>,8
+pci_hotplug: PCI Hot Plug PCI Core version: <*>,pci_hotplug: PCI Hot Plug PCI Core version: <*>,pci_hotplug: PCI Hot Plug PCI Core version: <*>,8
+precision = <*> usec,precision = <*> usec,precision = <*> usec,8
+process <*> is using obsolete setsockopt SO_BSDCOMPAT,process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT,process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT,8
+"rsyncd version <*> starting, listening on port <*>","rsyncd version <*> starting, listening on port <*>","rsyncd version <*> starting, listening on port <*>",8
+running,running,running,8
+select reported EBADF but no bad file descriptors were found,select reported <*> but no bad file descriptors were found,select reported <*> but no bad file descriptors were found,8
+selinux_register_security: Registering secondary module capability,selinux_register_security: Registering secondary module capability,selinux_register_security: Registering secondary module capability,8
+serio: i8042 AUX port at <*> irq <*>,serio: i8042 AUX port at <*> irq <*>,serio: i8042 AUX port at <*> irq <*>,8
+serio: i8042 KBD port at <*> irq <*>,serio: i8042 KBD port at <*> irq <*>,serio: i8042 KBD port at <*> irq <*>,8
+smartd has fork()ed into background mode. New PID=<*>.,smartd has fork()ed into background mode. New PID=<*>.,smartd has fork()ed into background mode. New PID=<*>.,8
+started.,started.,started.,8
+starting BIND <*> -u <*> -t <*>,starting BIND <*> -u named -t <*>,starting BIND <*> -u named -t <*>,8
+"synchronized to LOCAL(<*>), stratum=<*>","synchronized to LOCAL(<*>), stratum=<*>","synchronized to LOCAL(<*>), stratum=<*>",8
+uhci_hcd <*>: UHCI Host Controller,uhci_hcd <*>:1f.<*>: UHCI Host Controller,uhci_hcd <*>:1f.<*>: UHCI Host Controller,8
+uhci_hcd <*>: irq <*> io base <*>,uhci_hcd <*>:1f.<*>: irq <*> io base <*>,uhci_hcd <*>:1f.<*>: irq <*> io base <*>,8
+"uhci_hcd <*>: new USB bus registered, assigned bus number <*>","uhci_hcd <*>:1f.<*>: new USB bus registered, assigned bus number <*>","uhci_hcd <*>:1f.<*>: new USB bus registered, assigned bus number <*>",8
+using <*> CPU,using <*> CPU,using <*> CPU,8
+xinetd Version <*> started with <*> options compiled in.,xinetd Version <*> started with libwrap loadavg options compiled in.,xinetd Version <*> started with libwrap loadavg options compiled in.,8
+md: Autodetecting RAID arrays.,md: Autodetecting RAID arrays.,md: Autodetecting RAID arrays.,8
+loading configuration from <*>,loading configuration from '<*>',loading configuration from '<*>',8
+agpgart: detected <*> dedicated video ram.,agpgart: detected <*> dedicated video ram.,agpgart: detected <*> dedicated video ram.,8
+kernel time sync status <*>,kernel time sync <*>,kernel time sync <*>,8
+apm: BIOS version <*> Flags <*> (Driver version <*>),apm: BIOS version <*> Flags <*> (Driver version <*>),apm: BIOS version <*> Flags <*> (Driver version <*>),8
+audit(<*>): initialized,audit(<*>): initialized,audit(<*>): initialized,8
+bind failed (Address already in use (errno = <*>)). service = <*>,bind failed (Address already in use (errno = <*>)). service = <*>,bind failed (Address already in use (errno = <*>)). service = <*>,8
+cdrom: open failed.,cdrom: open failed.,cdrom: open failed.,8
+checking if image is initramfs...it isn't (no cpio magic); looks like an initrd,checking if image is initramfs...it isn't (no cpio magic); looks like an initrd,checking if image is initramfs...it isn't (no cpio magic); looks like an initrd,8
+"configure: keyword <*> unknown, line ignored","configure: keyword ""authenticate"" unknown, line ignored","configure: keyword ""authenticate"" unknown, line ignored",8
+Using tsc for high-res timesource,Using tsc for high-res timesource,Using tsc for high-res timesource,8
+frequency initialized <*> PPM from <*>,frequency initialized <*> PPM from <*>,frequency initialized <*> PPM from <*>,8
+"hda: <*> sectors (<*> MB) w/<*> Cache, CHS=<*>, UDMA(<*>)","hda: <*> sectors (<*>) <*> Cache, CHS=<*>, UDMA(<*>)","hda: <*> sectors (<*>) <*> Cache, CHS=<*>, UDMA(<*>)",8
+hda: max request size: <*>,hda: max request size: 128KiB,hda: max request size: 128KiB,8
+ide-floppy driver <*>,ide-floppy driver <*>,ide-floppy driver <*>,8
+ide0 at <*> on irq <*>,ide0 at <*> on irq <*>,ide0 at <*> on irq <*>,8
+"ide0: BM-DMA at <*> BIOS settings: hda:<*>, hdb:<*>","ide0: BM-DMA at <*> BIOS settings: hda:DMA, hdb:pio","ide0: BM-DMA at <*> BIOS settings: hda:DMA, hdb:pio",8
+ide1 at <*> on irq <*>,ide1 at <*> on irq <*>,ide1 at <*> on irq <*>,8
+"ide1: BM-DMA at <*> BIOS settings: hdc:<*>, hdd:<*>","ide1: BM-DMA at <*> BIOS settings: hdc:DMA, hdd:pio","ide1: BM-DMA at <*> BIOS settings: hdc:DMA, hdd:pio",8
+ide: Assuming <*> system bus speed for PIO modes; override with idebus=<*>,ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=<*>,ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=<*>,8
+input: <*> on <*>,input: <*> Logitech Wheel Mouse on <*>,input: <*> Logitech Wheel Mouse on <*>,8
+input: <*> on <*>,input: AT Translated Set <*> keyboard on <*>,input: AT Translated Set <*> keyboard on <*>,8
+inserting floppy driver for <*>,inserting floppy driver for <*>,inserting floppy driver for <*>,8
+isapnp: No Plug & Play device found,isapnp: No Plug & Play device found,isapnp: No Plug & Play device found,8
+isapnp: Scanning for PnP cards...,isapnp: Scanning for PnP cards...,isapnp: Scanning for PnP cards...,8
+kernel time sync disabled <*>,kernel time sync <*>,kernel time sync <*>,8
+kernel time sync enabled <*>,kernel time sync <*>,kernel time sync <*>,8
+VFS: Disk quotas <*>,VFS: Disk quotas <*>,VFS: Disk quotas <*>,8
+zapping low mappings.,zapping low mappings.,zapping low mappings.,8
+Using <*> io scheduler,Using cfq io scheduler,Using cfq io scheduler,8
+PCI: PCI BIOS revision <*> entry at <*> last bus=<*>,PCI: PCI BIOS revision <*> entry at <*> last bus=<*>,PCI: PCI BIOS revision <*> entry at <*> last bus=<*>,8
+IPv6 over IPv4 tunneling driver,IPv6 over IPv4 tunneling driver,IPv6 over IPv4 tunneling driver,8
+"IP: routing cache hash table of <*> buckets, <*>","IP: routing cache hash table of <*> buckets, 4Kbytes","IP: routing cache hash table of <*> buckets, 4Kbytes",8
+ICH: chipset revision <*>,ICH: chipset revision <*>,ICH: chipset revision <*>,8
+ICH: IDE controller at PCI slot <*>,ICH: IDE controller at PCI slot <*>:1f.<*>,ICH: IDE controller at PCI slot <*>:1f.<*>,8
+Home page is <*>,Home page is <*>,Home page is <*>,8
+"HighMem zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>",8
+HCI daemon ver <*> started,HCI daemon ver <*> started,HCI daemon ver <*> started,8
+Freeing unused kernel memory: <*> freed,Freeing unused kernel memory: <*> freed,Freeing unused kernel memory: <*> freed,8
+Freeing initrd memory: <*> freed,Freeing initrd memory: <*> freed,Freeing initrd memory: <*> freed,8
+Floppy drive(s): <*> is <*>,Floppy drive(s): fd0 is <*>,Floppy drive(s): fd0 is <*>,8
+Failure registering capabilities with the kernel,Failure registering capabilities with the kernel,Failure registering capabilities with the kernel,8
+FDC <*> is a National Semiconductor <*>,FDC <*> is a National Semiconductor PC87306,FDC <*> is a National Semiconductor PC87306,8
+Enabling unmasked SIMD FPU exception support... done.,Enabling unmasked SIMD FPU exception support... done.,Enabling unmasked SIMD FPU exception support... done.,8
+Enabling fast FPU save and restore... done.,Enabling fast FPU save and restore... done.,Enabling fast FPU save and restore... done.,8
+EXT3 FS on <*> internal journal,"EXT3 FS on hda2, internal journal","EXT3 FS on hda2, internal journal",8
+Initializing CPU#<*>,Initializing CPU#<*>,Initializing CPU#<*>,8
+Initializing Cryptographic API,Initializing Cryptographic API,Initializing Cryptographic API,8
+Initializing IPsec netlink socket,Initializing IPsec netlink socket,Initializing IPsec netlink socket,8
+Mount-cache hash table entries: <*> (order: <*> bytes),Mount-cache hash table entries: <*> (order: <*> bytes),Mount-cache hash table entries: <*> (order: <*> bytes),8
+Opened configuration file <*>,Opened configuration file <*>,Opened configuration file <*>,8
+On node <*> totalpages: <*>,On node <*> totalpages: <*>,On node <*> totalpages: <*>,8
+"Normal zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>",8
+No such internal service: <*> - DISABLING,No such internal service: <*> - DISABLING,No such internal service: <*> - DISABLING,8
+NET-SNMP version <*>,NET-SNMP version <*>,NET-SNMP version <*>,8
+Mounting other filesystems: succeeded,Mounting other filesystems: succeeded,Mounting other filesystems: succeeded,8
+Monitoring <*> ATA and <*> SCSI devices,Monitoring <*> ATA and <*> SCSI devices,Monitoring <*> ATA and <*> SCSI devices,8
+Initializing random number generator: succeeded,Initializing random number generator: succeeded,Initializing random number generator: succeeded,8
+"Memory: <*> available (<*> kernel code, <*> reserved, <*> data, <*> init, <*> highmem)","Memory: <*> available (<*> kernel code, <*> reserved, <*> data, <*> init, <*> highmem)","Memory: <*> available (<*> kernel code, <*> reserved, <*> data, <*> init, <*> highmem)",8
+Linux version <*> (<*>) (gcc version <*> (Red Hat Linux <*>)) <*>,Linux version <*> (bhcompile@<*>) (gcc version <*> (Red Hat Linux <*>)) <*> EDT <*>,Linux version <*> (bhcompile@<*>) (gcc version <*> (Red Hat Linux <*>)) <*> EDT <*>,8
+Linux agpgart interface <*> (c) Dave Jones,Linux agpgart interface v0.<*> (c) Dave Jones,Linux agpgart interface v0.<*> (c) Dave Jones,8
+Linux Plug and Play Support <*> (c) Adam Belay,Linux Plug and Play Support v0.<*> (c) Adam Belay,Linux Plug and Play Support v0.<*> (c) Adam Belay,8
+Uniform Multi-Platform E-IDE driver Revision: <*>,Uniform Multi-Platform E-IDE driver Revision: <*>,Uniform Multi-Platform E-IDE driver Revision: <*>,8
+Inode-cache hash table entries: <*> (order: <*> bytes),Inode-cache hash table entries: <*> (order: <*> bytes),Inode-cache hash table entries: <*> (order: <*> bytes),8
+EXT3 FS on <*> internal journal,"EXT3 FS on hda1, internal journal","EXT3 FS on hda1, internal journal",8
+Dquot-cache hash table entries: <*> (order <*> bytes),Dquot-cache hash table entries: <*> (order <*> bytes),Dquot-cache hash table entries: <*> (order <*> bytes),8
+Disabled Privacy Extensions on device <*>(<*>),Disabled Privacy Extensions on device <*>(lo),Disabled Privacy Extensions on device <*>(lo),8
+ANONYMOUS FTP LOGIN FROM <*> (<*>),ANONYMOUS FTP LOGIN FROM <*> (Sgpuser@home.com),ANONYMOUS FTP LOGIN FROM <*> (Sgpuser@home.com),8
+Bluetooth: RFCOMM TTY layer initialized,Bluetooth: RFCOMM <*> layer initialized,Bluetooth: RFCOMM <*> layer initialized,8
+Bluetooth: HCI socket layer initialized,Bluetooth: HCI <*> layer initialized,Bluetooth: HCI <*> layer initialized,8
+Bluetooth: HCI device and connection manager initialized,Bluetooth: HCI device and connection manager initialized,Bluetooth: HCI device and connection manager initialized,8
+BIOS-provided physical RAM map:,BIOS-provided physical RAM map:,BIOS-provided physical RAM map:,8
+Authentication failed from <*> (<*>): Permission denied in replay cache code,Authentication failed from <*> (<*>): Permission denied in replay cache code,Authentication failed from <*> (<*>): Permission denied in replay cache code,8
+Adding <*> swap on <*> Priority:<*> extents:<*>,Adding <*> swap on <*> Priority:-<*> extents:<*>,Adding <*> swap on <*> Priority:-<*> extents:<*>,8
+ACPI: Subsystem revision <*>,ACPI: Subsystem revision <*>,ACPI: Subsystem revision <*>,8
+Built <*> zonelists,Built <*> zonelists,Built <*> zonelists,8
+ACPI: Interpreter disabled.,ACPI: Interpreter disabled.,ACPI: Interpreter disabled.,8
+ACPI: ACPI tables contain no PCI IRQ routing entries,ACPI: ACPI tables contain no PCI IRQ routing entries,ACPI: ACPI tables contain no PCI IRQ routing entries,8
+ACPI disabled because your bios is from <*> and too old,ACPI disabled because your bios is from <*> and too old,ACPI disabled because your bios is from <*> and too old,8
+<*> Privoxy(<*>) Info: loading configuration file <*>,<*> Privoxy(-<*>) Info: loading configuration file '<*>':,<*> Privoxy(-<*>) Info: loading configuration file '<*>':,8
+<*> LOWMEM available.,<*> LOWMEM available.,<*> LOWMEM available.,8
+*** info [startup.c(<*>)]:,*** info [startup.c(<*>)]:,*** info [startup.c(<*>)]:,8
+Bluetooth: RFCOMM socket layer initialized,Bluetooth: RFCOMM <*> layer initialized,Bluetooth: RFCOMM <*> layer initialized,8
+"CPU <*> irqstacks, hard=<*> soft=<*>","CPU <*> irqstacks, hard=<*> soft=<*>","CPU <*> irqstacks, hard=<*> soft=<*>",8
+Device: <*> opened,Device: <*> opened,Device: <*> opened,8
+Console: colour <*>,Console: colour VGA+ 80x25,Console: colour VGA+ 80x25,8
+"Device: <*> is SMART capable. Adding to ""monitor"" list.","Device: <*> is SMART capable. Adding to ""monitor"" list.","Device: <*> is SMART capable. Adding to ""monitor"" list.",8
+Device: <*> found in smartd database.,Device: <*> found in smartd database.,Device: <*> found in smartd database.,8
+Detected <*> MHz processor.,Detected <*> MHz processor.,Detected <*> MHz processor.,8
+Dentry cache hash table entries: <*> (order: <*> bytes),Dentry cache hash table entries: <*> (order: <*> bytes),Dentry cache hash table entries: <*> (order: <*> bytes),8
+DMI <*> present.,DMI <*> present.,DMI <*> present.,8
+"DMA zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>","<*> zone: <*> pages, LIFO batch:<*>",8
+Configuration file <*> parsed.,Configuration file <*> parsed.,Configuration file <*> parsed.,8
+CPU: Intel Pentium III (Coppermine) stepping <*>,CPU: Intel Pentium III (Coppermine) stepping <*>,CPU: Intel Pentium III (Coppermine) stepping <*>,8
+Checking <*> instruction... OK.,Checking 'hlt' instruction... OK.,Checking 'hlt' instruction... OK.,8
+Charge: * * * (<*> unknown),Charge: * * * (-<*>% unknown),Charge: * * * (-<*>% unknown),8
+Capability LSM initialized,Capability LSM initialized,Capability LSM initialized,8
+Calibrating delay loop... <*> BogoMIPS,Calibrating delay loop... <*> BogoMIPS,Calibrating delay loop... <*> BogoMIPS,8
+CPU: L2 cache: <*>,CPU: L2 cache: <*>,CPU: L2 cache: <*>,8
+CPU: L1 I cache: <*> L1 D cache: <*>,CPU: L1 I cache: <*> L1 D cache: <*>,CPU: L1 I cache: <*> L1 D cache: <*>,8
+PCI: Invalid ACPI-PCI IRQ routing table,PCI: Invalid ACPI-PCI IRQ routing table,PCI: Invalid ACPI-PCI IRQ routing table,8
+Intel machine check architecture supported.,Intel machine check architecture supported.,Intel machine check architecture supported.,8
+Squid Parent: child process <*> started,Squid Parent: child process <*> started,Squid Parent: child process <*> started,8
+RAMDISK: Compressed image found at block <*>,RAMDISK: Compressed image found at block <*>,RAMDISK: Compressed image found at block <*>,8
+"There is already a security framework initialized, register_security failed.","There is already a security framework initialized, register_security failed.","There is already a security framework initialized, register_security failed.",8
+SCSI subsystem initialized,SCSI subsystem initialized,SCSI subsystem initialized,8
+TCP: Hash tables configured (established <*> bind <*>),TCP: Hash tables configured (established <*> bind <*>),TCP: Hash tables configured (established <*> bind <*>),8
+Starting background readahead:,Starting background readahead:,Starting background readahead:,8
+SELinux: Registering netfilter hooks,0,0,8
+SELinux: Starting in permissive mode,SELinux: Starting in permissive mode,SELinux: Starting in permissive mode,8
+Security Scaffold <*> initialized,Security Scaffold <*> initialized,Security Scaffold <*> initialized,8
+"Serial: <*> driver $Revision: <*> $ <*> ports, IRQ sharing enabled","Serial: <*> driver $Revision: <*> $ <*> ports, IRQ sharing enabled","Serial: <*> driver $Revision: <*> $ <*> ports, IRQ sharing enabled",8
+Service telnet failed to start and is deactivated.,Service telnet failed to start and is deactivated.,Service telnet failed to start and is deactivated.,8
+PCI: Probing PCI hardware,PCI: Probing PCI hardware,PCI: Probing PCI hardware,8
+Started gpm successfully. Entered daemon mode.,Started gpm successfully. Entered daemon mode.,Started gpm successfully. Entered daemon mode.,8
+Starting readahead: succeeded,Starting <*>: succeeded,Starting <*>: succeeded,8
+Started working: <*> available services,Started working: <*> available services,Started working: <*> available services,8
+Starting pcmcia: succeeded,Starting <*>: succeeded,Starting <*>: succeeded,8
+Starting hpoj: succeeded,Starting <*>: succeeded,Starting <*>: succeeded,8
+Real Time Clock Driver <*>,Real Time Clock Driver v1.<*>,Real Time Clock Driver v1.<*>,8
+SELinux: Initializing.,SELinux: Initializing.,SELinux: Initializing.,8
+Uniform CD-ROM driver Revision: <*>,Uniform CD-ROM driver Revision: <*>,Uniform CD-ROM driver Revision: <*>,8
+POSIX conformance testing by UNIFIX,POSIX conformance testing by UNIFIX,POSIX conformance testing by UNIFIX,8
+USB Universal Host Controller Interface driver <*>,USB Universal Host Controller Interface driver v2.<*>,USB Universal Host Controller Interface driver v2.<*>,8
+PCI: Probing PCI hardware (bus <*>),PCI: Probing PCI hardware (bus <*>),PCI: Probing PCI hardware (bus <*>),8
+PCI: Using IRQ router PIIX/ICH [<*>] at <*>,PCI: Using IRQ router <*> [<*>] at <*>:1f.<*>,PCI: Using IRQ router <*> [<*>] at <*>:1f.<*>,8
+Transparent bridge - <*>,Transparent bridge - <*>:1e.<*>,Transparent bridge - <*>:1e.<*>,8
+"Total HugeTLB memory allocated, <*>","Total HugeTLB memory allocated, <*>","Total HugeTLB memory allocated, <*>",8
+PID hash table entries: <*> (order <*>: <*> bytes),PID hash table entries: <*> (order <*>: <*> bytes),PID hash table entries: <*> (order <*>: <*> bytes),8
+PCI: Using configuration type <*>,PCI: Using configuration type <*>,PCI: Using configuration type <*>,8
+RAMDISK driver initialized: <*> RAM disks of <*> size <*> blocksize,RAMDISK driver initialized: <*> RAM disks of <*> size <*> blocksize,RAMDISK driver initialized: <*> RAM disks of <*> size <*> blocksize,8
+SELinux: Unregistering netfilter hooks,0,0,7
+audit: initializing netlink socket (disabled),audit: initializing netlink socket (disabled),audit: initializing netlink socket (disabled),7
+Kernel command line: ro root=<*> rhgb quiet,Kernel command line: ro root=<*> rhgb quiet,Kernel command line: ro root=<*> rhgb quiet,7
+Bringing up loopback interface: succeeded,Bringing up loopback interface: succeeded,Bringing up loopback interface: succeeded,7
+SELinux: Disabled at runtime.,SELinux: Disabled at runtime.,SELinux: Disabled at runtime.,7
+Setting network parameters: succeeded,Setting network parameters: succeeded,Setting network parameters: succeeded,7
+<*> more authentication failure; logname=<*> uid=<*> euid=<*> tty=<*> ruser=<*> rhost=<*> user=<*>,<*> more authentication failure; logname= <*> euid=<*> tty=<*> ruser= <*> user=<*>,<*> more authentication failure; logname= <*> euid=<*> tty=<*> ruser= <*> user=<*>,6
+[<*>] get_user_size+<*>,[<*>] get_user_size+<*>,[<*>] get_user_size+<*>,6
+Kernel logging <*> stopped.,Kernel logging (proc) stopped.,Kernel logging (proc) stopped.,5
+Kernel log daemon terminating.,Kernel log daemon terminating.,Kernel log daemon terminating.,5
+[<*>] dput+<*>,[<*>] dput+<*>,[<*>] dput+<*>,5
+[<*>] __call_console_drivers+<*>,[<*>] __call_console_drivers+<*>,[<*>] __call_console_drivers+<*>,5
+[<*>] sys_rt_sigaction+<*>,[<*>] sys_rt_sigaction+<*>,[<*>] sys_rt_sigaction+<*>,5
+[<*>] sys_rt_sigprocmask+<*>,[<*>] sys_rt_sigprocmask+<*>,[<*>] sys_rt_sigprocmask+<*>,5
+[<*>] d_instantiate+<*>,[<*>] d_instantiate+<*>,[<*>] d_instantiate+<*>,5
+open(<*>): No such file or directory,open(<*>): No such file or directory,open(<*>): No such file or directory,5
+[<*>] d_alloc+<*>,[<*>] d_alloc+<*>,[<*>] d_alloc+<*>,5
+Squid Parent: child process <*> exited with status <*>,Squid Parent: child process <*> exited with status <*>,Squid Parent: child process <*> exited with status <*>,4
+<*> records in,<*> records in,<*> records in,4
+Stopping Canna server: succeeded,Stopping Canna server: succeeded,Stopping Canna server: succeeded,4
+<*> records out,<*> records out,<*> records out,4
+[<*>] do_proc_dointvec_conv+<*>,[<*>] do_proc_dointvec_conv+<*>,[<*>] do_proc_dointvec_conv+<*>,4
+password changed for <*>,password changed for test,password changed for test,4
+kernel.core_uses_pid = <*>,kernel.core_uses_pid = <*>,kernel.core_uses_pid = <*>,4
+[<*>] check_free_space+<*>,[<*>] check_free_space+<*>,[<*>] check_free_space+<*>,4
+EXT3-fs: recovery complete.,EXT3-fs: recovery complete.,EXT3-fs: recovery complete.,4
+EXT3-fs: write access will be enabled during recovery.,EXT3-fs: write access will be enabled during recovery.,EXT3-fs: write access will be enabled during recovery.,4
+Exiting,Exiting,Exiting,4
+ntpd exiting on signal <*>,ntpd exiting on signal <*>,ntpd exiting on signal <*>,4
+Stopping squid:,Stopping squid:,Stopping squid:,4
+Stopping squid: succeeded,0,0,4
+Switching to runlevel: <*>,Switching to runlevel: <*>,Switching to runlevel: <*>,4
+shutting down for system reboot,shutting down for system reboot,shutting down for system reboot,4
+smartd is exiting (exit status <*>),smartd is exiting (exit status <*>),smartd is exiting (exit status <*>),4
+smartd received signal <*>: Terminated,smartd received signal <*>: Terminated,smartd received signal <*>: Terminated,4
+sshd -TERM succeeded,sshd -TERM succeeded,sshd -TERM succeeded,4
+Received SNMP packet(s) from <*>,Received SNMP packet(s) from <*>,Received SNMP packet(s) from <*>,4
+[<*>] proc_dointvec+<*>,[<*>] proc_dointvec+<*>,[<*>] proc_dointvec+<*>,4
+"FAILED LOGIN <*> FROM (<*>) FOR , Authentication failure","FAILED LOGIN <*> FROM (null) FOR , Authentication failure","FAILED LOGIN <*> FROM (null) FOR , Authentication failure",4
+terminating,terminating,terminating,3
+Caught signal <*> un-registering and exiting.,Caught signal <*> un-registering and exiting.,Caught signal <*> un-registering and exiting.,3
+Stopping MySQL: succeeded,0,0,3
+*** info [client.c(<*>)]:,*** info [startup.c(<*>)]:,*** info [startup.c(<*>)]:,3
+[<*>] invalidate_inode_buffers+<*>,[<*>] invalidate_inode_buffers+<*>,[<*>] invalidate_inode_buffers+<*>,3
+[<*>] do_rw_proc+<*>,[<*>] do_rw_proc+<*>,[<*>] do_rw_proc+<*>,3
+messagebus -TERM succeeded,messagebus -TERM succeeded,messagebus -TERM succeeded,3
+"SELinux: initialized (dev , type <*>), uses <*>","SELinux: initialized (dev , type <*>), uses transition SIDs","SELinux: initialized (dev , type <*>), uses transition SIDs",3
+audit(<*>): avc: denied <*> for pid=<*> exe=<*> name=<*> dev=<*> ino=<*> scontext=<*> tcontext=<*> tclass=<*>,0,0,3
+[<*>] input_unregister_device+<*>,[<*>] input_unregister_device+<*>,[<*>] input_unregister_device+<*>,2
+Stopping MySQL: failed,Stopping MySQL: failed,Stopping MySQL: failed,2
+Connection from <*> on illegal port,Connection from <*> on illegal port,Connection from <*> on illegal port,2
+VM: killing process <*>,VM: killing process sendmail,VM: killing process sendmail,2
+net.ipv4.conf.default.rp_filter = <*>,<*> = <*>,<*> = <*>,2
+exiting,exiting,exiting,2
+bad username [<*>],bad username [ ],bad username [<*>],2
+kernel.sysrq = <*>,kernel.sysrq = <*>,kernel.sysrq = <*>,2
+"SELinux: initialized (dev , type <*>), uses <*>","SELinux: initialized (dev , type <*>), uses task SIDs","SELinux: initialized (dev , type <*>), uses task SIDs",2
+[<*>] __fput+<*>,[<*>] __fput+<*>,[<*>] __fput+<*>,2
+shutting down,shutting down,shutting down,2
+Client hung up - probable port-scan,Client hung up - probable port-scan,Client hung up - probable port-scan,1
+connect from <*>,connect from <*>,connect from <*>,1
+Master rebooting...,Master rebooting...,Master rebooting...,1
+[<*>] sys_setuid+<*>,[<*>] sys_setuid+<*>,[<*>] sys_setuid+<*>,1
+Warning! Could not relabel with <*> not relabeling.,"Warning! Could not relabel with system_u:object_r:devpts_t, not relabeling.","Warning! Could not relabel with system_u:object_r:devpts_t, not relabeling.",1
+tty2: invalid character <*> in login name,tty2: invalid character <*> in login name,tty2: invalid character <*> in login name,1
+audit: enabled (after initialization),audit: enabled (after initialization),audit: enabled (after initialization),1
+[<*>] unmap_region+<*>,[<*>] unmap_region+<*>,[<*>] unmap_region+<*>,1
+Unable to get command line from client!,Unable to get command line from client!,Unable to get command line from client!,1
+wall: user test broadcasted <*> lines (<*> chars),wall: user test broadcasted <*> lines (<*> chars),wall: user test broadcasted <*> lines (<*> chars),1
+[<*>] unmap_vma_list+<*>,[<*>] unmap_vma_list+<*>,[<*>] unmap_vma_list+<*>,1
+ANONYMOUS FTP LOGIN FROM <*> (<*>),ANONYMOUS FTP LOGIN FROM <*> (anonymous),ANONYMOUS FTP LOGIN FROM <*> (anonymous),1
+hda: status timeout: status=<*> <*>,hda: status timeout: status=<*> { Busy },hda: status timeout: status=<*> { Busy },1
+[<*>] module_text_address+<*>,[<*>] module_text_address+<*>,[<*>] module_text_address+<*>,1
+[<*>] clear_page_tables+<*>,[<*>] clear_page_tables+<*>,[<*>] clear_page_tables+<*>,1
+Connecting at fd <*>,Connecting at fd <*>,Connecting at fd <*>,1
+printk: <*> messages suppressed.,printk: <*> messages suppressed.,printk: <*> messages suppressed.,1
+rsync error: error in rsync protocol data stream (code <*>) at io.c(<*>),rsync error: error in rsync protocol data stream (code <*>) at io.c(<*>),rsync error: error in rsync protocol data stream (code <*>) at io.c(<*>),1
+rsync: connection unexpectedly closed (<*> bytes read so far),rsync: connection unexpectedly closed (<*> bytes read so far),rsync: connection unexpectedly closed (<*> bytes read so far),1
+"security: <*> classes, <*> rules","security: <*> classes, <*> rules","security: <*> classes, <*> rules",1
+"security: <*> users, <*> roles, <*> types, <*> bools","security: <*> users, <*> roles, <*> types, <*> bools","security: <*> users, <*> roles, <*> types, <*> bools",1
+EXT3-fs: <*>: <*> orphan inodes deleted,EXT3-fs: hda2: <*> orphan inodes deleted,EXT3-fs: hda2: <*> orphan inodes deleted,1
+SELinux: Completing initialization.,SELinux: Completing initialization.,SELinux: Completing initialization.,1
+"SELinux: initialized (dev , type <*>), not configured for labeling","SELinux: initialized (dev , type mqueue), not configured for labeling","SELinux: initialized (dev , type mqueue), not configured for labeling",1
+"SELinux: initialized (dev , type <*>), not configured for labeling","SELinux: initialized (dev , type hugetlbfs), not configured for labeling","SELinux: initialized (dev , type hugetlbfs), not configured for labeling",1
+[<*>] free_pgtables+<*>,[<*>] free_pgtables+<*>,[<*>] free_pgtables+<*>,1
+SELinux: Setting up existing superblocks.,SELinux: Setting up existing superblocks.,SELinux: Setting up existing superblocks.,1
+"pam_check_access failed, user does not have proper access: <*>","pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t","pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t",1
+hda: dma_timer_expiry: dma status == <*>,hda: dma_timer_expiry: dma status == <*>,hda: dma_timer_expiry: dma status == <*>,1
+[smux_accept] accepted fd <*> from <*>,[smux_accept] accepted fd <*> from <*>,[smux_accept] accepted fd <*> from <*>,1

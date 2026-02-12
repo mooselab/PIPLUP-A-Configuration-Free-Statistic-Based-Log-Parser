@@ -1,0 +1,51 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+"<*> ""GET <*> <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>",90122
+image <*> at (<*>): checking,image <*> at (<*>): checking,image <*> at (<*>): checking,12043
+"image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage","image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage","image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage",12043
+Active base files: <*>,Active base files: <*>,Active base files: <*>,12035
+"<*> ""POST <*> <*>"" status: <*> len: <*> time: <*>","<*> ""POST <*>"" status: <*> len: <*> time: <*>","<*> ""POST <*>"" status: <*> len: <*> time: <*>",6194
+[instance: <*>] VM Resumed (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),4132
+[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.,[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.,[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.,4049
+Unknown base file: <*>,Unknown base file: <*>,Unknown base file: <*>,3059
+Removable base files: <*>,Removable base files: <*>,Removable base files: <*>,3059
+[instance: <*>] VM Stopped (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),2067
+[instance: <*>] Took <*> seconds to build instance.,[instance: <*>] Took <*> seconds to build instance.,[instance: <*>] Took <*> seconds to build instance.,2066
+[instance: <*>] Creating image,[instance: <*>] Creating image,[instance: <*>] Creating image,2066
+[instance: <*>] VM Started (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),2066
+[instance: <*>] VM Paused (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),[instance: <*>] VM <*> (Lifecycle Event),2066
+[instance: <*>] Instance spawned successfully.,[instance: <*>] Instance spawned successfully.,[instance: <*>] Instance spawned successfully.,2066
+[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.,[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.,[instance: <*>] Took <*> seconds to spawn the instance on the hypervisor.,2066
+"[instance: <*>] vcpu limit not specified, defaulting to unlimited","[instance: <*>] vcpu limit not specified, defaulting to unlimited","[instance: <*>] vcpu limit not specified, defaulting to unlimited",2065
+"[instance: <*>] Total memory: <*> MB, used: <*> MB",[instance: <*>] Total memory: <*> used: <*>,[instance: <*>] Total memory: <*> used: <*>,2065
+[instance: <*>] Took <*> seconds to deallocate network for instance.,[instance: <*>] Took <*> seconds to deallocate network for instance.,[instance: <*>] Took <*> seconds to deallocate network for instance.,2065
+"[instance: <*>] Total disk: <*> GB, used: <*> GB",[instance: <*>] Total disk: <*> used: <*>,[instance: <*>] Total disk: <*> used: <*>,2065
+"[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU",[instance: <*>] Attempting claim: memory <*> disk <*> vcpus <*> CPU,[instance: <*>] Attempting claim: memory <*> disk <*> vcpus <*> CPU,2065
+"[instance: <*>] disk limit not specified, defaulting to unlimited","[instance: <*>] disk limit not specified, defaulting to unlimited","[instance: <*>] disk limit not specified, defaulting to unlimited",2065
+"[instance: <*>] memory limit: <*> MB, free: <*> MB",[instance: <*>] memory limit: <*> free: <*>,[instance: <*>] memory limit: <*> free: <*>,2065
+"[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU","[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU","[instance: <*>] Total vcpu: <*> VCPU, used: <*> VCPU",2065
+[instance: <*>] Claim successful,[instance: <*>] Claim successful,[instance: <*>] Claim successful,2065
+Creating event <*> for instance <*>,Creating event network-vif-plugged:<*> for instance <*>,Creating event network-vif-plugged:<*> for instance <*>,2065
+"<*> ""DELETE <*> <*>"" status: <*> len: <*> time: <*>","<*> ""DELETE <*>"" status: <*> len: <*> time: <*>","<*> ""DELETE <*>"" status: <*> len: <*> time: <*>",2064
+Removing base or swap file: <*>,Removing base or swap file: <*>,Removing base or swap file: <*>,2064
+[instance: <*>] Deleting instance files <*>,[instance: <*>] Deleting instance files <*>,[instance: <*>] Deleting instance files <*>,2064
+[instance: <*>] Deletion of <*> complete,[instance: <*>] Deletion of <*> complete,[instance: <*>] Deletion of <*> complete,2064
+[instance: <*>] Instance destroyed successfully.,[instance: <*>] Instance destroyed successfully.,[instance: <*>] Instance destroyed successfully.,2064
+[instance: <*>] Terminating instance,[instance: <*>] Terminating instance,[instance: <*>] Terminating instance,2064
+HTTP exception thrown: No instances found for any event,HTTP exception thrown: No instances found for any event,HTTP exception thrown: No instances found for any event,2064
+[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.,[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.,[instance: <*>] Took <*> seconds to destroy the instance on the hypervisor.,2064
+Auditing locally available compute resources for node <*>,Auditing locally available compute resources for node <*>,Auditing locally available compute resources for node <*>,1739
+Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=<*>,Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[],Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[],1739
+Compute_service record updated for <*>,Compute_service record updated for <*>,Compute_service record updated for <*>,1739
+Total usable vcpus: <*> total allocated vcpus: <*>,Total usable vcpus: <*> total allocated vcpus: <*>,Total usable vcpus: <*> total allocated vcpus: <*>,1739
+Base or swap file too young to remove: <*>,Base or swap file too young to remove: <*>,Base or swap file too young to remove: <*>,995
+Successfully synced instances from host '<*>'.,Successfully synced instances from host '<*>'.,Successfully synced instances from host '<*>'.,502
+The instance sync for host <*> did not match. Re-created its InstanceList.,The instance sync for host <*> did not match. Re-created its InstanceList.,The instance sync for host <*> did not match. Re-created its InstanceList.,364
+"<*> ""GET <*> <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>&changes-since=<*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>",177
+"<*> ""GET <*> <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>&changes-since=<*>&host=<*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>",176
+"While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.","While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.","While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.",45
+Running instance usage audit for host <*> from <*> to <*> instances.,Running instance usage audit for host <*> from <*> to <*> instances.,Running instance usage audit for host <*> from <*> to <*> instances.,30
+couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported,couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported,couldn't obtain the vcpu count from domain id: <*> exception: Requested operation is not valid: cpu affinity is not supported,12
+Error during <*>,Error during ComputeManager._run_image_cache_manager_pass,Error during ComputeManager._run_image_cache_manager_pass,8
+Bad response code while validating token: <*>,Bad response code while validating token: <*>,Bad response code while validating token: <*>,2
+Unable to validate token: Failed to fetch token data from identity server,Unable to validate token: Failed to fetch token data from identity server,Unable to validate token: Failed to fetch token data from identity server,2
+Identity response: <*>,"Identity response: <!DOCTYPE HTML PUBLIC ""-//IETF//DTD HTML <*>"">","Identity response: <!DOCTYPE HTML PUBLIC ""-//IETF//DTD HTML <*>"">",2

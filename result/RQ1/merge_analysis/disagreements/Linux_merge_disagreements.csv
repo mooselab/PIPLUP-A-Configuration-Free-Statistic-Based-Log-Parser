@@ -1,0 +1,5 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+connection from <*> (<*>) at <*>,connection from <*> () at <*>,connection from <*> (<*>) at <*>,506
+connection from <*> (<*>) at <*>,connection from <*> (<*>.maximumasp.com) at <*>,connection from <*> (<*>) at <*>,23
+connection from <*> (<*>) at <*>,connection from <*> (dsl-Chn-static-<*>.touchtelindia.net) at <*>,connection from <*> (<*>) at <*>,23
+bad username [<*>],bad username [ ],bad username [<*>],2

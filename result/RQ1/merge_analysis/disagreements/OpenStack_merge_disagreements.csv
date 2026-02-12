@@ -1,0 +1,3 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+"<*> ""GET <*> <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>&changes-since=<*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>",177
+"<*> ""GET <*> <*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>&changes-since=<*>&host=<*>"" status: <*> len: <*> time: <*>","<*> ""GET <*>"" status: <*> len: <*> time: <*>",176

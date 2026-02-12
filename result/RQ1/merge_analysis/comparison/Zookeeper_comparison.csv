@@ -1,0 +1,91 @@
+ground_truth,PIPLUP_no_merge,PIPLUP,count
+Received connection request <*>,Received connection request <*>,Received connection request <*>,10429
+Send worker leaving thread,Send worker leaving thread,Send worker leaving thread,10390
+Interrupting SendWorker,Interrupting SendWorker,Interrupting SendWorker,10390
+Connection broken for id <*> my id = <*> error =<*>,Connection broken for id <*> my id = <*> error =,Connection broken for id <*> my id = <*> error =,10388
+Interrupted while waiting for message on queue,Interrupted while waiting for message on queue,Interrupted while waiting for message on queue,10386
+Cannot open channel to <*> at election address <*>,Cannot open channel to <*> at election address <*>,Cannot open channel to <*> at election address <*>,2584
+Accepted socket connection from <*>,Accepted socket connection from <*>,Accepted socket connection from <*>,2020
+Connection request from old client <*>; will be dropped if server is in r-o mode,Connection request from old client <*>; will be dropped if server is in r-o mode,Connection request from old client <*>; will be dropped if server is in r-o mode,1861
+Established session <*> with negotiated timeout <*> for client <*>,Established session <*> with negotiated timeout <*> for client <*>,Established session <*> with negotiated timeout <*> for client <*>,1856
+Client attempting to establish new session at <*>,Client attempting to establish new session at <*>,Client attempting to establish new session at <*>,1790
+Processed session termination for sessionid: <*>,Processed session termination for sessionid: <*>,Processed session termination for sessionid: <*>,1790
+Closed socket connection for client <*> which had sessionid <*>,Closed socket connection for client <*> which had sessionid <*>,Closed socket connection for client <*> which had sessionid <*>,1749
+caught end of stream exception,caught end of stream exception,caught end of stream exception,1670
+Expiring session <*> timeout of <*> exceeded,Expiring session <*> timeout of 10000ms exceeded,Expiring session <*> timeout of 10000ms exceeded,1602
+Notification time out: <*>,Notification time out: <*>,Notification time out: <*>,1322
+Unexpected exception causing shutdown while sock still open,Unexpected exception causing shutdown while sock still open,Unexpected exception causing shutdown while sock still open,590
+******* GOODBYE <*> ********,******* GOODBYE <*> ********,******* GOODBYE <*> ********,590
+"Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)","Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)","Notification: <*> (n.leader), <*> (n.zxid), <*> (n.round), <*> (n.state), <*> (n.sid), <*> (n.peerEPoch), <*> (my state)",505
+Expiring session <*> timeout of <*> exceeded,Expiring session <*> timeout of 20000ms exceeded,Expiring session <*> timeout of 20000ms exceeded,160
+Exception causing close of session <*> due to java.io.IOException: ZooKeeperServer not running,Exception causing close of session <*> due to <*>: ZooKeeperServer not running,Exception causing close of session <*> due to <*>: ZooKeeperServer not running,159
+Closed socket connection for client <*> (no session established for client),Closed socket connection for client <*> (no session established for client),Closed socket connection for client <*> (no session established for client),159
+Snapshotting: <*> to <*>,Snapshotting: <*> to <*>,Snapshotting: <*> to <*>,65
+Reading snapshot <*>,Reading snapshot <*>,Reading snapshot <*>,60
+Shutting down,Shutting down,Shutting down,58
+Revalidating client: <*>,Revalidating client: <*>,Revalidating client: <*>,55
+LOOKING,LOOKING,LOOKING,49
+Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>,Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>,Created server with tickTime <*> minSessionTimeout <*> maxSessionTimeout <*> datadir <*> snapdir <*>,49
+New election. My id = <*> proposed <*>,New election. My id = <*> proposed zxid=<*>,New election. My id = <*> proposed zxid=<*>,49
+TCP NoDelay set to: <*>,TCP NoDelay set to: true,TCP NoDelay set to: true,39
+Server environment:os.name=<*>,Server <*>,Server <*>,36
+Server environment:os.arch=<*>,Server <*>,Server <*>,36
+Server environment:java.compiler=<*>,Server <*>,Server <*>,36
+Server environment:java.version=<*>,Server <*>,Server <*>,36
+Server environment:java.vendor=<*>,Server environment:java.vendor=<*> Corporation,Server environment:java.vendor=<*> Corporation,36
+Server environment:java.io.tmpdir=<*>,Server <*>,Server <*>,36
+Server environment:java.home=<*>,Server <*>,Server <*>,36
+Server environment:os.version=<*>,Server <*>,Server <*>,36
+Server environment:user.name=<*>,Server <*>,Server <*>,36
+Server environment:user.dir=<*>,Server <*>,Server <*>,36
+Server environment:user.home=<*>,Server <*>,Server <*>,36
+Server environment:host.name=<*>,Server <*>,Server <*>,36
+"Server environment:zookeeper.version=<*>, built on <*> GMT","Server environment:zookeeper.version=<*>, built on <*> GMT","Server environment:zookeeper.version=<*>, built on <*> GMT",36
+Starting quorum peer,Starting quorum peer,Starting quorum peer,36
+autopurge.purgeInterval set to <*>,<*> set to <*>,<*> set to <*>,36
+autopurge.snapRetainCount set to <*>,<*> set to <*>,<*> set to <*>,36
+binding to port <*>,binding to port <*>,binding to port <*>,36
+initLimit set to <*>,<*> set to <*>,<*> set to <*>,36
+maxSessionTimeout set to <*>,<*> set to <*>,<*> set to <*>,36
+minSessionTimeout set to <*>,<*> set to <*>,<*> set to <*>,36
+Server environment:java.class.path=<*>,Server <*>,Server <*>,36
+tickTime set to <*>,<*> set to <*>,<*> set to <*>,36
+Reading configuration from: <*>,Reading configuration from: <*>,Reading configuration from: <*>,36
+Purge task is not scheduled.,Purge task is not scheduled.,Purge task is not scheduled.,36
+Defaulting to majority quorums,Defaulting to majority quorums,Defaulting to majority quorums,36
+My election bind port: <*>,My election bind port: <*>,My election bind port: <*>,36
+Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>,Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>,Synchronizing with Follower sid: <*> maxCommittedLog=<*> minCommittedLog=<*> peerLastZxid=<*>,34
+FOLLOWING,FOLLOWING,FOLLOWING,34
+FOLLOWING - LEADER ELECTION TOOK - <*>,FOLLOWING - LEADER ELECTION TOOK - <*>,FOLLOWING - LEADER ELECTION TOOK - <*>,34
+Follower sid: <*> : info : <*>,Follower sid: <*> : info : <*>,Follower sid: <*> : info : <*>,34
+Getting a diff from the leader <*>,Getting a diff from the leader <*>,Getting a diff from the leader <*>,28
+Sending DIFF,Sending DIFF,Sending DIFF,28
+Got zxid <*> expected <*>,Got zxid <*> expected <*>,Got zxid <*> expected <*>,28
+Unexpected Exception:,Unexpected Exception:,Unexpected Exception:,27
+Creating new log file: <*>,Creating new log file: log.<*>,Creating new log file: log.<*>,25
+"Have smaller server identifier, so dropping the connection: (<*>, <*>)","Have smaller server identifier, so dropping the connection: (<*>, <*>)","Have smaller server identifier, so dropping the connection: (<*>, <*>)",20
+Got user-level KeeperException when processing sessionid:<*> type:<*> cxid:<*> zxid:<*> txntype:<*> reqpath:<*> Error Path:<*> Error:KeeperErrorCode = <*> for <*>,Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:-<*> reqpath:<*> Error <*> Error:KeeperErrorCode = <*> for <*>,Got user-level KeeperException when processing sessionid:<*> type:create cxid:<*> zxid:<*> txntype:-<*> reqpath:<*> Error <*> Error:KeeperErrorCode = <*> for <*>,19
+Have quorum of supporters; starting up and setting last processed zxid: <*>,Have quorum of supporters; starting up and setting last processed zxid: <*>,Have quorum of supporters; starting up and setting last processed zxid: <*>,15
+LEADING - LEADER ELECTION TOOK - <*>,LEADING - LEADER ELECTION TOOK - <*>,LEADING - LEADER ELECTION TOOK - <*>,15
+LEADING,LEADING,LEADING,15
+First is <*>,First is <*>,First is <*>,15
+Commiting zxid <*> from <*> not first!,Commiting zxid <*> from <*> not first!,Commiting zxid <*> from <*> not first!,15
+CommitProcessor exited loop!,<*> exited loop!,<*> exited loop!,13
+SyncRequestProcessor exited!,SyncRequestProcessor exited!,SyncRequestProcessor exited!,13
+shutdown of request processor complete,shutdown of request processor complete,shutdown of request processor complete,13
+shutting down,shutting down,shutting down,13
+shutdown called,shutdown called,shutdown called,11
+Exception when following the leader,Exception when following the leader,Exception when following the leader,11
+FollowerRequestProcessor exited loop!,<*> exited loop!,<*> exited loop!,11
+"Unexpected exception, tries=<*>, connecting to <*>","Unexpected exception, tries=<*>, connecting to <*>","Unexpected exception, tries=<*>, connecting to <*>",8
+Exception causing close of session <*> due to java.io.IOException: Connection reset by peer,Exception causing close of session <*> due to <*>: Connection reset by peer,Exception causing close of session <*> due to <*>: Connection reset by peer,8
+Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>,Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>,Sending snapshot last zxid of peer is <*> zxid of leader is <*> zxid of db as <*>,6
+Getting a snapshot from leader,Getting a snapshot from leader,Getting a snapshot from leader,6
+Sending SNAP,Sending SNAP,Sending SNAP,6
+Exception when using channel: for id <*> my id = <*> error = java.net.SocketException: Broken pipe,Exception when using channel: for id <*> my id = <*> error = <*>: Broken pipe,Exception when using channel: for id <*> my id = <*> error = <*>: Broken pipe,4
+currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,currentEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,3
+acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,acceptedEpoch not found! Creating with a reasonable default of <*> This should only happen when you are upgrading your installation,3
+exception while shutting down acceptor: java.net.SocketException: Socket closed,exception while shutting down acceptor: <*>: Socket closed,exception while shutting down acceptor: <*>: Socket closed,2
+Shutdown called,Shutdown called,Shutdown called,2
+SessionTrackerImpl exited loop!,<*> exited loop!,<*> exited loop!,2
+PrepRequestProcessor exited loop!,<*> exited loop!,<*> exited loop!,2
