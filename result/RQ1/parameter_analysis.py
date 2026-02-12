@@ -1,8 +1,9 @@
 import pandas as pd
 import os
 import numpy as np
+import itertools
 
-folder = './full_dataset/'
+folder = '../../full_dataset/'
 datasets = [
     "Proxifier",
     "Linux",
@@ -14,10 +15,6 @@ datasets = [
     "HPC",
     "Mac",
     "OpenSSH",
-    "Spark",
-    "Thunderbird",
-    "BGL",
-    "HDFS",
 ]
 
 def seqDist(seq1, seq2):
@@ -27,15 +24,24 @@ def seqDist(seq1, seq2):
     branch_point = len(seq1)
 
     for token1, token2 in zip(seq1, seq2):
-        if token1 == '<*>':
-            numOfPar += 1
-            continue
+        if '<*>' == token1:
+            if not any(ch.isalnum() for ch in token1): 
+                numOfPar += 1
+                continue
         if token1 == token2:
             simTokens += 1 
 
     retVal = float(simTokens) / len(seq1)
 
     return retVal, branch_point-simTokens
+
+def numVar(seq):
+    numOfPar = 0
+    for token in seq:
+        if '<*>' in token: 
+            numOfPar += 1
+            continue
+    return numOfPar
 
 st_dict = {
         1: 1,
@@ -53,6 +59,8 @@ st_dict = {
 lengths = []
 pair_below_threshold = []
 branch_points = []
+len_var = {}
+
 total_templates = 0
 for dataset in datasets:
     pair_below_threshold = []
@@ -68,12 +76,20 @@ for dataset in datasets:
         else:
             templates_by_length[length].append(template)
             
+            
     # Calculate the pairwise sequence distances
     for length in templates_by_length.keys():
         templates_list = templates_by_length[length]
+        # Number of variables
+        total_vars = 0
+        if length not in len_var.keys():
+            len_var[length] = []
+        
         # Determine if the templates are paired
         paired_flag = [False] * len(templates_list)
         for i in range(len(templates_list)):
+            varnum = numVar(templates_list[i].split())
+            len_var[length].append(varnum)
             # Only check if the template is not paired
             if paired_flag[i]: continue
             paired_list = []
@@ -92,8 +108,25 @@ for dataset in datasets:
                 pair_below_threshold.append(1)
                 
     print(np.percentile(pair_below_threshold, 99))
+    
+length_quartiles_vars = {1: [], 2: [], 3: [], 4: []}
+for length in len_var.keys():
+    if length <= 4:
+        length_quartiles_vars[1].extend(len_var[length])
+    elif length <= 6:
+        length_quartiles_vars[2].extend(len_var[length])
+    elif length <= 9:
+        length_quartiles_vars[3].extend(len_var[length])
+    else:
+        length_quartiles_vars[4].extend(len_var[length])
+      
+    avg_var = np.percentile(len_var[length], 75)
+    print('Length: %d, 75 percentile of variables: %.3f'%(length, avg_var))
 
-        
+for quartile in length_quartiles_vars.keys():
+    avg_var = np.percentile(length_quartiles_vars[quartile], 95)
+    print('Length: %d, 95 percentile of variables: %.3f'%(quartile, avg_var))
+
 # Calculate the three quartiles
 Q1 = np.percentile(lengths, 25)
 Q2 = np.percentile(lengths, 50)
