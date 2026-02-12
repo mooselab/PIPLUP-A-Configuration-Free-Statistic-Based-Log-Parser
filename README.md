@@ -50,7 +50,7 @@ Three parameters are required in PIPLUP's parsing process, namely $\theta_{hit}$
 
 **Evaluating the impact of $\theta_{sim}$**: We evaluated PIPLUP's performance using multiple static $\theta_{sim}$ values (i.e., 0.4, 0.5, 0.6, and 0.7) and our message-specific, dynamic $\theta_{sim}$ to understand the impact of dynamic similarity thresholds. Our message-specific (i.e., dynamic) set $\theta_{sim}$ achieved optimal performance, with optimal values in 5 datasets. The default $\theta_{sim}$ values are listed in the following table:
 
-<img src="./figures/sim_thresholds?raw=true" alt="sim_thresholds" width="200" height="100">
+<img src="./figures/sim_thresholds.png?raw=true" alt="sim_thresholds" width="200" height="100">
 
 
 **Evaluating the impact of $\theta_{br}$**: The candidates for $\theta_{br}$ are 2, 3, 4, 5, and 6. As shown in the table, when set within a reasonable range, the parameter is insensitive to changes. Our default setting (i.e., $\theta_{br}=2$) obtained the best performance on average. It achieved the maximum values on 5 datasets, with an average performance gap of less than 1% from the maximum for all four metrics. 
